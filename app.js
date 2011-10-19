@@ -1,0 +1,1 @@
+var app = require('express').createServer(),		ejs = require('ejs');app.set('view engine', 'ejs');app.get('/', function (req, res) {	res.render('hi.ejs');}).listen(8080);
