@@ -8,23 +8,53 @@
 		* {
 			margin: 0;
 			padding: 0;
+      font-family: sans-serif;
 		}
 		body { 
 			background: url('public/images/elastoplast.png');
 		}
 		#wrapper {
 			margin: 0 auto;
-			padding: 5px;
 			width: 800px;
 			height: 100%;
 			background: #EEE;
+			/* TODO: Cross-browser me */
 			box-shadow: 0 0 20px #000000;
 		}
+    .mainSection {
+    }
+    .mainSectionRow {
+      padding: 0 .3em;
+    }
+    #navBar {
+      border-width: 3px 0;
+      border-style: solid;
+      border-color: #CCC;
+      text-align: right;
+      padding-bottom: .3em;
+    }
+    #navBar .link {
+      margin-left: .2em;
+    }
 	</style>
+  <!-- TODO: Remove from production -->
+  <script src="public/reload_with_collector.js"></script>
 </head>
 <body>
 	<div id="wrapper">
-		<%- body %>
+    <header class="mainSection">
+      <!-- TODO: Make font sans-serif -->
+      <h1 class="mainSectionRow">Todd Wolfson</h1>
+      <!-- TODO: Add top and bottom border -->
+      <nav id="navBar" class="mainSectionRow">
+        <a href="http://github.com/twolfson/" class="link">github</a>
+        <a href="portfolio" class="link">portfolio</a>
+        <a href="resume" class="link">resume</a>
+        <a href="#" class="link">blog</a>
+        <a href="contact" class="link">contact</a>
+      </nav>
+    </header>
+    <%- body %>
 	</div>
 </body>
 </html>
