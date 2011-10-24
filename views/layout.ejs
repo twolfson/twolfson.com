@@ -2,51 +2,24 @@
 <html>
 <head>
 	<title>Todd Wolfson - Javascript Developer</title>
+	<link rel="stylesheet" type="text/css" media="all" href="public/css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/index.css"/>
-	<style>
-		/* TODO: Normalize.css */
-		* {
-			margin: 0;
-			padding: 0;
-      font-family: sans-serif;
-		}
-		body { 
-			background: url('public/images/elastoplast.png');
-		}
-		#wrapper {
-			margin: 0 auto;
-			width: 800px;
-			height: 100%;
-			background: #EEE;
-			/* TODO: Cross-browser me */
-			box-shadow: 0 0 20px #000000;
-		}
-    .mainSection {
-    }
-    .mainSectionRow {
-      padding: 0 .3em;
-    }
-    #navBar {
-      border-width: 3px 0;
-      border-style: solid;
-      border-color: #CCC;
-      text-align: right;
-      padding-bottom: .3em;
-    }
-    #navBar .link {
-      margin-left: .2em;
-    }
-	</style>
+  <!-- TODO: Implement build chain for ONE stylesheet -->
+  <!-- TODO: Implement build chain for ONE script -->
   <!-- TODO: Remove from production -->
-  <script src="public/reload_with_collector.js"></script>
+  <script src="public/js/reload_with_collector.js"></script>
 </head>
 <body>
 	<div id="wrapper">
-    <header class="mainSection">
+    <header id="headerSection" class="mainSection">
       <!-- TODO: Make font sans-serif -->
-      <h1 class="mainSectionRow">Todd Wolfson</h1>
+      <div class="row one">
+        <h1 class="unit header">Todd Wolfson</h1>
+        <!-- TODO: Use kerning -->
+        <h2 class="unit subheader">JAVASCRIPT DEVELOPER</h2>
+      </div>
       <!-- TODO: Add top and bottom border -->
-      <nav id="navBar" class="mainSectionRow">
+      <nav id="navBar" class="row one">
         <a href="http://github.com/twolfson/" class="link">github</a>
         <a href="portfolio" class="link">portfolio</a>
         <a href="resume" class="link">resume</a>

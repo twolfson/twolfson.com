@@ -1,0 +1,91 @@
+/* OOCSS */
+.one {
+  display: block;
+}
+
+.size1of2 {
+  width: 50%;
+}
+
+.size1of4 {
+  width: 25%;
+}
+
+.size3of4 {
+  width: 74%;
+}
+
+.unit, .lastUnit {
+  display: inline-block;
+}
+
+.lastUnit {
+  float: right;
+}
+
+/* Full document theming */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* General purpose classes */
+.contentSection {
+  margin-top: .3em;
+}
+
+.mainSection .row {
+  padding-left: .3em;
+  padding-right: .3em;
+}
+
+/* Specific properties */
+body {
+  background: url('/public/images/elastoplast.png');
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 800px;
+  height: 100%;
+  background: #EEE;
+  /* TODO: Cross-browser me */
+  box-shadow: 0 0 20px #000000;
+}
+
+#headerSection .header {
+  margin-top: .1em;
+  font-size: 2.2em;
+}
+
+#headerSection .subheader {
+  margin-left: .2em;
+  font-size: 1em;
+}
+
+#navBar {
+  border-width: 3px 0;
+  border-style: solid;
+  border-color: #CCC;
+  text-align: right;
+  padding-top: .1em;
+  padding-bottom: .3em;
+}
+
+#navBar .link {
+  margin-left: .2em;
+  text-decoration: none;
+  color: #777;
+  font-weight: bold;
+}
+
+#navBar .link:hover {
+  text-decoration: underline;
+  color: #444;
+}
+
+#resumeSection .timelength {
+  text-align: right;
+  padding-right: .4em;
+}

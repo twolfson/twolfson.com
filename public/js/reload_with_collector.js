@@ -3,12 +3,12 @@ var checkFileUpdate = (function(){
 // TODO: Test in IE6
 /* Options */
 // Delay between update requests (in ms)
-var delay = 3000;
+var delay = 1000;
 
 // Set up XHR generator
 var XHR = (function () {
   var retFn;
-  
+
   // Try the modern version
   try {
     retFn = function () {
@@ -17,7 +17,7 @@ var XHR = (function () {
     retFn();
     return retFn;
   } catch(e) {}
-  
+
   // Modern IE
   try {
     retFn = function () {
@@ -26,7 +26,7 @@ var XHR = (function () {
     retFn();
     return retFn;
   } catch(f) {}
-  
+
   // IE 5/6 support
   try {
     retFn = function () {
@@ -63,6 +63,9 @@ function checkFileUpdate(url) {
                         location.reload();
                     }
                 }
+            }
+
+            if( origText ) {
               // Continue async xhr loop with 1s delay
               setTimeout( checkFn, delay );
             }
@@ -188,7 +191,7 @@ function grabRelativePath(str, quoteIndex) {
 // Run collecter onces dom is ready
 domready(function(){
   var resources = new Set();
-  
+
   // Track this document
   resources.add(location);
 
