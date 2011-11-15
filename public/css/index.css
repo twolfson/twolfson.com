@@ -80,7 +80,8 @@ body {
   font-weight: bold;
 }
 
-#navBar .link:hover {
+#navBar .link:hover,
+#navBar .link.selected {
   text-decoration: underline;
   color: #444;
 }

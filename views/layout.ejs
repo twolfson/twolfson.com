@@ -12,19 +12,28 @@
 <body>
 	<div id="wrapper">
     <header id="headerSection" class="mainSection">
-      <!-- TODO: Make font sans-serif -->
       <div class="row one">
         <h1 class="unit header">Todd Wolfson</h1>
         <!-- TODO: Use kerning -->
         <h2 class="unit subheader">JAVASCRIPT DEVELOPER</h2>
       </div>
-      <!-- TODO: Add top and bottom border -->
       <nav id="navBar" class="row one">
-        <a href="http://github.com/twolfson/" class="link">github</a>
-        <a href="portfolio" class="link">portfolio</a>
-        <a href="resume" class="link">resume</a>
-        <a href="#" class="link">blog</a>
-        <a href="contact" class="link">contact</a>
+      <% var navLinks = [
+              { 'name': 'github', 'href': 'http://github.com/twolfson/' },
+              { 'name': 'portfolio', 'href': 'portfolio' },
+              { 'name': 'resume', 'href': 'resume' },
+              { 'name': 'blog', 'href': '//blog.twolfson.com/' },
+              { 'name': 'contact', 'href': 'contact' }],
+            i,
+            len,
+            navLink,
+            navName;
+        for( i = 0, len = navLinks.length; i < len; i++ ) {
+          navLink = navLinks[i];
+          navName = navLink.name;
+        %>
+        <a href="<%-navLink.href%>" class="link<%=page===navName?' selected':''%>"><%=navName%></a>
+      <% } %>
       </nav>
     </header>
     <%- body %>
