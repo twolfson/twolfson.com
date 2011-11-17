@@ -12,12 +12,12 @@
 <body>
 	<div id="wrapper">
     <header id="headerSection" class="mainSection">
-      <div class="row one">
-        <h1 class="unit header">Todd Wolfson</h1>
+      <div class="line size1of1">
+        <h1 class="inlineBlock header">Todd Wolfson</h1>
         <!-- TODO: Use kerning -->
-        <h2 class="unit subheader">JAVASCRIPT DEVELOPER</h2>
+        <h2 class="inlineBlock subheader">JAVASCRIPT DEVELOPER</h2>
       </div>
-      <nav id="navBar" class="row one">
+      <nav id="navBar" class="line size1of1">
       <% var navLinks = [
               { 'name': 'github', 'href': 'http://github.com/twolfson/' },
               { 'name': 'portfolio', 'href': 'portfolio' },
@@ -27,7 +27,9 @@
             i,
             len,
             navLink,
-            navName;
+            navName,
+            page;
+            
         for( i = 0, len = navLinks.length; i < len; i++ ) {
           navLink = navLinks[i];
           navName = navLink.name;

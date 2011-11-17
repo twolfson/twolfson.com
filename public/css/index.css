@@ -1,27 +1,19 @@
-/* OOCSS */
-.one {
-  display: block;
-}
-
-.size1of2 {
-  width: 50%;
-}
-
-.size1of4 {
-  width: 25%;
-}
-
-.size3of4 {
-  width: 74%;
-}
-
-.unit, .lastUnit {
-  display: inline-block;
-}
-
-.lastUnit {
-  float: right;
-}
+/* OOCSS (attribution to Nicole Sullivan) */
+.line,.lastUnit{overflow:hidden; *overflow:visible;*zoom:1;}
+.unit{float:left;}
+.unitRight{float:right;}
+.size1of1{float:none;width:100%;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+.line:after,.lastUnit:after{content: " ";display: block;height: 0;clear: both;visibility: hidden;}
 
 /* Full document theming */
 * {
@@ -30,32 +22,50 @@
   font-family: sans-serif;
 }
 
+a:link,
+a:focus,
+a:visited {
+  color: #777;
+}
+
+a:hover {
+  color: #444;
+}
+
 /* General purpose classes */
 .contentSection {
   margin-top: .3em;
-}
-
-.mainSection .row {
   padding-left: .3em;
   padding-right: .3em;
+}
+
+.inlineBlock{
+  display:inline-block;
+}
+
+.textRight {
+  text-align: right;
 }
 
 /* Specific properties */
 body {
   background: url('/public/images/elastoplast.png');
+  height: 100%;
 }
 
 #wrapper {
   margin: 0 auto;
   width: 800px;
-  height: 100%;
+  min-height: 100%;
   background: #EEE;
   /* TODO: Cross-browser me */
   box-shadow: 0 0 20px #000000;
 }
 
+/* Header specific */
 #headerSection .header {
-  margin-top: .1em;
+  margin-left: .125em;
+  line-height: 1.4em;
   font-size: 2.2em;
 }
 
@@ -64,6 +74,7 @@ body {
   font-size: 1em;
 }
 
+/* Navbar specific */
 #navBar {
   border-width: 3px 0;
   border-style: solid;
@@ -74,9 +85,8 @@ body {
 }
 
 #navBar .link {
-  margin-left: .2em;
+  margin-right: .2em;
   text-decoration: none;
-  color: #777;
   font-weight: bold;
 }
 
@@ -86,7 +96,61 @@ body {
   color: #444;
 }
 
+/* Resume page */
 #resumeSection .timelength {
   text-align: right;
   padding-right: .4em;
+}
+
+/* Contact Page */
+#contactFieldset {
+  border: 3px solid #777;
+}
+
+#contactFieldset legend {
+  padding: 0 .6em;
+  margin-left: .4em;
+  font-size: 1.6em;
+}
+
+#contactForm .line {
+  line-height: 4em;
+}
+
+#contactForm label {
+  padding-right: .3em;
+}
+
+#contactForm input {
+  height: 2em;
+  margin-top: 1em;
+}
+
+#contactForm textarea {
+  height: 4em;
+  margin-top: 1em;
+}
+
+#contactForm .submitLine {
+  margin: .5em 0 1em;
+  text-align: center;
+}
+
+#contactForm button {
+  padding: 1em;
+}
+
+#picContainer {
+  text-align: center;
+}
+
+#picContainer img {
+  border-radius: 20px;
+  box-shadow: 0 0 10px #FFF;
+}
+
+#picContainer figcaption {
+  font-size: .8em;
+  font-weight: bold;
+  line-height: 2em;
 }
