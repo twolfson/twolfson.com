@@ -15,7 +15,7 @@
 .lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
 .line:after,.lastUnit:after{content: " ";display: block;height: 0;clear: both;visibility: hidden;}
 
-/* Full document theming */
+/* Full document theming (Color Scheme: http://colorschemedesigner.com/#46528b3--sm001G5K-3FRS54MXIX) */
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +25,13 @@
 a:link,
 a:focus,
 a:visited {
-  color: #777;
+  color: #817AB8;
 }
 
-a:hover {
-  color: #444;
+a:hover,
+#navBar .link:hover,
+#navBar .link.selected {
+  color: #595380;
 }
 
 /* General purpose classes */
@@ -72,16 +74,22 @@ body {
 #headerSection .subheader {
   margin-left: .2em;
   font-size: 1em;
+  color: #AEA4DE;
+}
+
+#headerSection .jsText {
+  color: #3C2C85;
 }
 
 /* Navbar specific */
 #navBar {
   border-width: 3px 0;
   border-style: solid;
-  border-color: #CCC;
+  border-color: #DDD0FF;
   text-align: right;
   padding-top: .1em;
   padding-bottom: .3em;
+  background: #ECECFF;
 }
 
 #navBar .link {
@@ -93,7 +101,6 @@ body {
 #navBar .link:hover,
 #navBar .link.selected {
   text-decoration: underline;
-  color: #444;
 }
 
 /* Resume page */
