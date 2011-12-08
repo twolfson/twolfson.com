@@ -1,28 +1,139 @@
-<section id="resumeSection" class="contentSection mainSection">
-  <article id="ensightenArticle" class="mainSubsection">
+<section id="resumeSection" class="mainSection">
+<%
+  var jobs = [{
+        'articleId': 'ensightenArticle',
+        'company': 'Ensighten LLC',
+        'location': 'Cupertino, CA',
+        'title': 'Javascript Developer',
+        'href': 'http://www.ensighten.com/',
+        'startDate': {
+          'human': 'May 2011',
+          'machine': new Date(1306368000) },
+        'endDate': {
+          'human': 'Present',
+          // TODO: On production, set to () instead of (0)
+          'machine': new Date(0) },
+        'bullets': [
+          'Build and maintain User Interface',
+          'Answer tickets and support large Enterprise clients',
+          'Update and patch bugs in legacy code bases' ]
+      }, {
+        'articleId': 'behanceArticle',
+        'company': 'Behance LLC',
+        'location': 'New York, NY',
+        'title': 'Development Intern (Web)',
+        'href': 'http://www.behance.net/',
+        'startDate': {
+          'human': 'December 2010',
+          'machine': new Date(1291161600) },
+        'endDate': {
+          'human': 'January 2011',
+          'machine': new Date(1296432000) },
+        'bullets': [
+          'Adapt to the Behance Framework in under a week; strong emphasis on OOP in PHP and jQuery',
+          'Add small site features on a team of two; balance different aspects of the development process',
+          'Generate benchmarking tests, unit tests for custom Behance libraries, and Selenium test scripts' ]
+      }, {
+        'articleId': 'metroflatsArticle',
+        'company': 'MetroFlats.com',
+        'location': 'Cedar Grove, NJ',
+        'title': 'Web Developer',
+        'href': 'http://www.metroflats.com/',
+        'startDate': {
+          'human': 'June 2010',
+          'machine': new Date(1277942400) },
+        'endDate': {
+          'human': 'September 2010',
+          'machine': new Date(1285891200) },
+        'bullets': [
+          'Keep track of roadmap and manage issues via ticketing system',
+          'Manage and assist junior developers',
+          'Create new site features and squash bugs',
+          'Work on a team of five developers and hold monthly presentations' ]
+      }, {
+        'articleId': 'binghamtonArticle',
+        'company': 'Binghamton University',
+        'location': 'Binghamton, NY',
+        'title': 'Web Intern',
+        'href': 'http://www.binghamton.edu/',
+        'startDate': {
+          'human': 'February 2008',
+          'machine': new Date(1201824000) },
+        'endDate': {
+          'human': 'May 2011',
+          'machine': new Date(1305417600) },
+        'bullets': [
+          'Work with many websites and departments',
+          'Update, manage, and create images, layouts, and content',
+          'Build out backend control panels as a customized CMS' ]
+      }, {
+        'articleId': 'freelanceArticle',
+        'company': 'Freelance',
+        'location': '',
+        'title': 'Web Developer',
+        'href': 'http://twolfson.com/',
+        'startDate': {
+          'human': 'February 2005',
+          'machine': new Date(1107216000) },
+        'endDate': {
+          'human': 'May 2011',
+          'machine': new Date(1305417600) },
+        'bullets': [
+          'Create custom website solutions unique to each client',
+          'Assist clients with site maintenance',
+          'Hold tutoring services about creating a website' ]
+      }],
+      job,
+      startDate,
+      endDate,
+      location,
+      i,
+      len,
+      bullets,
+      bullet,
+      j,
+      len2;
+  for( i = 0, len = jobs.length; i < len; i++ ) {
+    job = jobs[i];
+    startDate = job.startDate;
+    endDate = job.endDate;
+    location = job.location;
+%>
+  <article id="<%=job.articleId%>" class="contentSection mainSubsection <%=(i%2)?"even":"odd"%>Row">
     <div class="line size1of1">
-      <div class="size1of4 unit">
-        <h3>Javascript Developer</h3>
+      <div class="size2of3 unit">
+        <h3><%=job.title%></h3>
       </div>
-      <div class="size3of4 lastUnit timelength">
-        <time datetime="2011-05">May 2011</time> - Present
+      <div class="lastUnit timelength">
+        <time datetime="<%=startDate.machine.toISOString()%>"><%=startDate.human%></time> - <time datetime="<%=endDate.machine.toISOString()%>"><%=endDate.human%></time>
       </div>
     </div>
     <div class="line size1of1">
-      <div class="size1of2 unit">
-        <div class="size1of1">
-          <em>Ensighten LLC, Cupertino, CA</em>
+      <div class="size2of3 unit">
+        <div class="line size1of1">
+          <em><%=job.company%><%if(location){%>, <address><%=location%></address><%}%></em>
         </div>
-        <div class="size1of1">
+        <div class="line size1of1">
           <ul>
-          <li>Oh, hai</li>
+          <%
+            bullets = job.bullets;
+            for( j = 0, len2 = bullets.length; j < len2; j++ ) {
+              bullet = bullets[j];
+          %>
+            <li><%=bullet%></li>
+          <%
+            }
+          %>
           </ul>
         </div>
       </div>
-      <div class="size1of2 lastUnit">
+      <div class="lastUnit">
         <!-- TODO: Get Ensighten image -->
         <!-- TODO: Align right" -->
       </div>
     </div>
   </article>
+<%
+  }
+%>
 </section>

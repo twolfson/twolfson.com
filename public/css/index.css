@@ -25,7 +25,7 @@
 a:link,
 a:focus,
 a:visited {
-  color: #817AB8;
+  color: #7A73AF;
 }
 
 a:hover,
@@ -34,11 +34,22 @@ a:hover,
   color: #595380;
 }
 
+/* Light blue bg */
+#resumeSection .oddRow,
+#contactForm #info {
+  background: #e2f1f5;
+}
+
+/* Slightly darker blue bg */
+#resumeSection .evenRow,
+#contactForm #name, 
+#contactForm #message {
+  background: #DEDAF8;
+}
+
 /* General purpose classes */
 .contentSection {
-  margin-top: .3em;
-  padding-left: .3em;
-  padding-right: .3em;
+  padding: 0.5em;
 }
 
 .inlineBlock{
@@ -66,7 +77,7 @@ body {
 
 /* Header specific */
 #headerSection .header {
-  margin-left: .125em;
+  margin-left: .3em;
   line-height: 1.4em;
   font-size: 2.2em;
 }
@@ -74,11 +85,10 @@ body {
 #headerSection .subheader {
   margin-left: .2em;
   font-size: 1em;
-  color: #AEA4DE;
 }
 
 #headerSection .jsText {
-  color: #3C2C85;
+  color: #693B7E;
 }
 
 /* Navbar specific */
@@ -93,7 +103,7 @@ body {
 }
 
 #navBar .link {
-  margin-right: .2em;
+  margin-right: .3em;
   text-decoration: none;
   font-weight: bold;
 }
@@ -106,12 +116,11 @@ body {
 /* Resume page */
 #resumeSection .timelength {
   text-align: right;
-  padding-right: .4em;
 }
 
 /* Contact Page */
 #contactFieldset {
-  border: 3px solid #777;
+  border: 0;
 }
 
 #contactFieldset legend {
