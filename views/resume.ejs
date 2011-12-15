@@ -6,6 +6,7 @@
         'location': 'Cupertino, CA',
         'title': 'Javascript Developer',
         'href': 'http://www.ensighten.com/',
+        'image': 'ensighten.png',
         'startDate': {
           'human': 'May 2011',
           'machine': new Date(1306368000) },
@@ -23,6 +24,7 @@
         'location': 'New York, NY',
         'title': 'Development Intern (Web)',
         'href': 'http://www.behance.net/',
+        'image': 'behance.png',
         'startDate': {
           'human': 'December 2010',
           'machine': new Date(1291161600) },
@@ -30,15 +32,16 @@
           'human': 'January 2011',
           'machine': new Date(1296432000) },
         'bullets': [
-          'Adapt to the Behance Framework in under a week; strong emphasis on OOP in PHP and jQuery',
-          'Add small site features on a team of two; balance different aspects of the development process',
-          'Generate benchmarking tests, unit tests for custom Behance libraries, and Selenium test scripts' ]
+          'Adapted to the Behance\'s custom Framework in under a week',
+          'Added multiple site features on a team of two',
+          'Generated benchmarks, and server-side and client-side unit tests' ]
       }, {
         'articleId': 'metroflatsArticle',
         'company': 'MetroFlats.com',
         'location': 'Cedar Grove, NJ',
         'title': 'Web Developer',
         'href': 'http://www.metroflats.com/',
+        'image': 'metroflats.png',
         'startDate': {
           'human': 'June 2010',
           'machine': new Date(1277942400) },
@@ -56,6 +59,7 @@
         'location': 'Binghamton, NY',
         'title': 'Web Intern',
         'href': 'http://www.binghamton.edu/',
+        'image': 'binghamton.png',
         'startDate': {
           'human': 'February 2008',
           'machine': new Date(1201824000) },
@@ -72,6 +76,7 @@
         'location': '',
         'title': 'Web Developer',
         'href': 'http://twolfson.com/',
+        'image': 'freelance.png',
         'startDate': {
           'human': 'February 2005',
           'machine': new Date(1107216000) },
@@ -114,7 +119,7 @@
           <em><%=job.company%><%if(location){%>, <address><%=location%></address><%}%></em>
         </div>
         <div class="line size1of1">
-          <ul>
+          <ul class="bulletList">
           <%
             bullets = job.bullets;
             for( j = 0, len2 = bullets.length; j < len2; j++ ) {
@@ -128,8 +133,10 @@
         </div>
       </div>
       <div class="lastUnit">
-        <!-- TODO: Get Ensighten image -->
-        <!-- TODO: Align right" -->
+        <figure>
+          <img src="public/images/<%=job.image%>" alt="<%=job.company%>" class="size1of1" />
+        </figure>
+        <!-- TODO: Align right; kill border radius? -->
       </div>
     </div>
   </article>
