@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Todd Wolfson - Javascript Developer</title>
+  <link rel="shortcut icon" href="public/images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/index.css"/>
   <!-- TODO: Implement build chain for ONE stylesheet -->
@@ -10,14 +11,14 @@
   <script src="public/js/reload_with_collector.js"></script>
 </head>
 <body>
-	<div id="wrapper">
-    <header id="headerSection" class="mainSection">
+	<div class="oddRow globalWrapper">
+    <header class="headerSection mainSection">
       <div class="line size1of1">
         <h1 class="inlineBlock header">Todd Wolfson</h1>
         <!-- TODO: Use kerning -->
-        <h2 class="inlineBlock subheader"><span class="jsText">JAVASCRIPT</span> DEVELOPER</h2>
+        <h2 class="inlineBlock subheader"><span class="highlightText">JAVASCRIPT</span> DEVELOPER</h2>
       </div>
-      <nav id="navBar" class="line size1of1">
+      <nav id="navBar" class="evenRow border line size1of1">
       <% var navLinks = [
               { 'name': 'github', 'href': 'http://github.com/twolfson/' },
               { 'name': 'portfolio', 'href': 'portfolio' },

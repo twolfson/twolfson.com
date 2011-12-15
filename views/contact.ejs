@@ -2,26 +2,26 @@
   <form id="contactForm" class="size2of3 unit" method="POST" action="contact">
     <fieldset id="contactFieldset" class="size1of1">
       <legend>Contact Details</legend>
-      <div class="line nameLine">
+      <div class="line">
         <label for="name" class="size1of4 textRight unit">Name:</label>
         <div class="lastUnit">
-          <input id="name" name="name" type="text" class="size4of5" />
+          <input id="name" name="name" type="text" class="oddRow border size4of5" />
         </div>
       </div>
-      <div class="line infoLine">
+      <div class="line">
         <label for="info" class="size1of4 textRight unit">Contact Info:</label>
         <div class="lastUnit">
-          <input id="info" name="info" type="text" class="size4of5" />
+          <input id="info" name="info" type="text" class="evenRow border size4of5" />
         </div>
       </div>
-      <div class="line messageLine">
+      <div class="line oddRow">
         <label for="message" class="size1of4 textRight unit">Message:</label>
         <div class="lastUnit">
-          <textarea id="message" name="message" type="text" class="size4of5"></textarea>
+          <textarea id="message" name="message" type="text" class="oddRow border size4of5"></textarea>
         </div>
       </div>
       <div class="line submitLine">
-        <button type="submit" id="submitButton">Contact Todd</button>
+        <button type="submit" id="submitButton" class="evenRow border">Contact Todd</button>
       </div>
     </fieldset>
   </form>
