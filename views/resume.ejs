@@ -75,7 +75,6 @@
         'company': 'Freelance',
         'location': '',
         'title': 'Web Developer',
-        'href': 'http://twolfson.com/',
         'image': 'freelance.png',
         'startDate': {
           'human': 'February 2005',
@@ -92,6 +91,7 @@
       startDate,
       endDate,
       location,
+      href,
       i,
       len,
       bullets,
@@ -103,6 +103,7 @@
     startDate = job.startDate;
     endDate = job.endDate;
     location = job.location;
+    href = job.href;
 %>
   <article id="<%=job.articleId%>" class="contentSection mainSubsection <%=(i%2)?"even":"odd"%>Row">
     <div class="line size1of1">
@@ -134,9 +135,8 @@
       </div>
       <div class="lastUnit">
         <figure>
-          <img src="public/images/<%=job.image%>" alt="<%=job.company%>" class="size1of1" />
+          <%if(href){%><a href="<%=href%>" target="_blank"><%}%><img src="public/images/<%=job.image%>" alt="<%=job.company%>" class="size1of1" /><%if(href){%></a><%}%>
         </figure>
-        <!-- TODO: Align right; kill border radius? -->
       </div>
     </div>
   </article>

@@ -1,5 +1,5 @@
-Build out portfolio, resume, and blog pages
+Build out portfolio [refer to sketch], and blog pages
 Implement AJAX calls/loader for contact form
 Get contact form working with node_mailer
 Make a better favicon
-Link up logo's to webpages
+Increase width and use media queries

@@ -22,6 +22,15 @@
   font-family: sans-serif;
 }
 
+h1 {
+  line-height: 1.4em;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
 a:link,
 a:focus,
 a:visited {
@@ -115,7 +124,8 @@ figure figcaption {
 }
 
 .bulletList li:before {
-  content: " » ";
+  content: "\00BB\00A0";
+  margin-left: 0.1em;
 }
 
 /* Specific properties */
@@ -130,18 +140,37 @@ body {
   min-height: 100%;
   /* TODO: Cross-browser me */
   box-shadow: 0 0 20px #000000;
+
+  /* Relative position for footer */
+  position: relative;
+  padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
+}
+
+.footerSection {
+  position: absolute;
+  bottom: 0;
+
+  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper padding-bottom */
+  border-top: .1em solid #000;
+  padding-top: .2em;
+
+  margin: .1em 25% 0;
+  width: 50%;
+
+  text-align: center;
 }
 
 /* Header specific */
-.headerSection .header {
-  margin-left: .3em;
-  line-height: 1.4em;
-  font-size: 2.2em;
+.headerSection h1, h2 {
+  display: inline;
 }
 
-.headerSection .subheader {
+.headerSection h1 {
+  margin-left: .3em;
+}
+
+.headerSection h2 {
   margin-left: .2em;
-  font-size: 1em;
 }
 
 /* Navbar specific */
@@ -162,6 +191,11 @@ body {
 #navBar a:focus,
 #navBar a.selected {
   text-decoration: underline;
+}
+
+/* Footer specific */
+.footerSection span {
+  display: block;
 }
 
 /* Resume page */
