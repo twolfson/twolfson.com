@@ -3,3 +3,4 @@ Implement AJAX calls/loader for contact form
 Get contact form working with node_mailer
 Make a better favicon
 Link up logo's to webpages
+Get appropriate vertical alignment on all logos (namely metroflats)
