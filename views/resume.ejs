@@ -1,117 +1,63 @@
 <section id="resumeSection" class="mainSection">
 <%
-  var jobs = [{
-        'articleId': 'ensightenArticle',
-        'company': 'Ensighten LLC',
-        'location': 'Cupertino, CA',
-        'title': 'Javascript Developer',
-        'href': 'http://www.ensighten.com/',
-        'image': 'ensighten.png',
-        'startDate': {
-          'human': 'May 2011',
-          'machine': new Date(1306368000) },
-        'endDate': {
-          'human': 'Present',
-          // TODO: On production, set to () instead of (0)
-          'machine': new Date(0) },
-        'bullets': [
-          'Build and maintain User Interface',
-          'Answer tickets and support large Enterprise clients',
-          'Update and patch bugs in legacy code bases' ]
-      }, {
-        'articleId': 'behanceArticle',
-        'company': 'Behance LLC',
-        'location': 'New York, NY',
-        'title': 'Development Intern (Web)',
-        'href': 'http://www.behance.net/',
-        'image': 'behance.png',
-        'startDate': {
-          'human': 'December 2010',
-          'machine': new Date(1291161600) },
-        'endDate': {
-          'human': 'January 2011',
-          'machine': new Date(1296432000) },
-        'bullets': [
-          'Adapted to the Behance\'s custom Framework in under a week',
-          'Added multiple site features on a team of two',
-          'Generated benchmarks, and server-side and client-side unit tests' ]
-      }, {
-        'articleId': 'metroflatsArticle',
-        'company': 'MetroFlats.com',
-        'location': 'Cedar Grove, NJ',
-        'title': 'Web Developer',
-        'href': 'http://www.metroflats.com/',
-        'image': 'metroflats.png',
-        'startDate': {
-          'human': 'June 2010',
-          'machine': new Date(1277942400) },
-        'endDate': {
-          'human': 'September 2010',
-          'machine': new Date(1285891200) },
-        'bullets': [
-          'Keep track of roadmap and manage issues via ticketing system',
-          'Manage and assist junior developers',
-          'Create new site features and squash bugs',
-          'Work on a team of five developers and hold monthly presentations' ]
-      }, {
-        'articleId': 'binghamtonArticle',
-        'company': 'Binghamton University',
-        'location': 'Binghamton, NY',
-        'title': 'Web Intern',
-        'href': 'http://www.binghamton.edu/',
-        'image': 'binghamton.png',
-        'startDate': {
-          'human': 'February 2008',
-          'machine': new Date(1201824000) },
-        'endDate': {
-          'human': 'May 2011',
-          'machine': new Date(1305417600) },
-        'bullets': [
-          'Work with many websites and departments',
-          'Update, manage, and create images, layouts, and content',
-          'Build out backend control panels as a customized CMS' ]
-      }, {
-        'articleId': 'freelanceArticle',
-        'company': 'Freelance',
-        'location': '',
-        'title': 'Web Developer',
-        'image': 'freelance.png',
-        'startDate': {
-          'human': 'February 2005',
-          'machine': new Date(1107216000) },
-        'endDate': {
-          'human': 'May 2011',
-          'machine': new Date(1305417600) },
-        'bullets': [
-          'Create custom website solutions unique to each client',
-          'Assist clients with site maintenance',
-          'Hold tutoring services about creating a website' ]
-      }],
+  var jobs = jobs || [],
       job,
+      name,
       startDate,
       endDate,
       location,
-      href,
+      url,
+      summaryItems,
+      imgUrl,
       i,
       len,
-      bullets,
-      bullet,
+      summaryItem,
       j,
-      len2;
+      len2,
+  // TODO: On production set to () instead of (0)
+      presentDateStr = 'Present';
+      presentDate = new Date(0);
+
+  // Set up month constants
+  var months = {},
+      month,
+      monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  for (i = monthArr.length; i--; ) {
+    month = monthArr[i];
+    months[month] = i;
+  }
+  function fromMonthYear(dateStr) {
+    if (dateStr === presentDateStr) {
+      return presentDate;
+    }
+
+    var date_,
+        dateArr = dateStr.match(/([A-Z]+)\s+(\d+)/i) 
+        month = dateArr[1],
+        year = dateArr[2];
+        
+    date_ = new Date(year, months[month]);
+    return date_;
+  }
+
   for( i = 0, len = jobs.length; i < len; i++ ) {
     job = jobs[i];
-    startDate = job.startDate;
-    endDate = job.endDate;
+    name = job.name;
+    startDateStr = job.startDate || presentDateStr;
+    startDate = fromMonthYear(startDateStr);
+    endDateStr = job.endDate || presentDateStr;
+    endDate = fromMonthYear(endDateStr);
     location = job.location;
-    href = job.href;
+    url = job.url;
+    summaryItems = job.summary;
 %>
-  <article id="<%=job.articleId%>" class="contentSection mainSubsection <%=(i%2)?"even":"odd"%>Row">
+  <article id="<%=name%>Article" class="contentSection mainSubsection <%=(i%2)?"even":"odd"%>Row">
     <div class="line size1of1">
       <div class="size2of3 unit">
         <h3><%=job.title%></h3>
       </div>
       <div class="lastUnit timelength">
-        <time datetime="<%=startDate.machine.toISOString()%>"><%=startDate.human%></time> - <time datetime="<%=endDate.machine.toISOString()%>"><%=endDate.human%></time>
+        <time datetime="<%=startDate.toISOString()%>"><%=startDateStr%></time> - <time datetime="<%=endDate.toISOString()%>"><%=endDateStr%></time>
       </div>
     </div>
     <div class="line size1of1">
@@ -122,11 +68,10 @@
         <div class="line size1of1">
           <ul class="bulletList">
           <%
-            bullets = job.bullets;
-            for( j = 0, len2 = bullets.length; j < len2; j++ ) {
-              bullet = bullets[j];
+            for( j = 0, len2 = summaryItems.length; j < len2; j++ ) {
+              summaryItem = summaryItems[j];
           %>
-            <li><%=bullet%></li>
+            <li><%=summaryItem%></li>
           <%
             }
           %>
@@ -135,7 +80,7 @@
       </div>
       <div class="lastUnit">
         <figure>
-          <%if(href){%><a href="<%=href%>" target="_blank"><%}%><img src="public/images/<%=job.image%>" alt="<%=job.company%>" class="size1of1" /><%if(href){%></a><%}%>
+          <%if(url){%><a href="<%=url%>" target="_blank"><%}%><img src="public/images/<%=name%>.png" alt="<%=job.company%>" class="size1of1" /><%if(url){%></a><%}%>
         </figure>
       </div>
     </div>

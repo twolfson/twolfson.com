@@ -143,6 +143,9 @@ body {
 
   /* Relative position for footer */
   position: relative;
+}
+
+.globalWrapper > section {
   padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
 }
 
@@ -150,7 +153,7 @@ body {
   position: absolute;
   bottom: 0;
 
-  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper padding-bottom */
+  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
   border-top: .1em solid #000;
   padding-top: .2em;
 
