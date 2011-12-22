@@ -40,7 +40,9 @@ a:visited {
 a:hover,
 a:focus,
 a.selected,
-.highlightText {
+.highlightText,
+a.highlightText, /* Strange edge-case */
+.highlightText:hover {
   color: #4F46C4;
 }
 
@@ -128,6 +130,17 @@ figure figcaption {
   margin-left: 0.1em;
 }
 
+/* Sky blue bg */
+.featureItem {
+  background: #B4E8FF;
+  color: #000;
+}
+
+.featureItem:hover {
+  background: #E2F6FF;
+  color: #4F46C4;
+}
+
 /* Specific properties */
 body {
   background: url('/public/images/white_plaster.png');
@@ -164,7 +177,8 @@ body {
 }
 
 /* Header specific */
-.headerSection h1, h2 {
+.headerSection h1,
+.headerSection h2 {
   display: inline;
 }
 
@@ -174,6 +188,10 @@ body {
 
 .headerSection h2 {
   margin-left: .2em;
+}
+
+.headerSection a {
+  text-decoration: none;
 }
 
 /* Navbar specific */
@@ -199,6 +217,38 @@ body {
 /* Footer specific */
 .footerSection span {
   display: block;
+}
+
+/* Portfolio page */
+#portfolioSection h2 {
+  font-size: 1.6em;
+  line-height: 1em;
+  text-align: center;
+}
+
+#portfolioSection h3 {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+/* Make links look normal */
+#portfolioSection a {
+  text-decoration: none;
+}
+
+#portfolioSection a:focus {
+  outline: 0;
+}
+
+#portfolioSection figure {
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#portfolioSection img {
+  height: 170px;
+  border-radius: 0;
 }
 
 /* Resume page */

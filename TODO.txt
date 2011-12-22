@@ -3,3 +3,4 @@ Implement AJAX calls/loader for contact form
 Get contact form working with node_mailer
 Make a better favicon
 Increase width and use media queries
+Pre-render all pages and send static content from memory
