@@ -23,12 +23,13 @@
             item,
             name,
             i,
-            len;
-        for (i = 0, len = items.length; i < len; i++ ) {
+            len,
+            finalIndex;
+        for (i = 0, len = items.length, finalIndex = len - 1; i < len; i++ ) {
           item = items[i];
           name = item.name;
       %>
-        <div class="unit <%if(i!==len-1){%>size1of3<%}else{%>lastUnit<%}%>">
+        <div class="unit <%if(i!==finalIndex){%>size1of3<%}else{%>lastUnit<%}%>">
           <a href="<%=item.url%>">
             <figure class="featureItem">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
@@ -48,90 +49,77 @@
   <article>
     <%
     var freelanceItems = [{
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/github.png',
-          'name': 'GitHub',
-          'timePeriod': 'July 2011 - Present'
+          'name': 'CSS Off',
+          'caption': 'Most recent active competition',
+          'timePeriod': 'October 2011'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/mouse.png',
-          'name': 'Mouse Tracker',
-          'timePeriod': 'March 2011'
+          'name': 'The Worry Chest System',
+          'caption': 'Last freelance client',
+          'timePeriod': 'TODO: REAL DATE'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/mouse.png',
-          'name': 'Mouse Tracker',
-          'timePeriod': 'March 2011'
+          'name': 'His Creative Designs',
+          'caption': '',
+          'timePeriod': 'TODO: REAL DATE'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/canvas.png',
-          'name': 'Canvas Drawer',
-          'timePeriod': 'March 2011' // TODO: Confirm date
+          'name': 'Celebrations Consulting',
+          'caption': '',
+          'timePeriod': 'TODO: REAL DATE'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/canvas.png',
-          'name': 'Canvas Drawer',
-          'timePeriod': 'March 2011' // TODO: Confirm date
+          'name': 'Banyan Connections',
+          'caption': '',
+          'timePeriod': 'TODO: REAL DATE'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/github.png',
-          'name': 'GitHub',
-          'timePeriod': 'July 2011 - Present'
+          'name': 'Bubbles Auto Care', // TODO: Verify actual name
+          'caption': '',
+          'timePeriod': 'TODO: REAL DATE'
         }, {
-          'url': 'TODO: Get real URL',
           'imgSrc': 'public/images/mouse.png',
-          'name': 'Mouse Tracker',
-          'timePeriod': 'March 2011'
+          'name': 'Millburn High School',
+          'caption': 'Never forget your first',
+          'timePeriod': 'February 2005 - June 2007'
         }],
         freelanceSlice,
-        evenRow = 0,
+        rowCount,
         i,
-        lastI,
-        remainingLen,
         len,
         item,
         name,
         j,
-        len2;
+        len2,
+        finalIndex;
 
-    for (i = 0, lastI = 0, len = freelanceItems.length; i < len; ) {
-      // Keep track of the lastI and adjust row tracker
-      evenRow ^= 1;
-      lastI = i;
-
-      // Calculate amount of remaining items
-      remainingLen = len - lastI;
-
-      // If no more than 3 items remain
-      if (remainingLen <= 3) {
-        // Use them up
-        i = lastI + remainingLen;
-      } else {
-      // Otherwise, use 2 or 3 depending on the row distance
-        i = lastI + (remainingLen % 3 ? 2 : 3);
+    for (rowCount = 0; len = freelanceItems.length, len > 0; rowCount++) {
+      i = len;
+      // If more than 3 items remain, use 2 or 3 depending on the row distance
+      if (len > 3) {
+        i = (len % 3 ? 2 : 3);
       }
 
       // Grab the next slice
-      freelanceSlice = freelanceItems.slice(lastI, i);
+      freelanceSlice = freelanceItems.splice(0, i);
     %>
-      <div class="<%=evenRow?"even":"odd"%>Row">
+      <div class="<%=rowCount^1?"even":"odd"%>Row">
         <div class="line">
-        <%if (lastI === 0) {%><h2>Freelance</h2><%}%>
+        <%if (rowCount === 0) {%><h2>Freelance</h2><%}%>
         <%
-          for (j = 0, len2 = freelanceSlice.length; j < len2; j++ ) {
+          for (j = 0, len2 = freelanceSlice.length, finalIndex = len2 - 1; j < len2; j++ ) {
             item = freelanceSlice[j];
             name = item.name;
         %>
-          <div class="unit <%if(j!==len2-1){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
-            <a href="<%=item.url%>">
-              <figure class="featureItem">
-                <img src="<%=item.imgSrc%>" alt="<%=name%>" />
-                <figcaption>
-                  <h3><%=name%></h3>
-                  <%=item.timePeriod%>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="unit <%if(j!==finalIndex){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
+            <figure class="featureItem">
+              <img src="<%=item.imgSrc%>" alt="<%=name%>" />
+              <figcaption>
+                <h3><%=name%></h3>
+                <%=item.timePeriod%>
+              </figcaption>
+            </figure>
           </div>
         <%
           }
