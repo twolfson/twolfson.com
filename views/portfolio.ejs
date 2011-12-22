@@ -46,31 +46,100 @@
     </div>
   </article>
   <article>
-    <div class="evenRow">
-      <h2>Freelance</h2>
-      <div class="line">
-        <figure class="unit size1of3">
-          <img src="public/images/cssOff.png" alt="GitHub" />
-          <figcaption>
-            <a href="#"><!-- TODO: cssOff url --><h3>CSS Off</h3></a>
-            <!-- TODO: Date -->
-          </figcaption>
-        </figure>
-        <figure class="unit size1of3">
-          <img src="public/images/mouse.png" alt="GitHub" />
-          <figcaption>
-            <a href="#"><!-- TODO: mouse url --><h3>Mouse Tracker</h3></a>
-            March 2011
-          </figcaption>
-        </figure>
-        <figure class="lastUnit">
-          <img src="public/images/palette.png" alt="GitHub" />
-          <figcaption>
-            <a href="#"><!-- TODO: canvas url --><h3>Canvas Drawer</h3></a>
-            March 2011
-          </figcaption>
-        </figure>
+    <%
+    var freelanceItems = [{
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/github.png',
+          'name': 'GitHub',
+          'timePeriod': 'July 2011 - Present'
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/mouse.png',
+          'name': 'Mouse Tracker',
+          'timePeriod': 'March 2011'
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/mouse.png',
+          'name': 'Mouse Tracker',
+          'timePeriod': 'March 2011'
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/canvas.png',
+          'name': 'Canvas Drawer',
+          'timePeriod': 'March 2011' // TODO: Confirm date
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/canvas.png',
+          'name': 'Canvas Drawer',
+          'timePeriod': 'March 2011' // TODO: Confirm date
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/github.png',
+          'name': 'GitHub',
+          'timePeriod': 'July 2011 - Present'
+        }, {
+          'url': 'TODO: Get real URL',
+          'imgSrc': 'public/images/mouse.png',
+          'name': 'Mouse Tracker',
+          'timePeriod': 'March 2011'
+        }],
+        freelanceSlice,
+        evenRow = 0,
+        i,
+        lastI,
+        remainingLen,
+        len,
+        item,
+        name,
+        j,
+        len2;
+
+    for (i = 0, lastI = 0, len = freelanceItems.length; i < len; ) {
+      // Keep track of the lastI and adjust row tracker
+      evenRow ^= 1;
+      lastI = i;
+
+      // Calculate amount of remaining items
+      remainingLen = len - lastI;
+
+      // If no more than 3 items remain
+      if (remainingLen <= 3) {
+        // Use them up
+        i = lastI + remainingLen;
+      } else {
+      // Otherwise, use 2 or 3 depending on the row distance
+        i = lastI + (remainingLen % 3 ? 2 : 3);
+      }
+
+      // Grab the next slice
+      freelanceSlice = freelanceItems.slice(lastI, i);
+    %>
+      <div class="<%=evenRow?"even":"odd"%>Row">
+        <div class="line">
+        <%if (lastI === 0) {%><h2>Freelance</h2><%}%>
+        <%
+          for (j = 0, len2 = freelanceSlice.length; j < len2; j++ ) {
+            item = freelanceSlice[j];
+            name = item.name;
+        %>
+          <div class="unit <%if(j!==len2-1){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
+            <a href="<%=item.url%>">
+              <figure class="featureItem">
+                <img src="<%=item.imgSrc%>" alt="<%=name%>" />
+                <figcaption>
+                  <h3><%=name%></h3>
+                  <%=item.timePeriod%>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        <%
+          }
+        %>
+        </div>
       </div>
-    </div>
+    <%
+    }
+    %>
   </article>
 </section>
