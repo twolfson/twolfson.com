@@ -1,8 +1,8 @@
 <section id="portfolioSection" class="mainSection">
   <article>
     <div class="oddRow">
-      <h2>Script Kiddie</h2>
-      <div class="line">
+      <h2 class="contentLine">Script Kiddie</h2>
+      <div class="line contentLine">
       <%
         var items = [{
               'url': 'TODO: Get real URL',
@@ -30,15 +30,15 @@
           name = item.name;
       %>
         <div class="unit <%if(i!==finalIndex){%>size1of3<%}else{%>lastUnit<%}%>">
-          <a href="<%=item.url%>">
-            <figure class="featureItem">
+          <figure class="featureItem">
+            <a href="<%=item.url%>">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
               <figcaption>
                 <h3><%=name%></h3>
                 <%=item.timePeriod%>
               </figcaption>
-            </figure>
-          </a>
+            </a>
+          </figure>
         </div>
       <%
         }
@@ -105,8 +105,16 @@
       freelanceSlice = freelanceItems.splice(0, i);
     %>
       <div class="<%=rowCount^1?"even":"odd"%>Row">
-        <div class="line">
-        <%if (rowCount === 0) {%><h2>Freelance</h2><%}%>
+        <div class="line contentLine">
+        <%
+          if (rowCount === 0) {
+        %>
+          <h2>Freelance</h2>
+        </div>
+        <div class="line contentLine">
+        <%
+          }
+        %>
         <%
           for (j = 0, len2 = freelanceSlice.length, finalIndex = len2 - 1; j < len2; j++ ) {
             item = freelanceSlice[j];

@@ -20,11 +20,11 @@
       </div>
       <nav id="navBar" class="evenRow border line size1of1">
       <% var navLinks = [
-              { 'name': 'github', 'href': 'http://github.com/twolfson/' },
-              { 'name': 'portfolio', 'href': 'portfolio' },
-              { 'name': 'resume', 'href': 'resume' },
-              { 'name': 'blog', 'href': '//blog.twolfson.com/' },
-              { 'name': 'contact', 'href': 'contact' }],
+              { "name": "github", "href": "http://github.com/twolfson/" },
+              { "name": "portfolio", "href": "portfolio" },
+              { "name": "resume", "href": "resume" },
+              { "name": "blog", "href": "//blog.twolfson.com/" },
+              { "name": "contact", "href": "contact" }],
             i,
             len,
             navLink,
@@ -35,7 +35,7 @@
           navLink = navLinks[i];
           navName = navLink.name;
         %>
-        <a href="<%-navLink.href%>" class="link<%=page===navName?' selected':''%>"><%=navName%></a>
+        <a href="<%-navLink.href%>" class="link<%=page===navName?" selected":""%>"><%=navName%></a>
       <% } %>
       </nav>
     </header>

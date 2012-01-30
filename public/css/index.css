@@ -15,6 +15,7 @@
 .lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
 .line:after,.lastUnit:after{content: " ";display: block;height: 0;clear: both;visibility: hidden;}
 
+
 /* Full document theming (Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy) */
 * {
   margin: 0;
@@ -31,19 +32,21 @@ h2 {
   font-size: 1em;
 }
 
+a,
 a:link,
-a:focus,
 a:visited {
   color: #436DC4;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-a:hover,
 a:focus,
-a.selected,
-.highlightText,
-a.highlightText, /* Strange edge-case */
-.highlightText:hover {
+a:hover,
+a:active,
+a.selected {
+  outline: 0;
   color: #4F46C4;
+  text-decoration: underline;
 }
 
 fieldset {
@@ -115,6 +118,15 @@ figure figcaption {
 
 .contentSection {
   padding: 0.5em;
+}
+
+.contentLine {
+  padding: 0 16px 8px;
+}
+
+.evenRow .contentLine:first-child,
+.oddRow .contentLine:first-child {
+  padding-top: 8px;
 }
 
 .inlineBlock {
@@ -190,28 +202,15 @@ body {
   margin-left: .2em;
 }
 
-.headerSection a {
-  text-decoration: none;
-}
-
 /* Navbar specific */
 #navBar.border {
   border-width: 3px 0;
   text-align: right;
-  padding-top: .1em;
-  padding-bottom: .3em;
+  padding: .3em 0;
 }
 
 #navBar a {
   margin-right: .3em;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#navBar a:hover,
-#navBar a:focus,
-#navBar a.selected {
-  text-decoration: underline;
 }
 
 /* Footer specific */
@@ -231,19 +230,24 @@ body {
   line-height: 1em;
 }
 
-/* Make links look normal */
-#portfolioSection a {
+/* Selective underlining for anchors */
+#portfolioSection a:hover {
   text-decoration: none;
 }
 
-#portfolioSection a:focus {
-  outline: 0;
+#portfolioSection a:hover h3 {
+  text-decoration: underline;
 }
 
 #portfolioSection figure {
   border-radius: 20px;
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
+}
+
+#portfolioSection figure a {
+  display: block;
+  width: 100%;
 }
 
 #portfolioSection img {
