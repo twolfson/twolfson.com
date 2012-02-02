@@ -137,6 +137,10 @@ figure figcaption {
   display: inline-block;
 }
 
+.textCenter {
+  text-align: center;
+}
+
 .textRight {
   text-align: right;
 }

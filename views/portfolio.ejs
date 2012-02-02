@@ -52,7 +52,8 @@
           "imgSrc": "public/portfolio/css_off_thumb.png",
           "name": "CSS Off",
           "caption": "Most recent active competition",
-          "timePeriod": "October 2011"
+          "timePeriod": "October 2011",
+          "site": "public/portfolio/css_off/index.html"
         // }, {
         //   "imgSrc": "public/images/mouse.png",
         //   "name": "The Worry Chest System",
@@ -62,7 +63,8 @@
           "imgSrc": "public/portfolio/hcd_thumb.png",
           "name": "His Creative Designs",
           "caption": "",
-          "timePeriod": "January 2009"
+          "timePeriod": "January 2009",
+          "site": "public/portfolio/hcd/index.html"
         // }, {
         //   "imgSrc": "public/images/canvas.png",
         //   "name": "Celebrations Consulting",
@@ -121,12 +123,14 @@
             name = item.name;
         %>
           <div class="unit <%if(j!==finalIndex){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
-            <figure class="featureItem pseudoLink">
-              <img src="<%=item.imgSrc%>" alt="<%=name%>" />
-              <figcaption>
-                <h3><%=name%></h3>
-                <%=item.timePeriod%>
-              </figcaption>
+            <figure class="featureItem">
+              <a href="<%=item.site%>" target="_blank">
+                <img src="<%=item.imgSrc%>" alt="<%=name%>" />
+                <figcaption>
+                  <h3><%=name%></h3>
+                  <%=item.timePeriod%>
+                </figcaption>
+              </a>
             </figure>
           </div>
         <%
