@@ -1,0 +1,23 @@
+body {
+	color: inherit;
+	background-color: #6988B4;
+}
+p {
+	font-family: Arial, serif;
+	font-style: normal;
+	font-weight: 700;
+	text-decoration: none;
+}
+a:hover {
+	color: #3333FF;
+	background-color: transparent;
+}
+a:link {
+	font-size: 18px;
+}
+a:visited {
+	font-size: 18px;
+}
+#publication {
+	text-align: center;
+}

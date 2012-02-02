@@ -34,16 +34,19 @@ h2 {
 
 a,
 a:link,
-a:visited {
+a:visited, 
+.pseudoLink {
   color: #436DC4;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:focus,
 a:hover,
 a:active,
-a.selected {
+a.selected,
+.psuedoLink:hover {
   outline: 0;
   color: #4F46C4;
   text-decoration: underline;
@@ -89,6 +92,7 @@ figure figcaption {
   font-size: .8em;
   font-weight: bold;
   line-height: 2em;
+  padding-top: .4em;
 }
 
 /* General purpose classes */
@@ -145,12 +149,13 @@ figure figcaption {
 /* Sky blue bg */
 .featureItem {
   background: #B4E8FF;
-  color: #000;
+  /* color: #000; */
+  padding: 5px 0;
 }
 
 .featureItem:hover {
   background: #E2F6FF;
-  color: #4F46C4;
+  /* color: #4F46C4; */
 }
 
 /* Specific properties */
@@ -230,12 +235,15 @@ body {
   line-height: 1em;
 }
 
+
 /* Selective underlining for anchors */
-#portfolioSection a:hover {
+#portfolioSection a:hover,
+#portfolioSection .pseudoLink:hover {
   text-decoration: none;
 }
 
-#portfolioSection a:hover h3 {
+#portfolioSection a:hover h3,
+#portfolioSection .pseudoLink:hover h3 {
   text-decoration: underline;
 }
 
@@ -285,4 +293,5 @@ body {
 
 #contactForm button {
   padding: 1em;
+  border-radius: 5px;
 }

@@ -1,0 +1,4 @@
+make into a bookmarklet
+also have its own webpage
+but the driving point is an overlay
+that takes the current page (or url given) and converts the body to an iframe

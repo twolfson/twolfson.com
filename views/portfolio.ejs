@@ -5,20 +5,20 @@
       <div class="line contentLine">
       <%
         var items = [{
-              'url': 'TODO: Get real URL',
-              'imgSrc': 'public/images/github.png',
-              'name': 'GitHub',
-              'timePeriod': 'July 2011 - Present'
+              "url": "http:\/\/github.com/twolfson/",
+              "imgSrc": "public/images/github.png",
+              "name": "GitHub",
+              "timePeriod": "July 2011 - Present"
             }, {
-              'url': 'TODO: Get real URL',
-              'imgSrc': 'public/images/mouse.png',
-              'name': 'Mouse Tracker',
-              'timePeriod': 'March 2011'
+              "url": "public/portfolio/mouse.html",
+              "imgSrc": "public/images/mouse.png",
+              "name": "Mouse Tracker",
+              "timePeriod": "March 2011"
             }, {
-              'url': 'TODO: Get real URL',
-              'imgSrc': 'public/images/canvas.png',
-              'name': 'Canvas Drawer',
-              'timePeriod': 'March 2011' // TODO: Confirm date
+              "url": "public/portfolio/canvas.html",
+              "imgSrc": "public/images/canvas.png",
+              "name": "Canvas Drawer",
+              "timePeriod": "March 2011" // TODO: Confirm date
             }],
             item,
             name,
@@ -31,7 +31,7 @@
       %>
         <div class="unit <%if(i!==finalIndex){%>size1of3<%}else{%>lastUnit<%}%>">
           <figure class="featureItem">
-            <a href="<%=item.url%>">
+            <a href="<%=item.url%>" target="_blank">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
               <figcaption>
                 <h3><%=name%></h3>
@@ -49,40 +49,40 @@
   <article>
     <%
     var freelanceItems = [{
-          'imgSrc': 'public/images/github.png',
-          'name': 'CSS Off',
-          'caption': 'Most recent active competition',
-          'timePeriod': 'October 2011'
+          "imgSrc": "public/portfolio/css_off_thumb.png",
+          "name": "CSS Off",
+          "caption": "Most recent active competition",
+          "timePeriod": "October 2011"
+        // }, {
+        //   "imgSrc": "public/images/mouse.png",
+        //   "name": "The Worry Chest System",
+        //   "caption": "Last freelance client",
+        //   "timePeriod": "July 2010"
         }, {
-          'imgSrc': 'public/images/mouse.png',
-          'name': 'The Worry Chest System',
-          'caption': 'Last freelance client',
-          'timePeriod': 'TODO: REAL DATE'
-        }, {
-          'imgSrc': 'public/images/mouse.png',
-          'name': 'His Creative Designs',
-          'caption': '',
-          'timePeriod': 'TODO: REAL DATE'
-        }, {
-          'imgSrc': 'public/images/canvas.png',
-          'name': 'Celebrations Consulting',
-          'caption': '',
-          'timePeriod': 'TODO: REAL DATE'
-        }, {
-          'imgSrc': 'public/images/canvas.png',
-          'name': 'Banyan Connections',
-          'caption': '',
-          'timePeriod': 'TODO: REAL DATE'
-        }, {
-          'imgSrc': 'public/images/github.png',
-          'name': 'Bubbles Auto Care', // TODO: Verify actual name
-          'caption': '',
-          'timePeriod': 'TODO: REAL DATE'
-        }, {
-          'imgSrc': 'public/images/mouse.png',
-          'name': 'Millburn High School',
-          'caption': 'Never forget your first',
-          'timePeriod': 'February 2005 - June 2007'
+          "imgSrc": "public/portfolio/hcd_thumb.png",
+          "name": "His Creative Designs",
+          "caption": "",
+          "timePeriod": "January 2009"
+        // }, {
+        //   "imgSrc": "public/images/canvas.png",
+        //   "name": "Celebrations Consulting",
+        //   "caption": "",
+        //   "timePeriod": "August 2009"
+        // }, {
+        //   "imgSrc": "public/images/canvas.png",
+        //   "name": "Banyan Connections",
+        //   "caption": "",
+        //   "timePeriod": "TODO: REAL DATE"
+        // }, {
+        //   "imgSrc": "public/images/github.png",
+        //   "name": "Bubbles Auto Care", // TODO: Verify actual name
+        //   "caption": "",
+        //   "timePeriod": "TODO: REAL DATE"
+        // }, {
+        //   "imgSrc": "public/portfolio/millburn_thumb.png",
+        //   "name": "Millburn High School",
+        //   "caption": "Never forget your first",
+        //   "timePeriod": "February 2005 - June 2007"
         }],
         freelanceSlice,
         rowCount,
@@ -121,7 +121,7 @@
             name = item.name;
         %>
           <div class="unit <%if(j!==finalIndex){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
-            <figure class="featureItem">
+            <figure class="featureItem pseudoLink">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
               <figcaption>
                 <h3><%=name%></h3>

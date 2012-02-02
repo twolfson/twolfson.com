@@ -1,0 +1,55 @@
+body {
+	color: inherit;
+	background-color: #6988B4;
+	margin: 0px;
+}
+#l-mus {
+	position: absolute;
+	left: 15%;
+	top: 20px;
+}
+#l-eng {
+	position: absolute;
+	right: 15%;
+	top: 20px;
+}
+#l-mat {
+	position: absolute;
+	left: 15%;
+	top: 120px;
+}
+#l-sci {
+	position: absolute;
+	right: 15%;
+	top: 120px;
+}
+#l-lan {
+	position: absolute;
+	left: 15%;
+	top: 220px;
+}
+#l-phy {
+	position: absolute;
+	right: 15%;
+	top: 220px;
+}
+#l-his {
+	position: absolute;
+	left: 15%;
+	top: 320px;
+}
+#l-art {
+	position: absolute;
+	right: 15%;
+	top: 320px;
+}
+#l-lib {
+	position: absolute;
+	left: 15%;
+	top: 420px;
+}
+#l-gra {
+	position: absolute;
+	right: 15%;
+	top: 420px;
+}

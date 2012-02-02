@@ -1,0 +1,246 @@
+<html>
+<head>
+	<title>
+		Canvas Drawer
+	</title>
+	<style>
+		* {
+			margin:  0px;
+			padding: 0px;
+		}
+		body {
+			height: 100%;
+			width:  100%;
+		}
+		#toolbox {
+			position: absolute;
+			left: 5px;
+			top:  5px;
+		}
+		#canvas {
+			background: #0F0;
+		}
+		fieldset {
+			border: 1px solid black;
+		}
+		legend {
+			margin-left: 0.5em;
+		}
+	</style>
+	<script>
+		function main() {
+
+			var Common;
+			// Error checking before we get started
+			if( Common !== undefined ) {
+				throw new Error('Common object/namespace already defined!');
+			}
+
+			// Common function namespace
+			Common = ( function(document, undefined) {
+
+				// Closure off the good stuff
+				function isHTMLElt( elt ) {
+					return (elt instanceof HTMLElement);
+				}
+
+				function isNode( elt ) {
+					return (elt instanceof Node);
+				}
+
+				var Common = {
+					addEvent: function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						if( this.addEventListener )
+							this.addEventListener( evt, func, false );
+						else if( this.attachEvent )
+							this.attachEvent( 'on' + evt, func );
+
+						return this;
+					},
+
+					removeEvent: function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						if( this.removeEventListener )
+							this.removeEventListener( evt, func, false );
+						else if( this.detachEvent )
+							this.detachEvent( 'on' + evt, func );
+
+						return this;
+					},
+
+					// Chose progressive loading for this as opposed to feature checking every time
+					setText: function (str) {},
+					getText: function () {}
+				};
+
+				// Feature sniffing
+				if( !!document.body.textContent ) {
+					Common.setText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						this.textContent = str;
+					};
+
+					Common.getText = function (str) {
+						if( !isNode(this))
+							return false;
+
+						return this.textContent;
+					};
+				}
+				else if( !!document.body.innerText ) {
+					Common.setText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						this.innerText = str;
+					};
+
+					Common.getText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						return this.innerText;
+					};
+				}
+
+				return Common;
+			})(document);
+
+			(function (document, window, undefined) {
+				var body       = document.body,
+						canvas     = document.getElementById( 'canvas' ),
+						context,
+						delayInput = { "value": 15 },
+						// delayInput = document.formDelay.delay,
+						following  = false,
+						fTimer     = undefined,
+						canvasX    = canvas.offsetLeft,
+						canvasY    = canvas.offsetTop,
+						strokes, i, len;
+						
+
+				// TODO Support the excanvas
+				if( canvas.getContext ) {
+					context = canvas.getContext('2d');
+				}
+				else {
+					Common.setText.call( body, "You do not support the canvas tag" );
+					return;
+				}
+
+				// Set canvas to full screen
+				// TODO Update on window resize?
+				canvas.width  = window.innerWidth;
+				canvas.height = window.innerHeight;
+				
+				// Set up default properties for our stroke
+				context.strokeStyle = "#000";
+				context.lineJoin    = "round";
+				
+				// Attach property handlers
+				strokes = document.getElementsByName( "stroke" );
+				for( i = strokes.length; i--; ) {
+					// TODO Improve call on Common.addEvent
+					if( strokes[i].checked === true ) {
+						changeThickness( { "currentTarget" : { "value" : strokes[i].value } } );
+						console.log(i);
+					}
+					Common.addEvent.call( strokes[i], "change", changeThickness );
+				}
+				
+				
+				function changeThickness(e) {
+					switch (e.currentTarget.value) {
+						case "1":
+							context.lineWidth = 2.0;
+							break;
+						case "2":
+							context.lineWidth = 4.0;
+							break;
+						case "3":
+							context.lineWidth = 8.0;
+							break;
+						default:
+						console.log('x');
+						context.lineWidth = 1.0;
+					}
+				}
+
+				function activateFollow(e) {
+					following = true;
+				context.beginPath();
+				context.moveTo( e.clientX - canvasX, e.clientY - canvasY );
+					// Curry in custom delay
+					var moveFunc = follow(+delayInput.value);
+
+					Common.addEvent.call( e.currentTarget, "mousemove", moveFunc );
+					Common.addEvent.call( e.currentTarget, "mouseup",   deactivateFollow(moveFunc) );
+				}
+
+				function follow(timeout) {
+					var x, y;
+
+					return function (e) {
+
+						if( ! following ) {
+							return;
+						}
+
+						x = e.clientX - canvasX;
+						y = e.clientY - canvasY;
+						if( fTimer !== undefined ) {
+							return;
+						}
+
+						fTimer = setTimeout( function () {
+							context.lineTo( x, y );
+							context.stroke();
+							// Remove the current timer
+							fTimer = undefined;
+						}, timeout );
+					};
+				}
+
+				function deactivateFollow(moveFunc) {
+					return function removeMe (e) {
+						following = false;
+						
+						Common.removeEvent.call( e.currentTarget, "mousemove", moveFunc );
+						Common.removeEvent.call( e.currentTarget, "mouseup",   removeMe );
+					}
+				}
+
+				Common.addEvent.call( body, 'mousedown', activateFollow );
+
+			})(document, window);
+		}
+	</script>
+</head>
+<body onload="main();">
+	<div id="toolbox">
+		<h3>
+			Canvas Drawer
+		</h3>
+		<form>
+			<fieldset>
+				<legend>
+					Stroke Size
+				</legend>
+				<input type="radio" name="stroke" value="0" checked="checked" />Small
+				<input type="radio" name="stroke" value="1" />Medium
+				<br />
+				<input type="radio" name="stroke" value="2" />Large
+				<input type="radio" name="stroke" value="3" />X-Large
+			</fieldset>
+		</form>
+	</div>
+	<canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	color: inherit;
+	background-color: #6988b4;
+	margin: 0px;
+}
+p {
+	font-family: Arial, serif;
+	font-style: normal;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: left;
+}
+a {
+	font-size: 12px;
+}
+a:hover {
+	color: #3333FF;
+	background-color: transparent;
+}
+a:link {
+	font-size: 18px;
+}
+a:visited {
+	font-size: 18px;
+}
+a:active {
+	color: #3333FF;
+	background-color: transparent;
+	font-size: 18px;
+}
+#info {
+	text-align: center;
+}
+#about {
+	font-size: 16px;
+}
+#normal {
+	text-align: center;
+	font-size: 12px;
+}
+blockquote {
+	font-family: Arial, serif;
+	font-style: normal;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 12px;
+}

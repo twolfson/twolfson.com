@@ -1,0 +1,30 @@
+body {
+	color: inherit;
+	background-color: #6988b4;
+}
+.p-frame {
+	border-width: 0px;
+	border-color: #6988b4;
+	margin: 0px;
+}
+#p-top {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 900px;
+	height: 133px;
+}
+#p-nav {
+	position: absolute;
+	left: 0px;
+	top: 133px;
+	width: 187px;
+	height: 352px;
+}
+#p-var {
+	position: absolute;
+	left: 187px;
+	top: 133px;
+	width: 713px;
+	height: 352px;
+}

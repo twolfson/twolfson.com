@@ -1,0 +1,212 @@
+<html>
+<head>
+	<title>
+		Mouse Tracker
+	</title>
+	<style>
+		* {
+			margin:  0px;
+			padding: 0px;
+		}
+		body {
+			height: 100%;
+			width:  100%;
+		}
+		#tracker {
+			background: #0F0;
+			width: 150px;
+			position: absolute;
+		}
+	</style>
+	<script>
+		function main() {
+
+			var Common;
+			// Error checking before we get started
+			if( Common !== undefined ) {
+				throw new Error('Common object/namespace already defined!');
+			}
+
+			// Common function namespace
+			Common = ( function(document, undefined) {
+				var body = document.body;
+
+				// Closure off the good stuff (would be faster to preprocess and replace)
+				function isHTMLElt( elt ) {
+					return (elt instanceof HTMLElement);
+				}
+
+				function isNode( elt ) {
+					return (elt instanceof Node);
+				}
+
+				// Give some placeholder functions
+				var Common = {
+					addEvent: function ( evt, func ) {},
+					removeEvent: function ( evt, func ) {},
+					setText: function (str) {},
+					getText: function () {}
+				};
+
+				// One-time feature sniffing
+				// As opposed to feature checking every single time
+				if( !!body.addEventListener ) {
+					Common.addEvent = function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						this.addEventListener( evt, func, false );
+
+						return this;
+					};
+				}
+				else if( !!body.attachEvent ) {
+					Common.addEvent = function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						this.attachEvent( "on" + evt, func );
+
+						return this;
+					};
+				}
+
+				if( !!body.removeEventListener ) {
+					Common.removeEvent = function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						this.removeEventListener( evt, func, false );
+
+						return this;
+					};
+				}
+				else if( !!body.detachEvent ) {
+					Common.removeEvent = function ( evt, func ) {
+						if( !isHTMLElt(this) )
+							return false;
+
+						this.detachEvent( "on" + evt, func );
+
+						return this;
+					};
+				}
+
+				if( !!body.textContent ) {
+					Common.setText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						this.textContent = str;
+					};
+
+					Common.getText = function (str) {
+						if( !isNode(this))
+							return false;
+
+						return this.textContent;
+					};
+				}
+				else if( !!document.body.innerText ) {
+					Common.setText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						this.innerText = str;
+					};
+
+					Common.getText = function (str) {
+						if( !isNode(this) )
+							return false;
+
+						return this.innerText;
+					};
+				}
+
+				return Common;
+			})(document);
+
+			// Auto-execute here with global->local document, body, and defensive undefined
+			// The result is closuring these functions and var's off
+			(function (document, undefined) {
+				var body       = document.body,
+						trackerDiv = document.getElementById( 'tracker' ),
+						delayInput = document.formDelay.delay,
+						following  = false,
+						fTimer;
+
+				function activateFollow(e) {
+					Common.setText.call( trackerDiv, "okay, now just drag the mouse" );
+					following = true;
+
+					// Curry in custom delay
+					var moveFunc = follow(+delayInput.value);
+
+					Common.addEvent.call( e.currentTarget, "mousemove", moveFunc );
+					Common.addEvent.call( e.currentTarget, "mouseup",   deactivateFollow(moveFunc) );
+				}
+
+				function follow(timeout) {
+					var x, y;
+
+					return function (e) {
+						if( ! following ) {
+							return;
+						}
+
+						x = e.clientX;
+						y = e.clientY;
+						if( fTimer !== undefined ) {
+							return;
+						}
+
+						Common.setText.call( trackerDiv, "track, track, track." );
+
+						fTimer = setTimeout( function () {
+							var style = trackerDiv.style;
+
+							// Hide to reduce reflows
+							style.visible = "hidden";
+
+							style.left = x;
+							style.top  = y;
+
+							// Show after done modifying
+							style.visible = "visible";
+
+							// Remove the current timer
+							fTimer = undefined;
+						}, timeout );
+					};
+				}
+
+				function deactivateFollow(moveFunc) {
+					return function removeMe (e) {
+						Common.setText.call( trackerDiv, "click and drag to start." );
+						following = false;
+						Common.removeEvent.call( e.currentTarget, "mousemove", moveFunc );
+						Common.removeEvent.call( e.currentTarget, "mouseup",   removeMe );
+					}
+				}
+
+				Common.addEvent.call( body, 'mousedown', activateFollow );
+
+			})(document);
+		}
+	</script>
+</head>
+<body onload="main();">
+	<h3>
+		Mouse Tracker
+	</h3>
+	<form name="formDelay" onsubmit="return false;">
+		<label for="delay">
+			Delay (in ms):
+		</label>
+		<input type="text" name="delay" value="15" />
+	</form>
+	<div id="tracker">
+		click and drag to start.
+	</div>
+</body>
+</html>
