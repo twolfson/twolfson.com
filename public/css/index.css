@@ -108,6 +108,12 @@ figure figcaption {
 }
 
 /*** Layout classes ***/
+.layoutNormal {
+  text-align: left;
+}
+.layoutCentered {
+  text-align: center;
+}
 .layoutFlipped {
   text-align: right;
 }
@@ -115,7 +121,7 @@ figure figcaption {
 /* Heavily modified OOCSS (attribution to Nicole Sullivan for initial inspiration and Johnathan Snook for semantics) */
 .layoutUnit{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:5px;}
 .layoutRowWide>.layoutUnit{padding-left:7px;padding-right:7px;}
-.layoutRowTall>.layoutUnit{padding-top:5px;padding-bottom:5px;}
+.layoutRowTall>.layoutUnit{padding-top:16px;padding-bottom:16px;}
 .layoutRow>.layoutUnit{float:left;}
 .layoutRow.layoutRowFlipped{float:right;}
 .layoutRow>.layoutUnit+.layoutUnit{padding-left:0;}
@@ -269,18 +275,6 @@ a.isSelected,
 /* Contact Page */
 #contactFieldset legend {
   font-size: 1.6em;
-}
-
-#contactForm input,
-#contactForm button,
-#contactForm textarea {
-  margin-top: 1em;
-}
-
-#contactForm .submitLine {
-  margin-left: .5em;
-  margin-right: .5em;
-  text-align: center;
 }
 
 #contactForm button {

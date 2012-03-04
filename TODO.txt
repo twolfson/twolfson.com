@@ -15,3 +15,4 @@ since the size of the iframe is limited, do it mdn dev derby style with wrapper 
 
 make GA production only, auto-fork for production, xhr watch for non-production
 make sure server launches with production flag
+test mail sent page

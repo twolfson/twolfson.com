@@ -8,25 +8,25 @@
           // If there was no submission attempt
           if (status === undefined) {
         %>
-        <div class="layoutRow">
+        <div class="layoutRow layoutRowTall">
           <label for="name" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Name:</label>
-          <div class="layoutUnit layoutSizeFill">
+          <div class="layoutUnit layoutSize3of4">
             <input id="name" name="name" type="text" class="themeOddRow themeBorder layoutSize4of5" />
           </div>
         </div>
-        <div class="layoutRow">
+        <div class="layoutRow layoutRowTall">
           <label for="info" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Contact Info:</label>
-          <div class="layoutUnit layoutSizeFill">
+          <div class="layoutUnit layoutSize3of4">
             <input id="info" name="info" type="text" class="themeEvenRow themeBorder layoutSize4of5" />
           </div>
         </div>
-        <div class="layoutRow themeOddRow">
+        <div class="layoutRow layoutRowTall">
           <label for="message" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Message:</label>
-          <div class="layoutUnit layoutSizeFill">
+          <div class="layoutUnit layoutSize3of4">
             <textarea id="message" name="message" type="text" class="themeOddRow themeBorder layoutSize4of5"></textarea>
           </div>
         </div>
-        <div class="layoutRow submitLine"><div class="layoutUnit layoutSizeFill layoutCentered">
+        <div class="layoutRow layoutRowTall"><div class="layoutUnit layoutSizeFill layoutCentered">
           <button type="submit" id="submitButton" class="themeEvenRow themeBorder">Contact Todd</button>
         </div></div>
         <%
