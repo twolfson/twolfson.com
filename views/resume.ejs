@@ -14,6 +14,7 @@
       summaryItem,
       j,
       len2,
+      rowClass,
   // TODO: On production set to () instead of (0)
       presentDateStr = 'Present';
       presentDate = new Date(0);
@@ -50,8 +51,9 @@
     location = job.location;
     url = job.url;
     summaryItems = job.summary;
+    rowClass = (i%2) ? "themeEvenRow" : "themeOddRow";
 %>
-  <article id="<%=name%>Article" class="contentSection mainSubsection <%=(i%2)?"even":"odd"%>Row">
+  <article id="<%=name%>Article" class="contentSection mainSubsection <%=rowClass%>">
     <div class="line size1of1">
       <div class="size2of3 unit">
         <h3><%=job.title%></h3>

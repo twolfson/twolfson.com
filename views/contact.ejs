@@ -8,25 +8,25 @@
         if (status === undefined) {
       %>
       <div class="line">
-        <label for="name" class="size1of4 textRight unit" required="required">Name:</label>
+        <label for="name" class="size1of4 layoutFlipped unit" required="required">Name:</label>
         <div class="lastUnit">
-          <input id="name" name="name" type="text" class="oddRow border size4of5" />
+          <input id="name" name="name" type="text" class="themeOddRow themeBorder size4of5" />
         </div>
       </div>
       <div class="line">
-        <label for="info" class="size1of4 textRight unit" required="required">Contact Info:</label>
+        <label for="info" class="size1of4 layoutFlipped unit" required="required">Contact Info:</label>
         <div class="lastUnit">
-          <input id="info" name="info" type="text" class="evenRow border size4of5" />
+          <input id="info" name="info" type="text" class="themeEvenRow themeBorder size4of5" />
         </div>
       </div>
-      <div class="line oddRow">
-        <label for="message" class="size1of4 textRight unit" required="required">Message:</label>
+      <div class="line themeOddRow">
+        <label for="message" class="size1of4 layoutFlipped unit" required="required">Message:</label>
         <div class="lastUnit">
-          <textarea id="message" name="message" type="text" class="oddRow border size4of5"></textarea>
+          <textarea id="message" name="message" type="text" class="themeOddRow themeBorder size4of5"></textarea>
         </div>
       </div>
       <div class="line submitLine">
-        <button type="submit" id="submitButton" class="evenRow border">Contact Todd</button>
+        <button type="submit" id="submitButton" class="themeEvenRow themeBorder">Contact Todd</button>
       </div>
       <%
         } else if (status === true) {

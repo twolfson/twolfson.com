@@ -16,11 +16,20 @@
 .line:after,.lastUnit:after{content: " ";display: block;height: 0;clear: both;visibility: hidden;}
 
 
-/* Full document theming (Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy) */
+/* Global theming (Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy) */
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url('/public/images/white_plaster.png');
 }
 
 h1 {
@@ -33,8 +42,6 @@ h2 {
 }
 
 a,
-a:link,
-a:visited, 
 .pseudoLink {
   color: #436DC4;
   font-weight: bold;
@@ -42,26 +49,13 @@ a:visited,
   cursor: pointer;
 }
 
-a:focus,
-a:hover,
-a:active,
-a.selected,
-.psuedoLink:hover {
-  outline: 0;
-  color: #4F46C4;
-  text-decoration: underline;
-}
-
 fieldset {
   border: 0;
 }
 
+/* TODO: Fix padding */
 input, textarea {
   padding-left: .2em;
-}
-
-input.border, textarea.border, button.border {
-  border-width: 2px;
 }
 
 label {
@@ -95,31 +89,108 @@ figure figcaption {
   padding-top: .4em;
 }
 
-/* General purpose classes */
-.border {
+#globalWrapper {
+  margin: 0 auto;
+  width: 800px;
+  min-height: 100%;
+  /* TODO: Cross-browser me */
+  box-shadow: 0 0 20px #000000;
+
+  /* Relative position for footer */
+  position: relative;
+}
+
+#globalWrapper > section {
+  padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
+}
+
+/* TODO: Fix inline and margins */
+#globalHeader h1,
+#globalHeader h2 {
+  display: inline;
+}
+
+#globalHeader h1 {
+  margin-left: .3em;
+}
+
+#globalHeader h2 {
+  margin-left: .2em;
+}
+
+#globalNav {
+  border-width: 3px 0;
+  text-align: right;
+  /* TODO: Fix padding */
+  padding: .3em 0;
+}
+
+#globalNav a {
+  /* TODO: Fix margin */
+  margin-right: .3em;
+}
+
+#globalFooter {
+  position: absolute;
+  bottom: 0;
+
+  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
+  border-top: .1em solid #000;
+  padding-top: .2em;
+
+  /* TODO: Fix padding/margin */
+  margin: .1em 25% 0;
+  width: 50%;
+
+  text-align: center;
+}
+
+#globalFooter span {
+  display: block;
+}
+
+/* Layout classes */
+.layoutFlipped {
+  text-align: right;
+}
+
+/*** Module classes ***/
+/* Border class */
+.themeBorder {
   border-width: 1px;
   border-style: solid;
   border-color: #000;
 }
 
-/* Blue bg */
-.oddRow {
+/* Increased border width for inputs */
+input.themeBorder,
+textarea.themeBorder,
+button.themeBorder {
+  border-width: 2px;
+}
+
+/* Row striping with border class overload */
+.themeOddRow {
   background: #B9CFFF;
 }
-.oddRow.border,
-.oddRow .border {
+.themeOddRow.themeBorder {
   border-color: #7E9AD5;
 }
 
-/* Purple bg */
-.evenRow {
+.themeEvenRow {
   background: #C0BBFF;
 }
-.evenRow.border,
-.evenRow .border {
+.themeEvenRow.themeBorder {
   border-color: #8882D5;
 }
 
+/* TODO: Fix this */
+.themeEvenRow .contentLine:first-child,
+.themeOddRow .contentLine:first-child {
+  padding-top: 8px;
+}
+
+/* TODO: Make these items into layout classes */
 .contentSection {
   padding: 0.5em;
 }
@@ -128,23 +199,7 @@ figure figcaption {
   padding: 0 16px 8px;
 }
 
-.evenRow .contentLine:first-child,
-.oddRow .contentLine:first-child {
-  padding-top: 8px;
-}
-
-.inlineBlock {
-  display: inline-block;
-}
-
-.textCenter {
-  text-align: center;
-}
-
-.textRight {
-  text-align: right;
-}
-
+/* List module */
 .bulletList li:before {
   content: "\00BB\00A0";
   margin-left: 0.1em;
@@ -157,76 +212,23 @@ figure figcaption {
   padding: 5px 0;
 }
 
+/* State classes */
+a:focus,
+a:hover,
+a:active,
+a.isSelected,
+.psuedoLink:hover {
+  outline: 0;
+  color: #4F46C4;
+  text-decoration: underline;
+}
+
 .featureItem:hover {
   background: #E2F6FF;
   /* color: #4F46C4; */
 }
 
-/* Specific properties */
-body {
-  background: url('/public/images/white_plaster.png');
-  height: 100%;
-}
-
-.globalWrapper {
-  margin: 0 auto;
-  width: 800px;
-  min-height: 100%;
-  /* TODO: Cross-browser me */
-  box-shadow: 0 0 20px #000000;
-
-  /* Relative position for footer */
-  position: relative;
-}
-
-.globalWrapper > section {
-  padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
-}
-
-.footerSection {
-  position: absolute;
-  bottom: 0;
-
-  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
-  border-top: .1em solid #000;
-  padding-top: .2em;
-
-  margin: .1em 25% 0;
-  width: 50%;
-
-  text-align: center;
-}
-
-/* Header specific */
-.headerSection h1,
-.headerSection h2 {
-  display: inline;
-}
-
-.headerSection h1 {
-  margin-left: .3em;
-}
-
-.headerSection h2 {
-  margin-left: .2em;
-}
-
-/* Navbar specific */
-#navBar.border {
-  border-width: 3px 0;
-  text-align: right;
-  padding: .3em 0;
-}
-
-#navBar a {
-  margin-right: .3em;
-}
-
-/* Footer specific */
-.footerSection span {
-  display: block;
-}
-
+/* TODO: Fix these */
 /* Portfolio page */
 #portfolioSection h2 {
   font-size: 1.6em;

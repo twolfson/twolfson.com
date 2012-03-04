@@ -7,9 +7,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/index.css"/>
   <!-- TODO: Implement build chain for ONE stylesheet -->
   <!-- TODO: Implement build chain for ONE script -->
-  <!-- TODO: Remove from production -->
-  <!-- <script src="public/js/reload_with_collector.js"></script> -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-17165993-1']);
     _gaq.push(['_trackPageview']);
@@ -19,17 +17,17 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
+  </script> -->
 </head>
 <body>
-	<div class="oddRow globalWrapper">
-    <header class="headerSection mainSection">
+	<div id="globalWrapper" class="themeOddRow">
+    <header id="globalHeader" class="mainSection">
       <div class="line size1of1">
         <h1>Todd Wolfson</h1>
         <!-- TODO: Use kerning -->
         <h2><a href="http://en.wikipedia.org/wiki/ECMAScript" class="highlightText">JAVASCRIPT</a> DEVELOPER</h2>
       </div>
-      <nav id="navBar" class="evenRow border line size1of1">
+      <nav id="globalNav" class="themeEvenRow themeBorder line size1of1">
       <% var navLinks = [
               { "name": "github", "href": "http://github.com/twolfson/" },
               { "name": "portfolio", "href": "portfolio" },
@@ -46,15 +44,29 @@
           navLink = navLinks[i];
           navName = navLink.name;
         %>
-        <a href="<%-navLink.href%>" class="link<%=page===navName?" selected":""%>"><%=navName%></a>
+        <a href="<%-navLink.href%>" class="link<%=page===navName?" isSelected":""%>"><%=navName%></a>
       <% } %>
       </nav>
     </header>
     <%- body %>
-    <footer class="footerSection mainSection">
+    <footer id="globalFooter" class="mainSection">
       <span>Site designed and created by Todd Wolfson.</span>
       <span>All rights reserved. &copy;2005-2012</span>
     </footer>
 	</div>
+  
+  <!-- TODO: Remove from production -->
+  <script src="public/js/watcher.js"></script>
+  <script src="public/js/collector.js"></script>
+  <script>
+      (function () {
+         var watcher = new FileWatcher(),
+             resources = ResourceCollector.collect();
+         watcher.addListener(function () {
+           location.reload();
+         });
+         watcher.watch(resources, 8);
+      }());
+  </script>
 </body>
 </html>
