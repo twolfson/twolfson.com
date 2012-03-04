@@ -17,7 +17,6 @@ body {
 }
 
 h1 {
-  line-height: 1.4em;
   font-size: 2.2em;
 }
 
@@ -115,8 +114,8 @@ figure figcaption {
 
 /* Heavily modified OOCSS (attribution to Nicole Sullivan for initial inspiration and Johnathan Snook for semantics) */
 .layoutUnit{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:5px;}
-.layoutRowWide>.layoutUnit{padding-left:30px;padding-right:30px;}
-.layoutRowTall>.layoutUnit{padding-top:7px;padding-bottom:7px;}
+.layoutRowWide>.layoutUnit{padding-left:7px;padding-right:7px;}
+.layoutRowTall>.layoutUnit{padding-top:5px;padding-bottom:5px;}
 .layoutRow>.layoutUnit{float:left;}
 .layoutRow.layoutRowFlipped{float:right;}
 .layoutRow>.layoutUnit+.layoutUnit{padding-left:0;}
@@ -138,6 +137,18 @@ figure figcaption {
 .layoutSize4of5{width:80%;}
 .layoutSizeFill{width:auto;}
 .layoutRow>.layoutUnit.layoutSizeFill{float:none;}
+
+/* Inline row extension */
+.layoutRow.layoutRowInline > .layoutUnit {
+  display: inline;
+  float: none;
+}
+
+/* TODO: This will not scale and is not accurate */
+.layoutRow.layoutRowInline.layoutRowTall {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 /*** Module classes ***/
 /* Border class */

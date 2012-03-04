@@ -27,40 +27,36 @@
 </head>
 <body>
 	<div id="globalWrapper">
-    <header id="globalHeader">
-      <div class="layoutRow">
-        <h1 class="layoutUnit">Todd Wolfson</h1>
-        <!-- TODO: Use kerning -->
-        <h2 class="layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">JAVASCRIPT</a> DEVELOPER</h2>
-      </div>
-      <nav id="globalNav" class="themeEvenRow themeBorder">
-        &nbsp;
-        <ul class="layoutRow layoutRowFlipped">
-        <% var navLinks = [
-                { "name": "github", "href": "http://github.com/twolfson/" },
-                { "name": "portfolio", "href": "portfolio" },
-                { "name": "resume", "href": "resume" },
-                { "name": "blog", "href": "//blog.twolfson.com/" },
-                { "name": "contact", "href": "contact" }],
-              i,
-              len,
-              navLink,
-              navName,
-              page,
-              navClass;
-              
-          for( i = 0, len = navLinks.length; i < len; i++ ) {
-            navLink = navLinks[i];
-            navName = navLink.name;
-            navClass = page === navName ? "isSelected" : "";
-          %>
-          <li class="layoutUnit">
-            <a href="<%-navLink.href%>" class="<%=navClass%>"><%=navName%></a>
-          </li>
-        <% } %>
-        &nbsp;
-      </nav>
+    <header id="globalHeader" class="layoutRow layoutRowInline layoutRowWide">
+      <h1 class="layoutUnit">Todd Wolfson</h1>
+      <!-- TODO: Use kerning -->
+      <h2 class="layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">JAVASCRIPT</a> DEVELOPER</h2>
     </header>
+    <nav id="globalNav" class="themeEvenRow themeBorder layoutFlipped">
+      <ul class="layoutRow layoutRowInline layoutRowTall layoutRowWide">
+      <% var navLinks = [
+              { "name": "github", "href": "http://github.com/twolfson/" },
+              { "name": "portfolio", "href": "portfolio" },
+              { "name": "resume", "href": "resume" },
+              { "name": "blog", "href": "//blog.twolfson.com/" },
+              { "name": "contact", "href": "contact" }],
+            i,
+            len,
+            navLink,
+            navName,
+            page,
+            navClass;
+            
+        for( i = 0, len = navLinks.length; i < len; i++ ) {
+          navLink = navLinks[i];
+          navName = navLink.name;
+          navClass = page === navName ? "isSelected" : "";
+        %>
+        <li class="layoutUnit">
+          <a href="<%-navLink.href%>" class="<%=navClass%>"><%=navName%></a>
+        </li>
+      <% } %>
+    </nav>
     <%- body %>
     <footer id="globalFooter" class="layoutRow layoutCentered"><div class="layoutUnit layoutSizeFill">
       <div>Site designed and created by Todd Wolfson.</div>
