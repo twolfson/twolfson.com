@@ -1,10 +1,16 @@
 [{
   'name': 'ensighten',
   'company': 'Ensighten LLC',
-  'title': 'Javascript Developer',
+  'title': [{
+      'title': 'Senior Javascript Developer',
+      'startDate': 'Feb 2012'
+    }, {
+      'title': 'Javascript Developer',
+      'startDate': 'May 2011',
+      'endDate': 'Feb 2012'
+    }],    
   'location': 'Cupertino, CA',
   'url': 'http://www.ensighten.com/',
-  'startDate': 'May 2011',
   'summary': [
     'Build and maintain User Interface',
     'Answer tickets and support large Enterprise clients',

@@ -11,6 +11,3 @@ change font for 'script kiddie and freelance'
 for freelance links: make lightbox have 'sketch page' and 'iframe for webpage'
 OR
 since the size of the iframe is limited, do it mdn dev derby style with wrapper at the top with a (view sketch link)
-
-auto-fork for production
-make sure server launches with production flag

@@ -3,6 +3,8 @@
   var jobs = jobs || [],
       job,
       name,
+      titleArr,
+      title,
       startDate,
       endDate,
       location,
@@ -44,24 +46,45 @@
   for( i = 0, len = jobs.length; i < len; i++ ) {
     job = jobs[i];
     name = job.name;
-    startDateStr = job.startDate || presentDateStr;
-    startDate = fromMonthYear(startDateStr);
-    endDateStr = job.endDate || presentDateStr;
-    endDate = fromMonthYear(endDateStr);
+    title = job.title;
+    titleArr = title;
     location = job.location;
     url = job.url;
     summaryItems = job.summary;
     rowClass = (i%2) ? "themeEvenRow" : "themeOddRow";
 %>
   <article id="<%=name%>Article" class="<%=rowClass%>">
-    <div class="layoutRow">
+    <%
+      // TODO: Proper array type check
+      // If the title is not an array, coerce into an array
+      if (typeof titleArr === 'string') {
+        titleArr = [{
+          'title': title,
+          'startDate': job.startDate,
+          'endDate': job.endDate
+        }];
+      }
+      
+      // Iterate the array of titles
+      for (j = 0, len2 = titleArr.length; j < len2; j++) {
+        title = titleArr[j];
+        startDateStr = title.startDate || presentDateStr;
+        startDate = fromMonthYear(startDateStr);
+        endDateStr = title.endDate || presentDateStr;
+        endDate = fromMonthYear(endDateStr);
+        rowClass = j === 0 ? "" : "headerMilli";
+    %>
+    <div class="layoutRow <%=rowClass%>">
       <div class="layoutSize2of3 layoutUnit">
-        <h3><%=job.title%></h3>
+        <h3><%=title.title%></h3>
       </div>
       <div class="layoutUnit layoutSizeFill layoutFlipped">
         <time datetime="<%=startDate.toISOString()%>"><%=startDateStr%></time> - <time datetime="<%=endDate.toISOString()%>"><%=endDateStr%></time>
       </div>
     </div>
+    <%
+      }
+    %>
     <div class="layoutRow">
       <div class="layoutSize2of3 layoutUnit">
         <div>

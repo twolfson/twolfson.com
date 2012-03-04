@@ -272,6 +272,10 @@ button.buttonBig {
   line-height: 1em;
 }
 
+.headerMilli {
+  font-size: 0.85em;
+}
+
 /*** State classes ***/
 a.isSelected {
   outline: 0;
