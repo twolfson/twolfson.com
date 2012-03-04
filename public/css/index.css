@@ -24,25 +24,36 @@ h2 {
   font-size: 1em;
 }
 
-a,
-.pseudoLink {
+a {
   color: #436DC4;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }
 
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  color: #4F46C4;
+  text-decoration: underline;
+}
+
 fieldset {
   border: 0;
 }
 
+legend {
+  font-size: 1.6em;
+}
+
 /* TODO: Fix padding */
 input, textarea {
-  padding-left: .2em;
+  padding: 0.2em;
 }
 
 label {
-  padding-right: .3em;
+  margin-top: 0.2em;
 }
 
 input {
@@ -55,6 +66,7 @@ textarea {
 
 button {
   cursor: pointer;
+  border-radius: 5px;
 }
 
 figure {
@@ -204,22 +216,14 @@ button.themeBorder {
   background: #B4E8FF;
   /* color: #000; */
   padding: 5px 0;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 95%;
 }
 
-/* Line fill module */
-.fillLine {
-  width: 100%;
-}
-
-/*** State classes ***/
-a:focus,
-a:hover,
-a:active,
-a.isSelected,
-.psuedoLink:hover {
-  outline: 0;
-  color: #4F46C4;
-  text-decoration: underline;
+.featureItem img {
+  height: 170px;
+  border-radius: 0;
 }
 
 .featureItem:hover {
@@ -227,62 +231,50 @@ a.isSelected,
   /* color: #4F46C4; */
 }
 
-/*** Page specific CSS ***/
-/* Portfolio page */
-#portfolioSection h2 {
-  font-size: 1.6em;
-  line-height: 1em;
-  text-align: center;
-}
-
-#portfolioSection h3 {
-  font-size: 1.3em;
-  line-height: 1em;
-}
-
-
-/* Selective underlining for anchors */
-#portfolioSection a:hover,
-#portfolioSection .pseudoLink:hover {
-  text-decoration: none;
-}
-
-#portfolioSection a:hover h3,
-#portfolioSection .pseudoLink:hover h3 {
-  text-decoration: underline;
-}
-
-#portfolioSection figure {
-  border-radius: 20px;
-  margin: 0 auto;
-  width: 95%;
-}
-
-#portfolioSection figure a {
+/* Line fill module */
+.fillLine {
   display: block;
   width: 100%;
 }
 
-#portfolioSection img {
-  height: 170px;
-  border-radius: 0;
+/* Link module (must be updated with 'a' at top) */
+.hideLinks a:hover,
+.hideLinks a:active,
+.hideLinks a:focus {
+  text-decoration: none;
 }
 
-/* Resume page */
-#resumeSection .timelength {
-  text-align: right;
+a .showLink {
+  color: #436DC4;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Contact Page */
-#contactFieldset legend {
-  font-size: 1.6em;
+a:hover .showLink {
+  outline: 0;
+  color: #4F46C4;
+  text-decoration: underline;
 }
 
-#contactFieldset label {
-  margin-top: 0.2em;
-}
-
-#contactForm button {
+/* Button classes */
+button.buttonBig {
   padding: 1em;
-  border-radius: 5px;
+}
+
+/* Header classes */
+.headerMega {
+  font-size: 1.6em;
+  line-height: 1em;
+}
+
+.headerKilo {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+/*** State classes ***/
+a.isSelected {
+  outline: 0;
+  color: #4F46C4;
+  text-decoration: underline;
 }

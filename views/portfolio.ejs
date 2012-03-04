@@ -2,7 +2,7 @@
   <article>
     <div class="themeOddRow">
       <div class="layoutRow fillLine"><!-- TODO: Remove fillLine once navbar is fixed -->
-        <h2 class="layoutUnit layoutSizeFill layoutCentered">Script Kiddie</h2>
+        <h2 class="headerMega layoutUnit layoutSizeFill layoutCentered">Script Kiddie</h2>
       </div>
       <div class="layoutRow">
       <%
@@ -32,11 +32,11 @@
           name = item.name;
       %>
         <div class="layoutUnit layoutSize1of3">
-          <figure class="featureItem">
-            <a href="<%=item.url%>" target="_blank">
+          <figure class="featureItem hideLinks">
+            <a href="<%=item.url%>" target="_blank" class="fillLine">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
               <figcaption>
-                <h3><%=name%></h3>
+                <h3 class="headerKilo showLink"><%=name%></h3>
                 <%=item.timePeriod%>
               </figcaption>
             </a>
@@ -117,7 +117,7 @@
           if (rowCount === 0) {
         %>
           <div class="layoutUnit layoutSizeFill layoutCentered">
-            <h2>Freelance</h2>
+            <h2 class="headerMega">Freelance</h2>
           </div>
         </div>
         <div class="layoutRow">
@@ -130,11 +130,11 @@
             name = item.name;
         %>
           <div class="layoutUnit layoutSize1of<%=len2%>">
-            <figure class="featureItem">
-              <a href="<%=item.site%>" target="_blank">
+            <figure class="featureItem hideLinks">
+              <a href="<%=item.site%>" target="_blank" class="fillLine">
                 <img src="<%=item.imgSrc%>" alt="<%=name%>" />
                 <figcaption>
-                  <h3><%=name%></h3>
+                  <h3 class="headerKilo showLink"><%=name%></h3>
                   <%=item.timePeriod%>
                 </figcaption>
               </a>
