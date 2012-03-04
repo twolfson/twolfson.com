@@ -1,8 +1,10 @@
-<section id="portfolioSection" class="mainSection">
+<section id="portfolioSection">
   <article>
     <div class="themeOddRow">
-      <h2 class="contentLine">Script Kiddie</h2>
-      <div class="line contentLine">
+      <div class="layoutRow fillLine"><!-- TODO: Remove fillLine once navbar is fixed -->
+        <h2 class="layoutUnit layoutSizeFill layoutCentered">Script Kiddie</h2>
+      </div>
+      <div class="layoutRow">
       <%
         var items = [{
               "url": "http:\/\/github.com/twolfson/",
@@ -29,7 +31,7 @@
           item = items[i];
           name = item.name;
       %>
-        <div class="unit <%if(i!==finalIndex){%>size1of3<%}else{%>lastUnit<%}%>">
+        <div class="layoutUnit layoutSize1of3">
           <figure class="featureItem">
             <a href="<%=item.url%>" target="_blank">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
@@ -94,7 +96,8 @@
         name,
         j,
         len2,
-        finalIndex;
+        finalIndex,
+        rowClass;
 
     for (rowCount = 0; len = freelanceItems.length, len > 0; rowCount++) {
       i = len;
@@ -105,15 +108,19 @@
 
       // Grab the next slice
       freelanceSlice = freelanceItems.splice(0, i);
+      
+      rowClass = rowCount ^ 1 ? "themeEvenRow" : "themeOddRow";
     %>
-      <div class="<%=rowCount^1?"even":"odd"%>Row">
-        <div class="line contentLine">
+      <div class="<%=rowClass%>">
+        <div class="layoutRow">
         <%
           if (rowCount === 0) {
         %>
-          <h2>Freelance</h2>
+          <div class="layoutUnit layoutSizeFill layoutCentered">
+            <h2>Freelance</h2>
+          </div>
         </div>
-        <div class="line contentLine">
+        <div class="layoutRow">
         <%
           }
         %>
@@ -122,7 +129,7 @@
             item = freelanceSlice[j];
             name = item.name;
         %>
-          <div class="unit <%if(j!==finalIndex){%>size1of<%=len2%><%}else{%>lastUnit<%}%>">
+          <div class="layoutUnit layoutSize1of<%=len2%>">
             <figure class="featureItem">
               <a href="<%=item.site%>" target="_blank">
                 <img src="<%=item.imgSrc%>" alt="<%=name%>" />

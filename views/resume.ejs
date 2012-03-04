@@ -1,4 +1,4 @@
-<section id="resumeSection" class="mainSection">
+<section id="resumeSection">
 <%
   var jobs = jobs || [],
       job,
@@ -53,21 +53,21 @@
     summaryItems = job.summary;
     rowClass = (i%2) ? "themeEvenRow" : "themeOddRow";
 %>
-  <article id="<%=name%>Article" class="contentSection mainSubsection <%=rowClass%>">
-    <div class="line size1of1">
-      <div class="size2of3 unit">
+  <article id="<%=name%>Article" class="<%=rowClass%>">
+    <div class="layoutRow">
+      <div class="layoutSize2of3 layoutUnit">
         <h3><%=job.title%></h3>
       </div>
-      <div class="lastUnit timelength">
+      <div class="layoutUnit timelength">
         <time datetime="<%=startDate.toISOString()%>"><%=startDateStr%></time> - <time datetime="<%=endDate.toISOString()%>"><%=endDateStr%></time>
       </div>
     </div>
-    <div class="line size1of1">
-      <div class="size2of3 unit">
-        <div class="line size1of1">
+    <div class="layoutRow">
+      <div class="layoutSize2of3 layoutUnit">
+        <div>
           <em><%=job.company%><%if(location){%>, <address><%=location%></address><%}%></em>
         </div>
-        <div class="line size1of1">
+        <div>
           <ul class="bulletList">
           <%
             for( j = 0, len2 = summaryItems.length; j < len2; j++ ) {
@@ -80,9 +80,9 @@
           </ul>
         </div>
       </div>
-      <div class="lastUnit">
-        <figure>
-          <%if(url){%><a href="<%=url%>" target="_blank"><%}%><img src="public/images/<%=name%>.png" alt="<%=job.company%>" class="size1of1" /><%if(url){%></a><%}%>
+      <div class="layoutUnit">
+        <figure class="layoutFlipped">
+          <%if(url){%><a href="<%=url%>" target="_blank"><%}%><img src="public/images/<%=name%>.png" alt="<%=job.company%>" /><%if(url){%></a><%}%>
         </figure>
       </div>
     </div>

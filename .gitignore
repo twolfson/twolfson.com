@@ -1,3 +1,5 @@
 /monServer.cmd
 /work_files
 /mail.conf
+/public/js/collector.js
+/public/js/watcher.js

@@ -1,65 +1,68 @@
-<section id="contactSection" class="contentSection mainSection">
-  <form id="contactForm" class="size2of3 unit" method="POST" action="contact">
-    <fieldset id="contactFieldset" class="size1of1">
-      <legend>Contact Details</legend>
-      <%
-        var status;
-        // If there was no submission attempt
-        if (status === undefined) {
-      %>
-      <div class="line">
-        <label for="name" class="size1of4 layoutFlipped unit" required="required">Name:</label>
-        <div class="lastUnit">
-          <input id="name" name="name" type="text" class="themeOddRow themeBorder size4of5" />
-        </div>
-      </div>
-      <div class="line">
-        <label for="info" class="size1of4 layoutFlipped unit" required="required">Contact Info:</label>
-        <div class="lastUnit">
-          <input id="info" name="info" type="text" class="themeEvenRow themeBorder size4of5" />
-        </div>
-      </div>
-      <div class="line themeOddRow">
-        <label for="message" class="size1of4 layoutFlipped unit" required="required">Message:</label>
-        <div class="lastUnit">
-          <textarea id="message" name="message" type="text" class="themeOddRow themeBorder size4of5"></textarea>
-        </div>
-      </div>
-      <div class="line submitLine">
-        <button type="submit" id="submitButton" class="themeEvenRow themeBorder">Contact Todd</button>
-      </div>
-      <%
-        } else if (status === true) {
-        // Otherwise, if the submission was a success
-      %>
-        <div class="line textCenter">
-          Thank you for contacting me!
-          <br/>
-          I will respond to your request within 48 hours. Have a nice day!
-        </div>
-      <%
-        } else {
-      %>
-        <div class="line textCenter">
-          Ouch! An error seems to have occurred.
-          <br/>
-          <a href="javascript:location.reload();">Could you please try that again?</a>
-        </div>
-      <%
-        }
-      %>
-    </fieldset>
-  </form>
-  <aside id="picContainer" class="lastUnit">
-    <figure id="picFigure">
-      <a href="http://www.aaronwax.com/">
-        <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" class="size4of5" />
-        <figcaption>
-          <div class="line">
-            Photograph taken by A.J. Wax
+<section id="contactSection">
+  <div class="layoutRow">
+    <form id="contactForm" class="layoutSize2of3 layoutUnit" method="POST" action="contact">
+      <fieldset id="contactFieldset" class="fillLine">
+        <legend>Contact Details</legend>
+        <%
+          var status;
+          // If there was no submission attempt
+          if (status === undefined) {
+        %>
+        <div class="layoutRow">
+          <label for="name" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Name:</label>
+          <div class="layoutUnit layoutSizeFill">
+            <input id="name" name="name" type="text" class="themeOddRow themeBorder layoutSize4of5" />
           </div>
-        </figcaption>
-      </a>
-    </figure>
-  </aside>
+        </div>
+        <div class="layoutRow">
+          <label for="info" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Contact Info:</label>
+          <div class="layoutUnit layoutSizeFill">
+            <input id="info" name="info" type="text" class="themeEvenRow themeBorder layoutSize4of5" />
+          </div>
+        </div>
+        <div class="layoutRow themeOddRow">
+          <label for="message" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Message:</label>
+          <div class="layoutUnit layoutSizeFill">
+            <textarea id="message" name="message" type="text" class="themeOddRow themeBorder layoutSize4of5"></textarea>
+          </div>
+        </div>
+        <div class="layoutRow submitLine"><div class="layoutUnit layoutSizeFill layoutCentered">
+          <button type="submit" id="submitButton" class="themeEvenRow themeBorder">Contact Todd</button>
+        </div></div>
+        <%
+          } else if (status === true) {
+          // Otherwise, if the submission was a success
+        %>
+          <div class="layoutRow layoutCentered">
+            Thank you for contacting me!
+            <br/>
+            I will respond to your request within 48 hours. Have a nice day!
+          </div>
+        <%
+          } else {
+        %>
+          <div class="layoutRow layoutCentered">
+            Ouch! An error seems to have occurred.
+            <br/>
+            <a href="javascript:location.reload();">Could you please try that again?</a>
+          </div>
+        <%
+          }
+        %>
+      </fieldset>
+    </form>
+    <aside id="picContainer" class="layoutUnit">
+      <figure id="picFigure">
+        <a href="http://www.aaronwax.com/">
+          <!-- TODO: Remove layoutSize4of5 -->
+          <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" class="layoutSize4of5" />
+          <figcaption>
+            <div class="layoutRow"><div class="layoutUnit layoutSizeFill layoutCentered">
+              Photograph taken by A.J. Wax
+            </div></div>
+          </figcaption>
+        </a>
+      </figure>
+    </aside>
+  </div>
 </section>

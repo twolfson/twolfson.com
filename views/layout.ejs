@@ -7,66 +7,83 @@
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/index.css"/>
   <!-- TODO: Implement build chain for ONE stylesheet -->
   <!-- TODO: Implement build chain for ONE script -->
-  <!-- <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-17165993-1']);
-    _gaq.push(['_trackPageview']);
+  <%
+    if (process.env.NODE_ENV === 'production') {
+  %>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17165993-1']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script> -->
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <%
+    }
+  %>
 </head>
 <body>
-	<div id="globalWrapper" class="themeOddRow">
-    <header id="globalHeader" class="mainSection">
-      <div class="line size1of1">
-        <h1>Todd Wolfson</h1>
+	<div id="globalWrapper">
+    <header id="globalHeader">
+      <div class="layoutRow">
+        <h1 class="layoutUnit">Todd Wolfson</h1>
         <!-- TODO: Use kerning -->
-        <h2><a href="http://en.wikipedia.org/wiki/ECMAScript" class="highlightText">JAVASCRIPT</a> DEVELOPER</h2>
+        <h2 class="layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">JAVASCRIPT</a> DEVELOPER</h2>
       </div>
-      <nav id="globalNav" class="themeEvenRow themeBorder line size1of1">
-      <% var navLinks = [
-              { "name": "github", "href": "http://github.com/twolfson/" },
-              { "name": "portfolio", "href": "portfolio" },
-              { "name": "resume", "href": "resume" },
-              { "name": "blog", "href": "//blog.twolfson.com/" },
-              { "name": "contact", "href": "contact" }],
-            i,
-            len,
-            navLink,
-            navName,
-            page;
-            
-        for( i = 0, len = navLinks.length; i < len; i++ ) {
-          navLink = navLinks[i];
-          navName = navLink.name;
-        %>
-        <a href="<%-navLink.href%>" class="link<%=page===navName?" isSelected":""%>"><%=navName%></a>
-      <% } %>
+      <nav id="globalNav" class="themeEvenRow themeBorder">
+        &nbsp;
+        <ul class="layoutRow layoutRowFlipped">
+        <% var navLinks = [
+                { "name": "github", "href": "http://github.com/twolfson/" },
+                { "name": "portfolio", "href": "portfolio" },
+                { "name": "resume", "href": "resume" },
+                { "name": "blog", "href": "//blog.twolfson.com/" },
+                { "name": "contact", "href": "contact" }],
+              i,
+              len,
+              navLink,
+              navName,
+              page,
+              navClass;
+              
+          for( i = 0, len = navLinks.length; i < len; i++ ) {
+            navLink = navLinks[i];
+            navName = navLink.name;
+            navClass = page === navName ? "isSelected" : "";
+          %>
+          <li class="layoutUnit">
+            <a href="<%-navLink.href%>" class="<%=navClass%>"><%=navName%></a>
+          </li>
+        <% } %>
+        &nbsp;
       </nav>
     </header>
     <%- body %>
-    <footer id="globalFooter" class="mainSection">
-      <span>Site designed and created by Todd Wolfson.</span>
-      <span>All rights reserved. &copy;2005-2012</span>
-    </footer>
+    <footer id="globalFooter" class="layoutRow layoutCentered"><div class="layoutUnit layoutSizeFill">
+      <div>Site designed and created by Todd Wolfson.</div>
+      <div>All rights reserved. &copy;2005-2012</div>
+    </div></footer>
 	</div>
-  
-  <!-- TODO: Remove from production -->
-  <script src="public/js/watcher.js"></script>
-  <script src="public/js/collector.js"></script>
-  <script>
-      (function () {
-         var watcher = new FileWatcher(),
-             resources = ResourceCollector.collect();
-         watcher.addListener(function () {
-           location.reload();
-         });
-         watcher.watch(resources, 8);
-      }());
-  </script>
+  <%
+    if (process.env.NODE_ENV !== 'production') {
+  %>
+    <script src="public/js/watcher.js"></script>
+    <script src="public/js/collector.js"></script>
+    <script>
+        (function () {
+           var watcher = new FileWatcher(),
+               resources = ResourceCollector.collect();
+           watcher.addListener(function () {
+             location.reload();
+           });
+           watcher.watch(resources, 8);
+        }());
+    </script>
+  <%
+    }
+  %>
 </body>
 </html>

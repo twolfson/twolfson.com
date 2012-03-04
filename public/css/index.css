@@ -1,22 +1,6 @@
-/* OOCSS (attribution to Nicole Sullivan) */
-.line,.lastUnit{overflow:hidden; *overflow:visible;*zoom:1;}
-.unit{float:left;}
-.unitRight{float:right;}
-.size1of1{float:none;width:100%;}
-.size1of2{width:50%;}
-.size1of3{width:33.33333%;}
-.size2of3{width:66.66666%;}
-.size1of4{width:25%;}
-.size3of4{width:75%;}
-.size1of5{width:20%;}
-.size2of5{width:40%;}
-.size3of5{width:60%;}
-.size4of5{width:80%;}
-.lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
-.line:after,.lastUnit:after{content: " ";display: block;height: 0;clear: both;visibility: hidden;}
+/*** Global theming (Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy) ***/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}html{cursor:default;font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:transparent;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body,form,input,button,select,textarea{font-size:100%;margin:0}a,a:active,a:hover{outline:none}a:focus{outline:thin dotted}abbr{_border-bottom:expression(this.title ? '1px dotted':'none')}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#FF0;color:#000}pre,code,kbd,samp{font-family:monospace,monospace;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small,sub,sup{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}nav ul{list-style:none}audio[controls],canvas,video{display:inline-block;*display:inline}audio{display:none;_display:expression(this.controls ? 'inline':'none');*zoom:1}audio[controls]{display:inline-block}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}legend{*margin-left:-7px}button,input,select,textarea{-webkit-appearance:none;border-radius:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal;_overflow:expression(this.type == 'button|reset|submit' ? 'visible':'')}button,input[type="button"],input[type="reset"],input[type="submit"]{overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box}input[type="search"]{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}address{display:inline}
 
-
-/* Global theming (Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy) */
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +77,7 @@ figure figcaption {
   margin: 0 auto;
   width: 800px;
   min-height: 100%;
+  background: #B9CFFF; /* Same as .themeOddRow */
   /* TODO: Cross-browser me */
   box-shadow: 0 0 20px #000000;
 
@@ -104,30 +89,8 @@ figure figcaption {
   padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
 }
 
-/* TODO: Fix inline and margins */
-#globalHeader h1,
-#globalHeader h2 {
-  display: inline;
-}
-
-#globalHeader h1 {
-  margin-left: .3em;
-}
-
-#globalHeader h2 {
-  margin-left: .2em;
-}
-
 #globalNav {
   border-width: 3px 0;
-  text-align: right;
-  /* TODO: Fix padding */
-  padding: .3em 0;
-}
-
-#globalNav a {
-  /* TODO: Fix margin */
-  margin-right: .3em;
 }
 
 #globalFooter {
@@ -135,7 +98,7 @@ figure figcaption {
   bottom: 0;
 
   height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
-  border-top: .1em solid #000;
+  border-top: 1px solid #000;
   padding-top: .2em;
 
   /* TODO: Fix padding/margin */
@@ -145,14 +108,36 @@ figure figcaption {
   text-align: center;
 }
 
-#globalFooter span {
-  display: block;
-}
-
-/* Layout classes */
+/*** Layout classes ***/
 .layoutFlipped {
   text-align: right;
 }
+
+/* Heavily modified OOCSS (attribution to Nicole Sullivan for initial inspiration and Johnathan Snook for semantics) */
+.layoutUnit{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:5px;}
+.layoutRowWide>.layoutUnit{padding-left:30px;padding-right:30px;}
+.layoutRowTall>.layoutUnit{padding-top:7px;padding-bottom:7px;}
+.layoutRow>.layoutUnit{float:left;}
+.layoutRow.layoutRowFlipped{float:right;}
+.layoutRow>.layoutUnit+.layoutUnit{padding-left:0;}
+.layoutRow{overflow:hidden;}
+.layoutRow:after{display:block;visibility:hidden;content:"";height:0;line-height:0;clear:both;}
+.layoutRow+.layoutRow>.layoutUnit,.layoutRow.layoutRowStacked>.layoutUnit{padding-top:0;}
+.layoutUnit.layoutUnitFull{padding:0;}
+.layoutUnit.layoutUnitHardRight{padding-right:0;}
+.layoutUnit.layoutUnitNested{padding-top:0;padding-left:0;}
+.layoutRow.layoutRowOverflow{overflow:visible;}
+.layoutSize1of2{width:50%;}
+.layoutSize1of3{width:33.33333%;}
+.layoutSize2of3{width:66.66666%;}
+.layoutSize1of4{width:25%;}
+.layoutSize3of4{width:75%;}
+.layoutSize1of5{width:20%;}
+.layoutSize2of5{width:40%;}
+.layoutSize3of5{width:60%;}
+.layoutSize4of5{width:80%;}
+.layoutSizeFill{width:auto;}
+.layoutRow>.layoutUnit.layoutSizeFill{float:none;}
 
 /*** Module classes ***/
 /* Border class */
@@ -190,29 +175,25 @@ button.themeBorder {
   padding-top: 8px;
 }
 
-/* TODO: Make these items into layout classes */
-.contentSection {
-  padding: 0.5em;
-}
-
-.contentLine {
-  padding: 0 16px 8px;
-}
-
 /* List module */
 .bulletList li:before {
   content: "\00BB\00A0";
   margin-left: 0.1em;
 }
 
-/* Sky blue bg */
+/* Featured item module */
 .featureItem {
   background: #B4E8FF;
   /* color: #000; */
   padding: 5px 0;
 }
 
-/* State classes */
+/* Line fill module */
+.fillLine {
+  width: 100%;
+}
+
+/*** State classes ***/
 a:focus,
 a:hover,
 a:active,
@@ -276,13 +257,7 @@ a.isSelected,
 
 /* Contact Page */
 #contactFieldset legend {
-  padding: 0 .6em;
-  margin-left: .4em;
   font-size: 1.6em;
-}
-
-#contactForm .line {
-  line-height: 4em;
 }
 
 #contactForm input,
