@@ -1,6 +1,5 @@
 Build out portfolio [refer to sketch], and blog pages
 Implement AJAX calls/loader for contact form
-Make a better favicon
 Increase width and use media queries
 Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
