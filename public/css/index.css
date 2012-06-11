@@ -47,6 +47,7 @@ legend {
   font-size: 1.6em;
 }
 
+/* TODO: Fix padding */
 input, textarea {
   padding: 0.2em;
 }
@@ -99,10 +100,6 @@ figure figcaption {
   padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
 }
 
-#globalHeader > h2 {
-  text-transform: uppercase;
-}
-
 #globalNav {
   border-width: 3px 0;
 }
@@ -116,8 +113,8 @@ figure figcaption {
   padding-top: .2em;
 
   /* TODO: Fix padding/margin */
-  margin: .1em 25% 0;
-  width: 50%;
+  margin: .1em 15% 0;
+  width: 70%;
 
   text-align: center;
 }
@@ -275,13 +272,131 @@ button.buttonBig {
   line-height: 1em;
 }
 
-.headerMilli {
-  font-size: 0.85em;
-}
-
 /*** State classes ***/
 a.isSelected {
   outline: 0;
   color: #4F46C4;
   text-decoration: underline;
+}
+
+/*** Page specific classes ***/
+/* Taken from dorothy.git */
+.date {
+  font-style: italic;
+}
+
+/* Disqus formatting */
+#disqus_thread {
+  margin-top: 1em;
+}
+
+#dsq-content #dsq-global-toolbar,
+.dsq-reply {
+  margin-top: 0 !important;
+}
+
+#dsq-content #dsq-global-toolbar,
+#dsq-content h3,
+.dsq-textarea-reply,
+.dsq-comment-message {
+  margin-bottom: 5px !important;
+}
+
+#dsq-realtime-options {
+  margin-bottom: 1em !important;
+}
+
+#dsq-comments {
+  margin-top: 5px !important;
+}
+
+.dsq-comment-message {
+  line-height: 1em !important;
+}
+
+.dsq-comment {
+  margin-bottom: 0.5em !important;
+}
+
+#dsq-subscribe {
+  float: right;
+}
+
+/* RSS link */
+#globalHeader {
+  position: relative;
+}
+
+.rssLink {
+  display: block;
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  border: 0;
+}
+
+/* Blog formatting */
+.blogpost {
+  line-height: 1.4em;
+  margin-top: 0.3em;
+}
+
+/* Bad technique but it is appropriate */
+.blogpost > * {
+  margin-bottom: .7em;
+}
+
+.blogpost h1 {
+  font-size: 1.4em;
+  line-height: 1.7em;
+  margin-bottom: 0.2em;
+}
+
+.blogpost h2 {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.blogpost ol > li:before,
+.blogpost ul > li:before {
+  margin-left: 10px;
+}
+
+.blogpost ul > li:before {
+  content: "\2022\00A0";
+}
+
+.blogpost ol {
+  counter-reset: ol;
+}
+
+.blogpost ol > li {
+  counter-increment: ol;
+}
+
+.blogpost ol > li:before {
+  content: counter(ol) ".\A0";
+}
+
+.blogpost pre {
+
+}
+
+.blogpost code {
+  display: block;
+  margin-left: 2em;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* Main page formatting */
+.post {
+  padding-bottom: 5px;
+  clear: both;
+}
+
+#articles .post .content h1,
+#articles .post .content h2 {
+  display: none;
 }

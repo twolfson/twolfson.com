@@ -1,20 +1,24 @@
 <section id="articles">
-  <%
-    var visibleArticles = articles.slice(0, 3);
-    visibleArticles.forEach(function (article) {
+  <% 
+    var rowKlass;
+    articles.slice(0, 5).forEach(function (article, i) {
+      rowKlass = i % 2 === 0 ? "themeOddRow" : "themeEvenRow";
   %>
-    <article class="post">
-      <header>
-        <h1><a href="<%= article.url %>"><%= article.title %></a></h1>
-        <span class="date"><%= article.date %></span>
+    <article class="post <%=rowKlass%>">
+      <header class="layoutRow">
+        <div class="layoutUnit">
+          <h2 class="headerKilo"><a href="<%= article.url %>"><%= article.title %></a></h2>
+        </div>
+        <div class="layoutUnit layoutSizeFill layoutFlipped">
+          <span class="date"><%= article.date %></span>
+        </div>
       </header>
-
-      <section class="content">
+      <section class="content layoutRow"><div class="layoutUnit">
         <%- article.summary %>
-      </section>
-      <div class="more"><a href="<%= article.url %>">read on &raquo;</a></div>
+      </div></section>
+      <div class="more layoutRow layoutRowFlipped"><div class="layoutUnit">
+        <a href="<%= article.url %>">read on &raquo;</a>
+      </div></div>&nbsp;
     </article>
-  <%
-    });
-  %>
+  <% }); %>
 </section>
