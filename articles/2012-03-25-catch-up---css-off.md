@@ -1,0 +1,9 @@
+{
+  "title": "Catch up - CSS Off",
+  "author": "Todd Wolfson",
+  "date": "2012/03/25"
+}
+
+This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place.
+
+I feel like I did really well for myself and am learning plenty from the [top 25 winners](http://www.unmatchedstyle.com/news/cssoff-winners-2012.php). You can find my [demo here](http://twolfson.com/public/portfolio/css_off/index.html) and the [initial design here](http://www.unmatchedstyle.com/cssoff/signup.php).
