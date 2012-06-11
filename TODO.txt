@@ -1,12 +1,13 @@
-Build out portfolio [refer to sketch], and blog pages
 Implement AJAX calls/loader for contact form
 Increase width and use media queries
 Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
-Abstract row code and use it for both scripts and freelance section
-Improve FREELANCE text to look more professional?
-change font for 'script kiddie and freelance'
 
-for freelance links: make lightbox have 'sketch page' and 'iframe for webpage'
-OR
-since the size of the iframe is limited, do it mdn dev derby style with wrapper at the top with a (view sketch link)
+Nuke resume and portfolio
+Begin a projects section
+ - Row by row of GitHub project
+ - Maybe with some variations for website projects (namely css off)
+Begin a section for talks?
+
+Remove double numbering of <ol>'s in the blog
+Add twitter
