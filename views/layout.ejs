@@ -1,10 +1,16 @@
+<%
+  var config = config || {},
+      page = page || config.page;
+%>
 <!doctype html>
 <head>
 	<title>Todd Wolfson - Javascript Developer</title>
   <link rel="shortcut icon" href="public/images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="all" href="public/css/index.css"/>
+  <link rel="alternate" type="application/atom+xml" title="twolfson.com blog feed" href="/index.xml" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
   <%
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
   %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -24,9 +30,22 @@
 <body>
 	<div id="globalWrapper">
     <header id="globalHeader" class="layoutRow layoutRowInline layoutRowWide">
+      <%
+        if (page === "blog") {
+      %>
+      <h1 class="layoutUnit">twolfson.com</h1>
+      <!-- TODO: Use kerning -->
+      <h2 class="layoutUnit">A place for <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> and ideas</h2>
+      <a href="/index.xml" class="rssLink"><img src="/images/rss.png" alt="Follow my blog"/></a>
+      <%
+        } else {
+      %>
       <h1 class="layoutUnit">Todd Wolfson</h1>
       <!-- TODO: Use kerning -->
       <h2 class="layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
+      <%
+        }
+      %>
     </header>
     <nav id="globalNav" class="themeEvenRow themeBorder layoutFlipped">
       <ul class="layoutRow layoutRowInline layoutRowTall layoutRowWide">
@@ -55,12 +74,28 @@
     </nav>
     <%- body %>
     <footer id="globalFooter" class="layoutRow layoutCentered"><div class="layoutUnit layoutSizeFill">
+      <%
+        if (page === "blog") {
+      %>
+      <p>
+        <span>Site designed by Todd Wolfson.</span>
+        <span>All rights reserved. &copy;2005-2012</span>
+      </p>
+      <p>
+        Powered by <a href="http://twolfson.github.com/jojo/">jojo</a>
+      </p>
+      <%
+        } else {
+      %>
       <div>Site designed and created by Todd Wolfson.</div>
       <div>All rights reserved. &copy;2005-2012</div>
+      <%
+        }
+      %>
     </div></footer>
 	</div>
   <%
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== "production") {
   %>
     <script src="public/js/watcher.js"></script>
     <script src="public/js/collector.js"></script>
