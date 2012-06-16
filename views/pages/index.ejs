@@ -1,7 +1,7 @@
 <section id="articles">
   <% 
     var rowKlass;
-    articles.slice(0, 5).forEach(function (article, i) {
+    articles.forEach(function (article, i) {
       rowKlass = i % 2 === 0 ? "themeOddRow" : "themeEvenRow";
   %>
     <article class="post <%=rowKlass%>">
