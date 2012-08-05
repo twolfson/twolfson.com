@@ -51,6 +51,8 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 #globalWrapper>section{padding-bottom:3.4em;}
 #globalNav{border-width:3px 0;}
 #globalFooter{position:absolute;bottom:0;height:3em;border-top:1px solid #000;padding-top:.2em;margin:.1em 15% 0;width:70%;text-align:center;}
+#globalHeader{position:relative;}
+.rssLink{display:block;position:absolute;right:5px;bottom:0;border:0;}
 .layoutNormal{text-align:left;}
 .layoutCentered{text-align:center;}
 .layoutFlipped{text-align:right;}
@@ -92,15 +94,10 @@ input.themeBorder,textarea.themeBorder,button.themeBorder{border-width:2px;}
 .featureItem{background:#B4E8FF;padding:5px 0;border-radius:20px;margin:0 auto;width:95%;}
 .featureItem img{height:170px;border-radius:0;}
 .featureItem:hover{background:#E2F6FF;}
-.fillLine{display:block;width:100%;}
 .hideLinks a:hover,.hideLinks a:active,.hideLinks a:focus{text-decoration:none;}
 a .showLink{color:#436DC4;font-weight:bold;cursor:pointer;}
 a:hover .showLink{outline:0;color:#4F46C4;text-decoration:underline;}
-button.buttonBig{padding:1em;}
-.headerMega{font-size:1.6em;line-height:1em;}
-.headerKilo{font-size:1.3em;line-height:1em;}
 a.isSelected{outline:0;color:#4F46C4;text-decoration:underline;}
-.date{font-style:italic;}
 #disqus_thread{margin-top:1em;}
 #dsq-content #dsq-global-toolbar,.dsq-reply{margin-top:0 !important;}
 #dsq-content #dsq-global-toolbar,#dsq-content h3,.dsq-textarea-reply,.dsq-comment-message{margin-bottom:5px !important;}
@@ -109,8 +106,6 @@ a.isSelected{outline:0;color:#4F46C4;text-decoration:underline;}
 .dsq-comment-message{line-height:1em !important;}
 .dsq-comment{margin-bottom:0.5em !important;}
 #dsq-subscribe{float:right;}
-#globalHeader{position:relative;}
-.rssLink{display:block;position:absolute;right:5px;bottom:0;border:0;}
 .blogpost{line-height:1.4em;margin-top:0.3em;}
 .blogpost>*{margin-bottom:.7em;}
 .blogpost h1{font-size:1.4em;line-height:1.7em;margin-bottom:0.2em;}
@@ -123,3 +118,4 @@ a.isSelected{outline:0;color:#4F46C4;text-decoration:underline;}
 .blogpost code{display:block;margin-left:2em;overflow:auto;white-space:pre;word-wrap:normal;}
 .post{padding-bottom:5px;clear:both;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
+.fillLine{display:block;width:100%;}

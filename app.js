@@ -7,6 +7,7 @@ var express = require('express'),
 
 // Set up view engine and static files for pages
 app.set('view engine', 'ejs');
+app.use('/public', express['static'](__dirname + '/dist'));
 app.use('/public', express['static'](__dirname + '/public'));
 
 // If we are in a production environment, track whenever an RSS is requested

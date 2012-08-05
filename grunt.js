@@ -11,7 +11,10 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      
+      less: {
+        files: 'public/css/**.less',
+        tasks: 'less'
+      }
     }
   });
 

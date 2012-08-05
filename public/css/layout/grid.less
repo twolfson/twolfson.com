@@ -1,0 +1,38 @@
+/* Heavily modified OOCSS (attribution to Nicole Sullivan for initial inspiration and Johnathan Snook for semantics) */
+.layoutUnit{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:5px;}
+.layoutRowWide>.layoutUnit{padding-left:7px;padding-right:7px;}
+.layoutRowTall>.layoutUnit{padding-top:5px;padding-bottom:5px;}
+.layoutRowSuperTall>.layoutUnit{padding-top:1.6em;padding-bottom:2em;}
+.layoutRow>.layoutUnit{float:left;}
+.layoutRow.layoutRowFlipped{float:right;}
+.layoutRow>.layoutUnit+.layoutUnit{padding-left:0;}
+.layoutRow{overflow:hidden;}
+.layoutRow:after{display:block;visibility:hidden;content:"";height:0;line-height:0;clear:both;}
+.layoutRow+.layoutRow>.layoutUnit,.layoutRow.layoutRowStacked>.layoutUnit{padding-top:0;}
+.layoutUnit.layoutUnitFull{padding:0;}
+.layoutUnit.layoutUnitHardRight{padding-right:0;}
+.layoutUnit.layoutUnitNested{padding-top:0;padding-left:0;}
+.layoutRow.layoutRowOverflow{overflow:visible;}
+.layoutSize1of2{width:50%;}
+.layoutSize1of3{width:33.33333%;}
+.layoutSize2of3{width:66.66666%;}
+.layoutSize1of4{width:25%;}
+.layoutSize3of4{width:75%;}
+.layoutSize1of5{width:20%;}
+.layoutSize2of5{width:40%;}
+.layoutSize3of5{width:60%;}
+.layoutSize4of5{width:80%;}
+.layoutSizeFill{width:auto;}
+.layoutRow>.layoutUnit.layoutSizeFill{float:none;}
+
+/* Inline row extension */
+.layoutRow.layoutRowInline > .layoutUnit {
+  display: inline;
+  float: none;
+}
+
+/* TODO: This will not scale and is not accurate */
+.layoutRow.layoutRowInline.layoutRowTall {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

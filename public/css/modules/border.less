@@ -1,0 +1,34 @@
+/* Border class */
+.themeBorder {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000;
+}
+
+/* Increased border width for inputs */
+input.themeBorder,
+textarea.themeBorder,
+button.themeBorder {
+  border-width: 2px;
+}
+
+/* Row striping with border class overload */
+.themeOddRow {
+  background: #B9CFFF;
+}
+.themeOddRow.themeBorder {
+  border-color: #7E9AD5;
+}
+
+.themeEvenRow {
+  background: #C0BBFF;
+}
+.themeEvenRow.themeBorder {
+  border-color: #8882D5;
+}
+
+/* TODO: Fix this */
+.themeEvenRow .contentLine:first-child,
+.themeOddRow .contentLine:first-child {
+  padding-top: 8px;
+}

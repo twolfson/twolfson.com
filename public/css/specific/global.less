@@ -1,0 +1,47 @@
+#globalWrapper {
+  margin: 0 auto;
+  width: 800px;
+  min-height: 100%;
+  background: #B9CFFF; /* Same as .themeOddRow */
+  /* TODO: Cross-browser me */
+  box-shadow: 0 0 20px #000000;
+
+  /* Relative position for footer */
+  position: relative;
+}
+
+#globalWrapper > section {
+  padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
+}
+
+#globalNav {
+  border-width: 3px 0;
+}
+
+#globalFooter {
+  position: absolute;
+  bottom: 0;
+
+  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
+  border-top: 1px solid #000;
+  padding-top: .2em;
+
+  /* TODO: Fix padding/margin */
+  margin: .1em 15% 0;
+  width: 70%;
+
+  text-align: center;
+}
+
+/* RSS link */
+#globalHeader {
+  position: relative;
+}
+
+.rssLink {
+  display: block;
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  border: 0;
+}

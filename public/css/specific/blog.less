@@ -1,0 +1,54 @@
+/* Blog formatting */
+.blogpost {
+  line-height: 1.4em;
+  margin-top: 0.3em;
+}
+
+/* Bad technique but it is appropriate */
+.blogpost > * {
+  margin-bottom: .7em;
+}
+
+.blogpost h1 {
+  font-size: 1.4em;
+  line-height: 1.7em;
+  margin-bottom: 0.2em;
+}
+
+.blogpost h2 {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.blogpost ol > li:before,
+.blogpost ul > li:before {
+  margin-left: 10px;
+}
+
+.blogpost ul > li:before {
+  content: "\2022\00A0";
+}
+
+.blogpost ol {
+  counter-reset: ol;
+}
+
+.blogpost ol > li {
+  counter-increment: ol;
+}
+
+.blogpost ol > li:before {
+  content: counter(ol) ".\A0";
+}
+
+.blogpost pre {
+
+}
+
+.blogpost code {
+  display: block;
+  margin-left: 2em;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
