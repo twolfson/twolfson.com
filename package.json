@@ -9,7 +9,9 @@
     "jojo": "~0.1.3",
     "express": "~2.4.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-less": "~0.1.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +19,6 @@
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
   },
-  "author": "Todd Wolfson",
+  "author": "Todd Wolfson <todd@twolfson.com>",
   "license": "MIT"
 }

@@ -9,14 +9,15 @@ module.exports = function (grunt) {
           compress: true
         }
       }
+    },
+    watch: {
+      
     }
   });
 
   // Load in grunt-less
-  // TODO: When on proper file system, change this back
-  grunt.loadNpmTasks('/usr/local/lib/node_modules/grunt-less');
+  grunt.loadNpmTasks('grunt-less');
 
   // Set up default action
-  // grunt.registerTask('default', 'watch');
-  grunt.registerTask('default', 'less');
+  grunt.registerTask('default', 'less watch');
 };
