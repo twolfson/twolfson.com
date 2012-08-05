@@ -30,47 +30,28 @@
 <body>
 	<div id="globalWrapper">
     <header id="globalHeader" class="layoutRow layoutRowInline layoutRowWide">
-      <%
-        if (page === "blog") {
-      %>
-      <h1 class="layoutUnit">twolfson.com</h1>
+      <h1 class="globalHeaderHeader layoutUnit">Todd Wolfson</h1>
       <!-- TODO: Use kerning -->
-      <h2 class="layoutUnit">A place for <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> and ideas</h2>
+      <h2 class="globalHeaderSubHeader layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
       <a href="/index.xml" class="rssLink"><img src="/public/images/rss.png" alt="Follow my blog"/></a>
-      <%
-        } else {
-      %>
-      <h1 class="layoutUnit">Todd Wolfson</h1>
-      <!-- TODO: Use kerning -->
-      <h2 class="layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
-      <%
-        }
-      %>
     </header>
     <nav id="globalNav" class="themeEvenRow themeBorder layoutFlipped">
-      <ul class="layoutRow layoutRowInline layoutRowTall layoutRowWide">
+      <ul class="navList layoutRow layoutRowInline layoutRowTall layoutRowWide">
       <% var navLinks = [
               { "name": "github", "href": "http://github.com/twolfson/" },
               { "name": "portfolio", "href": "portfolio" },
               { "name": "resume", "href": "resume" },
               { "name": "blog", "href": "/" },
-              { "name": "contact", "href": "contact" }],
-            i,
-            len,
-            navLink,
-            navName,
-            page,
-            navClass;
-            
-        for( i = 0, len = navLinks.length; i < len; i++ ) {
-          navLink = navLinks[i];
-          navName = navLink.name;
-          navClass = page === navName ? "isSelected" : "";
+              { "name": "contact", "href": "contact" }];
+
+        navLinks.forEach(function (navLink) {
+          var navName = navLink.name,
+              iSelected = page === navName ? "isSelected" : "";
         %>
-        <li class="layoutUnit">
-          <a href="<%-navLink.href%>" class="<%=navClass%>"><%=navName%></a>
+        <li class="navListItem layoutUnit">
+          <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
         </li>
-      <% } %>
+      <% }); %>
     </nav>
     <%- body %>
     <footer id="globalFooter" class="layoutRow layoutCentered"><div class="layoutUnit layoutSizeFill">
