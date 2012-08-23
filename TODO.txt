@@ -21,3 +21,6 @@ consistent article date formatter...
 disqus height is broken
 
 preview all pages of website in 3x2 iframe setup (probably will need zooming)
+
+patch code block and <ol> for file watcher
+http://localhost:8080/2012-03-25-hands-free-refresh-anywhere---file-watcher-et-al.

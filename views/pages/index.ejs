@@ -14,7 +14,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
         <div class="l_spanRight">
         <%
           var rawDate = article.rawDate,
-              day = rawDate.getDay() + "";
+              day = rawDate.getDay() + 1 + "";
           if (day.length === 1) {
              day = "0" + day;
           }

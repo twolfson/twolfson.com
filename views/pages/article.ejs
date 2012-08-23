@@ -6,7 +6,7 @@
     <div class="l_spanRight">
       <%
         var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            day = rawDate.getDay() + "";
+            day = rawDate.getDay() + 1 + "";
         if (day.length === 1) {
            day = "0" + day;
         }
