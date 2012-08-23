@@ -593,10 +593,17 @@ a.isSelected {
 .comfyRowTop {
   padding-top: 20px;
 }
-.fluffToHeaderKilo:after {
+.fluffToHeaderKilo:after,
+.fluffToHeaderMega:after {
   width: 0;
   content: "";
+}
+.fluffToHeaderKilo:after {
   font-size: 1.3em;
+  line-height: 1em;
+}
+.fluffToHeaderMega:after {
+  font-size: 1.6em;
   line-height: 1em;
 }
 /* Disqus formatting */

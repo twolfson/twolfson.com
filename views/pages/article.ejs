@@ -1,9 +1,9 @@
 <article class="post">
-  <header class="layoutRow">
-    <div class="layoutUnit">
-      <h1 class="headerMega"><%= title %></h1>
+  <header class="l_row">
+    <div class="l_span">
+      <h1 class="headerMega superComfyText"><%= title %></h1>
     </div>
-    <div class="layoutUnit layoutSizeFill layoutFlipped">
+    <div class="l_spanRight">
       <%
         var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             day = rawDate.getDay() + "";
@@ -13,15 +13,15 @@
 
         var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
       %>
-      <span class="date"><%= articleDate %></span>
+      <span class="date superComfyText fluffToHeaderMega"><%= articleDate %></span>
     </div>
   </header>
 
-  <section class="content layoutRow"><div class="layoutUnit layoutSizeFill blogpost">
+  <section class="content l_row"><div class="l_span12 blogpost">
     <%- content %>
   </div></section>
 
-  <section class="comments layoutRow"><div class="layoutUnit layoutSizeFill">
+  <section class="comments l_row"><div class="l_span12">
     <% if (config.disqus) { %>
       <div id="disqus_thread"></div>
       <script type="text/javascript" src="http://disqus.com/forums/<%= config.disqus %>/embed.js"></script>
