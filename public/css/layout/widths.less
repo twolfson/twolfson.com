@@ -7,13 +7,13 @@
 // Attribution to Twitter Bootstrap https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 .gridify (@gridColumnWidth, @gridGutterWidth) {
   .spanX (@index) when (@index > 0) {
-    (~".m_span@{index}") { .span(@index); }
+    (~".l_span@{index}") { .span(@index); }
     .spanX(@index - 1);
   }
   .spanX (0) {}
 
   .offsetX (@index) when (@index > 0) {
-    (~".m_offset@{index}") { .offset(@index); }
+    (~".l_offset@{index}") { .offset(@index); }
     .offsetX(@index - 1);
   }
   .offsetX (0) {}
@@ -26,6 +26,16 @@
     width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
   }
 
+  .l_row {
+    // margin-left: @gridGutterWidth * -1;
+    .clearfix();
+  }
+
+  .l_rowRightInner {
+    float: right;
+    margin-right: @gridGutterWidth;
+  }
+
   // generate .spanX and .offsetX
   .spanX (@gridColumns);
   .offsetX (@gridColumns);
@@ -33,19 +43,19 @@
 
 .gridify(@unitWidth, @wellWidth);
 
-.m_span,
-.m_span1,
-.m_span2,
-.m_span3,
-.m_span4,
-.m_span5,
-.m_span6,
-.m_span7,
-.m_span8,
-.m_span9,
-.m_span10,
-.m_span11,
-.m_span12 {
+.l_span,
+.l_span1,
+.l_span2,
+.l_span3,
+.l_span4,
+.l_span5,
+.l_span6,
+.l_span7,
+.l_span8,
+.l_span9,
+.l_span10,
+.l_span11,
+.l_span12 {
   float: left;
   margin-left: @wellWidth;
 }

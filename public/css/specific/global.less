@@ -18,6 +18,7 @@
 
 #globalNav {
   border-width: 3px 0;
+  line-height: 40px;
 }
 
 #globalFooter {
@@ -43,14 +44,19 @@
 }
 
 .globalHeaderHeader,
-.globalHeaderSubHeader {
-  display: inline;
-  padding-left: 20px;
+.globalHeaderSubHeader,
+.globalHeaderSubHeader:before {
   line-height: 60px;
 }
 
-.globalHeaderHeader {
+.globalHeaderHeader,
+.globalHeaderSubHeader:before {
   font-size: 2.3em;
+}
+
+.globalHeaderSubHeader:before {
+  content: "";
+  width: 0;
 }
 
 .rssLink {

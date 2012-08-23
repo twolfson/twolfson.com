@@ -30,14 +30,14 @@
 </head>
 <body>
 	<div id="globalWrapper">
-    <header id="globalHeader">
-      <h1 class="globalHeaderHeader">Todd Wolfson</h1>
+    <header id="globalHeader" class="l_row">
+      <h1 class="globalHeaderHeader l_span4">Todd Wolfson</h1>
       <!-- TODO: Use kerning -->
-      <h2 class="globalHeaderSubHeader"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
+      <h2 class="globalHeaderSubHeader l_span4"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
       <a href="/index.xml" class="rssLink"><img src="/public/images/rss.png" alt="Follow my blog"/></a>
     </header>
-    <nav id="globalNav">
-      <ul class="navList">
+    <nav id="globalNav" class="l_row themeEvenRow themeBorder">
+      <ul class="navList l_rowRightInner">
       <% var navLinks = [
               { "name": "github", "href": "http://github.com/twolfson/" },
               { "name": "portfolio", "href": "portfolio" },
@@ -49,7 +49,7 @@
           var navName = navLink.name,
               iSelected = page === navName ? "isSelected" : "";
         %>
-        <li class="navListItem">
+        <li class="navListItem l_span">
           <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
         </li>
       <% }); %>

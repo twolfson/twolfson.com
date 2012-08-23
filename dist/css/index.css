@@ -242,6 +242,7 @@ figure figcaption {
 }
 #globalNav {
   border-width: 3px 0;
+  line-height: 40px;
 }
 #globalFooter {
   position: absolute;
@@ -263,13 +264,17 @@ figure figcaption {
   position: relative;
 }
 .globalHeaderHeader,
-.globalHeaderSubHeader {
-  display: inline;
-  padding-left: 20px;
+.globalHeaderSubHeader,
+.globalHeaderSubHeader:before {
   line-height: 60px;
 }
-.globalHeaderHeader {
+.globalHeaderHeader,
+.globalHeaderSubHeader:before {
   font-size: 2.3em;
+}
+.globalHeaderSubHeader:before {
+  content: "";
+  width: 0;
 }
 .rssLink {
   display: block;
@@ -387,91 +392,107 @@ figure figcaption {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.m_span12 {
+.l_row {
+  *zoom: 1;
+}
+.l_row:before,
+.l_row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.l_row:after {
+  clear: both;
+}
+.l_rowRightInner {
+  float: right;
+  margin-right: 20px;
+}
+.l_span12 {
   width: 940px;
 }
-.m_span11 {
+.l_span11 {
   width: 860px;
 }
-.m_span10 {
+.l_span10 {
   width: 780px;
 }
-.m_span9 {
+.l_span9 {
   width: 700px;
 }
-.m_span8 {
+.l_span8 {
   width: 620px;
 }
-.m_span7 {
+.l_span7 {
   width: 540px;
 }
-.m_span6 {
+.l_span6 {
   width: 460px;
 }
-.m_span5 {
+.l_span5 {
   width: 380px;
 }
-.m_span4 {
+.l_span4 {
   width: 300px;
 }
-.m_span3 {
+.l_span3 {
   width: 220px;
 }
-.m_span2 {
+.l_span2 {
   width: 140px;
 }
-.m_span1 {
+.l_span1 {
   width: 60px;
 }
-.m_offset12 {
+.l_offset12 {
   margin-left: 980px;
 }
-.m_offset11 {
+.l_offset11 {
   margin-left: 900px;
 }
-.m_offset10 {
+.l_offset10 {
   margin-left: 820px;
 }
-.m_offset9 {
+.l_offset9 {
   margin-left: 740px;
 }
-.m_offset8 {
+.l_offset8 {
   margin-left: 660px;
 }
-.m_offset7 {
+.l_offset7 {
   margin-left: 580px;
 }
-.m_offset6 {
+.l_offset6 {
   margin-left: 500px;
 }
-.m_offset5 {
+.l_offset5 {
   margin-left: 420px;
 }
-.m_offset4 {
+.l_offset4 {
   margin-left: 340px;
 }
-.m_offset3 {
+.l_offset3 {
   margin-left: 260px;
 }
-.m_offset2 {
+.l_offset2 {
   margin-left: 180px;
 }
-.m_offset1 {
+.l_offset1 {
   margin-left: 100px;
 }
-.m_span,
-.m_span1,
-.m_span2,
-.m_span3,
-.m_span4,
-.m_span5,
-.m_span6,
-.m_span7,
-.m_span8,
-.m_span9,
-.m_span10,
-.m_span11,
-.m_span12 {
+.l_span,
+.l_span1,
+.l_span2,
+.l_span3,
+.l_span4,
+.l_span5,
+.l_span6,
+.l_span7,
+.l_span8,
+.l_span9,
+.l_span10,
+.l_span11,
+.l_span12 {
   float: left;
   margin-left: 20px;
 }
