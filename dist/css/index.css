@@ -225,7 +225,7 @@ figure figcaption {
 /* Specific files are called out explicitly to discourage creation */
 #globalWrapper {
   margin: 0 auto;
-  width: 800px;
+  width: 980px;
   min-height: 100%;
   background: #b9cfff;
   /* TODO: Cross-browser me */
@@ -236,7 +236,7 @@ figure figcaption {
   position: relative;
 }
 #globalWrapper > section {
-  padding-bottom: 3.4em;
+  padding-bottom: 80px;
   /* Same as .footerSection height + padding-top + border-top-width */
 
 }
@@ -246,26 +246,36 @@ figure figcaption {
 #globalFooter {
   position: absolute;
   bottom: 0;
-  height: 3em;
-  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
-
+  height: 64px;
   border-top: 1px solid #000;
-  padding-top: .2em;
+  padding-top: 8px;
   /* TODO: Fix padding/margin */
 
-  margin: .1em 15% 0;
+  margin: 0 15%;
   width: 70%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
 }
 /* RSS link */
 #globalHeader {
   position: relative;
 }
+.globalHeaderHeader,
+.globalHeaderSubHeader {
+  display: inline;
+  padding-left: 20px;
+  line-height: 60px;
+}
+.globalHeaderHeader {
+  font-size: 2.3em;
+}
 .rssLink {
   display: block;
   position: absolute;
-  right: 5px;
-  bottom: 0;
+  right: 20px;
+  top: 15px;
   border: 0;
 }
 /*** Layout classes ***/
@@ -549,4 +559,9 @@ a.isSelected {
 .fillLine {
   display: block;
   width: 100%;
+}
+.u_borderBox {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

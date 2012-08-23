@@ -1,6 +1,8 @@
+@bottomHeight: 80px;
+
 #globalWrapper {
   margin: 0 auto;
-  width: 800px;
+  width: 980px;
   min-height: 100%;
   background: @darkBg;
   /* TODO: Cross-browser me */
@@ -11,7 +13,7 @@
 }
 
 #globalWrapper > section {
-  padding-bottom: 3.4em; /* Same as .footerSection height + padding-top + border-top-width */
+  padding-bottom: @bottomHeight; /* Same as .footerSection height + padding-top + border-top-width */
 }
 
 #globalNav {
@@ -22,13 +24,15 @@
   position: absolute;
   bottom: 0;
 
-  height: 3em;  /* When height, border, padding, or margin are adjusted, then adjust .globalWrapper > section padding-bottom */
+  height: @bottomHeight - 15px - 1px;
   border-top: 1px solid #000;
-  padding-top: .2em;
+  padding-top: 8px;
 
   /* TODO: Fix padding/margin */
-  margin: .1em 15% 0;
+  margin: 0 15%;
   width: 70%;
+
+  .u_borderBox;
 
   text-align: center;
 }
@@ -38,10 +42,21 @@
   position: relative;
 }
 
+.globalHeaderHeader,
+.globalHeaderSubHeader {
+  display: inline;
+  padding-left: 20px;
+  line-height: 60px;
+}
+
+.globalHeaderHeader {
+  font-size: 2.3em;
+}
+
 .rssLink {
   display: block;
   position: absolute;
-  right: 5px;
-  bottom: 0;
+  right: @wellWidth;
+  top: @wellHeight;
   border: 0;
 }

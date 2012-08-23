@@ -30,10 +30,10 @@
 </head>
 <body>
 	<div id="globalWrapper">
-    <header id="globalHeader" class="layoutRow layoutRowInline layoutRowWide">
-      <h1 class="globalHeaderHeader layoutUnit">Todd Wolfson</h1>
+    <header id="globalHeader">
+      <h1 class="globalHeaderHeader">Todd Wolfson</h1>
       <!-- TODO: Use kerning -->
-      <h2 class="globalHeaderSubHeader layoutUnit"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
+      <h2 class="globalHeaderSubHeader"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
       <a href="/index.xml" class="rssLink"><img src="/public/images/rss.png" alt="Follow my blog"/></a>
     </header>
     <nav id="globalNav" class="themeEvenRow themeBorder layoutFlipped">
@@ -83,12 +83,25 @@
     <script src="public/js/collector.js"></script>
     <script>
         (function () {
-           var watcher = new FileWatcher(),
-               resources = ResourceCollector.collect();
-           watcher.addListener(function () {
-             location.reload();
-           });
-           watcher.watch(resources, 8);
+          var watcher = new FileWatcher(),
+              resources = ResourceCollector.collect();
+          watcher.addListener(function (url) {
+            // If the updated item is CSS
+            if (url.indexOf('css') !== -1) {
+              // Grab all of the links
+              [].slice.call(document.querySelectorAll('link')).forEach(function (link) {
+                // If the link's href matches, update it
+                var href = link.href;
+                if (href.indexOf(url) !== -1) {
+                  link.href = href + (href.indexOf('?') === -1 ? '?' : '') + 1;
+                }
+              });
+            } else {
+            // Otherwise, reload
+              location.reload();
+            }
+          });
+          watcher.watch(resources, 8);
         }());
     </script>
   <%
