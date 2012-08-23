@@ -11,3 +11,5 @@ Begin a section for talks?
 
 Remove double numbering of <ol>'s in the blog
 Add twitter
+
+Nuke themeEvenRow and move straight to CSS mixins

@@ -49,7 +49,7 @@ figure img{border-radius:20px;}
 figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4em;}
 #globalWrapper{margin:0 auto;width:980px;min-height:100%;background:#b9cfff;box-shadow:0 0 20px #000000;position:relative;}
 #globalWrapper>section{padding-bottom:80px;}
-#globalNav{border-width:3px 0;line-height:40px;}
+#globalNav{border-width:3px 0;}
 #globalFooter{position:absolute;bottom:0;height:64px;border-top:1px solid #000;padding-top:8px;margin:0 15%;width:70%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;}
 #globalHeader{position:relative;}
 .globalHeaderHeader,.globalHeaderSubHeader,.globalHeaderSubHeader:before{line-height:60px;}
@@ -133,6 +133,8 @@ a .showLink{color:#436DC4;font-weight:bold;cursor:pointer;}
 a:hover .showLink{outline:0;color:#4F46C4;text-decoration:underline;}
 a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .bulletList li:before{content:"\00BB\00A0";margin-left:0.1em;}
+.comfyRow{line-height:40px;}
+.superComfyRow{line-height:60px;}
 #disqus_thread{margin-top:1em;}
 #dsq-content #dsq-global-toolbar,.dsq-reply{margin-top:0 !important;}
 #dsq-content #dsq-global-toolbar,#dsq-content h3,.dsq-textarea-reply,.dsq-comment-message{margin-bottom:5px !important;}

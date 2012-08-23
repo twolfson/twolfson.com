@@ -242,7 +242,6 @@ figure figcaption {
 }
 #globalNav {
   border-width: 3px 0;
-  line-height: 40px;
 }
 #globalFooter {
   position: absolute;
@@ -584,6 +583,12 @@ a.isSelected {
 .bulletList li:before {
   content: "\00BB\00A0";
   margin-left: 0.1em;
+}
+.comfyRow {
+  line-height: 40px;
+}
+.superComfyRow {
+  line-height: 60px;
 }
 /* Disqus formatting */
 #disqus_thread {

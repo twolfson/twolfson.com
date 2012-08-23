@@ -1,10 +1,10 @@
 <section id="portfolioSection">
   <article>
     <div class="themeOddRow">
-      <div class="layoutRow fillLine"><!-- TODO: Remove fillLine once navbar is fixed -->
-        <h2 class="headerMega layoutUnit layoutSizeFill layoutCentered">Script Kiddie</h2>
+      <div>
+        <h2 class="headerMega layoutCentered superComfyRow">Script Kiddie</h2>
       </div>
-      <div class="layoutRow">
+      <div class="l_row">
       <%
         var items = [{
               "url": "http:\/\/github.com/twolfson/",
@@ -31,7 +31,7 @@
           item = items[i];
           name = item.name;
       %>
-        <div class="layoutUnit layoutSize1of3">
+        <div class="l_span4">
           <figure class="featureItem hideLinks">
             <a href="<%=item.url%>" target="_blank" class="fillLine">
               <img src="<%=item.imgSrc%>" alt="<%=name%>" />
@@ -49,6 +49,11 @@
     </div>
   </article>
   <article>
+    <div class="themeEvenRow">
+      <div class="layoutCentered">
+        <h2 class="headerMega superComfyRow">Freelance</h2>
+      </div>
+    </div>
     <%
     var freelanceItems = [{
           "imgSrc": "public/portfolio/css_off_thumb.png",
@@ -108,22 +113,11 @@
 
       // Grab the next slice
       freelanceSlice = freelanceItems.splice(0, i);
-      
+
       rowClass = rowCount ^ 1 ? "themeEvenRow" : "themeOddRow";
     %>
       <div class="<%=rowClass%>">
         <div class="layoutRow">
-        <%
-          if (rowCount === 0) {
-        %>
-          <div class="layoutUnit layoutSizeFill layoutCentered">
-            <h2 class="headerMega">Freelance</h2>
-          </div>
-        </div>
-        <div class="layoutRow">
-        <%
-          }
-        %>
         <%
           for (j = 0, len2 = freelanceSlice.length, finalIndex = len2 - 1; j < len2; j++ ) {
             item = freelanceSlice[j];
