@@ -155,7 +155,7 @@ a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .blogpost ol{list-style:none;counter-reset:ol;}
 .blogpost ol>li{counter-increment:ol;}
 .blogpost ol>li:before{content:counter(ol) ".\A0";}
-.blogpost code{display:block;margin-left:2em;overflow:auto;white-space:pre;word-wrap:normal;}
+.blogpost code{display:block;overflow:auto;white-space:pre;word-wrap:normal;background:#EEE;padding:1em;border-radius:10px;}
 .post{padding-bottom:5px;clear:both;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
 .fillLine{display:block;width:100%;}
