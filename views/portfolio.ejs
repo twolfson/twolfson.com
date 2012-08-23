@@ -2,9 +2,9 @@
   <article>
     <div class="themeOddRow">
       <div>
-        <h2 class="headerMega layoutCentered superComfyRow">Script Kiddie</h2>
+        <h2 class="headerMega layoutCentered superComfyText">Script Kiddie</h2>
       </div>
-      <div class="l_row">
+      <div class="l_row comfyRow">
       <%
         var items = [{
               "url": "http:\/\/github.com/twolfson/",
@@ -21,15 +21,9 @@
               "imgSrc": "public/images/canvas.png",
               "name": "Canvas Drawer",
               "timePeriod": "March 2011" // TODO: Confirm date
-            }],
-            item,
-            name,
-            i,
-            len,
-            finalIndex;
-        for (i = 0, len = items.length, finalIndex = len - 1; i < len; i++ ) {
-          item = items[i];
-          name = item.name;
+            }];
+        items.forEach(function (item) {
+          var name = item.name;
       %>
         <div class="l_span4">
           <figure class="featureItem hideLinks">
@@ -43,7 +37,7 @@
           </figure>
         </div>
       <%
-        }
+        });
       %>
       </div>
     </div>
@@ -51,7 +45,7 @@
   <article>
     <div class="themeEvenRow">
       <div class="layoutCentered">
-        <h2 class="headerMega superComfyRow">Freelance</h2>
+        <h2 class="headerMega superComfyText">Freelance</h2>
       </div>
     </div>
     <%
@@ -117,13 +111,13 @@
       rowClass = rowCount ^ 1 ? "themeEvenRow" : "themeOddRow";
     %>
       <div class="<%=rowClass%>">
-        <div class="layoutRow">
+        <div class="l_row comfyRow">
         <%
           for (j = 0, len2 = freelanceSlice.length, finalIndex = len2 - 1; j < len2; j++ ) {
             item = freelanceSlice[j];
             name = item.name;
         %>
-          <div class="layoutUnit layoutSize1of<%=len2%>">
+          <div class="l_span<%=12/len2%>">
             <figure class="featureItem hideLinks">
               <a href="<%=item.site%>" target="_blank" class="fillLine">
                 <img src="<%=item.imgSrc%>" alt="<%=name%>" />

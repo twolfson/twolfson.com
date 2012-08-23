@@ -584,11 +584,17 @@ a.isSelected {
   content: "\00BB\00A0";
   margin-left: 0.1em;
 }
-.comfyRow {
+.comfyText {
   line-height: 40px;
 }
-.superComfyRow {
+.superComfyText {
   line-height: 60px;
+}
+.comfyRow {
+  padding-bottom: 20px;
+}
+.comfyRowTop {
+  padding-top: 20px;
 }
 /* Disqus formatting */
 #disqus_thread {
