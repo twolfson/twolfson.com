@@ -36,8 +36,8 @@
       <h2 class="globalHeaderSubHeader"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
       <a href="/index.xml" class="rssLink"><img src="/public/images/rss.png" alt="Follow my blog"/></a>
     </header>
-    <nav id="globalNav" class="themeEvenRow themeBorder layoutFlipped">
-      <ul class="navList layoutRow layoutRowInline layoutRowTall layoutRowWide">
+    <nav id="globalNav">
+      <ul class="navList">
       <% var navLinks = [
               { "name": "github", "href": "http://github.com/twolfson/" },
               { "name": "portfolio", "href": "portfolio" },
@@ -49,32 +49,20 @@
           var navName = navLink.name,
               iSelected = page === navName ? "isSelected" : "";
         %>
-        <li class="navListItem layoutUnit">
+        <li class="navListItem">
           <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
         </li>
       <% }); %>
     </nav>
     <%- body %>
-    <footer id="globalFooter" class="layoutRow layoutCentered"><div class="layoutUnit layoutSizeFill">
-      <%
-        if (page === "blog") {
-      %>
+    <footer id="globalFooter">
       <p>
-        <span>Site designed by Todd Wolfson.</span>
-        <span>All rights reserved. &copy;2005-2012</span>
+        Built by Todd Wolfson. All rights reserved. &copy;2005-2012</span>
       </p>
       <p>
-        Powered by <a href="http://twolfson.github.com/jojo/">jojo</a>
+        Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
       </p>
-      <%
-        } else {
-      %>
-      <div>Site designed and created by Todd Wolfson.</div>
-      <div>All rights reserved. &copy;2005-2012</div>
-      <%
-        }
-      %>
-    </div></footer>
+    </footer>
 	</div>
   <%
     if (process.env.NODE_ENV !== "production") {
