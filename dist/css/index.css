@@ -403,10 +403,6 @@ figure figcaption {
 .l_row:after {
   clear: both;
 }
-.l_rowRightInner {
-  float: right;
-  margin-right: 20px;
-}
 .l_span12 {
   width: 940px;
 }
@@ -495,6 +491,10 @@ figure figcaption {
   float: left;
   margin-left: 20px;
 }
+.l_spanRight {
+  float: right;
+  margin-right: 20px;
+}
 /* Border class */
 .themeBorder {
   border-width: 1px;
@@ -528,9 +528,6 @@ button.themeBorder {
 /* Button classes */
 button.buttonBig {
   padding: 1em;
-}
-.date {
-  font-style: italic;
 }
 /* Featured item module */
 .featureItem {
@@ -595,6 +592,12 @@ a.isSelected {
 }
 .comfyRowTop {
   padding-top: 20px;
+}
+.fluffToHeaderKilo:after {
+  width: 0;
+  content: "";
+  font-size: 1.3em;
+  line-height: 1em;
 }
 /* Disqus formatting */
 #disqus_thread {

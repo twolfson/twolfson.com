@@ -14,3 +14,6 @@ Add twitter
 
 Nuke themeEvenRow and move straight to CSS mixins
 Nuke layoutCentered
+trunk8
+
+consistent article date formatter...
