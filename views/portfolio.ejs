@@ -11,13 +11,19 @@
           'watchers': 27,
           'forks': 3,
           'github': 'Ensighten/CSS-Query'
+        }, {
+          'name': 'File Watcher',
+          'description': 'Watch your files for a hands-free browser refresh!',
+          'watchers': 27,
+          'forks': 3,
+          'github': 'twolfson/File-Watcher'
         }];
         items.forEach(function (item, i) {
           var rowClass = i % 2 ? "themeOddRow" : "themeEvenRow";
       %>
-      <div class="l_row comfyText <%=rowClass%>">
+      <div class="l_row superComfyText <%=rowClass%>">
         <div class="l_span3">
-          <h3 class="headerKilo comfyText"><%=item.name%>
+          <h3 class="headerKilo superComfyText"><%=item.name%>
         </div>
         <div class="l_span7">
           <%=item.description%>
@@ -33,100 +39,5 @@
         });
       %>
     </div>
-  </article>
-  <article>
-    <div class="themeEvenRow">
-      <div class="layoutCentered">
-        <h2 class="headerMega superComfyText">Freelance</h2>
-      </div>
-    </div>
-    <%
-    var freelanceItems = [{
-          "imgSrc": "public/portfolio/css_off_thumb.png",
-          "name": "CSS Off",
-          "caption": "Most recent active competition",
-          "timePeriod": "October 2011",
-          "site": "public/portfolio/css_off/index.html"
-        // }, {
-        //   "imgSrc": "public/images/mouse.png",
-        //   "name": "The Worry Chest System",
-        //   "caption": "Last freelance client",
-        //   "timePeriod": "July 2010"
-        }, {
-          "imgSrc": "public/portfolio/hcd_thumb.png",
-          "name": "His Creative Designs",
-          "caption": "",
-          "timePeriod": "January 2009",
-          "site": "public/portfolio/hcd/index.html"
-        // }, {
-        //   "imgSrc": "public/images/canvas.png",
-        //   "name": "Celebrations Consulting",
-        //   "caption": "",
-        //   "timePeriod": "August 2009"
-        // }, {
-        //   "imgSrc": "public/images/canvas.png",
-        //   "name": "Banyan Connections",
-        //   "caption": "",
-        //   "timePeriod": "TODO: REAL DATE"
-        // }, {
-        //   "imgSrc": "public/images/github.png",
-        //   "name": "Bubbles Auto Care", // TODO: Verify actual name
-        //   "caption": "",
-        //   "timePeriod": "TODO: REAL DATE"
-        // }, {
-        //   "imgSrc": "public/portfolio/millburn_thumb.png",
-        //   "name": "Millburn High School",
-        //   "caption": "Never forget your first",
-        //   "timePeriod": "February 2005 - June 2007"
-        }],
-        freelanceSlice,
-        rowCount,
-        i,
-        len,
-        item,
-        name,
-        j,
-        len2,
-        finalIndex,
-        rowClass;
-
-    for (rowCount = 0; len = freelanceItems.length, len > 0; rowCount++) {
-      i = len;
-      // If more than 3 items remain, use 2 or 3 depending on the row distance
-      if (len > 3) {
-        i = (len % 3 ? 2 : 3);
-      }
-
-      // Grab the next slice
-      freelanceSlice = freelanceItems.splice(0, i);
-
-      rowClass = rowCount ^ 1 ? "themeEvenRow" : "themeOddRow";
-    %>
-      <div class="<%=rowClass%>">
-        <div class="l_row comfyRow">
-        <%
-          for (j = 0, len2 = freelanceSlice.length, finalIndex = len2 - 1; j < len2; j++ ) {
-            item = freelanceSlice[j];
-            name = item.name;
-        %>
-          <div class="l_span<%=12/len2%>">
-            <figure class="featureItem hideLinks">
-              <a href="<%=item.site%>" target="_blank" class="fillLine">
-                <img src="<%=item.imgSrc%>" alt="<%=name%>" />
-                <figcaption>
-                  <h3 class="headerKilo showLink"><%=name%></h3>
-                  <%=item.timePeriod%>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-        <%
-          }
-        %>
-        </div>
-      </div>
-    <%
-    }
-    %>
   </article>
 </section>
