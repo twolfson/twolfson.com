@@ -15,9 +15,9 @@ if (process.env.NODE_ENV === 'production') {
   app.get('/index.xml', ga);
 }
 
-// Notify jojo that all its pages are blog posts
-jojo.config.page = 'blog';
-app.get('*', jojo);
+// // Notify jojo that all its pages are blog posts
+// jojo.config.page = 'blog';
+// app.get('*', jojo);
 
 // Bind jobs JSON to resume (there are single quotes in my JSON so &*#! require in this case)
 var fs = require('fs'),

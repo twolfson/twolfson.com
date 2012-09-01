@@ -2,44 +2,36 @@
   <article>
     <div class="themeOddRow">
       <div>
-        <h2 class="headerMega layoutCentered superComfyText">Script Kiddie</h2>
+        <h2 class="headerMega layoutCentered superComfyText">GitHub</h2>
       </div>
-      <div class="l_row comfyRow">
       <%
         var items = [{
-              "url": "http:\/\/github.com/twolfson/",
-              "imgSrc": "public/images/github.png",
-              "name": "GitHub",
-              "timePeriod": "July 2011 - Present"
-            }, {
-              "url": "public/portfolio/mouse.html",
-              "imgSrc": "public/images/mouse.png",
-              "name": "Mouse Tracker",
-              "timePeriod": "March 2011"
-            }, {
-              "url": "public/portfolio/canvas.html",
-              "imgSrc": "public/images/canvas.png",
-              "name": "Canvas Drawer",
-              "timePeriod": "March 2011" // TODO: Confirm date
-            }];
-        items.forEach(function (item) {
-          var name = item.name;
+          'name': 'CSS Query',
+          'description': 'Lightweight cross-browser CSS selector (<3kb)',
+          'watchers': 27,
+          'forks': 3,
+          'github': 'Ensighten/CSS-Query'
+        }];
+        items.forEach(function (item, i) {
+          var rowClass = i % 2 ? "themeOddRow" : "themeEvenRow";
       %>
-        <div class="l_span4">
-          <figure class="featureItem hideLinks">
-            <a href="<%=item.url%>" target="_blank" class="fillLine">
-              <img src="<%=item.imgSrc%>" alt="<%=name%>" />
-              <figcaption>
-                <h3 class="headerKilo showLink"><%=name%></h3>
-                <%=item.timePeriod%>
-              </figcaption>
-            </a>
-          </figure>
+      <div class="l_row comfyText <%=rowClass%>">
+        <div class="l_span3">
+          <h3 class="headerKilo comfyText"><%=item.name%>
         </div>
+        <div class="l_span7">
+          <%=item.description%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          * <%=item.watchers%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          F <%=item.forks%>
+        </div>
+      </div>
       <%
         });
       %>
-      </div>
     </div>
   </article>
   <article>
