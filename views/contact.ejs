@@ -1,6 +1,6 @@
 <section id="contactSection">
-  <div class="layoutRow">
-    <form id="contactForm" class="layoutSize2of3 layoutUnit" method="POST" action="contact">
+  <div class="l_row">
+    <form id="contactForm" class="l_span8" method="POST" action="contact">
       <fieldset id="contactFieldset" class="fillLine">
         <legend>Contact Details</legend>
         <%
@@ -8,27 +8,27 @@
           // If there was no submission attempt
           if (status === undefined) {
         %>
-        <div class="layoutRow layoutRowSuperTall">
-          <label for="name" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Name:</label>
-          <div class="layoutUnit layoutSize3of4">
-            <input id="name" name="name" type="text" class="themeOddRow themeBorder layoutSize4of5" />
+        <div class="l_row">
+          <label for="name" class="l_span2 layoutFlipped" required="required">Name:</label>
+          <div class="l_span5">
+            <input id="name" name="name" type="text" class="themeOddRow themeBorder fillLine" />
           </div>
         </div>
-        <div class="layoutRow layoutRowSuperTall">
-          <label for="info" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Contact Info:</label>
-          <div class="layoutUnit layoutSize3of4">
-            <input id="info" name="info" type="text" class="themeEvenRow themeBorder layoutSize4of5" />
+        <div class="l_row">
+          <label for="info" class="l_span2 layoutFlipped" required="required">Contact Info:</label>
+          <div class="l_span5">
+            <input id="info" name="info" type="text" class="themeEvenRow themeBorder fillLine" />
           </div>
         </div>
-        <div class="layoutRow layoutRowSuperTall">
-          <label for="message" class="layoutUnit layoutSize1of4 layoutFlipped" required="required">Message:</label>
-          <div class="layoutUnit layoutSize3of4">
-            <textarea id="message" name="message" type="text" class="themeOddRow themeBorder layoutSize4of5"></textarea>
+        <div class="l_row">
+          <label for="message" class="l_span2 layoutFlipped" required="required">Message:</label>
+          <div class="l_span5">
+            <textarea id="message" name="message" type="text" class="themeOddRow themeBorder fillLine"></textarea>
           </div>
         </div>
-        <div class="layoutRow layoutRowSuperTall"><div class="layoutUnit layoutSizeFill layoutCentered">
+        <div class="layoutCentered">
           <button type="submit" id="submitButton" class="themeEvenRow themeBorder buttonBig">Contact Todd</button>
-        </div></div>
+        </div>
         <%
           } else if (status === true) {
           // Otherwise, if the submission was a success
@@ -51,15 +51,14 @@
         %>
       </fieldset>
     </form>
-    <aside id="picContainer" class="layoutUnit layoutSize1of3">
+    <aside id="picContainer" class="l_span4">
       <figure id="picFigure">
         <a href="http://www.aaronwax.com/">
-          <!-- TODO: Remove layoutSize4of5 -->
-          <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" class="layoutSize4of5" />
+          <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" class="fillLine" />
           <figcaption>
-            <div class="layoutRow"><div class="layoutUnit layoutSizeFill layoutCentered">
+            <div class="layoutCentered">
               Photograph taken by A.J. Wax
-            </div></div>
+            </div>
           </figcaption>
         </a>
       </figure>

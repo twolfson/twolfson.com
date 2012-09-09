@@ -36,7 +36,7 @@ app.get('/portfolio', function (req, res) {
   res.render('portfolio', {'page': 'portfolio'});
 });
 
-// TODO: If we are in development, add a contact/test page
+// If we are in development, add a contact/test page
 if (inDevelopment) {
   app.get('/contact', function (req, res, next) {
     var query = req.query || {},

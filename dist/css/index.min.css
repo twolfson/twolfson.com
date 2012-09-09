@@ -86,7 +86,7 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 .layoutRow>.layoutUnit.layoutSizeFill{float:none;}
 .layoutRow.layoutRowInline>.layoutUnit{display:inline;float:none;}
 .layoutRow.layoutRowInline.layoutRowTall{margin-top:5px;margin-bottom:5px;}
-.l_row{*zoom:1;}.l_row:before,.l_row:after{display:table;content:"";line-height:0;}
+.l_row{margin-left:-20px;*zoom:1;}.l_row:before,.l_row:after{display:table;content:"";line-height:0;}
 .l_row:after{clear:both;}
 .l_span12{width:940px;}
 .l_span11{width:860px;}

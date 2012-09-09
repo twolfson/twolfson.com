@@ -392,6 +392,7 @@ figure figcaption {
   margin-bottom: 5px;
 }
 .l_row {
+  margin-left: -20px;
   *zoom: 1;
 }
 .l_row:before,
