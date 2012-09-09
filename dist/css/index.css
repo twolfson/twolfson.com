@@ -665,8 +665,17 @@ a.isSelected {
   font-size: 1.1em;
   line-height: 1.4em;
 }
+.blogpost ul > li,
+.blogpost ol > li {
+  margin-left: 25px;
+}
+.blogpost ul > li:before,
+.blogpost ol > li:before {
+  position: absolute;
+  margin-left: -25px;
+}
 .blogpost ul > li:before {
-  content: "\2022\00A0";
+  content: "\2022";
 }
 .blogpost ol {
   list-style: none;
@@ -676,7 +685,7 @@ a.isSelected {
   counter-increment: ol;
 }
 .blogpost ol > li:before {
-  content: counter(ol) ".\A0";
+  content: counter(ol) ".";
 }
 .blogpost code {
   display: block;

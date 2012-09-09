@@ -155,10 +155,12 @@ a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .blogpost>*{margin-bottom:.7em;}
 .blogpost h1{font-size:1.4em;line-height:1.7em;margin-bottom:0.2em;}
 .blogpost h2{font-size:1.1em;line-height:1.4em;}
-.blogpost ul>li:before{content:"\2022\00A0";}
+.blogpost ul>li,.blogpost ol>li{margin-left:25px;}
+.blogpost ul>li:before,.blogpost ol>li:before{position:absolute;margin-left:-25px;}
+.blogpost ul>li:before{content:"\2022";}
 .blogpost ol{list-style:none;counter-reset:ol;}
 .blogpost ol>li{counter-increment:ol;}
-.blogpost ol>li:before{content:counter(ol) ".\A0";}
+.blogpost ol>li:before{content:counter(ol) ".";}
 .blogpost code{display:block;overflow:auto;white-space:pre;word-wrap:normal;background:#EEE;padding:1em;border-radius:10px;}
 .post{padding-bottom:5px;clear:both;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
