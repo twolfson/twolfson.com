@@ -584,6 +584,9 @@ a.isSelected {
   content: "\00BB\00A0";
   margin-left: 0.1em;
 }
+.semiComfyText {
+  line-height: 30px;
+}
 .comfyText {
   line-height: 40px;
 }

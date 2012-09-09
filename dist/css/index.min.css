@@ -133,6 +133,7 @@ a .showLink{color:#436DC4;font-weight:bold;cursor:pointer;}
 a:hover .showLink{outline:0;color:#4F46C4;text-decoration:underline;}
 a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .bulletList li:before{content:"\00BB\00A0";margin-left:0.1em;}
+.semiComfyText{line-height:30px;}
 .comfyText{line-height:40px;}
 .superComfyText{line-height:60px;}
 .comfyRow{padding-bottom:20px;}
