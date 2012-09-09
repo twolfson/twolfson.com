@@ -1,6 +1,9 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
+    lint: {
+      client: ['public/js/main.js']
+    },
     less: {
       all: {
         src: 'public/css/index.less',
@@ -12,6 +15,12 @@ module.exports = function (grunt) {
       unmin: {
         src: 'public/css/index.less',
         dest: 'dist/css/index.css'
+      }
+    },
+    min: {
+      client: {
+        src: ['public/js/highlight.pack.js', 'public/js/main.js'],
+        dest: 'dist/js/index.js'
       }
     },
     watch: {
@@ -26,5 +35,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-less');
 
   // Set up default action
-  grunt.registerTask('default', 'less watch');
+  grunt.registerTask('default', 'lint less min watch');
 };
