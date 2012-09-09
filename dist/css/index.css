@@ -594,6 +594,12 @@ a.isSelected {
 .superComfyText {
   line-height: 60px;
 }
+.semiComfyRow {
+  padding-bottom: 15px;
+}
+.semiComfyRowTop {
+  padding-top: 15px;
+}
 .comfyRow {
   padding-bottom: 20px;
 }
@@ -809,10 +815,6 @@ pre .tex .formula {
   border-radius: 10px;
 }
 /* Main page formatting */
-.post {
-  padding-bottom: 5px;
-  clear: both;
-}
 #articles .post .content h1,
 #articles .post .content h2 {
   display: none;

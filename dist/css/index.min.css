@@ -136,6 +136,8 @@ a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .semiComfyText{line-height:30px;}
 .comfyText{line-height:40px;}
 .superComfyText{line-height:60px;}
+.semiComfyRow{padding-bottom:15px;}
+.semiComfyRowTop{padding-top:15px;}
 .comfyRow{padding-bottom:20px;}
 .comfyRowTop{padding-top:20px;}
 .superComfyRow{padding-bottom:30px;}
@@ -182,7 +184,6 @@ pre .tex .formula{opacity:0.5;}
 .blogpost ol>li{counter-increment:ol;}
 .blogpost ol>li:before{content:counter(ol) ".";}
 .blogpost code{display:block;overflow:auto;white-space:pre;word-wrap:normal;padding:1em;border-radius:10px;}
-.post{padding-bottom:5px;clear:both;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
 .contactRow{margin-bottom:20px;}.contactRow >label{line-height:44px;}
 .contactRow >input{height:40px;}
