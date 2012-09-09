@@ -11,6 +11,7 @@
   <link rel="alternate" type="application/atom+xml" title="twolfson.com blog feed" href="/index.xml" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <%
+    // If we are in production, enable GA
     if (process.env.NODE_ENV === "production") {
   %>
     <script type="text/javascript">
@@ -23,6 +24,13 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    </script>
+  <%
+    } else {
+    // Otherwise, enable disqus developer mode
+  %>
+    <script>
+      var disqus_developer = 1;
     </script>
   <%
     }

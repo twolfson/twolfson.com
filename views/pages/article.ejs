@@ -1,38 +1,40 @@
-<article class="post">
-  <header class="l_row">
-    <div class="l_span">
-      <h1 class="headerMega superComfyText"><%= title %></h1>
-    </div>
-    <div class="l_spanRight">
-      <%
-        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            day = rawDate.getDay() + 1 + "";
-        if (day.length === 1) {
-           day = "0" + day;
-        }
+<section id="articleSection">
+  <article class="post">
+    <header class="l_row">
+      <div class="l_span">
+        <h1 class="headerMega superComfyText"><%= title %></h1>
+      </div>
+      <div class="l_spanRight">
+        <%
+          var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+              day = rawDate.getDay() + 1 + "";
+          if (day.length === 1) {
+             day = "0" + day;
+          }
 
-        var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
-      %>
-      <span class="date superComfyText fluffToHeaderMega"><%= articleDate %></span>
-    </div>
-  </header>
+          var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
+        %>
+        <span class="date superComfyText fluffToHeaderMega"><%= articleDate %></span>
+      </div>
+    </header>
 
-  <section class="content l_row"><div class="l_span12 blogpost">
-    <%- content %>
-  </div></section>
+    <section class="content l_row"><div class="l_span12 blogpost">
+      <%- content %>
+    </div></section>
 
-  <section class="comments l_row"><div class="l_span12">
-    <% if (config.disqus) { %>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript" src="http://disqus.com/forums/<%= config.disqus %>/embed.js"></script>
-      <noscript>
-        <div class="layoutCentered">
-          <a href="http://<%= config.disqus %>.disqus.com/?url=ref">View the discussion thread.</a>
-        </div>
-      </noscript>
-      <p class="layoutCentered">
-        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-      </p>
-    <% } %>
-  </div></section>
-</article>
+    <section class="comments l_row"><div class="l_span12">
+      <% if (config.disqus) { %>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript" src="http://disqus.com/forums/<%= config.disqus %>/embed.js"></script>
+        <noscript>
+          <div class="layoutCentered">
+            <a href="http://<%= config.disqus %>.disqus.com/?url=ref">View the discussion thread.</a>
+          </div>
+        </noscript>
+        <p class="layoutCentered">
+          <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </p>
+      <% } %>
+    </div></section>
+  </article>
+</section>
