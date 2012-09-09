@@ -2,31 +2,25 @@
   <div class="l_row">
     <form id="contactForm" class="l_span8" method="POST" action="contact">
       <fieldset id="contactFieldset" class="fillLine">
-        <legend>Contact Details</legend>
+        <legend class="superComfyText">Contact Details</legend>
         <%
           var status;
           // If there was no submission attempt
           if (status === undefined) {
         %>
-        <div class="l_row">
+        <div class="contactRow l_row l_rowNested">
           <label for="name" class="l_span2 layoutFlipped" required="required">Name:</label>
-          <div class="l_span5">
-            <input id="name" name="name" type="text" class="themeOddRow themeBorder fillLine" />
-          </div>
+          <input id="name" name="name" type="text" class="themeOddRow themeBorder l_span5" />
         </div>
-        <div class="l_row">
+        <div class="contactRow l_row l_rowNested">
           <label for="info" class="l_span2 layoutFlipped" required="required">Contact Info:</label>
-          <div class="l_span5">
-            <input id="info" name="info" type="text" class="themeEvenRow themeBorder fillLine" />
-          </div>
+          <input id="info" name="info" type="text" class="themeEvenRow themeBorder l_span5" />
         </div>
-        <div class="l_row">
+        <div class="contactRow contactMessageRow l_row l_rowNested">
           <label for="message" class="l_span2 layoutFlipped" required="required">Message:</label>
-          <div class="l_span5">
-            <textarea id="message" name="message" type="text" class="themeOddRow themeBorder fillLine"></textarea>
-          </div>
+          <textarea id="message" name="message" type="text" class="themeOddRow themeBorder l_span5"></textarea>
         </div>
-        <div class="layoutCentered">
+        <div class="contactRow layoutCentered">
           <button type="submit" id="submitButton" class="themeEvenRow themeBorder buttonBig">Contact Todd</button>
         </div>
         <%
@@ -51,12 +45,12 @@
         %>
       </fieldset>
     </form>
-    <aside id="picContainer" class="l_span4">
+    <aside id="picContainer" class="l_span4 comfyRowTop">
       <figure id="picFigure">
         <a href="http://www.aaronwax.com/">
           <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" class="fillLine" />
           <figcaption>
-            <div class="layoutCentered">
+            <div class="comfyText layoutCentered">
               Photograph taken by A.J. Wax
             </div>
           </figcaption>

@@ -392,7 +392,6 @@ figure figcaption {
   margin-bottom: 5px;
 }
 .l_row {
-  margin-left: -20px;
   *zoom: 1;
 }
 .l_row:before,
@@ -403,6 +402,9 @@ figure figcaption {
 }
 .l_row:after {
   clear: both;
+}
+.l_rowNested {
+  margin-left: -20px;
 }
 .l_span12 {
   width: 940px;
@@ -594,6 +596,12 @@ a.isSelected {
 .comfyRowTop {
   padding-top: 20px;
 }
+.superComfyRow {
+  padding-bottom: 30px;
+}
+.superComfyRowTop {
+  padding-top: 30px;
+}
 .fluffToHeaderKilo:after,
 .fluffToHeaderMega:after {
   width: 0;
@@ -684,6 +692,24 @@ a.isSelected {
 #articles .post .content h1,
 #articles .post .content h2 {
   display: none;
+}
+.contactRow {
+  margin-bottom: 20px;
+}
+.contactRow  > label {
+  line-height: 44px;
+}
+.contactRow  > input {
+  height: 40px;
+}
+.contactMessageRow {
+  margin-bottom: 20px;
+}
+.contactMessageRow  > label {
+  line-height: 84px;
+}
+.contactMessageRow  > textarea {
+  height: 80px;
 }
 /* Line fill module */
 .fillLine {
