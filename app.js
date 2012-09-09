@@ -3,7 +3,10 @@ var express = require('express'),
 		app = express.createServer(),
     jojo = require('jojo'),
     GA = require('./ga'),
-    ga = GA();
+    ga = GA(),
+    NODE_ENV = process.env.NODE_ENV,
+    inProduction = NODE_ENV === 'production',
+    inDevelopment = !inProduction;
 
 // Set up view engine and static files for pages
 app.set('view engine', 'ejs');
@@ -11,7 +14,7 @@ app.use('/public', express['static'](__dirname + '/dist'));
 app.use('/public', express['static'](__dirname + '/public'));
 
 // If we are in a production environment, track whenever an RSS is requested
-if (process.env.NODE_ENV === 'production') {
+if (inProduction) {
   app.get('/index.xml', ga);
 }
 
@@ -19,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 jojo.config.page = 'blog';
 app.get('*', jojo);
 
+// DEPRECATED
 // // Bind jobs JSON to resume (there are single quotes in my JSON so &*#! require in this case)
 // var fs = require('fs'),
 //     jobsJson = fs.readFileSync('./jobs.json', 'utf8'),
@@ -31,6 +35,23 @@ app.get('*', jojo);
 app.get('/portfolio', function (req, res) {
   res.render('portfolio', {'page': 'portfolio'});
 });
+
+// TODO: If we are in development, add a contact/test page
+if (inDevelopment) {
+  app.get('/contact', function (req, res, next) {
+    var query = req.query || {},
+        test = query.test;
+
+    // If there is a test query, render the proper response
+    if (test) {
+      var status = test !== 'fail';
+      res.render('contact', {'page': 'contact', 'status': status});
+    } else {
+    // Otherwise, continue
+      next();
+    }
+  });
+}
 
 // Contact page (initial view)
 app.get('/contact', function (req, res) {
