@@ -20,3 +20,7 @@ consistent article date formatter...
 preview all pages of website in 3x2 iframe setup (probably will need zooming)
 
 is contact image too big?
+
+gridify 404
+
+what happened to the index.xml?

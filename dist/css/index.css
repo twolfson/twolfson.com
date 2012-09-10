@@ -276,12 +276,22 @@ figure figcaption {
   content: "";
   width: 0;
 }
+.twitterLink,
+.githubLink,
 .rssLink {
   display: block;
   position: absolute;
-  right: 20px;
   top: 15px;
   border: 0;
+}
+.twitterLink {
+  right: 88px;
+}
+.githubLink {
+  right: 156px;
+}
+.rssLink {
+  right: 20px;
 }
 /*** Layout classes ***/
 .layoutNormal {

@@ -58,10 +58,24 @@
   width: 0;
 }
 
+@linkWidth: 48px;
+.twitterLink,
+.githubLink,
 .rssLink {
   display: block;
   position: absolute;
-  right: @wellWidth;
   top: @wellHeight;
   border: 0;
+}
+
+.twitterLink {
+  right: @linkWidth + 2 * @wellWidth;
+}
+
+.githubLink {
+  right: 2 * @linkWidth + 3 * @wellWidth;
+}
+
+.rssLink {
+  right: @wellWidth;
 }

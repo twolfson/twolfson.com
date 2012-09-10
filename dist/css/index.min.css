@@ -55,7 +55,10 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 .globalHeaderHeader,.globalHeaderSubHeader,.globalHeaderSubHeader:before{line-height:60px;}
 .globalHeaderHeader,.globalHeaderSubHeader:before{font-size:2.3em;}
 .globalHeaderSubHeader:before{content:"";width:0;}
-.rssLink{display:block;position:absolute;right:20px;top:15px;border:0;}
+.twitterLink,.githubLink,.rssLink{display:block;position:absolute;top:15px;border:0;}
+.twitterLink{right:88px;}
+.githubLink{right:156px;}
+.rssLink{right:20px;}
 .layoutNormal{text-align:left;}
 .layoutCentered{text-align:center;}
 .layoutFlipped{text-align:right;}
