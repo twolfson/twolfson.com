@@ -18,6 +18,8 @@ if (inProduction) {
   app.get('/index.xml', ga);
 }
 
+app.settings['jojo formatter'] = __dirname + '/gfmParser';
+
 // Notify jojo that all its pages are blog posts
 jojo.config.page = 'blog';
 app.get('*', jojo);
