@@ -19,6 +19,4 @@ preview all pages of website in 3x2 iframe setup (probably will need zooming)
 
 is contact image too big?
 
-attempt to increase header h2 size
-
 convert ico's into sprites

@@ -52,9 +52,9 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 #globalNav{border-width:3px 0;}
 #globalFooter{position:absolute;bottom:0;height:64px;border-top:1px solid #000;padding-top:8px;margin:0 15%;width:70%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;}
 #globalHeader{position:relative;}
-.globalHeaderHeader,.globalHeaderSubHeader,.globalHeaderSubHeader:before{line-height:60px;}
-.globalHeaderHeader,.globalHeaderSubHeader:before{font-size:2.3em;}
-.globalHeaderSubHeader:before{content:"";width:0;}
+.globalHeaderHeader,.globalHeaderSubHeader{line-height:60px;}
+.globalHeaderHeader{font-size:2.3em;}
+.globalHeaderSubHeader{font-size:1.4em;margin-top:4px;}
 .twitterLink,.githubLink,.rssLink{display:block;position:absolute;top:15px;border:0;}
 .twitterLink{right:88px;}
 .githubLink{right:156px;}
