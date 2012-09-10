@@ -4,7 +4,7 @@
       <div class="l_span">
         <h1 class="headerMega superComfyText"><%= title %></h1>
       </div>
-      <div class="l_spanRight">
+      <div class="l_spanRight date blogpostDate">
         <%
           var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
               day = rawDate.getDay() + 1 + "";
@@ -14,7 +14,7 @@
 
           var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
         %>
-        <span class="date superComfyText fluffToHeaderMega"><%= articleDate %></span>
+        <%= articleDate %>
       </div>
     </header>
 

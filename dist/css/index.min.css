@@ -175,17 +175,19 @@ pre .tex .formula{opacity:0.5;}
 .dsq-comment-message{line-height:1em !important;}
 .dsq-comment{margin-bottom:0.5em !important;}
 #dsq-subscribe{float:right;}
-.blogpost{line-height:1.4em;margin-top:0.3em;}
-.blogpost>*{margin-bottom:.7em;}
+.blogpost{line-height:1.4em;font-size:1.2em;margin-top:0.3em;}
+.blogpost p,.blogpost pre,.blogpost iframe,.blogpost ol,.blogpost ul{margin-bottom:.7em;}
 .blogpost h1{font-size:1.4em;line-height:1.7em;margin-bottom:0.2em;}
 .blogpost h2{font-size:1.1em;line-height:1.4em;}
 .blogpost ul>li,.blogpost ol>li{margin-left:25px;}
 .blogpost ul>li:before,.blogpost ol>li:before{position:absolute;margin-left:-25px;}
+.blogpost ul,.blogpost ol{list-style:none;}
 .blogpost ul>li:before{content:"\2022";}
-.blogpost ol{list-style:none;counter-reset:ol;}
+.blogpost ol{counter-reset:ol;}
 .blogpost ol>li{counter-increment:ol;}
 .blogpost ol>li:before{content:counter(ol) ".";}
 .blogpost pre{display:block;overflow:auto;white-space:pre;word-wrap:normal;padding:1em;border-radius:10px;}
+.blogpostDate{font-size:1.2em;margin-top:15px;padding-top:0.4em;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
 .contactRow{margin-bottom:20px;}.contactRow >label{line-height:44px;}
 .contactRow >input{height:40px;}

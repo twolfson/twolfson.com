@@ -775,10 +775,15 @@ pre .tex .formula {
 /* Blog formatting */
 .blogpost {
   line-height: 1.4em;
+  font-size: 1.2em;
   margin-top: 0.3em;
 }
 /* Bad technique but it is appropriate */
-.blogpost > * {
+.blogpost p,
+.blogpost pre,
+.blogpost iframe,
+.blogpost ol,
+.blogpost ul {
   margin-bottom: .7em;
 }
 .blogpost h1 {
@@ -799,11 +804,14 @@ pre .tex .formula {
   position: absolute;
   margin-left: -25px;
 }
+.blogpost ul,
+.blogpost ol {
+  list-style: none;
+}
 .blogpost ul > li:before {
   content: "\2022";
 }
 .blogpost ol {
-  list-style: none;
   counter-reset: ol;
 }
 .blogpost ol > li {
@@ -819,6 +827,11 @@ pre .tex .formula {
   word-wrap: normal;
   padding: 1em;
   border-radius: 10px;
+}
+.blogpostDate {
+  font-size: 1.2em;
+  margin-top: 15px;
+  padding-top: 0.4em;
 }
 /* Main page formatting */
 #articles .post .content h1,

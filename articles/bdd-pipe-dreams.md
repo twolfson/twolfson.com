@@ -4,7 +4,7 @@
   "date": "2012/09/09"
 }
 
-Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD.
+Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD. Also, I did make a point to mention these thoughts while at NodeConf SummerCamp 2012, so hopefully these thoughts will start spreading more prevalently.
 
 The following would be a set of files located inside of the `tests` directory of an application. Each JSON file acts as a set of BDD tests but does not actually contain any of the driving/testing responsibilities. This is the purest separation that BDD can give us -- separating behavior from implementation.
 
@@ -23,7 +23,9 @@ There is also a `commands.js` which acts as the implementation side of the house
     }
   }
 }
+```
 
+```js
 // tests/commands.js - the language-specific and driver specific tests
 module.exports = {
   'A normal user': function () {
@@ -49,8 +51,8 @@ module.exports = {
     // Attempt to navigate to the admin page
     var page = '/admin';
     window.location = page;
-
-    // Return the page for proper topic binding
+&nbsp;
+    // Return the page proper topic binding
     return page;
   },
   'is redirected': function (page) {
@@ -62,9 +64,41 @@ module.exports = {
 };
 ```
 
-These two files will compile during the cycle of the test to
+These two files will compile during the testing to
 ```js
-
+{
+  'A normal user': {
+    topic: function () {
+      return {'username': 'myuser', 'password': 12345};
+    },
+    'logging into its account': {
+      topic: function (user) {
+        $('#username').val(user.username);
+        $('#password').val(user.password);
+        $('#loginform').submit();
+      },
+      'successfully logs in': function () {
+        assert(window.loggedIn);
+      },
+      'has edit permissions':  function () {
+        var editDisabled = $('#editbutton').prop('disabled');
+        assert.fail(editDisabled);
+      },
+      'attempting to access the admin page': {
+        topic: function () {
+          var page = '/admin';
+          window.location = page;
+          return page;
+        },
+        'is redirected': function (page) {
+          var location = window.location,
+              onPage = location.indexOf(page) === -1;
+          assert.fail(onPage);
+        }
+      }
+    }
+  }
+}
 ```
 
 The beauty
@@ -73,5 +107,10 @@ This separation allows for not only a proper separation of behavior and implemen
 
 Backstory and attribution
 --------------------------------
-// @fat's talk 2012
-// [Behance/Dan Chan syntax for testing](http://blog.behance.net/dev/testing-simplified-page-objects)
+I have been thinking about how to make my JS tests framework agnostic for a while now. I boiled it down to writing a normal set of tests (in Vows format of course) and a facade for interactions. Then, that would hook up to a proper engine for the test framework I wanted -- e.g. Mocha, Testling, JSTestDriver.
+
+Additionally, while watching the [JS Conf 2012 talks](http://2012.jsconf.us/), I watched the one by [Jacob Thorton (@fat)](https://twitter.com/fat). There was a part in there that stuck to me -- [Mustache's tests](https://github.com/janl/mustache.js/tree/master/test/_files) uses input/output files. This means, you take test1.input, process it, and if it matches test1.output then the test passes.
+
+The consequence that @fat mentioned was this made the tests agnostic to the module itself. This leads to anyone being able to rewrite the module as long as they kept the same API. However, a corollary that I came to and was in awe of was *these tests are agnostic to the language*.
+
+The last piece of attribution comes from [Behance](http://www.behance.net/) and [Dan Chan](https://twitter.com/brokenthumbs). One day, Dan released this [blog post](http://blog.behance.net/dev/testing-simplified-page-objects) which gave a slick syntax for testing out UI's. This syntax works very nice with BDD context changes and allows for the separation used in the initial code example.
