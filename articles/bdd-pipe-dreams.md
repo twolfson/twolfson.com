@@ -1,5 +1,5 @@
 {
-  "title": "BDD Pipe Dreams",
+  "title": "BDD pipe dreams",
   "author": "Todd Wolfson",
   "date": "2012/09/09"
 }
@@ -9,12 +9,12 @@ Below are my most recent pipe dreams for BDD. While the example is based on test
 ```js
 // tests/login.json
 {
-  ‘A normal user’: {
-    ‘logging into its account’: {
-      ‘successfully logs in’: true,
-      ‘has edit permissions’: true,
-      ‘attempting to access the admin tab’: {
-        ‘receives an error back’: true
+  'A normal user': {
+    'logging into its account': {
+      'successfully logs in': true,
+      'has edit permissions': true,
+      'attempting to access the admin tab': {
+        'receives an error back': true
       }
     }
   }
@@ -22,22 +22,22 @@ Below are my most recent pipe dreams for BDD. While the example is based on test
 
 // test/commands.js - the language-specific and driver specific tests
 module.exports = {
- ‘A normal user’: function () {
-   return {‘username’: ‘myuser’, ‘password’: 12345};
- },
- ‘logging into its account’: function (user) {
-   $(‘#username’).val(user.username);
-   $(‘#password’).val(user.password);
-   $(‘#loginform’).submit();
- },
- ‘successfully logs in’: function () {
-   assert(window.loggedIn);
- },
- ‘has edit permissions’: function () {
-   var editDisabled = $(‘#editbutton’).prop(‘disabled’);
-   assert.fail(editDisabled);
+  'A normal user': function () {
+    return {'username': 'myuser', 'password': 12345};
   },
- ‘attempting to access the admin tab’: function () {
+  'logging into its account': function (user) {
+    $('#username').val(user.username);
+    $('#password').val(user.password);
+    $('#loginform').submit();
+  },
+  'successfully logs in': function () {
+    assert(window.loggedIn);
+  },
+  'has edit permissions': function () {
+    var editDisabled = $('#editbutton').prop('disabled');
+    assert.fail(editDisabled);
+  },
+  'attempting to access the admin tab': function () {
 
   }
 };
@@ -47,4 +47,4 @@ compiles to
 
 Backstory and attribution
 --------------------------------
-// @fat’s talk 2012
+// @fat's talk 2012
