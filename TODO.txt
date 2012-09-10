@@ -9,8 +9,6 @@ Begin a projects section
  - Maybe with some variations for website projects (namely css off)
 Begin a section for talks?
 
-Add twitter
-
 Nuke themeEvenRow and move straight to CSS mixins
 Nuke layoutCentered
 trunk8
@@ -24,3 +22,7 @@ is contact image too big?
 gridify 404
 
 what happened to the index.xml?
+
+attempt to increase header h2 size
+
+convert ico's into sprites
