@@ -18,5 +18,3 @@ consistent article date formatter...
 preview all pages of website in 3x2 iframe setup (probably will need zooming)
 
 is contact image too big?
-
-convert ico's into sprites

@@ -223,6 +223,27 @@ figure figcaption {
   padding-top: .4em;
 }
 /* Background variants */
+.githubIco,
+.rssIco,
+.twitterIco,
+.spriteIco {
+  background: url(../images/sprites.png) no-repeat;
+}
+.githubIco {
+  background-position: -100px 0;
+  width: 32px;
+  height: 32px;
+}
+.rssIco {
+  background-position: 0 0;
+  width: 32px;
+  height: 32px;
+}
+.twitterIco {
+  background-position: -50px 0;
+  width: 32px;
+  height: 32px;
+}
 /* Specific files are called out explicitly to discourage creation */
 #globalWrapper {
   margin: 0 auto;
@@ -277,19 +298,33 @@ figure figcaption {
 .twitterLink,
 .githubLink,
 .rssLink {
+  background: url(../images/sprites.png) no-repeat;
+  text-indent: -9001px;
   display: block;
   position: absolute;
   top: 15px;
   border: 0;
 }
-.twitterLink {
-  right: 88px;
-}
 .githubLink {
   right: 156px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: -100px 0;
+  width: 32px;
+  height: 32px;
+}
+.twitterLink {
+  right: 88px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: -50px 0;
+  width: 32px;
+  height: 32px;
 }
 .rssLink {
   right: 20px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: 0 0;
+  width: 32px;
+  height: 32px;
 }
 /*** Layout classes ***/
 .layoutNormal {

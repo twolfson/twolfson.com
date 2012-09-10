@@ -60,20 +60,25 @@
 .twitterLink,
 .githubLink,
 .rssLink {
+  .spriteIco;
+  text-indent: -9001px;
   display: block;
   position: absolute;
   top: @wellHeight;
   border: 0;
 }
 
-.twitterLink {
-  right: @linkWidth + 2 * @wellWidth;
-}
-
 .githubLink {
   right: 2 * @linkWidth + 3 * @wellWidth;
+  .githubIco;
+}
+
+.twitterLink {
+  right: @linkWidth + 2 * @wellWidth;
+  .twitterIco;
 }
 
 .rssLink {
   right: @wellWidth;
+  .rssIco;
 }
