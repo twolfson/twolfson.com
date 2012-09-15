@@ -2,12 +2,6 @@ Use media queries?
 Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
 
-Nuke resume and portfolio
-Begin a projects section
- - Row by row of GitHub project
- - Maybe with some variations for website projects (namely css off)
-Begin a section for talks?
-
 Nuke themeEvenRow and move straight to CSS mixins
 Nuke layoutCentered
 trunk8
@@ -27,3 +21,5 @@ do that cool background thing?
 move projects to JSON file and move getSrcUrl into app.js or some helper file
 
 clean up style='s nastiness
+
+integrate new sprites into sprite sheet (woot, spritepad)
