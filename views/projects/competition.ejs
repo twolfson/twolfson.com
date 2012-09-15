@@ -11,17 +11,17 @@ var type,
     </div>
     <% if (isCssOff) { %>
       <div class="l_span4 layoutFlipped">
-        <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><span class="score"><%=score%></span>
+        <img src="public/images/barLines.png" alt="Score" class="tempE" /><span class="score"><%=score%></span>
       </div>
     <% } else { %>
-      <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; position:relative;">
-        <div style="position: absolute; right: 0;">
-          <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=views%></span>
+      <div class="l_span1 layoutFlipped tempA">
+        <div class="tempC">
+          <img src="public/images/eye.png" alt="Views" class="tempF"/><span class="viewCount"><%=views%></span>
         </div>
       &nbsp;
       </div>
       <div class="l_span1 layoutFlipped">
-        <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><span class="likeCount"><%=likes%></span>
+        <img src="public/images/heart.png" alt="Likes" class="tempG" /><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
   </div>
@@ -31,9 +31,9 @@ var type,
     </div>
     <div class="l_span2 layoutFlipped">
       <% if (isCssOff) { %>
-        <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="rank"><%=rank%></span>
+        <img src="public/images/ribbon.png" alt="Rank" class="tempH" /><span class="rank"><%=rank%></span>
       <% } else if (award) { %>
-        <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="award"><%=award%></span>
+        <img src="public/images/ribbon.png" alt="Award" class="tempH" /><span class="award"><%=award%></span>
       <% } %>
     </div>
   </div>
