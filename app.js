@@ -25,8 +25,10 @@ jojo.config.page = 'blog';
 app.get('*', jojo);
 
 // Portfolio page
+var projects = require('./projects');
+projects.page = projects;
 app.get('/projects', function (req, res) {
-  res.render('projects', {'page': 'projects'});
+  res.render('projects', projects);
 });
 
 // If we are in development, add a contact/test page
