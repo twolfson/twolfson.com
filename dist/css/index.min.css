@@ -93,6 +93,8 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 .layoutRow>.layoutUnit.layoutSizeFill{float:none;}
 .layoutRow.layoutRowInline>.layoutUnit{display:inline;float:none;}
 .layoutRow.layoutRowInline.layoutRowTall{margin-top:5px;margin-bottom:5px;}
+.l_span,.l_span1,.l_span2,.l_span3,.l_span4,.l_span5,.l_span6,.l_span7,.l_span8,.l_span9,.l_span10,.l_span11,.l_span12{float:left;margin-left:20px;}
+.l_spanRight{float:right;margin-right:20px;}
 .l_row{*zoom:1;}.l_row:before,.l_row:after{display:table;content:"";line-height:0;}
 .l_row:after{clear:both;}
 .l_rowNested{margin-left:-20px;}
@@ -120,8 +122,6 @@ figure figcaption{font-size:.8em;font-weight:bold;line-height:2em;padding-top:.4
 .l_offset3{margin-left:260px;}
 .l_offset2{margin-left:180px;}
 .l_offset1{margin-left:100px;}
-.l_span,.l_span1,.l_span2,.l_span3,.l_span4,.l_span5,.l_span6,.l_span7,.l_span8,.l_span9,.l_span10,.l_span11,.l_span12{float:left;margin-left:20px;}
-.l_spanRight{float:right;margin-right:20px;}
 .themeBorder{border-width:1px;border-style:solid;border-color:#000;}
 input.themeBorder,textarea.themeBorder,button.themeBorder{border-width:2px;}
 .themeOddRow{background:#b9cfff;}

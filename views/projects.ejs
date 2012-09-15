@@ -101,8 +101,8 @@
       %>
     </div>
     <div>
-      <div class="superComfyRowTop">
-        <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Competitions</h2>
+      <div>
+        <h2 class="headerMega layoutCentered superComfyText superComfyRowTop <%=getRowClass()%>">Competitions</h2>
       </div>
       <%
         var items = [{
@@ -124,7 +124,7 @@
           'mdn': 'heat-pad'
         }, {
           'name': 'IndexedDB Editor',
-          'competition': 'MDN Dev Derby (IndexedDB)',
+          'competition': 'MDN Dev Derby - IndexedDB',
           'description': 'Visual editor for IndexedDB',
           'views': 1,
           'likes': 1,
@@ -133,7 +133,7 @@
           'mdn': 'indexeddb-editor'
         }, {
           'name': 'Mock Toucher',
-          'competition': 'MDN Dev Derby (Touch Events)',
+          'competition': 'MDN Dev Derby - Touch Events',
           'description': 'Mock Toucher emulates multiple touch events via mouse clicks',
           'views': 1,
           'likes': 1,
@@ -141,15 +141,16 @@
           'mdn': 'mock-toucher'
         }, {
           'name': 'Audio Playground',
-          'competition': 'MDN Dev Derby (Audio)',
+          'competition': 'MDN Dev Derby - Audio',
           'description': 'Audio Playground generates sounds based on mouse position',
           'views': 1,
           'likes': 1,
           'github': 'twolfson/Mozilla-Dev-Derby---Audio',
           'mdn': 'audio-playground'
         }, {
+          'type': 'cssOff',
           'name': 'CSS Off',
-          'competition': 'CSS Off',
+          'competition': 'Unmatched Style - Triple Dare',
           'description': 'Take a PSD mockup and convert it to an interactive website',
           'score': '61/100',
           'rank': '66/417',
@@ -157,7 +158,7 @@
           'url': 'http://twolfson.github.com/CSS-Off--2011-/'
         }, {
           'name': 'Heart drawing tweet',
-          'competition': 'JS1K (Love)',
+          'competition': 'JS1K - Love',
           'description': 'Animated double heart drawing in 140 bytes',
           'url': 'http://js1k.com/2012-love/demo/1170'
         }],
@@ -166,8 +167,10 @@
         lenMinusOne = len - 1,
         item;
         for (; i < len;) {
+          // TODO: Fix this hack...
+          var comfyRowKlass = i === lenMinusOne ? "" : "superComfyRow";
       %>
-      <div class="l_row superComfyText <%=getRowClass()%>">
+      <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
         <%
           // If this is the last item, double all values
           if (i === lenMinusOne) {
@@ -187,18 +190,12 @@
               }
             }
         %>
-           <div class="l_span12">
-            <div class="l_span6">
+          <div class="superComfyText">
+            <div class="l_span4 l_offset3">
               <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
             </div>
-            <div class="l_span7">
-              <%=item.description%>
-            </div>
-            <div class="l_span1 layoutFlipped">
-              L <%=item.watchers%>
-            </div>
-            <div class="l_span1 layoutFlipped">
-              V <%=item.forks%>
+            <div class="l_span4">
+              <%=item.competition%>
             </div>
           </div>
         <%
@@ -224,20 +221,36 @@
               }
         %>
             <div class="l_span6">
-              <div class="l_row l_rowNested">
+              <div class="l_row l_rowNested superComfyText">
+                <% if (item.type === 'cssOff') { %>
+                <div class="l_span3">
+                <% } else { %>
                 <div class="l_span4">
+                <% }%>
                   <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
                 </div>
-                <div class="l_span1 layoutFlipped">
-                  L <%=item.likes%>
-                </div>
-                <div class="l_span1 layoutFlipped">
-                  V <%=item.views%>
-                </div>
+                <% if (item.type === 'cssOff') { %>
+                  <div class="l_span3 layoutFlipped">
+                    S <%=item.score%>
+                    R <%=item.rank%>
+                  </div>
+                <% } else { %>
+                  <div class="l_span1 layoutFlipped">
+                    L <%=item.likes%>
+                  </div>
+                  <div class="l_span1 layoutFlipped">
+                    V <%=item.views%>
+                  </div>
+                <% } %>
               </div>
               <div class="l_row l_rowNested">
-                <div class="l_span6">
+                <div class="l_span4">
                   <%=item.competition%>
+                </div>
+                <div class="l_span2 layoutFlipped">
+                  <% if (item.award) { %>
+                    A <%=item.award%>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -252,8 +265,8 @@
       %>
     </div>
     <div>
-      <div class="superComfyRowTop">
-        <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Contributions</h2>
+      <div>
+        <h2 class="headerMega layoutCentered superComfyText superComfyRowTop <%=getRowClass()%>">Contributions</h2>
       </div>
       <%
         var items = [{

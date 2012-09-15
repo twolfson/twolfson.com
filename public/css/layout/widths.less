@@ -34,13 +34,10 @@
     margin-left: @gridGutterWidth * -1;
   }
 
-
   // generate .spanX and .offsetX
   .spanX (@gridColumns);
   .offsetX (@gridColumns);
 }
-
-.gridify(@unitWidth, @wellWidth);
 
 .l_span,
 .l_span1,
@@ -63,3 +60,5 @@
   float: right;
   margin-right: @wellWidth;
 }
+
+.gridify(@unitWidth, @wellWidth);

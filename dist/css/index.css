@@ -435,6 +435,26 @@ figure figcaption {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.l_span,
+.l_span1,
+.l_span2,
+.l_span3,
+.l_span4,
+.l_span5,
+.l_span6,
+.l_span7,
+.l_span8,
+.l_span9,
+.l_span10,
+.l_span11,
+.l_span12 {
+  float: left;
+  margin-left: 20px;
+}
+.l_spanRight {
+  float: right;
+  margin-right: 20px;
+}
 .l_row {
   *zoom: 1;
 }
@@ -521,26 +541,6 @@ figure figcaption {
 }
 .l_offset1 {
   margin-left: 100px;
-}
-.l_span,
-.l_span1,
-.l_span2,
-.l_span3,
-.l_span4,
-.l_span5,
-.l_span6,
-.l_span7,
-.l_span8,
-.l_span9,
-.l_span10,
-.l_span11,
-.l_span12 {
-  float: left;
-  margin-left: 20px;
-}
-.l_spanRight {
-  float: right;
-  margin-right: 20px;
 }
 /* Border class */
 .themeBorder {
