@@ -24,18 +24,9 @@ app.settings['jojo formatter'] = __dirname + '/gfmParser';
 jojo.config.page = 'blog';
 app.get('*', jojo);
 
-// DEPRECATED
-// // Bind jobs JSON to resume (there are single quotes in my JSON so &*#! require in this case)
-// var fs = require('fs'),
-//     jobsJson = fs.readFileSync('./jobs.json', 'utf8'),
-//     jobs = (new Function('return ' + jobsJson + ';')());
-// app.get('/resume', function (req, res) {
-//   res.render('resume', {'page': 'resume', 'jobs': jobs});
-// });
-
 // Portfolio page
-app.get('/portfolio', function (req, res) {
-  res.render('portfolio', {'page': 'portfolio'});
+app.get('/projects', function (req, res) {
+  res.render('projects', {'page': 'projects'});
 });
 
 // If we are in development, add a contact/test page
