@@ -2,7 +2,7 @@ author
 ---------
 css query
 file watcher
-resource watcher
+resource collector
 twolfson.com [low priority]
 jojo
 140byt.es
@@ -19,8 +19,12 @@ Sauron [Ensighten]
 
 competitions
 ------------
-devderby [multiple]
-css off
+devderby - media queries (spriting with CSS media queries) #october2011 #finalist
+devderby - canvas (heat pad) #november2011
+devderby - indexeddb (indexeddb editor) #december2011 #thirdplace
+devderby - touch events (mock toucher) #february2012
+devderby - audio (audio playground) #april2012
+css off #61of100points #66of417place
 js1k
 
 contributor

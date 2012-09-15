@@ -25,3 +25,5 @@ add in quick thoughts to nav bar
 add list of projects contributed to -- nodemon, sourcemap, jquip
 
 do that cool background thing?
+
+/health

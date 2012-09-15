@@ -1,8 +1,16 @@
 <section id="portfolioSection">
   <article>
-    <div class="themeOddRow">
+    <div>
+      <%
+        var _rowCounter = 1;
+       function getRowClass() {
+          var klass = _rowCounter % 2 ? "themeOddRow" : "themeEvenRow";
+          _rowCounter += 1;
+          return klass;
+        }
+      %>
       <div>
-        <h2 class="headerMega layoutCentered superComfyText">GitHub</h2>
+        <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Scripts</h2>
       </div>
       <%
         var items = [{
@@ -17,13 +25,159 @@
           'watchers': 27,
           'forks': 3,
           'github': 'twolfson/File-Watcher'
+        }, {
+          'name': 'Resource Collector',
+          'description': 'Collect all resources off of a page (including CSS ones)!',
+          'watchers': 3,
+          'forks': 1,
+          'github': 'twolfson/Resouce-Collector'
+        }, {
+          'name': 'twolfson.com',
+          'description': 'The website you are currently on ;)',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/twolfson.com'
+        }, {
+          'name': 'jojo',
+          'description': 'the 10 second blog engine for hackers (in javascript)',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/jojo'
+        }, {
+          'name': 'Atomic Event',
+          'description': 'Race condition handler under 140 bytes',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'gist/2668303'
+        }, {
+          'name': 'Mason.js',
+          'description': 'HTML pre-processor that auto-instantiates UI interactivity',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/Mason.js'
         }];
-        items.forEach(function (item, i) {
-          var rowClass = i % 2 ? "themeOddRow" : "themeEvenRow";
+        items.forEach(function (item) {
       %>
-      <div class="l_row superComfyText <%=rowClass%>">
+      <div class="l_row superComfyText <%=getRowClass()%>">
         <div class="l_span3">
-          <h3 class="headerKilo superComfyText"><%=item.name%>
+          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
+        </div>
+        <div class="l_span7">
+          <%=item.description%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          * <%=item.watchers%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          F <%=item.forks%>
+        </div>
+      </div>
+      <%
+        });
+      %>
+    </div>
+    <div>
+      <div>
+        <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Competitions</h2>
+      </div>
+      <%
+        var items = [{
+          'name': 'MDN Dev Derby (Media Queries)',
+          'description': 'Control your CSS sprites via media queries',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/Mozilla-Dev-Derby---CSS-Media-Queries',
+          'mdn': 'spriting-with-css-media-queries'
+        }, {
+          'name': 'MDN Dev Derby (Canvas)',
+          'description': 'Heat Pad displays a heat map of your mouse actions',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/Mozilla-Dev-Derby---Canvas',
+          'mdn': 'heat-pad'
+        }, {
+          'name': 'MDN Dev Derby (IndexedDB)',
+          'description': 'Visual editor for IndexedDB',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/IndexedDB-Editor',
+          'mdn': 'indexeddb-editor'
+        }, {
+          'name': 'MDN Dev Derby (Touch Events)',
+          'description': 'Mock Toucher emulates multiple touch events via mouse clicks',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/Mock-Toucher',
+          'mdn': 'mock-toucher'
+        }, {
+          'name': 'MDN Dev Derby (Audio)',
+          'description': 'Audio Playground generates sounds based on mouse position',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/Mozilla-Dev-Derby---Audio',
+          'mdn': 'audio-playground'
+        }, {
+          'name': 'CSS Off',
+          'description': 'Take a PSD mockup and convert it to an interactive website',
+          'watchers': 1,
+          'forks': 1,
+          'github': 'twolfson/CSS-Off--2011-',
+          'website': 'http://twolfson.github.com/CSS-Off--2011-/'
+        }, {
+          'name': 'JS1K (Love)',
+          'description': 'Animated double heart drawing in 140 bytes',
+          'watchers': 1,
+          'forks': 1,
+          'website': 'http://js1k.com/2012-love/demo/1170'
+        }];
+        items.forEach(function (item) {
+      %>
+      <div class="l_row superComfyText <%=getRowClass()%>">
+        <div class="l_span3">
+          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
+        </div>
+        <div class="l_span7">
+          <%=item.description%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          * <%=item.watchers%>
+        </div>
+        <div class="l_span1 layoutFlipped">
+          F <%=item.forks%>
+        </div>
+      </div>
+      <%
+        });
+      %>
+    </div><div>
+      <div>
+        <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Contributions</h2>
+      </div>
+      <%
+        var items = [{
+          'name': 'nodemon',
+          'description': '???',
+          'watchers': 1,
+          'forks': 1,
+          'github': '???'
+        }, {
+          'name': 'node-sourcemap',
+          'description': '???',
+          'watchers': 1,
+          'forks': 1,
+          'github': '???'
+        }, {
+          'name': 'jquip',
+          'description': '???',
+          'watchers': 1,
+          'forks': 1,
+          'github': '???'
+        }];
+        items.forEach(function (item) {
+      %>
+      <div class="l_row superComfyText <%=getRowClass()%>">
+        <div class="l_span3">
+          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
         </div>
         <div class="l_span7">
           <%=item.description%>
