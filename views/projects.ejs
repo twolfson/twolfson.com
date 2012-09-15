@@ -208,38 +208,27 @@
       <%
         var items = [{
           'name': 'nodemon',
-          'description': '???',
-          'watchers': 1,
-          'forks': 1,
-          'github': '???'
+          'description': 'Monitor changes &hellip; and automatically restart the server',
+          'watchers': 802,
+          'forks': 68,
+          'github': 'remy/nodemon'
         }, {
-          'name': 'node-sourcemap',
-          'description': '???',
-          'watchers': 1,
-          'forks': 1,
-          'github': '???'
+          'name': 'source-map',
+          'description': '<a href="https://wiki.mozilla.org/DevTools/Features/SourceMap">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>',
+          'watchers': 80,
+          'forks': 11,
+          'github': 'mozilla/source-map'
         }, {
           'name': 'jquip',
-          'description': '???',
-          'watchers': 1,
-          'forks': 1,
-          'github': '???'
+          'description': 'jQuery in Parts',
+          'watchers': '1.2k',
+          'forks': 56,
+          'github': 'mythz/jquip'
         }];
         items.forEach(function (item) {
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <div class="l_span3">
-          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
-        </div>
-        <div class="l_span7">
-          <%=item.description%>
-        </div>
-        <div class="l_span1 layoutFlipped">
-          * <%=item.watchers%>
-        </div>
-        <div class="l_span1 layoutFlipped">
-          F <%=item.forks%>
-        </div>
+        <%- partial('partials/projectScript', {item: item}) %>
       </div>
       <%
         });

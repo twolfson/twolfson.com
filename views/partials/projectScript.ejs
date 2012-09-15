@@ -35,11 +35,13 @@ var srcUrl = getSrcUrl(item),
   <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
 </div>
 <div class="l_span7">
-  <%=item.description%>
+  <%-item.description%>
 </div>
-<div class="l_span1 layoutFlipped hideLinks">
-  <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" />
-  <span class="starCount"><%=item.watchers%></span></a>
+<div class="l_span1 layoutFlipped hideLinks" style="overflow: visible; white-space: nowrap; position:relative;">
+  <div style="position: absolute; right: 0;">
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" /><span class="starCount"><%=item.watchers%></span></a>
+  </div>
+&nbsp;
 </div>
 <div class="l_span1 layoutFlipped hideLinks">
   <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleFork.png" alt="Forks" style="height: 20px; vertical-align: middle; margin-top: -1px; margin-right: 5px;" />
