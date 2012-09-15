@@ -43,25 +43,42 @@
 }
 
 .globalHeaderHeader,
-.globalHeaderSubHeader,
-.globalHeaderSubHeader:before {
+.globalHeaderSubHeader {
   line-height: 60px;
 }
 
-.globalHeaderHeader,
-.globalHeaderSubHeader:before {
+.globalHeaderHeader {
   font-size: 2.3em;
 }
 
-.globalHeaderSubHeader:before {
-  content: "";
-  width: 0;
+.globalHeaderSubHeader {
+  font-size: 1.4em;
+  margin-top: 4px;
+}
+
+@linkWidth: 48px;
+.twitterLink,
+.githubLink,
+.rssLink {
+  .spriteIco;
+  text-indent: -9001px;
+  display: block;
+  position: absolute;
+  top: @wellHeight;
+  border: 0;
+}
+
+.githubLink {
+  right: 2 * @linkWidth + 3 * @wellWidth;
+  .githubIco;
+}
+
+.twitterLink {
+  right: @linkWidth + 2 * @wellWidth;
+  .twitterIco;
 }
 
 .rssLink {
-  display: block;
-  position: absolute;
   right: @wellWidth;
-  top: @wellHeight;
-  border: 0;
+  .rssIco;
 }

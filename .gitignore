@@ -5,3 +5,4 @@
 /public/js/watcher.js
 /config.jojo.json
 /node_modules
+/updateProduction.sh

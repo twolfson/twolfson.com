@@ -1,5 +1,4 @@
-Implement AJAX calls/loader for contact form
-Increase width and use media queries
+Use media queries?
 Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
 
@@ -9,27 +8,20 @@ Begin a projects section
  - Maybe with some variations for website projects (namely css off)
 Begin a section for talks?
 
-Remove double numbering of <ol>'s in the blog
-Add twitter
-
 Nuke themeEvenRow and move straight to CSS mixins
 Nuke layoutCentered
 trunk8
 
 consistent article date formatter...
 
-disqus height is broken
-
 preview all pages of website in 3x2 iframe setup (probably will need zooming)
 
+is contact image too big?
 
-full-indent any wrapped words in an ol or li
+reformat portfolio to past work
 
-be less magical about code blocks and their numbers
-
-use highlight or a similar library for code blocks
-
-for the previous 3, use
-http://localhost:8080/2012-03-25-hands-free-refresh-anywhere---file-watcher-et-al.
+add in quick thoughts to nav bar
 
 add list of projects contributed to -- nodemon, sourcemap, jquip
+
+do that cool background thing?

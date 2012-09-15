@@ -11,6 +11,7 @@
   <link rel="alternate" type="application/atom+xml" title="twolfson.com blog feed" href="/index.xml" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <%
+    // If we are in production, enable GA
     if (process.env.NODE_ENV === "production") {
   %>
     <script type="text/javascript">
@@ -25,6 +26,13 @@
       })();
     </script>
   <%
+    } else {
+    // Otherwise, enable disqus developer mode
+  %>
+    <script>
+      var disqus_developer = 1;
+    </script>
+  <%
     }
   %>
 </head>
@@ -32,16 +40,17 @@
 	<div id="globalWrapper">
     <header id="globalHeader" class="l_row">
       <h1 class="globalHeaderHeader l_span4">Todd Wolfson</h1>
-      <!-- TODO: Use kerning -->
       <h2 class="globalHeaderSubHeader l_span4"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
-      <a href="/index.xml" class="rssLink"><img src="/public/images/rss.png" alt="Follow my blog"/></a>
+      <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
+      <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
+      <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
     </header>
     <nav id="globalNav" class="l_row themeEvenRow themeBorder comfyText">
       <ul class="navList l_spanRight">
       <% var navLinks = [
-              { "name": "github", "href": "http://github.com/twolfson/" },
+              /* { "name": "github", "href": "http://github.com/twolfson/" } , */
               { "name": "portfolio", "href": "portfolio" },
-              { "name": "resume", "href": "resume" },
+              /* { "name": "resume", "href": "resume" }, */
               { "name": "blog", "href": "/" },
               { "name": "contact", "href": "contact" }];
 
@@ -53,17 +62,19 @@
           <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
         </li>
       <% }); %>
+      </ul>
     </nav>
     <%- body %>
     <footer id="globalFooter">
       <p>
-        Built by Todd Wolfson. All rights reserved. &copy;2005-2012</span>
+        Built by <a href="/contact">Todd Wolfson</a>. All rights reserved. &copy;2005-2012
       </p>
       <p>
         Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
       </p>
     </footer>
 	</div>
+  <script src="public/js/index.js"></script>
   <%
     if (process.env.NODE_ENV !== "production") {
   %>

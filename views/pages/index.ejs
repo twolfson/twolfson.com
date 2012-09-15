@@ -6,7 +6,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
     articles.forEach(function (article, i) {
       var rowKlass = i % 2 === 0 ? "themeOddRow" : "themeEvenRow";
   %>
-    <article class="post <%=rowKlass%>">
+    <article class="post <%=rowKlass%> semiComfyRow">
       <header class="l_row">
         <div class="l_span">
           <h2 class="headerKilo superComfyText"><a href="<%= article.url %>"><%= article.title %></a></h2>

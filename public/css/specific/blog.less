@@ -1,11 +1,16 @@
 /* Blog formatting */
 .blogpost {
   line-height: 1.4em;
+  font-size: 1.2em;
   margin-top: 0.3em;
 }
 
 /* Bad technique but it is appropriate */
-.blogpost > * {
+.blogpost p,
+.blogpost pre,
+.blogpost iframe,
+.blogpost ol,
+.blogpost ul {
   margin-bottom: .7em;
 }
 
@@ -20,12 +25,28 @@
   line-height: 1.4em;
 }
 
+@listItemIndent: 25px;
+.blogpost ul > li,
+.blogpost ol > li {
+  margin-left: @listItemIndent;
+}
+
+.blogpost ul > li:before,
+.blogpost ol > li:before {
+  position: absolute;
+  margin-left: @listItemIndent * -1;
+}
+
+.blogpost ul,
+.blogpost ol {
+  list-style: none;
+}
+
 .blogpost ul > li:before {
-  content: "\2022\00A0";
+  content: "\2022";
 }
 
 .blogpost ol {
-  list-style: none;
   counter-reset: ol;
 }
 
@@ -34,20 +55,20 @@
 }
 
 .blogpost ol > li:before {
-  content: counter(ol) ".\A0";
+  content: counter(ol) ".";
 }
 
 .blogpost pre {
-
-}
-
-.blogpost code {
   display: block;
   overflow: auto;
   white-space: pre;
   word-wrap: normal;
-
-  background: #EEE;
   padding: 1em;
   border-radius: 10px;
+}
+
+.blogpostDate {
+  font-size: 1.2em;
+  margin-top: 15px;
+  padding-top: 0.4em;
 }
