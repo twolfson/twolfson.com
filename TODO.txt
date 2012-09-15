@@ -18,14 +18,12 @@ preview all pages of website in 3x2 iframe setup (probably will need zooming)
 
 is contact image too big?
 
-reformat portfolio to past work
-
 add in quick thoughts to nav bar
-
-add list of projects contributed to -- nodemon, sourcemap, jquip
 
 do that cool background thing?
 
 /health
 
 move projects to JSON file and move getSrcUrl into app.js or some helper file
+
+clean up style='s nastiness
