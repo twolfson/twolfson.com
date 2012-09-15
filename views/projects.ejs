@@ -160,8 +160,8 @@
           'name': 'CSS Off',
           'competition': 'Unmatched Style - Triple Dare',
           'description': 'Take a PSD mockup and convert it to an interactive website',
-          'score': '61/100',
-          'rank': '66/417',
+          'score': '61 of 100 points',
+          'rank': '66th of 417',
           'github': 'twolfson/CSS-Off--2011-',
           'srcUrl': 'http://www.unmatchedstyle.com/cssoff/',
           'url': 'http://twolfson.github.com/CSS-Off--2011-/'
@@ -240,17 +240,14 @@
                   <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
                 </div>
                 <% if (item.type === 'cssOff') { %>
-                  <div class="l_span2 layoutFlipped">
+                  <div class="l_span4 layoutFlipped">
                     <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><%=item.score%>
-                  </div>
-                  <div class="l_span2 layoutFlipped">
-                    <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.rank%>
                   </div>
                 <% } else { %>
                   <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; position:relative;">
-                  <div style="position: absolute; right: 0;">
-                    <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=item.views%></span>
-                  </div>
+                    <div style="position: absolute; right: 0;">
+                      <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=item.views%></span>
+                    </div>
                   &nbsp;
                   </div>
                   <div class="l_span1 layoutFlipped">
@@ -263,7 +260,9 @@
                   <%=item.competition%>
                 </div>
                 <div class="l_span2 layoutFlipped">
-                  <% if (item.award) { %>
+                  <% if (item.type === 'cssOff') { %>
+                    <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.rank%>
+                  <% } else if (item.award) { %>
                     <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.award%>
                   <% } %>
                 </div>
