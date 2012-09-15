@@ -233,23 +233,25 @@
             <div class="l_span6">
               <div class="l_row l_rowNested superComfyText">
                 <% if (item.type === 'cssOff') { %>
-                <div class="l_span3">
+                <div class="l_span2">
                 <% } else { %>
                 <div class="l_span4">
                 <% }%>
                   <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
                 </div>
                 <% if (item.type === 'cssOff') { %>
-                  <div class="l_span3 layoutFlipped">
-                    S <%=item.score%>
-                    R <%=item.rank%>
+                  <div class="l_span2 layoutFlipped">
+                    <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><%=item.score%>
+                  </div>
+                  <div class="l_span2 layoutFlipped">
+                    <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.rank%>
                   </div>
                 <% } else { %>
-                  <div class="l_span1 layoutFlipped">
-                    L <%=item.likes%>
+                  <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; direction: rtl;">
+                    <span class="viewCount"><%=item.views%></span><img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/>
                   </div>
                   <div class="l_span1 layoutFlipped">
-                    V <%=item.views%>
+                    <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><%=item.likes%>
                   </div>
                 <% } %>
               </div>
@@ -259,7 +261,7 @@
                 </div>
                 <div class="l_span2 layoutFlipped">
                   <% if (item.award) { %>
-                    A <%=item.award%>
+                    <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.award%>
                   <% } %>
                 </div>
               </div>
