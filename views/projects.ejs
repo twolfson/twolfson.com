@@ -9,24 +9,32 @@
           return klass;
         }
 
-        function getSrcURL(item) {
+        function getSrcUrl(item) {
           // Get the github info and url fallback
           var github = item.github,
-              srcURL = item.url;
+              srcUrl = item.srcUrl;
+
+          // If there is a srcUrl, return now
+          if (srcUrl !== undefined) {
+            return srcUrl;
+          }
+
+          // Fallback srcUrl to url
+          srcUrl = item.url;
 
           // If there is a github repo, use that
           if (github !== undefined) {
             // If the item is a gist, return it as such
             var isGist = github.indexOf('gist') > -1;
             if (isGist) {
-              srcURL = 'https://gist.github.com/' + github.slice(5);
+              srcUrl = 'https://gist.github.com/' + github.slice(5);
             } else {
             // Otherwise, go with the normal github flow
-              srcURL = 'https://github.com/' + github;
+              srcUrl = 'https://github.com/' + github;
             }
           }
 
-          return srcURL;
+          return srcUrl;
         }
       %>
       <div>
@@ -77,7 +85,7 @@
           'github': 'twolfson/Mason.js'
         }];
         items.forEach(function (item) {
-          var srcUrl = getSrcURL(item),
+          var srcUrl = getSrcUrl(item),
               pageUrl = item.url || srcUrl;
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
@@ -155,11 +163,13 @@
           'score': '61/100',
           'rank': '66/417',
           'github': 'twolfson/CSS-Off--2011-',
+          'srcUrl': 'http://www.unmatchedstyle.com/cssoff/',
           'url': 'http://twolfson.github.com/CSS-Off--2011-/'
         }, {
           'name': 'Heart drawing tweet',
           'competition': 'JS1K - Love',
           'description': 'Animated double heart drawing in 140 bytes',
+          'srcUrl': 'http://js1k.com/2012-love/demo/1170',
           'url': 'http://js1k.com/2012-love/demo/1170'
         }],
         i = 0,
@@ -175,7 +185,7 @@
           // If this is the last item, double all values
           if (i === lenMinusOne) {
             item = items[i];
-            var srcUrl = getSrcURL(item),
+            var srcUrl = getSrcUrl(item),
                 mdn = item.mdn,
                 pageUrl = item.url;
 
@@ -205,7 +215,7 @@
             var j = 2;
             while (j--) {
               item = items[i];
-              var srcUrl = getSrcURL(item),
+              var srcUrl = getSrcUrl(item),
                   mdn = item.mdn,
                   pageUrl = item.url;
 
