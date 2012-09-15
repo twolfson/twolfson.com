@@ -27,3 +27,5 @@ add list of projects contributed to -- nodemon, sourcemap, jquip
 do that cool background thing?
 
 /health
+
+move projects to JSON file and move getSrcUrl into app.js or some helper file

@@ -3,7 +3,7 @@
     <div>
       <%
         var _rowCounter = 1;
-       function getRowClass() {
+        function getRowClass() {
           var klass = _rowCounter % 2 ? "themeOddRow" : "themeEvenRow";
           _rowCounter += 1;
           return klass;
@@ -85,24 +85,9 @@
           'github': 'twolfson/Mason.js'
         }];
         items.forEach(function (item) {
-          var srcUrl = getSrcUrl(item),
-              pageUrl = item.url || srcUrl;
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <div class="l_span3">
-          <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
-        </div>
-        <div class="l_span7">
-          <%=item.description%>
-        </div>
-        <div class="l_span1 layoutFlipped hideLinks">
-          <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" />
-          <span class="starCount"><%=item.watchers%></span></a>
-        </div>
-        <div class="l_span1 layoutFlipped hideLinks">
-          <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleFork.png" alt="Forks" style="height: 20px; vertical-align: middle; margin-top: -1px; margin-right: 5px;" />
-          <span class="forkCount"><%=item.forks%></span></a>
-        </div>
+        <%- partial('partials/projectScript', {item: item}) %>
       </div>
       <%
         });
@@ -178,7 +163,7 @@
         item;
         for (; i < len;) {
           // TODO: Fix this hack...
-          var comfyRowKlass = i === lenMinusOne ? "" : "superComfyRow";
+          var comfyRowKlass = i === lenMinusOne ? "" : "comfyRow";
       %>
       <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
         <%
@@ -187,18 +172,7 @@
             item = items[i];
             var srcUrl = getSrcUrl(item),
                 mdn = item.mdn,
-                pageUrl = item.url;
-
-            // If the pageUrl is not defined
-            if (pageUrl === undefined) {
-              // and mdn is defined, use that
-              if (mdn !== undefined) {
-                pageUrl = 'https://developer.mozilla.org/en-US/demos/detail/' + mdn;
-              } else {
-              // Otherwise, fallback to the srcUrl
-                pageUrl = srcUrl;
-              }
-            }
+                pageUrl = item.url || srcUrl;
         %>
           <div class="superComfyText">
             <div class="l_span4 l_offset3">
@@ -215,59 +189,8 @@
             var j = 2;
             while (j--) {
               item = items[i];
-              var srcUrl = getSrcUrl(item),
-                  mdn = item.mdn,
-                  pageUrl = item.url;
-
-              // If the pageUrl is not defined
-              if (pageUrl === undefined) {
-                // and mdn is defined, use that
-                if (mdn !== undefined) {
-                  pageUrl = 'https://developer.mozilla.org/en-US/demos/detail/' + mdn;
-                } else {
-                // Otherwise, fallback to the srcUrl
-                  pageUrl = srcUrl;
-                }
-              }
         %>
-            <div class="l_span6">
-              <div class="l_row l_rowNested superComfyText">
-                <% if (item.type === 'cssOff') { %>
-                <div class="l_span2">
-                <% } else { %>
-                <div class="l_span4">
-                <% }%>
-                  <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
-                </div>
-                <% if (item.type === 'cssOff') { %>
-                  <div class="l_span4 layoutFlipped">
-                    <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><%=item.score%>
-                  </div>
-                <% } else { %>
-                  <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; position:relative;">
-                    <div style="position: absolute; right: 0;">
-                      <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=item.views%></span>
-                    </div>
-                  &nbsp;
-                  </div>
-                  <div class="l_span1 layoutFlipped">
-                    <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><%=item.likes%>
-                  </div>
-                <% } %>
-              </div>
-              <div class="l_row l_rowNested">
-                <div class="l_span4">
-                  <%=item.competition%>
-                </div>
-                <div class="l_span2 layoutFlipped">
-                  <% if (item.type === 'cssOff') { %>
-                    <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.rank%>
-                  <% } else if (item.award) { %>
-                    <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.award%>
-                  <% } %>
-                </div>
-              </div>
-            </div>
+              <%- partial('partials/projectCompetition', {item: item}) %>
         <%
             i += 1;
             }
