@@ -247,8 +247,11 @@
                     <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><%=item.rank%>
                   </div>
                 <% } else { %>
-                  <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; direction: rtl;">
-                    <span class="viewCount"><%=item.views%></span><img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/>
+                  <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; position:relative;">
+                  <div style="position: absolute; right: 0;">
+                    <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=item.views%></span>
+                  </div>
+                  &nbsp;
                   </div>
                   <div class="l_span1 layoutFlipped">
                     <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><%=item.likes%>
