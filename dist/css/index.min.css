@@ -174,6 +174,7 @@ pre .addition{background:#ddffdd;}
 pre .diff .change{background:#0086b3;}
 pre .chunk{color:#aaaaaa;}
 pre .tex .formula{opacity:0.5;}
+.fakeLink:hover,.fakeLink.isSelected{padding-bottom:2px;border-bottom:1px solid #436dc4;}
 #disqus_thread{margin-top:1em;}
 #dsq-content #dsq-global-toolbar,.dsq-reply{margin-top:0 !important;}
 #dsq-content #dsq-global-toolbar,#dsq-content h3,.dsq-textarea-reply,.dsq-comment-message{margin-bottom:5px !important;}

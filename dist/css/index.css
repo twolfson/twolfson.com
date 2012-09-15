@@ -786,6 +786,11 @@ pre .chunk {
 pre .tex .formula {
   opacity: 0.5;
 }
+.fakeLink:hover,
+.fakeLink.isSelected {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #436dc4;
+}
 /* Disqus formatting */
 #disqus_thread {
   margin-top: 1em;
