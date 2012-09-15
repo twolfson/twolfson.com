@@ -1,48 +1,7 @@
 <%
-function getSrcUrl(item) {
-  // Get the github info and url fallback
-  var github = item.github,
-      srcUrl = item.srcUrl;
-
-  // If there is a srcUrl, return now
-  if (srcUrl !== undefined) {
-    return srcUrl;
-  }
-
-  // Fallback srcUrl to url
-  srcUrl = item.url;
-
-  // If there is a github repo, use that
-  if (github !== undefined) {
-    // If the item is a gist, return it as such
-    var isGist = github.indexOf('gist') > -1;
-    if (isGist) {
-      srcUrl = 'https://gist.github.com/' + github.slice(5);
-    } else {
-    // Otherwise, go with the normal github flow
-      srcUrl = 'https://github.com/' + github;
-    }
-  }
-
-  return srcUrl;
-}
-
-var srcUrl = getSrcUrl(item),
-    mdn = item.mdn,
-    pageUrl = item.url;
-
-// If the pageUrl is not defined
-if (pageUrl === undefined) {
-  // and mdn is defined, use that
-  if (mdn !== undefined) {
-    pageUrl = 'https://developer.mozilla.org/en-US/demos/detail/' + mdn;
-  } else {
-  // Otherwise, fallback to the srcUrl
-    pageUrl = srcUrl;
-  }
-}
-
-var type = item.type,
+var srcUrl = item.srcUrl,
+    pageUrl = item.pageUrl,
+    type = item.type,
     isCssOff = type === 'cssOff',
     headerWidth = isCssOff ? "l_span2" : "l_span4";
 %>

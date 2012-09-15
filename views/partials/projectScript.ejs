@@ -1,35 +1,6 @@
 <%
-function getSrcUrl(item) {
-  // Get the github info and url fallback
-  var github = item.github,
-      srcUrl = item.srcUrl;
-
-  // If there is a srcUrl, return now
-  if (srcUrl !== undefined) {
-    return srcUrl;
-  }
-
-  // Fallback srcUrl to url
-  srcUrl = item.url;
-
-  // If there is a github repo, use that
-  if (github !== undefined) {
-    // If the item is a gist, return it as such
-    var isGist = github.indexOf('gist') > -1;
-    if (isGist) {
-      srcUrl = 'https://gist.github.com/' + github.slice(5);
-    } else {
-    // Otherwise, go with the normal github flow
-      srcUrl = 'https://github.com/' + github;
-    }
-  }
-
-  return srcUrl;
-}
-
-var srcUrl = getSrcUrl(item),
-    url,
-    pageUrl = item.url || srcUrl;
+var srcUrl = item.srcUrl,
+    pageUrl = item.pageUrl;
 %>
 <div class="l_span3">
   <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>

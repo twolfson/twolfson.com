@@ -8,34 +8,6 @@
           _rowCounter += 1;
           return klass;
         }
-
-        function getSrcUrl(item) {
-          // Get the github info and url fallback
-          var github = item.github,
-              srcUrl = item.srcUrl;
-
-          // If there is a srcUrl, return now
-          if (srcUrl !== undefined) {
-            return srcUrl;
-          }
-
-          // Fallback srcUrl to url
-          srcUrl = item.url;
-
-          // If there is a github repo, use that
-          if (github !== undefined) {
-            // If the item is a gist, return it as such
-            var isGist = github.indexOf('gist') > -1;
-            if (isGist) {
-              srcUrl = 'https://gist.github.com/' + github.slice(5);
-            } else {
-            // Otherwise, go with the normal github flow
-              srcUrl = 'https://github.com/' + github;
-            }
-          }
-
-          return srcUrl;
-        }
       %>
       <div>
         <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Scripts</h2>
@@ -69,9 +41,8 @@
           // If this is the last item, double all values
           if (i === lenMinusOne) {
             item = items[i];
-            var srcUrl = getSrcUrl(item),
-                mdn = item.mdn,
-                pageUrl = item.url || srcUrl;
+            var srcUrl = item.srcUrl,
+                pageUrl = item.pageUrl;
         %>
           <div class="superComfyText">
             <div class="l_span4 l_offset3">
