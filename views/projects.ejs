@@ -16,7 +16,7 @@
         scripts.forEach(function (item) {
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <%- partial('partials/projectScript', {item: item}) %>
+        <%- partial('projects/script', {item: item}) %>
       </div>
       <%
         });
@@ -41,17 +41,8 @@
           // If this is the last item, double all values
           if (i === lenMinusOne) {
             item = items[i];
-            var srcUrl = item.srcUrl,
-                pageUrl = item.pageUrl;
         %>
-          <div class="superComfyText">
-            <div class="l_span4 l_offset3">
-              <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
-            </div>
-            <div class="l_span4">
-              <%=item.competition%>
-            </div>
-          </div>
+          <%- partial('projects/competitionThin', {item: item}) %>
         <%
             i += 1;
           } else {
@@ -60,7 +51,7 @@
             while (j--) {
               item = items[i];
         %>
-              <%- partial('partials/projectCompetition', {item: item}) %>
+              <%- partial('projects/competition', {item: item}) %>
         <%
             i += 1;
             }
@@ -79,7 +70,7 @@
         contributions.forEach(function (item) {
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <%- partial('partials/projectScript', {item: item}) %>
+        <%- partial('projects/script', {item: item}) %>
       </div>
       <%
         });
