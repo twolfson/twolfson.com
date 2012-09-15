@@ -12,7 +12,7 @@ var scripts = [{
   'github': 'twolfson/jojo'
 }, {
   'name': 'CSS Query',
-  'description': 'Lightweight cross-browser CSS selector (<3kb)',
+  'description': 'Lightweight cross-browser CSS selector (&lt;3kb)',
   'stars': 5,
   'forks': 1,
   'github': 'Ensighten/CSS-Query'

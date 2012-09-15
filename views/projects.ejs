@@ -27,39 +27,26 @@
         <h2 class="headerMega layoutCentered superComfyText superComfyRowTop <%=getRowClass()%>">Competitions</h2>
       </div>
       <%
-        var items = competitions,
-        i = 0,
-        len = items.length,
-        lenMinusOne = len - 1,
-        item;
-        for (; i < len;) {
-          // TODO: Fix this hack...
-          var comfyRowKlass = i === lenMinusOne ? "" : "comfyRow";
+        var lenMinusOne = competitions.length - 1;
+        competitions.forEach(function (item, i) {
+          // TODO: Fix comfyRow hack...
+          var isEven = i % 2 === 0,
+              isLastItem = i === lenMinusOne,
+              isOwnRow = isEven && isLastItem,
+              isRowStart = isEven,
+              isRowEnd = !isEven || isOwnRow,
+              comfyRowKlass = isLastItem ? "" : "comfyRow",
+              view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
-      <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
-        <%
-          // If this is the last item, double all values
-          if (i === lenMinusOne) {
-            item = items[i];
-        %>
-          <%- partial('projects/competitionThin', {item: item}) %>
-        <%
-            i += 1;
-          } else {
-          // Otherwise, display 2 per row
-            var j = 2;
-            while (j--) {
-              item = items[i];
-        %>
-              <%- partial('projects/competition', {item: item}) %>
-        <%
-            i += 1;
-            }
-          }
-        %>
-      </div>
+        <% if (isRowStart) { %>
+          <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
+        <% } %>
+            <%- partial(view, {item: item}) %>
+        <% if (isRowEnd) { %>
+          </div>
+        <% } %>
       <%
-        }
+        });
       %>
     </div>
     <div>
