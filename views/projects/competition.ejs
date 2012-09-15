@@ -1,40 +1,39 @@
 <%
-var srcUrl = item.srcUrl,
-    pageUrl = item.pageUrl,
-    type = item.type,
+var type,
+    award,
     isCssOff = type === 'cssOff',
     headerWidth = isCssOff ? "l_span2" : "l_span4";
 %>
 <div class="l_span6">
   <div class="l_row l_rowNested superComfyText">
     <div class="<%=headerWidth%>">
-      <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
+      <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=name%></h3></a>
     </div>
     <% if (isCssOff) { %>
       <div class="l_span4 layoutFlipped">
-        <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><span class="score"><%=item.score%></span>
+        <img src="public/images/barLines.png" alt="Score" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 15px;" /><span class="score"><%=score%></span>
       </div>
     <% } else { %>
       <div class="l_span1 layoutFlipped" style="overflow: visible; white-space: nowrap; position:relative;">
         <div style="position: absolute; right: 0;">
-          <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=item.views%></span>
+          <img src="public/images/eye.png" alt="Views" style="height: 14px; vertical-align: middle; margin-top: -3px; margin-right: 10px;"/><span class="viewCount"><%=views%></span>
         </div>
       &nbsp;
       </div>
       <div class="l_span1 layoutFlipped">
-        <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><span class="likeCount"><%=item.likes%></span>
+        <img src="public/images/heart.png" alt="Likes" style="height: 18px; vertical-align: middle; margin-top: -4px; margin-right: 10px;" /><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
   </div>
   <div class="l_row l_rowNested">
     <div class="l_span4">
-      <%=item.competition%>
+      <%=competition%>
     </div>
     <div class="l_span2 layoutFlipped">
       <% if (isCssOff) { %>
-        <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="rank"><%=item.rank%></span>
-      <% } else if (item.award) { %>
-        <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="award"><%=item.award%></span>
+        <img src="public/images/ribbon.png" alt="Rank" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="rank"><%=rank%></span>
+      <% } else if (award) { %>
+        <img src="public/images/ribbon.png" alt="Award" style="height: 30px; vertical-align: middle; margin-top: -5px; margin-right: 7px;" /><span class="award"><%=award%></span>
       <% } %>
     </div>
   </div>

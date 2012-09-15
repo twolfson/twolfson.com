@@ -1,20 +1,16 @@
-<%
-var srcUrl = item.srcUrl,
-    pageUrl = item.pageUrl;
-%>
 <div class="l_span3">
-  <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
+  <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=name%></h3></a>
 </div>
 <div class="l_span7">
-  <%-item.description%>
+  <%-description%>
 </div>
 <div class="l_span1 layoutFlipped hideLinks" style="overflow: visible; white-space: nowrap; position:relative;">
   <div style="position: absolute; right: 0;">
-    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" /><span class="starCount"><%=item.stars%></span></a>
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" /><span class="starCount"><%=stars%></span></a>
   </div>
 &nbsp;
 </div>
 <div class="l_span1 layoutFlipped hideLinks">
   <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><img src="public/images/purpleFork.png" alt="Forks" style="height: 20px; vertical-align: middle; margin-top: -1px; margin-right: 5px;" />
-  <span class="forkCount"><%=item.forks%></span></a>
+  <span class="forkCount"><%=forks%></span></a>
 </div>

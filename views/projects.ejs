@@ -16,7 +16,7 @@
         scripts.forEach(function (item) {
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <%- partial('projects/script', {item: item}) %>
+        <%- partial('projects/script', item) %>
       </div>
       <%
         });
@@ -29,7 +29,6 @@
       <%
         var lenMinusOne = competitions.length - 1;
         competitions.forEach(function (item, i) {
-          // TODO: Fix comfyRow hack...
           var isEven = i % 2 === 0,
               isLastItem = i === lenMinusOne,
               isOwnRow = isEven && isLastItem,
@@ -41,7 +40,7 @@
         <% if (isRowStart) { %>
           <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
         <% } %>
-            <%- partial(view, {item: item}) %>
+            <%- partial(view, item) %>
         <% if (isRowEnd) { %>
           </div>
         <% } %>
@@ -57,7 +56,7 @@
         contributions.forEach(function (item) {
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
-        <%- partial('projects/script', {item: item}) %>
+        <%- partial('projects/script', item) %>
       </div>
       <%
         });
