@@ -8,6 +8,26 @@
           _rowCounter += 1;
           return klass;
         }
+
+        function getSrcURL(item) {
+          // Get the github info and url fallback
+          var github = item.github,
+              srcURL = item.url;
+
+          // If there is a github repo, use that
+          if (github !== undefined) {
+            // If the item is a gist, return it as such
+            var isGist = github.indexOf('gist') > -1;
+            if (isGist) {
+              srcURL = 'https://gist.github.com/' + github.slice(5);
+            } else {
+            // Otherwise, go with the normal github flow
+              srcURL = 'https://github.com/' + github;
+            }
+          }
+
+          return srcURL;
+        }
       %>
       <div>
         <h2 class="headerMega layoutCentered superComfyText <%=getRowClass()%>">Scripts</h2>
@@ -57,9 +77,7 @@
           'github': 'twolfson/Mason.js'
         }];
         items.forEach(function (item) {
-          var github = item.github,
-              isGist = github.indexOf('gist') > -1,
-              srcUrl = isGist ? 'https://gist.github.com/' + github.slice(5) : 'https://github.com/' + github,
+          var srcUrl = getSrcURL(item),
               pageUrl = item.url || srcUrl;
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
@@ -88,59 +106,80 @@
       </div>
       <%
         var items = [{
-          'name': 'MDN Dev Derby (Media Queries)',
+          'name': 'Media Query Sprites',
+          'competition': 'MDN Dev Derby - Media Queries',
           'description': 'Control your CSS sprites via media queries',
-          'watchers': 1,
-          'forks': 1,
+          'views': 100,
+          'likes': 4,
+          'award': 'Finalist!',
           'github': 'twolfson/Mozilla-Dev-Derby---CSS-Media-Queries',
           'mdn': 'spriting-with-css-media-queries'
         }, {
-          'name': 'MDN Dev Derby (Canvas)',
+          'name': 'Heat Pad',
+          'competition': 'MDN Dev Derby - Canvas',
           'description': 'Heat Pad displays a heat map of your mouse actions',
-          'watchers': 1,
-          'forks': 1,
+          'views': 100,
+          'likes': 1,
           'github': 'twolfson/Mozilla-Dev-Derby---Canvas',
           'mdn': 'heat-pad'
         }, {
-          'name': 'MDN Dev Derby (IndexedDB)',
+          'name': 'IndexedDB Editor',
+          'competition': 'MDN Dev Derby (IndexedDB)',
           'description': 'Visual editor for IndexedDB',
-          'watchers': 1,
-          'forks': 1,
+          'views': 1,
+          'likes': 1,
+          'award': '3rd place!',
           'github': 'twolfson/IndexedDB-Editor',
           'mdn': 'indexeddb-editor'
         }, {
-          'name': 'MDN Dev Derby (Touch Events)',
+          'name': 'Mock Toucher',
+          'competition': 'MDN Dev Derby (Touch Events)',
           'description': 'Mock Toucher emulates multiple touch events via mouse clicks',
-          'watchers': 1,
-          'forks': 1,
+          'views': 1,
+          'likes': 1,
           'github': 'twolfson/Mock-Toucher',
           'mdn': 'mock-toucher'
         }, {
-          'name': 'MDN Dev Derby (Audio)',
+          'name': 'Audio Playground',
+          'competition': 'MDN Dev Derby (Audio)',
           'description': 'Audio Playground generates sounds based on mouse position',
-          'watchers': 1,
-          'forks': 1,
+          'views': 1,
+          'likes': 1,
           'github': 'twolfson/Mozilla-Dev-Derby---Audio',
           'mdn': 'audio-playground'
         }, {
           'name': 'CSS Off',
+          'competition': 'CSS Off',
           'description': 'Take a PSD mockup and convert it to an interactive website',
-          'watchers': 1,
-          'forks': 1,
+          'score': '61/100',
+          'rank': '66/417',
           'github': 'twolfson/CSS-Off--2011-',
-          'website': 'http://twolfson.github.com/CSS-Off--2011-/'
+          'url': 'http://twolfson.github.com/CSS-Off--2011-/'
         }, {
-          'name': 'JS1K (Love)',
+          'name': 'Heart drawing tweet',
+          'competition': 'JS1K (Love)',
           'description': 'Animated double heart drawing in 140 bytes',
-          'watchers': 1,
-          'forks': 1,
-          'website': 'http://js1k.com/2012-love/demo/1170'
+          'url': 'http://js1k.com/2012-love/demo/1170'
         }];
         items.forEach(function (item) {
+          var srcUrl = getSrcURL(item),
+              mdn = item.mdn,
+              pageUrl = item.url;
+
+          // If the pageUrl is not defined
+          if (pageUrl === undefined) {
+            // and mdn is defined, use that
+            if (mdn !== undefined) {
+              pageUrl = 'https://developer.mozilla.org/en-US/demos/detail/' + mdn;
+            } else {
+            // Otherwise, fallback to the srcUrl
+              pageUrl = srcUrl;
+            }
+          }
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
         <div class="l_span3">
-          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
+          <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
         </div>
         <div class="l_span7">
           <%=item.description%>
