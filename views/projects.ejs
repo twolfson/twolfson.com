@@ -57,21 +57,32 @@
           'github': 'twolfson/Mason.js'
         }];
         items.forEach(function (item) {
+          var github = item.github,
+              isGist = github.indexOf('gist') > -1,
+              srcUrl = isGist ? 'https://gist.github.com/' + github.slice(5) : 'https://github.com/' + github,
+              pageUrl = item.url || srcUrl;
       %>
       <div class="l_row superComfyText <%=getRowClass()%>">
         <div class="l_span3">
-          <h3 class="headerKilo superComfyText"><%=item.name%></h3>
+          <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=item.name%></h3></a>
         </div>
         <div class="l_span7">
           <%=item.description%>
         </div>
-        <div class="l_span1 layoutFlipped">
-          <img src="public/images/star.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" />
-          <%=item.watchers%>
+        <style>
+          .betterLink:hover {
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 2px solid #436DC4;
+          }
+        </style>
+        <div class="l_span1 layoutFlipped hideLinks">
+          <a href="<%=srcUrl%>" target="_blank" class="betterLink"><img src="public/images/purpleStar.png" alt="Starred" style="height: 20px; vertical-align: middle; margin-top: -5px; margin-right: 5px;" />
+          <span class="starCount"><%=item.watchers%></span></a>
         </div>
-        <div class="l_span1 layoutFlipped">
-          <img src="public/images/fork.png" alt="Forks" style="height: 20px; vertical-align: middle; margin-top: -1px; margin-right: 5px;" />
-          <%=item.forks%>
+        <div class="l_span1 layoutFlipped hideLinks">
+          <a href="<%=srcUrl%>" target="_blank" class="betterLink"><img src="public/images/purpleFork.png" alt="Forks" style="height: 20px; vertical-align: middle; margin-top: -1px; margin-right: 5px;" />
+          <span class="forkCount"><%=item.forks%></span></a>
         </div>
       </div>
       <%
