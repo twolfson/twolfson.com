@@ -223,24 +223,78 @@ figure figcaption {
   padding-top: .4em;
 }
 /* Background variants */
+.spriteIco,
 .githubIco,
-.rssIco,
 .twitterIco,
-.spriteIco {
+.rssIco,
+.purpleStarIco,
+.purpleForkIco,
+.eyeIco,
+.heartIco,
+.ribbonIco,
+.barLinesIco {
   background: url(../images/sprites.png) no-repeat;
 }
-.githubIco {
-  background-position: -100px 0;
-  width: 32px;
-  height: 32px;
+.purpleStarIco,
+.purpleForkIco,
+.eyeIco,
+.heartIco,
+.ribbonIco,
+.barLinesIco {
+  font-size: 32px;
+  line-height: 32px;
+  padding-left: 32px;
+  vertical-align: middle;
+  margin-right: 7px;
 }
-.rssIco {
+.purpleStarIco {
+  margin-right: 5px;
+}
+.ribbonIco {
+  margin-right: 2px;
+}
+.githubIco {
   background-position: 0 0;
   width: 32px;
   height: 32px;
 }
 .twitterIco {
-  background-position: -50px 0;
+  background-position: 0 -50px;
+  width: 32px;
+  height: 32px;
+}
+.rssIco {
+  background-position: 0 -100px;
+  width: 32px;
+  height: 32px;
+}
+.purpleStarIco {
+  background-position: 0 -150px;
+  width: 32px;
+  height: 32px;
+}
+.purpleForkIco {
+  background-position: 0 -200px;
+  width: 32px;
+  height: 32px;
+}
+.eyeIco {
+  background-position: 0 -250px;
+  width: 32px;
+  height: 32px;
+}
+.heartIco {
+  background-position: 0 -300px;
+  width: 32px;
+  height: 32px;
+}
+.ribbonIco {
+  background-position: 0 -350px;
+  width: 32px;
+  height: 32px;
+}
+.barLinesIco {
+  background-position: 0 -400px;
   width: 32px;
   height: 32px;
 }
@@ -308,21 +362,21 @@ figure figcaption {
 .githubLink {
   right: 156px;
   background: url(../images/sprites.png) no-repeat;
-  background-position: -100px 0;
+  background-position: 0 0;
   width: 32px;
   height: 32px;
 }
 .twitterLink {
   right: 88px;
   background: url(../images/sprites.png) no-repeat;
-  background-position: -50px 0;
+  background-position: 0 -50px;
   width: 32px;
   height: 32px;
 }
 .rssLink {
   right: 20px;
   background: url(../images/sprites.png) no-repeat;
-  background-position: 0 0;
+  background-position: 0 -100px;
   width: 32px;
   height: 32px;
 }

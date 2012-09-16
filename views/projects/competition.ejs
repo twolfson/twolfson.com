@@ -11,17 +11,17 @@ var type,
     </div>
     <% if (isCssOff) { %>
       <div class="l_span4 layoutFlipped">
-        <span class="temp_BarLines" title="Score">&nbsp;</span><span class="score"><%=score%></span>
+        <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=score%></span>
       </div>
     <% } else { %>
       <div class="l_span1 layoutFlipped temp_ProjectInfoOuter">
         <div class="temp_ProjectInfo">
-          <span class="temp_Eye" title="Views"></span><span class="viewCount"><%=views%></span>
+          <span class="eyeIco" title="Views"></span><span class="viewCount"><%=views%></span>
         </div>
       &nbsp;
       </div>
       <div class="l_span1 layoutFlipped">
-        <span class="temp_Heart" title="Likes"></span><span class="likeCount"><%=likes%></span>
+        <span class="heartIco" title="Likes"></span><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
   </div>
@@ -31,9 +31,9 @@ var type,
     </div>
     <div class="l_span2 layoutFlipped">
       <% if (isCssOff) { %>
-        <span class="temp_Ribbon" title="Rank"></span><span class="rank"><%=rank%></span>
+        <span class="ribbonIco" title="Rank"></span><span class="rank"><%=rank%></span>
       <% } else if (award) { %>
-        <span class="temp_Ribbon" title="Award"></span><span class="award"><%=award%></span>
+        <span class="ribbonIco" title="Award"></span><span class="award"><%=award%></span>
       <% } %>
     </div>
   </div>
