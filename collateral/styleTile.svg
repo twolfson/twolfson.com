@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  Initially created with Inkscape (http://www.inkscape.org/)
+  Modified by hand afterwards
+  @author Todd Wolfson <todd@twolfson.com>
+-->
+
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1020"
+   height="760"
+   id="mainSvg"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="styleTile.svg">
+  <metadata
+     id="metadata188">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1400"
+     inkscape:window-height="1000"
+     id="namedview186"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="523"
+     inkscape:cy="362.30112"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svgWrapper" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bwVertGradient"
+       x1="82.265458"
+       y1="0"
+       x2="270.6799"
+       y2="0"
+       spreadMethod="pad"
+       gradientTransform="scale(3.7682887,0.26537245)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#333333"
+         stop-opacity="1"
+         id="stop6" />
+      <stop
+         offset="100%"
+         stop-color="#000000"
+         stop-opacity="1"
+         id="stop8" />
+    </linearGradient>
+    <radialGradient
+       id="bwRadialGradient"
+       fx="120.20815"
+       fy="-67.316566"
+       r="237.58788"
+       spreadMethod="pad"
+       gradientTransform="scale(1.4142136,0.70710678)"
+       cx="120.20815"
+       cy="98.994949"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#DFDFDF"
+         stop-opacity="1"
+         id="stop11" />
+      <stop
+         offset="40%"
+         stop-color="#FFFFFF"
+         stop-opacity="1"
+         id="stop13" />
+      <stop
+         offset="100%"
+         stop-color="#FFFFFF"
+         stop-opacity="1"
+         id="stop15" />
+    </radialGradient>
+    <filter
+       id="dropshadow">
+      <!-- stdDeviation is how much to blur -->
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="2"
+         id="feGaussianBlur18" />
+      <!-- how much to offset -->
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offsetblur"
+         id="feOffset20" />
+      <feComponentTransfer
+         id="feComponentTransfer22">
+        <feFuncA
+           type="linear"
+           slope="0.5"
+           id="feFuncA24" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge26">
+        <!-- this contains the offset blurred image -->
+        <feMergeNode
+           id="feMergeNode28" />
+        <!-- this contains the element that the filter is applied to -->
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode30" />
+      </feMerge>
+    </filter>
+    <filter
+       id="thickDropshadow">
+      <!-- stdDeviation is how much to blur -->
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="4"
+         id="feGaussianBlur33" />
+      <!-- how much to offset -->
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offsetblur"
+         id="feOffset35" />
+      <feComponentTransfer
+         id="feComponentTransfer37">
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           id="feFuncA39" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge41">
+        <!-- this contains the offset blurred image -->
+        <feMergeNode
+           id="feMergeNode43" />
+        <!-- this contains the element that the filter is applied to -->
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode45" />
+      </feMerge>
+    </filter>
+    <foreignObject
+       x="520"
+       y="320"
+       width="500"
+       height="400"
+       id="foreignObject153">
+      <xhtml:p
+         style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad  minim veniam, quis nostrud exercitation ulliam corper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel feugait nulla facilisi.</xhtml:p>
+    </foreignObject>
+  </defs>
+  <g
+     id="svgWrapper">
+    <rect
+       style="fill:#f2f2f2;stroke:#000000;stroke-width:1.12047017"
+       width="1142.8795"
+       height="851.55731"
+       x="0.060235064"
+       y="0.060235064"
+       id="wrapperBorder" />
+    <rect
+       y="0"
+       x="0"
+       height="50"
+       width="1020"
+       id="topBar"
+       style="fill:#8a2be2;fill-rule:evenodd;stroke:#008c00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <text
+       y="35"
+       x="340"
+       id="projectName"
+       style="font-size:24px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan53"
+         style="font-weight:bold">Todd Wolfson</tspan></text>
+    <rect
+       id="logoBg"
+       y="0"
+       x="30"
+       height="140"
+       width="280"
+       style="fill:#ffffff;filter:url(#thickDropshadow)" />
+    <text
+       id="logo"
+       y="80"
+       x="70"
+       style="font-size:34px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Logo Here</text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="340"
+       y="75"
+       id="text58"><tspan
+         style="font-weight:bold"
+         id="tspan60">Style Tile</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:'Bitstream Charter, serif'"
+       x="340"
+       y="100"
+       id="text62"
+       sodipodi:linespacing="125%">version: 1</text>
+    <text
+       id="colorHeader"
+       y="170"
+       x="40"
+       style="font-size:18px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Possible Colors</text>
+    <rect
+       id="rect69"
+       y="200"
+       x="40"
+       height="70"
+       width="70"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect71"
+       y="205"
+       x="45"
+       height="60"
+       width="60"
+       style="fill:#483d8b;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect75"
+       y="200"
+       x="130"
+       height="70"
+       width="70"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect77"
+       y="205"
+       x="135"
+       height="60"
+       width="60"
+       style="fill:#4682b4;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect81"
+       y="200"
+       x="230"
+       height="70"
+       width="70"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect83"
+       y="205"
+       x="235"
+       height="60"
+       width="60"
+       style="fill:#f9f9f9;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect87"
+       y="200"
+       x="330"
+       height="70"
+       width="70"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect89"
+       y="205"
+       x="335"
+       height="60"
+       width="60"
+       style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect93"
+       y="200"
+       x="430"
+       height="70"
+       width="70"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect95"
+       y="205"
+       x="435"
+       height="60"
+       width="60"
+       style="fill:#32cd32;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <text
+       id="textureHeader"
+       y="320"
+       x="40"
+       style="font-size:16px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Textures</text>
+    <rect
+       id="rect102"
+       y="350"
+       x="40"
+       height="140"
+       width="140"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect104"
+       y="355"
+       x="45"
+       height="130"
+       width="130"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect108"
+       y="350"
+       x="200"
+       height="140"
+       width="140"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect110"
+       y="355"
+       x="205"
+       height="130"
+       width="130"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       id="rect114"
+       y="350"
+       x="360"
+       height="140"
+       width="140"
+       style="fill:#ffffff;filter:url(#dropshadow)" />
+    <rect
+       id="rect116"
+       y="355"
+       x="365"
+       height="130"
+       width="130"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       width="220"
+       height="45"
+       x="40"
+       y="525"
+       id="rect121" />
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="60"
+       y="550"
+       id="text123">This is an example of a Button</text>
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       width="220"
+       height="45"
+       x="280"
+       y="525"
+       id="rect127" />
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="300"
+       y="550"
+       id="text129">Submit Button Example Here</text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text132"
+       y="790"
+       x="37"
+       style="font-size:15px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;font-family:'Bitstream Charter, serif'"
+       xml:space="preserve">http://www.styletil.es</text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text134"
+       y="820"
+       x="37"
+       style="font-size:15px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;font-family:'Bitstream Charter, serif'"
+       xml:space="preserve">Template by @Samanthatoy</text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text136"
+       y="820"
+       x="247"
+       style="font-size:15px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;font-family:'Bitstream Charter, serif'"
+       xml:space="preserve">Converted to SVG by @twolfsn</text>
+    <text
+       id="text139"
+       y="210"
+       x="520"
+       style="font-size:28px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan141"
+         style="font-weight:bold">BDD pipe dreams</tspan></text>
+    <text
+       id="text143"
+       y="230"
+       x="520"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Font: Name #hexcode</text>
+    <text
+       id="text146"
+       y="275"
+       x="520"
+       style="font-size:22px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Getting started</text>
+    <text
+       id="text148"
+       y="470"
+       x="520"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Font: Name #hexcode</text>
+    <flowRoot
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;line-height:200%;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       id="flowRoot155"><flowRegion
+         id="flowRegion157"><rect
+   x="520"
+   y="320"
+   width="500"
+   height="400"
+   id="rect159" />
+        </flowRegion><flowPara
+         id="flowPara161">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad  minim veniam, quis nostrud exercitation ulliam corper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel feugait nulla facilisi.</flowPara></flowRoot>    <text
+       id="text165"
+       y="300"
+       x="520"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Font: Name #hexcode</text>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="520"
+       y="500"
+       id="text167">This is an example of a Text Link »</text>
+    <text
+       id="ajectiveHeader"
+       y="542"
+       x="520"
+       style="font-size:15px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       xml:space="preserve">Adjectives</text>
+    <text
+       xml:space="preserve"
+       style="font-size:20.23454857px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="662.39105"
+       y="595.06104"
+       id="text172">Javascript</text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="696"
+       y="666"
+       id="text174">Technology</text>
+    <text
+       xml:space="preserve"
+       style="font-size:46.92925262px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="887.16168"
+       y="681.78857"
+       id="text176">Creative</text>
+    <text
+       xml:space="preserve"
+       style="font-size:41.29969788px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="507.08728"
+       y="706.06561"
+       id="text178">Imaginative</text>
+    <text
+       xml:space="preserve"
+       style="font-size:23.92641258px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="730.79236"
+       y="746.11432"
+       id="text180">Dreamer</text>
+    <text
+       xml:space="preserve"
+       style="font-size:37.16650009px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="857.49292"
+       y="627.92535"
+       id="text182">Playful</text>
+    <text
+       xml:space="preserve"
+       style="font-size:17px;font-style:normal;font-weight:normal;letter-spacing:0px;word-spacing:0px;fill:#b3b3b3;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="514"
+       y="818"
+       id="text184">Be creative, don't just use this template as-is!</text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.88961792px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="790.1886"
+       y="613.17151"
+       id="text3184"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3186"
+         x="790.1886"
+         y="613.17151">Fun</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:34.61760712px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="973.62024"
+       y="586.07623"
+       id="text3188"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3190"
+         x="973.62024"
+         y="586.07623">Neat</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.70030212px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="782.91272"
+       y="714.93439"
+       id="text3192"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3194"
+         x="782.91272"
+         y="714.93439">Nerdgasm</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="555"
+       y="636"
+       id="text3196"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3198"
+         x="555"
+         y="636">Elegance</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.95520592px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="955.50787"
+       y="741.12805"
+       id="text3322"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3324"
+         x="955.50787"
+         y="741.12805">Cool</tspan></text>
+    <image
+       y="355"
+       x="45"
+       id="image3361"
+       xlink:href="file:///home/todd/github/twolfson.com/collateral/styleTile.svg-image3334-4294967074.png"
+       height="130"
+       width="130" />
+  </g>
+</svg>
