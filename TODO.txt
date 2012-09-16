@@ -17,7 +17,3 @@ add in quick thoughts to nav bar
 do that cool background thing?
 
 /health
-
-clean up style='s nastiness
-
-integrate new sprites into sprite sheet (woot, spritepad)

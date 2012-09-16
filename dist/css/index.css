@@ -940,6 +940,19 @@ pre .tex .formula {
 #articles .post .content h2 {
   display: none;
 }
+.projectInfoOuter {
+  overflow: visible;
+  white-space: nowrap;
+  position: relative;
+}
+.projectInfo {
+  position: absolute;
+  right: 0;
+}
+.competitionDesc {
+  height: 32px;
+  line-height: 32px;
+}
 .contactRow {
   margin-bottom: 20px;
 }

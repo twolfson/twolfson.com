@@ -206,6 +206,9 @@ pre .tex .formula{opacity:0.5;}
 .blogpost pre{display:block;overflow:auto;white-space:pre;word-wrap:normal;padding:1em;border-radius:10px;}
 .blogpostDate{font-size:1.2em;margin-top:15px;padding-top:0.4em;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
+.projectInfoOuter{overflow:visible;white-space:nowrap;position:relative;}
+.projectInfo{position:absolute;right:0;}
+.competitionDesc{height:32px;line-height:32px;}
 .contactRow{margin-bottom:20px;}.contactRow >label{line-height:44px;}
 .contactRow >input{height:40px;}
 .contactMessageRow{margin-bottom:20px;}.contactMessageRow >label{line-height:84px;}
