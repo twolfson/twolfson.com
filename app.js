@@ -83,6 +83,19 @@ app.post('/contact', function (req, res, next) {
   });
 });
 
+// Expose a health page
+var pkg = require('./package'),
+    pkgVersion = pkg.version;
+app.get('/health', function (req, res) {
+  var retObj = {
+        'version': pkgVersion,
+        'uptime': process.uptime(),
+        'memory': process.memoryUsage(),
+        'pid': process.pid
+      };
+  res.send(retObj);
+});
+
 // If the page is not found, throw an error and redirect to the 404 page
 app.all('*', function (req, res) {
   res.render('404', {'status': 404, 'page': '404'});

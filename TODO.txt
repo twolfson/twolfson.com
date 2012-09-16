@@ -17,3 +17,5 @@ add in quick thoughts to nav bar
 do that cool background thing?
 
 /health
+
+auto-update projects (create projects folder, create scripts/competitions/contributions.json and index.js -- same implementation as current -- create updateScript and updateCompetition -> polls github api and scrapes mdn pages -- use update scriptes inside of index.js at hourly interval)
