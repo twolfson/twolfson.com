@@ -22,7 +22,7 @@ contributions.forEach(savePageUrl);
 // Now and every hour from now, update file stats
 var minute = 1 || 1000 * 60,
     everyHour = 5 || minute * 60;
-function noop() {console.log(arguments);}
+function noop() {}
 function updateScript(script) {
   // If it not a gist, update it
   var github = script.github || '';
