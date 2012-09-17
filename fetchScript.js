@@ -1,35 +1,64 @@
 var gitter = require('gitter'),
     Repo = gitter.repo;
+function fetchRepoStats(repo, cb) {
+  // Break out the name from the user
+  var repoArr = repo.split('/'),
+      user = repoArr[0],
+      repoName = repoArr[1];
 
-// Repo('twolfson', 'File-Watcher', function (err, repo) {
-// // Repo('mythz', 'jquip', function (err, repo) {
-//   console.log('watchers', repo.watchers);
-//   console.log('forks', repo.forks);
-// });
+  // Fetch the repo and callback
+  Repo(user, repoName, function (err, data) {
+    // If there is an error callback with it
+    if (err) { return cb(err); }
 
-// https://developer.mozilla.org/en-US/demos/detail/indexeddb-editor
-var http = require('https');
-http.get({'host': 'developer.mozilla.org', 'path': '/en-US/demos/detail/indexeddb-editor'}, function (res) {
-  var html = "";
-  res.on('data', function (chunk) {
-    html += chunk;
+    // Otherwise, callback with the data
+    var retObj = {'stars': data.watchers, 'forks': data.forks};
+    cb(null, retObj);
   });
-  res.on('end', function () {
-    var viewArr = html.match(/(\d+) views/),
-        likeArr = html.match(/(\d+) likes/);
+}
 
-    if (viewArr && viewArr.length >= 2) {
-      var views = viewArr[1];
-      if (views !== undefined) {
-        console.log('views', views);
-      }
-    }
+var https = require('https');
+function fetchMDNStats(name, cb) {
+  // Make a request to MDN
+  var path = '/en-US/demos/detail/' + name;
+  https.get({'host': 'developer.mozilla.org', 'path': path}, function (res) {
+    // Collect data
+    var html = "";
+    res.on('data', function (chunk) {
+      html += chunk;
+    });
 
-    if (likeArr && likeArr.length >= 2) {
-      var likes = likeArr[1];
-      if (likes !== undefined) {
-        console.log('likes', likes);
+    // Once all the data is collected
+    res.on('end', function () {
+      // Find the view and like count
+      var viewArr = html.match(/(\d+) views/),
+          likeArr = html.match(/(\d+) likes/),
+          retObj = {};
+
+      // Carefully pick them out
+      try {
+        if (viewArr && viewArr.length >= 2) {
+          var views = viewArr[1];
+          if (views !== undefined) {
+            retObj.views = views;
+          }
+        }
+
+        if (likeArr && likeArr.length >= 2) {
+          var likes = likeArr[1];
+          if (likes !== undefined) {
+            retObj.likes = likes;
+          }
+        }
+      } catch (e) {
       }
-    }
+
+      // Callback with the data
+      cb(null, retObj);
+    });
   });
-});
+}
+
+// TESTS
+fetchRepoStats('twolfson/File-Watcher', function () { console.log('fw', arguments); });
+fetchMDNStats('indexeddb-editor', function () { console.log('id', arguments); });
