@@ -9,5 +9,3 @@ trunk8
 consistent article date formatter...
 
 do that cool background thing?
-
-auto-update projects (create projects folder, create scripts/competitions/contributions.json and index.js -- same implementation as current -- create updateScript and updateCompetition -> polls github api and scrapes mdn pages -- use update scriptes inside of index.js at hourly interval)
