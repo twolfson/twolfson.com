@@ -55,12 +55,15 @@ function updateStats() {
   competitions.forEach(updateCompetition);
   contributions.forEach(updateScript);
 
-  // In a minute, save the updates to their respective JSON files
-  setTimeout(function () {
-    fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
-    fs.writeFile(competitionsFile, JSON.stringify(competitions, null, 2), noop);
-    fs.writeFile(contributionsFile, JSON.stringify(contributions, null, 2), noop);
-  }, minute);
+  // If we are being run standalone, save file
+  if (!module.parent) {
+    // In a minute, save the updates to their respective JSON files
+    setTimeout(function () {
+      fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
+      fs.writeFile(competitionsFile, JSON.stringify(competitions, null, 2), noop);
+      fs.writeFile(contributionsFile, JSON.stringify(contributions, null, 2), noop);
+    }, minute);
+  }
 }
 setInterval(updateStats, everyHour);
 process.nextTick(updateStats);
