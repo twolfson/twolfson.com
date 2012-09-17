@@ -38,6 +38,14 @@ module.exports = function (grunt) {
   // Load in grunt-less
   grunt.loadNpmTasks('grunt-less');
 
+  // Create a grunt task to update projects
+  grunt.registerTask('projects', function () {
+    var cp = require('child_process'),
+        done = this.async();
+    cp.exec('node ' + __dirname + '/projects/index.js');
+    setTimeout(done, 2000);
+  });
+
   // Set up default action
   grunt.registerTask('default', 'lint less min watch');
 };

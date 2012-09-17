@@ -1,43 +1,65 @@
-[{
-  "name": "File Watcher",
-  "description": "Watch your files for a hands-free browser refresh!",
-  "stars": 93,
-  "forks": 1,
-  "github": "twolfson/File-Watcher"
-}, {
-  "name": "jojo",
-  "description": "the 10 second blog engine for hackers (in javascript)",
-  "stars": 23,
-  "forks": 0,
-  "github": "twolfson/jojo"
-}, {
-  "name": "CSS Query",
-  "description": "Lightweight cross-browser CSS selector (&lt;3kb)",
-  "stars": 5,
-  "forks": 1,
-  "github": "Ensighten/CSS-Query"
-}, {
-  "name": "Mason.js",
-  "description": "HTML pre-processor that auto-instantiates UI interactivity",
-  "stars": 3,
-  "forks": 1,
-  "github": "twolfson/Mason.js"
-}, {
-  "name": "Resource Collector",
-  "description": "Collect all resources off of a page (including CSS ones)!",
-  "stars": 2,
-  "forks": 0,
-  "github": "twolfson/Resource-Collector"
-}, {
-  "name": "twolfson.com",
-  "description": "The website you are currently on ;)",
-  "stars": 1,
-  "forks": 0,
-  "github": "twolfson/twolfson.com"
-}, {
-  "name": "Atomic Event",
-  "description": "Race condition handler under <a href=\"http://140byt.es/\" target=\"_blank\">140 bytes</a>",
-  "stars": 0,
-  "forks": 0,
-  "github": "gist/2668303"
-}]
+[
+  {
+    "name": "File Watcher",
+    "description": "Watch your files for a hands-free browser refresh!",
+    "stars": 93,
+    "forks": 1,
+    "github": "twolfson/File-Watcher",
+    "srcUrl": "https://github.com/twolfson/File-Watcher",
+    "pageUrl": "https://github.com/twolfson/File-Watcher"
+  },
+  {
+    "name": "jojo",
+    "description": "the 10 second blog engine for hackers (in javascript)",
+    "stars": 23,
+    "forks": 0,
+    "github": "twolfson/jojo",
+    "srcUrl": "https://github.com/twolfson/jojo",
+    "pageUrl": "https://github.com/twolfson/jojo"
+  },
+  {
+    "name": "CSS Query",
+    "description": "Lightweight cross-browser CSS selector (&lt;3kb)",
+    "stars": 5,
+    "forks": 1,
+    "github": "Ensighten/CSS-Query",
+    "srcUrl": "https://github.com/Ensighten/CSS-Query",
+    "pageUrl": "https://github.com/Ensighten/CSS-Query"
+  },
+  {
+    "name": "Mason.js",
+    "description": "HTML pre-processor that auto-instantiates UI interactivity",
+    "stars": 3,
+    "forks": 1,
+    "github": "twolfson/Mason.js",
+    "srcUrl": "https://github.com/twolfson/Mason.js",
+    "pageUrl": "https://github.com/twolfson/Mason.js"
+  },
+  {
+    "name": "Resource Collector",
+    "description": "Collect all resources off of a page (including CSS ones)!",
+    "stars": 2,
+    "forks": 0,
+    "github": "twolfson/Resource-Collector",
+    "srcUrl": "https://github.com/twolfson/Resource-Collector",
+    "pageUrl": "https://github.com/twolfson/Resource-Collector"
+  },
+  {
+    "name": "twolfson.com",
+    "description": "The website you are currently on ;)",
+    "stars": 1,
+    "forks": 0,
+    "github": "twolfson/twolfson.com",
+    "srcUrl": "https://github.com/twolfson/twolfson.com",
+    "pageUrl": "https://github.com/twolfson/twolfson.com"
+  },
+  {
+    "name": "Atomic Event",
+    "description": "Race condition handler under <a href=\"http://140byt.es/\" target=\"_blank\">140 bytes</a>",
+    "stars": 0,
+    "forks": 0,
+    "github": "gist/2668303",
+    "srcUrl": "https://gist.github.com/2668303",
+    "pageUrl": "https://gist.github.com/2668303"
+  }
+]

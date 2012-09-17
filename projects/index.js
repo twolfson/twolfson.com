@@ -20,8 +20,8 @@ contributions.forEach(saveSrcUrl);
 contributions.forEach(savePageUrl);
 
 // Now and every hour from now, update file stats
-var minute = 1000 * 60,
-    everyHour = minute * 60;
+var second = 1000,
+    everyHour = second * 60 * 60;
 function noop() {}
 function updateScript(script) {
   // If it not a gist, update it
@@ -62,7 +62,7 @@ function updateStats() {
       fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
       fs.writeFile(competitionsFile, JSON.stringify(competitions, null, 2), noop);
       fs.writeFile(contributionsFile, JSON.stringify(contributions, null, 2), noop);
-    }, minute);
+    }, 1000);
   }
 }
 setInterval(updateStats, everyHour);

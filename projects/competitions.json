@@ -1,59 +1,79 @@
-[{
-  "name": "IndexedDB Editor",
-  "competition": "MDN Dev Derby - IndexedDB",
-  "description": "Visual editor for IndexedDB",
-  "views": 406,
-  "likes": 4,
-  "award": "3rd place!",
-  "github": "twolfson/IndexedDB-Editor",
-  "mdn": "indexeddb-editor"
-}, {
-  "type": "cssOff",
-  "name": "CSS Off",
-  "competition": "Unmatched Style - Triple Dare",
-  "description": "Take a PSD mockup and convert it to an interactive website",
-  "score": "61 of 100 points",
-  "rank": "66th of 417",
-  "github": "twolfson/CSS-Off--2011-",
-  "srcUrl": "http://www.unmatchedstyle.com/cssoff/",
-  "url": "http://twolfson.github.com/CSS-Off--2011-/"
-}, {
-  "name": "Media Query Sprites",
-  "competition": "MDN Dev Derby - Media Queries",
-  "description": "Control your CSS sprites via media queries",
-  "views": 184,
-  "likes": 2,
-  "award": "Finalist!",
-  "github": "twolfson/Mozilla-Dev-Derby---CSS-Media-Queries",
-  "mdn": "spriting-with-css-media-queries"
-}, {
-  "name": "Heat Pad",
-  "competition": "MDN Dev Derby - Canvas",
-  "description": "Heat Pad displays a heat map of your mouse actions",
-  "views": 90,
-  "likes": 2,
-  "github": "twolfson/Mozilla-Dev-Derby---Canvas",
-  "mdn": "heat-pad"
-}, {
-  "name": "Audio Playground",
-  "competition": "MDN Dev Derby - Audio",
-  "description": "Audio Playground generates sounds based on mouse position",
-  "views": 209,
-  "likes": 4,
-  "github": "twolfson/Mozilla-Dev-Derby---Audio",
-  "mdn": "audio-playground"
-}, {
-  "name": "Mock Toucher",
-  "competition": "MDN Dev Derby - Touch Events",
-  "description": "Mock Toucher emulates multiple touch events via mouse clicks",
-  "views": 106,
-  "likes": 2,
-  "github": "twolfson/Mock-Toucher",
-  "mdn": "mock-toucher"
-}, {
-  "name": "Heart drawing tweet",
-  "competition": "JS1K - Love",
-  "description": "Animated double heart drawing in 140 bytes",
-  "srcUrl": "http://js1k.com/2012-love/demo/1170",
-  "url": "http://js1k.com/2012-love/demo/1170"
-}]
+[
+  {
+    "name": "IndexedDB Editor",
+    "competition": "MDN Dev Derby - IndexedDB",
+    "description": "Visual editor for IndexedDB",
+    "views": "406",
+    "likes": "4",
+    "award": "3rd place!",
+    "github": "twolfson/IndexedDB-Editor",
+    "mdn": "indexeddb-editor",
+    "srcUrl": "https://github.com/twolfson/IndexedDB-Editor",
+    "pageUrl": "https://developer.mozilla.org/en-US/demos/detail/indexeddb-editor"
+  },
+  {
+    "type": "cssOff",
+    "name": "CSS Off",
+    "competition": "Unmatched Style - Triple Dare",
+    "description": "Take a PSD mockup and convert it to an interactive website",
+    "score": "61 of 100 points",
+    "rank": "66th of 417",
+    "github": "twolfson/CSS-Off--2011-",
+    "srcUrl": "http://www.unmatchedstyle.com/cssoff/",
+    "url": "http://twolfson.github.com/CSS-Off--2011-/",
+    "pageUrl": "http://twolfson.github.com/CSS-Off--2011-/"
+  },
+  {
+    "name": "Media Query Sprites",
+    "competition": "MDN Dev Derby - Media Queries",
+    "description": "Control your CSS sprites via media queries",
+    "views": "185",
+    "likes": "2",
+    "award": "Finalist!",
+    "github": "twolfson/Mozilla-Dev-Derby---CSS-Media-Queries",
+    "mdn": "spriting-with-css-media-queries",
+    "srcUrl": "https://github.com/twolfson/Mozilla-Dev-Derby---CSS-Media-Queries",
+    "pageUrl": "https://developer.mozilla.org/en-US/demos/detail/spriting-with-css-media-queries"
+  },
+  {
+    "name": "Heat Pad",
+    "competition": "MDN Dev Derby - Canvas",
+    "description": "Heat Pad displays a heat map of your mouse actions",
+    "views": "90",
+    "likes": "2",
+    "github": "twolfson/Mozilla-Dev-Derby---Canvas",
+    "mdn": "heat-pad",
+    "srcUrl": "https://github.com/twolfson/Mozilla-Dev-Derby---Canvas",
+    "pageUrl": "https://developer.mozilla.org/en-US/demos/detail/heat-pad"
+  },
+  {
+    "name": "Audio Playground",
+    "competition": "MDN Dev Derby - Audio",
+    "description": "Audio Playground generates sounds based on mouse position",
+    "views": "209",
+    "likes": "4",
+    "github": "twolfson/Mozilla-Dev-Derby---Audio",
+    "mdn": "audio-playground",
+    "srcUrl": "https://github.com/twolfson/Mozilla-Dev-Derby---Audio",
+    "pageUrl": "https://developer.mozilla.org/en-US/demos/detail/audio-playground"
+  },
+  {
+    "name": "Mock Toucher",
+    "competition": "MDN Dev Derby - Touch Events",
+    "description": "Mock Toucher emulates multiple touch events via mouse clicks",
+    "views": "118",
+    "likes": "2",
+    "github": "twolfson/Mock-Toucher",
+    "mdn": "mock-toucher",
+    "srcUrl": "https://github.com/twolfson/Mock-Toucher",
+    "pageUrl": "https://developer.mozilla.org/en-US/demos/detail/mock-toucher"
+  },
+  {
+    "name": "Heart drawing tweet",
+    "competition": "JS1K - Love",
+    "description": "Animated double heart drawing in 140 bytes",
+    "srcUrl": "http://js1k.com/2012-love/demo/1170",
+    "url": "http://js1k.com/2012-love/demo/1170",
+    "pageUrl": "http://js1k.com/2012-love/demo/1170"
+  }
+]
