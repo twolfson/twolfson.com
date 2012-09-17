@@ -8,7 +8,7 @@ trunk8
 
 consistent article date formatter...
 
-add in quick thoughts to nav bar
+add in quick thoughts to nav bar [going to release via twitter]
 
 do that cool background thing?
 
