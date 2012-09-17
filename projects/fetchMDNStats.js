@@ -39,3 +39,4 @@ function fetchMDNStats(name, cb) {
     });
   });
 }
+module.exports = fetchMDNStats;

@@ -16,3 +16,4 @@ function fetchRepoStats(repo, cb) {
     cb(null, retObj);
   });
 }
+module.exports = fetchRepoStats;

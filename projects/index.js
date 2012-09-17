@@ -1,12 +1,15 @@
 // Set up for file references
-var scriptsFile = './scripts.json',
-    competitionsFile = './competitions.json',
-    contributorsFile = './contributors.json';
+var scriptsFile = __dirname + '/scripts.json',
+    competitionsFile = __dirname + '/competitions.json',
+    contributionsFile = __dirname + '/contributions.json';
 
 // Load in all the files
 var scripts = require(scriptsFile),
     competitions = require(competitionsFile),
-    contributions = require(contributions);
+    contributions = require(contributionsFile),
+    fs = require('fs'),
+    fetchRepoStats = require('./fetchRepoStats'),
+    fetchMDNStats = require('./fetchMDNStats');
 
 // Generate a srcUrl and pageUrl for scripts, competitions, and contributions
 scripts.forEach(saveSrcUrl);
@@ -17,10 +20,9 @@ contributions.forEach(saveSrcUrl);
 contributions.forEach(savePageUrl);
 
 // Now and every hour from now, update file stats
-var minute = 1000 * 60,
-    everyHour = minute * 60,
-    fetchRepoStats = require('./fetchRepoStats'),
-    fetchMDNStats = require('./fetchMDNStats');
+var minute = 1 || 1000 * 60,
+    everyHour = 5 || minute * 60;
+function noop() {console.log(arguments);}
 function updateScript(script) {
   // If it not a gist, update it
   var github = script.github || '';
@@ -39,10 +41,10 @@ function updateCompetition(competition) {
   var mdn = competition.mdn;
   if (mdn) {
     fetchMDNStats(mdn, function (err, data) {
-      // If there is no error, update the script
+      // If there is no error, update the competition
       if (!err) {
-        if (data.views !== undefined) { script.views = data.views; }
-        if (data.likes !== undefined) { script.likes = data.likes; }
+        if (data.views !== undefined) { competition.views = data.views; }
+        if (data.likes !== undefined) { competition.likes = data.likes; }
       }
     });
   }
@@ -55,7 +57,9 @@ function updateStats() {
 
   // In a minute, save the updates to their respective JSON files
   setTimeout(function () {
-
+    fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
+    fs.writeFile(competitionsFile, JSON.stringify(competitions, null, 2), noop);
+    fs.writeFile(contributionsFile, JSON.stringify(contributions, null, 2), noop);
   }, minute);
 }
 setInterval(updateStats, everyHour);
