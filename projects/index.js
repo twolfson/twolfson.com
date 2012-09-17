@@ -20,8 +20,8 @@ contributions.forEach(saveSrcUrl);
 contributions.forEach(savePageUrl);
 
 // Now and every hour from now, update file stats
-var minute = 1 || 1000 * 60,
-    everyHour = 5 || minute * 60;
+var minute = 1000 * 60,
+    everyHour = minute * 60;
 function noop() {}
 function updateScript(script) {
   // If it not a gist, update it
