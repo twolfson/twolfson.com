@@ -20,6 +20,8 @@ if (inProduction) {
 
 app.settings['jojo formatter'] = __dirname + '/gfmParser';
 
+// jojo.getSummary = jojo.makeSummary(200, true);
+
 // Notify jojo that all its pages are blog posts
 jojo.config.page = 'blog';
 app.get('*', jojo);
