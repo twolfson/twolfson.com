@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     },
     min: {
       client: {
-        src: ['public/js/highlight.pack.js', 'public/js/main.js'],
+        src: ['public/js/highlight.pack.js', 'public/js/jquery.js', 'public/js/trunkata.js', 'public/js/main.js'],
         dest: 'dist/js/index.js'
       }
     },

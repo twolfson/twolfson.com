@@ -20,7 +20,18 @@ if (inProduction) {
 
 app.settings['jojo formatter'] = __dirname + '/gfmParser';
 
-// jojo.getSummary = jojo.makeSummary(200, true);
+jojo.getSummary = function (article, formatter) {
+  var rawContent = article.rawContent,
+      rawSlice = rawContent.slice(0, 500);
+
+  // Nuder any pre-existing tags
+  // TODO: Fully remove tags from source
+  rawSlice = rawSlice.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Generate and return content
+  var content = formatter(rawSlice);
+  return content;
+};
 
 // Notify jojo that all its pages are blog posts
 jojo.config.page = 'blog';
