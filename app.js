@@ -20,6 +20,7 @@ if (inProduction) {
 
 app.settings['jojo formatter'] = __dirname + '/gfmParser';
 
+var getXmlSummary = jojo.makeSummary(150, true);
 jojo.getSummary = function (article, formatter) {
   var rawContent = article.rawContent,
       rawSlice = rawContent.slice(0, 500);
@@ -27,6 +28,9 @@ jojo.getSummary = function (article, formatter) {
   // Nuder any pre-existing tags
   // TODO: Fully remove tags from source
   rawSlice = rawSlice.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Generate and make an xmlSummary
+  article.xmlSummary = getXmlSummary(article, formatter);
 
   // Generate and return content
   var content = formatter(rawSlice);

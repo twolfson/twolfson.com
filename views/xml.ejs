@@ -27,7 +27,7 @@
     <author>
       <name><%=author%></name>
     </author>
-    <summary type="html"><%=article.summary%></summary>
+    <summary type="html"><%=article.xmlSummary||article.summary%></summary>
   </entry>
 <%
   });
