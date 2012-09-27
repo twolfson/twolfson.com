@@ -4,7 +4,8 @@ $(function () {
   var $preArr = $('pre');
   $preArr.each(function () {
     // Highlight the code block
-    hljs.highlightBlock($pre);
+    var pre = this;
+    hljs.highlightBlock(pre);
   });
 
   // Get all truncate items
