@@ -5,7 +5,9 @@ $(function () {
   $preArr.each(function () {
     // Highlight the code block
     var pre = this;
-    hljs.highlightBlock(pre);
+    if (pre.parentNode) {
+      hljs.highlightBlock(pre);
+    }
   });
 
   // Get all truncate items

@@ -203,7 +203,7 @@ pre .tex .formula{opacity:0.5;}
 .blogpost ol{counter-reset:ol;}
 .blogpost ol>li{counter-increment:ol;}
 .blogpost ol>li:before{content:counter(ol) ".";}
-.blogpost pre{display:block;overflow:auto;white-space:pre;word-wrap:normal;padding:1em;border-radius:10px;}
+.blogpost pre{display:block;overflow:auto;white-space:pre;word-wrap:normal;padding:1em;border-radius:10px;}.blogpost pre pre,.blogpost pre code{display:inline;padding:0;margin:0;}
 .blogpostDate{font-size:1.2em;margin-top:15px;padding-top:0.4em;}
 #articles .post .content h1,#articles .post .content h2{display:none;}
 .projectInfoOuter{overflow:visible;white-space:nowrap;position:relative;}
