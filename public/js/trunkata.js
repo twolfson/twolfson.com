@@ -79,6 +79,14 @@
   function getCSSValue($elt, prop) {
     var propPx = $elt.css(prop),
         retVal = parseInt(propPx, 10);
+
+    // If the property is 'line-height' and the value 'normal', set it to '1'
+    if (prop === 'line-height' && propPx === 'normal') {
+      $elt.css(prop, 1);
+      propPx = $elt.css(prop);
+      retVal = parseInt(propPx, 10);
+    }
+
     return retVal;
   }
 
