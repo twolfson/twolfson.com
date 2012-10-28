@@ -17,10 +17,11 @@ module.exports = function (grunt) {
         dest: 'dist/css/index.css'
       }
     },
-    min: {
+    'jsmin-sourcemap': {
       client: {
         src: ['public/js/highlight.pack.js', 'public/js/jquery.js', 'public/js/trunkata.js', 'public/js/main.js'],
-        dest: 'dist/js/index.js'
+        dest: 'dist/js/index.js',
+        destMap: 'dist/js/index.js.map'
       }
     },
     watch: {
@@ -38,6 +39,9 @@ module.exports = function (grunt) {
   // Load in grunt-less
   grunt.loadNpmTasks('grunt-less');
 
+  // Load in grunt-jsmin-sourcemap
+  grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+
   // Create a grunt task to update projects
   grunt.registerTask('projects', function () {
     var cp = require('child_process'),
@@ -47,5 +51,5 @@ module.exports = function (grunt) {
   });
 
   // Set up default action
-  grunt.registerTask('default', 'lint less min watch');
+  grunt.registerTask('default', 'lint less jsmin-sourcemap watch');
 };

@@ -1,6 +1,6 @@
 {
   "name": "twolfson.com",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "twolfson.com server",
   "main": "app.js",
   "dependencies": {
@@ -12,7 +12,8 @@
     "gitter": "~0.2.0"
   },
   "devDependencies": {
-    "grunt-less": "~0.1.5"
+    "grunt-less": "~0.1.5",
+    "grunt-jsmin-sourcemap": "~1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
