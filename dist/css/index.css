@@ -955,6 +955,12 @@ pre .tex .formula {
   position: absolute;
   right: 0;
 }
+.projectInfo a,
+.projectForks a {
+  display: block;
+  line-height: normal;
+  margin-top: 14px;
+}
 .competitionDesc {
   height: 32px;
   line-height: 32px;
