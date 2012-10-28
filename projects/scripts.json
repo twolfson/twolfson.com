@@ -19,7 +19,7 @@
   },
   {
     "name": "jsmin-sourcemap",
-    "description": "Minify and map your JS via <a href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
+    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
     "stars": 13,
     "forks": 2,
     "github": "twolfson/grunt-jsmin-sourcemap",
