@@ -2,7 +2,7 @@
   {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
-    "stars": 804,
+    "stars": 880,
     "forks": 68,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
@@ -11,8 +11,8 @@
   {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
-    "stars": 80,
-    "forks": 11,
+    "stars": 97,
+    "forks": 14,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
@@ -20,8 +20,8 @@
   {
     "name": "jquip",
     "description": "jQuery in Parts",
-    "stars": 1250,
-    "forks": 56,
+    "stars": 1261,
+    "forks": 55,
     "github": "mythz/jquip",
     "srcUrl": "https://github.com/mythz/jquip",
     "pageUrl": "https://github.com/mythz/jquip"

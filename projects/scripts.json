@@ -2,17 +2,26 @@
   {
     "name": "File Watcher",
     "description": "Watch your files for a hands-free browser refresh!",
-    "stars": 93,
+    "stars": 95,
     "forks": 1,
     "github": "twolfson/File-Watcher",
     "srcUrl": "https://github.com/twolfson/File-Watcher",
     "pageUrl": "https://github.com/twolfson/File-Watcher"
   },
   {
+    "name": "jsmin-sourcemap",
+    "description": "Minify and map your JS via <a href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
+    "stars": 13,
+    "forks": 2,
+    "github": "twolfson/grunt-jsmin-sourcemap",
+    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
+    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
+  },
+  {
     "name": "jojo",
     "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 23,
-    "forks": 0,
+    "stars": 24,
+    "forks": 1,
     "github": "twolfson/jojo",
     "srcUrl": "https://github.com/twolfson/jojo",
     "pageUrl": "https://github.com/twolfson/jojo"
