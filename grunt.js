@@ -19,9 +19,10 @@ module.exports = function (grunt) {
     },
     'jsmin-sourcemap': {
       client: {
-        src: ['public/js/highlight.pack.js', 'public/js/jquery.js', 'public/js/trunkata.js', 'public/js/main.js'],
-        dest: 'dist/js/index.js',
-        destMap: 'dist/js/index.js.map'
+        cwd: 'public/js',
+        src: ['highlight.pack.js', 'jquery.js', 'trunkata.js', 'main.js'],
+        dest: '../../dist/js/index.js',
+        destMap: '../../dist/js/index.js.map'
       }
     },
     watch: {
