@@ -30,8 +30,76 @@ If that does not seem like a lot, imagine those were 20 lines and you wound up g
 This is not picking on `module.exports` definitions but it can be applied to some of those cases as well.
 
 ### How to make it better
-Your first thought is probably "objectify them into an array and iterate over that array". This is not bad for a first thought but as you will see in [#2]
+Your first thought is probably "objectify them into an array and iterate over that array". This is not bad for a first thought but as you will see in #2, it still does not fully hit the mark.
 
+It is best to abstract this into a helper function
+```js
+var algorithms = {};
+function addAlgorithm(name, fn) {
+  algorithms[name] = fn;
+}
+addAlgorithm('top-down', topDownFn);
+addAlgorithm('left-right', leftRightFn);
+addAlgorithm('diagonal', diagFn);
+```
+
+Now we have taken a direct connection and loosened it up a bit.
+
+We can even go one step further and turn this into a full-fledged class.
+```js
+function AlgorithmKeeper() {
+  this.algorithms = {};
+}
+AlgorithmKeeper.prototype = {
+  'add': function (name, fn) {
+    var algorithms = this.algorithms;
+    algorithms[name] = fn;
+  }
+};
+```
+
+### Bonus
+Now that we are going through a function, we can add additional one-off logic if there is a need for it. Effectively leaving the base function alone; this is useful in case we topDownFn is actually from another repo.
+
+```js
+function addAlgorithm(name, fn) {
+  // By default, save fn
+  var saveFn = fn;
+
+  // If we are adding top-down
+  if (name === 'top-down') {
+    saveFn = function () {
+      console.log('Top-down just got called!');
+      return fn.apply(this, arguments);
+    };
+  }
+
+  // Save the saveFn
+  algorithms[name] = saveFn;
+}
+```
+
+Another option is to add the ability for options during the `add` portion. While this doesn't apply to algorithms so well, something like templates is great.
+```js
+function addTemplate(params) {
+  var name = params.name,
+      template = params.template,
+      options = params.options || {},
+      defaults = options.defaults,
+      saveFn = template;
+
+  // If defaults exist, override the saveFn to fallback to defaults
+  if (defaults) {
+    saveFn = function (data) {
+      _.defaults(data, defaults);
+      return template(data);
+    };
+  }
+
+  // Save our saveFn
+  templates[name] = saveFn;
+}
+```
 
 
 Anti-pattern #2: Binding by iterating over an array
