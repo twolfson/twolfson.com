@@ -25,9 +25,12 @@ algorithms['diagonal'] = diagFn;
 ### Why this is bad
 You have written a direct reference to the map. However, what if you want to move to an array store or the variable becomes abstracted into a class. In either of those cases, those last 3 lines will have to be updated.
 
-If that does not seem like a lot, imagine those were 20 lines and you wound up going back and forth a lot. Additionally, the ability for error increases each and every time you have to repeat yourself.
+If that does not seem like a lot, imagine those were 20 lines and you wound up going back and forth a lot. There is a large margin for error and debugging will also not be fun.
 
 This is not picking on `module.exports` definitions but it can be applied to some of those cases as well.
+
+### How to make it better
+Your first thought is probably "objectify them into an array and iterate over that array". This is not bad for a first thought but as you will see in [#2]
 
 
 
