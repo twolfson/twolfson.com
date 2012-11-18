@@ -16,7 +16,6 @@ Anti-pattern #1: Writing directly to an object
 ----------------------------------------------
 ### The pattern
 ```js
-// Most common form
 var algorithms = {};
 algorithms['top-down'] = topDownFn;
 algorithms['left-right'] = leftRightFn;
@@ -24,6 +23,13 @@ algorithms['diagonal'] = diagFn;
 ```
 
 ### Why this is bad
+You have written a direct reference to the map. However, what if you want to move to an array store or the variable becomes abstracted into a class. In either of those cases, those last 3 lines will have to be updated.
+
+If that does not seem like a lot, imagine those were 20 lines and you wound up going back and forth a lot. Additionally, the ability for error increases each and every time you have to repeat yourself.
+
+This is not picking on `module.exports` definitions but it can be applied to some of those cases as well.
+
+
 
 Anti-pattern #2: Binding by iterating over an array
 ---------------------------------------------------
