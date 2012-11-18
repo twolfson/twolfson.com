@@ -100,12 +100,30 @@ bindingElts.forEach(function (bindingElt) {
 ```
 
 ### Why this is bad
-Does not allow for one-off cases.
-Introspection/stack traces for a single item are lost in the noise of others.
+It is harder to distinguish items and account for one-off cases. Additionally, if there is an issue inside of the `forEach` itself, the stack trace will not inform you which item failed. The stack trace will provide the line number of `addAlgorithm` but nothing about the specific `bindingElt`.
 
 ### How to make it better
+```js
+addAlgorithm('top-down', topDownFn);
+addAlgorithm('left-right', leftRightFn);
+addAlgorithm('diagonal', diagFn);
+```
+
+This makes each item have a nice line number attached to the stack trace which will lead to faster debugging.
 
 ### Bonus
+If there is a problem we need to debug, we can take the trouble-maker line and pass it through a one-off function first; isolating it from the noise of other bindings.
+
+```js
+function addAlgorithmDebug(name, fn) {
+  console.log('Adding ' + name + ' to algorithms');
+  algorithms[name] = fn;
+  console.log('Done adding ' + name + ' to algorithms');
+}
+addAlgorithm('top-down', topDownFn);
+addAlgorithmDebug('left-right', leftRightFn);
+addAlgorithm('diagonal', diagFn);
+```
 
 Anti-pattern #3: Defining a finite set of similar types
 -------------------------------------------------------
