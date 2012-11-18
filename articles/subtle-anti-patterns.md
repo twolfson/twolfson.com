@@ -80,9 +80,32 @@ function addAlgorithm(params) {
 }
 ```
 
-
 Anti-pattern #2: Binding by iterating over an array
 ---------------------------------------------------
+### The pattern
+```js
+var bindingElts = [{
+      'name': 'top-down',
+      'fn': topDownFn
+    }, {
+      'name': 'left-right',
+      'fn': leftRightFn
+    }, {
+      'name': 'diagonal',
+      'fn': diagFn
+    }];
+bindingElts.forEach(function (bindingElt) {
+  addAlgorithm(bindingElt.name, bindingElt.fn);
+});
+```
+
+### Why this is bad
+Does not allow for one-off cases.
+Introspection/stack traces for a single item are lost in the noise of others.
+
+### How to make it better
+
+### Bonus
 
 Anti-pattern #3: Defining a finite set of similar types
 -------------------------------------------------------
@@ -90,13 +113,83 @@ Anti-pattern #3: Defining a finite set of similar types
 ```js
 var algorithms = {
       'top-down' : topDownFn,
-      'left-right': leftRightFn;,
+      'left-right': leftRightFn,
       'diagonal' : diagFn
     };
 ```
 
 ### Why this is bad
+Limits others from adding new items to the set.
+No way to hook into addition to the set.
 
 
 ### How to make it better
 Observer pattern =D
+
+Anti-pattern #4: Composition of functions
+-----------------------------------------
+### The pattern
+```js
+function addSalt(str) {
+  return str + 'salt';
+}
+function addPepper(str) {
+  return str + 'pepper';
+}
+
+var pasta = 'pasta';
+pasta = addSalt(addPepper(pasta));
+```
+
+### Why this is bad
+Not quickly and easily readible.
+However, the issue arises out of adding new items
+
+```js
+function addSauce(str) {
+  return str + 'sauce';
+}
+function addRosemary(str) {
+  return str + 'rosemary';
+}
+
+var pasta = 'pasta';
+pasta = addSalt(addPepper(addSauce(addRosemary(pasta))));
+```
+
+Ah, that is nice and [Lispy](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) now. We could add line feeds or break it into separate lines but that is lipstick on a pig.
+
+The worst would be to add all 4 functions into a single function. Then, all one-off cases would eventually reach 16 functions `addSaltAndPepper`, `addSaltAndSauce`, &hellip;, `addSaltPepperSauceRosemary`. Clearly, that is not maintainable.
+
+### How to make it better
+If we step back, we can notice that we are constantly passing the same state into each function. Classes were **built** for this; functions are stateless and classes are stateful.
+
+If we move this into a class with a fluent interface, life becomes awesome.
+
+```js
+function Food(str) {
+  this.str = str;
+}
+Food.prototype = {
+  'addSalt': function () {
+    this.str += 'salt';
+    return this;
+  },
+  'addPepper': function () {
+    this.str += 'pepper';
+    return this;
+  },
+  'addSauce': function () {
+    this.str += 'sauce';
+    return this;
+  },
+  'addRosemary': function () {
+    this.str += 'rosemary';
+    return this;
+  }
+};
+var pasta = new Food('pasta');
+pasta.addSalt().addPepper().addSauce().addRosemary();
+```
+
+**Side note**: If you have been paying attention, you might notice the prototype is a finite set. In this case, we *could* create an `addCondiment` method but most prototypes are varied enough to avoid this circumstance.
