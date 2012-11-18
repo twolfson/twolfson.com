@@ -19,10 +19,10 @@ grunt.initConfig({
     all: {
       // Source files to concatenate and minify (also accepts a string and minimatch items)
       src: ['public/js/jquery.js', 'public/js/underscore.js'],
-&nbsp;
+
       // Destination for concatenated/minified JavaScript
       dest: 'dist/js/all.min.js',
-&nbsp;
+
       // Destination for sourcemap of minified JavaScript
       destMap: 'dist/js/all.js.map'
     }

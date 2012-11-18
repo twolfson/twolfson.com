@@ -210,9 +210,9 @@ pre .tex .formula{opacity:0.5;}
 .projectInfo{position:absolute;right:0;}
 .projectInfo a,.projectForks a{display:block;line-height:normal;margin-top:14px;}
 .competitionDesc{height:32px;line-height:32px;}
-.contactRow{margin-bottom:20px;}.contactRow >label{line-height:44px;}
-.contactRow >input{height:40px;}
-.contactMessageRow{margin-bottom:20px;}.contactMessageRow >label{line-height:84px;}
-.contactMessageRow >textarea{height:80px;}
+.contactRow{margin-bottom:20px;}.contactRow>label{line-height:44px;}
+.contactRow>input{height:40px;}
+.contactMessageRow{margin-bottom:20px;}.contactMessageRow>label{line-height:84px;}
+.contactMessageRow>textarea{height:80px;}
 .fillLine{display:block;width:100%;}
 .u_borderBox{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
