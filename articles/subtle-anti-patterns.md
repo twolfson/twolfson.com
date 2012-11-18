@@ -137,12 +137,45 @@ var algorithms = {
 ```
 
 ### Why this is bad
-Limits others from adding new items to the set.
-No way to hook into addition to the set.
-
+This one honestly isn't that bad but it *can* be improved. This pattern unintentionally limits others from adding new items to the set. Additionally, there is no easy way to hook into addition to the set.
 
 ### How to make it better
-Observer pattern =D
+As we have demonstrated in #1, we can use a function like `addAlgorithm`. Then, we can expose `addAlgorithm` to make setting up another one easily for others.
+
+```js
+var algorithms = {};
+function addAlgorithm(name, fn) {
+  algorithms[name] = fn;
+}
+addAlgorithm('top-down', topDownFn);
+addAlgorithm('left-right', leftRightFn);
+addAlgorithm('diagonal', diagFn);
+
+module.exports = {
+  'algorithms': algorithms,
+  'addAlgorithm': addAlgorithm
+};
+```
+
+### Bonus
+What you might not notice at first glance is that `addAlgorithm` is the [Observer pattern](http://en.wikipedia.org/wiki/Observer_pattern).
+
+```js
+AlgorithmKeeper.on('add', function (name, fn) {
+  algorithms[name] = fn;
+});
+AlgorithmKeeper.emit('add', 'top-down', topDownFn);
+AlgorithmKeeper.emit('add', 'left-right', leftRightFn);
+AlgorithmKeeper.emit('add', 'diagonal', diagFn);
+```
+
+However, we have placed sugar on top of it (and removed the need for a third party tracker). If we did go this route though, we could have other people listen and hook in to our algorithm addition events. **CRAZY AWESOME!!**
+
+```js
+AlgorithmKeeper.on('add', function (name) {
+  console.log('Someone is adding a new algorithm: ' + name);
+});
+```
 
 Anti-pattern #4: Composition of functions
 -----------------------------------------
