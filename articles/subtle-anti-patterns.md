@@ -59,45 +59,24 @@ AlgorithmKeeper.prototype = {
 ```
 
 ### Bonus
-Now that we are going through a function, we can add additional one-off logic if there is a need for it. Effectively leaving the base function alone; this is useful in case we topDownFn is actually from another repo.
-
+Now that we are going through a function, we can add additional one-off logic, effectively leaving the base function. This is great if the items you are adding are from a repo that you don't own.
 ```js
-function addAlgorithm(name, fn) {
-  // By default, save fn
-  var saveFn = fn;
-
-  // If we are adding top-down
-  if (name === 'top-down') {
-    saveFn = function () {
-      console.log('Top-down just got called!');
-      return fn.apply(this, arguments);
-    };
-  }
-
-  // Save the saveFn
-  algorithms[name] = saveFn;
-}
-```
-
-Another option is to add the ability for options during the `add` portion. While this doesn't apply to algorithms so well, something like templates is great.
-```js
-function addTemplate(params) {
+function addAlgorithm(params) {
   var name = params.name,
-      template = params.template,
-      options = params.options || {},
-      defaults = options.defaults,
-      saveFn = template;
+      algorithm = params.algorithm,
+      defaults = params.defaults || {},
+      saveFn = algorithm;
 
   // If defaults exist, override the saveFn to fallback to defaults
   if (defaults) {
-    saveFn = function (data) {
+    algorithm = function (data) {
       _.defaults(data, defaults);
-      return template(data);
+      return algorithm(data);
     };
   }
 
   // Save our saveFn
-  templates[name] = saveFn;
+  algorithms[name] = saveFn;
 }
 ```
 
