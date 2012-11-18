@@ -968,19 +968,19 @@ pre .tex .formula {
 .contactRow {
   margin-bottom: 20px;
 }
-.contactRow  > label {
+.contactRow > label {
   line-height: 44px;
 }
-.contactRow  > input {
+.contactRow > input {
   height: 40px;
 }
 .contactMessageRow {
   margin-bottom: 20px;
 }
-.contactMessageRow  > label {
+.contactMessageRow > label {
   line-height: 84px;
 }
-.contactMessageRow  > textarea {
+.contactMessageRow > textarea {
   height: 80px;
 }
 /* Line fill module */

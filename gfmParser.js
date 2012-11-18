@@ -1,2 +1,2 @@
-var gfm = require("github-flavored-markdown");
+var gfm = require("marked");
 module.exports = gfm.parse;

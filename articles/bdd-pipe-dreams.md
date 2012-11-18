@@ -51,7 +51,7 @@ module.exports = {
     // Attempt to navigate to the admin page
     var page = '/admin';
     window.location = page;
-&nbsp;
+
     // Return the page proper topic binding
     return page;
   },
