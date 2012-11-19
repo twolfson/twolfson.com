@@ -27,8 +27,6 @@ You have written a direct reference to the map. However, what if you want to mov
 
 If that does not seem like a lot, imagine those were 20 lines and you wound up going back and forth a lot. There is a large margin for error and debugging will also not be fun.
 
-This is not picking on `module.exports` definitions but it can be applied to some of those cases as well.
-
 ### How to make it better
 Your first thought is probably "objectify them into an array and iterate over that array". This is not bad for a first thought but as you will see in #2, it still does not fully hit the mark.
 
@@ -112,7 +110,7 @@ addAlgorithm('diagonal', diagFn);
 This makes each item have a nice line number attached to the stack trace which will lead to faster debugging.
 
 ### Bonus
-If there is a problem we need to debug, we can take the trouble-maker line and pass it through a one-off function first; isolating it from the noise of other bindings.
+If there is a problem we need to debug, we can take the trouble-maker line and pass it through a one-off function. This effectively isolates it from the noise of other bindings.
 
 ```js
 function addAlgorithmDebug(name, fn) {
@@ -137,7 +135,7 @@ var algorithms = {
 ```
 
 ### Why this is bad
-This one honestly isn't that bad but it *can* be improved. This pattern unintentionally limits others from adding new items to the set. Additionally, there is no easy way to hook into addition to the set.
+This one isn't that bad but it *can* be improved. This pattern unintentionally limits others from adding new items to the set. Another side effect is that there is no easy way to hook into when an addition occurs.
 
 ### How to make it better
 As we have demonstrated in #1, we can use a function like `addAlgorithm`. Then, we can expose `addAlgorithm` to make setting up another one easily for others.
@@ -169,7 +167,9 @@ AlgorithmKeeper.emit('add', 'left-right', leftRightFn);
 AlgorithmKeeper.emit('add', 'diagonal', diagFn);
 ```
 
-However, we have placed sugar on top of it (and removed the need for a third party tracker). If we did go this route though, we could have other people listen and hook in to our algorithm addition events. **CRAZY AWESOME!!**
+In previous examples, we have simplified it by removing the need for a third party tracker.
+
+However, if we did go this route, then we could have other people listen and hook in to our algorithm addition events. **CRAZY AWESOME!!**
 
 ```js
 AlgorithmKeeper.on('add', function (name) {
@@ -193,8 +193,7 @@ pasta = addSalt(addPepper(pasta));
 ```
 
 ### Why this is bad
-Not quickly and easily readible.
-However, the issue arises out of adding new items
+The code is not quickly and easily readible. However, the issue arises out of adding new items
 
 ```js
 function addSauce(str) {
@@ -210,7 +209,7 @@ pasta = addSalt(addPepper(addSauce(addRosemary(pasta))));
 
 Ah, that is nice and [Lispy](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) now. We could add line feeds or break it into separate lines but that is lipstick on a pig.
 
-The worst would be to add all 4 functions into a single function. Then, all one-off cases would eventually reach 16 functions `addSaltAndPepper`, `addSaltAndSauce`, &hellip;, `addSaltPepperSauceRosemary`. Clearly, that is not maintainable.
+The worst would be to add all 4 functions into a single function. Then, all functional combinations would reach 15 functions `addSaltAndPepper`, `addSaltAndSauce`, &hellip;, `addSaltPepperSauceRosemary` (excluding noop). Clearly, that is not maintainable.
 
 ### How to make it better
 If we step back, we can notice that we are constantly passing the same state into each function. Classes were **built** for this; functions are stateless and classes are stateful.
@@ -243,4 +242,4 @@ var pasta = new Food('pasta');
 pasta.addSalt().addPepper().addSauce().addRosemary();
 ```
 
-**Side note**: If you have been paying attention, you might notice the prototype is a finite set. In this case, we *could* create an `addCondiment` method but most prototypes are varied enough to avoid this circumstance.
+**Side note**: If you have been paying attention, you might notice the prototype is a finite set. I usually let prototypes slide by this rule. However, we could consider adding a method like `addCondiment` which would add a new method onto the prototype.
