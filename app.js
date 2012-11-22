@@ -100,6 +100,13 @@ app.post('/contact', function (req, res, next) {
   });
 });
 
+// If we are in development, add a kaleidoscope test page
+if (inDevelopment) {
+  app.get('/kaleido', function (req, res, next) {
+    res.render('kaleido', {'page': 'kaleido'});
+  });
+}
+
 // Expose a health page
 var pkg = require('./package'),
     pkgVersion = pkg.version;
