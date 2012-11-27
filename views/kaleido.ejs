@@ -193,23 +193,34 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
   // TODO The gridding system could be a repo too >_<
   (function () {
 
+  var engines = {};
+
   /**
    * @param {Object} params Parameters to generate the kaleidoscope with
    * @param {Number} params.rows
    * @param {Number} params.columns
    * @param {Number} params.canvas Canvas to draw on
+   * @param {String} [params.engine="snapshot"] Engine to capture screenshot via (e.g. snapshot, screenshot)
    */
   function Kaleidoscope(params) {
     // Localize params
     var canvas = params.canvas,
         rows = params.rows,
-        cols = params.columns;
+        cols = params.columns,
+        enginePref = params.engine || 'snapshot',
+        engine = engines[enginePref];
 
-    // Save rows, cols, and canvas for later use
+    // If the engine does not exist, throw an error
+    if (!engine) {
+      throw new Error('Kaleidoscope engine (' + enginePref + ') does not exist. You can add a new engine via Kaleidoscope.addEngine(name, fn);');
+    }
+
+    // Save rows, cols, canvas, and engine for later use
     this.rows = rows;
     this.columns = cols;
     this.canvas = canvas;
     this.context = canvas.getContext('2d');
+    this.engine = engine;
 
     // Get the dimensions of the canvas
     var canvasDims = getComputedStyle(canvas),
@@ -232,8 +243,9 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
      */
     'draw': function (position, options) {
       // Create an image
-      var that = this;
-      snapshot(options, function (err, img) {
+      var that = this,
+          engine = this.engine;
+      engine(options, function (err, img) {
         // If there is an error, log it
         if (err) { return console.error(err); }
 
@@ -248,6 +260,50 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
     }
   };
 
+  // Set up helpers for loading in engines
+  function addEngine(name, fn) {
+    engines[name] = fn;
+  }
+  Kaleidoscope.addEngine = addEngine;
+
+  // Add in snapshot and screenshot
+  // REFERENCE: options = String(url)|object(containing url, width, height)
+  addEngine('snapshot', snapshot);
+  addEngine('server', function (options, cb) {
+    // If options is a string
+    var screenshotUrl = 'http://localhost:9000',
+        url = options;
+
+    // If options is an object, extract url from it
+    if (typeof options === 'object') {
+      url = options.url;
+    }
+
+    // TODO: Resolve absolute vs relative URLs
+    // TODO: That should probably be done by kaleidoscope (OR EVEN BETTER ANOTHER MODULE -- I think I semi-dealt with this in Resource-Collector but I am sure node-path would do a much better job)
+    url = 'localhost:8080' + url;
+    url = screenshotUrl + '/' + url;
+
+    // Create an image
+    var img = new Image();
+    img.src = url;
+
+    // TODO: Deal with viewport sizing and whatnot
+
+    // When it completes loading, callback with it
+    img.onload = function () {
+      cb(null, img);
+    };
+
+    // If there is an error, callback with it
+    img.onerror = function (err) {
+      cb(err);
+    }
+  });
+
+  // Expose Kaleidoscope to the window scope
+  window.Kaleidoscope = Kaleidoscope;
+
   // Set up the canvas dimensions
   var canvas = document.getElementById('canvas'),
       innerWidth = window.innerWidth,
@@ -256,17 +312,17 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
   canvas.height = window.innerHeight - 10;
 
   // Create a new kaleidoscope
-  var kal = new Kaleidoscope({'rows': 2, 'columns': 3, 'canvas': canvas});
+  var kal = new Kaleidoscope({'rows': 2, 'columns': 3, 'canvas': canvas, 'engine': 'server'});
 
   // Draw out the upper row
   kal.draw({'row': 0, 'column': 0}, '/');
-  // kal.draw({'row': 0, 'column': 1}, '/2012-11-17-subtle-anti-patterns');
-  // kal.draw({'row': 0, 'column': 2}, '/projects');
+  kal.draw({'row': 0, 'column': 1}, '/2012-11-17-subtle-anti-patterns');
+  kal.draw({'row': 0, 'column': 2}, '/projects');
 
-  // // and lower row
-  // kal.draw({'row': 1, 'column': 0}, '/contact');
-  // kal.draw({'row': 1, 'column': 0}, '/contact?test=fail');
-  // kal.draw({'row': 0, 'column': 2}, '/404');
+  // and lower row
+  kal.draw({'row': 1, 'column': 0}, '/contact');
+  kal.draw({'row': 1, 'column': 0}, '/contact?test=fail');
+  kal.draw({'row': 0, 'column': 2}, '/404');
 
   }());
 </script>
