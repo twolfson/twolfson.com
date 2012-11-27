@@ -65,8 +65,9 @@ function updateStats() {
     }, 1000);
   }
 }
-setInterval(updateStats, everyHour);
-process.nextTick(updateStats);
+console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
+// setInterval(updateStats, everyHour);
+// process.nextTick(updateStats);
 
 module.exports = {
   "scripts": scripts,
