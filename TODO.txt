@@ -8,4 +8,42 @@ trunk8
 
 consistent article date formatter...
 
+CSS issues
+==========
+All
+---
+Javascript developer no longer top aligned properly
+
+Homepage
+--------
+Truncation got screwed up
+Date is at the top
+Need to hide h1's and such from sumaries
+
+Blogpost
+--------
+Date is at the top
+
+Projects
+--------
+Text overflowing
+Verify sprites on scripts line are still there
+Sprite alignment under Competitions is fucked
+
+Contact
+-------
+There is an hr and it is showing??
+Fix vertical alignment of contact fields
+Add vertical margin to Contact button
+
+Contact (fail)
+--------------
+Was the text always so big?
+
+404
+---
+The page is not being filled. Fix that.
+Shot in the dark: there is an unclosed tag
+
+
 do that cool background thing?
