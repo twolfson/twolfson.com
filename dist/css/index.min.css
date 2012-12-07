@@ -443,5 +443,10 @@ pre .diff .change{background:#0086b3;}
 pre .chunk{color:#aaaaaa;}
 pre .tex .formula{opacity:0.5;}
 .fakeLink:hover,.fakeLink.isSelected{padding-bottom:2px;border-bottom:1px solid #436dc4;}
+.text-truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.text-break{word-break:break-all;word-break:break-word;word-wrap:break-word;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
 .fillLine{display:block;width:100%;}
 .u_borderBox{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
