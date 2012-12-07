@@ -1,5 +1,12 @@
 <!doctype>
 <html>
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
 <body>
 <!-- START OF SNAPSHOT WITH DEPS -->
 <script>
@@ -262,7 +269,7 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
             zoomRatio = Math.min(zoomWidthRatio, zoomHeightRatio);
 
         // If we are below the idealZoom, adjust our zoom
-        var idealZoom = 2,
+        var idealZoom = 2.4,
             zoom = Math.min(zoomRatio, idealZoom);
 
         // Set up our zoom proportions
