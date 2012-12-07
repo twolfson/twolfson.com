@@ -249,15 +249,24 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
         // If there is an error, log it
         if (err) { return console.error(err); }
 
-        // Otherwise, draw it at the location
+        // Otherwise, calculate the position to draw the image
         var row = position.row,
             col = position.column,
             context = that.context,
             width = that.unitWidth,
             height = that.unitHeight;
 
-        var zoom = 2;
-        context.drawImage(img, 0, 0, width * zoom, height * zoom, width * col, height * row, width, height);
+        // Set up our zoom
+        var zoom = 2,
+            zoomWidth = width * zoom,
+            zoomHeight = height * zoom;
+
+        // Normalize down zoomWidth and height
+        zoomWidth = Math.min(zoomWidth, img.width);
+        zoomHeight = Math.min(zoomHeight, img.height);
+
+        // Draw the image
+        context.drawImage(img, 0, 0, zoomWidth, zoomHeight, width * col, height * row, width, height);
       });
     }
   };
