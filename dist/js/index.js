@@ -621,5 +621,5 @@ return this.each(function(){var $this=$(this),$trunkata=$this.data('_trunkata');
 return trunkataProto[method].apply($trunkata,args);});}
 $.fn.trunkata=trunkataEach;}(jQuery));
 
-$(function(){var $preArr=$('pre');$preArr.each(function(){var pre=this;if(pre.parentNode){hljs.highlightBlock(pre);}});var $truncateArr=$('.truncate');$truncateArr.each(function(){var $this=$(this);$this.trunkata({'lines':1});});});
+$(function(){var $preArr=$('pre');$preArr.each(function(){var pre=this;if(pre.parentNode){hljs.highlightBlock(pre);}});});
 //@ sourceMappingURL=index.js.map

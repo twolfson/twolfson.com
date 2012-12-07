@@ -26,13 +26,13 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      less: {
+      css: {
         files: 'public/css/**/*.less',
-        tasks: 'less'
+        tasks: 'css'
       },
-      min: {
+      js: {
         files: 'public/js/**/*.js',
-        tasks: 'min'
+        tasks: 'js'
       }
     }
   });
@@ -51,6 +51,10 @@ module.exports = function (grunt) {
     setTimeout(done, 2000);
   });
 
+  // Register css and js tasks
+  grunt.registerTask('js', 'jsmin-sourcemap');
+  grunt.registerTask('css', 'less');
+
   // Set up default action
-  grunt.registerTask('default', 'lint less jsmin-sourcemap watch');
+  grunt.registerTask('default', 'lint css js watch');
 };
