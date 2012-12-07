@@ -256,14 +256,18 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
             width = that.unitWidth,
             height = that.unitHeight;
 
-        // Set up our zoom
-        var zoom = 2,
-            zoomWidth = width * zoom,
-            zoomHeight = height * zoom;
+        // Determine the lowest common zoom ratio
+        var zoomWidthRatio = img.width / width,
+            zoomHeightRatio = img.height / height,
+            zoomRatio = Math.min(zoomWidthRatio, zoomHeightRatio);
 
-        // Normalize down zoomWidth and height
-        zoomWidth = Math.min(zoomWidth, img.width);
-        zoomHeight = Math.min(zoomHeight, img.height);
+        // If we are below the idealZoom, adjust our zoom
+        var idealZoom = 2,
+            zoom = Math.min(zoomRatio, idealZoom);
+
+        // Set up our zoom proportions
+        var zoomWidth = width * zoom,
+            zoomHeight = height * zoom;
 
         // Draw the image
         context.drawImage(img, 0, 0, zoomWidth, zoomHeight, width * col, height * row, width, height);
