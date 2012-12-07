@@ -255,7 +255,9 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
             context = that.context,
             width = that.unitWidth,
             height = that.unitHeight;
-        context.drawImage(img, 0, 0, width, height, width * col, height * row, width, height);
+
+        var zoom = 2;
+        context.drawImage(img, 0, 0, width * zoom, height * zoom, width * col, height * row, width, height);
       });
     }
   };
