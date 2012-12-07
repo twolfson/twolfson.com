@@ -1,0 +1,25 @@
+<script src="public/js/watcher.js"></script>
+<script src="public/js/collector.js"></script>
+<script>
+    (function () {
+      var watcher = new FileWatcher(),
+          resources = ResourceCollector.collect();
+      watcher.addListener(function (url) {
+        // If the updated item is CSS
+        if (url.indexOf('css') !== -1) {
+          // Grab all of the links
+          [].slice.call(document.querySelectorAll('link')).forEach(function (link) {
+            // If the link's href matches, update it
+            var href = link.href;
+            if (href.indexOf(url) !== -1) {
+              link.href = href + (href.indexOf('?') === -1 ? '?' : '') + 1;
+            }
+          });
+        } else {
+        // Otherwise, reload
+          location.reload();
+        }
+      });
+      watcher.watch(resources, 8);
+    }());
+</script>

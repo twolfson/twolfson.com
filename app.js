@@ -103,8 +103,7 @@ app.post('/contact', function (req, res, next) {
 // If we are in development, add a kaleidoscope test page
 if (inDevelopment) {
   app.get('/kaleido', function (req, res, next) {
-    var i = require('fs').readFileSync('views/kaleido.ejs', 'utf8');
-    res.send(i, {'Content-Type': 'text/html'});
+    res.render('kaleido', {layout: false});
   });
 }
 
