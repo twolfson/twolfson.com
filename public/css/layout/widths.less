@@ -7,7 +7,7 @@
 // Attribution to Twitter Bootstrap https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 .gridify (@gridColumnWidth, @gridGutterWidth) {
   .spanX (@index) when (@index > 0) {
-    (~".l_span@{index}") { .span(@index); }
+    (~".span@{index}") { .span(@index); }
     .spanX(@index - 1);
   }
   .spanX (0) {}
@@ -26,11 +26,11 @@
     width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
   }
 
-  .l_row {
+  .row {
     .clearfix();
   }
 
-  .l_rowNested {
+  .rowNested {
     margin-left: @gridGutterWidth * -1;
   }
 
@@ -39,24 +39,24 @@
   .offsetX (@gridColumns);
 }
 
-.l_span,
-.l_span1,
-.l_span2,
-.l_span3,
-.l_span4,
-.l_span5,
-.l_span6,
-.l_span7,
-.l_span8,
-.l_span9,
-.l_span10,
-.l_span11,
-.l_span12 {
+.span,
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
   float: left;
   margin-left: @wellWidth;
 }
 
-.l_spanRight {
+.spanRight {
   float: right;
   margin-right: @wellWidth;
 }

@@ -15,7 +15,7 @@
       <%
         scripts.forEach(function (item) {
       %>
-      <div class="l_row superComfyText <%=getRowClass()%>">
+      <div class="row superComfyText <%=getRowClass()%>">
         <%- partial('projects/script', item) %>
       </div>
       <%
@@ -38,7 +38,7 @@
               view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
-          <div class="l_row <%=comfyRowKlass%> <%=getRowClass()%>">
+          <div class="row <%=comfyRowKlass%> <%=getRowClass()%>">
         <% } %>
             <%- partial(view, item) %>
         <% if (isRowEnd) { %>
@@ -55,7 +55,7 @@
       <%
         contributions.forEach(function (item) {
       %>
-      <div class="l_row superComfyText <%=getRowClass()%>">
+      <div class="row superComfyText <%=getRowClass()%>">
         <%- partial('projects/script', item) %>
       </div>
       <%

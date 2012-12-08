@@ -248,84 +248,84 @@ body {
 .layoutFlipped {
   text-align: right;
 }
-.l_span,
-.l_span1,
-.l_span2,
-.l_span3,
-.l_span4,
-.l_span5,
-.l_span6,
-.l_span7,
-.l_span8,
-.l_span9,
-.l_span10,
-.l_span11,
-.l_span12 {
+.span,
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
   float: left;
   margin-left: 20px;
 }
-.l_spanRight {
+.spanRight {
   float: right;
   margin-right: 20px;
 }
-.l_row {
+.row {
   *zoom: 1;
 }
-.l_row:before,
-.l_row:after {
+.row:before,
+.row:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.l_row:after {
+.row:after {
   clear: both;
 }
-.l_row:before,
-.l_row:after {
+.row:before,
+.row:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.l_row:after {
+.row:after {
   clear: both;
 }
-.l_rowNested {
+.rowNested {
   margin-left: -20px;
 }
-.l_span12 {
+.span12 {
   width: 940px;
 }
-.l_span11 {
+.span11 {
   width: 860px;
 }
-.l_span10 {
+.span10 {
   width: 780px;
 }
-.l_span9 {
+.span9 {
   width: 700px;
 }
-.l_span8 {
+.span8 {
   width: 620px;
 }
-.l_span7 {
+.span7 {
   width: 540px;
 }
-.l_span6 {
+.span6 {
   width: 460px;
 }
-.l_span5 {
+.span5 {
   width: 380px;
 }
-.l_span4 {
+.span4 {
   width: 300px;
 }
-.l_span3 {
+.span3 {
   width: 220px;
 }
-.l_span2 {
+.span2 {
   width: 140px;
 }
-.l_span1 {
+.span1 {
   width: 60px;
 }
 .l_offset12 {

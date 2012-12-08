@@ -46,8 +46,8 @@
       <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
       <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
     </header>
-    <nav id="globalNav" class="l_row themeEvenRow themeBorder comfyText">
-      <ul class="navList l_spanRight">
+    <nav id="globalNav" class="row themeEvenRow themeBorder comfyText">
+      <ul class="navList spanRight">
       <% var navLinks = [
               { "name": "projects", "href": "projects" },
               { "name": "blog", "href": "/" },
@@ -57,7 +57,7 @@
           var navName = navLink.name,
               iSelected = page === navName ? "isSelected" : "";
         %>
-        <li class="navListItem l_span">
+        <li class="navListItem l__span">
           <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
         </li>
       <% }); %>

@@ -1,10 +1,10 @@
 <section id="articleSection">
   <article class="post">
-    <header class="l_row">
-      <div class="l_span">
+    <header class="row">
+      <div class="l__span">
         <h1 class="headerMega superComfyText"><%= title %></h1>
       </div>
-      <div class="l_spanRight date blogpostDate">
+      <div class="l__spanRight date blogpostDate">
         <%
           var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
               day = rawDate.getDate() + "";
@@ -18,11 +18,11 @@
       </div>
     </header>
 
-    <section class="content l_row"><div class="l_span12 blogpost">
+    <section class="content row"><div class="span12 blogpost">
       <%- content %>
     </div></section>
 
-    <section class="comments l_row"><div class="l_span12">
+    <section class="comments row"><div class="span12">
       <% if (config.disqus) { %>
         <div id="disqus_thread"></div>
         <script type="text/javascript" src="http://disqus.com/forums/<%= config.disqus %>/embed.js"></script>

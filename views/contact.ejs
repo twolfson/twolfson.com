@@ -1,6 +1,6 @@
 <section id="contactSection">
-  <div class="l_row">
-    <form id="contactForm" class="l_span8" method="POST" action="contact">
+  <div class="row">
+    <form id="contactForm" class="span8" method="POST" action="contact">
       <fieldset id="contactFieldset" class="fillLine">
         <legend class="superComfyText">Contact Details</legend>
         <%
@@ -8,17 +8,17 @@
           // If there was no submission attempt
           if (status === undefined) {
         %>
-        <div class="contactRow l_row l_rowNested">
-          <label for="name" class="l_span2 layoutFlipped" required="required">Name:</label>
-          <input id="name" name="name" type="text" class="themeOddRow themeBorder l_span5" />
+        <div class="contactRow row rowNested">
+          <label for="name" class="span2 layoutFlipped" required="required">Name:</label>
+          <input id="name" name="name" type="text" class="themeOddRow themeBorder span5" />
         </div>
-        <div class="contactRow l_row l_rowNested">
-          <label for="info" class="l_span2 layoutFlipped" required="required">Contact Info:</label>
-          <input id="info" name="info" type="text" class="themeEvenRow themeBorder l_span5" />
+        <div class="contactRow row rowNested">
+          <label for="info" class="span2 layoutFlipped" required="required">Contact Info:</label>
+          <input id="info" name="info" type="text" class="themeEvenRow themeBorder span5" />
         </div>
-        <div class="contactRow contactMessageRow l_row l_rowNested">
-          <label for="message" class="l_span2 layoutFlipped" required="required">Message:</label>
-          <textarea id="message" name="message" type="text" class="themeOddRow themeBorder l_span5"></textarea>
+        <div class="contactRow contactMessageRow row rowNested">
+          <label for="message" class="span2 layoutFlipped" required="required">Message:</label>
+          <textarea id="message" name="message" type="text" class="themeOddRow themeBorder span5"></textarea>
         </div>
         <div class="contactRow layoutCentered">
           <button type="submit" id="submitButton" class="themeEvenRow themeBorder btn btn-xlarge">Contact Todd</button>
@@ -45,7 +45,7 @@
         %>
       </fieldset>
     </form>
-    <aside id="picContainer" class="l_span4 comfyRowTop">
+    <aside id="picContainer" class="span4 comfyRowTop">
       <figure id="picFigure">
         <a href="http://www.aaronwax.com/">
           <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" />

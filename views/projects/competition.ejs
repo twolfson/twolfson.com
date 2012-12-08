@@ -2,34 +2,34 @@
 var type,
     award,
     isCssOff = type === 'cssOff',
-    headerWidth = isCssOff ? "l_span2" : "l_span4";
+    headerWidth = isCssOff ? "span2" : "span4";
 %>
-<div class="l_span6">
-  <div class="l_row l_rowNested superComfyText">
+<div class="span6">
+  <div class="row rowNested superComfyText">
     <div class="<%=headerWidth%>">
       <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=name%></h3></a>
     </div>
     <% if (isCssOff) { %>
-      <div class="l_span4 layoutFlipped">
+      <div class="span4 layoutFlipped">
         <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=score%></span>
       </div>
     <% } else { %>
-      <div class="l_span1 layoutFlipped projectInfoOuter">
+      <div class="span1 layoutFlipped projectInfoOuter">
         <div class="projectInfo">
           <span class="eyeIco" title="Views"></span><span class="viewCount"><%=views%></span>
         </div>
       &nbsp;
       </div>
-      <div class="l_span1 layoutFlipped">
+      <div class="span1 layoutFlipped">
         <span class="heartIco" title="Likes"></span><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
   </div>
-  <div class="l_row l_rowNested">
-    <div class="l_span4 competitionDesc">
+  <div class="row rowNested">
+    <div class="span4 competitionDesc">
       <%=competition%>
     </div>
-    <div class="l_span2 layoutFlipped">
+    <div class="span2 layoutFlipped">
       <% if (isCssOff) { %>
         <span class="ribbonIco" title="Rank"></span><span class="rank"><%=rank%></span>
       <% } else if (award) { %>
