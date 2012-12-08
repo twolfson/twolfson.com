@@ -4,12 +4,12 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
 <section id="articles">
   <%
     articles.forEach(function (article, i) {
-      var rowKlass = i % 2 === 0 ? "themeOddRow" : "themeEvenRow";
+      var rowKlass = i % 2 === 0 ? "odd-row" : "even-row";
   %>
-    <article class="post <%=rowKlass%> semiComfyRow">
+    <article class="post <%=rowKlass%> theme">
       <header class="row">
         <div class="span">
-          <h2 class="headerKilo superComfyText"><a href="<%= article.url %>"><%= article.title %></a></h2>
+          <h2 class="headerKilo"><a href="<%= article.url %>"><%= article.title %></a></h2>
         </div>
         <div class="spanRight">
         <%
@@ -20,7 +20,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
           }
           var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
         %>
-          <span class="date superComfyText fluffToHeaderKilo"><%= articleDate %></span>
+          <span class="date"><%= articleDate %></span>
         </div>
       </header>
       <section class="content row"><div class="span12 text-truncate">

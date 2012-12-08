@@ -4,18 +4,18 @@
       <%
         var _rowCounter = 1;
         function getRowClass() {
-          var klass = _rowCounter % 2 ? "themeOddRow" : "themeEvenRow";
+          var klass = _rowCounter % 2 ? "odd-row" : "even-row";
           _rowCounter += 1;
           return klass;
         }
       %>
       <div>
-        <h2 class="headerMega layout-center superComfyText <%=getRowClass()%>">Scripts</h2>
+        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Scripts</h2>
       </div>
       <%
         scripts.forEach(function (item) {
       %>
-      <div class="row superComfyText <%=getRowClass()%>">
+      <div class="row superComfyText <%=getRowClass()%> theme">
         <%- partial('projects/script', item) %>
       </div>
       <%
@@ -24,7 +24,7 @@
     </div>
     <div>
       <div>
-        <h2 class="headerMega layout-center superComfyText superComfyRowTop <%=getRowClass()%>">Competitions</h2>
+        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Competitions</h2>
       </div>
       <%
         var lenMinusOne = competitions.length - 1;
@@ -38,7 +38,7 @@
               view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
-          <div class="row <%=comfyRowKlass%> <%=getRowClass()%>">
+          <div class="row <%=comfyRowKlass%> <%=getRowClass()%> theme">
         <% } %>
             <%- partial(view, item) %>
         <% if (isRowEnd) { %>
@@ -50,12 +50,12 @@
     </div>
     <div>
       <div>
-        <h2 class="headerMega layout-center superComfyText superComfyRowTop <%=getRowClass()%>">Contributions</h2>
+        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Contributions</h2>
       </div>
       <%
         contributions.forEach(function (item) {
       %>
-      <div class="row superComfyText <%=getRowClass()%>">
+      <div class="row <%=getRowClass()%> theme">
         <%- partial('projects/script', item) %>
       </div>
       <%

@@ -2,7 +2,6 @@ Use media queries?
 Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
 
-Nuke themeEvenRow and move straight to CSS mixins
 trunk8
 
 consistent article date formatter...
@@ -46,13 +45,15 @@ Shot in the dark: there is an unclosed tag
 
 PROBLEMS
 --------
-Rename all themeBorder themeEvenRow to odd-row and theme.border
+
 
 Switch over to spritesmith
 
 layout navListItem.span
 article span10 h1, span2 -> should truncate title if too long but also show via title=""
 pages/index header.row span -> should truncate title if too long but also show via title=""
+
+Remove all legacy superComfyRow comfyRow comfyText
 
 
 do that cool background thing?
