@@ -33,8 +33,8 @@ address{display:inline;}
 *{margin:0;padding:0;}
 html,body{height:100%;}
 #global-wrapper{min-height:100%;}
-#global-main{overflow:auto;padding-bottom:180px;}
-#global-footer{position:relative;margin-top:-180px;height:180px;clear:both;}
+#global-main{overflow:auto;padding-bottom:bottomHeight;}
+#global-footer{position:relative;margin-top:-80px;height:80px;clear:both;}
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 body{background:url('/public/images/white_plaster.png');}
 .spriteIco,.githubIco,.twitterIco,.rssIco,.purpleStarIco,.purpleForkIco,.eyeIco,.heartIco,.ribbonIco,.barLinesIco{background:url(../images/sprites.png) no-repeat;}
@@ -52,7 +52,7 @@ body{background:url('/public/images/white_plaster.png');}
 .barLinesIco{background-position:0 -400px;width:32px;height:32px;}
 #global-wrapper{min-height:100%;background:#b9cfff;box-shadow:0 0 20px #000000;position:relative;}
 .layoutNormal{text-align:left;}
-.layoutCentered{text-align:center;}
+.layout-center{text-align:center;}
 .layoutFlipped{text-align:right;}
 .span,.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{float:left;margin-left:20px;}
 .spanRight{float:right;margin-right:20px;}

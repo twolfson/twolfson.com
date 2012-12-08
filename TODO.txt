@@ -3,7 +3,6 @@ Pre-render all pages and send static content from memory
 Start swapping in some pretty fonts [all headers, esp. portfolio items]
 
 Nuke themeEvenRow and move straight to CSS mixins
-Nuke layoutCentered
 trunk8
 
 consistent article date formatter...

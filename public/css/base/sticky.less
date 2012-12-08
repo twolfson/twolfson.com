@@ -23,15 +23,16 @@ body {
   min-height: 100%;
 }
 
+@bottomHeight: 80px;
 #global-main {
   overflow: auto;
-  padding-bottom: 180px; /* must be same height as the footer */
+  padding-bottom: bottomHeight; /* must be same height as the footer */
 }
 
 #global-footer {
   position: relative;
-  margin-top: -180px; /* negative value of footer height */
-  height: 180px;
+  margin-top: -@bottomHeight; /* negative value of footer height */
+  height: @bottomHeight;
   clear: both;
 }
 

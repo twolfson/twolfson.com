@@ -179,16 +179,16 @@ body {
 }
 #global-main {
   overflow: auto;
-  padding-bottom: 180px;
+  padding-bottom: bottomHeight;
   /* must be same height as the footer */
 
 }
 #global-footer {
   position: relative;
-  margin-top: -180px;
+  margin-top: -80px;
   /* negative value of footer height */
 
-  height: 180px;
+  height: 80px;
   clear: both;
 }
 /*Opera Fix*/
@@ -298,7 +298,7 @@ body {
 .layoutNormal {
   text-align: left;
 }
-.layoutCentered {
+.layout-center {
   text-align: center;
 }
 .layoutFlipped {

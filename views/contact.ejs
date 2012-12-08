@@ -20,14 +20,14 @@
           <label for="message" class="span2 layoutFlipped" required="required">Message:</label>
           <textarea id="message" name="message" type="text" class="themeOddRow themeBorder span5"></textarea>
         </div>
-        <div class="contactRow layoutCentered">
+        <div class="contactRow layout-center">
           <button type="submit" id="submitButton" class="themeEvenRow themeBorder btn btn-xlarge">Contact Todd</button>
         </div>
         <%
           } else if (status === true) {
           // Otherwise, if the submission was a success
         %>
-          <div class="layoutCentered semiComfyText">
+          <div class="layout-center semiComfyText">
             Thank you for contacting me!
             <br/>
             I will respond to your request within 48 hours. Have a nice day!
@@ -35,7 +35,7 @@
         <%
           } else {
         %>
-          <div class="layoutCentered semiComfyText">
+          <div class="layout-center semiComfyText">
             Ouch! An error seems to have occurred.
             <br/>
             <a href="javascript:location.reload();">Could you please try that again?</a>
@@ -50,7 +50,7 @@
         <a href="http://www.aaronwax.com/">
           <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" />
           <figcaption>
-            <div class="comfyText layoutCentered">
+            <div class="comfyText layout-center">
               Photograph taken by A.J. Wax
             </div>
           </figcaption>
