@@ -10,17 +10,17 @@ var type,
       <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=name%></h3></a>
     </div>
     <% if (isCssOff) { %>
-      <div class="span4 layoutFlipped">
+      <div class="span4 layout-flipped">
         <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=score%></span>
       </div>
     <% } else { %>
-      <div class="span1 layoutFlipped projectInfoOuter">
+      <div class="span1 layout-flipped projectInfoOuter">
         <div class="projectInfo">
           <span class="eyeIco" title="Views"></span><span class="viewCount"><%=views%></span>
         </div>
       &nbsp;
       </div>
-      <div class="span1 layoutFlipped">
+      <div class="span1 layout-flipped">
         <span class="heartIco" title="Likes"></span><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
@@ -29,7 +29,7 @@ var type,
     <div class="span4 competitionDesc">
       <%=competition%>
     </div>
-    <div class="span2 layoutFlipped">
+    <div class="span2 layout-flipped">
       <% if (isCssOff) { %>
         <span class="ribbonIco" title="Rank"></span><span class="rank"><%=rank%></span>
       <% } else if (award) { %>

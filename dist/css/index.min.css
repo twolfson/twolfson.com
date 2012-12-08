@@ -51,9 +51,9 @@ body{background:url('/public/images/white_plaster.png');}
 .ribbonIco{background-position:0 -350px;width:32px;height:32px;}
 .barLinesIco{background-position:0 -400px;width:32px;height:32px;}
 #global-wrapper{min-height:100%;background:#b9cfff;box-shadow:0 0 20px #000000;position:relative;}
-.layoutNormal{text-align:left;}
+.layout-normal{text-align:left;}
 .layout-center{text-align:center;}
-.layoutFlipped{text-align:right;}
+.layout-flipped{text-align:right;}
 .span,.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{float:left;margin-left:20px;}
 .spanRight{float:right;margin-right:20px;}
 .row{*zoom:1;}.row:before,.row:after{display:table;content:"";line-height:0;}

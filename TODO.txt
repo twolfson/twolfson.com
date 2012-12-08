@@ -50,6 +50,9 @@ Rename all themeBorder themeEvenRow to odd-row and theme.border
 
 Switch over to spritesmith
 
-Deal with remaining l_span items
+layout navListItem.span
+article span10 h1, span2 -> should truncate title if too long but also show via title=""
+pages/index header.row span -> should truncate title if too long but also show via title=""
+
 
 do that cool background thing?
