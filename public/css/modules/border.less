@@ -1,34 +1,28 @@
 /* Border class */
-.themeBorder {
+.border {
   border-width: 1px;
   border-style: solid;
   border-color: #000;
 }
 
 /* Increased border width for inputs */
-input.themeBorder,
-textarea.themeBorder,
-button.themeBorder {
+input.border,
+textarea.border,
+button.border {
   border-width: 2px;
 }
 
 /* Row striping with border class overload */
-.themeOddRow {
+.odd-row.theme {
   background: @darkBg;
 }
-.themeOddRow.themeBorder {
+.odd-row.theme.border {
   border-color: @darkBorder;
 }
 
-.themeEvenRow {
+.even-row.theme {
   background: @lightBg;
 }
-.themeEvenRow.themeBorder {
+.even-row.theme.border {
   border-color: @lightBorder;
-}
-
-/* TODO: Fix this */
-.themeEvenRow .contentLine:first-child,
-.themeOddRow .contentLine:first-child {
-  padding-top: 8px;
 }

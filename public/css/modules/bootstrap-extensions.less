@@ -1,0 +1,15 @@
+/* Button classes */
+// Attribution to http://stackoverflow.com/questions/13112200/resizing-buttons-in-twitter-boostrap
+// TODO: Use proper variables from buttons.less and variables.less
+@paddingXLarge: 18px 28px;
+@fontSizeXLarge: 22px;
+@borderRadiusXLarge: 8px;
+.btn-xlarge {
+  padding: @paddingXLarge;
+  font-size: @fontSizeXLarge;
+  .border-radius(@borderRadiusXLarge);
+}
+.btn-xlarge [class^="icon-"],
+.btn-xlarge [class*=" icon-"] {
+  margin-top: 4px;
+}

@@ -45,5 +45,11 @@ Was the text always so big?
 The page is not being filled. Fix that.
 Shot in the dark: there is an unclosed tag
 
+PROBLEMS
+--------
+Rename all themeBorder themeEvenRow to odd-row and theme.border
+
+Move buttonBig onto btn-xlarge
+
 
 do that cool background thing?
