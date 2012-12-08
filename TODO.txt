@@ -49,7 +49,6 @@ PROBLEMS
 --------
 Rename all themeBorder themeEvenRow to odd-row and theme.border
 
-Move buttonBig onto btn-xlarge
-
+Switch over to spritesmith
 
 do that cool background thing?
