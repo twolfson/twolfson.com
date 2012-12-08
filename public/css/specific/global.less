@@ -1,8 +1,8 @@
 @bottomHeight: 80px;
 
-#globalWrapper {
-  margin: 0 auto;
-  width: @fullWidth + @wellWidth;
+#global-wrapper {
+  // margin: 0 auto;
+  // width: @fullWidth + @wellWidth;
   min-height: 100%;
   background: @darkBg;
   /* TODO: Cross-browser me */
@@ -12,73 +12,73 @@
   position: relative;
 }
 
-#globalWrapper > section {
-  padding-bottom: @bottomHeight; /* Same as .footerSection height + padding-top + border-top-width */
-}
+// #globalWrapper > section {
+//   padding-bottom: @bottomHeight; /* Same as .footerSection height + padding-top + border-top-width */
+// }
 
-#globalNav {
-  border-width: 3px 0;
-}
+// #globalNav {
+//   border-width: 3px 0;
+// }
 
-#globalFooter {
-  position: absolute;
-  bottom: 0;
+// #globalFooter {
+//   position: absolute;
+//   bottom: 0;
 
-  height: @bottomHeight - 15px - 1px;
-  border-top: 1px solid #000;
-  padding-top: 8px;
+//   height: @bottomHeight - 15px - 1px;
+//   border-top: 1px solid #000;
+//   padding-top: 8px;
 
-  /* TODO: Fix padding/margin */
-  margin: 0 15%;
-  width: 70%;
+//   /* TODO: Fix padding/margin */
+//   margin: 0 15%;
+//   width: 70%;
 
-  .u_borderBox;
+//   .u_borderBox;
 
-  text-align: center;
-}
+//   text-align: center;
+// }
 
-/* RSS link */
-#globalHeader {
-  position: relative;
-}
+// /* RSS link */
+// #globalHeader {
+//   position: relative;
+// }
 
-.globalHeaderHeader,
-.globalHeaderSubHeader {
-  line-height: 60px;
-}
+// .globalHeaderHeader,
+// .globalHeaderSubHeader {
+//   line-height: 60px;
+// }
 
-.globalHeaderHeader {
-  font-size: 2.3em;
-}
+// .globalHeaderHeader {
+//   font-size: 2.3em;
+// }
 
-.globalHeaderSubHeader {
-  font-size: 1.4em;
-  margin-top: 4px;
-}
+// .globalHeaderSubHeader {
+//   font-size: 1.4em;
+//   margin-top: 4px;
+// }
 
-@linkWidth: 48px;
-.twitterLink,
-.githubLink,
-.rssLink {
-  .spriteIco;
-  text-indent: -9001px;
-  display: block;
-  position: absolute;
-  top: @wellHeight;
-  border: 0;
-}
+// @linkWidth: 48px;
+// .twitterLink,
+// .githubLink,
+// .rssLink {
+//   .spriteIco;
+//   text-indent: -9001px;
+//   display: block;
+//   position: absolute;
+//   top: @wellHeight;
+//   border: 0;
+// }
 
-.githubLink {
-  right: 2 * @linkWidth + 3 * @wellWidth;
-  .githubIco;
-}
+// .githubLink {
+//   right: 2 * @linkWidth + 3 * @wellWidth;
+//   .githubIco;
+// }
 
-.twitterLink {
-  right: @linkWidth + 2 * @wellWidth;
-  .twitterIco;
-}
+// .twitterLink {
+//   right: @linkWidth + 2 * @wellWidth;
+//   .twitterIco;
+// }
 
-.rssLink {
-  right: @wellWidth;
-  .rssIco;
-}
+// .rssLink {
+//   right: @wellWidth;
+//   .rssIco;
+// }

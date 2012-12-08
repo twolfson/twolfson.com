@@ -51,4 +51,6 @@ Rename all themeBorder themeEvenRow to odd-row and theme.border
 
 Switch over to spritesmith
 
+Deal with remaining l_span items
+
 do that cool background thing?

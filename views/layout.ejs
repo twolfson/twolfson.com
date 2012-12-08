@@ -38,41 +38,43 @@
   <script src="public/js/index.js"></script>
 </head>
 <body>
-	<div id="globalWrapper">
-    <header id="globalHeader" class="row">
-      <h1 class="globalHeaderHeader span4">Todd Wolfson</h1>
-      <h2 class="globalHeaderSubHeader span"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
-      <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
-      <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
-      <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
-    </header>
-    <nav id="globalNav" class="row themeEvenRow themeBorder comfyText">
-      <ul class="navList spanRight">
-      <% var navLinks = [
-              { "name": "projects", "href": "projects" },
-              { "name": "blog", "href": "/" },
-              { "name": "contact", "href": "contact" }];
+	<div id="global-wrapper" class="container">
+    <div id="global-main">
+      <header class="row">
+        <h1 class="span4">Todd Wolfson</h1>
+        <h2 class="span"><a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer</h2>
+        <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
+        <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
+        <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
+      </header>
+      <nav id="globalNav" class="row themeEvenRow themeBorder comfyText">
+        <ul class="navList spanRight">
+        <% var navLinks = [
+                { "name": "projects", "href": "projects" },
+                { "name": "blog", "href": "/" },
+                { "name": "contact", "href": "contact" }];
 
-        navLinks.forEach(function (navLink) {
-          var navName = navLink.name,
-              iSelected = page === navName ? "isSelected" : "";
-        %>
-        <li class="navListItem l_span">
-          <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
-        </li>
-      <% }); %>
-      </ul>
-    </nav>
-    <%- body %>
-    <footer id="globalFooter">
-      <p>
-        Built by <a href="/contact">Todd Wolfson</a>. All rights reserved. &copy;2005-2012
-      </p>
-      <p>
-        Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
-      </p>
-    </footer>
-	</div>
+          navLinks.forEach(function (navLink) {
+            var navName = navLink.name,
+                iSelected = page === navName ? "isSelected" : "";
+          %>
+          <li class="navListItem l_span">
+            <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
+          </li>
+        <% }); %>
+        </ul>
+      </nav>
+      <%- body %>
+    </div>
+  </div>
+  <footer id="global-footer">
+    <p>
+      Built by <a href="/contact">Todd Wolfson</a>. All rights reserved. &copy;2005-2012
+    </p>
+    <p>
+      Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
+    </p>
+  </footer>
   <%
     // If we are in a development environment, load in watcher
     if (process.env.NODE_ENV !== "production") {
