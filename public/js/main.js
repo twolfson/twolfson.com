@@ -9,4 +9,13 @@ $(function () {
       hljs.highlightBlock(pre);
     }
   });
+
+  // Get all truncate items
+  var $truncateArr = $('.text-truncate');
+  $truncateArr.each(function () {
+    // Truncate each item
+    var $this = $(this);
+    console.log($this);
+    $this.trunkata({'lines': 1});
+  });
 });

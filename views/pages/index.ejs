@@ -11,7 +11,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
         <div class="span">
           <h2 class="headerKilo"><a href="<%= article.url %>"><%= article.title %></a></h2>
         </div>
-        <div class="spanRight">
+        <div class="span pull-right">
         <%
           var rawDate = article.rawDate,
               day = rawDate.getDate() + "";
@@ -23,10 +23,10 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
           <span class="date"><%= articleDate %></span>
         </div>
       </header>
-      <section class="content row"><div class="span12 text-truncate">
+      <section class="content"><div class="text-truncate">
         <%- article.summary %>
       </div></section>
-      <div class="more row"><div class="spanRight">
+      <div class="more row"><div class="span pull-right">
         <a href="<%= article.url %>">Read more &raquo;</a>
       </div></div>
     </article>

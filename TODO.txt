@@ -11,12 +11,15 @@ CSS issues
 All
 ---
 Javascript developer no longer top aligned properly
+MOVE BACK TO OLD GRID SYSTEM -- IT DEAL WITH LOTS OF NESTING NICELY
 
 Homepage
 --------
 Truncation got screwed up
 Date is at the top
 Need to hide h1's and such from sumaries
+Truncation is now partially working.
+Need to re-correct fixed summaries
 
 Blogpost
 --------
@@ -40,12 +43,7 @@ Was the text always so big?
 
 404
 ---
-The page is not being filled. Fix that.
-Shot in the dark: there is an unclosed tag
-
-PROBLEMS
---------
-
+Text is stuck on left side of screen, there should be a bit of cushion
 
 Switch over to spritesmith
 

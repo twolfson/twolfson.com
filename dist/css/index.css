@@ -2450,17 +2450,6 @@ a.isSelected {
  * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
  *    nodes.
  */
-.text-truncate {
-  max-width: 100%;
-  /* 1 */
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-  /* 2 */
-
-}
 /**
  * Word breaking
  *

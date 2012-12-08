@@ -397,7 +397,6 @@ pre .tex .formula{opacity:0.5;}
 a .showLink{color:#436DC4;font-weight:bold;cursor:pointer;}
 a:hover .showLink{outline:0;color:#4F46C4;text-decoration:underline;}
 a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
-.text-truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
 .text-break{word-break:break-all;word-break:break-word;word-wrap:break-word;}
 .text-center{text-align:center;}
 .text-left{text-align:left;}
