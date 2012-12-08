@@ -294,132 +294,6 @@ body {
 
   position: relative;
 }
-/*** Layout classes ***/
-.layout-normal {
-  text-align: left;
-}
-.layout-center {
-  text-align: center;
-}
-.layout-flipped {
-  text-align: right;
-}
-.span,
-.span1,
-.span2,
-.span3,
-.span4,
-.span5,
-.span6,
-.span7,
-.span8,
-.span9,
-.span10,
-.span11,
-.span12 {
-  float: left;
-  margin-left: 20px;
-}
-.spanRight {
-  float: right;
-  margin-right: 20px;
-}
-.row {
-  *zoom: 1;
-}
-.row:before,
-.row:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.row:after {
-  clear: both;
-}
-.row:before,
-.row:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.row:after {
-  clear: both;
-}
-.rowNested {
-  margin-left: -20px;
-}
-.span12 {
-  width: 940px;
-}
-.span11 {
-  width: 860px;
-}
-.span10 {
-  width: 780px;
-}
-.span9 {
-  width: 700px;
-}
-.span8 {
-  width: 620px;
-}
-.span7 {
-  width: 540px;
-}
-.span6 {
-  width: 460px;
-}
-.span5 {
-  width: 380px;
-}
-.span4 {
-  width: 300px;
-}
-.span3 {
-  width: 220px;
-}
-.span2 {
-  width: 140px;
-}
-.span1 {
-  width: 60px;
-}
-.l_offset12 {
-  margin-left: 980px;
-}
-.l_offset11 {
-  margin-left: 900px;
-}
-.l_offset10 {
-  margin-left: 820px;
-}
-.l_offset9 {
-  margin-left: 740px;
-}
-.l_offset8 {
-  margin-left: 660px;
-}
-.l_offset7 {
-  margin-left: 580px;
-}
-.l_offset6 {
-  margin-left: 500px;
-}
-.l_offset5 {
-  margin-left: 420px;
-}
-.l_offset4 {
-  margin-left: 340px;
-}
-.l_offset3 {
-  margin-left: 260px;
-}
-.l_offset2 {
-  margin-left: 180px;
-}
-.l_offset1 {
-  margin-left: 100px;
-}
 /*!
  * Bootstrap v2.2.1
  *
@@ -2365,6 +2239,16 @@ input[type="submit"].btn.btn-mini {
 .btn-xlarge [class*=" icon-"] {
   margin-top: 4px;
 }
+/*** Layout classes ***/
+.layout-normal {
+  text-align: left;
+}
+.layout-center {
+  text-align: center;
+}
+.layout-flipped {
+  text-align: right;
+}
 /* Border class */
 .border {
   border-width: 1px;
@@ -2407,26 +2291,10 @@ button.border {
 .featureItem:hover {
   background: #e2f6ff;
 }
-/* Link module (must be updated with 'a' at top) */
-.hideLinks a:hover,
-.hideLinks a:active,
-.hideLinks a:focus {
-  text-decoration: none;
-}
-a .showLink {
-  color: #436DC4;
-  font-weight: bold;
-  cursor: pointer;
-}
-a:hover .showLink {
-  outline: 0;
-  color: #4F46C4;
-  text-decoration: underline;
-}
-a.isSelected {
-  outline: 0;
-  color: #436dc4;
-  text-decoration: underline;
+.fakeLink:hover,
+.fakeLink.isSelected {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #436dc4;
 }
 /*
 
@@ -2546,10 +2414,26 @@ pre .chunk {
 pre .tex .formula {
   opacity: 0.5;
 }
-.fakeLink:hover,
-.fakeLink.isSelected {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #436dc4;
+/* Link module (must be updated with 'a' at top) */
+.hideLinks a:hover,
+.hideLinks a:active,
+.hideLinks a:focus {
+  text-decoration: none;
+}
+a .showLink {
+  color: #436DC4;
+  font-weight: bold;
+  cursor: pointer;
+}
+a:hover .showLink {
+  outline: 0;
+  color: #4F46C4;
+  text-decoration: underline;
+}
+a.isSelected {
+  outline: 0;
+  color: #436dc4;
+  text-decoration: underline;
 }
 /* https://github.com/necolas/suit-utils/blob/master/text.css */
 /* ==========================================================================
