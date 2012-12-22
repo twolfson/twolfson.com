@@ -33,8 +33,8 @@ address{display:inline;}
 *{margin:0;padding:0;}
 html,body{height:100%;}
 #global-wrapper{min-height:100%;}
-#global-main{overflow:auto;padding-bottom:80px;}
-#global-footer{position:relative;margin-top:-80px;height:80px;clear:both;}
+#global-main{overflow:auto;padding-bottom:110px;}
+#global-footer{position:relative;margin-top:-110px;height:110px;clear:both;}
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 body{background:url('/public/images/white_plaster.png');}
 .spriteIco,.githubIco,.twitterIco,.rssIco,.purpleStarIco,.purpleForkIco,.eyeIco,.heartIco,.ribbonIco,.barLinesIco{background:url(../images/sprites.png) no-repeat;}
@@ -365,14 +365,12 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .layout-center{text-align:center;}
 .layout-flipped{text-align:right;}
 .border{border-width:1px;border-style:solid;border-color:#000;}
+.border-thin{border-top-width:0;border-left-width:0;border-right-width:0;}
 input.border,textarea.border,button.border{border-width:2px;}
 .odd-row.theme{background:#b9cfff;}
 .odd-row.theme.border{border-color:#7e9ad5;}
 .even-row.theme{background:#c0bbff;}
 .even-row.theme.border{border-color:#8882d5;}
-.featureItem{background:#b4e8ff;padding:5px 0;border-radius:20px;margin:0 auto;width:95%;}
-.featureItem img{height:170px;border-radius:0;}
-.featureItem:hover{background:#e2f6ff;}
 .fakeLink:hover,.fakeLink.isSelected{padding-bottom:2px;border-bottom:1px solid #436dc4;}
 .fluffToH1{margin-top:9001px;}
 .fluffToH2{margin-top:25px;}

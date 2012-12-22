@@ -6,17 +6,18 @@ trunk8
 
 consistent article date formatter...
 
+HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js)
+
 CSS issues
 ==========
 All
 ---
 Javascript developer might need sizing adjustment
 Sprites at top are borked
+Footer needs some tweaking
 
 Homepage
 --------
-Footer is colliding with text
-HACKING OVER TRUNCATING BOLDENED TEXT >_<
 
 Blogpost
 --------
