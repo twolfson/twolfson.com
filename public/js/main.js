@@ -15,7 +15,10 @@ $(function () {
   $truncateArr.each(function () {
     // Truncate each item
     var $this = $(this);
-    console.log($this);
+
+// Mothereffing hacks ;_;
+if($this.text().indexOf('Warning: This article is more opinionated than other ones.') !== -1) { return; }
+
     $this.trunkata({'lines': 1});
   });
 });

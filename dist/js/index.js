@@ -621,5 +621,6 @@ return this.each(function(){var $this=$(this),$trunkata=$this.data('_trunkata');
 return trunkataProto[method].apply($trunkata,args);});}
 $.fn.trunkata=trunkataEach;}(jQuery));
 
-$(function(){var $preArr=$('pre');$preArr.each(function(){var pre=this;if(pre.parentNode){hljs.highlightBlock(pre);}});var $truncateArr=$('.text-truncate');$truncateArr.each(function(){var $this=$(this);console.log($this);$this.trunkata({'lines':1});});});
+$(function(){var $preArr=$('pre');$preArr.each(function(){var pre=this;if(pre.parentNode){hljs.highlightBlock(pre);}});var $truncateArr=$('.text-truncate');$truncateArr.each(function(){var $this=$(this);if($this.text().indexOf('Warning: This article is more opinionated than other ones.')!==-1){return;}
+$this.trunkata({'lines':1});});});
 //@ sourceMappingURL=index.js.map

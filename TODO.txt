@@ -14,9 +14,8 @@ Javascript developer might need sizing adjustment
 
 Homepage
 --------
-Need to hide h1's and such from sumaries
-Summaries to fix: Subtle (none), BDD (overflow), Build Chain (overflow), CSS Off (underflow), jojo (underflow), Hands Free (none), Catching up (underflow?)
 Footer is colliding with text
+HACKING OVER TRUNCATING BOLDENED TEXT >_<
 
 Blogpost
 --------
@@ -46,7 +45,6 @@ Switch over to spritesmith
 
 layout navListItem.span
 article span10 h1, span2 -> should truncate title if too long but also show via title=""
-pages/index header.row span -> should truncate title if too long but also show via title=""
 
 Remove all legacy superComfyRow comfyRow comfyText
 

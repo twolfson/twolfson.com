@@ -1,7 +1,8 @@
 {
   "title": "Subtle anti-patterns",
   "author": "Todd Wolfson",
-  "date": "2012/11/17"
+  "date": "2012/11/17",
+  "summary": "<strong>Warning: This article is more opinionated than other ones.</strong>"
 }
 
 **Warning: This article is more opinionated than other ones.**
