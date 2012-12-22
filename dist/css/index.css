@@ -2307,6 +2307,7 @@ button.border {
   padding-bottom: 2px;
   border-bottom: 1px solid #436dc4;
 }
+/* Hooray, magic numbers */
 .fluffToH1 {
   margin-top: 9001px;
 }

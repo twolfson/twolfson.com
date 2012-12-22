@@ -14,12 +14,8 @@ Javascript developer might need sizing adjustment
 
 Homepage
 --------
-Truncation got screwed up
-Date is at the top
 Need to hide h1's and such from sumaries
-Truncation is now partially working.
-Need to re-correct fixed summaries
-"Read more" needs bottom padding
+Summaries to fix: Subtle (none), BDD (overflow), Build Chain (overflow), CSS Off (underflow), jojo (underflow), Hands Free (none), Catching up (underflow?)
 Footer is colliding with text
 
 Blogpost
