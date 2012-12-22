@@ -179,7 +179,7 @@ body {
 }
 #global-main {
   overflow: auto;
-  padding-bottom: bottomHeight;
+  padding-bottom: 80px;
   /* must be same height as the footer */
 
 }

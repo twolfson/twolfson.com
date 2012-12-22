@@ -11,6 +11,7 @@ CSS issues
 All
 ---
 Javascript developer might need sizing adjustment
+Sprites at top are borked
 
 Homepage
 --------
