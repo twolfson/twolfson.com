@@ -361,18 +361,6 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .container{width:960px;}
 .row{margin-left:0;}
 [class*="span"].pull-right,.row-fluid [class*="span"].pull-right{margin-right:20px;}
-.h1,.h2,.h3,.h4,.h5,.h6{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;}.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small{font-weight:normal;line-height:1;color:#999999;}
-.h1,.h2,.h3{line-height:40px;}
-.h1{font-size:38.5px;}
-.h2{font-size:31.5px;}
-.h3{font-size:24.5px;}
-.h4{font-size:17.5px;}
-.h5{font-size:14px;}
-.h6{font-size:11.9px;}
-.h1 small{font-size:24.5px;}
-.h2 small{font-size:17.5px;}
-.h3 small{font-size:14px;}
-.h4 small{font-size:14px;}
 .layout-normal{text-align:left;}
 .layout-center{text-align:center;}
 .layout-flipped{text-align:right;}
@@ -386,12 +374,12 @@ input.border,textarea.border,button.border{border-width:2px;}
 .featureItem img{height:170px;border-radius:0;}
 .featureItem:hover{background:#e2f6ff;}
 .fakeLink:hover,.fakeLink.isSelected{padding-bottom:2px;border-bottom:1px solid #436dc4;}
-.fluffToH1:after{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;line-height:40px;font-size:38.5px;}.fluffToH1:after small{font-weight:normal;line-height:1;color:#999999;}
-.fluffToH2{margin:10px 0;height:40px;}
-.fluffToH3:after{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;line-height:40px;font-size:24.5px;}.fluffToH3:after small{font-weight:normal;line-height:1;color:#999999;}
-.fluffToH4:after{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;font-size:17.5px;}.fluffToH4:after small{font-weight:normal;line-height:1;color:#999999;}
-.fluffToH5:after{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;font-size:14px;}.fluffToH5:after small{font-weight:normal;line-height:1;color:#999999;}
-.fluffToH6:after{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;font-size:11.9px;}.fluffToH6:after small{font-weight:normal;line-height:1;color:#999999;}
+.fluffToH1{margin-top:9001px;}
+.fluffToH2{margin-top:26px;}
+.fluffToH3{margin-top:9001px;}
+.fluffToH4{margin-top:9001px;}
+.fluffToH5{margin-top:9001px;}
+.fluffToH6{margin-top:9001px;}
 pre,code{color:#333;background:#f8f8ff;}
 pre{display:block;}
 code{padding-left:5px;padding-right:5px;}
