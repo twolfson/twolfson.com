@@ -10,7 +10,7 @@ CSS issues
 ==========
 All
 ---
-Javascript developer no longer top aligned properly
+Javascript developer might need sizing adjustment
 
 Homepage
 --------
@@ -19,6 +19,10 @@ Date is at the top
 Need to hide h1's and such from sumaries
 Truncation is now partially working.
 Need to re-correct fixed summaries
+Summary text is not left padded [fixed]
+"Read more" needs bottom padding
+Footer is colliding with text
+Summary text overflowing on right [fixed]
 
 Blogpost
 --------

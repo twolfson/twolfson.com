@@ -8,8 +8,8 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
   %>
     <article class="post <%=rowKlass%> theme">
       <header class="row">
-        <div class="span">
-          <h2 class="headerKilo"><a href="<%= article.url %>"><%= article.title %></a></h2>
+        <div class="span9">
+          <h2 class="text-truncate"><a href="<%= article.url %>"><%= article.title %></a></h2>
         </div>
         <div class="span pull-right">
         <%
@@ -23,9 +23,9 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
           <span class="date"><%= articleDate %></span>
         </div>
       </header>
-      <section class="content"><div class="text-truncate">
+      <section class="content row"><div class="span12"><div class="text-truncate">
         <%- article.summary %>
-      </div></section>
+      </div></div></section>
       <div class="more row"><div class="span pull-right">
         <a href="<%= article.url %>">Read more &raquo;</a>
       </div></div>

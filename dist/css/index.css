@@ -2239,6 +2239,10 @@ input[type="submit"].btn.btn-mini {
 .btn-xlarge [class*=" icon-"] {
   margin-top: 4px;
 }
+/* Grid adjustments */
+.container {
+  width: 960px;
+}
 .row {
   margin-left: 0;
 }
