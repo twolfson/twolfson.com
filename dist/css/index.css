@@ -2239,6 +2239,13 @@ input[type="submit"].btn.btn-mini {
 .btn-xlarge [class*=" icon-"] {
   margin-top: 4px;
 }
+.row {
+  margin-left: 0;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  margin-right: 20px;
+}
 /*** Layout classes ***/
 .layout-normal {
   text-align: left;

@@ -358,6 +358,8 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .btn-link[disabled]:hover{color:#333333;text-decoration:none;}
 .btn-xlarge{padding:18px 28px;font-size:22px;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;}
 .btn-xlarge [class^="icon-"],.btn-xlarge [class*=" icon-"]{margin-top:4px;}
+.row{margin-left:0;}
+[class*="span"].pull-right,.row-fluid [class*="span"].pull-right{margin-right:20px;}
 .layout-normal{text-align:left;}
 .layout-center{text-align:center;}
 .layout-flipped{text-align:right;}

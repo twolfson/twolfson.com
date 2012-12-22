@@ -13,9 +13,13 @@
   margin-top: 4px;
 }
 
-// // Add gutter to container
-// @containerGutter: 20px;
-// .container {
-//   padding-left: @containerGutter;
-//   padding-right: @containerGutter;
-// }
+// Add gutter to every row
+.row {
+  margin-left: 0;
+}
+
+// Any span that is pulled right has a right margin
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  margin-right: @gridGutterWidth;
+}
