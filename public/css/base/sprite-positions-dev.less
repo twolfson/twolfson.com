@@ -4,7 +4,7 @@
 @githubIco: 1px 0 -180px 1px;
 
 .sprite-position(@name) {
-  background-position: ~`"@{name}".split(/\s+/) + " " + "@{name}".split(' ')[2]`;
+  background-position: ~`"@{name}".split(/\s+/)[1].replace(',', '') + " " + "@{name}".split(' ')[2]`;
 }
 // {
 //     "width": 32,
