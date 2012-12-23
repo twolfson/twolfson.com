@@ -10,9 +10,9 @@ HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js
 
 CSS issues
 ==========
-Blogpost
---------
-Date is at the top
+Home
+----
+Summaries got fucked again with link boldening =(
 
 Projects
 --------
