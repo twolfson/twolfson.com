@@ -1,6 +1,6 @@
 {
   "name": "twolfson.com",
-  "version": "1.0.110",
+  "version": "1.0.111",
   "description": "twolfson.com server",
   "main": "app.js",
   "dependencies": {

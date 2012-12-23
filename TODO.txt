@@ -10,12 +10,6 @@ HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js
 
 CSS issues
 ==========
-All
----
-Javascript developer might need sizing adjustment
-Sprites at top are borked
-Navbar links need positioning correction
-
 Blogpost
 --------
 Date is at the top
@@ -40,9 +34,6 @@ Was the text always so big?
 ---
 Text is stuck on left side of screen, there should be a bit of cushion
 
-Switch over to spritesmith
-
-layout navListItem.span
 article span10 h1, span2 -> should truncate title if too long but also show via title=""
 
 Remove all legacy superComfyRow comfyRow comfyText
