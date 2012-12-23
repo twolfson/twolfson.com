@@ -20,12 +20,6 @@ Text overflowing
 Verify sprites on scripts line are still there
 Sprite alignment under Competitions is fucked
 
-Contact
--------
-Fix vertical alignment of contact fields
-Add vertical margin to Contact button
-Add vertical margin to photo
-
 Contact (fail)
 --------------
 Was the text always so big?
