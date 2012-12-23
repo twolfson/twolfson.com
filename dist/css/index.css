@@ -284,38 +284,46 @@ body {
 #global-wrapper {
   min-height: 100%;
   background: #b9cfff;
-  /* TODO: Cross-browser me */
-
+  -webkit-box-shadow: 0 0 20px #000000;
+  -moz-box-shadow: 0 0 20px #000000;
   box-shadow: 0 0 20px #000000;
-  /* Relative position for footer */
+  /* Relative position for sprites */
 
   position: relative;
 }
+/* Navbar styling */
+.navlist {
+  margin: 0;
+}
+.navlist-item {
+  line-height: 32px;
+}
+/* Upper links */
 .twitterLink,
 .githubLink,
 .rssLink {
   text-indent: -9001px;
   display: block;
   position: absolute;
-  top: 0px;
+  top: 10px;
   border: 0;
 }
 .githubLink {
-  right: 96px;
+  right: 156px;
   background-image: url('../images/sprites.png');
   background-position: -96px -180px;
   width: 32px;
   height: 32px;
 }
 .twitterLink {
-  right: 48px;
+  right: 88px;
   background-image: url('../images/sprites.png');
   background-position: 0px -276px;
   width: 32px;
   height: 32px;
 }
 .rssLink {
-  right: 0px;
+  right: 20px;
   background-image: url('../images/sprites.png');
   background-position: -160px -116px;
   width: 32px;
@@ -2253,6 +2261,24 @@ input[type="submit"].btn.btn-mini {
 .btn-link[disabled]:hover {
   color: #333333;
   text-decoration: none;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.affix {
+  position: fixed;
 }
 /* Button classes */
 .btn-xlarge {

@@ -14,7 +14,6 @@ All
 ---
 Javascript developer might need sizing adjustment
 Sprites at top are borked
-Navbar needs no side border
 Navbar links need positioning correction
 
 Blogpost
