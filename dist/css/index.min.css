@@ -369,9 +369,8 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .affix{position:fixed;}
 .btn-xlarge{padding:18px 28px;font-size:22px;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;}
 .btn-xlarge [class^="icon-"],.btn-xlarge [class*=" icon-"]{margin-top:4px;}
-.container{width:960px;}
+.container{width:980px;}
 .row{margin-left:0;}
-[class*="span"].pull-right,.row-fluid [class*="span"].pull-right{margin-right:20px;}
 .layout-normal{text-align:left;}
 .layout-center{text-align:center;}
 .layout-flipped{text-align:right;}
@@ -385,7 +384,7 @@ input.border,textarea.border,button.border{border-width:2px;}
 .even-row.theme{background:#c0bbff;}
 .even-row.theme.border{border-color:#8882d5;}
 .fakeLink:hover,.fakeLink.isSelected{padding-bottom:2px;border-bottom:1px solid #436dc4;}
-.fluffToH1{margin-top:9001px;}
+.fluffToH1{margin-top:28px;}
 .fluffToH2{margin-top:25px;}
 .fluffToH3{margin-top:9001px;}
 .fluffToH4{margin-top:9001px;}

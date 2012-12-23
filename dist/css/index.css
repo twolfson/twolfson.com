@@ -2294,14 +2294,10 @@ input[type="submit"].btn.btn-mini {
 }
 /* Grid adjustments */
 .container {
-  width: 960px;
+  width: 980px;
 }
 .row {
   margin-left: 0;
-}
-[class*="span"].pull-right,
-.row-fluid [class*="span"].pull-right {
-  margin-right: 20px;
 }
 /*** Layout classes ***/
 .layout-normal {
@@ -2358,7 +2354,7 @@ button.border {
 }
 /* Hooray, magic numbers */
 .fluffToH1 {
-  margin-top: 9001px;
+  margin-top: 28px;
 }
 .fluffToH2 {
   margin-top: 25px;

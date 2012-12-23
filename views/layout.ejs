@@ -47,8 +47,8 @@
         <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
       </header>
-      <nav id="global-nav" class="row even-row theme border border-sideless border-thick">
-        <ul class="navlist span pull-right">
+      <nav id="global-nav" class="row even-row theme border border-sideless border-thick"><div class="span12">
+        <ul class="navlist pull-right">
         <% var navLinks = [
                 { "name": "projects", "href": "projects" },
                 { "name": "blog", "href": "/" },
@@ -63,7 +63,7 @@
           </li>
         <% }); %>
         </ul>
-      </nav>
+      </div></nav>
       <%- body %>
     </div>
   </div>

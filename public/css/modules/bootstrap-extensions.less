@@ -14,18 +14,12 @@
 }
 
 /* Grid adjustments */
-// Container is 960px not 940px (auto-pads right)
+// Container is 980px not 940px (auto-pads left and right)
 .container {
-  width: 960px;
+  width: 980px;
 }
 
 // Add gutter to every row
 .row {
   margin-left: 0;
-}
-
-// Any span that is pulled right has a right margin
-[class*="span"].pull-right,
-.row-fluid [class*="span"].pull-right {
-  margin-right: @gridGutterWidth;
 }
