@@ -10,9 +10,4 @@ HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js
 
 Convert any camelCased classes to lower-cased
 
-Does kaleido include successful contact?
-
-ONE FINAL KALEIDO CONFIRM
-
-
 do that cool background thing?
