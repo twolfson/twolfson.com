@@ -334,17 +334,20 @@ var serialized = '<body><div style="background: blue;"><div style="background: r
   canvas.height = window.innerHeight - 10;
 
   // Create a new kaleidoscope
-  var kal = new Kaleidoscope({'rows': 2, 'columns': 3, 'canvas': canvas, 'engine': 'server'});
+  var kal = new Kaleidoscope({'rows': 3, 'columns': 3, 'canvas': canvas, 'engine': 'server'});
 
   // Draw out the upper row
   kal.draw({'row': 0, 'column': 0}, '/');
   kal.draw({'row': 0, 'column': 1}, '/2012-11-17-subtle-anti-patterns');
   kal.draw({'row': 0, 'column': 2}, '/projects');
 
-  // and lower row
+  // and middle row row
   kal.draw({'row': 1, 'column': 0}, '/contact');
-  kal.draw({'row': 1, 'column': 1}, '/contact?test=fail');
-  kal.draw({'row': 1, 'column': 2}, '/404');
+  kal.draw({'row': 1, 'column': 1}, '/contact?test=success');
+  kal.draw({'row': 1, 'column': 2}, '/contact?test=fail');
+
+  // and bottom row
+  kal.draw({'row': 2, 'column': 0}, '/404');
 
   }());
 </script>

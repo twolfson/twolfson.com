@@ -61,8 +61,8 @@ if (inDevelopment) {
 
     // If there is a test query, render the proper response
     if (test) {
-      var status = test !== 'fail';
-      res.render('contact', {'page': 'contact', 'status': status});
+      var testStatus = test !== 'fail';
+      res.render('contact', {'page': 'contact', 'testStatus': testStatus});
     } else {
     // Otherwise, continue
       next();
