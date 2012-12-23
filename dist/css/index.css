@@ -239,8 +239,8 @@ body {
   margin-right: 2px;
 }
 .githubIco {
-  background-image: url('../images/sprites.png') no-repeat;
-  background-position: 0 -180px;
+  background-image: url('../img/sprites.png') no-repeat;
+  background-position: 0px -180px;
   width: 32px;
   height: 32px;
 }
@@ -308,8 +308,8 @@ body {
 .githubLink {
   right: 96px;
   background: url(../images/sprites.png) no-repeat;
-  background-image: url('../images/sprites.png') no-repeat;
-  background-position: 0 -180px;
+  background-image: url('../img/sprites.png') no-repeat;
+  background-position: 0px -180px;
   width: 32px;
   height: 32px;
 }
