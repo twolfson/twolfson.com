@@ -10,18 +10,12 @@ HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js
 
 CSS issues
 ==========
-Home
-----
-Summaries got fucked again with link boldening =(
-
-Projects
---------
-Verify looks fine in Chrome
-
 Remove all legacy superComfyRow comfyRow comfyText
 Convert any camelCased classes to lower-cased
 
 Convert stars for jquip into 1.2k
+
+Does kaleido include successful contact?
 
 
 do that cool background thing?

@@ -16,8 +16,15 @@ $(function () {
     // Truncate each item
     var $this = $(this);
 
-// Mothereffing hacks ;_;
-if($this.text().indexOf('Warning: This article is more opinionated than other ones.') !== -1) { return; }
+    // If this is an article summary and contains a link or boldened text, skip truncation
+    // TODO: Undo this hack ;_;
+    var isArticleSummary = $this.hasClass('article-summary');
+    if(isArticleSummary) {
+      var containsBoldenedText = $this.has('a, b, strong');
+      if (containsBoldenedText) {
+        return;
+      }
+    }
 
     $this.trunkata({'lines': 1});
   });

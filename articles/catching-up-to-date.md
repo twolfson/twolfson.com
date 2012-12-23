@@ -1,10 +1,11 @@
 {
   "title": "Catching up to date",
   "author": "Todd Wolfson",
-  "date": "2012/03/16"
+  "date": "2012/03/16",
+  "_summary": "In this post, I would like to sum up all of the contests, scripts I have written, and everything else I meant to write about since my arrival in California&hellip;"
 }
 
-In this post, I would like to sum up all of the contests, scripts I have written, and everything else I meant to write about since my arrival in California(mid-May 2011). So, without further ado here they are:
+In this post, I would like to sum up all of the contests, scripts I have written, and everything else I meant to write about since my arrival in California (mid-May 2011). So, without further ado here they are:
 
 Scripts
 =======

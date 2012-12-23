@@ -32,8 +32,11 @@ jojo.getSummary = function (article, formatter) {
   // Generate and make an xmlSummary
   article.xmlSummary = getXmlSummary(article, formatter);
 
+  // If there is an _summary, use it
+  var _summary = article._summary || rawSlice;
+
   // Generate and return content
-  var content = formatter(rawSlice);
+  var content = formatter(_summary);
   return content;
 };
 
