@@ -22,9 +22,9 @@ Sprite alignment under Competitions is fucked
 
 Contact
 -------
-There is an hr and it is showing??
 Fix vertical alignment of contact fields
 Add vertical margin to Contact button
+Add vertical margin to photo
 
 Contact (fail)
 --------------

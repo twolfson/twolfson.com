@@ -1,33 +1,33 @@
 <section id="contactSection">
   <div class="row">
-    <form id="contactForm" class="span8" method="POST" action="contact">
+    <form id="contactForm" class="span8 form-horizontal" method="POST" action="contact">
       <fieldset id="contactFieldset" class="fillLine">
-        <legend class="superComfyText">Contact Details</legend>
+        <legend><h3>Contact Details</h3></legend>
         <%
           var status;
           // If there was no submission attempt
           if (status === undefined) {
         %>
-        <div class="contactRow row rowNested">
-          <label for="name" class="span2 layout-flipped" required="required">Name:</label>
+        <div class="control-group">
+          <label for="name" class="control-label" required="required">Name:&nbsp;</label>
           <input id="name" name="name" type="text" class="odd-row theme border span5" />
         </div>
-        <div class="contactRow row rowNested">
-          <label for="info" class="span2 layout-flipped" required="required">Contact Info:</label>
+        <div class="control-group">
+          <label for="info" class="control-label" required="required">Contact Info:&nbsp;</label>
           <input id="info" name="info" type="text" class="even-row theme border span5" />
         </div>
-        <div class="contactRow contactMessageRow row rowNested">
-          <label for="message" class="span2 layout-flipped" required="required">Message:</label>
+        <div class="control-group">
+          <label for="message" class="control-label" required="required">Message:&nbsp;</label>
           <textarea id="message" name="message" type="text" class="odd-row theme border span5"></textarea>
         </div>
-        <div class="contactRow layout-center">
+        <div class="layout-center">
           <button type="submit" id="submitButton" class="even-row theme border btn-xlarge">Contact Todd</button>
         </div>
         <%
           } else if (status === true) {
           // Otherwise, if the submission was a success
         %>
-          <div class="layout-center semiComfyText">
+          <div class="layout-center">
             Thank you for contacting me!
             <br/>
             I will respond to your request within 48 hours. Have a nice day!
@@ -35,7 +35,7 @@
         <%
           } else {
         %>
-          <div class="layout-center semiComfyText">
+          <div class="layout-center">
             Ouch! An error seems to have occurred.
             <br/>
             <a href="javascript:location.reload();">Could you please try that again?</a>
@@ -45,12 +45,12 @@
         %>
       </fieldset>
     </form>
-    <aside id="picContainer" class="span4 comfyRowTop">
+    <aside id="picContainer" class="span4">
       <figure id="picFigure">
         <a href="http://www.aaronwax.com/">
           <img src="public/images/todd.jpg" alt="Photograph of Todd Wolfson taken by A.J. Wax" />
           <figcaption>
-            <div class="comfyText layout-center">
+            <div class="layout-center">
               Photograph taken by A.J. Wax
             </div>
           </figcaption>
