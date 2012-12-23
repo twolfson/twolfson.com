@@ -41,7 +41,7 @@ body{background:url('/public/images/white_plaster.png');}
 .purpleStarIco,.purpleForkIco,.eyeIco,.heartIco,.ribbonIco,.barLinesIco{font-size:32px;line-height:32px;padding-left:32px;vertical-align:middle;margin-right:7px;}
 .purpleStarIco{margin-right:5px;}
 .ribbonIco{margin-right:2px;}
-.githubIco{background-position:0 -180px,;width:32px;height:32px;}
+.githubIco{background-position:0 -180px;width:32px;height:32px;}
 .twitterIco{background-position:0 -50px;width:32px;height:32px;}
 .rssIco{background-position:0 -100px;width:32px;height:32px;}
 .purpleStarIco{background-position:0 -150px;width:32px;height:32px;}
@@ -52,7 +52,7 @@ body{background:url('/public/images/white_plaster.png');}
 .barLinesIco{background-position:0 -400px;width:32px;height:32px;}
 #global-wrapper{min-height:100%;background:#b9cfff;box-shadow:0 0 20px #000000;position:relative;}
 .twitterLink,.githubLink,.rssLink{background:url(../images/sprites.png) no-repeat;text-indent:-9001px;display:block;position:absolute;top:0px;border:0;}
-.githubLink{right:96px;background:url(../images/sprites.png) no-repeat;background-position:0 -180px,;width:32px;height:32px;}
+.githubLink{right:96px;background:url(../images/sprites.png) no-repeat;background-position:0 -180px;width:32px;height:32px;}
 .twitterLink{right:48px;background:url(../images/sprites.png) no-repeat;background-position:0 -50px;width:32px;height:32px;}
 .rssLink{right:0px;background:url(../images/sprites.png) no-repeat;background-position:0 -100px;width:32px;height:32px;}
 .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
