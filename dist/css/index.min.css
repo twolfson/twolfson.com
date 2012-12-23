@@ -368,8 +368,10 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .layout-center{text-align:center;}
 .layout-flipped{text-align:right;}
 .border{border-width:1px;border-style:solid;border-color:#000;}
-.border-thin{border-top-width:0;border-left-width:0;border-right-width:0;}
 input.border,textarea.border,button.border{border-width:2px;}
+.border-thin{border-top-width:0;border-left-width:0;border-right-width:0;}
+.border-thick{border-width:2px;}
+.border-sideless{border-left-width:0;border-right-width:0;}
 .odd-row.theme{background:#b9cfff;}
 .odd-row.theme.border{border-color:#7e9ad5;}
 .even-row.theme{background:#c0bbff;}

@@ -2293,16 +2293,24 @@ input[type="submit"].btn.btn-mini {
   border-style: solid;
   border-color: #000;
 }
-.border-thin {
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-}
 /* Increased border width for inputs */
 input.border,
 textarea.border,
 button.border {
   border-width: 2px;
+}
+/* Optional border modifiers */
+.border-thin {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.border-thick {
+  border-width: 2px;
+}
+.border-sideless {
+  border-left-width: 0;
+  border-right-width: 0;
 }
 /* Row striping with border class overload */
 .odd-row.theme {
