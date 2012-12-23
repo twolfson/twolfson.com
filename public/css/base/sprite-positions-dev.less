@@ -1,9 +1,10 @@
 @githubIco-offset-x: 0;
 @githubIco-offset-y: -180px;
 @githubIco-offset: 0 -180px;
+@githubIcoA: 1px 0 -180px 1px;
 
 .sprite-position(@name) {
-  background-position: @name;
+  background-position: 0 "@{@{name}-offset-y}";
 }
 // {
 //     "width": 32,

@@ -239,7 +239,7 @@ body {
   margin-right: 2px;
 }
 .githubIco {
-  background-position: 0 -180px;
+  background-position: 0 "-180";
   width: 32px;
   height: 32px;
 }
@@ -307,7 +307,7 @@ body {
 .githubLink {
   right: 96px;
   background: url(../images/sprites.png) no-repeat;
-  background-position: 0 -180px;
+  background-position: 0 "-180";
   width: 32px;
   height: 32px;
 }
