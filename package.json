@@ -1,6 +1,6 @@
 {
   "name": "twolfson.com",
-  "version": "1.0.94",
+  "version": "1.0.95",
   "description": "twolfson.com server",
   "main": "app.js",
   "dependencies": {
@@ -13,7 +13,8 @@
   },
   "devDependencies": {
     "grunt-less": "~0.1.5",
-    "grunt-jsmin-sourcemap": "~1.4.0"
+    "grunt-jsmin-sourcemap": "~1.4.0",
+    "grunt-spritesmith": "~0.2.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

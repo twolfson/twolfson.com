@@ -25,6 +25,13 @@ module.exports = function (grunt) {
         destMap: '../../dist/js/index.js.map'
       }
     },
+    sprite: {
+      all: {
+        src: 'public/images/sprites/*.png',
+        destImg: 'public/images/sprites.png',
+        destCSS: 'public/css/base/sprite-positions.less'
+      }
+    },
     watch: {
       css: {
         files: 'public/css/**/*.less',
@@ -42,6 +49,9 @@ module.exports = function (grunt) {
 
   // Load in grunt-jsmin-sourcemap
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+
+  // Load in grunt-spritesmith
+  grunt.loadNpmTasks('grunt-spritesmith');
 
   // Create a grunt task to update projects
   grunt.registerTask('projects', function () {
