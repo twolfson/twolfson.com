@@ -29,7 +29,8 @@ module.exports = function (grunt) {
       all: {
         src: 'public/images/sprites/*.png',
         destImg: 'public/images/sprites.png',
-        destCSS: 'public/css/base/sprite-positions.less'
+        destCSS: 'public/css/base/sprite-positions.less',
+        algorithm: 'alt-diagonal'
       }
     },
     watch: {

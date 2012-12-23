@@ -228,7 +228,7 @@ body {
 }
 .githubIco {
   background-image: url('../images/sprites.png');
-  background-position: 0px -180px;
+  background-position: -96px -180px;
   width: 32px;
   height: 32px;
 }
@@ -240,37 +240,43 @@ body {
 }
 .rssIco {
   background-image: url('../images/sprites.png');
-  background-position: 0px -116px;
+  background-position: -160px -116px;
   width: 32px;
   height: 32px;
 }
 .purpleStarIco {
-  background-position: 0 -150px;
+  background-image: url('../images/sprites.png');
+  background-position: -128px -148px;
   width: 32px;
   height: 32px;
 }
 .purpleForkIco {
-  background-position: 0 -200px;
+  background-image: url('../images/sprites.png');
+  background-position: -256px -20px;
   width: 32px;
   height: 32px;
 }
 .eyeIco {
-  background-position: 0 -250px;
+  background-image: url('../images/sprites.png');
+  background-position: -32px -244px;
   width: 32px;
   height: 32px;
 }
 .heartIco {
-  background-position: 0 -300px;
+  background-image: url('../images/sprites.png');
+  background-position: -224px -52px;
   width: 32px;
   height: 32px;
 }
 .ribbonIco {
-  background-position: 0 -350px;
+  background-image: url('../images/sprites.png');
+  background-position: -192px -84px;
   width: 32px;
   height: 32px;
 }
 .barLinesIco {
-  background-position: 0 -400px;
+  background-image: url('../images/sprites.png');
+  background-position: -64px -212px;
   width: 32px;
   height: 32px;
 }
@@ -297,7 +303,7 @@ body {
 .githubLink {
   right: 96px;
   background-image: url('../images/sprites.png');
-  background-position: 0px -180px;
+  background-position: -96px -180px;
   width: 32px;
   height: 32px;
 }
@@ -311,7 +317,7 @@ body {
 .rssLink {
   right: 0px;
   background-image: url('../images/sprites.png');
-  background-position: 0px -116px;
+  background-position: -160px -116px;
   width: 32px;
   height: 32px;
 }
