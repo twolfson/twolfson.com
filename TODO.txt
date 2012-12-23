@@ -20,9 +20,6 @@ Text overflowing
 Verify sprites on scripts line are still there
 Sprite alignment under Competitions is fucked
 
-Contact (fail)
---------------
-Was the text always so big?
 
 Remove all legacy superComfyRow comfyRow comfyText
 

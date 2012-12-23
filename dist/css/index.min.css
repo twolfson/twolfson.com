@@ -373,7 +373,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .btn-xlarge [class^="icon-"],.btn-xlarge [class*=" icon-"]{margin-top:4px;}
 .container{width:980px;}
 .row{margin-left:0;}
-legend{border:0;}
+legend{border:0;margin-bottom:0;}legend+.control-group{margin-top:0;}
 textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input{-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);}
 .layout-normal{text-align:left;}
 .layout-center{text-align:center;}
