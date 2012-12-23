@@ -24,12 +24,6 @@ Contact (fail)
 --------------
 Was the text always so big?
 
-404
----
-Text is stuck on left side of screen, there should be a bit of cushion
-
-article span10 h1, span2 -> should truncate title if too long but also show via title=""
-
 Remove all legacy superComfyRow comfyRow comfyText
 
 
