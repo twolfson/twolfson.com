@@ -45,8 +45,10 @@ jojo.config.page = 'blog';
 app.get('*', jojo);
 
 // Portfolio page
-var projects = require('./projects');
+var projects = require('./projects'),
+    intword = require('./humanize.intword.js');
 projects.page = 'projects';
+projects.intword = intword;
 app.get('/projects', function (req, res) {
   res.render('projects', projects);
 });

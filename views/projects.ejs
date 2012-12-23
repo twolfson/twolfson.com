@@ -34,11 +34,10 @@
               isOwnRow = isEven && isLastItem,
               isRowStart = isEven,
               isRowEnd = !isEven || isOwnRow,
-              comfyRowKlass = isLastItem ? "" : "comfyRow",
               view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
-          <div class="row <%=comfyRowKlass%> <%=getRowClass()%> theme">
+          <div class="row <%=getRowClass()%> theme">
         <% } %>
             <%- partial(view, item) %>
         <% if (isRowEnd) { %>

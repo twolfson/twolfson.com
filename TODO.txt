@@ -8,14 +8,13 @@ consistent article date formatter...
 
 HACKING OVER TRUNCATING BOLDENED TEXT >_< (see subtle patterns summary + main.js)
 
-CSS issues
-==========
-Remove all legacy superComfyRow comfyRow comfyText
 Convert any camelCased classes to lower-cased
 
 Convert stars for jquip into 1.2k
 
 Does kaleido include successful contact?
+
+ONE FINAL KALEIDO CONFIRM
 
 
 do that cool background thing?
