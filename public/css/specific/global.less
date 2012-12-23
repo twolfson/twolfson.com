@@ -54,29 +54,31 @@
 //   margin-top: 4px;
 // }
 
-// @linkWidth: 48px;
-// .twitterLink,
-// .githubLink,
-// .rssLink {
-//   .spriteIco;
-//   text-indent: -9001px;
-//   display: block;
-//   position: absolute;
-//   top: @wellHeight;
-//   border: 0;
-// }
+@linkWidth: 48px;
+@wellWidth: 0px;
+@wellHeight: 0px;
+.twitterLink,
+.githubLink,
+.rssLink {
+  .spriteIco;
+  text-indent: -9001px;
+  display: block;
+  position: absolute;
+  top: @wellHeight;
+  border: 0;
+}
 
-// .githubLink {
-//   right: 2 * @linkWidth + 3 * @wellWidth;
-//   .githubIco;
-// }
+.githubLink {
+  right: 2 * @linkWidth + 3 * @wellWidth;
+  .githubIco;
+}
 
-// .twitterLink {
-//   right: @linkWidth + 2 * @wellWidth;
-//   .twitterIco;
-// }
+.twitterLink {
+  right: @linkWidth + 2 * @wellWidth;
+  .twitterIco;
+}
 
-// .rssLink {
-//   right: @wellWidth;
-//   .rssIco;
-// }
+.rssLink {
+  right: @wellWidth;
+  .rssIco;
+}

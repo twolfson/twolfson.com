@@ -51,6 +51,10 @@ body{background:url('/public/images/white_plaster.png');}
 .ribbonIco{background-position:0 -350px;width:32px;height:32px;}
 .barLinesIco{background-position:0 -400px;width:32px;height:32px;}
 #global-wrapper{min-height:100%;background:#b9cfff;box-shadow:0 0 20px #000000;position:relative;}
+.twitterLink,.githubLink,.rssLink{background:url(../images/sprites.png) no-repeat;text-indent:-9001px;display:block;position:absolute;top:0px;border:0;}
+.githubLink{right:96px;background:url(../images/sprites.png) no-repeat;background-position:0 0;width:32px;height:32px;}
+.twitterLink{right:48px;background:url(../images/sprites.png) no-repeat;background-position:0 -50px;width:32px;height:32px;}
+.rssLink{right:0px;background:url(../images/sprites.png) no-repeat;background-position:0 -100px;width:32px;height:32px;}
 .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}

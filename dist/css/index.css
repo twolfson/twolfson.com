@@ -294,6 +294,37 @@ body {
 
   position: relative;
 }
+.twitterLink,
+.githubLink,
+.rssLink {
+  background: url(../images/sprites.png) no-repeat;
+  text-indent: -9001px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  border: 0;
+}
+.githubLink {
+  right: 96px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: 0 0;
+  width: 32px;
+  height: 32px;
+}
+.twitterLink {
+  right: 48px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: 0 -50px;
+  width: 32px;
+  height: 32px;
+}
+.rssLink {
+  right: 0px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: 0 -100px;
+  width: 32px;
+  height: 32px;
+}
 /*!
  * Bootstrap v2.2.1
  *
