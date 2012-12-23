@@ -357,6 +357,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .btn-xlarge [class^="icon-"],.btn-xlarge [class*=" icon-"]{margin-top:4px;}
 .container{width:980px;}
 .row{margin-left:0;}
+.row-nested{margin-left:-20px;}
 legend{border:0;margin-bottom:0;}legend+.control-group{margin-top:0;}
 textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input{-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0);}
 .layout-normal{text-align:left;}
@@ -410,5 +411,9 @@ a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .text-center{text-align:center;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
-.project-description,.project-stars,.project-forks{font-size:16px;line-height:60px;}
+#project-section{font-size:16px;}
+.project-description,.project-stars,.project-forks{line-height:60px;}
 .project-section-heading{margin:0;padding:10px 0;}
+.competition-description{line-height:32px;}
+.competition-thin-description{line-height:60px;}
+.competition-score,.competition-views,.competition-likes{line-height:60px;}

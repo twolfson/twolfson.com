@@ -5,29 +5,26 @@ var type,
     headerWidth = isCssOff ? "span2" : "span4";
 %>
 <div class="span6">
-  <div class="row rowNested superComfyText">
+  <div class="row row-nested">
     <div class="<%=headerWidth%>">
-      <a href="<%=pageUrl%>" target="_blank"><h3 class="headerKilo superComfyText"><%=name%></h3></a>
+      <a href="<%=pageUrl%>" target="_blank"><h3><%=name%></h3></a>
     </div>
     <% if (isCssOff) { %>
-      <div class="span4 layout-flipped">
+      <div class="span4 layout-flipped competition-score">
         <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=score%></span>
       </div>
     <% } else { %>
-      <div class="span1 layout-flipped projectInfoOuter">
-        <div class="projectInfo">
-          <span class="eyeIco" title="Views"></span><span class="viewCount"><%=views%></span>
-        </div>
-      &nbsp;
+      <div class="span1 layout-flipped competition-views">
+        <span class="eyeIco" title="Views"></span><span class="viewCount"><%=views%></span>
       </div>
-      <div class="span1 layout-flipped">
+      <div class="span1 layout-flipped competition-likes">
         <span class="heartIco" title="Likes"></span><span class="likeCount"><%=likes%></span>
       </div>
     <% } %>
   </div>
-  <div class="row rowNested">
-    <div class="span4 competitionDesc">
-      <%=competition%>
+  <div class="row row-nested">
+    <div class="span4 competition-description">
+      <p><%=competition%></p>
     </div>
     <div class="span2 layout-flipped">
       <% if (isCssOff) { %>

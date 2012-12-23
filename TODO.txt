@@ -16,10 +16,7 @@ Summaries got fucked again with link boldening =(
 
 Projects
 --------
-Text overflowing
-Verify sprites on scripts line are still there
-Sprite alignment under Competitions is fucked
-
+Verify looks fine in Chrome
 
 Remove all legacy superComfyRow comfyRow comfyText
 Convert any camelCased classes to lower-cased
