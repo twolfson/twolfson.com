@@ -410,3 +410,5 @@ a.isSelected{outline:0;color:#436dc4;text-decoration:underline;}
 .text-center{text-align:center;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
+.project-description,.project-stars,.project-forks{font-size:16px;line-height:60px;}
+.project-section-heading{margin:0;padding:10px 0;}

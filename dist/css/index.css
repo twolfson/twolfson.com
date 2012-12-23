@@ -2550,3 +2550,15 @@ a.isSelected {
 .text-right {
   text-align: right;
 }
+/* Make description, stars, and forks bigger than normal */
+.project-description,
+.project-stars,
+.project-forks {
+  font-size: 16px;
+  line-height: 60px;
+}
+/* Any project heading uses padding over margin */
+.project-section-heading {
+  margin: 0;
+  padding: 10px 0;
+}

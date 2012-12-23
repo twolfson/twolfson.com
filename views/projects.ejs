@@ -1,4 +1,4 @@
-<section id="portfolioSection">
+<section id="project-section">
   <article>
     <div>
       <%
@@ -10,12 +10,12 @@
         }
       %>
       <div>
-        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Scripts</h2>
+        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Scripts</h2>
       </div>
       <%
         scripts.forEach(function (item) {
       %>
-      <div class="row superComfyText <%=getRowClass()%> theme">
+      <div class="row <%=getRowClass()%> theme">
         <%- partial('projects/script', item) %>
       </div>
       <%
@@ -24,7 +24,7 @@
     </div>
     <div>
       <div>
-        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Competitions</h2>
+        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Competitions</h2>
       </div>
       <%
         var lenMinusOne = competitions.length - 1;
@@ -50,7 +50,7 @@
     </div>
     <div>
       <div>
-        <h2 class="headerMega layout-center <%=getRowClass()%> theme">Contributions</h2>
+        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Contributions</h2>
       </div>
       <%
         contributions.forEach(function (item) {

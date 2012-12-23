@@ -22,6 +22,9 @@ Sprite alignment under Competitions is fucked
 
 
 Remove all legacy superComfyRow comfyRow comfyText
+Convert any camelCased classes to lower-cased
+
+Convert stars for jquip into 1.2k
 
 
 do that cool background thing?
