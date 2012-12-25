@@ -30,6 +30,7 @@ module.exports = function (grunt) {
         src: 'public/images/sprites/*.png',
         destImg: 'public/images/sprites.png',
         destCSS: 'public/css/base/sprite-positions.less',
+        imgPath: '../images/sprites.png',
         algorithm: 'alt-diagonal'
       }
     },

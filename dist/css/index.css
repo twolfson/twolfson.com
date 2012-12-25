@@ -234,55 +234,55 @@ button {
   margin-right: 2px;
 }
 .githubIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -96px -180px;
   width: 32px;
   height: 32px;
 }
 .twitterIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: 0px -276px;
   width: 32px;
   height: 32px;
 }
 .rssIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -160px -116px;
   width: 32px;
   height: 32px;
 }
 .purpleStarIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -128px -148px;
   width: 32px;
   height: 32px;
 }
 .purpleForkIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -256px -20px;
   width: 32px;
   height: 32px;
 }
 .eyeIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -32px -244px;
   width: 32px;
   height: 32px;
 }
 .heartIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -224px -52px;
   width: 32px;
   height: 32px;
 }
 .ribbonIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -192px -84px;
   width: 32px;
   height: 32px;
 }
 .barLinesIco {
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -64px -212px;
   width: 32px;
   height: 32px;
@@ -317,21 +317,21 @@ button {
 }
 .githubLink {
   right: 156px;
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -96px -180px;
   width: 32px;
   height: 32px;
 }
 .twitterLink {
   right: 88px;
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: 0px -276px;
   width: 32px;
   height: 32px;
 }
 .rssLink {
   right: 20px;
-  background-image: url('../../images/sprites.png');
+  background-image: url('../images/sprites.png');
   background-position: -160px -116px;
   width: 32px;
   height: 32px;
