@@ -68,7 +68,7 @@ function addAlgorithm(params) {
 
   // If defaults exist, override the saveFn to fallback to defaults
   if (defaults) {
-    algorithm = function (data) {
+    saveFn = function (data) {
       _.defaults(data, defaults);
       return algorithm(data);
     };
