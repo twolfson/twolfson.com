@@ -78,8 +78,34 @@ Tasks are registered as no longer single line strings. This was what made me fal
 It is okay if the framework does the heavy lifting; that is what frameworks are meant to do.
 
 ## Removing baked-in goodness
-As with [jquip][jquip], it has gotten a little traction but it hasn't gotten a huge growth since it is not that `batteries included`.
+[jquip][jquip], [YUI][yui], and [ExtJS][extjs] have gotten some traction but never any huge growth since they don't have `batteries included`.
 
 However, `grunt` should be a framework for everything and more.
 
-It should make extensibility easy
+### Batteries included
+Your decision to abandon common tasks is a foolish one.
+
+[node][node] comes with modules baked-in (e.g. `http`, `fs`) because it reduces the barrier to entry for everyone and lets you hit the ground running.
+
+### Easy extensibility
+Programming in extensibility into applications is a great way to help out other developers that want to tweak modules for one-offs without forking.
+
+The `helper` API was wonderful for this; virtually no barrier to entry and rich reusability once parts were registered.
+
+The decision to remove this is short-sighted and causes a lot more pain/frustration for developers. It doubles the amount of maintenance and once again is at the cost of the developer and not the framework.
+
+[jquip]: https://github.com/mythz/jquip
+[node]: http://nodejs.org/
+[extjs]: http://www.sencha.com/products/extjs
+
+# Finishing thoughts
+You are not `make`.
+
+You are not `rake`.
+
+You are not `cake`.
+
+You are better than this. Be proud of who you are. You don't need to change. You don't need to conform.
+
+Sincerely,
+Todd Wolfson
