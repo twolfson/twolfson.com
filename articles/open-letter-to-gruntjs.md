@@ -25,4 +25,42 @@ However, I feel that the proposed changes are a step in the wrong direction; und
 # Complaints
 
 ## Changing interface without backwards compatibility
+
 This honestly shocked me when I first heard about this. In fact, it shocked me so much that I was in denial until the date of writing this.
+
+Since this is a minor update (as determined via [semver][semver]), everything that worked before should continue to work. Clearly, since you are asking people to update their plugins, this is not the case.
+
+[semver]: http://semver.org/
+
+## Loss of elegance
+The new interface is not as elegant nor as developer friendly as the previous one. For example,
+
+```js
+var nonGruntConfig = {
+  from: 'hello.js',
+  to: 'world.js'
+};
+
+// grunt 0.3
+var config = {
+  src: nonGruntConfig.from,
+  dest: nonGruntConfig.to
+};
+
+// The src was
+config.src;
+
+// grunt 0.4
+var config = {};
+config[nonGruntConfig.from] = nonGruntConfig.to;
+
+// The src was
+var srcs = Object.getOwnPropertyNames(config);
+srcs[0];
+```
+
+I understand that the new interface makes adding batch files a lot easier. However, it is much more common to declare separate tasks for different file sets than share common options (e.g. `jade:pages jade:views`).
+
+On the same note, the `jshint` plugin solved that problem much more gracefully in terms of interface.
+
+Lastly, tasks are no longer single line strings. This was what made me fall in love with `grunt`. I hate the code bloat caused by `', '` and that rocked my world.
