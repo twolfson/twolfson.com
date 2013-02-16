@@ -31,7 +31,9 @@
     "description": "Converts images into a spritesheet and CSS preprocessor variables",
     "stars": 7,
     "forks": 3,
-    "github": "Ensighten/grunt-spritesmith"
+    "github": "Ensighten/grunt-spritesmith",
+    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
+    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
     "name": "CSS Query",
@@ -56,15 +58,18 @@
     "description": "Client-side MVC framework based on Addy Osmani's Aura",
     "stars": 3,
     "forks": 1,
-    "github": "Ensighten/Halo"
-
+    "github": "Ensighten/Halo",
+    "srcUrl": "https://github.com/Ensighten/Halo",
+    "pageUrl": "https://github.com/Ensighten/Halo"
   },
   {
     "name": "jqueryp",
     "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
     "stars": 2,
     "forks": 1,
-    "github": "twolfson/jqueryp"
+    "github": "twolfson/jqueryp",
+    "srcUrl": "https://github.com/twolfson/jqueryp",
+    "pageUrl": "https://github.com/twolfson/jqueryp"
   },
   {
     "name": "Atomic Event",
@@ -89,7 +94,9 @@
     "description": "Build chain for client-side MVC views",
     "stars": 1,
     "forks": 1,
-    "github": "Ensighten/Builder"
+    "github": "Ensighten/Builder",
+    "srcUrl": "https://github.com/Ensighten/Builder",
+    "pageUrl": "https://github.com/Ensighten/Builder"
   },
   {
     "name": "twolfson.com",
