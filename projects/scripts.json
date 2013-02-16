@@ -27,6 +27,13 @@
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
   },
   {
+    "name": "spritesmith",
+    "description": "Converts images into a spritesheet and CSS preprocessor variables",
+    "stars": 7,
+    "forks": 3,
+    "github": "Ensighten/grunt-spritesmith"
+  },
+  {
     "name": "CSS Query",
     "description": "Lightweight cross-browser CSS selector (&lt;3kb)",
     "stars": 6,
@@ -45,6 +52,21 @@
     "pageUrl": "https://github.com/twolfson/Mason.js"
   },
   {
+    "name": "Halo",
+    "description": "Client-side MVC framework based on Addy Osmani's Aura",
+    "stars": 3,
+    "forks": 1,
+    "github": "Ensighten/Halo"
+
+  },
+  {
+    "name": "jqueryp",
+    "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
+    "stars": 2,
+    "forks": 1,
+    "github": "twolfson/jqueryp"
+  },
+  {
     "name": "Atomic Event",
     "description": "Race condition handler under <a href=\"http://140byt.es/\" target=\"_blank\">140 bytes</a>",
     "stars": 2,
@@ -61,6 +83,13 @@
     "github": "twolfson/Resource-Collector",
     "srcUrl": "https://github.com/twolfson/Resource-Collector",
     "pageUrl": "https://github.com/twolfson/Resource-Collector"
+  },
+  {
+    "name": "Builder",
+    "description": "Build chain for client-side MVC views",
+    "stars": 1,
+    "forks": 1,
+    "github": "Ensighten/Builder"
   },
   {
     "name": "twolfson.com",
