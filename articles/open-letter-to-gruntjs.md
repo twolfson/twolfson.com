@@ -33,7 +33,16 @@ Since this is a minor update (as determined via [semver][semver]), everything th
 [semver]: http://semver.org/
 
 ## Loss of elegance
-The new interface is not as elegant nor as developer friendly as the previous one. For example,
+This is the biggest pain point for me. It is why [jQuery][jquery] won and [Dojo][dojo], [YUI][yui], [MooTools][mootools], [Prototype][prototype], and any others did not.
+
+[jquery]: http://jquery.com/
+[dojo]: http://dojotoolkit.org/
+[yui]: http://yuilibrary.com/
+[mootools]: http://mootools.net/
+[prototype]: http://prototypejs.org/
+
+### Task configuration
+The new configuration interface is not as elegant nor as developer friendly as the previous one. For example,
 
 ```js
 var nonGruntConfig = {
@@ -63,4 +72,14 @@ I understand that the new interface makes adding batch files a lot easier. Howev
 
 On the same note, the `jshint` plugin solved that problem much more gracefully in terms of interface.
 
-Lastly, tasks are no longer single line strings. This was what made me fall in love with `grunt`. I hate the code bloat caused by `', '` and that rocked my world.
+### Task registration
+Tasks are registered as no longer single line strings. This was what made me fall in love with `grunt`. I hate the code bloat caused by `', '` and that rocked my world.
+
+It is okay if the framework does the heavy lifting; that is what frameworks are meant to do.
+
+## Removing baked-in goodness
+As with [jquip][jquip], it has gotten a little traction but it hasn't gotten a huge growth since it is not that `batteries included`.
+
+However, `grunt` should be a framework for everything and more.
+
+It should make extensibility easy
