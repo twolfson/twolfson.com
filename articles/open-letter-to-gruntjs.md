@@ -1,17 +1,19 @@
 {
   "title": "Open letter to gruntjs",
   "author": "Todd Wolfson",
-  "date": "2013/02/15"
+  "date": "2013/02/15",
+  "_summary": "The following letter is about my thoughts and complaints of the recent [gruntjs](http://gruntjs.com/) upgrade from `0.3` to `0.4`."
 }
 
 Dear [gruntjs][gruntjs],
-&nbsp;&nbsp;&nbsp;&nbsp;The following letter is about my thoughts and complaints of the recent upgrade from `0.3` to `0.4`. Normally, I am enthusiastic about progression in the development world but this causes me much anger and frustration.
+
+The following letter is about my thoughts and complaints of the recent upgrade from `0.3` to `0.4`. Normally, I am enthusiastic about progression in the development world but this causes me much anger and frustration.
 
 [gruntjs]: http://gruntjs.com/
 
 # Introductions
 
-My name is Todd Wolfson, I am [open source enthusiast][projects] who is a [**huge fan** of `grunt`][grunt-repos] in its current `0.3` form.
+My name is Todd Wolfson, I am [open source enthusiast][projects] who is a [**huge fan** of grunt][grunt-repos] in its current `0.3` form.
 
 [projects]: http://twolfson.com/projects
 [grunt-repos]: https://encrypted.google.com/search?q=grunt+twolfson&q=site:npmjs.org
@@ -107,5 +109,8 @@ You are not `cake`.
 
 You are better than this. Be proud of who you are. You don't need to change. You don't need to conform.
 
+&nbsp;
+
 Sincerely,
+
 Todd Wolfson
