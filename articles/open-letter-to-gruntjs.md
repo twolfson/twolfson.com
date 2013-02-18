@@ -5,6 +5,10 @@
   "_summary": "The following letter is about my thoughts and complaints of the recent [gruntjs](http://gruntjs.com/) upgrade from `0.3` to `0.4`."
 }
 
+**Update:** I have [discussed this issue][issue] with the authors of gruntjs. In the end, we agreed to disagree.
+
+[issue]: https://github.com/gruntjs/grunt/issues/669
+
 Dear [gruntjs][gruntjs],
 
 The following letter is about my thoughts and complaints of the recent upgrade from `0.3` to `0.4`. Normally, I am enthusiastic about progression in the development world but this causes me much anger and frustration.
