@@ -11,7 +11,8 @@ describe('twolfson.com', function () {
     });
   });
 
- it('is responding', function () {
+  // TODO: Move to sculptor for easier common usage of these tests
+  it('is responding', function () {
     assert(!this.err);
   });
 
