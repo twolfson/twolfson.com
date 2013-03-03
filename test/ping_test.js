@@ -4,33 +4,37 @@ var assert = require('assert'),
     config = {
       host: 'http://twolfson.com',
       url: function getUrl (path) {
-        return host + path;
+        return this.host + path;
       }
     };
 
 describe('twolfson.com', function () {
-  // Grab index page
   before(function (done) {
+    // Grab index page
     var that = this,
         index = config.url('/');
     request.get(index, function getIndexPage (err, res, body) {
+      // Save response
       that.err = err;
       that.res = res;
       that.body = body;
+
+      // Callback
+      done(err);
     });
   });
 
-  is('responding', function () {
+  it('is responding', function () {
     assert(!this.err);
   });
 
-  is('responding with valid status code', function () {
-    var statusCode = res.statusCode;
-    console.log(statusCode);
-    // assert(this
+  it('is responding with valid status code', function () {
+    var statusCode = this.res.statusCode;
+    assert(statusCode >= 200, statusCode + ' is not above 200');
+    assert(statusCode < 300, statusCode + ' is not under 300');
   });
 
-  is('responding with content', function () {
-    // TODO: COntinue
+  it('is responding with content', function () {
+    assert(this.body);
   });
 });
