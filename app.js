@@ -61,8 +61,8 @@ if (inDevelopment) {
 
     // If there is a test query, render the proper response
     if (test) {
-      var status = test !== 'fail';
-      res.render('contact', {'page': 'contact', 'status': status});
+      var emailStatus = test !== 'fail';
+      res.render('contact', {'page': 'contact', 'emailStatus': emailStatus});
     } else {
     // Otherwise, continue
       next();
@@ -100,7 +100,7 @@ app.post('/contact', function (req, res, next) {
     'to': 'Todd Wolfson <todd@twolfson.com>',
     'subject': 'Incoming query from twolfson.com'
   }, function (err, message) {
-    info.status = !err;
+    info.emailStatus = !err;
     res.render('contact', info);
   });
 });

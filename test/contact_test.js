@@ -18,7 +18,10 @@ describe('A submission to twolfson.com/contact', function () {
       'message': 'Hello World!'
     }
   };
-  before(config.navigateTo(options));
+  before(function (done) {
+    this.timeout(5000);
+    config.navigateToRaw.call(this, options, done);
+  });
 
   it('does not have form elements', function () {
     var body = this.body;

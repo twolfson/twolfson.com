@@ -4,9 +4,9 @@
       <fieldset id="contactFieldset">
         <legend><h3>Contact Details</h3></legend>
         <%
-          var status;
+          var emailStatus;
           // If there was no submission attempt
-          if (status === undefined) {
+          if (emailStatus === undefined) {
         %>
         <div class="control-group">
           <label for="name" class="control-label" required="required">Name:&nbsp;</label>
@@ -24,7 +24,7 @@
           <button type="submit" id="submitButton" class="even-row theme border btn-xlarge">Contact Todd</button>
         </div>
         <%
-          } else if (status === true) {
+          } else if (emailStatus === true) {
           // Otherwise, if the submission was a success
         %>
           <div class="layout-center">
