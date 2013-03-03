@@ -22,7 +22,6 @@ var config = global.config = {
 
     // Call request
     var that = this;
-    console.log(options);
     request(options, function getPage (err, res, body) {
       // Save response
       that.err = err;
@@ -35,7 +34,7 @@ var config = global.config = {
   },
   navigateTo: function (options) {
     return function navFn (cb) {
-      return config.navigateToRaw(options, cb);
+      return config.navigateToRaw.call(this, options, cb);
     };
   }
 };
