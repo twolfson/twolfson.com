@@ -1,13 +1,7 @@
-// Load in modules
-var assert = require('assert'),
-    request = require('request'),
-    config = {
-      host: 'http://twolfson.com',
-      url: function getUrl (path) {
-        return this.host + path;
-      }
-    };
+// Load in setup
+require('./setup');
 
+// Start our test suite
 describe('twolfson.com', function () {
   before(function (done) {
     // Grab index page
