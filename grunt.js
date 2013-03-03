@@ -34,6 +34,9 @@ module.exports = function (grunt) {
         algorithm: 'alt-diagonal'
       }
     },
+    curl: {
+      'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js'
+    },
     watch: {
       css: {
         files: 'public/css/**/*.less',
@@ -55,8 +58,11 @@ module.exports = function (grunt) {
   // Load in grunt-spritesmith
   grunt.loadNpmTasks('grunt-spritesmith');
 
+  // Load grunt-curl
+  grunt.loadNpmTasks('grunt-curl');
+
   // Create a grunt task to update projects
-  grunt.registerTask('projects', function () {
+  grunt.registerTask('projects', 'Download projects info', function () {
     var cp = require('child_process'),
         done = this.async();
     cp.exec('node ' + __dirname + '/projects/index.js');

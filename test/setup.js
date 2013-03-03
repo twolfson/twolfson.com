@@ -1,10 +1,17 @@
 // Load in modules
+var fs = require('fs');
+global.fs = fs;
 global.assert = require('assert');
 global.request = require('request');
+
+// Load in DOM specific modules
 global.jsdom = require('jsdom');
+var jqueryPath =  __dirname + '/test_files/jquery.js';
+global.jqueryPath = jqueryPath;
+global.jquerySrc = fs.readFileSync(jqueryPath, 'utf8');
 
 // Set up config
-var config = global.config = {
+var config = {
   host: 'http://twolfson.com',
   url: function getUrl (path) {
     return this.host + path;
@@ -38,3 +45,4 @@ var config = global.config = {
     };
   }
 };
+global.config = config;

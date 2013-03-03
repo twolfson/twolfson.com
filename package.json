@@ -1,6 +1,6 @@
 {
   "name": "twolfson.com",
-  "version": "1.0.149",
+  "version": "1.0.150",
   "description": "twolfson.com server",
   "main": "app.js",
   "dependencies": {
@@ -17,7 +17,8 @@
     "grunt-spritesmith": "~0.5.0",
     "mocha": "~1.8.1",
     "request": "~2.14.0",
-    "jsdom": "~0.5.1"
+    "jsdom": "~0.5.1",
+    "grunt-curl": "~0.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
