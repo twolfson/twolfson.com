@@ -24,7 +24,20 @@ describe('twolfson.com/projects', function () {
   });
 
   it('is counting stars', function () {
-    // Verify jQuery is on the page
-    console.log(this.window);
+    // Grab starCount
+    var $ = this.window.$,
+        $starCount = $('.starCount');
+    assert.notEqual($starCount.length, 0);
+
+    // Assert there are stars
+    // text seems to be returning a weird number
+    // var starCountStr = $starCount.text().trim(),
+    var starCountStr = $starCount.html().trim(),
+        starCount = +starCountStr;
+    assert.notEqual(starCountStr, '');
+    assert.notEqual(starCount, 0);
+
+    // Check against NaN
+    assert.strictEqual(starCount, starCount);
   });
 });
