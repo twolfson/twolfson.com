@@ -28,7 +28,6 @@ var config = {
     }
 
     // Call request
-    console.log(options);
     var that = this;
     request(options, function getPage (err, res, body) {
       // Save response
@@ -37,13 +36,11 @@ var config = {
       that.body = body;
 
       // Callback
-      console.log(err, res);
       cb(err);
     });
   },
   navigateTo: function (options) {
     return function navFn (cb) {
-      console.log(cb + '');
       return config.navigateToRaw.call(this, options, cb);
     };
   }
