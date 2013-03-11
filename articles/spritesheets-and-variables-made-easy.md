@@ -61,3 +61,23 @@ Another aside: I wanted to add URL based engine (canvas via an API) but could no
 [engines]: https://github.com/Ensighten/spritesmith#requirements
 [node-canvas]: https://github.com/LearnBoost/node-canvas
 
+### layout
+This was built for re-use and modular purification. It was made agnostic so that anything with a height and width dimension could be laid out in a specific algorithm.
+
+### json2css
+This was built for simplified unit testing and re-use. It was built so that new templates could be easily added and tested.
+
+### json-content-demux
+This was built as an answer to a slick solution for encapsulating the relationship between template data and its template.
+
+It initially came from [toto][toto] and it has come up time and time again as a slick solution to this encapsulation. I have used it in [jojo][jojo] and want to use it as an [elegant solution][view-contained] for keeping template interactivity self-contained.
+
+[toto]: https://github.com/cloudhead/toto
+[jojo]: https://github.com/twolfson/jojo
+[view-contained]: https://gist.github.com/twolfson/4464886
+
+Ending
+------
+This project was very fun to build and had a lot of thought put into it.
+
+I hope you enjoy using it!
