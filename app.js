@@ -21,6 +21,19 @@ app.use('/public', express['static'](__dirname + '/public'));
 
 app.settings['jojo formatter'] = __dirname + '/gfmParser';
 
+// Overwrite getUrl
+// TODO: Repair this properly in jojo
+jojo.getUrl = function (article) {
+  var urlParts = [],
+      date = article._date || article.date;
+  if (date) {
+    urlParts.push(date.replace(/\//g, '-'));
+  }
+  urlParts.push(article.title.replace(/\s+/g, '-'));
+
+  return urlParts.join('-').toLowerCase();
+};
+
 var getXmlSummary = jojo.makeSummary(150, true);
 jojo.getSummary = function (article, formatter) {
   var rawContent = article.rawContent,
