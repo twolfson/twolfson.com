@@ -54,24 +54,6 @@
     "pageUrl": "https://github.com/twolfson/Mason.js"
   },
   {
-    "name": "grunt-curl",
-    "description": "Download remote files easily via grunt",
-    "stars": 4,
-    "forks": 2,
-    "github": "twolfson/grunt-curl",
-    "srcUrl": "https://github.com/twolfson/grunt-curl",
-    "pageUrl": "https://github.com/twolfson/grunt-curl"
-  },
-  {
-    "name": "grunt-html-pret&hellip;",
-    "description": "Prettyprint HTML via grunt",
-    "stars": 4,
-    "forks": 1,
-    "github": "twolfson/grunt-html-prettyprinter",
-    "srcUrl": "https://github.com/twolfson/grunt-html-prettyprinter",
-    "pageUrl": "https://github.com/twolfson/grunt-html-prettyprinter"
-  },
-  {
     "name": "Halo",
     "description": "Client-side MVC framework based on Addy Osmani's Aura",
     "stars": 3,
@@ -83,11 +65,11 @@
   {
     "name": "jqueryp",
     "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
-    "stars": 3,
-    "forks": 1,
-    "github": "Ensighten/jqueryp",
-    "srcUrl": "https://github.com/Ensighten/jqueryp",
-    "pageUrl": "https://github.com/Ensighten/jqueryp"
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/jqueryp",
+    "srcUrl": "https://github.com/twolfson/jqueryp",
+    "pageUrl": "https://github.com/twolfson/jqueryp"
   },
   {
     "name": "Atomic Event",
@@ -115,43 +97,6 @@
     "github": "Ensighten/Builder",
     "srcUrl": "https://github.com/Ensighten/Builder",
     "pageUrl": "https://github.com/Ensighten/Builder"
-  },
-  {
-    "name": "grunt-retro",
-    "description": "Support grunt@0.3 syntax in grunt@0.4",
-    "stars": 1,
-    "forks": 1,
-    "github": "twolfson/grunt-retro",
-    "srcUrl": "https://github.com/twolfson/grunt-retro",
-    "pageUrl": "https://github.com/twolfson/grunt-retro"
-  },
-  {
-    "name": "grunt-zip",
-    "description": "Zip and unzip files via grunt",
-    "stars": 1,
-    "forks": 1,
-    "github": "twolfson/grunt-curl",
-    "srcUrl": "https://github.com/twolfson/grunt-curl",
-    "pageUrl": "https://github.com/twolfson/grunt-curl"
-  },
-  {
-    "name": "bookmarks",
-    "description": "My personal collection of bookmarks",
-    "stars": 1,
-    "forks": 0,
-    "github": "twolfson/bookmarks",
-    "url": "http://twolfson.github.com/bookmarks/",
-    "srcUrl": "https://github.com/twolfson/bookmarks",
-    "pageUrl": "http://twolfson.github.com/bookmarks/"
-  },
-  {
-    "name": "protips",
-    "description": "Assorted collection of protips",
-    "stars": 1,
-    "forks": 0,
-    "github": "twolfson/protips",
-    "srcUrl": "https://github.com/twolfson/protips",
-    "pageUrl": "https://github.com/twolfson/protips"
   },
   {
     "name": "twolfson.com",

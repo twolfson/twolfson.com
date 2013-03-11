@@ -1,14 +1,5 @@
 [
   {
-    "name": "jquip",
-    "description": "jQuery in Parts",
-    "stars": 1310,
-    "forks": 65,
-    "github": "mythz/jquip",
-    "srcUrl": "https://github.com/mythz/jquip",
-    "pageUrl": "https://github.com/mythz/jquip"
-  },
-  {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
     "stars": 1220,
@@ -25,5 +16,14 @@
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
+  },
+  {
+    "name": "jquip",
+    "description": "jQuery in Parts",
+    "stars": 1310,
+    "forks": 65,
+    "github": "mythz/jquip",
+    "srcUrl": "https://github.com/mythz/jquip",
+    "pageUrl": "https://github.com/mythz/jquip"
   }
 ]
