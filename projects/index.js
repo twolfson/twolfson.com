@@ -57,6 +57,22 @@ function updateStats() {
 
   // If we are being run standalone, save file
   if (!module.parent) {
+    // Sort the scripts and contributions by stars then forks
+    function sortRepos(a, b) {
+      var aStars = a.stars,
+          bStars = b.stars;
+      if (aStars < bStars) { return 1; }
+      if (aStars > bStars) { return -1; }
+
+      var aForks = a.forks,
+          bForks = b.forks;
+      if (aForks < bForks) { return 1; }
+      if (aForks > bForks) { return -1; }
+      return 0;
+    }
+    scripts.sort(sortRepos);
+    contributions.sort(sortRepos);
+
     // In a minute, save the updates to their respective JSON files
     setTimeout(function () {
       fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
