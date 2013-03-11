@@ -13,10 +13,11 @@ app.set('view engine', 'ejs');
 app.use('/public', express['static'](__dirname + '/dist'));
 app.use('/public', express['static'](__dirname + '/public'));
 
-// If we are in a production environment, track whenever an RSS is requested
-if (inProduction) {
-  app.get('/index.xml', ga);
-}
+// DEV: Stopping tracking of this since it bloats analytics
+// // If we are in a production environment, track whenever an RSS is requested
+// if (inProduction) {
+//   app.get('/index.xml', ga);
+// }
 
 app.settings['jojo formatter'] = __dirname + '/gfmParser';
 
