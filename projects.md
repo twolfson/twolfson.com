@@ -7,15 +7,24 @@ twolfson.com [low priority]
 jojo
 140byt.es
 mason.js
-
-### in progress
+Builder [Ensighten]
+Halo [Ensighten]
+Sauron [Ensighten]
 jsmin with source maps
 spritesmith
-crossbones [will be a while before release since BDD pipe dreams supersets this]
-Metropolis [Ensighten]
-Builder? [Ensighten]
-UI framework [Ensighten]
-Sauron [Ensighten]
+
+bookmarks
+protips
+grunt-curl
+grunt-zip
+grunt-retro
+grunt-html-prettyprinter
+
+### in progress
+crossbones -- semi-complete
+Metropolis -- abandoned [Ensighten]
+kaleidoscope and friends
+
 
 competitions
 ------------

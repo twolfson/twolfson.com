@@ -2,7 +2,7 @@
   {
     "name": "File Watcher",
     "description": "Watch your files for a hands-free browser refresh!",
-    "stars": 94,
+    "stars": 92,
     "forks": 1,
     "github": "twolfson/File-Watcher",
     "srcUrl": "https://github.com/twolfson/File-Watcher",
@@ -20,8 +20,8 @@
   {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
-    "stars": 16,
-    "forks": 1,
+    "stars": 23,
+    "forks": 2,
     "github": "twolfson/grunt-jsmin-sourcemap",
     "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
@@ -29,8 +29,8 @@
   {
     "name": "spritesmith",
     "description": "Converts images into a spritesheet and CSS preprocessor variables",
-    "stars": 7,
-    "forks": 3,
+    "stars": 9,
+    "forks": 4,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -48,7 +48,7 @@
     "name": "Mason.js",
     "description": "HTML pre-processor that auto-instantiates UI interactivity",
     "stars": 4,
-    "forks": 1,
+    "forks": 2,
     "github": "twolfson/Mason.js",
     "srcUrl": "https://github.com/twolfson/Mason.js",
     "pageUrl": "https://github.com/twolfson/Mason.js"
@@ -65,8 +65,8 @@
   {
     "name": "jqueryp",
     "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
-    "stars": 2,
-    "forks": 1,
+    "stars": 0,
+    "forks": 0,
     "github": "twolfson/jqueryp",
     "srcUrl": "https://github.com/twolfson/jqueryp",
     "pageUrl": "https://github.com/twolfson/jqueryp"
@@ -106,5 +106,60 @@
     "github": "twolfson/twolfson.com",
     "srcUrl": "https://github.com/twolfson/twolfson.com",
     "pageUrl": "https://github.com/twolfson/twolfson.com"
+  },
+  {
+    "name": "bookmarks",
+    "description": "My personal collection of bookmarks",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/bookmarks",
+    "url": "http://twolfson.github.com/bookmarks/",
+    "srcUrl": "https://github.com/twolfson/bookmarks",
+    "pageUrl": "http://twolfson.github.com/bookmarks/"
+  },
+  {
+    "name": "protips",
+    "description": "Assorted collection of protips",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/protips",
+    "srcUrl": "https://github.com/twolfson/protips",
+    "pageUrl": "https://github.com/twolfson/protips"
+  },
+  {
+    "name": "grunt-curl",
+    "description": "Download remote files easily via grunt",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/grunt-curl",
+    "srcUrl": "https://github.com/twolfson/grunt-curl",
+    "pageUrl": "https://github.com/twolfson/grunt-curl"
+  },
+  {
+    "name": "grunt-zip",
+    "description": "Zip and unzip files via grunt",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/grunt-curl",
+    "srcUrl": "https://github.com/twolfson/grunt-curl",
+    "pageUrl": "https://github.com/twolfson/grunt-curl"
+  },
+  {
+    "name": "grunt-retro",
+    "description": "Support grunt@0.3 syntax in grunt@0.4",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/grunt-retro",
+    "srcUrl": "https://github.com/twolfson/grunt-retro",
+    "pageUrl": "https://github.com/twolfson/grunt-retro"
+  },
+  {
+    "name": "grunt-html-pret&hellip;",
+    "description": "Prettyprint HTML via grunt",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/grunt-html-prettyprinter",
+    "srcUrl": "https://github.com/twolfson/grunt-html-prettyprinter",
+    "pageUrl": "https://github.com/twolfson/grunt-html-prettyprinter"
   }
 ]
