@@ -68,6 +68,11 @@ function updateStats() {
           bForks = b.forks;
       if (aForks < bForks) { return 1; }
       if (aForks > bForks) { return -1; }
+
+      var aName = a.name,
+          bName = b.name;
+      if (aName > bName) { return 1; }
+      if (aName < bName) { return -1; }
       return 0;
     }
     scripts.sort(sortRepos);
