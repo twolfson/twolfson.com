@@ -62,14 +62,14 @@ There are 4 steps which Builder runs through:
 [html-elements]: https://developer.mozilla.org/en-US/docs/DOM/HTMLElement
 [jquery-elements]: http://api.jquery.com/jQuery/#jQuery2
 
-Builder can be [tweaked to your liking][tweaks] and presents [presets][presets] which can be found in the Builder documentation.
+Builder can be [tweaked to your liking][tweaks] and has [presets][presets] which can be found in the Builder documentation.
 
 [tweaks]: https://github.com/Ensighten/Builder#documentation
 [presets]: https://github.com/Ensighten/Builder#presets
 
 Origin
 ------
-[Builder][Builder] came out of a want to DRY up client side code. I saw the pattern and repetition present that the same template engine and jQuery plugins would be called over and over in different places.
+[Builder][Builder] came out of a want to <abbr title="don't repeat yourself">DRY</abbr> up client side code. I saw the pattern and repetition present that the same template engine and jQuery plugins would be called over and over in different places.
 
 I attempted to resolve the issue at first via [Mason.js][mason.js]. This would act as a post-template processor, converting strings to DOM elements via [its own custom markup][mason-examples].
 
