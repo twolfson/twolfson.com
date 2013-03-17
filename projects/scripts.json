@@ -9,13 +9,13 @@
     "pageUrl": "https://github.com/twolfson/File-Watcher"
   },
   {
-    "name": "jojo",
-    "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 24,
-    "forks": 1,
-    "github": "twolfson/jojo",
-    "srcUrl": "https://github.com/twolfson/jojo",
-    "pageUrl": "https://github.com/twolfson/jojo"
+    "name": "spritesmith",
+    "description": "Converts images into a spritesheet and CSS preprocessor variables",
+    "stars": 47,
+    "forks": 4,
+    "github": "Ensighten/grunt-spritesmith",
+    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
+    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
     "name": "jsmin-sourcemap",
@@ -27,13 +27,13 @@
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
   },
   {
-    "name": "spritesmith",
-    "description": "Converts images into a spritesheet and CSS preprocessor variables",
-    "stars": 9,
-    "forks": 4,
-    "github": "Ensighten/grunt-spritesmith",
-    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
-    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
+    "name": "jojo",
+    "description": "the 10 second blog engine for hackers (in javascript)",
+    "stars": 24,
+    "forks": 1,
+    "github": "twolfson/jojo",
+    "srcUrl": "https://github.com/twolfson/jojo",
+    "pageUrl": "https://github.com/twolfson/jojo"
   },
   {
     "name": "CSS Query",
@@ -61,15 +61,6 @@
     "github": "Ensighten/Halo",
     "srcUrl": "https://github.com/Ensighten/Halo",
     "pageUrl": "https://github.com/Ensighten/Halo"
-  },
-  {
-    "name": "jqueryp",
-    "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
-    "stars": 0,
-    "forks": 0,
-    "github": "twolfson/jqueryp",
-    "srcUrl": "https://github.com/twolfson/jqueryp",
-    "pageUrl": "https://github.com/twolfson/jqueryp"
   },
   {
     "name": "Atomic Event",
@@ -106,5 +97,14 @@
     "github": "twolfson/twolfson.com",
     "srcUrl": "https://github.com/twolfson/twolfson.com",
     "pageUrl": "https://github.com/twolfson/twolfson.com"
+  },
+  {
+    "name": "jqueryp",
+    "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
+    "stars": 0,
+    "forks": 0,
+    "github": "twolfson/jqueryp",
+    "srcUrl": "https://github.com/twolfson/jqueryp",
+    "pageUrl": "https://github.com/twolfson/jqueryp"
   }
 ]
