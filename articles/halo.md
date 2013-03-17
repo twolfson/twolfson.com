@@ -15,17 +15,36 @@ The end result was so modular that we had a [standalone web page][sandbox] for l
 
 [sandbox]: https://github.com/Ensighten/Halo.extras/blob/master/src/pages/sandbox.html
 
-If you want to get started using Halo, please visit the [README][Halo]. The remainder of this article will cover what it is good at, bad at, and room for improvement.
+If you want to get started using Halo, please visit the [README][Halo]. The remainder of this article will cover what it is good/bad at.
 
 # The Good
 
-As already mentioned, Halo is great for modular
+As already mentioned, Halo is great at modularity. Every model, view, and controller is self-contained with a global mediator, [Sauron][Sauron] to talk through if they need to.
+
+[Sauron]: https://github.com/Ensighten/Sauron
+
+The convention of the framework is to keep interactivity at the HTML/Builder level. This leads to a flat and understandable view infrastructure since everything acts as jQuery plugin.
+
+There are concrete channels/methods that controllers/models interact over. However, they are on an extensible system to create custom side-channels as necessary. For example, `Sauron.voice('dom/insert')` is used for the [requiredom][requiredom] jquery plugin.
+
+[requiredom]: https://github.com/Ensighten/Halo.extras/blob/master/src/public/js/requiredom.js
+
+The framework is pretty loose in terms of input/output expected for models/controllers. It allows for infinite parameters and any of them could be callbacks which allows for quick hacks if you really need to.
 
 # The Bad
 
 Models could be better.
 
 State could use a boost.
+
+Controllers/models need to be standardized to a certain parameter length.
+
+Currently, you can only have one controller of its type at a time. Interestingly, this has never given me a trouble; there is never the exact same set of business logic in two places. If there is, it is probably improperly placed view logic and/or something is organizationally incorrect.
+
+However, I still find this as an open wound. It has been partially addressed with the [factory pattern][factory] but is still an [open issue][multi-controller-issue].
+
+[factory]: https://github.com/Ensighten/Halo.extras/blob/master/src/controllers/ModalFactory.js
+[mutli-controller-issue]: https://github.com/Ensighten/Halo/issues/14
 
 # The Future
 
