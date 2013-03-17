@@ -19,28 +19,37 @@ If you want to get started using Halo, please visit the [README][Halo]. The rema
 
 # The Good
 
+## Modularity
 As already mentioned, Halo is great at modularity. Every model, view, and controller is self-contained with a global mediator, [Sauron][Sauron] to talk through if they need to.
 
 [Sauron]: https://github.com/Ensighten/Sauron
 
 The convention of the framework is to keep interactivity at the HTML/Builder level. This leads to a flat and understandable view infrastructure since everything acts as jQuery plugin.
 
+## Concrete channels on top of extensible system
 There are concrete channels/methods that controllers/models interact over. However, they are on an extensible system to create custom side-channels as necessary. For example, `Sauron.voice('dom/insert')` is used for the [requiredom][requiredom] jquery plugin.
 
 [requiredom]: https://github.com/Ensighten/Halo.extras/blob/master/src/public/js/requiredom.js
 
+## Loose input/output
 The framework is pretty loose in terms of input/output expected for models/controllers. It allows for infinite parameters and any of them could be callbacks which allows for quick hacks if you really need to.
 
 # The Bad
 
+## Models
 Models need some work. They are currently extremely loose in that there is no framework around schema/creation/maintennance. It was initially conceived that APIs should do the heavy lifting, however, there should be some level of support on the client-side as well.
 
-State could use a boost. There is currently no template for a state model, as a result, URL maintenance behind the mark. However, since we have this loose framework, something awesome can be built -- like a `state` model (internally stored object) with its own set of logic and proprietary URL format (maybe something like [URLON][URLON]). That is something you cannot get out of links alone =)
+## State
+State could use a boost; there is currently no template for a state model(s). As a result, state persistance/URL maintenance has a higher barrier to entry. However, there is a great foundation here; we can create a `state` model (internally stored object) with its own set of logic. Then, we can use a slick URL format (e.g. [URLON][URLON]) for persistance.
+
+This has the benefit of removing brittle links/routes from your HTML and keeping state at the application level rather than template level.
 
 [URLON]: http://blog.vjeux.com/2011/javascript/urlon-url-object-notation.html
 
-Controllers/models are not standardized to a specific parameter length. This is a counterpoint to the `infinite parameters` point above. It is really a coinflip whether it should be done or not but there could be certain benefits such as a less guesswork in each controller.
+## Non-standardized parameter length
+Controllers/models are not standardized to a specific parameter length. This is a counterpoint to the `infinite parameters` point mentioned above. It is a coinflip if there should be enforcement; the benefit being less guesswork about each controller's input.
 
+## Singleton models/controllers
 Currently, you can only have one controller of its type at a time. Interestingly, this has never given me a trouble; there is never the exact same set of business logic in two places. If there is, it is probably improperly placed view logic and/or something is organizationally incorrect.
 
 However, I still find this as an open wound. It has been partially addressed with the [factory pattern][factory] but is still an [open issue][multi-controller-issue].
