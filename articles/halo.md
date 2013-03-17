@@ -33,11 +33,13 @@ The framework is pretty loose in terms of input/output expected for models/contr
 
 # The Bad
 
-Models could be better.
+Models need some work. They are currently extremely loose in that there is no framework around schema/creation/maintennance. It was initially conceived that APIs should do the heavy lifting, however, there should be some level of support on the client-side as well.
 
-State could use a boost.
+State could use a boost. There is currently no template for a state model, as a result, URL maintenance behind the mark. However, since we have this loose framework, something awesome can be built -- like a `state` model (internally stored object) with its own set of logic and proprietary URL format (maybe something like [URLON][URLON]). That is something you cannot get out of links alone =)
 
-Controllers/models need to be standardized to a certain parameter length.
+[URLON]: http://blog.vjeux.com/2011/javascript/urlon-url-object-notation.html
+
+Controllers/models are not standardized to a specific parameter length. This is a counterpoint to the `infinite parameters` point above. It is really a coinflip whether it should be done or not but there could be certain benefits such as a less guesswork in each controller.
 
 Currently, you can only have one controller of its type at a time. Interestingly, this has never given me a trouble; there is never the exact same set of business logic in two places. If there is, it is probably improperly placed view logic and/or something is organizationally incorrect.
 
