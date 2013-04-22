@@ -11,7 +11,15 @@
 [npp]: http://notepad-plus-plus.org/
 [subl]: http://www.sublimetext.com/2
 
-There is some normal [npp][npp] utilities like `Find: In Current File` and `Find: In Open Files` as well as new ones like `Find: In Project` and `Find: In...`.
+There is some normal [npp][npp] utilities,
+
+- `Find: In Current File`
+- `Find: In Open Files`
+
+as well as some new ones,
+
+- `Find: In Project`
+- `Find: In...`
 
 For your convenience, [Find++][fpp] can be installed via [Package Control][pkg-ctrl].
 
