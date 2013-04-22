@@ -128,7 +128,7 @@ function getSrcUrl(item) {
 function getPageUrl(item) {
   var srcUrl = getSrcUrl(item),
       mdn = item.mdn,
-      pageUrl = item.pageUrl;
+      pageUrl = item.pageUrl || item.url;
 
   // If the pageUrl is not defined
   if (pageUrl === undefined) {
