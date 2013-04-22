@@ -63,6 +63,15 @@
     "pageUrl": "https://github.com/Ensighten/Halo"
   },
   {
+    "name": "Find++",
+    "description": "Find functionality from Notepad++ for Sublime Text 2",
+    "stars": 3,
+    "forks": 0,
+    "github": "twolfson/FindPlusPlus",
+    "srcUrl": "https://github.com/twolfson/FindPlusPlus",
+    "pageUrl": "https://github.com/twolfson/FindPlusPlus"
+  },
+  {
     "name": "Atomic Event",
     "description": "Race condition handler under <a href=\"http://140byt.es/\" target=\"_blank\">140 bytes</a>",
     "stars": 2,
