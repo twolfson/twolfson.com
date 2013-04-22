@@ -107,9 +107,6 @@ function getSrcUrl(item) {
     return srcUrl;
   }
 
-  // Fallback srcUrl to url
-  srcUrl = item.url;
-
   // If there is a github repo, use that
   if (github !== undefined) {
     // If the item is a gist, return it as such
@@ -128,7 +125,7 @@ function getSrcUrl(item) {
 function getPageUrl(item) {
   var srcUrl = getSrcUrl(item),
       mdn = item.mdn,
-      pageUrl = item.pageUrl || item.url;
+      pageUrl = item.pageUrl;
 
   // If the pageUrl is not defined
   if (pageUrl === undefined) {
