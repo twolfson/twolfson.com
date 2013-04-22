@@ -90,6 +90,7 @@ function updateStats() {
 setInterval(updateStats, everyHour);
 process.nextTick(updateStats);
 
+console.log(scripts);
 module.exports = {
   "scripts": scripts,
   "competitions": competitions,
@@ -127,7 +128,7 @@ function getSrcUrl(item) {
 function getPageUrl(item) {
   var srcUrl = getSrcUrl(item),
       mdn = item.mdn,
-      pageUrl = item.url;
+      pageUrl = item.pageUrl;
 
   // If the pageUrl is not defined
   if (pageUrl === undefined) {
