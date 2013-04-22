@@ -36,6 +36,15 @@
     "pageUrl": "https://github.com/twolfson/jojo"
   },
   {
+    "name": "What size is my browser?",
+    "description": "A media query solution determine your browser dimensions",
+    "stars": 6,
+    "forks": 0,
+    "github": "twolfson/winfiles",
+    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
+    "pageUrl": "http://whatsizeismybrowser.com/"
+  },
+  {
     "name": "CSS Query",
     "description": "Lightweight cross-browser CSS selector (&lt;3kb)",
     "stars": 6,
@@ -106,6 +115,33 @@
     "github": "twolfson/twolfson.com",
     "srcUrl": "https://github.com/twolfson/twolfson.com",
     "pageUrl": "https://github.com/twolfson/twolfson.com"
+  },
+  {
+    "name": "dotfiles",
+    "description": "A collection and documentation of my dotfiles and workflow",
+    "stars": 1,
+    "forks": 0,
+    "github": "twolfson/dotfiles",
+    "srcUrl": "https://github.com/twolfson/dotfiles",
+    "pageUrl": "https://github.com/twolfson/dotfiles"
+  },
+  {
+    "name": "winfiles",
+    "description": "A collection and documentation of my Windows files and workflow",
+    "stars": 1,
+    "forks": 0,
+    "github": "twolfson/winfiles",
+    "srcUrl": "https://github.com/twolfson/winfiles",
+    "pageUrl": "https://github.com/twolfson/winfiles"
+  },
+  {
+    "name": "bookmarks",
+    "description": "A searchable collection of my bookmarks",
+    "stars": 1,
+    "forks": 0,
+    "github": "twolfson/bookmarks",
+    "srcUrl": "https://github.com/twolfson/bookmarks",
+    "pageUrl": "http://twolfson.github.io/bookmarks/"
   },
   {
     "name": "jqueryp",

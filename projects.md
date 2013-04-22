@@ -12,19 +12,27 @@ Halo [Ensighten]
 Sauron [Ensighten]
 jsmin with source maps
 spritesmith
+find++
 
+whatsizeismybrowser
+dotfiles
+winfiles
 bookmarks
+
 protips
 grunt-curl
 grunt-zip
 grunt-retro
 grunt-html-prettyprinter
+controlpad
 
 ### in progress
-crossbones -- semi-complete
-Metropolis -- abandoned [Ensighten]
-kaleidoscope and friends
+kaleidoscope and friends -- deferred
+doubleshot -- in progress
 
+crossbones -- abandoned
+sculptor -- abandoned
+Metropolis -- abandoned [Ensighten]
 
 competitions
 ------------
