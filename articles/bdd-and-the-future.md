@@ -5,23 +5,24 @@
   "_summary": "A presentation overviewing the history of BDD and some of my experiments."
 }
 
-## Preface
-I came to these conclusions during my senior year of college. It was the eventual answer to the question "What do you want to do when you leave college?".
+I recently spoke at [UtahJS][utahjs] and presented on the history of BDD and some of my experiments.
 
-There were a few answers that came to mind "Have fun.", "Be happy.", "Do what I love.", "Make a positive impact on the world." but none felt as good as the conclusion below.
+The presentation can be [found here][presentation] with the source code on [GitHub][source]. It covers the invention of TDD, evolution into BDD, the various BDD flavors, and all JS testing options currently available.
 
-## The answer
+[utahjs]:
+[presentation]:
+[source]:
 
-I open source because
+For a while, I have been experimenting with BDD. At first, I wanted a cross-framework test runner from [vows][vows] to [mocha][mocha]. This was initially called [Skeleton][skeleton], later renamed to [Crossbones][crossbones] and was successfully implemented in the [Sauron][sauron] test suite.
 
-> I am lucky. I am intelligent and was not born into poverty.
->
-> Inheritly, I have a responsibility since I am endowed with this gift.
->
-> I am responsible to do what they cannot because they don't have the same opportunities
->
-> or priveleges as I do. As a result, I dedicate my free time to making the world a better place.
+[vows]:
+[mocha]:
+[skeleton]:
+[crossbones]:
+[sauron]:
 
-## Afterword
+This was great but I wanted something better. This required writing the tests in their own framework
 
-I don't mean for the above to come off as pretentious. I am being as honest as I can. I apologize if I offended you with what I believe is the truth.
+```js
+// TODO: Skeleton test samples
+```
