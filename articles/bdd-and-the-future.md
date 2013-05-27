@@ -168,8 +168,36 @@ I am quite satisfied with the current result. There are a few kinks to work out 
 [yamlish]: https://github.com/isaacs/yamlish
 [markdown]: http://daringfireball.net/projects/markdown/
 
+[yamlish][yamlish] (same ordering issues as JSON)
+
+```yaml
+A strawberry:
+  when washed:
+    - is red
+    - is tasty
+```
+
+Proprietary line-delimited markup
+
+```
+A strawberry
+  when washed
+    is red
+    is tasty
+```
+
+[Markdown][markdown], ordered since it compiles to XML
+
 ```markdown
-# A banana
-## when peeled
-  - is ripe
+# A strawberry
+## when washed
+  - is red
+  - is tasty
+```
+
+```markdown
+# A strawberry
+## when washed
+### is red
+### is tasty
 ```
