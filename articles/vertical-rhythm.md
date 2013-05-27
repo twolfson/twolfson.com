@@ -8,11 +8,9 @@
 
 On various occasions at my new company, I have been asked to use less comments. This is a funny problem to have; it wasn't that I was abusing comments, it was that the code was in Python and self-descriptive enough.
 
-At that point, I realized that while my code was consistent and well-commented, there wasn't a rhyme or reason to my structure. When I initially started developing in PHP, I began to chunk my code because it "just felt right".
+At that point, I realized that while my code was consistent and well-commented, there wasn't a rhyme or reason to my structure. I have had the same progression to most programmers from solid code block to chunked and commented code blocks.
 
-Some of my first PHP (August 2008), no comments, solid block of code.
-
->    I am very much repulsed by this code.
+> That sad starting place.
 
 ```php
 $file_choice = $_POST['file_choice'];
@@ -23,41 +21,7 @@ $ext_link_loc = trim(htmlspecialchars($_POST['ext_link_loc']));
 $link_order = $_POST['link_order'];
 ```
 
-A couple of years later (September 2010), comments are finally in, and chunking code.
-
->    While the intent of the code is quite nasty, the code itself feels very clean.
-
-```php
-//Run through all items and add some formatting
-foreach( $listing as $key => $item )
-{
-  //Hyperlink URLs
-  $item = preg_replace(
-      '/(.*\s|^)(http:\/\/.*?)(\s|$)/',
-      '$1<a href="$2">$2</a>$3',
-      $item
-    );
-
-  //Hyperlink Emails
-  $item = preg_replace(
-        '/(.*\s|^)(.*?@.*?)(\s|$)/',
-        '$1<a href="mailto:$2">$2</a>$3',
-        $item
-      );
-
-  //Convert \n to br's
-  $item = nl2br( $item );
-
-  //Save changes
-  $listing[$key] = $item;
-}
-```
-
-Suprisingly, my comment style has not progressed much since this state. Instead, I spent the time developing an architectural intuition.
-
-> The following snippet was grabbed from [spritesmith][spritesmith] (November 2012)
-
-[spritesmith]: https://github.com/Ensighten/spritesmith/blob/1659f6d43a9c35626b783143a10df797ec115984/src/smith.js#L41-L57
+> The well architected and well commented holy land.
 
 ```js
 // Create our smiths
@@ -79,3 +43,4 @@ async.waterfall([
     });
 ```
 
+However,
