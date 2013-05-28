@@ -54,11 +54,12 @@ I never questioned this transition or why I don't write more/less comments. It a
 ## Attempting to understand the intuitive
 For a while I have been making an attempt to learn about design and user experience. One concept that has jumped out at me is [vertical rhythm][vert-rhythm].
 
-> In fact, it caused me to refactor my CSS to use [Twitter Bootstrap][bootstrap] so I could get [vertical rhythm][vert-rhythm-commit] here.
+> In fact, it caused me to refactor my CSS to use [Twitter Bootstrap][bootstrap] so I could get [vertical rhythm][vert-rhythm-commit] on [twolfson.com][twolfson.com].
 
-[vert-rhythm]:
-[bootstrap]:
-[vert-rhythm-commit]:
+[vert-rhythm]: http://24ways.org/2006/compose-to-a-vertical-rhythm/
+[bootstrap]: http://twitter.github.io/bootstrap/
+[vert-rhythm-commit]: https://github.com/twolfson/twolfson.com/commit/09b11bd66c51bc1348b4e542ddd5cc708636cb02
+[twolfson.com]: http://twolfson.com/
 
 In short, [vertical rhythm][vert-rhythm] is a way of structuring headings and paragraphs with vertical spacing such that they flow in an easy and predictable manner. A good analogy would be to the repetitive nature of music.
 
@@ -68,6 +69,7 @@ With this notion in mind, it would make sense for code blocks to be similarly fo
 
 ### Without vertical rhythm
 ```js
+// In series
 async.waterfall([
   function grabImages (cb) {
     // Map the files into their image counterparts
