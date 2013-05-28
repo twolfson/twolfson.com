@@ -63,3 +63,54 @@ For a while I have been making an attempt to learn about design and user experie
 In short, [vertical rhythm][vert-rhythm] is a way of structuring headings and paragraphs with vertical spacing such that they flow in an easy and predictable manner. A good analogy would be to the repetitive nature of music.
 
 [![Image demonstrating vertical rhythm](/public/images/articles/vertical-rhythm1.jpg)](http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/)
+
+With this notion in mind, it would make sense for code blocks to be similarly formatted with comments in a consistent location. Therefore, increasing readability even though it is more text.
+
+### Without vertical rhythm
+```js
+async.waterfall([
+  function grabImages (cb) {
+    // Map the files into their image counterparts
+    engineSmith.createImages(files, cb);
+  },
+  // Then, add the images to our canvas (dry run)
+  function smithAddFiles (images, cb) {
+    images.forEach(function (img) {
+      layer.addItem({'width': img.width, 'height': img.height, 'meta': img});
+    });
+
+    // Callback with nothing
+    cb(null);
+  },
+  // Then, output the coordinates
+  function smithOutputCoordinates (cb) {
+    packedObj = layer['export']();
+    var coordinates = {},
+        packedItems = packedObj.items;
+```
+
+### With vertical rhythm
+```js
+// In series
+async.waterfall([
+  function grabImages (cb) {
+    // Map the files into their image counterparts
+    engineSmith.createImages(files, cb);
+  },
+  function addFiles (images, cb) {
+    // Add the images to our canvas (dry run)
+    images.forEach(function (img) {
+      layer.addItem({'width': img.width, 'height': img.height, 'meta': img});
+    });
+
+    // Callback with nothing
+    cb(null);
+  },
+  function outputCoordinates (cb) {
+    // Export and saved packedObj for later
+    packedObj = layer['export']();
+
+    // Extract the coordinates
+    var coordinates = {},
+        packedItems = packedObj.items;
+```
