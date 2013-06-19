@@ -1,4 +1,4 @@
-# twolfson.com
+# twolfson.com [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
 
 Repository for [http://twolfson.com/][twolfson.com]. This is a server rather than static files due to a [contact form][contact].
 
