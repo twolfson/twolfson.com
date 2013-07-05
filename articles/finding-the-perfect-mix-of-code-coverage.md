@@ -26,6 +26,21 @@ The perfect mix has nothing to do with [code coverage][code-cov] at all. While i
 
 API coverage is the percentage of public functions and the permutations of possible parameters which are tested.
 
+Let's start with an existing library, [single-child][single-child] is a library I wrote during development of [listen-spawn][listen-spawn]. It `starts`/`kills` a child process to ensure only one exists at a time. Additionally, it fires `events` but they are not required as part of the core functionality.
+
+[single-child]: https://github.com/twolfson/single-child
+[listen-spawn]: https://github.com/twolfson/listen-spawn
+
+From this, I would say that the `start`/`kill` methods are core functionality and the `events` are experimental.
+
+With API coverage, core methods are weighted much higher as well as their required parameters (e.g. `70-100`). Optional methods as still important but not a significant weight (e.g. `35-50`). Experimental methods are given a low weight (e.g. `10-20`).
+
+It is discouraged to test private methods unless it makes debugging easier. If you are testing a large amount of private methods, onsider that as an indicator to break out those methods into their own module with its own test suite (becoming public methods again).
+
+If we look back at [single-child][single-child]
+
+## Pitfalls
+
 It is possible to overtest here as well:
 
 ```
@@ -37,3 +52,4 @@ sum(null, null);
 ```
 
 but instead of testing the lines of code touched, we are testing the likelihood/expectedness of parameters.
+
