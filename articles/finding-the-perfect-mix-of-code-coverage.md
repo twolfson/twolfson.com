@@ -14,11 +14,11 @@
 
 A library can have no tests (0% coverage) or can have overlapping tests which cover every line (100% coverage) but neither is preferred.
 
-In the 0% case, any change made has the possibility of breaking functionality and there is no automated way to verify it does not.
+In the 0% case, a simple change has the possibility of breaking functionality and there is no automated way to verify it does not.
 
-For 100% libraries, any change made requires updating at least 1 test case even if the feature is experimental or temporary.
+For 100% libraries, any alteration requires updating at least 1 test case even if the feature is experimental or temporary.
 
-To prevent too much manual testing and to reduce the pain of updating multiple tests for trivial changes, it is good to find the perfect mix for your library.
+To prevent manual testing and to reduce the pain of updating multiple tests for trivial changes, it is good to find the perfect mix for your library.
 
 ## What is the perfect mix?
 
