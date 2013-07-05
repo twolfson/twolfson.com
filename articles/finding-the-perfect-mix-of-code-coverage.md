@@ -37,7 +37,55 @@ With API coverage, core methods are weighted much higher as well as their requir
 
 It is discouraged to test private methods unless it makes debugging easier. If you are testing a large amount of private methods, onsider that as an indicator to break out those methods into their own module with its own test suite (becoming public methods again).
 
-If we look back at [single-child][single-child]
+If we look back at [single-child][single-child], the function signature looks like `new SingleChild(cmd, [args], [options]);`. Therefore, we **definitely** should test `new SingleChild(cmd);` and it would be a good idea to test `new SingleChild(cmd, args);` and `new SingleChild(cmd, options);`
+
+If we look at the [test suite][child-tests], we will notice tests which are against `new SingleChild(cmd, args);` [mutliple times][cmd-args-tests] and no tests for `events`.
+
+```js
+'running a self-terminating command': function () {
+  // Create a script that writes time to `tmp.txt`
+  this.child = new SingleChild('node', ['-e', 'require("fs").writeFileSync("tmp.txt", +new Date())']);
+},
+// ... no events tests =(
+```
+
+[child-tests]: https://github.com/twolfson/single-child/tree/91d15a69c091a65273284e5310ffbc4a341500d4/test
+[cmd-args-tests]: https://github.com/twolfson/single-child/blob/91d15a69c091a65273284e5310ffbc4a341500d4/test/single-child_test.content.js#L37-L41
+
+### Testing bugs
+
+Additionally, any bugs that pop up should be tested with a weight which directly corresponds to the frequency of it occurring and indirectly to the ability to reproduce.
+
+For example, in [gmsmith][gmsmith], a subset of [node-canvas][node-canvas] on top of [gm][gm] for [sprite manipulation][spritesmith], we had an issue with running into the [Windows CLI character limit for too many images][gmsmith-issue]. It was a pain to test but Windows is a common use case for [gmsmith][gmsmith], as a result, it made its way into the [test suite][gmsmith-test].
+
+```js
+'interpretting a ridiculous amount of images': function () {
+  // Create and save an array of 500 images
+  var images = [],
+      coordinateArr = [],
+      imagePath = path.join(imageDir, '16.jpg'),
+      i = 0,
+      len = 500;
+  for (; i < len; i++) {
+    images.push(imagePath);
+    coordinateArr.push({
+      x: 0,
+      y: i * 16
+    });
+  }
+  this.images = images;
+  this.width = 16;
+  this.height = 16 * 500;
+  this.coordinateArr = coordinateArr;
+},
+```
+
+[gmsmith]: https://github.com/twolfson/gmsmith
+[node-canvas]: https://github.com/LearnBoost/node-canvas
+[gm]: https://github.com/aheckmann/gm
+[spritesmith]: https://github.com/Ensighten/spritesmith
+[gmsmith-issue]: https://github.com/Ensighten/spritesmith/issues/11
+[gmsmith-test]: https://github.com/twolfson/spritesmith-engine-test/blob/932a6e9f34837cccb55f6fde070ae7998cda61fb/test_content.js#L41-L59
 
 ## Pitfalls
 
