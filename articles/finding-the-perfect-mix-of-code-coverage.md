@@ -56,7 +56,7 @@ If we look at the [test suite][child-tests], we will notice tests which are agai
 
 Additionally, any bugs that pop up should be tested with a weight which directly corresponds to the frequency of it occurring and indirectly to the ability to reproduce.
 
-For example, in [gmsmith][gmsmith], a subset of [node-canvas][node-canvas] on top of [gm][gm] for [sprite manipulation][spritesmith], we had an issue with running into the [Windows CLI character limit for too many images][gmsmith-issue]. It was a pain to test but Windows is a common use case for [gmsmith][gmsmith], as a result, it made its way into the [test suite][gmsmith-test].
+For example, in [phantomjssmith][phantomjssmith], a subset of [node-canvas][node-canvas] on top of [phantomjs][phantomjs] for [sprite manipulation][spritesmith], we there was an issue with running into the Windows CLI character limit for too many images. It was a pain to test but was a common case and thus, made its way into the [test suite][phantomjssmith-test].
 
 ```js
 'interpretting a ridiculous amount of images': function () {
@@ -80,16 +80,26 @@ For example, in [gmsmith][gmsmith], a subset of [node-canvas][node-canvas] on to
 },
 ```
 
-[gmsmith]: https://github.com/twolfson/gmsmith
+[phantomjssmith]: https://github.com/twolfson/phantomjssmith
 [node-canvas]: https://github.com/LearnBoost/node-canvas
-[gm]: https://github.com/aheckmann/gm
+[phantomjs]: https://github.com/twolfson/phantomjssmith
 [spritesmith]: https://github.com/Ensighten/spritesmith
-[gmsmith-issue]: https://github.com/Ensighten/spritesmith/issues/11
-[gmsmith-test]: https://github.com/twolfson/spritesmith-engine-test/blob/932a6e9f34837cccb55f6fde070ae7998cda61fb/test_content.js#L41-L59
+[phantomjssmith-issue]: https://github.com/Ensighten/spritesmith/issues/11
+[phantomjssmith-test]: https://github.com/twolfson/spritesmith-engine-test/blob/932a6e9f34837cccb55f6fde070ae7998cda61fb/test_content.js#L41-L59
+
+## Is there a library for this?
+Currently, there is not. The goal of this article was to introduce this idea.
+
+My visions for a library would use a [JSDoc block][jsdoc] to detect which methods are core, experimental, or exposed for extensibility. It would also indicate which parameters are required or optional.
+
+There are loose ends like detecting extensions of other libraries (e.g. [EventEmitter][event-emitter]) but those should be tied up at early stages.
+
+[jsdoc]: http://v3.javascriptmvc.com/docs/DocumentJS.html#
+[event-emitter]: http://nodejs.org/api/events.html
 
 ## Pitfalls
-
-It is possible to overtest here as well:
+### Overtesting parameters
+It is possible to overtest with API coverage. If we have a function like `sum(numA, numB);`, the expected inputs would be two `Number`s. We can test unexpected inputs but these also should be given a low weight.
 
 ```
 // Average use case
@@ -98,6 +108,4 @@ sum(2, 3);
 // Far-fetched edge case
 sum(null, null);
 ```
-
-but instead of testing the lines of code touched, we are testing the likelihood/expectedness of parameters.
 
