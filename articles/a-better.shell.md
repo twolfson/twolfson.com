@@ -29,5 +29,5 @@ What if we dynamically picked up settings changed ([Sublime Text][subl] again)? 
 ```sh
 dsh install sexy-prompt # Installs sexy-bash-prompt
 dsh install twolfson-dotfiles # Installs collection of multiple packages (e.g. twolfson-dotfiles-dir-aliases)
-dsh alias alert echo
+dsh alias alert echo # Adds `alert` as an alias to `echo` permanently
 ```
