@@ -19,8 +19,8 @@ In Math, axioms are foundational units used to built entire theories classificat
 
 `terminal character`, a [line feed][lf] or [end of file][eof] `character`.
 
-[lf]:
-[eof]:
+[lf]: http://en.wikipedia.org/wiki/Newline
+[eof]: http://en.wikipedia.org/wiki/End-of-file
 
 `line`, an array of `characters` ending with a `terminal character` and not containing 2 or more `terminal characters`.
 
@@ -36,7 +36,7 @@ console.log('Hello World!');
 
 `non-zero`, an element from a [group][group] that is not the additive identity/`zero`.
 
-[group]:
+[group]: https://en.wikipedia.org/wiki/Group_theory
 
 ## Axioms
 ### Axiom of emptiness
@@ -94,9 +94,9 @@ The goal should not be to keep the total `maintenance cost` as low as possible b
 
 ![Logarithmic growth graph](public/images/articles/logarithm.png)
 
-[exponential]:
+[exponential]: http://en.wikipedia.org/wiki/Exponential_growth
 
-[logarithmic]:
+[logarithmic]: http://en.wikipedia.org/wiki/Logarithmic_growth
 
 ### Explaining why copy/paste is bad via theory
 Let's assume your application looks like:
@@ -157,8 +157,8 @@ Next, imagine what happens if `node` were to deprecate `fs.createReadStream`, al
 
 If we [DRY][dry] up the code via a module like [express][express], normalize all requests to be to `.json`/`.html`, then the maintenance of the above code decreases significantly.
 
-[dry]:
-[express]:
+[dry]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+[express]: http://expressjs.com/
 
 ```js
 var express = require('express'),
