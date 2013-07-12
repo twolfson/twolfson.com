@@ -38,7 +38,8 @@ console.log('Hello World!');
 
 [group]:
 
-## Axiom of emptiness
+## Axioms
+### Axiom of emptiness
 
 If a `line` contains no characters except for a `terminal character`, it has `zero` `cost of maintainenance`. The following example is intentionally blank.
 
@@ -46,7 +47,7 @@ If a `line` contains no characters except for a `terminal character`, it has `ze
 
 ```
 
-## Axiom of non-emptiness
+### Axiom of non-emptiness
 
 If a `line` that contains at least one character that is not a `terminal character`, has a `non-zero` `maintenance cost`.
 
@@ -55,11 +56,30 @@ If a `line` that contains at least one character that is not a `terminal charact
 console.log('...but I am so innocent ;_;');
 ```
 
-## Axiom of addition
+### Axiom of addition
 
 Given multiple `lines`, the cumulative `maintenance cost` is the sum of each `line`'s ``maintenance cost`.
 
 ```js
 // Assume this `line` has a `maintenance cost` of 1
 console.log('and this has a `cost` of 5. Then, then the cumulative `cost` is 6');
+```
+
+## Applications
+Now that we have a short and sweet set of definitions and axioms, it is time for some applications.
+
+If you didn't notice, the `maintenance cost` is never defined in the theory; the application process should defines how a `cost` is calculated. In most cases, comments and whitespace are "cheap" to maintain:
+
+```js
+// This line costs `1` unit
+    // This line costs `2` units since it has leading whitespace and a comment
+```
+
+and a line of code's `cost` depends on its complexity:
+
+```js
+console.log('In this application, I cost `5` units.');
+
+// but the minified version of jQuery could cost 1000 units.
+(function(e,t){var n,r,i=typeof t,o=e.document,a=e.location,s=e.jQuery,u=e.$,l={},c=[],p="1.9.1",f=c.concat,d=c.push,[...]
 ```
