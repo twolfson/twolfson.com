@@ -17,9 +17,12 @@ In Math, axioms are foundational units used to built entire theories classificat
 
 ## Definitions
 
-`terminal character`, a line feed or end of file character.
+`terminal character`, a [line feed][lf] or [end of file][eof] `character`.
 
-`line`, an array of characters ending with a terminal character and not containing 2 or more terminal characters. In simpler terms, any line that is non-empty (whether it is a comment, whitespace, code, or any combination of the three).
+[lf]:
+[eof]:
+
+`line`, an array of `characters` ending with a `terminal character` and not containing 2 or more `terminal characters`.
 
 ```js
 // This is a line, as are the rest in this code fence.
@@ -27,13 +30,20 @@ In Math, axioms are foundational units used to built entire theories classificat
 console.log('Hello World!');
 ```
 
+`maintenance cost`, metric used to measure how many actions must be taken when an alteration is made to any `character` or set of `characters` in a `line`. This is also known as `cost of maintnence`.
+
 ## Axiom of nothing
 
-If there are no lines of code, there is no cost of maintainenance. The following is intentionally blank.
+If a `line` contains no characters except for a `terminal character`, it has no `cost of maintainenance`. The following example is intentionally blank.
 
 ```js
 
 ```
+
+## Axiom of something
+
+If a `line` that contains at least one character that is not a `terminal character`, has a non-zero `maintenance cost`.
+
 
 ## Axiom of addition
 
@@ -42,7 +52,3 @@ If there are multiple lines of code, the maintenance cost is the sum of each lin
 ```js
 //
 ```
-
-## Addendum
-
-There are tons of holes in this under mathematical scrutiny; I have not defined `sum`, `line of code`, `maintenance`, or `cost`.
