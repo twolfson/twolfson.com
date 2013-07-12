@@ -83,3 +83,23 @@ console.log('In this application, I cost `5` units.');
 // but the minified version of jQuery could cost 1000 units.
 (function(e,t){var n,r,i=typeof t,o=e.document,a=e.location,s=e.jQuery,u=e.$,l={},c=[],p="1.9.1",f=c.concat,d=c.push,[...]
 ```
+
+### Explaining why copy/paste is bad via theory
+Let's assume your application looks like:
+
+```js
+var fs = require('fs'),
+    http = require('http');
+
+http.createServer(function (req, res) {
+  // Send a valid status code
+  res.writeHead(200);
+
+  // Stream over file to response
+  fs.createReadStream('info.json').pipe(res);
+}).listen(3000);
+```
+
+We will give that a `maintenance code` of 20.
+
+### Explaining why DRY code and abstraction is good via theory
