@@ -84,6 +84,20 @@ console.log('In this application, I cost `5` units.');
 (function(e,t){var n,r,i=typeof t,o=e.document,a=e.location,s=e.jQuery,u=e.$,l={},c=[],p="1.9.1",f=c.concat,d=c.push,[...]
 ```
 
+The goal should not be to keep the total `maintenance cost` as low as possible but to keep the growth as [logarithmic][logarithmic] as possible:
+
+[Exponential growth][exponential] (bad):
+
+![Exponential growth graph](public/images/articles/exponential.png)
+
+[Logarithmic growth][logarithmic] (good):
+
+![Logarithmic growth graph](public/images/articles/logarithm.png)
+
+[exponential]:
+
+[logarithmic]:
+
 ### Explaining why copy/paste is bad via theory
 Let's assume your application looks like:
 
@@ -101,32 +115,6 @@ http.createServer(function (req, res) {
 ```
 
 We will give that a `maintenance code` of 32 (1 for comments, 5 for line of code). Now, let's say your application begins to get more and more complex:
-
-```js
-var fs = require('fs'),
-    http = require('http');
-
-http.createServer(function (req, res) {
-  // If the request is for the homepage, send the homepage
-  if (req.url === '/') {
-    // Send a valid status code
-    res.writeHead(200);
-
-    // Stream over file to response
-    fs.createReadStream('index.html').pipe(res);
-  } else if (req.url === '/info') {
-  // Otherwise, if it is for info, send our info
-    res.writeHead(200);
-    fs.createReadStream('info.json').pipe(res);
-  } else {
-  // Otherwise, send a 404
-    res.writeHead(404);
-    res.end();
-  }
-}).listen(3000);
-```
-
-This has a `maintenance code` of 70, not bad but it is getting worse. When we get to a full application, inside of the server, it becomes unbearable.
 
 ```js
 var fs = require('fs'),
@@ -161,7 +149,9 @@ http.createServer(function (req, res) {
 }).listen(3000);
 ```
 
-The above has a `maintenance code` of 147 and includes no comments. If you keep on going, you should get the point. Then, imagine what happens if `node` were to deprecate `fs.createReadStream`, almost half of the lines of code would need to be updated. On top of which, each would need to be tested, making everything more painful if you lack automated testing.
+The above has a `maintenance code` of 147 and includes no comments. This is what [exponential growth][exponential] feels like.
+
+Next, imagine what happens if `node` were to deprecate `fs.createReadStream`, almost half of the lines of code would need to be updated. On top of which, each would need to be tested, making everything more painful if you lack automated testing.
 
 ### Explaining why DRY code and abstraction is good via theory
 
@@ -181,4 +171,4 @@ app.use(express['static'](__dirname + '/public'));
 app.listen(3000);
 ```
 
-Additionally, if `fs.createReadStream` or any other core `node` methods were to be deprecated, they would be swallowed by `express`, leading to 1 line of updated code for the `package.json`.
+Additionally, if `fs.createReadStream` or any other core `node` methods were to be deprecated, they would be swallowed by `express`, leading to 1 line of updated code for the `package.json`. This is what [logaritmic growth][logarithmic] feels like.
