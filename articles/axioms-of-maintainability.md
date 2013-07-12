@@ -13,7 +13,9 @@
 
 ## Introduction
 
-In Math, axioms are foundational units used to built entire theories classifications upon (e.g. group theory, combinatorics). Without further ado, here are my axioms of maintainability.
+In Math, axioms are foundational units used to built entire theories classifications upon (e.g. [group theory][group], [combinatorics][combo]). Without further ado, here are my axioms of maintainability.
+
+[combo]: http://en.wikipedia.org/wiki/Combinatorics
 
 ## Definitions
 
