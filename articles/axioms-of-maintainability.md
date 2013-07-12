@@ -32,23 +32,34 @@ console.log('Hello World!');
 
 `maintenance cost`, metric used to measure how many actions must be taken when an alteration is made to any `character` or set of `characters` in a `line`. This is also known as `cost of maintnence`.
 
-## Axiom of nothing
+`zero`, the additive identity from [group theory][group].
 
-If a `line` contains no characters except for a `terminal character`, it has no `cost of maintainenance`. The following example is intentionally blank.
+`non-zero`, an element from a [group][group] that is not the additive identity/`zero`.
+
+[group]:
+
+## Axiom of emptiness
+
+If a `line` contains no characters except for a `terminal character`, it has `zero` `cost of maintainenance`. The following example is intentionally blank.
 
 ```js
 
 ```
 
-## Axiom of something
+## Axiom of non-emptiness
 
-If a `line` that contains at least one character that is not a `terminal character`, has a non-zero `maintenance cost`.
+If a `line` that contains at least one character that is not a `terminal character`, has a `non-zero` `maintenance cost`.
 
+```js
+// This `line` has a `non-zero` `maintenance cost` as does the next.
+console.log('...but I am so innocent ;_;');
+```
 
 ## Axiom of addition
 
-If there are multiple lines of code, the maintenance cost is the sum of each line's maintenance cost.
+Given multiple `lines`, the cumulative `maintenance cost` is the sum of each `line`'s ``maintenance cost`.
 
 ```js
-//
+// Assume this `line` has a `maintenance cost` of 1
+console.log('and this has a `cost` of 5. Then, then the cumulative `cost` is 6');
 ```
