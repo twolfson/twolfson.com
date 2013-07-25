@@ -13,6 +13,11 @@ app.set('view engine', 'ejs');
 app.use('/public', express['static'](__dirname + '/dist'));
 app.use('/public', express['static'](__dirname + '/public'));
 
+// If we are in dev, allow static hosting of tests folder
+if (inDevelopment) {
+  app.use('/test', express['static'](__dirname + '/test'));
+}
+
 // DEV: Stopping tracking of this since it bloats analytics
 // // If we are in a production environment, track whenever an RSS is requested
 // if (inProduction) {
@@ -58,14 +63,15 @@ jojo.getSummary = function (article, formatter) {
 jojo.config.page = 'blog';
 app.get('*', jojo);
 
-// Portfolio page
-var projects = require('./projects'),
-    intword = require('./humanize.intword.js');
-projects.page = 'projects';
-projects.intword = intword;
-app.get('/projects', function (req, res) {
-  res.render('projects', projects);
-});
+// // Portfolio page
+console.error('RE-ENABLE PROJECTS');
+// var projects = require('./projects'),
+//     intword = require('./humanize.intword.js');
+// projects.page = 'projects';
+// projects.intword = intword;
+// app.get('/projects', function (req, res) {
+//   res.render('projects', projects);
+// });
 
 // If we are in development, add a contact/test page
 if (inDevelopment) {
@@ -124,7 +130,6 @@ if (inDevelopment) {
   app.get('/kaleido', function (req, res, next) {
     res.render('kaleido', {layout: false});
   });
-  app.use('/test', express['static'](__dirname + '/test'));
 }
 
 // Expose a health page
