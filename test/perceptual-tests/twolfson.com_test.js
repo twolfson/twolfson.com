@@ -1,6 +1,7 @@
 // Load in dependencies
-var async = require('async'),
-    exec = require('child_process').exec;
+var exec = require('child_process').exec,
+    async = require('async'),
+    slug = require('slug');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -26,8 +27,10 @@ var browsers = ['phantomjs'],
 async.forEach(urls, function (_url, cb) {
   // TODO: mocha-ify this
   // TODO: Screenshot the webpage
-  var url = baseUrl + _url;
-  exec('phantomjs screenshot.js ' + url + ' ' + actualScreenshots + '/' + url + '.png', {cwd: __dirname}, function (err, stdout, stderr) {
+  var url = baseUrl + _url,
+      escapedUrl = slug(url.replace(/\//g, '_')),
+      imgDest = actualScreenshots + '/' + escapedUrl + '.png';
+  exec('phantomjs screenshot.js ' + url + ' ' + imgDest, {cwd: __dirname}, function (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
     if (stdout) { console.log('STDOUT: ', stdout); }
