@@ -19,18 +19,18 @@ var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
     urls = [
       '/',
-      // '/2012-11-17-subtle-anti-patterns',
-      // '/projects',
-      // '/contact',
-      // '/contact?test=success',
-      // '/contact?test=fail',
-      // '/404'
+      '/2012-11-17-subtle-anti-patterns',
+      '/projects',
+      '/contact',
+      '/contact?test=success',
+      '/contact?test=fail',
+      '/404'
     ];
 
 // For each of the URLs
 async.forEach(urls, function (_url, cb) {
   // TODO: mocha-ify this
-  // TODO: Screenshot the webpage
+  // Screenshot the webpage
   var url = baseUrl + _url,
       escapedUrl = slug(url.replace(/\//g, '_')),
       filepath = '/' + escapedUrl + '.png',
@@ -49,18 +49,26 @@ async.forEach(urls, function (_url, cb) {
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
 
-    // Diff the images
-    var diffCmd = [
-          'compare',
-          '-verbose',
-          '-metric RMSE',
-          '-highlight-color RED',
-          '-compose Src',
-          expectedImg,
-          actualImg,
-          diffImg
-        ].join(' ');
-    exec(diffCmd, function processDiff (err, stdout, stderr) {
+    // If the expectedImg exists, diff the images
+    if (fs.existsSync(expectedImg)) {
+      var diffCmd = [
+            'compare',
+            '-verbose',
+            '-metric RMSE',
+            '-highlight-color RED',
+            '-compose Src',
+            expectedImg,
+            actualImg,
+            diffImg
+          ].join(' ');
+      exec(diffCmd, processDiff);
+    } else {
+    // Otherwise, output the image as its own diff
+      fs.writeFileSync(diffImg, fs.readFileSync(actualImg, 'binary'),'binary');
+      processDiff(null, '', 'New image created!');
+    }
+
+    function processDiff(err, stdout, stderr) {
       // If stdout exists, log it
       if (stdout) { console.log('STDOUT: ', stdout); }
 
@@ -76,7 +84,7 @@ async.forEach(urls, function (_url, cb) {
 
       // Callback with our error
       cb(err);
-    });
+    }
   });
 }, function (err) {
   if (err) {
