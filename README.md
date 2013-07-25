@@ -1,4 +1,4 @@
-# twolfson.com [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
+# twolfson.com
 
 Repository for [http://twolfson.com/][twolfson.com]. This is a server rather than static files due to a [contact form][contact].
 
@@ -28,3 +28,10 @@ This server is written on top of [express][express], for routing and views, and 
 - `grunt.js` - A [grunt][grunt] implementation for linting and minification.
 
 [grunt]: http://gruntjs.com/
+
+## Donating
+Donations are accepted via [Gittip][gittip].
+
+[![Donate on Gittip](http://badgr.co/gittip/twolfson.png)][gittip]
+
+[gittip]: https://www.gittip.com/twolfson/)
