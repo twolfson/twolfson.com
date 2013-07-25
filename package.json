@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha"
+    "test": "mocha test/integration-tests"
   },
   "repository": {
     "type": "git",
