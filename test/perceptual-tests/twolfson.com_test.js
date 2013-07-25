@@ -1,5 +1,6 @@
 // Load in dependencies
-var exec = require('child_process').exec,
+var fs = require('fs'),
+    exec = require('child_process').exec,
     async = require('async'),
     slug = require('slug');
 
@@ -7,6 +8,9 @@ var exec = require('child_process').exec,
 var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
     screenshotDiffs = __dirname + '/screenshot_diffs';
+
+// Ensure the screenshot diff directory exists
+try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 
 // Set up unabstracted variables
 // TODO: Move browsers, urls into standalone files
@@ -31,8 +35,9 @@ async.forEach(urls, function (_url, cb) {
       escapedUrl = slug(url.replace(/\//g, '_')),
       filepath = '/' + escapedUrl + '.png',
       expectedImg = expectedScreenshots + filepath,
-      actualImg = actualScreenshots + filepath;
-  exec('phantomjs screenshot.js ' + url + ' ' + actualImg, {cwd: __dirname}, function (err, stdout, stderr) {
+      actualImg = actualScreenshots + filepath,
+      diffImg = screenshotDiffs + filepath;
+  exec('phantomjs screenshot.js ' + url + ' ' + actualImg, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
     if (stdout) { console.log('STDOUT: ', stdout); }
@@ -45,13 +50,31 @@ async.forEach(urls, function (_url, cb) {
     console.log('Successfully screenshotted ' + url);
 
     // Diff the images
-    //  gm convert -background black -compose Over -page +0+0 test/perceptual-tests/expected_screenshots/http\:__localhost\:8080_.png -compose Difference -page +0+0 test/perceptual-tests/actual_screenshots/http\:__localhost\:8080_.png -flatten tmp.png
-    // compare -verbose -metric RMSE -highlight-color RED -compose Src "$EXPECTED" "$ACTUAL" tmp.png
-  });
+    var diffCmd = [
+          'compare',
+          '-verbose',
+          '-metric RMSE',
+          '-highlight-color RED',
+          '-compose Src',
+          expectedImg,
+          actualImg,
+          diffImg
+        ].join(' ');
+    exec(diffCmd, function processDiff (err, stdout, stderr) {
+      // If stderr or stdout exist, log them
+      if (stderr) { console.log('STDERR: ', stderr); }
 
-  // TODO: If the expected image doesn't exist, use the image as the diff itself
-  // TODO: Get a diff of the image (write it to screenshot_diffs either in memory or from the script)
-  // TODO: Assert the diff is empty
+      // If there is an error, callback with it
+      if (err) { return cb(err); }
+
+      // If they don't match, create an error
+      // TODO: This will become an assert
+      if (stdout.indexOf('all: 0 (0)') === -1) {
+        err = new Error(url + ' does not match expected diff');
+      }
+      cb(err);
+    });
+  });
 }, function (err) {
   if (err) {
     console.error('ERROR: ', err);
