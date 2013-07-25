@@ -1,3 +1,7 @@
+// Load in dependencies
+var async = require('async'),
+    exec = require('child_process').exec;
+
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
@@ -10,18 +14,33 @@ var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080/',
     urls = [
       '/',
-      '/2012-11-17-subtle-anti-patterns',
-      '/projects',
-      '/contact',
-      '/contact?test=success',
-      '/contact?test=fail',
-      '/404'
+      // '/2012-11-17-subtle-anti-patterns',
+      // '/projects',
+      // '/contact',
+      // '/contact?test=success',
+      // '/contact?test=fail',
+      // '/404'
     ];
 
 // For each of the URLs
-urls.forEach(function () {
+async.forEach(urls, function (url, cb) {
   // TODO: mocha-ify this
   // TODO: Screenshot the webpage
+  exec('phantomjs screenshot.js ' + url, {cwd: __dirname}, function (err, stdout, stderr) {
+    // Log stderr and stdout
+    console.log('STDOUT: ', stdout);
+    console.log('STDERR: ', stderr);
+
+    // Callback with the error
+    cb(err);
+  });
+
   // TODO: Get a diff of the image (write it to screenshot_diffs either in memory or from the script)
   // TODO: Assert the diff is empty
+}, function (err) {
+  if (err) {
+    console.error('ERROR: ', err);
+  } else {
+    console.log('All done!');
+  }
 });
