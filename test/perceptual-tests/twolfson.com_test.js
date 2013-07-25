@@ -46,6 +46,7 @@ async.forEach(urls, function (_url, cb) {
 
     // Diff the images
     //  gm convert -background black -compose Over -page +0+0 test/perceptual-tests/expected_screenshots/http\:__localhost\:8080_.png -compose Difference -page +0+0 test/perceptual-tests/actual_screenshots/http\:__localhost\:8080_.png -flatten tmp.png
+    // compare -verbose -metric RMSE -highlight-color RED -compose Src "$EXPECTED" "$ACTUAL" tmp.png
   });
 
   // TODO: If the expected image doesn't exist, use the image as the diff itself
