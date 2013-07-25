@@ -6,3 +6,4 @@
 /config.jojo.json
 /node_modules
 /updateProduction.sh
+test/perceptual-tests/actual_screenshots/

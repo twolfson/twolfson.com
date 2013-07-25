@@ -61,17 +61,20 @@ async.forEach(urls, function (_url, cb) {
           diffImg
         ].join(' ');
     exec(diffCmd, function processDiff (err, stdout, stderr) {
-      // If stderr or stdout exist, log them
-      if (stderr) { console.log('STDERR: ', stderr); }
+      // If stdout exists, log it
+      if (stdout) { console.log('STDOUT: ', stdout); }
 
       // If there is an error, callback with it
-      if (err) { return cb(err); }
+      if (err && !stderr) { return cb(err); }
 
       // If they don't match, create an error
       // TODO: This will become an assert
-      if (stdout.indexOf('all: 0 (0)') === -1) {
-        err = new Error(url + ' does not match expected diff');
+      if (stderr.indexOf('all: 0 (0)') === -1) {
+        err = new Error(url + ' does not match expected screenshot');
+        console.log('STDERR: ', stderr);
       }
+
+      // Callback with our error
       cb(err);
     });
   });
