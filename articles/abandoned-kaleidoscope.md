@@ -49,4 +49,21 @@ However, the grid system with [screenshot-as-a-service][] worked quite well.
 [![screenshot-as-a-service working][kaleido-screenshot]][kaleido-screenshot]
 
 [kaleido-screenshot]: /public/images/articles/kaleido-screenshot-as-a-service.png
+
 ## Why the abandonment?
+I am marking this project as a failed experiment since the in-browser results would not render properly. It is great that I got it workign with [screenshot-as-a-service][] but the purpose of the experiment was to be standlone in the browser.
+
+The reason I am marking it as abandoned now rather than back then is I know what the next steps forward are; perceptual diffs. These are starting to show up more and more, [Depicted][dpxdt] being the most identifiable service.
+
+[dpxdt]: https://github.com/bslatkin/dpxdt
+
+tl;dr on perceptual diffs, take your original screenshot, change some code, take a new screenshot, take the visual difference of the images. Here are some images from an [article on it][aurora2].
+
+[![Perceptual diff][perceptual-diff]][perceptual-diff]
+
+[aurora2]: http://tilander.org/aurora2/Comparing_Images/
+[perceptual-diff]: /public/images/articles/kaleido-perceptual-diff.png
+
+A computer can pick up more subtle changes than a human can and magnify them for human consumption. Additionally, it can test out multiple webpages and tell if the state has changed or not for them.
+
+I am currently thinking everything is a nail and looking forward to building tools to test with perceptual diffs. Adding perceptual diffs to a test suite will allow for quick and painless refactors of CSS and switching of templating engines. I am very eager to get started.
