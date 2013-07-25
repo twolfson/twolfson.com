@@ -11,7 +11,7 @@ var expectedScreenshots = __dirname + '/expected_screenshots',
 // TODO: Move browsers, urls into standalone files
 // TODO: See notes in https://gist.github.com/twolfson/6077989
 var browsers = ['phantomjs'],
-    baseUrl = 'http://localhost:8080/',
+    baseUrl = 'http://localhost:8080',
     urls = [
       '/',
       // '/2012-11-17-subtle-anti-patterns',
@@ -23,16 +23,21 @@ var browsers = ['phantomjs'],
     ];
 
 // For each of the URLs
-async.forEach(urls, function (url, cb) {
+async.forEach(urls, function (_url, cb) {
   // TODO: mocha-ify this
   // TODO: Screenshot the webpage
-  exec('phantomjs screenshot.js ' + url, {cwd: __dirname}, function (err, stdout, stderr) {
-    // Log stderr and stdout
-    console.log('STDOUT: ', stdout);
-    console.log('STDERR: ', stderr);
+  var url = baseUrl + _url;
+  exec('phantomjs screenshot.js ' + url + ' ' + actualScreenshots + '/' + url + '.png', {cwd: __dirname}, function (err, stdout, stderr) {
+    // If stderr or stdout exist, log them
+    if (stderr) { console.log('STDERR: ', stderr); }
+    if (stdout) { console.log('STDOUT: ', stdout); }
 
-    // Callback with the error
-    cb(err);
+    // If there is an error, callback with it
+    if (err) { return cb(err); }
+
+    // TODO: Emit an event instead
+    // Notify the user that we have screenshotted successfully
+    console.log('Successfully screenshotted ' + url);
   });
 
   // TODO: Get a diff of the image (write it to screenshot_diffs either in memory or from the script)
