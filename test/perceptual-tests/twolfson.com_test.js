@@ -29,8 +29,10 @@ async.forEach(urls, function (_url, cb) {
   // TODO: Screenshot the webpage
   var url = baseUrl + _url,
       escapedUrl = slug(url.replace(/\//g, '_')),
-      imgDest = actualScreenshots + '/' + escapedUrl + '.png';
-  exec('phantomjs screenshot.js ' + url + ' ' + imgDest, {cwd: __dirname}, function (err, stdout, stderr) {
+      filepath = '/' + escapedUrl + '.png',
+      expectedImg = expectedScreenshots + filepath,
+      actualImg = actualScreenshots + filepath;
+  exec('phantomjs screenshot.js ' + url + ' ' + actualImg, {cwd: __dirname}, function (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
     if (stdout) { console.log('STDOUT: ', stdout); }
@@ -41,8 +43,11 @@ async.forEach(urls, function (_url, cb) {
     // TODO: Emit an event instead
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
+
+    // Diff the images
   });
 
+  // TODO: If the expected image doesn't exist, use the image as the diff itself
   // TODO: Get a diff of the image (write it to screenshot_diffs either in memory or from the script)
   // TODO: Assert the diff is empty
 }, function (err) {
