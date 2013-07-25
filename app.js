@@ -63,15 +63,14 @@ jojo.getSummary = function (article, formatter) {
 jojo.config.page = 'blog';
 app.get('*', jojo);
 
-// // Portfolio page
-console.error('RE-ENABLE PROJECTS');
-// var projects = require('./projects'),
-//     intword = require('./humanize.intword.js');
-// projects.page = 'projects';
-// projects.intword = intword;
-// app.get('/projects', function (req, res) {
-//   res.render('projects', projects);
-// });
+// Portfolio page
+var projects = require('./projects'),
+    intword = require('./humanize.intword.js');
+projects.page = 'projects';
+projects.intword = intword;
+app.get('/projects', function (req, res) {
+  res.render('projects', projects);
+});
 
 // If we are in development, add a contact/test page
 if (inDevelopment) {
