@@ -2585,3 +2585,7 @@ a.isSelected {
 blockquote {
   border-left: 5px solid #6C6C6C;
 }
+/* Prevent images from being too damn wide */
+.post img {
+  max-width: 100%;
+}

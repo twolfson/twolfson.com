@@ -36,3 +36,17 @@ If the technology sounds far-fetched, it is not and I had a working proof of con
 [iframe2image]: https://github.com/twolfson/iframe2image
 [snapshot.js]: https://github.com/twolfson/snapshot
 [screenshot-as-a-service]: https://github.com/fzaninotto/screenshot-as-a-service
+
+## Results
+[snapshot.js][] was intended to be the flagship `engine`. However, due to implementation bugs in `svg+xml` images, it would not render some properties properly (e.g. `background-image`, `box-shadow`).
+
+[![snapshot.js working][kaleido-snapshot]][kaleido-snapshot]
+
+[kaleido-snapshot]: /public/images/articles/kaleido-snapshot.png
+
+However, the grid system with [screenshot-as-a-service][] worked quite well.
+
+[![screenshot-as-a-service working][kaleido-screenshot]][kaleido-screenshot]
+
+[kaleido-screenshot]: /public/images/articles/kaleido-screenshot-as-a-service.png
+## Why the abandonment?
