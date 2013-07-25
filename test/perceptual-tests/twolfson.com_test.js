@@ -15,6 +15,7 @@ try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 // Set up unabstracted variables
 // TODO: Move browsers, urls into standalone files
 // TODO: See notes in https://gist.github.com/twolfson/6077989
+// TODO: Optimize space via tarballing expected files?
 var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
     urls = [

@@ -124,6 +124,7 @@ if (inDevelopment) {
   app.get('/kaleido', function (req, res, next) {
     res.render('kaleido', {layout: false});
   });
+  app.use('/test', express['static'](__dirname + '/test'));
 }
 
 // Expose a health page
