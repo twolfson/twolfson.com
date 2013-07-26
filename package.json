@@ -25,7 +25,10 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha test/integration-tests"
+    "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
+    "test-integration": "mocha test/integration-tests",
+    "test": "npm run test-perceptual && npm run test-integration",
+    "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/"
   },
   "repository": {
     "type": "git",

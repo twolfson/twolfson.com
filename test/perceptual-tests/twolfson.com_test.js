@@ -90,7 +90,9 @@ async.forEach(urls, function (_url, cb) {
 }, function (err) {
   if (err) {
     console.error('ERROR: ', err);
+    process.exit(1);
   } else {
     console.log('All done!');
+    process.exit(0);
   }
 });
