@@ -18,60 +18,6 @@
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
-    "name": "fontsmith",
-    "description": "Compose SVGs into webfonts, character mappings, and CSS variables",
-    "stars": 7,
-    "forks": 0,
-    "github": "twolfson/grunt-fontsmith",
-    "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
-    "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
-  },
-  {
-    "name": "grunt-curl",
-    "description": "Download files from the internet via grunt",
-    "stars": 8,
-    "forks": 4,
-    "github": "twolfson/grunt-curl",
-    "srcUrl": "https://github.com/twolfson/grunt-curl",
-    "pageUrl": "https://github.com/twolfson/grunt-curl"
-  },
-  {
-    "name": "grunt-zip",
-    "description": "Zip and unzip files via grunt",
-    "stars": 9,
-    "forks": 3,
-    "github": "twolfson/grunt-zip",
-    "srcUrl": "https://github.com/twolfson/grunt-zip",
-    "pageUrl": "https://github.com/twolfson/grunt-zip"
-  },
-  {
-    "name": "sexy-bash-prompt",
-    "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 9,
-    "forks": 1,
-    "github": "twolfson/sexy-bash-prompt",
-    "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
-    "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
-  },
-  {
-    "name": "listen-spawn",
-    "description": "Run commands in your terminal via HTTP",
-    "stars": 4,
-    "forks": 0,
-    "github": "twolfson/listen-spawn",
-    "srcUrl": "https://github.com/twolfson/listen-spawn",
-    "pageUrl": "https://github.com/twolfson/listen-spawn"
-  },
-  {
-    "name": "sublime-request",
-    "description": "Make HTTP requests from Sublime Text",
-    "stars": 6,
-    "forks": 0,
-    "github": "twolfson/sublime-request",
-    "srcUrl": "https://github.com/twolfson/sublime-request",
-    "pageUrl": "https://github.com/twolfson/sublime-request"
-  },
-  {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
     "stars": 23,
@@ -90,17 +36,35 @@
     "pageUrl": "https://github.com/twolfson/jojo"
   },
   {
-    "name": "What size is my browser?",
-    "description": "A media query solution determine your browser dimensions",
-    "stars": 6,
-    "forks": 0,
-    "github": "twolfson/whatsizeismybrowser",
-    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
-    "pageUrl": "http://whatsizeismybrowser.com/"
+    "name": "sexy-bash-prompt",
+    "description": "Bash prompt with colors, git statuses, and git branches",
+    "stars": 9,
+    "forks": 1,
+    "github": "twolfson/sexy-bash-prompt",
+    "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
+    "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
+  },
+  {
+    "name": "grunt-zip",
+    "description": "Zip and unzip files via grunt",
+    "stars": 9,
+    "forks": 3,
+    "github": "twolfson/grunt-zip",
+    "srcUrl": "https://github.com/twolfson/grunt-zip",
+    "pageUrl": "https://github.com/twolfson/grunt-zip"
+  },
+  {
+    "name": "grunt-curl",
+    "description": "Download files from the internet via grunt",
+    "stars": 8,
+    "forks": 4,
+    "github": "twolfson/grunt-curl",
+    "srcUrl": "https://github.com/twolfson/grunt-curl",
+    "pageUrl": "https://github.com/twolfson/grunt-curl"
   },
   {
     "name": "Find++",
-    "description": "Find functionality from Notepad++ for Sublime Text 2",
+    "description": "Find code quickly in Sublime Text",
     "stars": 3,
     "forks": 0,
     "github": "twolfson/FindPlusPlus",
@@ -108,26 +72,26 @@
     "pageUrl": "https://github.com/twolfson/FindPlusPlus"
   },
   {
-    "name": "Atomic Event",
-    "description": "Race condition handler under <a href=\"http://140byt.es/\" target=\"_blank\">140 bytes</a>",
-    "stars": 2,
+    "name": "fontsmith",
+    "description": "Compose SVGs into webfonts, character mappings, and CSS variables",
+    "stars": 7,
     "forks": 0,
-    "github": "gist/2668303",
-    "srcUrl": "https://gist.github.com/2668303",
-    "pageUrl": "https://gist.github.com/2668303"
+    "github": "twolfson/grunt-fontsmith",
+    "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
+    "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
   },
   {
-    "name": "Resource Collector",
-    "description": "Collect all resources off of a page (including CSS ones)!",
-    "stars": 2,
+    "name": "What size is my browser?",
+    "description": "Determine your browser dimensions via media queries",
+    "stars": 6,
     "forks": 0,
-    "github": "twolfson/Resource-Collector",
-    "srcUrl": "https://github.com/twolfson/Resource-Collector",
-    "pageUrl": "https://github.com/twolfson/Resource-Collector"
+    "github": "twolfson/whatsizeismybrowser",
+    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
+    "pageUrl": "http://whatsizeismybrowser.com/"
   },
   {
     "name": "dotfiles",
-    "description": "A collection and documentation of my dotfiles and workflow",
+    "description": "My dotfiles, documentation, and Linux workflow",
     "stars": 1,
     "forks": 0,
     "github": "twolfson/dotfiles",
@@ -136,7 +100,7 @@
   },
   {
     "name": "winfiles",
-    "description": "A collection and documentation of my Windows files and workflow",
+    "description": "My Windows files, documentation, and Windows workflow",
     "stars": 1,
     "forks": 0,
     "github": "twolfson/winfiles",
@@ -145,7 +109,7 @@
   },
   {
     "name": "bookmarks",
-    "description": "A searchable collection of my bookmarks",
+    "description": "My bookmarks in a searchable webpage",
     "stars": 1,
     "forks": 0,
     "github": "twolfson/bookmarks",
