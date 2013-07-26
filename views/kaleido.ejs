@@ -34,12 +34,13 @@
       '/404'
     ].forEach(function renderScreenshot (path) {
       var url = 'http://localhost:8080' + path,
-          escapedUrl = encodeURIComponent(encodeURIComponent(url));
+          escapedUrl = encodeURIComponent(encodeURIComponent(url)),
+          filepath = '/test/perceptual-tests/screenshot_diffs/' + escapedUrl + '.png';
   %>
     <div class="media">
       <p><a href="<%=path%>"><%=path%></a></p>
       <div>
-        <img src="/test/perceptual-tests/screenshot_diffs/<%=escapedUrl%>.png"/>
+        <a href="<%=filepath%>" target="_blank"><img src="<%=filepath%>"/></a>
       </div>
     </div>
   <%

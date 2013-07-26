@@ -10,7 +10,7 @@
   },
   {
     "name": "spritesmith",
-    "description": "Converts images into a spritesheet and CSS preprocessor variables",
+    "description": "Joins images together into a spritesheet and generates CSS variables",
     "stars": 47,
     "forks": 4,
     "github": "Ensighten/grunt-spritesmith",
