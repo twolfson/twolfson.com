@@ -18,6 +18,60 @@
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
+    "name": "fontsmith",
+    "description": "Compose SVGs into webfonts, character mappings, and CSS variables",
+    "stars": 7,
+    "forks": 0,
+    "github": "twolfson/grunt-fontsmith",
+    "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
+    "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
+  },
+  {
+    "name": "grunt-curl",
+    "description": "Download files from the internet via grunt",
+    "stars": 8,
+    "forks": 4,
+    "github": "twolfson/grunt-curl",
+    "srcUrl": "https://github.com/twolfson/grunt-curl",
+    "pageUrl": "https://github.com/twolfson/grunt-curl"
+  },
+  {
+    "name": "grunt-zip",
+    "description": "Zip and unzip files via grunt",
+    "stars": 9,
+    "forks": 3,
+    "github": "twolfson/grunt-zip",
+    "srcUrl": "https://github.com/twolfson/grunt-zip",
+    "pageUrl": "https://github.com/twolfson/grunt-zip"
+  },
+  {
+    "name": "sexy-bash-prompt",
+    "description": "Bash prompt with colors, git statuses, and git branches",
+    "stars": 9,
+    "forks": 1,
+    "github": "twolfson/sexy-bash-prompt",
+    "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
+    "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
+  },
+  {
+    "name": "listen-spawn",
+    "description": "Run commands in your terminal via HTTP",
+    "stars": 4,
+    "forks": 0,
+    "github": "twolfson/listen-spawn",
+    "srcUrl": "https://github.com/twolfson/listen-spawn",
+    "pageUrl": "https://github.com/twolfson/listen-spawn"
+  },
+  {
+    "name": "sublime-request",
+    "description": "Make HTTP requests from Sublime Text",
+    "stars": 6,
+    "forks": 0,
+    "github": "twolfson/sublime-request",
+    "srcUrl": "https://github.com/twolfson/sublime-request",
+    "pageUrl": "https://github.com/twolfson/sublime-request"
+  },
+  {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
     "stars": 23,
@@ -40,36 +94,9 @@
     "description": "A media query solution determine your browser dimensions",
     "stars": 6,
     "forks": 0,
-    "github": "twolfson/winfiles",
+    "github": "twolfson/whatsizeismybrowser",
     "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
     "pageUrl": "http://whatsizeismybrowser.com/"
-  },
-  {
-    "name": "CSS Query",
-    "description": "Lightweight cross-browser CSS selector (&lt;3kb)",
-    "stars": 6,
-    "forks": 1,
-    "github": "Ensighten/CSS-Query",
-    "srcUrl": "https://github.com/Ensighten/CSS-Query",
-    "pageUrl": "https://github.com/Ensighten/CSS-Query"
-  },
-  {
-    "name": "Mason.js",
-    "description": "HTML pre-processor that auto-instantiates UI interactivity",
-    "stars": 4,
-    "forks": 2,
-    "github": "twolfson/Mason.js",
-    "srcUrl": "https://github.com/twolfson/Mason.js",
-    "pageUrl": "https://github.com/twolfson/Mason.js"
-  },
-  {
-    "name": "Halo",
-    "description": "Client-side MVC framework based on Addy Osmani's Aura",
-    "stars": 3,
-    "forks": 1,
-    "github": "Ensighten/Halo",
-    "srcUrl": "https://github.com/Ensighten/Halo",
-    "pageUrl": "https://github.com/Ensighten/Halo"
   },
   {
     "name": "Find++",
@@ -99,24 +126,6 @@
     "pageUrl": "https://github.com/twolfson/Resource-Collector"
   },
   {
-    "name": "Builder",
-    "description": "Build chain for client-side MVC views",
-    "stars": 1,
-    "forks": 1,
-    "github": "Ensighten/Builder",
-    "srcUrl": "https://github.com/Ensighten/Builder",
-    "pageUrl": "https://github.com/Ensighten/Builder"
-  },
-  {
-    "name": "twolfson.com",
-    "description": "The website you are currently on ;)",
-    "stars": 1,
-    "forks": 0,
-    "github": "twolfson/twolfson.com",
-    "srcUrl": "https://github.com/twolfson/twolfson.com",
-    "pageUrl": "https://github.com/twolfson/twolfson.com"
-  },
-  {
     "name": "dotfiles",
     "description": "A collection and documentation of my dotfiles and workflow",
     "stars": 1,
@@ -142,14 +151,5 @@
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
-  },
-  {
-    "name": "jqueryp",
-    "description": "Quickly create new jQuery plugins and chain together jQuery plugin requires",
-    "stars": 0,
-    "forks": 0,
-    "github": "twolfson/jqueryp",
-    "srcUrl": "https://github.com/twolfson/jqueryp",
-    "pageUrl": "https://github.com/twolfson/jqueryp"
   }
 ]
