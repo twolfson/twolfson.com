@@ -9,8 +9,16 @@
     }
 
     .media {
-      max-height: 300px;
+      height: 300px;
+      width: 300px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 50px;
+    }
+
+    .media img {
       max-width: 300px;
+      max-height: 300px;
     }
   </style>
 </head>
@@ -26,12 +34,12 @@
       '/404'
     ].forEach(function renderScreenshot (path) {
       var url = 'http://localhost:8080' + path,
-          escapedUrl = encodeURIComponent(url);
+          escapedUrl = encodeURIComponent(encodeURIComponent(url));
   %>
     <div class="media">
       <p><a href="<%=path%>"><%=path%></a></p>
       <div>
-        <img src="/test/perceptual-tests/screenshot_diffs/http%3A%2F%2Flocalhost%3A8080%2Fprojects.png"/>
+        <img src="/test/perceptual-tests/screenshot_diffs/<%=escapedUrl%>.png"/>
       </div>
     </div>
   <%
