@@ -18,6 +18,15 @@
     "pageUrl": "https://github.com/remy/nodemon"
   },
   {
+    "name": "www.gittip.com",
+    "description": "Donations for open source. <a href=\"https://www.gittip.com/\" target=\"_blank\">https://www.gittip.com/</a>",
+    "stars": 418,
+    "forks": 112,
+    "github": "gittip/www.gittip.com",
+    "srcUrl": "https://github.com/gittip/www.gittip.com",
+    "pageUrl": "https://github.com/gittip/www.gittip.com"
+  },
+  {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
     "stars": 170,
