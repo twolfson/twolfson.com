@@ -33,7 +33,7 @@ async.forEach(urls, function (_url, cb) {
   // TODO: mocha-ify this
   // Screenshot the webpage
   var url = baseUrl + _url,
-      escapedUrl = slug(url.replace(/\//g, '_')),
+      escapedUrl = encodeURIComponent(url),
       filepath = '/' + escapedUrl + '.png',
       expectedImg = expectedScreenshots + filepath,
       actualImg = actualScreenshots + filepath,

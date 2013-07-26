@@ -8,24 +8,32 @@
       background: linen;
     }
 
-    img {
+    .media {
       max-height: 300px;
+      max-width: 300px;
     }
   </style>
 </head>
 <body>
   <%
     [
-      '_',
-      '_2012-11-17-subtle-anti-patterns',
-      '_projects',
-      '_contact',
-      '_contacttestsuccess',
-      '_contacttestfail',
-      '_404'
-    ].forEach(function renderScreenshot (filepath) {
+      '/',
+      '/2012-11-17-subtle-anti-patterns',
+      '/projects',
+      '/contact',
+      '/contact?test=success',
+      '/contact?test=fail',
+      '/404'
+    ].forEach(function renderScreenshot (path) {
+      var url = 'http://localhost:8080' + path,
+          escapedUrl = encodeURIComponent(url);
   %>
-    <img src="/test/perceptual-tests/screenshot_diffs/http:__localhost:8080<%= filepath %>.png"/>
+    <div class="media">
+      <p><a href="<%=path%>"><%=path%></a></p>
+      <div>
+        <img src="/test/perceptual-tests/screenshot_diffs/http%3A%2F%2Flocalhost%3A8080%2Fprojects.png"/>
+      </div>
+    </div>
   <%
     });
   %>
