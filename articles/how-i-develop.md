@@ -8,9 +8,43 @@
 I want to share how I work and the tools I use so that others can learn from my workflow, for better or for worse.
 
 # Starting a repo
-I follow the open source first methodology when it comes to projects. This means from the very first commit,
+I follow the open source first methodology when it comes to projects. This means from the very first commit, my repo has been published to GitHub.
 
-TODO: git init, hub create, grunt-init
+I take the extra step of using a boilerplate to include a `LICENSE` for every repo.
+
+```bash
+$ # Initialize git repository
+$ git init
+Initialized empty Git repository in /home/todd/github/tmp-repo/.git/
+
+$ # Create remote repository on GitHub
+$ hub create
+Updating origin
+created repository: twolfson/tmp-repo
+
+$ # Start from grunt-init-node boilerplate
+$ grunt-init node
+Running "init:node" (init) task
+...
+Please answer the following:
+[?] Project name (tmp-repo)
+...
+Writing CHANGELOG.md...OK
+Writing README.md...OK
+...
+Done, without errors.
+```
+
+## Tools used
+
+- [git][]
+- [hub][]
+- [grunt-init][] is used to create boilerplate files. I use a personalized template which includes a `CHANGELOG.md`, [twolfson/grunt-init-node][twolfson-init]
+
+[grunt]: https://github.com/gruntjs/grunt/
+[hub]: https://github.com/defunkt/hub
+[grunt-init]: https://github.com/gruntjs/grunt-init
+[twolfson-init]: https://github.com/twolfson/grunt-init-node
 
 # Developing on a repo
 TODO: grunt, nodemon, livereload, tiny-lr, listen-spawn, controlpad/spectacles/windowpad
