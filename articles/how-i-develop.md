@@ -35,6 +35,8 @@ Writing README.md...OK
 Done, without errors.
 ```
 
+TODO: Insert screencast
+
 ## Tools used
 
 - [git][] is used for create a new [git][] repository
