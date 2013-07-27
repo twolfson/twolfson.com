@@ -123,7 +123,7 @@ To pre-emptively prevent errors, I use [SublimeLinter][] in Sublime Text which h
 
 [SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
 
-To find definitions in large projects, I use [Find~+][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
+To find definitions in large projects, I use [Find++][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
 
 [fpp]: https://github.com/twolfson/FindPlusPlus
 
