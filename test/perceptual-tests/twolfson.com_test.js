@@ -83,18 +83,22 @@ async.map(urls, function (_url, cb) {
           var width = Math.max(actualWidth, expectedWidth),
               height = Math.max(actualHeight, expectedHeight);
 
-          console.log(width, height);
-          // // Resize both images
-          // async.parallel(function () {
+          // Resize both images
+          async.parallel([function resizeActualImage (cb) {
 
-          // });
+//  convert test/perceptual-tests/actual_screenshots/http%3A%2F%2Flocalhost%3A8080%2F2012-11-17-subtle-anti-patterns.png -bordercolor white -border 200x0 -gravity SouthEast -crop 1180x5207+0+0 tmp.png
+          }], getDiff);
         } else {
         // Otherwise, get the diff
           getDiff();
         }
 
         // TODO: I hate this file. Very un-reusable.
-        function getDiff() {
+        function getDiff(err) {
+          // If there was an error, callback with it
+          if (err) { return cb(err); }
+
+          // Otherwise, diff the images
           var diffCmd = [
                 'compare',
                 '-verbose',
