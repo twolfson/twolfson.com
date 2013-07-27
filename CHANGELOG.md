@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.5,0 - Wrote Develop Faster article
+
 1.4.1 - Deleted `TODO.txt` and moved issues into GitHub
 
 1.4.0 - Updated projects with more widely usable projects
