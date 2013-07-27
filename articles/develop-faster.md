@@ -36,7 +36,7 @@ Writing README.md...OK
 Done, without errors.
 ```
 
-TODO: Insert screencast
+<p id="init-screencast"></p>
 
 ## Tools used
 
