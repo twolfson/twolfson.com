@@ -19,15 +19,15 @@ try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
     urls = [
-      '/',
+      // '/',
       '/2012-11-17-subtle-anti-patterns',
-      '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
-      '/2013-07-27-develop-faster', // Blog post with tables
-      '/projects',
-      '/contact',
-      '/contact?test=success',
-      '/contact?test=fail',
-      '/404'
+      // '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
+      // '/2013-07-27-develop-faster', // Blog post with tables
+      // '/projects',
+      // '/contact',
+      // '/contact?test=success',
+      // '/contact?test=fail',
+      // '/404'
     ];
 
 // For each of the URLs
@@ -54,19 +54,42 @@ async.map(urls, function (_url, cb) {
 
     // If the expectedImg exists, diff the images
     if (fs.existsSync(expectedImg)) {
-      var diffCmd = [
-            'compare',
-            '-verbose',
-            '-metric RMSE',
-            '-highlight-color RED',
-            '-compose Src',
-            expectedImg,
-            actualImg,
-            diffImg
-          ].join(' ');
-      exec(diffCmd, processDiff);
+      // Get the sizes of the images
+      async.parallel([
+        function getActualSize (cb) {
+          exec('identify ' + actualImg, cb);
+        },
+        function getExpectedSize (cb) {
+          exec('identify ' + expectedImg, cb);
+        }
+      ], function processResults(err, results) {
+        // If there was an error, callback
+        if (err) { return cb(err); }
+
+        // Otherwise, if the images are different sizes
+        var actualStdout = results[0][0],
+            expectedStdout = results[1][0],
+            actualSize = actualStdout.match(/\d+x\d+/),
+            expectedSize = expectedStdout.match(/\d+x\d+/);
+
+        console.log(actualSize, expectedSize);
+        // Resize the smaller
+      });
+
+      // //
+      // var diffCmd = [
+      //       'compare',
+      //       '-verbose',
+      //       '-metric RMSE',
+      //       '-highlight-color RED',
+      //       '-compose Src',
+      //       actualImg,
+      //       expectedImg,
+      //       diffImg
+      //     ].join(' ');
+      // exec(diffCmd, processDiff);
     } else {
-    // Otherwise, output the image as its own diff
+    // Otherwise, save the new image as the diff
       fs.writeFileSync(diffImg, fs.readFileSync(actualImg, 'binary'),'binary');
       processDiff(null, '', 'New image created!');
     }
