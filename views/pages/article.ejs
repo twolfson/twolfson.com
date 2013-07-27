@@ -22,19 +22,8 @@
       <%- content %>
     </div></section>
 
-    <section class="comments row"><div class="span12">
-      <% if (config.disqus) { %>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript" src="http://disqus.com/forums/<%= config.disqus %>/embed.js"></script>
-        <noscript>
-          <div class="layout-center">
-            <a href="http://<%= config.disqus %>.disqus.com/?url=ref">View the discussion thread.</a>
-          </div>
-        </noscript>
-        <p class="layout-center">
-          <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-        </p>
-      <% } %>
-    </div></section>
+    <% if (locals.scripts) { %>
+      HIIII
+    <% } %>
   </article>
 </section>
