@@ -50,9 +50,39 @@ TODO: Insert screencast
 [twolfson-init]: https://github.com/twolfson/grunt-init-node
 
 # Developing on a repo
-TODO: grunt, nodemon, livereload, tiny-lr, listen-spawn, controlpad/spectacles/windowpad, git autohelp
+I dislike unnecessary tedium; anything to reduce the time it takes to test a new iteration is appreciated.
 
-TODO: SideBarEnhancements, QuickFileCreator, Find++
+I stick to tools that have `watch` or `hook` functionality so that human actions are not the bottleneck of testing an iteration.
+
+If the project has a build chain (e.g. minify JS, build CSS), then I place those tasks into a [Gruntfile][] and behind a [watch task][watch] to run the task when files change.
+
+[Gruntfile]:
+[watch]:
+
+If the project needs to be restarted to pick up changes, then I use [nodemon][] to restart the server when files change.
+
+[nodemon]:
+
+If the restart is a blocking action, then I use [listen-spawn][] to perform the action from Sublime Text without leaving.
+
+[listen-spawn]:
+
+If the project needs a browser refresh to see changes, then I use [livereload][] with the [Firefox extension][ff-livereload] to refresh the browser when files change.
+
+[livereload]:
+[ff-livereload]:
+
+If the browser refresh performs a blocking action, then I use [tiny-lr][] triggers a reload when it is receives HTTP requests.
+
+[tiny-lr]:
+
+If the browser refresh requires click actions afterwards (e.g. click to open a modal), then I build the server with a sandbox page to run arbitrary JS on page reload, I make a URL route to perform the action, or hard code the change temporarily.
+
+If a git command is improperly typed, I use [git autohelp][autohelp] (.7 seconds for me) to automatically run the proper command.
+
+[autohelp]:
+
+TODO: controlpad/spectacles/windowpad, SideBarEnhancements, QuickFileCreator, Find++
 
 # Publishing updates
 TODO: git-release, dotfiles
