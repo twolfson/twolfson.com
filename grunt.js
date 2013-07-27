@@ -23,15 +23,16 @@ module.exports = function (grunt) {
         src: ['highlight.pack.js', 'jquery.js', 'trunkata.js', 'main.js'],
         dest: '../../dist/js/index.js',
         destMap: '../../dist/js/index.js.map'
-      // },
-      // 'articles/develop-faster': {
-      //   cwd: 'public/js/articles/develop-faster',
-      //   src: [
-      //     'player.js', 'init-screencast.js', 'livereload-screencast.js',
-      //     'watch-screencast.js', 'render.js'
-      //   ],
-      //   dest: '../../../../dist/js/articles/develop-faster.js',
-      //   destMap: '../../../../dist/js/articles/develop-faster.js.map'
+      },
+      'articles/develop-faster': {
+        cwd: 'public/js/articles/develop-faster',
+        src: [
+          'player.js', 'init-screencast.js', 'grunt-screencast.js',
+          'livereload-screencast.js', 'watch-screencast.js',
+          'autocorrect-screencast.js', 'render.js'
+        ],
+        dest: '../../../../dist/js/articles/develop-faster.js',
+        destMap: '../../../../dist/js/articles/develop-faster.js.map'
       }
     },
     sprite: {
@@ -83,5 +84,5 @@ module.exports = function (grunt) {
   grunt.registerTask('css', 'less');
 
   // Set up default action
-  grunt.registerTask('default', 'lint css js');
+  grunt.registerTask('default', 'lint css js watch');
 };

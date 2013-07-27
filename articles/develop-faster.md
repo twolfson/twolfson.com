@@ -58,6 +58,8 @@ I stick to tools that have `watch` or `hook` functionality so that human actions
 
 If the project has a build chain (e.g. minify JS, build CSS), then I place those tasks into a [Gruntfile][grunt] and behind a [watch task][watch] to run the task when files change.
 
+<p id="grunt-screencast"></p>
+
 [grunt]: http://gruntjs.com/
 [watch]: https://github.com/gruntjs/grunt-contrib-watch
 
@@ -65,11 +67,11 @@ If the project needs to be restarted to pick up changes, then I use [nodemon][] 
 
 [nodemon]: https://github.com/remy/nodemon
 
-TODO: Screencast
-
 If the restart is a blocking action, then I use [listen-spawn][] to perform the action from Sublime Text without leaving.
 
 [listen-spawn]: https://github.com/twolfson/listen-spawn
+
+TODO: Screencast
 
 If the project needs a browser refresh to see changes, then I use [python-livereload][] with the [Firefox extension][ff-livereload] to refresh the browser when files change.
 
@@ -92,57 +94,17 @@ If a git command is improperly typed, I use [git help.autocorrect][git-autocorre
 
 [git-autocorrect]: http://linux.die.net/man/1/git-config
 
-TODO: Screencast
+```bash
+$ git comit -m "Touched abc"
+WARNING: You called a Git command named 'comit', which does not exist.
+Continuing under the assumption that you meant 'commit'
+in 0.7 seconds automatically...
+[master 8b3f0f0] Touched abc
+ 0 files changed
+ create mode 100644 abc
+```
 
-## Performance enhancement
-To manage my windows, I use [controlpad][] (Linux), [Spectacle][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors. These are all attached to keyboard shortcuts. My common setup is:
-
-| Key binding                       | Action                                                     |
-| --------------------------------- | ---------------------------------------------------------- |
-| ctrl + meta + alt + Left          | Move active window to left half of current screen          |
-| ctrl + meta + alt + Right         | Move active window to right half of current screen         |
-| ctrl + meta + alt + Up            | Move active window to maximize window                      |
-| ctrl + meta + alt + Down          | Move active window to center window                        |
-| ctrl + meta + alt + u             | Move active window to upper-left quarter of current screen |
-| ctrl + meta + alt + i             | Move active window to upper half of current screen         |
-| ctrl + meta + alt + o             | Move active window to upper-right half of current screen   |
-| ctrl + meta + alt + j             | Move active window to lower-left half of current screen    |
-| ctrl + meta + alt + k             | Move active window to lower half of current screen         |
-| ctrl + meta + alt + l             | Move active window to lower-right half of current screen   |
-| ctrl + alt + shift + Left         | Move active window to leftmost screen                      |
-| ctrl + alt + shift + Right        | Move active window to rightmost screen                     |
-
-[controlpad]: https://github.com/twolfson/controlpad
-[Spectacle]: http://spectacleapp.com/
-[WindowPad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool
-
-In addition, I use 2 monitors to see all my information at a glance; this removes the bottleneck of switching between windows to test iterations.
-
-To create files and directories, I use [QuickFileCreator][] in Sublime Text. The key feature being a searchable list of relevant directories.
-
-[QuickFileCreator]: https://github.com/noklesta/SublimeQuickFileCreator
-
-To move, rename, and duplicate files, I use [SideBarEnhancements][] in Sublime Text which adds the respective commands to my command palette (e.g. "File: Duplicate").
-
-[SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
-
-To pre-emptively prevent errors, I use [SublimeLinter][] in Sublime Text which highlights dirty text and displays an error icon in the gutter.
-
-[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
-
-To find definitions in large projects, I use [Find++][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
-
-[fpp]: https://github.com/twolfson/FindPlusPlus
-
-To beautify minified code, I use [CodeFormatter][] in Sublime Text which supports multiple languages (e.g. `CSS`, `JS`) and works with temporary files.
-
-[CodeFormatter]: https://github.com/akalongman/sublimetext-codeformatter
-
-To see the files in the same directory as the current one, I use [SyncedSideBar][]'s "Side Bar: Reveal File".
-
-[SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
-
-To clean up developer notes, I use [Find++][fpp]'s "Find: In Project" and "Find: In Open Files" to remove any stale `TODO`s or `console.log`s.
+<p id="autocorrect-screencast"></p>
 
 ## Catch issues faster
 To reduce the bottleneck of waiting for test results, projects are built as small modules. This reduces the size of each test suite, effectively shortening the testing time.
