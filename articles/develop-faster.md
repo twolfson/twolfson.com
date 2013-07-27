@@ -76,7 +76,7 @@ If the project needs a browser refresh to see changes, then I use [python-livere
 [python-livereload]: https://github.com/lepture/python-livereload
 [ff-livereload]: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 
-<div id="livereload-screencast"></div>
+<p id="livereload-screencast"></p>
 
 If the browser refresh performs a blocking action, then I use [tiny-lr][] triggers a reload when it receives HTTP requests.
 

@@ -22,8 +22,14 @@
       <%- content %>
     </div></section>
 
-    <% if (locals.scripts) { %>
-      HIIII
-    <% } %>
+    <%
+      if (locals.scripts) {
+        scripts.forEach(function (script) {
+    %>
+      <script src="<%= script %>"></script>
+    <%
+        });
+      }
+    %>
   </article>
 </section>

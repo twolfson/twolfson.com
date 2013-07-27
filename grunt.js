@@ -23,6 +23,12 @@ module.exports = function (grunt) {
         src: ['highlight.pack.js', 'jquery.js', 'trunkata.js', 'main.js'],
         dest: '../../dist/js/index.js',
         destMap: '../../dist/js/index.js.map'
+      },
+      'articles/develop-faster': {
+        cwd: 'public/js/articles/develop-faster',
+        src: ['player.js', 'livereload-screencast.js', 'render.js'],
+        dest: '../../../../dist/js/articles/develop-faster.js',
+        destMap: '../../../../dist/js/articles/develop-faster.js.map'
       }
     },
     sprite: {
