@@ -8,7 +8,7 @@
 
 I want to share how I work and the tools I use so that others can learn from my workflow, for better or for worse.
 
-# Starting a reeeeepo
+# Starting a repo
 I follow the open source first methodology when it comes to projects. This means from the very first commit, my repo has been published to GitHub.
 
 I take the extra step of using a boilerplate to include a `LICENSE` for every repo.
