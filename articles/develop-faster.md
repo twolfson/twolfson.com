@@ -7,7 +7,7 @@
 
 I want to share how I work and the tools I use so that others can learn from my workflow, for better or for worse.
 
-# Starting a repo
+# Starting a reeeeepo
 I follow the open source first methodology when it comes to projects. This means from the very first commit, my repo has been published to GitHub.
 
 I take the extra step of using a boilerplate to include a `LICENSE` for every repo.
@@ -64,7 +64,13 @@ If the project needs to be restarted to pick up changes, then I use [nodemon][] 
 
 [nodemon]: https://github.com/remy/nodemon
 
-TODO: Screencast
+<script src="/public/images/articles/develop-livereload/player.js"></script>
+<script src="/public/images/articles/develop-livereload/a_packed.js"></script>
+<div id="exampleAnimation"></div>
+<script>
+    // Create the player, add its element, and start it.  There is no need to
+    // wait for the player to load before adding its element.
+</script>
 
 If the restart is a blocking action, then I use [listen-spawn][] to perform the action from Sublime Text without leaving.
 
