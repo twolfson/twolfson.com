@@ -64,6 +64,8 @@ If the project needs to be restarted to pick up changes, then I use [nodemon][] 
 
 [nodemon]: https://github.com/remy/nodemon
 
+TODO: Screencast
+
 If the restart is a blocking action, then I use [listen-spawn][] to perform the action from Sublime Text without leaving.
 
 [listen-spawn]: https://github.com/twolfson/listen-spawn
@@ -72,6 +74,8 @@ If the project needs a browser refresh to see changes, then I use [python-livere
 
 [python-livereload]: https://github.com/lepture/python-livereload
 [ff-livereload]: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
+
+TODO: Screencast
 
 If the browser refresh performs a blocking action, then I use [tiny-lr][] triggers a reload when it receives HTTP requests.
 
@@ -86,6 +90,8 @@ If the browser refresh requires click actions afterwards (e.g. click to open a m
 If a git command is improperly typed, I use [git help.autocorrect][git-autocorrect] (0.7 seconds for me) to automatically run the proper command.
 
 [git-autocorrect]: http://linux.die.net/man/1/git-config
+
+TODO: Screencast
 
 ## Performance enhancement
 To manage my windows, I use [controlpad][] (Linux), [Spectacle][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors. These are all attached to keyboard shortcuts. My common setup is:
@@ -148,7 +154,7 @@ If a bug is reported, I write a test against it to prevent them from happening a
 
 Visual testing (i.e. [perceptual diffs][pdiff]) allows for catching visual errors that humans can easily overlook (e.g. ordering, color change).
 
-[pdiff]: TODO
+[pdiff]: https://github.com/bslatkin/dpxdt
 
 Additionally, using perceptual diffs can prevents visual regressions during major refactors (e.g. changing templating languages).
 
@@ -157,19 +163,32 @@ TODO: Include perceptual diff image
 # Publishing updates
 For releasing, I use a fork of [git-extras][]'s [git-release][] that passes version to the pre-release/post-release hooks. The hooks perform the following:
 
+[git-extras]: https://github.com/visionmedia/git-extras
+[git-release]: https://github.com/twolfson/git-extras/blob/dev/personal.mix/bin/git-release
+
 - If a `package.json` exists, update the [node][] package version
 - If a `package.json` exists and there is a `build` script, run `npm run build` ([node][])
-- If a `bower.json` exists, update the [bower][] component version
-- If a `component.json` exists, update the [compnent.io][] component version
-- If a `packages.json` exists, update the [Sublime PackageControl][pkg-control] version and timestamp
+- If a `bower.json` exists, update [bower][]'s component version
+- If a `component.json` exists, update [component][]'s component version
+- If a `packages.json` exists, update the [Sublime PackageControl][pkg-ctrl] version and timestamp
 - Tag the [git][] version (default behavior of `git-release`)
 - If a `package.json` exists, run `npm publish` ([node][])
 
+[node]: http://nodejs.org/
+[bower]: http://bower.io/
+[component]: https://github.com/component/component
+[pkg-ctrl]: http://wbond.net/sublime_packages/package_control
+
 For using the above git hooks, you can fork my [git-template-dir][] in my [dotfiles][].
+
+[git-template-dir]: https://github.com/twolfson/dotfiles/tree/master/git-template-dir
+[dotfiles]: https://github.com/twolfson/dotfiles
 
 The benefits of using `git-release` also include: reduced cost for publishing new release, prevent forgetting to run a command.
 
 On projects that require squashed commits, I work on a historical branch (e.g. `dev/how.i.dev`) then [git-sqwish][] to a `squashed` branch (e.g. `dev/how.i.dev.squashed`). [git-sqwish][] is a command in my fork of [git-extras][] that was rejected in a PR. It performs the following:
+
+[git-sqwish]: https://github.com/twolfson/git-extras/blob/dev/personal.mix/bin/git-sqwish
 
 - Assert current branch is up to date with `master`
 - Delete branch named `current branch + '.squashed'`
