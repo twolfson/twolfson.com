@@ -22,7 +22,7 @@ var browsers = ['phantomjs'],
       '/',
       '/2012-11-17-subtle-anti-patterns',
       '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
-      '/2013-07-27-how-i-develop', // Blog post with tables
+      '/2013-07-27-develop-faster', // Blog post with tables
       '/projects',
       '/contact',
       '/contact?test=success',
@@ -31,7 +31,7 @@ var browsers = ['phantomjs'],
     ];
 
 // For each of the URLs
-async.forEach(urls, function (_url, cb) {
+async.map(urls, function (_url, cb) {
   // TODO: mocha-ify this
   // Screenshot the webpage
   var url = baseUrl + _url,
@@ -80,18 +80,28 @@ async.forEach(urls, function (_url, cb) {
 
       // If they don't match, create an error
       // TODO: This will become an assert
+      var result = {
+            url: url,
+            pass: true,
+            stderr: stderr
+          };
       if (stderr.indexOf('all: 0 (0)') === -1) {
-        err = new Error(url + ' does not match expected screenshot');
-        console.log('STDERR: ', stderr);
+        result.pass = false;
       }
 
       // Callback with our error
-      cb(err);
+      cb(null, result);
     }
   });
-}, function (err) {
-  if (err) {
-    console.error('ERROR: ', err);
+}, function (err, results) {
+  var failedResults = results.filter(function (result) {
+        return !result.pass;
+      });
+  if (failedResults.length > 0) {
+    failedResults.forEach(function (result) {
+      console.log('Failed result for ' + result.url);
+      console.log(result.stderr);
+    });
     process.exit(1);
   } else {
     console.log('All done!');
