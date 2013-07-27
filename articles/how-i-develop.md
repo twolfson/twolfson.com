@@ -84,11 +84,24 @@ If a git command is improperly typed, I use [git help.autocorrect][git-autocorre
 [git-autocorrect]: http://linux.die.net/man/1/git-config
 
 ## Performance enhancement
-TODO: Tests (code and perceptual)
+To manage my windows, I use [controlpad][] (Linux), [Spectacles][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors.
+
+In addition, I use 2 monitors to see all my information at a glance; this removes the bottleneck of switching between windows to test iterations.
+
+To create files and directories, I use [QuickFileCreator][] in Sublime Text. The key feature being a searchable list of relevant directories.
+
+To move, rename, and duplicate files, I use [SideBarEnhancements][] in Sublime Text which adds the respective commands to my command palette (e.g. "File: Duplicate").
+
+To pre-emptively prevent errors, I use [SublimeLinter][] in Sublime Text which highlights dirty text and displays an error icon in the gutter.
+
+To find definitions in large projects, I use [Find++][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
+
+To beautify minified code, I use [CodeFormatter][] in Sublime Text which supports multiple languages (e.g. `CSS`, `JS`) and works with temporary files.
+
+To see the files in the same directory as the current one, I use [SyncedSideBar][]'s "Side Bar: Reveal File".
 
 ## Catch issues faster
-
-TODO: controlpad/spectacles/windowpad, SideBarEnhancements, QuickFileCreator, Find++
+TODO: Tests (code and perceptual)
 
 # Publishing updates
 TODO: git-release, dotfiles
