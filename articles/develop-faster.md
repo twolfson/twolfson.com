@@ -157,8 +157,9 @@ Visual testing (i.e. [perceptual diffs][pdiff]) allows for catching visual error
 
 [pdiff]: https://github.com/bslatkin/dpxdt
 
-[![Perceptual diff][perceptual-diff]][perceptual-diff]
+[![Perceptual diff][perceptual-diff-thumb]][perceptual-diff]
 
+[perceptual-diff-thumb]: /public/images/articles/develop-faster/perceptual-diff.thumb.png
 [perceptual-diff]: /public/images/articles/develop-faster/perceptual-diff.png
 
 Additionally, using perceptual diffs can prevents visual regressions during major refactors (e.g. changing templating languages).
