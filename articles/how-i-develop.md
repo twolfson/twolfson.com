@@ -77,34 +77,56 @@ If the browser refresh performs a blocking action, then I use [tiny-lr][] trigge
 
 [tiny-lr]: https://github.com/mklabs/tiny-lr
 
-If the browser refresh requires click actions afterwards (e.g. click to open a modal), then I build the server with a sandbox page to run arbitrary JS on page reload, I make a URL route to perform the action, or hard code the change temporarily.
+If the browser refresh requires click actions afterwards (e.g. click to open a modal), then I do one of the following:
 
-If a git command is improperly typed, I use [git help.autocorrect][git-autocorrect] (.7 seconds for me) to automatically run the proper command.
+- Build the server with a sandbox page to run arbitrary JS and arbitrary controller on page reload
+- Make a URL route to perform the action / display the state
+- Hard code the action to occur on page reload during development
+
+If a git command is improperly typed, I use [git help.autocorrect][git-autocorrect] (0.7 seconds for me) to automatically run the proper command.
 
 [git-autocorrect]: http://linux.die.net/man/1/git-config
 
 ## Performance enhancement
-To manage my windows, I use [controlpad][] (Linux), [Spectacles][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors.
+To manage my windows, I use [controlpad][] (Linux), [Spectacle][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors. These are all attached to keyboard shortcuts.
 
+[controlpad]: https://github.com/twolfson/controlpad
+[Spectacle]: http://spectacleapp.com/
+[WindowPad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool
+quic/
 In addition, I use 2 monitors to see all my information at a glance; this removes the bottleneck of switching between windows to test iterations.
 
 To create files and directories, I use [QuickFileCreator][] in Sublime Text. The key feature being a searchable list of relevant directories.
 
+[QuickFileCreator]: https://github.com/noklesta/SublimeQuickFileCreator
+
 To move, rename, and duplicate files, I use [SideBarEnhancements][] in Sublime Text which adds the respective commands to my command palette (e.g. "File: Duplicate").
+
+[SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
 
 To pre-emptively prevent errors, I use [SublimeLinter][] in Sublime Text which highlights dirty text and displays an error icon in the gutter.
 
+[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
+
 To find definitions in large projects, I use [Find++][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
+
+[fpp]: https://github.com/twolfson/FindPlusPlus
 
 To beautify minified code, I use [CodeFormatter][] in Sublime Text which supports multiple languages (e.g. `CSS`, `JS`) and works with temporary files.
 
+[CodeFormatter]: https://github.com/akalongman/sublimetext-codeformatter
+
 To see the files in the same directory as the current one, I use [SyncedSideBar][]'s "Side Bar: Reveal File".
+
+[SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
+
+To clean up developer notes, I use [Find++][fpp]'s "Find: In Project" and "Find: In Open Files" to remove any stale `TODO`s or `console.log`s.
 
 ## Catch issues faster
 TODO: Tests (code and perceptual)
 
 # Publishing updates
-TODO: git-release, dotfiles
+TODO: git-release, dotfiles, git-sqwish
 
 # Excess information
 
