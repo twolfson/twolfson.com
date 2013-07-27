@@ -37,17 +37,18 @@ Done, without errors.
 
 ## Tools used
 
-- [git][]
-- [hub][]
+- [git][] is used for create a new [git][] repository
+- [hub][] is used for remote repository management on [GitHub][gh]
 - [grunt-init][] is used to create boilerplate files. I use a personalized template which includes a `CHANGELOG.md`, [twolfson/grunt-init-node][twolfson-init]
 
-[grunt]: https://github.com/gruntjs/grunt/
+[git]: http://git-scm.com/
 [hub]: https://github.com/defunkt/hub
+[gh]: https://github.com/
 [grunt-init]: https://github.com/gruntjs/grunt-init
 [twolfson-init]: https://github.com/twolfson/grunt-init-node
 
 # Developing on a repo
-TODO: grunt, nodemon, livereload, tiny-lr, listen-spawn, controlpad/spectacles/windowpad
+TODO: grunt, nodemon, livereload, tiny-lr, listen-spawn, controlpad/spectacles/windowpad, git autohelp
 
 TODO: SideBarEnhancements, QuickFileCreator, Find++
 
