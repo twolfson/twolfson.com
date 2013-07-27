@@ -28,8 +28,8 @@ module.exports = function (grunt) {
         cwd: 'public/js/articles/develop-faster',
         src: [
           'player.js', 'init-screencast.js', 'grunt-screencast.js',
-          'livereload-screencast.js', 'watch-screencast.js',
-          'autocorrect-screencast.js', 'render.js'
+          'nodemon-screencast.js', 'livereload-screencast.js',
+          'watch-screencast.js', 'autocorrect-screencast.js', 'render.js'
         ],
         dest: '../../../../dist/js/articles/develop-faster.js',
         destMap: '../../../../dist/js/articles/develop-faster.js.map'

@@ -71,7 +71,7 @@ If the restart is a blocking action, then I use [listen-spawn][] to perform the 
 
 [listen-spawn]: https://github.com/twolfson/listen-spawn
 
-TODO: Screencast
+<p id="nodemon-screencast"></p>
 
 If the project needs a browser refresh to see changes, then I use [python-livereload][] with the [Firefox extension][ff-livereload] to refresh the browser when files change.
 

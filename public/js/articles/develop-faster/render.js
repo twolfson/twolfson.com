@@ -6,6 +6,10 @@ var gruntScreencastPlayer = new Player(gruntScreencast, 'public/images/articles/
 document.getElementById('grunt-screencast').appendChild(gruntScreencastPlayer.element);
 gruntScreencastPlayer.start();
 
+var nodemonScreencastPlayer = new Player(nodemonScreencast, 'public/images/articles/develop-faster/nodemon-screencast/');
+document.getElementById('nodemon-screencast').appendChild(nodemonScreencastPlayer.element);
+nodemonScreencastPlayer.start();
+
 var livereloadScreencastPlayer = new Player(livereloadScreencast, 'public/images/articles/develop-faster/livereload-screencast/');
 document.getElementById('livereload-screencast').appendChild(livereloadScreencastPlayer.element);
 livereloadScreencastPlayer.start();
