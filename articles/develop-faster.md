@@ -41,7 +41,7 @@ TODO: Insert screencast
 
 - [git][] is used for create a new [git][] repository
 - [hub][] is used for remote repository management on [GitHub][gh]
-- [grunt-init][] is used to create boilerplate files. I use a personalized template which includes a `CHANGELOG.md`, [twolfson/grunt-init-node][twolfson-init]
+- [grunt-init][] is used to create boilerplate files. I use a personalized template which includes a `CHANGELOG.md`, [twolfson/grunt-init-node][twolfson-init].
 
 [git]: http://git-scm.com/
 [hub]: https://github.com/defunkt/hub
