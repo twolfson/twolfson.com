@@ -21,7 +21,8 @@
     "grunt-curl": "~0.5.0",
     "grunt": "~0.3.17",
     "async": "~0.2.9",
-    "slug": "~0.3.3"
+    "slug": "~0.3.3",
+    "temporary": "0.0.5"
   },
   "scripts": {
     "start": "node app.js",

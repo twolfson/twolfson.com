@@ -2,7 +2,8 @@
 var fs = require('fs'),
     exec = require('child_process').exec,
     async = require('async'),
-    slug = require('slug');
+    slug = require('slug'),
+    TempFile = require('temporary/lib/file');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -66,28 +67,47 @@ async.map(urls, function (_url, cb) {
         // If there was an error, callback
         if (err) { return cb(err); }
 
-        // Otherwise, if the images are different sizes
+        // Process the image sizes
         var actualStdout = results[0][0],
+            actualSize = actualStdout.match(/(\d+)x(\d+)/),
+            actualWidth = +actualSize[1],
+            actualHeight = +actualSize[2],
             expectedStdout = results[1][0],
-            actualSize = actualStdout.match(/\d+x\d+/),
-            expectedSize = expectedStdout.match(/\d+x\d+/);
+            expectedSize = expectedStdout.match(/(\d+)x(\d+)/),
+            expectedWidth = +expectedSize[1],
+            expectedHeight = +expectedSize[2];
 
-        console.log(actualSize, expectedSize);
-        // Resize the smaller
+        // If the sizes are different
+        if (actualWidth !== expectedWidth || actualHeight !== expectedHeight) {
+          // Find the maximum dimensions
+          var width = Math.max(actualWidth, expectedWidth),
+              height = Math.max(actualHeight, expectedHeight);
+
+          console.log(width, height);
+          // // Resize both images
+          // async.parallel(function () {
+
+          // });
+        } else {
+        // Otherwise, get the diff
+          getDiff();
+        }
+
+        // TODO: I hate this file. Very un-reusable.
+        function getDiff() {
+          var diffCmd = [
+                'compare',
+                '-verbose',
+                '-metric RMSE',
+                '-highlight-color RED',
+                '-compose Src',
+                actualImg,
+                expectedImg,
+                diffImg
+              ].join(' ');
+          exec(diffCmd, processDiff);
+        }
       });
-
-      // //
-      // var diffCmd = [
-      //       'compare',
-      //       '-verbose',
-      //       '-metric RMSE',
-      //       '-highlight-color RED',
-      //       '-compose Src',
-      //       actualImg,
-      //       expectedImg,
-      //       diffImg
-      //     ].join(' ');
-      // exec(diffCmd, processDiff);
     } else {
     // Otherwise, save the new image as the diff
       fs.writeFileSync(diffImg, fs.readFileSync(actualImg, 'binary'),'binary');
