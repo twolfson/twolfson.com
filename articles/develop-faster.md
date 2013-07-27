@@ -149,7 +149,7 @@ To reduce the bottleneck of waiting for test results, projects are built as smal
 
 During development, I run test suites via [nodemon][] or a `--watch` parameter which allows me to see failing tests pop up as they happen.
 
-TODO: Show test failing via --watch
+<p id="watch-screencast"></p>
 
 If a bug is reported, I write a test against it to prevent them from happening again and reducing the manual testing bottleneck.
 

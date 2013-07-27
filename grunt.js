@@ -26,7 +26,10 @@ module.exports = function (grunt) {
       },
       'articles/develop-faster': {
         cwd: 'public/js/articles/develop-faster',
-        src: ['player.js', 'livereload-screencast.js', 'render.js'],
+        src: [
+          'player.js', 'livereload-screencast.js',
+          'watch-screencast.js', 'render.js'
+        ],
         dest: '../../../../dist/js/articles/develop-faster.js',
         destMap: '../../../../dist/js/articles/develop-faster.js.map'
       }
