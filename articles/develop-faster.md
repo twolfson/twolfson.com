@@ -152,6 +152,28 @@ For using the above git hooks, you can fork my [git-template-dir][] in my [dotfi
 
 The benefits of using `git-release` also include: reduced cost for publishing new release, prevent forgetting to run a command.
 
+```bash
+$ git release 0.1.1
+... pre-release
+# npm run build
+> css-controls@0.1.1 build /home/todd/github/css-controls
+> browserify lib/css-controls.js --standalone css-controls --outfile dist/css-controls.js
+
+... releasing 0.1.1
+[master f200ecc] Release 0.1.1
+...
+To git@github.com:twolfson/css-controls.git
+ * [new tag]         0.1.1 -> 0.1.1
+
+... post-release
+# npm publish
+npm http PUT https://registry.npmjs.org/css-controls
+...
++ css-controls@0.1.1
+
+... complete
+```
+
 On projects that require squashed commits, I work on a historical branch (e.g. `dev/how.i.dev`) then [git-sqwish][] to a `squashed` branch (e.g. `dev/how.i.dev.squashed`). [git-sqwish][] is a command in my fork of [git-extras][] that was rejected in a PR. It performs the following:
 
 [git-sqwish]: https://github.com/twolfson/git-extras/blob/dev/personal.mix/bin/git-sqwish
@@ -166,6 +188,33 @@ This has the same result as `git rebase -i` with the bonus of:
 
 - You can use `git-merge` in your historical branch
 - 1 merge conflict per `git-pull` (due to using `git-merge` over `git-rebase`)
+
+```bash
+$ touch def
+$ git add -A
+$ git commit -m "Touched def"
+[dev/touch.files daeabc7] Touched def
+...
+$ touch ghi
+$ git add -A
+$ git commit -m "Touched ghi"
+[dev/touch.files 991ee10] Touched ghi
+...
+$ git sqwish master
+Switched to a new branch 'dev/touch.files.squashed'
+...
+[dev/touch.files.squashed d9dd664] Touched ghi Touched def
+ 0 files changed
+ create mode 100644 def
+ create mode 100644 ghi
+$ git log
+commit d9dd664114a19dd57bbb37b70f9fcce8e7df60bd
+Author: Todd Wolfson <todd@twolfson.com>
+Date:   Sat Jul 27 16:12:26 2013 -0700
+
+    Touched ghi
+    Touched def
+```
 
 # Excess information
 
