@@ -1,8 +1,8 @@
 {
-  "title": "How I Develop",
+  "title": "Develop faster",
   "author": "Todd Wolfson",
   "date": "2013/07/27",
-  "_summary": "Learn about my workflow for creating, developing, and publishing repos"
+  "_summary": "Learn about my workflow for creating, developing, and publishing repos."
 }
 
 I want to share how I work and the tools I use so that others can learn from my workflow, for better or for worse.
@@ -138,10 +138,49 @@ To see the files in the same directory as the current one, I use [SyncedSideBar]
 To clean up developer notes, I use [Find++][fpp]'s "Find: In Project" and "Find: In Open Files" to remove any stale `TODO`s or `console.log`s.
 
 ## Catch issues faster
-TODO: Tests (code and perceptual)
+To reduce the bottleneck of waiting for test results, projects are built as small modules. This reduces the size of each test suite, effectively shortening the testing time.
+
+During development, I run test suites via [nodemon][] or a `--watch` parameter which allows me to see failing tests pop up as they happen.
+
+TODO: Show test failing via --watch
+
+If a bug is reported, I write a test against it to prevent them from happening again and reducing the manual testing bottleneck.
+
+Visual testing (i.e. [perceptual diffs][pdiff]) allows for catching visual errors that humans can easily overlook (e.g. ordering, color change).
+
+[pdiff]: TODO
+
+Additionally, using perceptual diffs can prevents visual regressions during major refactors (e.g. changing templating languages).
+
+TODO: Include perceptual diff image
 
 # Publishing updates
-TODO: git-release, dotfiles, git-sqwish
+For releasing, I use a fork of [git-extras][]'s [git-release][] that passes version to the pre-release/post-release hooks. The hooks perform the following:
+
+- If a `package.json` exists, update the [node][] package version
+- If a `package.json` exists and there is a `build` script, run `npm run build` ([node][])
+- If a `bower.json` exists, update the [bower][] component version
+- If a `component.json` exists, update the [compnent.io][] component version
+- If a `packages.json` exists, update the [Sublime PackageControl][pkg-control] version and timestamp
+- Tag the [git][] version (default behavior of `git-release`)
+- If a `package.json` exists, run `npm publish` ([node][])
+
+For using the above git hooks, you can fork my [git-template-dir][] in my [dotfiles][].
+
+The benefits of using `git-release` also include: reduced cost for publishing new release, prevent forgetting to run a command.
+
+On projects that require squashed commits, I work on a historical branch (e.g. `dev/how.i.dev`) then [git-sqwish][] to a `squashed` branch (e.g. `dev/how.i.dev.squashed`). [git-sqwish][] is a command in my fork of [git-extras][] that was rejected in a PR. It performs the following:
+
+- Assert current branch is up to date with `master`
+- Delete branch named `current branch + '.squashed'`
+- Checkout `master` to `current branch + '.squashed'`
+- Copy all files from `currenct branch` to `current branch + '.squashed'`
+- Commit file changes in one commit
+
+This has the same result as `git rebase -i` with the bonus of:
+
+- You can use `git-merge` in your historical branch
+- 1 merge conflict per `git-pull` (due to using `git-merge` over `git-rebase`)
 
 # Excess information
 
