@@ -157,11 +157,11 @@ Visual testing (i.e. [perceptual diffs][pdiff]) allows for catching visual error
 
 [pdiff]: https://github.com/bslatkin/dpxdt
 
-Additionally, using perceptual diffs can prevents visual regressions during major refactors (e.g. changing templating languages).
-
 [![Perceptual diff][perceptual-diff]][perceptual-diff]
 
 [perceptual-diff]: /public/images/articles/develop-faster/perceptual-diff.png
+
+Additionally, using perceptual diffs can prevents visual regressions during major refactors (e.g. changing templating languages).
 
 # Publishing updates
 For releasing, I use a fork of [git-extras][]'s [git-release][] that passes version to the pre-release/post-release hooks. The hooks perform the following:
