@@ -21,6 +21,8 @@ var browsers = ['phantomjs'],
     urls = [
       '/',
       '/2012-11-17-subtle-anti-patterns',
+      '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
+      '/2013-07-27-how-i-develop', // Blog post with tables
       '/projects',
       '/contact',
       '/contact?test=success',

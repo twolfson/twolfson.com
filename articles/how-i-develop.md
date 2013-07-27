@@ -88,12 +88,27 @@ If a git command is improperly typed, I use [git help.autocorrect][git-autocorre
 [git-autocorrect]: http://linux.die.net/man/1/git-config
 
 ## Performance enhancement
-To manage my windows, I use [controlpad][] (Linux), [Spectacle][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors. These are all attached to keyboard shortcuts.
+To manage my windows, I use [controlpad][] (Linux), [Spectacle][] (Mac), [WindowPad][] (Windows) to move them to common positions and between monitors. These are all attached to keyboard shortcuts. My common setup is:
+
+| Key binding                       | Action                                                     |
+| --------------------------------- | ---------------------------------------------------------- |
+| ctrl + meta + alt + Left          | Move active window to left half of current screen          |
+| ctrl + meta + alt + Right         | Move active window to right half of current screen         |
+| ctrl + meta + alt + Up            | Move active window to maximize window                      |
+| ctrl + meta + alt + Down          | Move active window to center window                        |
+| ctrl + meta + alt + u             | Move active window to upper-left quarter of current screen |
+| ctrl + meta + alt + i             | Move active window to upper half of current screen         |
+| ctrl + meta + alt + o             | Move active window to upper-right half of current screen   |
+| ctrl + meta + alt + j             | Move active window to lower-left half of current screen    |
+| ctrl + meta + alt + k             | Move active window to lower half of current screen         |
+| ctrl + meta + alt + l             | Move active window to lower-right half of current screen   |
+| ctrl + alt + shift + Left         | Move active window to leftmost screen                      |
+| ctrl + alt + shift + Right        | Move active window to rightmost screen                     |
 
 [controlpad]: https://github.com/twolfson/controlpad
 [Spectacle]: http://spectacleapp.com/
 [WindowPad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool
-quic/
+
 In addition, I use 2 monitors to see all my information at a glance; this removes the bottleneck of switching between windows to test iterations.
 
 To create files and directories, I use [QuickFileCreator][] in Sublime Text. The key feature being a searchable list of relevant directories.
@@ -108,7 +123,7 @@ To pre-emptively prevent errors, I use [SublimeLinter][] in Sublime Text which h
 
 [SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
 
-To find definitions in large projects, I use [Find++][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
+To find definitions in large projects, I use [Find~+][fpp]'s "Find: In Project" and "Find: In..." to switch between searching in specific folders or across the entire project.
 
 [fpp]: https://github.com/twolfson/FindPlusPlus
 
