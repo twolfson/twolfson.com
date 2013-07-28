@@ -1,5 +1,7 @@
 # twolfson.com changelog
-1.5,0 - Wrote Develop Faster article
+1.5.1 - Allowing perceptual diffs of different sized images and accepted perceptual changes
+
+1.5.0 - Wrote Develop Faster article
 
 1.4.1 - Deleted `TODO.txt` and moved issues into GitHub
 
