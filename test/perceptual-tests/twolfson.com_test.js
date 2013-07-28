@@ -213,7 +213,7 @@ async.map(urls, function (_url, cb) {
   if (failedResults.length > 0) {
     failedResults.forEach(function (result) {
       console.log('Failed result for ' + result.url);
-      console.log(result.stderr);
+      // console.log(result.stderr);
     });
     process.exit(1);
   } else {
