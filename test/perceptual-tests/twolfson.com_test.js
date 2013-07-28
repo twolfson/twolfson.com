@@ -81,13 +81,66 @@ async.map(urls, function (_url, cb) {
         if (actualWidth !== expectedWidth || actualHeight !== expectedHeight) {
           // Find the maximum dimensions
           var width = Math.max(actualWidth, expectedWidth),
-              height = Math.max(actualHeight, expectedHeight);
+              height = Math.max(actualHeight, expectedHeight),
+              geometry = width + 'x' + height + '+0+0';
 
           // Resize both images
-          async.parallel([function resizeActualImage (cb) {
+          async.parallel([
+            function resizeActualImage (cb) {
+              // Save the original file path and generate a temporary file
+              var origFile = actualImg,
+                  tmpFile = new TempFile();
 
-//  convert test/perceptual-tests/actual_screenshots/http%3A%2F%2Flocalhost%3A8080%2F2012-11-17-subtle-anti-patterns.png -bordercolor white -border 200x0 -gravity SouthEast -crop 1180x5207+0+0 tmp.png
-          }], getDiff);
+              // Save over the original path
+              actualImg = tmpFile.path + '.png';
+              exec([
+                'convert',
+                origFile,
+
+                // Fill in new space with white background
+                '-bordercolor white',
+                '-border ' + (width - actualWidth) +
+                  'x' + (height - actualHeight),
+
+                // Anchor image to upper-left
+                '-gravity SouthEast',
+
+                // Specify new image size
+                '-crop ' + geometry,
+                actualImg
+              ].join(' '), cb);
+            },
+            function resizeExpectedImage (cb) {
+              // Save the original file path and generate a temporary file
+              var origFile = expectedImg,
+                  tmpFile = new TempFile();
+
+              // Save over the original path
+              expectedImg = tmpFile.path + '.png';
+
+              // Crop our file
+              var cmd = [
+                    'convert',
+                    origFile,
+
+                    // Fill in new space with white background
+                    '-bordercolor white',
+                    '-border ' + (width - expectedWidth) +
+                      'x' + (height - expectedHeight),
+
+                    // Anchor image to upper-left
+                    '-gravity SouthEast',
+
+                    // Specify new image size
+                    '-crop ' + geometry,
+
+                    // Specify the image location
+                    expectedImg
+                  ].join(' ');
+              console.log(cmd);
+              exec(cmd, cb);
+            }
+          ], getDiff);
         } else {
         // Otherwise, get the diff
           getDiff();
@@ -141,9 +194,18 @@ async.map(urls, function (_url, cb) {
     }
   });
 }, function (err, results) {
+  // If there was an error, log it and leave
+  if (err) {
+    console.error('ERROR: ', err);
+    return process.exit(1);
+  }
+
+  // Otherwise, determine if there were any failures
   var failedResults = results.filter(function (result) {
         return !result.pass;
       });
+
+  // If there were failures, log them and leave
   if (failedResults.length > 0) {
     failedResults.forEach(function (result) {
       console.log('Failed result for ' + result.url);
@@ -151,6 +213,7 @@ async.map(urls, function (_url, cb) {
     });
     process.exit(1);
   } else {
+  // Otherwise, exit gracefully
     console.log('All done!');
     process.exit(0);
   }
