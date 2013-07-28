@@ -20,15 +20,15 @@ try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
     urls = [
-      // '/',
+      '/',
       '/2012-11-17-subtle-anti-patterns',
-      // '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
-      // '/2013-07-27-develop-faster', // Blog post with tables
-      // '/projects',
-      // '/contact',
-      // '/contact?test=success',
-      // '/contact?test=fail',
-      // '/404'
+      '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
+      '/2013-07-27-develop-faster', // Blog post with tables
+      '/projects',
+      '/contact',
+      '/contact?test=success',
+      '/contact?test=fail',
+      '/404'
     ];
 
 // For each of the URLs
@@ -93,22 +93,27 @@ async.map(urls, function (_url, cb) {
 
               // Save over the original path
               actualImg = tmpFile.path + '.png';
-              exec([
-                'convert',
-                origFile,
 
-                // Fill in new space with white background
-                '-bordercolor white',
-                '-border ' + (width - actualWidth) +
-                  'x' + (height - actualHeight),
+              // Crop our file
+              var cmd = [
+                    'convert',
+                    origFile,
 
-                // Anchor image to upper-left
-                '-gravity SouthEast',
+                    // Fill in new space with white background
+                    '-bordercolor white',
+                    '-border ' + (width - actualWidth) +
+                      'x' + (height - actualHeight),
 
-                // Specify new image size
-                '-crop ' + geometry,
-                actualImg
-              ].join(' '), cb);
+                    // Anchor image to upper-left
+                    '-gravity SouthEast',
+
+                    // Specify new image size
+                    '-crop ' + geometry,
+
+                    // Specify the image location
+                    actualImg
+                  ].join(' ');
+              exec(cmd, cb);
             },
             function resizeExpectedImage (cb) {
               // Save the original file path and generate a temporary file
@@ -137,7 +142,6 @@ async.map(urls, function (_url, cb) {
                     // Specify the image location
                     expectedImg
                   ].join(' ');
-              console.log(cmd);
               exec(cmd, cb);
             }
           ], getDiff);
