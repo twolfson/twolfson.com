@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.5.3 - Added LICENSE-MIT
+
 1.5.2 - Updated donations section
 
 1.5.1 - Allowing perceptual diffs of different sized images and accepted perceptual changes
