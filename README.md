@@ -30,8 +30,9 @@ This server is written on top of [express][express], for routing and views, and 
 [grunt]: http://gruntjs.com/
 
 ## Donating
-Donations are accepted via [Gittip][gittip].
+Support this project and [others by twolfson][gittip] via [gittip][].
 
-[![Donate on Gittip](http://badgr.co/gittip/twolfson.png)][gittip]
+[![Support via Gittip][gittip-badge]][gittip]
 
-[gittip]: https://www.gittip.com/twolfson/)
+[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+[gittip]: https://www.gittip.com/twolfson/
