@@ -1,7 +1,7 @@
 // When the DOM is ready
 $(function () {
   // Grab all <code>'s on the page and iterate them
-  var $codeArr = $('pre');
+  var $codeArr = $('code');
   $codeArr.each(function () {
     // Highlight the code block
     var code = this;
