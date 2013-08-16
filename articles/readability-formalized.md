@@ -45,5 +45,22 @@ This also supports my theory/experiment on [applying vertical rhythm to code][ve
 
 Sequence - Array of characters which can as little as a letter and as much as multiple lines.
 
-Pattern - Array of characters containing distinguishable sequences or patterns.
+Pattern - Array of characters containing distinguishable sequences. Patterns can contain other patterns (even recursively).
 
+Section - Array of characters that can potentially contain patterns. Sections can contain other sections.
+
+## Axioms
+
+### Axiom of reflexivity
+
+A pattern is consistent with itself.
+
+### Axiom of transitivity
+
+If pattern A is consistent with pattern B, and pattern B is consistent with pattern C. Then, pattern A is consistent with pattern C.
+
+### Axiom of readability
+
+// TODO: This might be misplaced as a definition
+
+If a pattern is consistent with another pattern, then they are considered readable together.
