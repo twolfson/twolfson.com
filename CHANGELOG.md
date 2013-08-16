@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.7.0 - Added "Sexy bash prompt" article
+
 1.6.0 - Rearranged projects
 
 1.5.3 - Added LICENSE-MIT
