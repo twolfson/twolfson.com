@@ -60,6 +60,6 @@ To prevent wasting further time, I wrote a [flat file based test suite][flat-tes
 
 After the test suite was built, I went forward and built the new statuses. Then, looking over the code, I realized it was quite mature for a dotfiles script and [broke it out][sexy-bash-prompt].
 
-The prompt you see before you is the final sexy product.
+The prompt you see before you is the [final sexy product][sexy-bash-prompt].
 
 [![sexy-bash-prompt screenshot][sexy-screenshot]][sexy-bash-prompt]
