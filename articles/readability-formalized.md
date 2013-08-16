@@ -3,10 +3,14 @@
   "author": "Todd Wolfson",
   "_date": "2013/08/15",
   "date": "Aug 15 2013 01:00:00",
-  "_summary": "Defining readability with axioms and theorems."
+  "_summary": "Defining readability with [axioms](http://en.wikipedia.org/wiki/Axiom) and [theorems](http://en.wikipedia.org/wiki/Theorem)."
 }
 
-This article will define readability from an objective perspective using formal definitions, axioms, and theorems.
+This article will define readability from an objective perspective using formal [definitions][defn], [axioms][axiom], and [theorems][theorem].
+
+[defn]: http://en.wikipedia.org/wiki/Definition
+[axiom]: http://en.wikipedia.org/wiki/Axiom
+[theorem]: http://en.wikipedia.org/wiki/Theorem
 
 ## Summary
 Readability is the consistency of patterns (e.g. layout, sequence) in a file, project, organization, and programming language. Having common patterns allows sections (e.g. variable declarations) to be recognized and interpretted faster.
@@ -25,7 +29,7 @@ var dissimilarFunction = function () {
 }
 ```
 
-There is an added effect when syntax highlighting is brought into the mix which highlights sections within the layouts/sequences, making them even easier to recognize.
+There is an cumulative effect when syntax highlighting is used which distinguishes sections even further.
 
 ```js
 function similarFunction(var2) {
