@@ -50,3 +50,16 @@ From this, I had some experiments with more `git` information but most of them f
 ```
 
 ## Owning your identity
+In July 2013, I decided to add the unpulled status to my bash prompt. This opened the introduced 4 more bash statuses that I had to manually test. Before this, it was a little tedious to test but it wasn't unbearable.
+
+To prevent wasting further time, I wrote a [flat file based test suite][flat-tests] making tests easily addable and debuggable.
+
+> The payoff of this has been amazing; debugging is a breeze and Travis CI now tests 2 versions of `git`.
+
+[flat-tests]: https://github.com/twolfson/sexy-bash-prompt/tree/24ec53111d562f2e0f2f076bc555776759a64382/test
+
+After the test suite was built, I went forward and built the new statuses. Then, looking over the code, I realized it was quite mature for a dotfiles script and [broke it out][sexy-bash-prompt].
+
+The prompt you see before you is the final sexy product.
+
+[![sexy-bash-prompt screenshot][sexy-screenshot]][sexy-bash-prompt]
