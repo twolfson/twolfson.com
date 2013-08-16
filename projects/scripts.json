@@ -9,6 +9,15 @@
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
   },
   {
+    "name": "spritesmith",
+    "description": "Join images together into a spritesheet and generates CSS variables",
+    "stars": 84,
+    "forks": 11,
+    "github": "Ensighten/grunt-spritesmith",
+    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
+    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
+  },
+  {
     "name": "File Watcher",
     "description": "Watch your files for a hands-free browser refresh!",
     "stars": 90,
@@ -16,15 +25,6 @@
     "github": "twolfson/File-Watcher",
     "srcUrl": "https://github.com/twolfson/File-Watcher",
     "pageUrl": "https://github.com/twolfson/File-Watcher"
-  },
-  {
-    "name": "spritesmith",
-    "description": "Joins images together into a spritesheet and generates CSS variables",
-    "stars": 84,
-    "forks": 11,
-    "github": "Ensighten/grunt-spritesmith",
-    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
-    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
     "name": "jsmin-sourcemap",
