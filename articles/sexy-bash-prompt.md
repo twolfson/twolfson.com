@@ -5,7 +5,7 @@
   "_summary": "A [bash prompt](https://github.com/twolfson/sexy-bash-prompt) with colors, git statuses, and git branches."
 }
 
-[My bash prompt][sexy-bash-prompt] is evolved enough from its initial fork that I have decided to open source it.
+[My bash prompt][sexy-bash-prompt] has evolved enough from its initial fork that I have decided to open source it.
 
 It is a 2 line prompt that provides session information with distinct symbols for each `git status` combination.
 
@@ -32,16 +32,16 @@ After finding the original, I forked it into my [dotfiles][] and updated the col
 [dotfiles]: https://github.com/twolfson/dotfiles
 [colder]: http://en.wikipedia.org/wiki/Color_theory#Warm_vs._cool_colors
 
-Eventually, I thought it would be display when changes have not been pushed. From this, the triangles were born.
+Eventually, I wanted to display when commits have not been pushed. From this, the triangles were born.
 
 [![Initial fork of sexy-bash-prompt screenshot][sexy-inital-fork-screenshot]][sexy-inital-fork]
 
 [sexy-inital-fork-screenshot]: /public/images/articles/sexy-bash-prompt-initial-fork.png
 [sexy-inital-fork]: https://github.com/twolfson/dotfiles/blob/086b80ee20ee89e697dd04b9686838c7a5203198/.bashrc#L6-L121
 
-> Keen observers will note the triangle in this prompt are smaller than the current one. This is because I had not used OSX where those triangles were very small. Later on, I moved to the larger variant you see now.
+> Keen observers will note the triangle in this prompt are smaller than the current one. The triangles were enlarged after using OSX for work where the original triangles were very small.
 
-From this, I had some experiments with more `git` information but most of them fizzled(e.g. trailing slashes to show how many commits were unpushed).
+From this, I had some experiments with displaying more information but they fizzled (e.g. trailing slashes to show how many commits were unpushed).
 
 ```
 ▵ = ahead by 1
