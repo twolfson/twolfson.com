@@ -2,7 +2,7 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 94,
+    "stars": 95,
     "forks": 10,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
