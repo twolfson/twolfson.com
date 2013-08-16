@@ -1,27 +1,27 @@
 [
   {
-    "name": "jquip",
-    "description": "jQuery in Parts",
-    "stars": 1311,
-    "forks": 65,
-    "github": "mythz/jquip",
-    "srcUrl": "https://github.com/mythz/jquip",
-    "pageUrl": "https://github.com/mythz/jquip"
-  },
-  {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
-    "stars": 1234,
-    "forks": 91,
+    "stars": 1801,
+    "forks": 148,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
     "pageUrl": "https://github.com/remy/nodemon"
   },
   {
+    "name": "jquip",
+    "description": "jQuery in Parts",
+    "stars": 1337,
+    "forks": 68,
+    "github": "mythz/jquip",
+    "srcUrl": "https://github.com/mythz/jquip",
+    "pageUrl": "https://github.com/mythz/jquip"
+  },
+  {
     "name": "www.gittip.com",
     "description": "Donations for open source. <a href=\"https://www.gittip.com/\" target=\"_blank\">https://www.gittip.com/</a>",
-    "stars": 418,
-    "forks": 112,
+    "stars": 445,
+    "forks": 122,
     "github": "gittip/www.gittip.com",
     "srcUrl": "https://github.com/gittip/www.gittip.com",
     "pageUrl": "https://github.com/gittip/www.gittip.com"
@@ -29,8 +29,8 @@
   {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
-    "stars": 170,
-    "forks": 24,
+    "stars": 232,
+    "forks": 41,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
