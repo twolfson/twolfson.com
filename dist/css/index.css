@@ -2624,7 +2624,6 @@ pre .javadoc {
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
-pre .javascript .title,
 pre .nginx .title,
 pre .subst,
 pre .request,
@@ -2648,7 +2647,6 @@ pre .id {
   color: #900;
   font-weight: bold;
 }
-pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
 pre .subst {

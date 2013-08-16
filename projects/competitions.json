@@ -3,7 +3,7 @@
     "name": "IndexedDB Editor",
     "competition": "MDN Dev Derby - IndexedDB",
     "description": "Visual editor for IndexedDB",
-    "views": "128",
+    "views": "127",
     "likes": "2",
     "award": "3rd place!",
     "github": "twolfson/IndexedDB-Editor",

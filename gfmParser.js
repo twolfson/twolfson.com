@@ -1,2 +1,4 @@
 var gfm = require("marked");
-module.exports = gfm.parse;
+module.exports = function (code) {
+  return gfm.parse(code, {langPrefix: 'language-'});
+};
