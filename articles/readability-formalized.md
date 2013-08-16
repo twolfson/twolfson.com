@@ -43,6 +43,7 @@ This also supports my theory/experiment on [applying vertical rhythm to code][ve
 
 ## Definitions
 
-Pattern - Layout of code sections such that sections can vary but retain a similar meaning
+Sequence - Array of characters which can as little as a letter and as much as multiple lines.
 
-> Code often becomes more readible with syntax highlighting as this defines another pattern layer based on color. It allows code patterns to be located (and consequently interpretted) faster.
+Pattern - Array of characters containing distinguishable sequences or patterns.
+
