@@ -45,6 +45,23 @@ This also supports my theory/experiment on [applying vertical rhythm to code][ve
 
 Sequence - Array of characters which can as little as a letter and as much as multiple lines.
 
+*Sequence of variable instantiations:*
+
+```js
+var assert = require('assert'),
+    request = require('request');
+```
+
+*Sequence of exporting a module:*
+
+```js
+module.exports = function assertedRequest(url, cb) {
+  assert(url, '`url` was not defined');
+  request(url, cb);
+};
+```
+
+
 Pattern - Array of characters containing distinguishable sequences. Patterns can contain other patterns (even recursively).
 
 Section - Array of characters that can potentially contain patterns. Sections can contain other sections.
