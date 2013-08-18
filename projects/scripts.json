@@ -2,7 +2,7 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 95,
+    "stars": 96,
     "forks": 10,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
@@ -20,7 +20,7 @@
   {
     "name": "spritesmith",
     "description": "Joins images together into a spritesheet and generates CSS variables",
-    "stars": 84,
+    "stars": 85,
     "forks": 11,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",

@@ -2,7 +2,7 @@
   {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
-    "stars": 1801,
+    "stars": 1806,
     "forks": 148,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
@@ -20,7 +20,7 @@
   {
     "name": "www.gittip.com",
     "description": "Donations for open source. <a href=\"https://www.gittip.com/\" target=\"_blank\">https://www.gittip.com/</a>",
-    "stars": 445,
+    "stars": 446,
     "forks": 122,
     "github": "gittip/www.gittip.com",
     "srcUrl": "https://github.com/gittip/www.gittip.com",
