@@ -64,3 +64,29 @@ If pattern A is consistent with pattern B, and pattern B is consistent with patt
 // TODO: This might be misplaced as a definition
 
 If a pattern is consistent with another pattern, then they are considered readable together.
+
+// TODOS...
+
+This is a aksdnakd
+
+andlnsd
+
+akdnasnd
+
+adkmnalsdn
+
+alksndlkand
+
+aklsndl
+
+<!-- If project A uses patterns X, Y, Z and project B uses patterns U, V, W. Is the collective readability of R(A + B) <= R(A) + R(B)? -->
+
+Given projects A and B. Is the collective readability of R(A + B) <= R(A) + R(B)?
+
+Define R to be a function that takes the ammount of common layouts in a project.
+
+R is not 1:1 (e.g. A could use X, Y, Z and B could use U, V, W but R(A) === R(B) is possible).
+
+If a project uses 1 layout, then adding another layout decrease readability? Maybe. Maybe not.
+
+TODO: Rename all patterns to layouts.
