@@ -65,7 +65,21 @@ Subsequence - A sequence is strictly contained within another sequence.
 
 Pattern - A sequence containing distinguishable subsequences.
 
-Readability - A function that takes a *sequence* and returns a numeric value. For convention, a value of 0 will signify *not readable*. A file that uses different coding styles is less readable than one that uses a consistent coding style.
+Readability - A function that takes a *sequence* and returns a multiset/vector of how many times a pattern reoccurs.
+
+> Patterns cannot be confirmed as such unless they occur more than once.
+
+*Readability of <2&#42;b, 2&#42;c>, where b = 'Exporting to a module', c = 'Common variable definitions':*
+
+```js
+exports.add = function (a, b) {
+  return a + b;
+};
+
+exports.subtract = function (a, b) {
+  return a - b;
+};
+```
 
 *Theorem: Coding styles that use whitespace to delimit sequences are more readable since sequences can be distinguished faster.*
 
