@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.8.1 - Re-ran `grunt` to re-compile JS and CSS
+
 1.8.0 - Added "Readability: Formalized" article
 
 1.7.0 - Added "Sexy bash prompt" article
