@@ -6,13 +6,12 @@
   "_summary": "Defining readability with [axioms](http://en.wikipedia.org/wiki/Axiom) and [theorems](http://en.wikipedia.org/wiki/Theorem)."
 }
 
-This article will define readability from an objective perspective using formal [definitions][defn], [axioms][axiom], and [theorems][theorem].
+This article will define readability from an objective perspective using formal [definitions][defn] and [theorems][theorem].
 
 [defn]: http://en.wikipedia.org/wiki/Definition
-[axiom]: http://en.wikipedia.org/wiki/Axiom
 [theorem]: http://en.wikipedia.org/wiki/Theorem
 
-## Summary
+## Abstract
 Readability is the consistency of patterns (e.g. layout, sequence) in a file, project, organization, and programming language. Having common patterns allows sections (e.g. variable declarations) to be recognized and interpretted faster.
 
 ```no-highlight
@@ -43,7 +42,7 @@ This also supports my theory/experiment on [applying vertical rhythm to code][ve
 
 ## Definitions
 
-Sequence - Array of characters which can as little as a letter and as much as multiple lines.
+Sequence - Array of characters which can be as little as a letter or as much as multiple lines.
 
 *Sequence of variable instantiations:*
 
@@ -61,11 +60,11 @@ module.exports = function assertedRequest(url, cb) {
 };
 ```
 
-Subsequence - A sequence is strictly contained within another sequence.
+Subsequence - A *sequence* is strictly contained within another *sequence*.
 
-Pattern - A sequence containing distinguishable subsequences.
+Pattern - A *sequence* containing distinguishable *subsequences*.
 
-Pattern set - A [multiset][] of how many times a pattern **reoccurs** in a *sequence*.
+Pattern set - A [multiset][] of how many times a *pattern* **reoccurs** in a *sequence*.
 
 *Pattern set of {2&#183;b, 2&#183;c}, where b = 'Exporting to a module', c = 'Common variable definitions':*
 
@@ -81,7 +80,7 @@ exports.subtract = function (a, b) {
 };
 ```
 
-Readability - [Cardinality][] of a pattern set; sum of the times each pattern occurs.
+Readability - [Cardinality][] of a *pattern set*; sum of the times each *pattern* reoccurs.
 
 *The previous example had a readability of 4.*
 
@@ -89,7 +88,7 @@ Readability - [Cardinality][] of a pattern set; sum of the times each pattern oc
 
 ## Proofs
 
-**Proposition 1.1**: A *sequence* with indented code blocks is more readable than it is not indented.
+**Proposition 1.1**: A *sequence* with indented code blocks is more readable than when it is not indented.
 
 ```js
 var fruit = {
@@ -119,19 +118,19 @@ Let `A` be a *sequence* containing code blocks with no identation. Let `a` be th
 a = {n_1·v_1, ..., n_m·v_m}, n_i = non-negative intenger, v_i = pattern
 ```
 
-Let `c` represent a *pattern* of indenting code blocks. Let `B` be the indented version of `A` and `b` be its the *pattern set*. By construction,
+Let `c` represent a *pattern* of indented code blocks. Let `B` be the indented version of `A` and `b` be its the *pattern set*. By construction,
 
 ```
 b = {n_1·v_1, ..., n_m·v_m, n_c·c}
 ```
 
-The readability of `a` is
+The *readability* of `a` is
 
 ```
 a = n_1 + ... + n_m
 ```
 
-and that of `b` is
+and the *readability* of `b` is
 
 ```
 b = n_1 + ... + n_m + n_c
@@ -142,10 +141,17 @@ By transitivity of equality,
 ```
 b - n_c = n_1 + ... + n_m
 b - n_c = a
-b - a = n_c
+b = a + n_c
 ```
 
-Therefore, `B` has a readability of `n_c` greather than `A`.
+By transitivity of inequality,
+
+```
+a + n_c > a
+b > a
+```
+
+Therefore, `B` has greater readability than `A`.
 
 ----------------
 
@@ -155,13 +161,13 @@ The purpose of **Proposition 1.1** was to get you back into the proof solving mi
 
 **Proof**:
 
-Drawing from the solution of **Proposition 1.1**, we can apply the same steps. However, instead of defining a pattern specifically, we would define the same sequence with more patterns such that the pattern set of `A` is a proper subset of the pattern set of `B`.
+Drawing from the solution of **Proposition 1.1**, we can apply the same steps. However, instead of defining a *pattern* specifically, we would define the same *sequence* with more *patterns* such that the *pattern set* of `A` is a proper subset of the *pattern set* of `B`.
 
-From that, it falls out that the cardinality of a proper subset is always less than the cardinality of its containing set.
+From that, it falls out that the *cardinality* of a proper subset is always less than the *cardinality* of its containing set.
 
 ------------
 
-As any suspicious reader might argue, the previous theorem encourages *pattern* abuse. If *patterns* are being abused, then it is no longer possible to distinguishm due to the amplitude of noise. i.e. They are no longer distinguishable which by definition no longer makes them *patterns*.
+As any suspicious reader might argue **Theorem 1.2** encourages *pattern* abuse. If *patterns* are being abused, then they are no longer possible to distinguish due to the amplitude of noise. i.e. They are no longer distinguishable which by definition no longer makes them *patterns*.
 
 Here are few lemmas which we can draw from the **Theorem 1.2**.
 
@@ -215,7 +221,7 @@ function similarFunction(var2) {
 
 [colons-required]: http://docs.python.org/2/faq/design.html#why-are-colons-required-for-the-if-while-def-class-statements
 
-**Lemma 1.6**: Using consistent groupings of comments and code chunks is more readable than not.
+**Lemma 1.6**: Using [consistent groupings of comments and code chunks][vert-rhythm] at the same code level is more readable than not.
 
 ```js
 function smithAddFiles (images, cb) {
@@ -285,6 +291,6 @@ function smithOutputCoordinates (cb) {
 ## Take aways
 The main take away I want for you is to look at code more than an interface from you to your interpreter/compiler. There is an intermediary layer of you to your editor where you must interpret what it displays.
 
-The more patterns you have established, the faster you can scan through your code.
+The more *patterns* you have established, the faster you can scan through your code.
 
-However, **do not enforce your coding styles by hand**. This is something that can easily be automated. If your patterns are too complex to write into a script, then your patterns are too complex for your (or your coworkers') brain to automatically pick up.
+However, **do not enforce your coding styles by hand**. This is something that can easily be automated. If your *patterns* are too complex to write into a script, then your *patterns* are too complex for your (or your coworkers') brain to automatically pick up.
