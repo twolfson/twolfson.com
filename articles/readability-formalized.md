@@ -61,10 +61,11 @@ module.exports = function assertedRequest(url, cb) {
 };
 ```
 
+Subsequence - A sequence is strictly contained within another sequence.
 
-Pattern - Array of characters containing distinguishable sequences. Patterns can contain other patterns (even recursively).
+Pattern - A sequence containing distinguishable subsequences.
 
-Section - Array of characters that can potentially contain patterns. Sections can contain other sections.
+Consistent - Given two patterns, the patterns are said to be consistent if their subsequences have the same order and purpose.
 
 ## Axioms
 
