@@ -65,11 +65,11 @@ Subsequence - A sequence is strictly contained within another sequence.
 
 Pattern - A sequence containing distinguishable subsequences.
 
-Readability - A function that takes a *sequence* and returns a multiset/vector of how many times a pattern reoccurs.
+Readability - A function that takes a *sequence* and returns a [multiset][] of how many times a pattern **reoccurs**.
 
-> Patterns cannot be confirmed as such unless they occur more than once.
+*Readability of {2&#183;b, 2&#183;c}, where b = 'Exporting to a module', c = 'Common variable definitions':*
 
-*Readability of <2&#42;b, 2&#42;c>, where b = 'Exporting to a module', c = 'Common variable definitions':*
+[multiset]: http://en.wikipedia.org/wiki/Multiset
 
 ```js
 exports.add = function (a, b) {
@@ -80,6 +80,12 @@ exports.subtract = function (a, b) {
   return a - b;
 };
 ```
+
+Cardinality - Sum of the times each pattern occurs.
+
+*The previous example had a cardinality of 4.*
+
+## Proofs
 
 *Theorem: Coding styles that use whitespace to delimit sequences are more readable since sequences can be distinguished faster.*
 
