@@ -621,6 +621,6 @@ return this.each(function(){var $this=$(this),$trunkata=$this.data('_trunkata');
 return trunkataProto[method].apply($trunkata,args);});}
 $.fn.trunkata=trunkataEach;}(jQuery));
 
-$(function(){var $preArr=$('pre');$preArr.each(function(){var pre=this;if(pre.parentNode){hljs.highlightBlock(pre);}});var $truncateArr=$('.text-truncate');$truncateArr.each(function(){var $this=$(this);var isArticleSummary=$this.hasClass('article-summary');if(isArticleSummary){var containsBoldenedText=$this.has('a, b, strong');if(containsBoldenedText){return;}}
+$(function(){var $codeArr=$('code');$codeArr.each(function(){var code=this;if(code.parentNode){hljs.highlightBlock(code);}});var $truncateArr=$('.text-truncate');$truncateArr.each(function(){var $this=$(this);var isArticleSummary=$this.hasClass('article-summary');if(isArticleSummary){var containsBoldenedText=$this.has('a, b, strong');if(containsBoldenedText){return;}}
 $this.trunkata({'lines':1});});});
 //@ sourceMappingURL=index.js.map
