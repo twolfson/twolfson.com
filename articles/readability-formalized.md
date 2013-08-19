@@ -65,9 +65,9 @@ Subsequence - A sequence is strictly contained within another sequence.
 
 Pattern - A sequence containing distinguishable subsequences.
 
-Readability - A function that takes a *sequence* and returns a [multiset][] of how many times a pattern **reoccurs**.
+Pattern set - A [multiset][] of how many times a pattern **reoccurs** in a *sequence*.
 
-*Readability of {2&#183;b, 2&#183;c}, where b = 'Exporting to a module', c = 'Common variable definitions':*
+*Pattern set of {2&#183;b, 2&#183;c}, where b = 'Exporting to a module', c = 'Common variable definitions':*
 
 [multiset]: http://en.wikipedia.org/wiki/Multiset
 
@@ -81,11 +81,15 @@ exports.subtract = function (a, b) {
 };
 ```
 
-Cardinality - Sum of the times each pattern occurs.
+Readability - [Cardinality][] of a pattern set; sum of the times each pattern occurs.
 
-*The previous example had a cardinality of 4.*
+*The previous example had a readability of 4.*
+
+[Cardinality]: http://en.wikipedia.org/wiki/Multiset#Multiplicity_function
 
 ## Proofs
+
+**Proposition**: Indenting code blocks
 
 *Theorem: Coding styles that use whitespace to delimit sequences are more readable since sequences can be distinguished faster.*
 
@@ -100,8 +104,6 @@ Define R to be a function that takes the ammount of common layouts in a project.
 R is not 1:1 (e.g. A could use X, Y, Z and B could use U, V, W but R(A) === R(B) is possible).
 
 If a project uses 1 layout, then adding another layout decrease readability? Maybe. Maybe not.
-
-TODO: Rename all patterns to layouts.
 
 
 
