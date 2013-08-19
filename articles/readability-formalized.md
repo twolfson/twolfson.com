@@ -89,7 +89,15 @@ Readability - [Cardinality][] of a pattern set; sum of the times each pattern oc
 
 ## Proofs
 
-**Proposition**: Indenting code blocks
+**Proposition**: A *sequence* with indented code blocks is more readable than it is not indented.
+
+Let *A* be a *sequence* containing code blocks with no identation. Let *a* be the pattern set of *A*. By definition,
+
+```
+a = {n_1·v_1, ..., n_m·v_m}
+```
+
+Let *I* represent a *pattern* of indenting code blocks.
 
 *Theorem: Coding styles that use whitespace to delimit sequences are more readable since sequences can be distinguished faster.*
 
