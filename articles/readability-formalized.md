@@ -65,7 +65,11 @@ Subsequence - A sequence is strictly contained within another sequence.
 
 Pattern - A sequence containing distinguishable subsequences.
 
-Consistent - Given two patterns, the patterns are said to be consistent if their subsequences have the same order and purpose.
+Readability - A function that satisfies the [definition of a metric space][metric space] such that patterns with similar ordering and purposes for subsequences have a lower "distance".
+
+[metric space]: http://en.wikipedia.org/wiki/Metric_space
+
+// TODO: But a file can be considered 'readable', right?
 
 ## Axioms
 
