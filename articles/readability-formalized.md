@@ -168,9 +168,48 @@ Here are few lemmas which we can draw from the **Theorem 1.2**.
 **Lemma 1.3**: Coding styles that break into code chunks are more readable.
 
 ```js
+var width = Math.max(packedObj.width || 0, 0),
+    height = Math.max(packedObj.height || 0, 0);
+var itemsExist = packedObj.items.length;
+if (itemsExist) {
+  width -= padding;
+  height -= padding;
+}
+retObj.properties = {
+  width: width,
+  height: height
+};
+```
+
+```js
+var width = Math.max(packedObj.width || 0, 0),
+    height = Math.max(packedObj.height || 0, 0);
+
+var itemsExist = packedObj.items.length;
+if (itemsExist) {
+  width -= padding;
+  height -= padding;
+}
+
+retObj.properties = {
+  width: width,
+  height: height
+};
 ```
 
 **Lemma 1.4**: Syntax highlighted code is more readable than unhighlighted code as sequences.
+
+```no-highlight
+function similarFunction(var2) {
+  console.log('Another variable', var2);
+}
+```
+
+```js
+function similarFunction(var2) {
+  console.log('Another variable', var2);
+}
+```
 
 **Lemma 1.5**: [As in Python][colons-required], using `:` to distinguish conditionals and loops improves readability.
 
@@ -178,9 +217,74 @@ Here are few lemmas which we can draw from the **Theorem 1.2**.
 
 **Lemma 1.6**: Using consistent groupings of comments and code chunks is more readable than not.
 
+```js
+function smithAddFiles (images, cb) {
+  images.forEach(function (img) {
+    var width = img.width,
+        height = img.height,
+        meta = {'img': img, 'actualWidth': width, 'actualHeight': height};
+
+    layer.addItem({'width': width + padding, 'height': height + padding, 'meta': meta});
+  });
+
+  cb(null);
+},
+function smithOutputCoordinates (cb) {
+  packedObj = layer['export']();
+
+  var coordinates = {},
+      packedItems = packedObj.items;
+  packedItems.forEach(function (item) {
+    var meta = item.meta;
+    coordinates[name] = {
+      'x': item.x,
+      'y': item.y,
+      'width': meta.actualWidth,
+      'height': meta.actualHeight
+    };
+  });
+...
+```
+
+```js
+// Then, add the images to our canvas (dry run)
+function smithAddFiles (images, cb) {
+  images.forEach(function (img) {
+    // Save the non-padded properties as meta data
+    var width = img.width,
+        height = img.height,
+        meta = {'img': img, 'actualWidth': width, 'actualHeight': height};
+
+    // Add the item with padding to our layer
+    layer.addItem({'width': width + padding, 'height': height + padding, 'meta': meta});
+  });
+
+  // Callback with nothing
+  cb(null);
+},
+// Then, output the coordinates
+function smithOutputCoordinates (cb) {
+  // Export and saved packedObj for later
+  packedObj = layer['export']();
+
+  // Extract the coordinates
+  var coordinates = {},
+      packedItems = packedObj.items;
+  packedItems.forEach(function (item) {
+    var meta = item.meta;
+    coordinates[name] = {
+      'x': item.x,
+      'y': item.y,
+      'width': meta.actualWidth,
+      'height': meta.actualHeight
+    };
+  });
+...
+```
+
 ## Take aways
 The main take away I want for you is to look at code more than an interface from you to your interpreter/compiler. There is an intermediary layer of you to your editor where you must interpret what it displays.
 
 The more patterns you have established, the faster you can scan through your code.
 
-However, don't go off and enforce your coding styles by hand. This is something that can easily be automated. If your patterns are too complex to write into a script, then your patterns are too complex for your brain (or your coworkers') to automatically pick up.
+However, **do not enforce your coding styles by hand**. This is something that can easily be automated. If your patterns are too complex to write into a script, then your patterns are too complex for your (or your coworkers') brain to automatically pick up.
