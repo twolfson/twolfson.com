@@ -65,41 +65,11 @@ Subsequence - A sequence is strictly contained within another sequence.
 
 Pattern - A sequence containing distinguishable subsequences.
 
-Readability - A function that satisfies the [definition of a metric space][metric space] such that patterns with similar ordering and purposes for subsequences have a lower "distance".
+Readability - A function that takes a *sequence* and returns a numeric value. For convention, a value of 0 will signify *not readable*. A file that uses different coding styles is less readable than one that uses a consistent coding style.
 
-[metric space]: http://en.wikipedia.org/wiki/Metric_space
+*Theorem: Coding styles that use whitespace to delimit sequences are more readable since sequences can be distinguished faster.*
 
-// TODO: But a file can be considered 'readable', right?
-
-## Axioms
-
-### Axiom of reflexivity
-
-A pattern is consistent with itself.
-
-### Axiom of transitivity
-
-If pattern A is consistent with pattern B, and pattern B is consistent with pattern C. Then, pattern A is consistent with pattern C.
-
-### Axiom of readability
-
-// TODO: This might be misplaced as a definition
-
-If a pattern is consistent with another pattern, then they are considered readable together.
-
-// TODOS...
-
-This is a aksdnakd
-
-andlnsd
-
-akdnasnd
-
-adkmnalsdn
-
-alksndlkand
-
-aklsndl
+*Theorem: Syntax highlighted code is more readable than unhighlighted code as sequences can be distinguished faster.*
 
 <!-- If project A uses patterns X, Y, Z and project B uses patterns U, V, W. Is the collective readability of R(A + B) <= R(A) + R(B)? -->
 
@@ -112,3 +82,73 @@ R is not 1:1 (e.g. A could use X, Y, Z and B could use U, V, W but R(A) === R(B)
 If a project uses 1 layout, then adding another layout decrease readability? Maybe. Maybe not.
 
 TODO: Rename all patterns to layouts.
+
+
+
+
+
+
+
+
+
+
+First proof: Indented blocks have higher readability than unindented ones
+
+Second proof: Guido was right about using `:` for conditionals. Readability is improved as these are more distinguishable from other loops
+
+Third proof: Code chunking improves readability
+
+TODO: This might require each sequence to have a purpose =/
+
+Fourth proof: Keeping commenting consistent among chunked pieces makes code more readable
+
+Proposition: Does length limited code make it more readable?
+
+Proposition: Is CoffeeScript less readable since invocations are less distinguishable?
+
+
+TODO: Readability is amount of repeated patterns in a given set of text (may be multiple files).
+
+TODO: Let A, B, C, U, V, W be patterns. Proof that R((U + V + W) + (A + B + C)) < R((A + B + C) + (A + B + C))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
