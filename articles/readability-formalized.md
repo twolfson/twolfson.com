@@ -289,8 +289,12 @@ function smithOutputCoordinates (cb) {
 ```
 
 ## Take aways
-The main take away I want for you is to look at code more than an interface from you to your interpreter/compiler. There is an intermediary layer of you to your editor where you must interpret what it displays.
+The embrace of visual patterns in code can be expanded from a *file* to a *project* to an *organization* to a *style guide* to a *programming language*.
+
+Code is more than an interface from you to your interpreter/compiler. It has an intermediate layer between you and your editor where you must interpret what it displays.
 
 The more *patterns* you have established, the faster you can scan through your code.
 
-However, **do not enforce your coding styles by hand**. This is something that can easily be automated. If your *patterns* are too complex to write into a script, then your *patterns* are too complex for your (or your coworkers') brain to automatically pick up.
+**Do not enforce your coding styles by hand**. This is something that can easily be automated. If your *patterns* are too complex to write into a script, then your *patterns* are too complex for your (or your coworkers') brain to automatically pick up.
+
+Go out, play around with *patterns*, and see if your code becomes more readable.
