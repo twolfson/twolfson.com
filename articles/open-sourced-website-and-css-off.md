@@ -2,7 +2,7 @@
   "title": "Open sourced website and CSS Off",
   "author": "Todd Wolfson",
   "date": "2012/06/16",
-  "summary": "I am finally knocking this off of my TODO list. The first of which are to open source both my website (<a href=\"https://github.com/twolfson/twolfson.com\">available here</a> and my entry for the CSS&hellip;"
+  "_summary": "I have open sourced both my website ([available here](https://github.com/twolfson/twolfson.com)) and my entry for the the CSS Off ([available here](https://github.com/twolfson/CSS-Off--2011-))."
 }
 
 I am finally knocking this off of my TODO list. The first of which are to open source both my website ([available here](https://github.com/twolfson/twolfson.com)) and my entry for the CSS Off ([available here](https://github.com/twolfson/CSS-Off--2011-)).

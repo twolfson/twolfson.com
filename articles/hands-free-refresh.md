@@ -1,8 +1,9 @@
 {
   "title": "Hands-Free Refresh Anywhere - File Watcher et al.",
+  "_title": "Hands-Free Refresh Anywhere - File Watcher&hellip;",
   "author": "Todd Wolfson",
   "date": "2012/03/25",
-  "summary": "When <a href=\"http://www.unmatchedstyle.com/cssoff/\">UMS' CSS Off</a> started in Late October, I was getting frustrated at needing to manually refresh for any page change -- no matter how small."
+  "_summary": "When [UMS' CSS Off](http://www.unmatchedstyle.com/cssoff/) started in Late October, I was getting frustrated at needing to manually refresh for any page change -- no matter how small."
 }
 
 Backstory
