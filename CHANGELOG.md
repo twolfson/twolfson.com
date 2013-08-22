@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.11.0 - Updated contact page tags
+
 1.10.0 - Added /license page
 
 1.9.0 - Minor cleanup and updated footer to use MIT License
