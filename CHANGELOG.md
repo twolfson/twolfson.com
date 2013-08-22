@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.12.0 - Removed jQuery and trunkata
+
 1.11.0 - Updated contact page tags
 
 1.10.0 - Added /license page
