@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.9.0 - Minor cleanup and updated footer to use MIT License
+
 1.8.2 - Tweaking closing section of "Readability: Formalized"
 
 1.8.1 - Re-ran `grunt` to re-compile JS and CSS
