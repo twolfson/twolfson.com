@@ -20,7 +20,7 @@ addJojo(app);
 // DEV: Stopping tracking of this since it bloats analytics
 // // If we are in a production environment, track whenever an RSS is requested
 // if (inProduction) {
-//  var GA = require('./ga'),
+//  var GA = require('./lib/ga'),
 //      ga = GA();
 //   app.get('/index.xml', ga);
 // }
