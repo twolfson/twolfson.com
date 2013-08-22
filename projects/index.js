@@ -90,7 +90,6 @@ function updateStats() {
 setInterval(updateStats, everyHour);
 process.nextTick(updateStats);
 
-console.log(scripts);
 module.exports = {
   "scripts": scripts,
   "competitions": competitions,
