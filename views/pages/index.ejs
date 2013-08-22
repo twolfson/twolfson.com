@@ -9,7 +9,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
     <article class="post <%=rowKlass%> theme">
       <header class="row">
         <div class="span9">
-          <h2 class="text-truncate" title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
+          <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         </div>
         <div class="span3 text-right fluffToH2">
         <%
@@ -23,7 +23,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
           <span class="date"><%= articleDate %></span>
         </div>
       </header>
-      <section class="content row"><div class="span12"><div class="text-truncate article-summary">
+      <section class="content row"><div class="span12"><div class="article-summary">
         <p><%- article.summary %></p>
       </div></div></section>
       <div class="more row"><div class="span12 text-right">

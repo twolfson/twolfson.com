@@ -82,6 +82,7 @@
   },
   {
     "name": "What size is my browser?",
+    "truncatedName": "What size is my&hellip;",
     "description": "Determine your browser dimensions via media queries",
     "stars": 6,
     "forks": 1,
