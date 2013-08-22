@@ -1,5 +1,6 @@
 // Load in dependencies
 var fs = require('fs'),
+    yml = require('js-yaml'),
     exec = require('child_process').exec,
     async = require('async'),
     slug = require('slug'),
@@ -19,18 +20,7 @@ try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 // TODO: Optimize space via tarballing expected files?
 var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
-    urls = [
-      '/',
-      '/2012-11-17-subtle-anti-patterns',
-      '/2013-07-11-axioms-of-maintainability', // Blog post with code highlighting
-      '/2013-07-24-abandoned-project:-kaleidoscope', // Blog post with images
-      '/2013-07-27-develop-faster', // Blog post with tables
-      '/projects',
-      '/contact',
-      '/contact?test=success',
-      '/contact?test=fail',
-      '/404'
-    ];
+    urls = require('./urls');
 
 // For each of the URLs
 async.map(urls, function (_url, cb) {

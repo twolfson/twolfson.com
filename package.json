@@ -22,7 +22,8 @@
     "grunt": "~0.3.17",
     "async": "~0.2.9",
     "slug": "~0.3.3",
-    "temporary": "0.0.5"
+    "temporary": "0.0.5",
+    "js-yaml": "~2.1.0"
   },
   "scripts": {
     "start": "node app.js",
