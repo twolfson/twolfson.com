@@ -8,3 +8,4 @@
 /updateProduction.sh
 test/perceptual-tests/actual_screenshots/
 test/perceptual-tests/screenshot_diffs/
+tmp.png
