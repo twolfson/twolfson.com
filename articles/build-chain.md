@@ -1,8 +1,9 @@
 {
   "title": "Why your client-side framework deserves a build chain",
+  "_title": "Why your client-side framework deserves a&hellip;",
   "author": "Todd Wolfson",
   "date": "2012/07/04",
-  "summary": "I finally got around to making a screencast on my thoughts on client-side frameworks. This was a presentation I gave as a lightning talk&hellip;"
+  "summary": "A screencast on my thoughts on client-side frameworks."
 }
 
 I finally got around to making a screencast on my thoughts on client-side frameworks. This was a presentation I gave as a lightning talk in the past but took more time explaining this time.
