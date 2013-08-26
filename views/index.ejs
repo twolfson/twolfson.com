@@ -12,15 +12,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
           <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         </div>
         <div class="span3 text-right fluffToH2">
-        <%
-          var rawDate = article.rawDate,
-              day = rawDate.getDate() + "";
-          if (day.length === 1) {
-             day = "0" + day;
-          }
-          var articleDate = MONTHS[rawDate.getMonth()] + " " + day + ", " + (rawDate.getYear() + 1900);
-        %>
-          <span class="date"><%= articleDate %></span>
+          <span class="date"><%= article.dateStr %></span>
         </div>
       </header>
       <section class="content row"><div class="span12"><div class="article-summary">
