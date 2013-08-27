@@ -1,6 +1,6 @@
 {
   "name": "twolfson.com",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "description": "twolfson.com server",
   "main": "app.js",
   "dependencies": {
@@ -9,7 +9,7 @@
     "express": "~2.5.11",
     "gitter": "~0.2.0",
     "marked": "~0.2.6",
-    "emailjs": "~0.3.4",
+    "emailjs": "0.3.4",
     "request": "~2.27.0",
     "moment": "~2.1.0"
   },
