@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.13.0 - Moved to latest `jojo` and removed `EMFILE` performance bottleneck
+
 1.12.1 - Fixed emailjs version due to Google auth issues
 
 1.12.0 - Removed jQuery and trunkata
