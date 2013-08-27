@@ -12,7 +12,8 @@ global.jquerySrc = fs.readFileSync(jqueryPath, 'utf8');
 
 // Set up config
 var config = {
-  host: 'http://twolfson.com',
+  host: 'http://127.0.0.1:8080',
+  httpsHost: 'https://twolfson.com',
   url: function getUrl (path) {
     return this.host + path;
   },

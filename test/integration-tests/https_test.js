@@ -2,7 +2,7 @@ require('./setup');
 describe('twolfson.com', function () {
   before(function (done) {
     var that = this,
-        httpsPage = config.url('/').replace('http:', 'https:');
+        httpsPage = config.httpsHost + '/';
     request.get(httpsPage, function getHttpsPage (err, res, body) {
       that.err = err;
       that.res = res;

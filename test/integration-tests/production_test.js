@@ -2,7 +2,7 @@ require('./setup');
 describe('twolfson.com', function () {
   before(function (done) {
     var that = this,
-        index = config.url('/');
+        index = config.httpsHost + '/';
     request.get(index, function getIndexPage (err, res, body) {
       that.body = body;
       done(err);
