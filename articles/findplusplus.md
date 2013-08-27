@@ -1,9 +1,8 @@
 {
   "title": "Introducing Find++",
   "author": "Todd Wolfson",
-  "_date": "2013/04/22",
   "date": "Mon Apr 22 2013 00:00:00",
-  "_summary": "[Find++](https://github.com/twolfson/FindPlusPlus) is an implementation of search utilites from [Notepad++](http://notepad-plus-plus.org/) for [Sublime Text 2](http://www.sublimetext.com/2)."
+  "summary": "[Find++](https://github.com/twolfson/FindPlusPlus) is an implementation of search utilites from [Notepad++](http://notepad-plus-plus.org/) for [Sublime Text 2](http://www.sublimetext.com/2)."
 }
 
 [Find++][fpp] is an implementation of search utilites from [Notepad++][npp] for [Sublime Text 2][subl].

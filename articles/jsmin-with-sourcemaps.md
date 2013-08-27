@@ -2,7 +2,7 @@
   "title": "JSMin with sourcemaps",
   "author": "Todd Wolfson",
   "date": "2012/10/07",
-  "_summary": "Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap)."
+  "summary": "Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap)."
 }
 
 Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap).

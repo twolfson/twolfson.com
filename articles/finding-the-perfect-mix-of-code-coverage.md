@@ -2,7 +2,7 @@
   "title": "Finding the perfect mix of code coverage",
   "author": "Todd Wolfson",
   "date": "2013/07/04",
-  "_summary": "<a href='https://en.wikipedia.org/wiki/Code_coverage'>Code coverage</a> is the percentage of lines of code touched by a test suite. It is a good metric but API coverage is a new step forward."
+  "summary": "[Code coverage](https://en.wikipedia.org/wiki/Code_coverage) is the percentage of lines of code touched by a test suite. It is a good metric but API coverage is a new step forward."
 }
 
 [Code coverage][code-cov] is the percentage of lines of code that are touched by the test suite. In JS, some well known libs are [Istanbul][istanbul] and [JSCoverage][js-cov].

@@ -2,7 +2,7 @@
   "title": "Open letter to gruntjs",
   "author": "Todd Wolfson",
   "date": "2013/02/15",
-  "_summary": "The following letter is about my thoughts and complaints of the recent [gruntjs](http://gruntjs.com/) upgrade from `0.3` to `0.4`."
+  "summary": "The following letter is about my thoughts and complaints of the recent [gruntjs](http://gruntjs.com/) upgrade from `0.3` to `0.4`."
 }
 
 **Update:** I have [discussed this issue][issue] with the authors of gruntjs. In the end, we agreed to disagree.

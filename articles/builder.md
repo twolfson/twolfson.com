@@ -1,9 +1,8 @@
 {
   "title": "Builder - Build chain for your client side",
   "author": "Todd Wolfson",
-  "_date": "2013/03/12",
   "date": "Mon Mar 11 2013 02:00:00",
-  "_summary": "Another overdue introduction -- This time to [Builder](https://github.com/Ensighten/Builder), a framework for automating common client-side steps."
+  "summary": "Another overdue introduction -- This time to [Builder](https://github.com/Ensighten/Builder), a framework for automating common client-side steps."
 }
 
 [Builder][Builder] is a framework for automating common steps performed when rendering content on your client side.

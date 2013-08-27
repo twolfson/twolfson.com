@@ -2,7 +2,7 @@
   "title": "Node Knockout 2012",
   "author": "Todd Wolfson",
   "date": "2012/11/14",
-  "_summary": "This weekend, [3 coworkers and I](http://nodeknockout.com/teams/jazzycat-emit-meow), participated in [Node Knockout](http://nodeknockout.com/), a 48 hour [node.js](http://nodejs.org/) based [hackathon](http://en.wikipedia.org/wiki/Hackathon)."
+  "summary": "This weekend, [3 coworkers and I](http://nodeknockout.com/teams/jazzycat-emit-meow), participated in [Node Knockout](http://nodeknockout.com/), a 48 hour [node.js](http://nodejs.org/) based [hackathon](http://en.wikipedia.org/wiki/Hackathon)."
 }
 
 This weekend, [3 coworkers and I](http://nodeknockout.com/teams/jazzycat-emit-meow), participated in [Node Knockout](http://nodeknockout.com/), a 48 hour [node.js](http://nodejs.org/) based [hackathon](http://en.wikipedia.org/wiki/Hackathon). For a while before the competition, we didn't have any good ideas. On the ride up to the city, the idea began to crystalize.

@@ -2,7 +2,7 @@
   "title": "Sexy bash prompt",
   "author": "Todd Wolfson",
   "date": "2013/08/15",
-  "_summary": "A [bash prompt](https://github.com/twolfson/sexy-bash-prompt) with colors, git statuses, and git branches."
+  "summary": "A [bash prompt](https://github.com/twolfson/sexy-bash-prompt) with colors, git statuses, and git branches."
 }
 
 [My bash prompt][sexy-bash-prompt] has evolved enough from its initial fork that I have decided to open source it.

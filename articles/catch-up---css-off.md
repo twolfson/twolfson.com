@@ -2,7 +2,7 @@
   "title": "Catch up - CSS Off",
   "author": "Todd Wolfson",
   "date": "2012/03/25",
-  "_summary": "This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place."
+  "summary": "This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place."
 }
 
 This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place.

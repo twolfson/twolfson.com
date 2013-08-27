@@ -2,7 +2,7 @@
   "title": "BDD and the Future",
   "author": "Todd Wolfson",
   "date": "2013/05/27",
-  "_summary": "A presentation overviewing the history of BDD and some of my experiments."
+  "summary": "A presentation overviewing the history of BDD and some of my experiments."
 }
 
 I recently spoke at [UtahJS][utahjs] and presented on the history of BDD and some of my experiments.

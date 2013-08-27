@@ -1,9 +1,8 @@
 {
   "title": "Readability: Formalized",
   "author": "Todd Wolfson",
-  "_date": "2013/08/15",
   "date": "Aug 15 2013 01:00:00",
-  "_summary": "Defining readability through [propositions](http://en.wikipedia.org/wiki/Proposition), [theorems](http://en.wikipedia.org/wiki/Theorem), and [lemmas](http://en.wikipedia.org/wiki/Lemma_%28mathematics%29)."
+  "summary": "Defining readability through [propositions](http://en.wikipedia.org/wiki/Proposition), [theorems](http://en.wikipedia.org/wiki/Theorem), and [lemmas](http://en.wikipedia.org/wiki/Lemma_%28mathematics%29)."
 }
 
 This article will define readability from an objective perspective using formal [definitions][defn] and [theorems][theorem].

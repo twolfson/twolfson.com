@@ -2,7 +2,7 @@
   "title": "Abandoned project: Kaleidoscope",
   "author": "Todd Wolfson",
   "date": "2013/07/24",
-  "_summary": "Abandonment of an in-browser solution for a website-at-a-glance webpage and looking forward to perceptual diffs."
+  "summary": "Abandonment of an in-browser solution for a website-at-a-glance webpage and looking forward to perceptual diffs."
 }
 
 Back in November 2012, I began working on a project titled [kaleidoscope][]. The idea was a script that would take screenshots of multiple webpages in the browser and display them in a grid on a website. Each image would automatically refresh as any file it used was updated and it would be entirely standalone within the browser.
