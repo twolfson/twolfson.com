@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.14.0 - Wrote article about optimal line length theory
+
 1.13.0 - Moved to latest `jojo` and removed `EMFILE` performance bottleneck
 
 1.12.1 - Fixed emailjs version due to Google auth issues
