@@ -48,7 +48,3 @@ Bordered content, continuing with the rail concept but forcing focus to the cont
 [![Bordered content][bordered]][bordered]
 
 [bordered]: /public/images/articles/optimal-line-length-theory/optimal-lines-bordered.jpg
-
-I am still limited by Sublime's API but contemplate creating a proof of concept via [Brackets][].
-
-[Brackets]: http://brackets.io/
