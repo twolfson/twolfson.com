@@ -12,6 +12,14 @@ In typography, there is the notion of an optimal line length.
 
 While I have not yet applied this notion to my blog (it's on my TODO list), I have been toying with the idea of applying it to my code.
 
-The concept is to place a variable marker (e.g. ruler) 65 characters after the initial non-whitespace character. This would be used as a guide similar to the hard 80 character limit that is frequently enforced.
+The concept is to place a relative marker (e.g. ruler) 65 characters after the initial non-whitespace character. This would be used as a guide similar to the absolute [80 character limit][] that is frequently enforced.
 
-I initially attempted a proof of concept plugin within Sublime Text but found that it lacked the ability to draw in a non-text area.
+[80 character limit]: http://en.wikipedia.org/wiki/Characters_per_line
+
+[![Optimal line length sketch][continuous]][continuous]
+
+[continuous]: /public/images/articles/optimal-line-length-theory/optimal-ruler-continuous.jpg
+
+I initially attempted a proof of concept plugin within Sublime Text but found that it lacked the ability to draw outside of written characters. As a result, I took to [pixlr][] and whipped up some more mockups.
+
+[pixlr]: http://pixlr.com/editor/
