@@ -1,18 +1,19 @@
 {
   "title": "Optimal line length theory",
   "author": "Todd Wolfson",
-  "date": "2013/09/08"
+  "date": "2013/09/08",
+  "summary": "Experimenting with applying relative typographic line length limits to code."
 }
 
-In typography, there is the notion of an optimal line length.
+In typography there is the notion of an optimal line length, an ideal amount of characters per line to make a section of text easier/faster to read.
 
 > For a single-column design measure should ideally lie between 40 & 80 characters. Many typographers consider the perfect measure to be 65 characters.
 
 > http://en.wikipedia.org/wiki/Measure_%28typography%29
 
-While I have not yet applied this notion to my blog (it's on my TODO list), I have been toying with the idea of applying it to my code.
+I have been considering to take on the experiment of applying this idea to my code.
 
-The concept is to place a relative marker (e.g. ruler) 65 characters after the initial non-whitespace character. This would be used as a guide similar to the absolute [80 character limit][] that is frequently enforced.
+My execution would be placing a relative marker (e.g. ruler) 65 characters after the initial non-whitespace character. This would be used as a guide similar to the absolute [80 character limit][] that is frequently enforced.
 
 [80 character limit]: http://en.wikipedia.org/wiki/Characters_per_line
 
