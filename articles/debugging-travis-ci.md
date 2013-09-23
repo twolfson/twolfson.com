@@ -15,7 +15,9 @@ $ ./test.sh
 [Travis CI]: http://travis-ci.org/
 [Sublime Text]: http://sublimetext.com/
 
-From there, I knew that I needed to run xvfb to get around this.
+From there, and reading enough articles about [PhantomJS][], I knew that I needed to run `Xvfb` to get around this.
+
+[PhantomJS]: http://phantomjs.org/
 
 ```yml
 # Inside of .travis.yml
@@ -31,12 +33,12 @@ $ ./test.sh
 Xlib:  extension "RANDR" missing on display ":99.0".
 ```
 
-After a bit of research, I discovered that Travis CI's tests run inside of a [Ubuntu 12.04 LTS 64 bit][travis-ubuntu] virtual machine. Additionally, there was [documentation on versions of software][travis-software] Travis CI was running.
+The next day, I began to research and discovered that Travis CI's tests are run inside of a [Ubuntu 12.04 LTS 64 bit][travis-ubuntu] virtual machine. Additionally, there was [documentation on versions of software][travis-software].
 
 [travis-ubuntu]: http://about.travis-ci.org/docs/user/ci-environment/#CI-environment-OS
 [travis-software]: http://about.travis-ci.org/docs/user/ci-environment/#Environment-common-to-all-VM-images
 
-To start my mocking, I created a vanilla [Vagrant][] off of the [Ubuntu 64 bit image][vagrant-boxes].
+I decided to mock this environment via [Vagrant][], a development environment management program. I created a [Vagrant][] using the vanilla [Ubuntu 64 bit base image][vagrant-boxes].
 
 [Vagrant]: http://www.vagrantup.com/
 [vagrant-boxes]: http://www.vagrantbox.es/
@@ -62,6 +64,7 @@ ln -s $PWD"/Sublime Text 2/sublime_text" /usr/bin/sublime_text
 
 # Trial and error with Xvfb
 xvfb -screen 0 1024x768x24
+./test.sh
 ```
 
 Once I got to the same error, I found the problem was the tests were running fine but not terminating [Sublime Text][]. I added an `exit` statement to each test and [Travis CI][] ran flawlessly.
