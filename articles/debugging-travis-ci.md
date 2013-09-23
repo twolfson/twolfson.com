@@ -12,8 +12,8 @@ $ ./test.sh
 (sublime_text:1080): Gtk-WARNING **: cannot open display: :0
 ```
 
-[Travis CI]:
-[Sublime Text]:
+[Travis CI]: http://travis-ci.org/
+[Sublime Text]: http://sublimetext.com/
 
 From there, I knew that I needed to run xvfb to get around this.
 
@@ -36,7 +36,10 @@ After a bit of research, I discovered that Travis CI's tests run inside of a [Ub
 [travis-ubuntu]: http://about.travis-ci.org/docs/user/ci-environment/#CI-environment-OS
 [travis-software]: http://about.travis-ci.org/docs/user/ci-environment/#Environment-common-to-all-VM-images
 
-To start my mocking, I created a vanilla [Vagrant][vagrant] off of the Ubuntu 64 bit image.
+To start my mocking, I created a vanilla [Vagrant][] off of the [Ubuntu 64 bit image][vagrant-boxes].
+
+[Vagrant]: http://www.vagrantup.com/
+[vagrant-boxes]: http://www.vagrantbox.es/
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -61,9 +64,9 @@ ln -s $PWD"/Sublime Text 2/sublime_text" /usr/bin/sublime_text
 xvfb -screen 0 1024x768x24
 ```
 
-Once I got to the same error, I found the problem was the tests were running fine but not terminating [Sublime Text][]. I added an exit statement to each test and [Travis CI][] ran flawlessly.
+Once I got to the same error, I found the problem was the tests were running fine but not terminating [Sublime Text][]. I added an `exit` statement to each test and [Travis CI][] ran flawlessly.
 
-> As it turns out, you *really* are supposed to ignore the Xlib error for "RANDR".
+> As it turns out, you *really* are supposed to ignore the `Xlib` error for `RANDR`.
 
 ```
 $ ./test.sh
