@@ -7,38 +7,72 @@
 
 Earlier this week, I was having trouble getting my tests to run in [Travis CI][]. My use case was running [Sublime Text][] inside of [Travis CI][]. Unfortunately, I was running into issues that can only encounter in a display-less environment.
 
-```
-Gtk warning
+```bash
+$ ./test.sh
+(sublime_text:1080): Gtk-WARNING **: cannot open display: :0
 ```
 
 [Travis CI]:
 [Sublime Text]:
 
-From there, I knew that I needed to run xvfb to get around this. However, after doing that I was met with another error and stuck for the rest of the night.
+From there, I knew that I needed to run xvfb to get around this.
 
+```yml
+# Inside of .travis.yml
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 ```
-RANDR extension not found
+
+However, after doing that I was met with another error and stuck for the rest of the night.
+
+```bash
+$ ./test.sh
+Xlib:  extension "RANDR" missing on display ":99.0".
 ```
 
-After a bit of research, I discovered that [Travis CI] runs against [Ubuntu 12.03 LTS 64 bit][travis-ubuntu]. Additionally, there was [documentation on versions of software][travis-software] Travis CI was running.
+After a bit of research, I discovered that Travis CI's tests run inside of a [Ubuntu 12.04 LTS 64 bit][travis-ubuntu] virtual machine. Additionally, there was [documentation on versions of software][travis-software] Travis CI was running.
 
-[travis-ubuntu]:
-[travis-software]:
+[travis-ubuntu]: http://about.travis-ci.org/docs/user/ci-environment/#CI-environment-OS
+[travis-software]: http://about.travis-ci.org/docs/user/ci-environment/#Environment-common-to-all-VM-images
 
 To start my mocking, I created a vanilla [Vagrant][vagrant] off of the Ubuntu 64 bit image.
 
-```
-precise-64
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+end
 ```
 
 Then, it was a series of thoughtful trial and error to get to the same error message. The important steps for me were:
 
 ```python
-sudo apt-get install X
+# Install xvfb and libgtk2.0-0
+sudo apt-get install xvfb
+sudo apt-get install libgtk2.0-0
+
+# Install `sublime_text`
+wget 64bit-sublime-text.tar.bz2
+tar xvf 64bit-sublime-text.tar.bz2
+ln -s $PWD"/Sublime Text 2/sublime_text" /usr/bin/sublime_text
+
+# Trial and error with Xvfb
+xvfb -screen 0 1024x768x24
 ```
 
 Once I got to the same error, I found the problem was the tests were running fine but not terminating [Sublime Text][]. I added an exit statement to each test and [Travis CI][] ran flawlessly.
 
+> As it turns out, you *really* are supposed to ignore the Xlib error for "RANDR".
+
 ```
-... Tests passing
+$ ./test.sh
+Xlib: extension "RANDR" missing on display ":99.0".
+.Xlib: extension "RANDR" missing on display ":99.0".
+.Xlib: extension "RANDR" missing on display ":99.0".
+.
+----------------------------------------------------------------------
+Ran 3 tests in 2.023s
+
+OK
 ```
