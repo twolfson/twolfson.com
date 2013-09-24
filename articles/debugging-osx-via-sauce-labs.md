@@ -2,7 +2,7 @@
   "title": "Debugging OSX via Sauce Labs",
   "author": "Todd Wolfson",
   "date": "2013/09/24",
-  "summary": "Using [Sauce Labs](LINK ME) to debug software on OSX."
+  "summary": "Using [Sauce Labs](https://saucelabs.com/) to debug software on OSX."
 }
 
 > Disclaimer: My use case was fortunate to not require any `sudo` actions and all the software I needed was pre-installed.
