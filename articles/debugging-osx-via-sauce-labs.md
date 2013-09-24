@@ -54,12 +54,8 @@ Then, I hacked up the code, found the bug, created a fixed branch on my computer
 
 ```bash
 $ npm test
-
 > phantomjssmith@0.1.5 test /home/travis/build/twolfson/phantomjssmith
-
 > doubleshot --timeout 60000
-
 ․․․․․
-
 5 tests complete (3 seconds)
 ```
