@@ -44,7 +44,7 @@ ln -s $PWD/phantomjs-1.9.2-macosx/bin/phantomjs $HOME/.virtualenvs/sauce/bin/pha
 
 [PhantomJS]: http://phantomjs.org/
 
-After that, I cloned my repository, installed the node modules, and ran the test. I verified I caught the bug.
+After that, I cloned my repository, installed the node modules, and ran the test. I had successfully reproduced the [reported issue][ticket].
 
 ```bash
 git clone https://github.com/twolfson/phantomjssmith
@@ -56,7 +56,7 @@ npm test
 
 ![Test failing screenshot](/public/images/articles/debugging-osx-via-sauce-labs/test-fail.png)
 
-Then, I hacked up the code, found the bug, created a fixed branch on my computer, fetched/tested the branch inside of Sauce Labs, and verified the problem was resolved.
+Then, I hacked up the code, found the bug, created a branch on my computer, fetched/tested the branch inside of Sauce Labs, and verified the problem was resolved.
 
 ```bash
 npm test
