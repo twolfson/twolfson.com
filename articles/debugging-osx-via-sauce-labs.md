@@ -7,4 +7,19 @@
 
 > Disclaimer: My use case was fortunate to not require any `sudo` actions and all the software I needed was pre-installed to reproduce.
 
-This week, I got a ticket for
+This week, I got a [ticket for grunt-spritesmith][ticket], my sprites to spritesheet/variables converter. The outcome of the ticket was an OSX specific error in the [PhantomJS engine][phantomjssmith].
+
+[ticket]:
+[phantomjssmith]:
+
+Unfortunately, I develop on [Linux Mint][] and unlike [Windows][ievms] and [Linux][ubuntu], there are no free virtual machines to run against. My options were:
+
+- Buy OSX and use a VM
+- Wait until I get my work computer
+- Use a VM rental service like [MacinCloud][]
+- Try something different
+
+[Linux Mint]:
+[ievms]:
+[ubuntu]:
+[MacinCloud]: http://www.macincloud.com/
