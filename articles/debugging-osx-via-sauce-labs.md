@@ -7,7 +7,7 @@
 
 > Disclaimer: My use case was fortunate to not require any `sudo` actions and all the software I needed was pre-installed.
 
-This week, I got a [OSX specific ticket for grunt-spritesmith][ticket], my images to spritesheet/variables converter. Unfortunately, I develop on [Linux Mint][] and unlike [Windows][ievms] and [Linux][ubuntu], there are no free OSX virtual machines to run against. My options were:
+This week, I got a [OSX specific ticket for grunt-spritesmith][ticket], my images to spritesheet/variables converter. Unfortunately, I develop on [Linux Mint][] and unlike [Windows][ievms] and [Linux][ubuntu], there are no free virtual machines for OSX. My options were:
 
 - Buy OSX and use a VM
 - Wait until I get my work computer
