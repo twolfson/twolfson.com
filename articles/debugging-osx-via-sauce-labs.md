@@ -54,12 +54,16 @@ npm test
 # 2013-09-24 01:52:34.354 phantomjs[571:f07] Critical failure: the LastResort font is unavailable.
 ```
 
+![Test failing screenshot](/public/images/articles/debugging-osx-via-sauce-labs/test-fail.png)
+
 Then, I hacked up the code, found the bug, created a fixed branch on my computer, fetched/tested the branch inside of Sauce Labs, and verified the problem was resolved.
 
 ```bash
-$ npm test
-> phantomjssmith@0.1.5 test /home/travis/build/twolfson/phantomjssmith
-> doubleshot --timeout 60000
-․․․․․
-5 tests complete (3 seconds)
+npm test
+# > phantomjssmith@0.1.5 test /home/travis/build/twolfson/phantomjssmith
+# > doubleshot --timeout 60000
+# ․․․․․
+# 5 tests complete (10 seconds)
 ```
+
+![Test passing screenshot](/public/images/articles/debugging-osx-via-sauce-labs/test-pass.png)
