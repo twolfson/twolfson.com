@@ -14,17 +14,21 @@ This week, I got a [OSX specific ticket for grunt-spritesmith][ticket], my image
 - Use a VM rental service like [MacinCloud][]
 - Try something different
 
-[ticket]:
-[Linux Mint]:
-[ievms]:
-[ubuntu]:
+[ticket]: https://github.com/Ensighten/grunt-spritesmith/issues/35
+[Linux Mint]: http://www.linuxmint.com/
+[ievms]: https://github.com/xdissent/ievms/
+[ubuntu]: http://www.ubuntu.com/
 [MacinCloud]: http://www.macincloud.com/
 
 I went with "Try something different", registered a Free account with [Sauce Labs][], and fired up an Interactive Session for OSX + Google Chrome.
 
-[Sauce Labs]:
+![Sauce Labs launched screenshot](/public/images/articles/debugging-osx-via-sauce-labs/sauce-labs-launched.png)
 
-I closed out of Chrome, navigated to Applications/Utilities/Terminal, and got my bearings.
+[Sauce Labs]: https://saucelabs.com/
+
+I closed out of Chrome, opened a new Finder window, navigated to `/Applications/Utilities/Terminal`, and got my bearings.
+
+![Terminal opened screenshot](/public/images/articles/debugging-osx-via-sauce-labs/terminal-opened.png)
 
 I tried to install `brew` but it required `sudo` priveleges so I went without it.
 
@@ -36,9 +40,9 @@ unzip phantomjs-1.9.2-macosx.zip
 ln -s $PWD/phantomjs-1.9.2-macosx/bin/phantomjs $HOME/.virtualenvs/sauce/bin/phantomjs
 ```
 
-![PhantomJS version screenshot]
+![PhantomJS version screenshot](/public/images/articles/debugging-osx-via-sauce-labs/phantomjs.png)
 
-[PhantomJS]:
+[PhantomJS]: http://phantomjs.org/
 
 After that, I cloned my repository, installed the node modules, and ran the test. I verified I caught the bug.
 
