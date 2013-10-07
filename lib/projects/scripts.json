@@ -1,5 +1,14 @@
 [
   {
+    "name": "spritesmith",
+    "description": "Joins images together into a spritesheet and generates CSS variables",
+    "stars": 127,
+    "forks": 18,
+    "github": "Ensighten/grunt-spritesmith",
+    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
+    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
+  },
+  {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
     "stars": 118,
@@ -16,15 +25,6 @@
     "github": "twolfson/File-Watcher",
     "srcUrl": "https://github.com/twolfson/File-Watcher",
     "pageUrl": "https://github.com/twolfson/File-Watcher"
-  },
-  {
-    "name": "spritesmith",
-    "description": "Joins images together into a spritesheet and generates CSS variables",
-    "stars": 127,
-    "forks": 18,
-    "github": "Ensighten/grunt-spritesmith",
-    "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
-    "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
   },
   {
     "name": "jsmin-sourcemap",
