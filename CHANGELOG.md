@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.17.0 - Updated projects and arrangement
+
 1.16.0 - Wrote article about debugging OSX via Sauce Labs
 
 1.15.0 - Wrote article about debugging Travis CI
