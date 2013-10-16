@@ -27,12 +27,9 @@ domready(function () {
         // Stop the link from navigating
         Gator.cancel(e);
 
-        // In a bit, follow the link (delay for tracking pixel)
-        setTimeout(function () {
-          document.location.href = href;
-        }, 100);
-      }
-    }
+  // When the RSS link is clicked, track it
+  Gator(document).on('click', '.rssLink', function (e) {
+    _gaq.push(['_trackEvent', 'RSS clickthrough']);
   });
 
   // Grab all <code>'s on the page and iterate them
