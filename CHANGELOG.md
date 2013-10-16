@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.17.1 - Corrected summary for 'Blog Launch'
+
 1.17.0 - Updated projects and arrangement
 
 1.16.0 - Wrote article about debugging OSX via Sauce Labs
