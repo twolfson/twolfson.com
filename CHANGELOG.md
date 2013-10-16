@@ -1,5 +1,5 @@
 # twolfson.com changelog
-1.20.0 - Adding Google Analytics tracking for outbound links
+1.20.0 - Adding Google Analytics tracking for links
 
 1.19.0 - Corrected double paragraphs on homepage
 
