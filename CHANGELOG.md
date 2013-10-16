@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.19.0 - Corrected double paragraphs on homepag
+
 1.18.0 - Added link to Gittip via 'support me'
 
 1.17.1 - Corrected summary for 'Blog Launch'
