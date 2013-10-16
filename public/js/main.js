@@ -14,7 +14,7 @@ _gaq.push(['_trackPageview']);
 domready(function () {
   // Track all link clicks
   Gator(document).on('click', 'a', function (e) {
-    _gaq.push(['_trackEvent', 'Link click', this.href || '']);
+    _gaq.push(['_trackEvent', 'Link click', this.href || ('Unknown from: ' + window.location.href)]);
   });
 
   // Grab all <code>'s on the page and iterate them
