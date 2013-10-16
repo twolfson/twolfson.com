@@ -1,7 +1,7 @@
 {
   "title": "Life view: What shapes the self",
   "author": "Todd Wolfson",
-  "date": "2013/10/16",
+  "date": "Wed Oct 16 2013 02:00:00",
   "summary": "Personal viewpoint on how the self is shaped."
 }
 
