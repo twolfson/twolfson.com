@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.21.0 - Added "Release: git sqwish" article
+
 1.20.0 - Adding Google Analytics tracking for links
 
 1.19.0 - Corrected double paragraphs on homepage
