@@ -41,7 +41,10 @@
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
       </header>
       <nav id="global-nav" class="row even-row theme border border-sideless border-thick"><div class="span12">
-        <ul class="navlist pull-right span3">
+        <ul class="navlist pull-right">
+          <li class="navlist-item span" style="margin-right: 20px;">
+            <a href="https://www.gittip.com/twolfson/">support me</a>
+          </li>
         <% var navLinks = [
                 { "name": "projects", "href": "projects" },
                 { "name": "blog", "href": "/" },
@@ -56,9 +59,6 @@
           </li>
         <% }); %>
         </ul>
-        <div class="span2 pull-right">
-          <a href="https://www.gittip.com/twolfson/">support me</a>
-        </div>
       </div></nav>
       <%- body %>
     </div>
