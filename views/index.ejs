@@ -16,7 +16,8 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
         </div>
       </header>
       <section class="content row"><div class="span12"><div class="article-summary">
-        <p><%- article.summary %></p>
+        <% /* Summary is in markdown and already in a <p> */ %>
+        <%- article.summary %>
       </div></div></section>
       <div class="more row"><div class="span12 text-right">
         <p><a href="<%= article.url %>">Read more &raquo;</a></p>
