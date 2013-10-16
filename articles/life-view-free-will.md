@@ -1,7 +1,7 @@
 {
   "title": "Life view: Free Will",
   "author": "Todd Wolfson",
-  "date": "2013/10/16",
+  "date": "Wed Oct 16 2013 01:00:00",
   "summary": "Personal viewpoint on [Free Will](http://en.wikipedia.org/wiki/Free_will)."
 }
 
