@@ -14,6 +14,8 @@ There was a movie I watched a few years back called [Waking Life][]. In the film
 [Waking Life]: http://www.imdb.com/title/tt0243017/
 [Eamonn Healy]: http://en.wikipedia.org/wiki/Eamonn_Healy
 
+![Eamonn Healy in Waking Life](/public/images/articles/free-will.jpg)
+
 This scene sets off a trigger in me and for the next few weeks, my mind is running circles around this theory.
 
 I have had personal thoughts where everything has a 100% chance of happening, just you don't know the state of the outcome until it has happened. This theory aligned with those but it was questioning things on a much larger scale and brought up even larger thoughts:
