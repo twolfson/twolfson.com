@@ -14,23 +14,24 @@ _gaq.push(['_trackPageview']);
 domready(function () {
   // Track all link clicks
   Gator(document).on('click', 'a', function (e) {
-    // Find the target and href
-    // TODO: Use _blank if it exists
-    var target = e.target || e.srcElement,
-        href = target.href;
+    // Find the href
+    var href = this.href || '';
 
     // If we are going to an outbound page
     if (href.match(/^(https?:\/\/|\/\/)/)) {
-      // Stop the link from navigating
-      Gator.cancel(e);
-
       // Track the outbound event
       _gaq.push(['_trackEvent', 'Outbound link' , href]);
 
-      // and follow the link in a bit (delay for tracking pixel)
-      setTimeout(function () {
-        document.location.href = href;
-      }, 100);
+      // If we navigating the current window
+      if (this.target === '_blank') {
+        // Stop the link from navigating
+        Gator.cancel(e);
+
+        // // In a bit, follow the link (delay for tracking pixel)
+        // setTimeout(function () {
+        //   document.location.href = href;
+        // }, 100);
+      }
     }
   });
 
