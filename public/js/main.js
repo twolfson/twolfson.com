@@ -14,22 +14,7 @@ _gaq.push(['_trackPageview']);
 domready(function () {
   // Track all link clicks
   Gator(document).on('click', 'a', function (e) {
-    // Find the href
-    var href = this.href || '';
-
-    // If we are going to an outbound page
-    if (href.match(/^(https?:\/\/|\/\/)/)) {
-      // Track the outbound event
-      _gaq.push(['_trackEvent', 'Outbound link' , href]);
-
-      // If we navigating the current window
-      if (this.target !== '_blank') {
-        // Stop the link from navigating
-        Gator.cancel(e);
-
-  // When the RSS link is clicked, track it
-  Gator(document).on('click', '.rssLink', function (e) {
-    _gaq.push(['_trackEvent', 'RSS clickthrough']);
+    _gaq.push(['_trackEvent', 'Link click', this.href || '']);
   });
 
   // Grab all <code>'s on the page and iterate them
