@@ -1,5 +1,7 @@
 # twolfson.com changelog
-1.19.0 - Corrected double paragraphs on homepag
+1.20.0 - Adding Google Analytics tracking for outbound links
+
+1.19.0 - Corrected double paragraphs on homepage
 
 1.18.0 - Added link to Gittip via 'support me'
 
