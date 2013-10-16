@@ -1,23 +1,38 @@
-// If we are in production
-if (window.env === 'production') {
-  // Load in GA
-  window._gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-17165993-1']);
-  _gaq.push(['_trackPageview']);
+// Load in GA and track a page view
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount',
+           window.env === 'production' ? 'UA-17165993-1' : 'UA-17165993-3']);
+_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-}
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 
 // When the DOM is ready
 domready(function () {
-  // If we are in production, track all link clicks
-  if (window.env === 'production') {
+  // Track all link clicks
+  Gator(document).on('click', 'a', function (e) {
+    // Find the target and href
+    // TODO: Use _blank if it exists
+    var target = e.target || e.srcElement,
+        href = target.href;
 
-  }
+    // If we are going to an outbound page
+    if (href.match(/^(https?:\/\/|\/\/)/)) {
+      // Stop the link from navigating
+      Gator.cancel(e);
+
+      // Track the outbound event
+      _gaq.push(['_trackEvent', 'Outbound link' , href]);
+
+      // and follow the link in a bit (delay for tracking pixel)
+      setTimeout(function () {
+        document.location.href = href;
+      }, 100);
+    }
+  });
 
   // Grab all <code>'s on the page and iterate them
   var $codeArr = document.getElementsByTagName('code'),
