@@ -23,14 +23,14 @@ domready(function () {
       _gaq.push(['_trackEvent', 'Outbound link' , href]);
 
       // If we navigating the current window
-      if (this.target === '_blank') {
+      if (this.target !== '_blank') {
         // Stop the link from navigating
         Gator.cancel(e);
 
-        // // In a bit, follow the link (delay for tracking pixel)
-        // setTimeout(function () {
-        //   document.location.href = href;
-        // }, 100);
+        // In a bit, follow the link (delay for tracking pixel)
+        setTimeout(function () {
+          document.location.href = href;
+        }, 100);
       }
     }
   });
