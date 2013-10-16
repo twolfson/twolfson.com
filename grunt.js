@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
-        src: ['ready.js', 'highlight.pack.js', 'main.js'],
+        src: ['ready.js', 'highlight.pack.js', 'gator.js', 'gator-legacy.js', 'main.js'],
         dest: '../../dist/js/index.js',
         destMap: '../../dist/js/index.js.map'
       },
@@ -46,6 +46,8 @@ module.exports = function (grunt) {
     },
     curl: {
       'public/js/ready.js': 'https://raw.github.com/ded/domready/master/ready.js',
+      'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/master/gator.js',
+      'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/master/plugins/gator-legacy.js',
       'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js'
     },
     watch: {
