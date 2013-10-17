@@ -19,7 +19,5 @@ If an interaction is observed, it leads to an experience between the self and th
 
 For dispositions (e.g. genetic), the iteraction with the effects caused by these are experiences themself. For example, sensitivity to light would not affect someone until they first iteract with light.
 
-If we take the interaction example further, we can recognize how strong experiences impact the self. For example, if a stressful memory experience occurs, then it can affect the ability to store information.
-
-As with before, the earlier on the memory occurs, the stronger the affect can be.
+If we take the interaction example further, we can recognize how strong experiences impact the self. For example, if a stressful memory experience occurs, then it can affect the ability to store information. As with before, the earlier on the memory occurs, the stronger the affect can be.
 
