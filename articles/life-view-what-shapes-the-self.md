@@ -7,16 +7,19 @@
 
 I believe that people are shaped based on the circumstances they are born into and the experiences they encounter.
 
-If we assume that everyone is born with a pre-existing personality and thought process, then no conclusions can be drawn as the initial state is random.
+If we assume everyone is born with a pre-existing personality and thought process, then the initial state is random and no conclusion can be drawn.
 
-As a result, we assume everyone is born as a clean slate.
+As a result, assume everyone is born as a clean slate.
 
-The first environment they encounter will have the largest impact on their life. The environment invokes experiences (e.g. warm, bright) as well as the people inside of it (e.g. nurture).
+The most atomic piece of life is an interaction; breathing is an interaction, talking is an interaction, heat is an interaction.
 
-The earlier an experience occurs, the larger the impact is has on the self; the self hardens over time.
+Each of these interactions can be observed or unobserved. If an interaction is unobserved, it does not interact with the self and has no effect.
 
-For example, if you have a stressful memory-recall related experience early on, then it might affect your ability to store certain information. However, if you have the same experience in adulthood, it might not do anything at all.
+If an interaction is observed, it leads to an experience between the self and the objects in the environment. This is where all shaping actions take place. The earlier they occur in life, the larger impact they have.
 
-> I believe this is why some people can remember names of others better.
+For dispositions (e.g. genetic), the iteraction with the effects caused by these are experiences themself. For example, sensitivity to light would not affect someone until they first iteract with light.
 
-For pre-dispositions (e.g. genetic), the iteraction with these dispositions should be recognized as experiences themself. For example, sensitivity to light would not affect someone until they first iteract with light.
+If we take the interaction example further, we can recognize how strong experiences impact the self. For example, if a stressful memory experience occurs, then it can affect the ability to store information.
+
+As with before, the earlier on the memory occurs, the stronger the affect can be.
+
