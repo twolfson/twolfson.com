@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.24.0 - Starting structural cleanup
+
 1.23.1 - Fixed broken perceptual diffs
 
 1.23.0 - Added "Life view: What shapes the self" article
