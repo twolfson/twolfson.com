@@ -2,14 +2,14 @@
   "name": "twolfson.com",
   "description": "twolfson.com server",
   "author": "Todd Wolfson <todd@twolfson.com>",
-  "version": "1.23.1",
+  "version": "1.24.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
   },
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app.js",
+    "start": "node app.js",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test": "npm run test-perceptual && npm run test-integration",
@@ -39,18 +39,6 @@
     "temporary": "0.0.5",
     "js-yaml": "~2.1.0"
   },
-  "scripts": {
-    "start": "node app.js",
-    "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
-    "test-integration": "mocha test/integration-tests",
-    "test": "npm run test-perceptual && npm run test-integration",
-    "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/twolfson/twolfson.com.git"
-  },
-  "author": "Todd Wolfson <todd@twolfson.com>",
   "license": "MIT",
   "private": true
 }
