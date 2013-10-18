@@ -11,7 +11,8 @@
     "marked": "~0.2.6",
     "emailjs": "0.3.4",
     "request": "~2.27.0",
-    "moment": "~2.1.0"
+    "moment": "~2.1.0",
+    "humanize": "0.0.9"
   },
   "devDependencies": {
     "grunt-less": "~0.1.5",
