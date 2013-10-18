@@ -465,6 +465,9 @@ tr:nth-child(odd)>th,tr:nth-child(even)>td{background-color:#c0bbff;}
 .text-center{text-align:center;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
+.islet{margin-bottom:10px;}
+.island{margin-bottom:20px;}
+.landmark{margin-bottom:40px;}
 #project-section{font-size:16px;}
 .project-description,.project-stars,.project-forks{line-height:60px;}
 .project-section-heading{margin:0;padding:10px 0;}

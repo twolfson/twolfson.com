@@ -1,27 +1,38 @@
 <%
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 %>
-<section id="articles">
+<% /* TODO: Fix CSS to remove this */ %>
+<div class="islet">&nbsp;</div>
+<div class="roww">
+<section id="articles" class="span8">
   <%
     articles.forEach(function (article, i) {
       var rowKlass = i % 2 === 0 ? "odd-row" : "even-row";
   %>
-    <article class="post <%=rowKlass%> theme">
-      <header class="row">
-        <div class="span9">
-          <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
-        </div>
-        <div class="span3 text-right fluffToH2">
-          <span class="date"><%= article.dateStr %></span>
-        </div>
-      </header>
-      <section class="content row"><div class="span12"><div class="article-summary">
+    <article class="post <%=rowKlass%> island">
+      <div class="date"><%= article.dateStr %></div>
+      <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
+      <div class="article-summary">
         <% /* Summary is in markdown and already in a <p> */ %>
         <%- article.summary %>
-      </div></div></section>
-      <div class="more row"><div class="span12 text-right">
-        <p><a href="<%= article.url %>">Read more &raquo;</a></p>
-      </div></div>
+      </div>
+      <div class="more row">
+        <p><a href="<%= article.url %>">Read 8 paragraphs &raquo;</a></p>
+      </div>
     </article>
   <% }); %>
 </section>
+<div class="span4">
+  <h3>Current focus</h3>
+  <div class="project-summary">
+    <h4 class="project-summary-title"><a href="#">Sublime plugin tests</a></h4>
+    <div class="project-summary-content">
+      <% /* TODO: Move to jade so we can write this in Markdown */ %>
+      <p><a href="#">Sublime Text</a> does not have a proper testing framework. With the disparity of Python 2 and 3, it makes cross-version plugins even harder.</p>
+      <p>To solve this problem, I am developing a testing framework that can be integrated with <a href="#">Travis CI</a> for full automated tests.</p>
+    </div>
+  </div>
+  <h3>Recent completions</h3>
+  </h3>
+</div>
+</div>

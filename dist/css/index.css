@@ -2880,6 +2880,15 @@ tr:nth-child(even) > td {
 .text-right {
   text-align: right;
 }
+.islet {
+  margin-bottom: 10px;
+}
+.island {
+  margin-bottom: 20px;
+}
+.landmark {
+  margin-bottom: 40px;
+}
 /* The project page uses larger font than normal */
 #project-section {
   font-size: 16px;
