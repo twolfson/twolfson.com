@@ -16,9 +16,23 @@ describe('twolfson.com', function () {
     assert.strictEqual(health, -1);
     assert.strictEqual(stylesheet, -1);
   });
+});
 
-  it('does have analytics', function () {
-    var body = this.body;
-    assert.notEqual(body.indexOf('_gaq'), -1);
+describe('twolfson.com script', function () {
+  before(function (done) {
+    var that = this,
+        indexScript = config.productionHost + '/public/js/index.js';
+    request.get(indexScript, function getIndexScript (err, res, script) {
+      that.script = script;
+      done(err);
+    });
+  });
+
+  it('does not have developer tools', function () {
+    var script = this.script,
+        googleAnalytics = script.indexOf('_gaq'),
+        googleAnalyticsId = script.indexOf('UA-17165993-1');
+    assert.notEqual(googleAnalytics, -1);
+    assert.notEqual(googleAnalyticsId, -1);
   });
 });
