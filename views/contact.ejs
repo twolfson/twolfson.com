@@ -4,9 +4,8 @@
       <fieldset id="contactFieldset">
         <legend><h3>Contact Details</h3></legend>
         <%
-          var emailStatus;
           // If there was no submission attempt
-          if (emailStatus === undefined) {
+          if (locals.emailStatus === undefined) {
         %>
         <div class="control-group">
           <label for="name" class="control-label" required="required">Name:&nbsp;</label>

@@ -1,7 +1,5 @@
 <%
-var type,
-    award,
-    isCssOff = type === 'cssOff',
+var isCssOff = locals.type === 'cssOff',
     headerWidth = isCssOff ? "span2" : "span4";
 %>
 <div class="span6">
@@ -11,7 +9,7 @@ var type,
     </div>
     <% if (isCssOff) { %>
       <div class="span4 layout-flipped competition-score">
-        <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=score%></span>
+        <span class="barLinesIco" title="Score">&nbsp;</span><span class="score"><%=locals.score%></span>
       </div>
     <% } else { %>
       <div class="span1 layout-flipped competition-views">
@@ -29,7 +27,7 @@ var type,
     <div class="span2 layout-flipped">
       <% if (isCssOff) { %>
         <span class="ribbonIco" title="Rank"></span><span class="rank"><%=rank%></span>
-      <% } else if (award) { %>
+      <% } else if (locals.award) { %>
         <span class="ribbonIco" title="Award"></span><span class="award"><%=award%></span>
       <% } %>
     </div>
