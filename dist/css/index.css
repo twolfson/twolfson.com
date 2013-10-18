@@ -304,6 +304,10 @@ button {
 }
 .navlist-item {
   line-height: 32px;
+  float: left;
+}
+.navlist-item + .navlist-item {
+  margin-left: 20px;
 }
 /* Upper links */
 .twitterLink,

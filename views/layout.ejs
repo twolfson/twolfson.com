@@ -25,13 +25,8 @@
         <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
       </header>
-      <nav id="global-nav" class="row even-row theme border border-sideless border-thick"><div class="span4 offset8">
-        <ul class="navlist pull-left">
-          <li class="navlist-item">
-            <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
-          </li>
-        </ul>
-        <ul class="navlist pull-right">
+      <nav id="global-nav" class="row even-row theme border border-sideless border-thick">
+        <ul class="navlist span4">
         <% var navLinks = [
                 { "name": "projects", "href": "/projects" },
                 { "name": "blog", "href": "/" },
@@ -41,12 +36,17 @@
             var navName = navLink.name,
                 iSelected = page === navName ? "isSelected" : "";
           %>
-          <li class="navlist-item span">
+          <li class="navlist-item">
             <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
           </li>
         <% }); %>
         </ul>
-      </div></nav>
+        <ul class="navlist">
+          <li class="navlist-item">
+            <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
+          </li>
+        </ul>
+      </nav>
       <%- body %>
     </div>
   </div>
