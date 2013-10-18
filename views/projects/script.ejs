@@ -5,7 +5,7 @@
   <%-description%>
 </div>
 <div class="span1 hideLinks project-stars">
-  <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleStarIco" title="Starred">&nbsp;</span><span class="starCount"><%=intword(stars, ['', 'k', 'm', 'b', 't'], 1000, 1).replace(/\.0$/, '') %></span></a>
+  <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleStarIco" title="Starred">&nbsp;</span><span class="starCount"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span></a>
 </div>
 <div class="span1 hideLinks project-forks">
   <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleForkIco" title="Forks">&nbsp;</span><span class="forkCount"><%=forks%></span></a>
