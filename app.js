@@ -17,14 +17,6 @@ if (config.inDevelopment) {
 var addJojo = require('./lib/jojo');
 addJojo(app);
 
-// DEV: Stopping tracking of this since it bloats analytics
-// // If we are in a production environment, track whenever an RSS is requested
-// if (inProduction) {
-//  var GA = require('./lib/ga'),
-//      ga = GA();
-//   app.get('/index.xml', ga);
-// }
-
 // Configure routes
 var addRoutes = require('./lib/routes');
 addRoutes(app);
