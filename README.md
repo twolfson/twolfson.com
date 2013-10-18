@@ -13,7 +13,10 @@ This server is written on top of [express][express], for routing and views, and 
 ### Folders
 - `articles` - [GitHub Flavored Markdown][gfm] files for blog posts
 - `dist` - Minified public files
-- `projects` - Assortment of competitions, contributions, and scripts
+- `lib` - Container for majority of app
+- `lib/app.js` - Server setup and route binding
+- `lib/projects` - Assortment of competitions, contributions, and scripts
+- `lib/routes` - Declaration of route functionality
 - `public` - CSS and JS for the pages
 - `test` - BDD tests written in [Mocha][mocha] for [twolfson.com][twolfson.com]
 - `views` - Scripted HTML components written in [EJS][ejs]
@@ -24,7 +27,6 @@ This server is written on top of [express][express], for routing and views, and 
 
 ### Files
 - `README.md` - What you are reading right now
-- `app.js` - Server and routing logic
 - `grunt.js` - A [grunt][grunt] implementation for linting and minification.
 
 [grunt]: http://gruntjs.com/
