@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.24.1 - Fixing broken `npm start`
+
 1.24.0 - Starting structural cleanup
 
 1.23.1 - Fixed broken perceptual diffs
