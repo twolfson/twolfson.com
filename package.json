@@ -16,9 +16,9 @@
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/"
   },
   "dependencies": {
-    "ejs": "~0.4.3",
+    "ejs": "~0.8.4",
     "jojo": "~1.0.0",
-    "express": "~2.5.11",
+    "express": "~3.4.1",
     "gitter": "~0.2.0",
     "marked": "~0.2.6",
     "emailjs": "0.3.4",
