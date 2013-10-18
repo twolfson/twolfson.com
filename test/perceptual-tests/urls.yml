@@ -5,7 +5,7 @@
 - /2013-07-27-develop-faster # Blog post with tables
 - /projects
 - /contact
-- /contact?test=success
-- /contact?test=fail
+- /contact/success
+- /contact/failure
 - /404
 - /license
