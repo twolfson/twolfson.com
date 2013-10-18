@@ -10,7 +10,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
       var rowKlass = i % 2 === 0 ? "odd-row" : "even-row";
   %>
     <article class="post <%=rowKlass%>" style="margin-bottom: 23px;">
-      <div class="date" style="color: #EEE;"><%= article.dateStr %></div>
+      <div class="date" style="color: #908CC5;"><%= article.dateStr %></div>
       <h2 title="<%= article.title %>" style="margin-top: 0;"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
       <div class="article-summary">
         <% /* Summary is in markdown and already in a <p> */ %>
