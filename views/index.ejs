@@ -9,15 +9,15 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
     articles.forEach(function (article, i) {
       var rowKlass = i % 2 === 0 ? "odd-row" : "even-row";
   %>
-    <article class="post <%=rowKlass%> island">
-      <div class="date"><%= article.dateStr %></div>
-      <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
+    <article class="post <%=rowKlass%>" style="margin-bottom: 23px;">
+      <div class="date" style="color: #777;"><%= article.dateStr %></div>
+      <h2 title="<%= article.title %>" style="margin-top: 0;"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
       <div class="article-summary">
         <% /* Summary is in markdown and already in a <p> */ %>
         <%- article.summary %>
       </div>
       <div class="more row">
-        <p><a href="<%= article.url %>">Read 8 paragraphs &raquo;</a></p>
+        <p><a href="<%= article.url %>">Reading time: 5 minutes</a></p>
       </div>
     </article>
   <% }); %>
