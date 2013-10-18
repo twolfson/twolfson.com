@@ -28,8 +28,8 @@
       <nav id="global-nav" class="row even-row theme border border-sideless border-thick">
         <ul class="navlist span4">
         <% var navLinks = [
-                { "name": "projects", "href": "/projects" },
                 { "name": "blog", "href": "/" },
+                { "name": "projects", "href": "/projects" },
                 { "name": "contact", "href": "/contact" }];
 
           navLinks.forEach(function (navLink) {
@@ -41,11 +41,11 @@
           </li>
         <% }); %>
         </ul>
-        <ul class="navlist">
+        <div class="span8"><ul class="navlist pull-right">
           <li class="navlist-item">
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
-        </ul>
+        </ul></div>
       </nav>
       <%- body %>
     </div>
