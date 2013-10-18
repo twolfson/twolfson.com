@@ -1,11 +1,6 @@
-/monServer.cmd
-/work_files
-/mail.conf
-/public/js/collector.js
-/public/js/watcher.js
-/config.jojo.json
-/node_modules
-/updateProduction.sh
+config/mail.js
+node_modules/
+updateProduction.sh
 test/perceptual-tests/actual_screenshots/
 test/perceptual-tests/screenshot_diffs/
 tmp.png
