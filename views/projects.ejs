@@ -13,7 +13,7 @@
         <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Scripts</h2>
       </div>
       <%
-        scripts.forEach(function (item) {
+        projects.scripts.forEach(function (item) {
       %>
       <div class="row <%=getRowClass()%> theme">
         <%- partial('projects/script', item) %>
@@ -28,7 +28,7 @@
       </div>
       <%
         var lenMinusOne = competitions.length - 1;
-        competitions.forEach(function (item, i) {
+        projects.competitions.forEach(function (item, i) {
           var isEven = i % 2 === 0,
               isLastItem = i === lenMinusOne,
               isOwnRow = isEven && isLastItem,
@@ -52,7 +52,7 @@
         <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Contributions</h2>
       </div>
       <%
-        contributions.forEach(function (item) {
+        projects.contributions.forEach(function (item) {
       %>
       <div class="row <%=getRowClass()%> theme">
         <%- partial('projects/script', item) %>
