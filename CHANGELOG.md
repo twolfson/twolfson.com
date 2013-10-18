@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.23.0 - Added "Life view: What shapes the self" article
+
 1.22.0 - Added "Life view: Free Will" article
 
 1.21.0 - Added "Release: git sqwish" article
