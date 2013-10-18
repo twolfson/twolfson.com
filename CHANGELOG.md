@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.23.1 - Fixed broken perceptual diffs
+
 1.23.0 - Added "Life view: What shapes the self" article
 
 1.22.0 - Added "Life view: Free Will" article
