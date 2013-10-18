@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.25.0 - Overhauled routes into a split of routes and bindings
+
 1.24.2 - Fixed broken test
 
 1.24.1 - Fixing broken `npm start`
