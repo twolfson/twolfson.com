@@ -27,8 +27,9 @@
         <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Competitions</h2>
       </div>
       <%
-        var lenMinusOne = competitions.length - 1;
-        projects.competitions.forEach(function (item, i) {
+        var competitions = projects.competitions,
+            lenMinusOne = competitions.length - 1;
+        competitions.forEach(function (item, i) {
           var isEven = i % 2 === 0,
               isLastItem = i === lenMinusOne,
               isOwnRow = isEven && isLastItem,
