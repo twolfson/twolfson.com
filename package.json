@@ -9,7 +9,7 @@
   },
   "main": "lib/app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node lib/app.js",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test": "npm run test-perceptual && npm run test-integration",
