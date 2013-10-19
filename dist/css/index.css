@@ -2633,50 +2633,74 @@ button {
   display: block;
   margin-left: 24px; }
 
-.span1,
+.span1 {
+  width: 56px; }
+
+.span2 {
+  width: 136px; }
+
+.span3 {
+  width: 216px; }
+
+.span4 {
+  width: 296px; }
+
+.span5 {
+  width: 376px; }
+
+.span6 {
+  width: 456px; }
+
+.span7 {
+  width: 536px; }
+
+.span8 {
+  width: 616px; }
+
+.span9 {
+  width: 696px; }
+
+.span10 {
+  width: 776px; }
+
+.span11 {
+  width: 856px; }
+
+.span12 {
+  width: 936px; }
+
 .width1 {
   width: 80px; }
 
-.span2,
 .width2 {
   width: 160px; }
 
-.span3,
 .width3 {
   width: 240px; }
 
-.span4,
 .width4 {
   width: 320px; }
 
-.span5,
 .width5 {
   width: 400px; }
 
-.span6,
 .width6 {
   width: 480px; }
 
-.span7,
 .width7 {
   width: 560px; }
 
-.span8,
 .width8 {
   width: 640px; }
 
-.span9,
 .width9 {
   width: 720px; }
 
-.span10,
 .width10 {
   width: 800px; }
 
-.span11,
 .width11 {
   width: 880px; }
 
-.span12,
 .width12 {
   width: 960px; }

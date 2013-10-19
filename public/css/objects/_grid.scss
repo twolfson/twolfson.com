@@ -26,52 +26,81 @@
   margin-left: $base-spacing-unit;
 }
 
+@mixin column($column, $gutter) {
+  width: ((960px / 12) * $column) - $gutter;
+}
+
 // TODO: Namespacing and such
-.span1,
+.span1 {
+  @include column(1, $base-spacing-unit);
+}
+.span2 {
+  @include column(2, $base-spacing-unit);
+}
+.span3 {
+  @include column(3, $base-spacing-unit);
+}
+.span4 {
+  @include column(4, $base-spacing-unit);
+}
+.span5 {
+  @include column(5, $base-spacing-unit);
+}
+.span6 {
+  @include column(6, $base-spacing-unit);
+}
+.span7 {
+  @include column(7, $base-spacing-unit);
+}
+.span8 {
+  @include column(8, $base-spacing-unit);
+}
+.span9 {
+  @include column(9, $base-spacing-unit);
+}
+.span10 {
+  @include column(10, $base-spacing-unit);
+}
+.span11 {
+  @include column(11, $base-spacing-unit);
+}
+.span12 {
+  @include column(12, $base-spacing-unit);
+}
+
 .width1 {
-  width: (960px / 12) * 1;
+  @include column(1, 0);
 }
-.span2,
 .width2 {
-  width: (960px / 12) * 2;
+  @include column(2, 0);
 }
-.span3,
 .width3 {
-  width: (960px / 12) * 3;
+  @include column(3, 0);
 }
-.span4,
 .width4 {
-  width: (960px / 12) * 4;
+  @include column(4, 0);
 }
-.span5,
 .width5 {
-  width: (960px / 12) * 5;
+  @include column(5, 0);
 }
-.span6,
 .width6 {
-  width: (960px / 12) * 6;
+  @include column(6, 0);
 }
-.span7,
 .width7 {
-  width: (960px / 12) * 7;
+  @include column(7, 0);
 }
-.span8,
 .width8 {
-  width: (960px / 12) * 8;
+  @include column(8, 0);
 }
-.span9,
 .width9 {
-  width: (960px / 12) * 9;
+  @include column(9, 0);
 }
-.span10,
 .width10 {
-  width: (960px / 12) * 10;
+  @include column(10, 0);
 }
-.span11,
 .width11 {
-  width: (960px / 12) * 11;
+  @include column(11, 0);
 }
-.span12,
 .width12 {
-  width: (960px / 12) * 12;
+  @include column(12, 0);
 }

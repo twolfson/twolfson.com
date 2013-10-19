@@ -1,10 +1,10 @@
-<div>
-  <section id="articles">
+<div class="container__row">
+  <section id="articles" class="span8">
     <%
       articles.forEach(function (article, i) {
     %>
       <article class="post">
-        <div class="date"><%= article.dateStr %></div>
+        <div><%= article.dateStr %></div>
         <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         <div class="article-summary">
           <% /* Summary is in markdown and already in a <p> */ %>
@@ -17,7 +17,7 @@
       </article>
     <% }); %>
   </section>
-  <div>
+  <div class="span4">
     <h3>Current focus</h3>
     <div>
       <h4>
