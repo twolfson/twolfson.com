@@ -19,17 +19,18 @@
 	<div id="global-wrapper" class="container">
     <div id="global-main">
       <% /* TODO: Use table classes to get consistent height */ %>
-      <header class="grid">
+      <div class="grid">
         <h1 class="grid__item one-third">Todd Wolfson</h1>
-        <h2 class="grid__item one-third">
+        <h2 class="grid__item one-half">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer
         </h2>
-        <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
+<!-- TODO: Re-enable these when we are ready to sprite -->
+<!--         <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
         <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
-      </header>
-      <nav id="global-nav" class="row even-row theme border border-sideless border-thick">
-        <ul class="navlist span4">
+ -->      </div>
+      <div id="global-nav">
+        <ul class="nav nav--block">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
                 { "name": "projects", "href": "/projects" },
@@ -44,16 +45,16 @@
           </li>
         <% }); %>
         </ul>
-        <div class="span8"><ul class="navlist pull-right">
+        <ul class="nav float--right">
           <li class="navlist-item">
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
-        </ul></div>
-      </nav>
+        </ul>
+      </div>
       <%- body %>
     </div>
   </div>
-  <footer id="global-footer" class="container layout-center">
+  <div id="global-footer" class="container layout-center">
     <div class="row">
       <hr class="offset2 span8 border border-thin"/>
     </div>
@@ -66,6 +67,6 @@
     <p>
       Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
     </p>
-  </footer>
+  </div>
 </body>
 </html>
