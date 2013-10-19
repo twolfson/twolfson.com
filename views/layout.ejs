@@ -16,10 +16,10 @@
   <script src="/public/js/index.js"></script>
 </head>
 <body>
-	<div id="global-wrapper" class="container">
+	<div id="global-wrapper" class="container flush--bottom">
     <div id="global-main">
       <% /* TODO: Use table classes to get consistent height */ %>
-      <div class="cf">
+      <div>
         <h1 class="float--left push--left">Todd Wolfson</h1>
         <h2 class="float--left push--left">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer
@@ -30,7 +30,7 @@
         <a href="/index.xml" class="rss-link push--right" target="_blank">RSS</a>
         -->
       </div>
-      <div class="grid flush--left">
+    <!--  <div class="grid flush--left">
         <ul class="nav float--left">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
@@ -51,7 +51,7 @@
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <%- body %>
     </div>
   </div>
