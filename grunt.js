@@ -4,19 +4,19 @@ module.exports = function (grunt) {
     lint: {
       client: ['public/js/main.js']
     },
-    less: {
-      all: {
-        src: 'public/css/index.less',
-        dest: 'dist/css/index.min.css',
-        options: {
-          compress: true
-        }
-      },
-      unmin: {
-        src: 'public/css/index.less',
-        dest: 'dist/css/index.css'
-      }
-    },
+    // less: {
+    //   all: {
+    //     src: 'public/css/index.less',
+    //     dest: 'dist/css/index.min.css',
+    //     options: {
+    //       compress: true
+    //     }
+    //   },
+    //   unmin: {
+    //     src: 'public/css/index.less',
+    //     dest: 'dist/css/index.css'
+    //   }
+    // },
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
@@ -45,10 +45,24 @@ module.exports = function (grunt) {
       }
     },
     curl: {
+      // Inuit.css
+      'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip',
+
+      // Front-end dependencies
       'public/js/ready.js': 'https://raw.github.com/ded/domready/master/ready.js',
       'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/master/gator.js',
       'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/master/plugins/gator-legacy.js',
       'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js'
+    },
+    unzip: {
+      // Inuit.css
+      inuit: {
+        src: 'tmp/inuit.css.zip',
+        dest: 'public/css/inuit',
+        router: function (filepath) {
+          return filepath.replace('inuit.css-5.0.0/', '');
+        }
+      }
     },
     watch: {
       css: {
@@ -62,17 +76,12 @@ module.exports = function (grunt) {
     }
   });
 
-  // Load in grunt-less
+  // Load in grunt dependencies
   grunt.loadNpmTasks('grunt-less');
-
-  // Load in grunt-jsmin-sourcemap
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
-
-  // Load in grunt-spritesmith
   grunt.loadNpmTasks('grunt-spritesmith');
-
-  // Load grunt-curl
   grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-zip');
 
   // Create a grunt task to update projects
   grunt.registerTask('projects', 'Download projects info', function () {
@@ -81,6 +90,9 @@ module.exports = function (grunt) {
     cp.exec('node ' + __dirname + '/projects/index.js');
     setTimeout(done, 2000);
   });
+
+  // Register dependency tasks
+  grunt.registerTask('install', 'curl unzip');
 
   // Register css and js tasks
   grunt.registerTask('js', 'jsmin-sourcemap');
