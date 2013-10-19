@@ -2585,6 +2585,20 @@ button {
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black; }
 
+.row--dark {
+  background: #F0F;
+  border-color: #FFF;
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0; }
+
+.row--bordered--ends {
+  border-top-width: 2px !important;
+  border-bottom-width: 2px !important; }
+
+/** Container for document. It should always have gutters on the left and right **/
 .container {
   width: 980px; }
 

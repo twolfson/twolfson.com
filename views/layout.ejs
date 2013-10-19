@@ -17,8 +17,8 @@
 </head>
 <body>
 	<div id="global-wrapper" class="container">
-    <div id="global-main" class="container__row">
-      <div class="flexbox">
+    <div id="global-main" class="">
+      <div class="flexbox container__row">
         <h1 class="flexbox__item width4 soft--left">Todd Wolfson</h1>
         <h2 class="flexbox__item width5 soft--left">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer
@@ -29,8 +29,8 @@
           <a href="/index.xml" class="rss-link" target="_blank">RSS</a>
         </div>
       </div>
-    <!--  <div class="grid flush--left">
-        <ul class="nav float--left">
+    <div class="row--dark row--bordered--ends">
+        <ul class="cf">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
                 { "name": "projects", "href": "/projects" },
@@ -40,17 +40,17 @@
             var navName = navLink.name,
                 iSelected = page === navName ? "isSelected" : "";
           %>
-          <li class="push--left">
+          <li class="span">
             <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
           </li>
         <% }); %>
         </ul>
-        <ul class="nav float--right push--right">
+        <!-- <ul class="float--right push--right">
           <li>
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
-        </ul>
-      </div> -->
+        </ul> -->
+      </div>
       <%- body %>
     </div>
   </div>
