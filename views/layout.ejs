@@ -30,7 +30,8 @@
         </div>
       </div>
     <div class="row--dark row--bordered--ends">
-        <ul class="cf">
+      <div class="container__row" style="height: 32px;">
+        <ul class="nav">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
                 { "name": "projects", "href": "/projects" },
@@ -40,16 +41,16 @@
             var navName = navLink.name,
                 iSelected = page === navName ? "isSelected" : "";
           %>
-          <li class="span">
+          <li class="nav--item">
             <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
           </li>
         <% }); %>
         </ul>
-        <!-- <ul class="float--right push--right">
-          <li>
+        <ul class="nav">
+          <li class="nav--item float--right">
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
-        </ul> -->
+        </ul>
       </div>
       <%- body %>
     </div>

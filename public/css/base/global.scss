@@ -30,3 +30,15 @@ button {
   border-top-width: 2px !important;
   border-bottom-width: 2px !important;
 }
+
+/* Navbar styling */
+.nav {
+  margin: 0;
+  list-style: none;
+}
+
+.nav--item {
+  line-height: 32px;
+  float: left;
+  margin-left: $base-spacing-unit;
+}

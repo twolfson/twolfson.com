@@ -784,7 +784,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:after, .container__row:after {
   content: "";
   display: table;
   clear: both; }
@@ -2597,6 +2597,16 @@ button {
 .row--bordered--ends {
   border-top-width: 2px !important;
   border-bottom-width: 2px !important; }
+
+/* Navbar styling */
+.nav {
+  margin: 0;
+  list-style: none; }
+
+.nav--item {
+  line-height: 32px;
+  float: left;
+  margin-left: 24px; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
