@@ -56,6 +56,13 @@ module.exports = function (grunt) {
       'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/master/plugins/gator-legacy.js',
       'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js'
     },
+    'curl-dir': {
+      // SCSS mixins
+      'public/css/mixins': [
+        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
+        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss'
+      ]
+    },
     unzip: {
       // Inuit.css
       inuit: {

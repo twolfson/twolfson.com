@@ -2704,5 +2704,5 @@ button {
   width: 960px;
   margin: 0 auto;
   background: #b9cfff;
-  /* TODO: Use compass or bourbon for cross-browsering box-shadow */
-  box-shadow: 0 0 20px #000000; }
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black; }
