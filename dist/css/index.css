@@ -2588,6 +2588,9 @@ button {
 .container {
   width: 980px; }
 
+.container__row {
+  width: 960px; }
+
 .span,
 .span1,
 .span2,
