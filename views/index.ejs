@@ -8,11 +8,8 @@
         <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         <div class="article-summary">
           <% /* Summary is in markdown and already in a <p> */ %>
-          <% /* TODO: Character count is still higher than wanted. Play with font-size */ %>
-          <%- article.summary %>
-        </div>
-        <div>
-          <p><a href="<%= article.url %>">Reading time: 5 minutes</a></p>
+          <% /* TODO: Character count is still higher than wanted. Play with font-size */ console.log(article.summary) %>
+          <%- article.summary.replace(/<\/p>$/gm, '<br/><a href="' + article.url + '">Reading time: 5 minutes</a></p>') %>
         </div>
       </article>
     <% }); %>
