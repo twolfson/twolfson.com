@@ -28,9 +28,11 @@
 <!--         <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
         <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
- -->      </div>
-      <div id="global-nav">
-        <ul class="nav nav--block">
+ -->
+      </div>
+      <div class="grid"><div class="grid__item one">
+        <div id="global-nav">
+        <ul class="nav nav--block float--left">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
                 { "name": "projects", "href": "/projects" },
@@ -50,7 +52,7 @@
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
         </ul>
-      </div>
+      </div></div>
       <%- body %>
     </div>
   </div>
