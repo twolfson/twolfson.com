@@ -1,5 +1,5 @@
 .container {
-  width: 960px;
+  width: 980px;
 }
 
 .container__row {
@@ -25,39 +25,51 @@
 }
 
 // TODO: Namespacing and such
-.span1 {
+.span1,
+.width1 {
   width: (960px / 12) * 1;
 }
-.span2 {
+.span2,
+.width2 {
   width: (960px / 12) * 2;
 }
-.span3 {
+.span3,
+.width3 {
   width: (960px / 12) * 3;
 }
-.span4 {
+.span4,
+.width4 {
   width: (960px / 12) * 4;
 }
-.span5 {
+.span5,
+.width5 {
   width: (960px / 12) * 5;
 }
-.span6 {
+.span6,
+.width6 {
   width: (960px / 12) * 6;
 }
-.span7 {
+.span7,
+.width7 {
   width: (960px / 12) * 7;
 }
-.span8 {
+.span8,
+.width8 {
   width: (960px / 12) * 8;
 }
-.span9 {
+.span9,
+.width9 {
   width: (960px / 12) * 9;
 }
-.span10 {
+.span10,
+.width10 {
   width: (960px / 12) * 10;
 }
-.span11 {
+.span11,
+.width11 {
   width: (960px / 12) * 11;
 }
-.span12 {
+.span12,
+.width12 {
   width: (960px / 12) * 12;
 }
