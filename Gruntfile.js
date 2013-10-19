@@ -4,19 +4,21 @@ module.exports = function (grunt) {
     jshint: {
       client: ['public/js/main.js']
     },
-    // less: {
-    //   all: {
-    //     src: 'public/css/index.less',
-    //     dest: 'dist/css/index.min.css',
-    //     options: {
-    //       compress: true
-    //     }
-    //   },
-    //   unmin: {
-    //     src: 'public/css/index.less',
-    //     dest: 'dist/css/index.css'
-    //   }
-    // },
+    sass: {
+      all: {
+        files: {
+          'dist/css/index.min.css': 'public/css/index.scss'
+        },
+        options: {
+          style: 'compressed'
+        }
+      },
+      unmin: {
+        files: {
+          'dist/css/index.css': 'public/css/index.scss'
+        },
+      }
+    },
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
@@ -79,6 +81,7 @@ module.exports = function (grunt) {
   // Load in grunt dependencies
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-curl');
@@ -98,7 +101,7 @@ module.exports = function (grunt) {
   // Register css and js tasks
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('js', ['jsmin-sourcemap']);
-  grunt.registerTask('css', []);
+  grunt.registerTask('css', ['sass']);
 
   // Set up default action
   grunt.registerTask('default', ['lint', 'css', 'js', 'watch']);

@@ -6,3 +6,4 @@ test/perceptual-tests/screenshot_diffs/
 tmp.png
 npm-debug.log
 tmp/
+.sass-cache/
