@@ -17,3 +17,8 @@ button {
   /* TODO: Use compass or bourbon for cross-browsering box-shadow */
   box-shadow: 0 0 20px #000000;
 }
+
+/* TODO: This is not a global property */
+.nav__item {
+  margin-left: $base-spacing-unit;
+}

@@ -19,7 +19,7 @@
 	<div id="global-wrapper" class="container">
     <div id="global-main">
       <% /* TODO: Use table classes to get consistent height */ %>
-      <div class="grid">
+      <div class="grid flush--left">
         <h1 class="grid__item one-third">Todd Wolfson</h1>
         <h2 class="grid__item one-half">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer
@@ -30,9 +30,9 @@
         <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
  -->
       </div>
-      <div class="grid"><div class="grid__item one">
+      <div class="grid flush--left">
         <div id="global-nav">
-        <ul class="nav nav--block float--left">
+        <ul class="nav float--left">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
                 { "name": "projects", "href": "/projects" },
@@ -42,7 +42,7 @@
             var navName = navLink.name,
                 iSelected = page === navName ? "isSelected" : "";
           %>
-          <li class="navlist-item">
+          <li class="nav__item">
             <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
           </li>
         <% }); %>
