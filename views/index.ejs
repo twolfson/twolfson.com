@@ -1,28 +1,29 @@
-<div class="grid">
-  <section id="articles" class="grid__item two-thirds">
+<div>
+  <section id="articles">
     <%
       articles.forEach(function (article, i) {
-        var rowKlass = i % 2 === 0 ? "odd-row" : "even-row";
     %>
-      <article class="post <%=rowKlass%>" style="margin-bottom: 23px;">
-        <div class="date" style="color: #908CC5;"><%= article.dateStr %></div>
-        <h2 title="<%= article.title %>" style="margin-top: 0;"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
+      <article class="post">
+        <div class="date"><%= article.dateStr %></div>
+        <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         <div class="article-summary">
           <% /* Summary is in markdown and already in a <p> */ %>
           <% /* TODO: Character count is still higher than wanted. Play with font-size */ %>
           <%- article.summary %>
         </div>
-        <div class="more row">
+        <div>
           <p><a href="<%= article.url %>">Reading time: 5 minutes</a></p>
         </div>
       </article>
     <% }); %>
   </section>
-  <div class="grid__item one-third">
+  <div>
     <h3>Current focus</h3>
-    <div class="project-summary">
-      <h4 class="project-summary-title"><a href="#">Sublime plugin tests</a></h4>
-      <div class="project-summary-content">
+    <div>
+      <h4>
+        <a href="#">Sublime plugin tests</a>
+      </h4>
+      <div>
         <% /* TODO: Move to jade so we can write this in Markdown */ %>
         <p><a href="#">Sublime Text</a> does not have a proper testing framework. With the disparity of Python 2 and 3, it makes cross-version plugins even harder.</p>
         <p>To solve this problem, I am developing a testing framework that can be integrated with <a href="#">Travis CI</a> for full automated tests.</p>
