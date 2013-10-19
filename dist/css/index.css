@@ -2598,74 +2598,12 @@ button {
   border-top-width: 2px !important;
   border-bottom-width: 2px !important; }
 
-/** Container for document. It should always have gutters on the left and right **/
+/* Grid adjustments */
 .container {
   width: 980px; }
 
-.container__row {
-  width: 960px; }
+.row {
+  margin-left: 0; }
 
-.span,
-.span1,
-.span2,
-.span3,
-.span4,
-.span5,
-.span6,
-.span7,
-.span8,
-.span9,
-.span10,
-.span11,
-.span12 {
-  float: left;
-  display: block;
-  margin-left: 24px; }
-
-.span1,
-.width1 {
-  width: 80px; }
-
-.span2,
-.width2 {
-  width: 160px; }
-
-.span3,
-.width3 {
-  width: 240px; }
-
-.span4,
-.width4 {
-  width: 320px; }
-
-.span5,
-.width5 {
-  width: 400px; }
-
-.span6,
-.width6 {
-  width: 480px; }
-
-.span7,
-.width7 {
-  width: 560px; }
-
-.span8,
-.width8 {
-  width: 640px; }
-
-.span9,
-.width9 {
-  width: 720px; }
-
-.span10,
-.width10 {
-  width: 800px; }
-
-.span11,
-.width11 {
-  width: 880px; }
-
-.span12,
-.width12 {
-  width: 960px; }
+.row--nested {
+  margin-left: -20px; }
