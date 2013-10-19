@@ -29,28 +29,29 @@
           <a href="/index.xml" class="rss-link" target="_blank">RSS</a>
         </div>
       </div>
-    <div class="row--dark row--bordered--ends">
-      <div class="container__row">
-        <ul class="nav">
-        <% var navLinks = [
-                { "name": "blog", "href": "/" },
-                { "name": "projects", "href": "/projects" },
-                { "name": "contact", "href": "/contact" }];
+      <div class="row--dark row--bordered--ends">
+        <div class="container__row">
+          <ul class="nav">
+          <% var navLinks = [
+                  { "name": "blog", "href": "/" },
+                  { "name": "projects", "href": "/projects" },
+                  { "name": "contact", "href": "/contact" }];
 
-          navLinks.forEach(function (navLink) {
-            var navName = navLink.name,
-                iSelected = page === navName ? "isSelected" : "";
-          %>
-          <li class="nav--item">
-            <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
-          </li>
-        <% }); %>
-        </ul>
-        <ul class="nav">
-          <li class="nav--item float--right">
-            <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
-          </li>
-        </ul>
+            navLinks.forEach(function (navLink) {
+              var navName = navLink.name,
+                  iSelected = page === navName ? "isSelected" : "";
+            %>
+            <li class="nav--item">
+              <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
+            </li>
+          <% }); %>
+          </ul>
+          <ul class="nav">
+            <li class="nav--item float--right">
+              <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <%- body %>
     </div>
