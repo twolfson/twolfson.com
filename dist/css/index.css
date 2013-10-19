@@ -784,7 +784,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after {
+.cf:after {
   content: "";
   display: table;
   clear: both; }
@@ -1542,174 +1542,53 @@ label,
  * Objects and abstractions
  */
 /*------------------------------------*\
-    $GRIDS
+    $FLEXBOX
 \*------------------------------------*/
 /**
- * Fluid and nestable grid system, e.g.:
+ * Until we can utilise flexbox natively we can kinda, sorta, attempt to emulate
+ * it, in a way... e.g.:
  *
-   <div class="grid">
+   <header class=flexbox>
 
-       <div class="grid__item  one-third">
-           <p>One third grid</p>
-       </div><!--
-
-    --><div class="grid__item  two-thirds">
-           <p>Two thirds grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-half">
-           <p>One half grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
+       <div class=flexbox__item>
+           <b>Welcome to</b>
        </div>
 
-   </div>
+       <div class=flexbox__item>
+           <img src="//csswizardry.com/inuitcss/img/logo.jpg" alt="inuit.css">
+       </div>
+
+   </header>
  *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
-/**
- * Grid wrapper
- */
-.grid {
-  margin-left: -24px;
-  list-style: none;
-  margin-bottom: 0; }
-
-/**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
- */
-.grid > .grid {
-  margin-left: 0; }
-
-/**
- * Grid
- */
-.grid__item {
-  display: inline-block;
-  width: 100%;
-  padding-left: 24px;
-  vertical-align: top; }
-
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * We can also combine our grid system classes with `.flexbox__item` classes,
  * e.g.:
  *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
+   <div class=flexbox>
+       <div class="flexbox__item  one-quarter">
+       </div>
+       <div class="flexbox__item  three-quarters">
+       </div>
+   </div>
  *
- * Demo: jsfiddle.net/inuitcss/Vnph4
+ * It’s pretty poorly named I’m afraid, but it works...
  *
- */
-.nav {
-  list-style: none;
-  margin-left: 0; }
-  .nav > li,
-  .nav > li > a {
-    display: inline-block;
-    *display: inline;
-    zoom: 1; }
-
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-   <ul class="nav  nav--stacked">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
+ * Demo: jsfiddle.net/inuitcss/ufUh2
  *
  */
-.nav--stacked > li {
-  display: list-item; }
-  .nav--stacked > li > a {
-    display: block; }
-
-/**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
- *
-   <ul class="nav  nav--banner">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav--banner {
-  text-align: center; }
-
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
-   <ul class="nav  nav--block">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav--block {
-  line-height: 1;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-  white-space: nowrap; }
-  .nav--block > li {
-    letter-spacing: normal;
-    word-spacing: normal; }
-    .nav--block > li > a {
-      padding: 12px; }
-
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
-   <ul class="nav  nav--fit">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Thanks to @pimpl for this idea!
- */
-.nav--fit {
+.flexbox {
   display: table;
   width: 100%; }
-  .nav--fit > li {
-    display: table-cell; }
-    .nav--fit > li > a {
-      display: block; }
 
 /**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
-   `<ul class="nav  nav--keywords>`
- *
+ * Nasty hack to circumvent Modernizr conflicts.
  */
-.nav--keywords > li:after {
-  content: ", "; }
-.nav--keywords > li:last-child:after {
-  display: none; }
+html.flexbox {
+  display: block;
+  width: auto; }
+
+.flexbox__item {
+  display: table-cell;
+  vertical-align: middle; }
 
 /**
  * Style trumps; helper and brand classes
@@ -2700,9 +2579,64 @@ a {
 button {
   cursor: pointer; }
 
-.container {
-  width: 960px;
+#global-wrapper {
   margin: 0 auto;
   background: #b9cfff;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black; }
+
+.container {
+  width: 960px; }
+
+.span,
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
+  float: left;
+  display: block;
+  margin-left: 24px; }
+
+.span1 {
+  width: 80px; }
+
+.span2 {
+  width: 160px; }
+
+.span3 {
+  width: 240px; }
+
+.span4 {
+  width: 320px; }
+
+.span5 {
+  width: 400px; }
+
+.span6 {
+  width: 480px; }
+
+.span7 {
+  width: 560px; }
+
+.span8 {
+  width: 640px; }
+
+.span9 {
+  width: 720px; }
+
+.span10 {
+  width: 800px; }
+
+.span11 {
+  width: 880px; }
+
+.span12 {
+  width: 960px; }

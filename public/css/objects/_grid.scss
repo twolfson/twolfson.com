@@ -1,0 +1,63 @@
+.container {
+  width: 960px;
+}
+
+.container__row {
+
+}
+
+.span,
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
+  float: left;
+  display: block;
+  margin-left: $base-spacing-unit;
+}
+
+// TODO: Namespacing and such
+.span1 {
+  width: (960px / 12) * 1;
+}
+.span2 {
+  width: (960px / 12) * 2;
+}
+.span3 {
+  width: (960px / 12) * 3;
+}
+.span4 {
+  width: (960px / 12) * 4;
+}
+.span5 {
+  width: (960px / 12) * 5;
+}
+.span6 {
+  width: (960px / 12) * 6;
+}
+.span7 {
+  width: (960px / 12) * 7;
+}
+.span8 {
+  width: (960px / 12) * 8;
+}
+.span9 {
+  width: (960px / 12) * 9;
+}
+.span10 {
+  width: (960px / 12) * 10;
+}
+.span11 {
+  width: (960px / 12) * 11;
+}
+.span12 {
+  width: (960px / 12) * 12;
+}

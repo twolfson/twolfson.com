@@ -35,10 +35,10 @@ $feature-bg-selected: #E2F6FF;
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         true;
-$use-flexbox:       false;
+$use-grids:         false;
+$use-flexbox:       true;
 $use-columns:       false;
-$use-nav:           true;
+$use-nav:           false;
 $use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;

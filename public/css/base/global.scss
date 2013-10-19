@@ -10,9 +10,8 @@ button {
   cursor: pointer;
 }
 
-.container {
-  width: 960px;
+#global-wrapper {
   margin: 0 auto;
   background: $dark-bg;
-  @include box-shadow(0 0 20px #000000)
+  @include box-shadow(0 0 20px #000000);
 }
