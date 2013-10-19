@@ -2311,7 +2311,19 @@ html.flexbox {
 .push--bottom {
   margin-bottom: 24px !important; }
 
-.push--left {
+.push--left, .span,
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
   margin-left: 24px !important; }
 
 .push--ends {
@@ -2383,7 +2395,19 @@ html.flexbox {
 .soft--bottom {
   padding-bottom: 24px !important; }
 
-.soft--left {
+.soft--left, .width,
+.width1,
+.width2,
+.width3,
+.width4,
+.width5,
+.width6,
+.width7,
+.width8,
+.width9,
+.width10,
+.width11,
+.width12 {
   padding-left: 24px !important; }
 
 .soft--ends {
@@ -2630,8 +2654,7 @@ button {
 .span11,
 .span12 {
   float: left;
-  display: block;
-  margin-left: 24px; }
+  display: block; }
 
 .span1 {
   width: 56px; }

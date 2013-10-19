@@ -8,6 +8,11 @@
   @extend .cf;
 }
 
+@mixin column($column, $gutter) {
+  width: ((960px / 12) * $column) - $gutter;
+}
+
+// TODO: Namespacing and such
 .span,
 .span1,
 .span2,
@@ -23,14 +28,25 @@
 .span12 {
   float: left;
   display: block;
-  margin-left: $base-spacing-unit;
+  @extend .push--left;
 }
 
-@mixin column($column, $gutter) {
-  width: ((960px / 12) * $column) - $gutter;
+.width,
+.width1,
+.width2,
+.width3,
+.width4,
+.width5,
+.width6,
+.width7,
+.width8,
+.width9,
+.width10,
+.width11,
+.width12 {
+  @extend .soft--left;
 }
 
-// TODO: Namespacing and such
 .span1 {
   @include column(1, $base-spacing-unit);
 }
