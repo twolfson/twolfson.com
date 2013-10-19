@@ -1,0 +1,19 @@
+body {
+  background: url('/public/images/white_plaster.png');
+}
+
+a {
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: $dark-bg;
+  /* TODO: Use compass or bourbon for cross-browsering box-shadow */
+  box-shadow: 0 0 20px #000000;
+}

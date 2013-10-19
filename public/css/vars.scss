@@ -10,6 +10,18 @@
  * having to alter the framework itself.
  */
 
+/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
+/* TODO: Find out what colors these are and 2-color scheme it up */
+$link-color: #436DC4;
+
+/* Background variants */
+$dark-bg: #B9CFFF;
+$dark-border: #7E9AD5;
+$light-bg: #C0BBFF;
+$light-border: #8882D5;
+
+$feature-bg: #B4E8FF;
+$feature-bg-selected: #E2F6FF;
 
 
 
@@ -23,7 +35,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         false;
+$use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           false;

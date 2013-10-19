@@ -10,6 +10,9 @@
  * using your own, so you can completely modify how inuit.css works without ever
  * having to alter the framework itself.
  */
+/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
+/* TODO: Find out what colors these are and 2-color scheme it up */
+/* Background variants */
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -1538,6 +1541,62 @@ label,
 /**
  * Objects and abstractions
  */
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="grid">
+
+       <div class="grid__item  one-third">
+           <p>One third grid</p>
+       </div><!--
+
+    --><div class="grid__item  two-thirds">
+           <p>Two thirds grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-half">
+           <p>One half grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+/**
+ * Grid wrapper
+ */
+.grid {
+  margin-left: -24px;
+  list-style: none;
+  margin-bottom: 0; }
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid {
+  margin-left: 0; }
+
+/**
+ * Grid
+ */
+.grid__item {
+  display: inline-block;
+  width: 100%;
+  padding-left: 24px;
+  vertical-align: top; }
+
 /**
  * Style trumps; helper and brand classes
  */
@@ -2518,3 +2577,18 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
+body {
+  background: url("/public/images/white_plaster.png"); }
+
+a {
+  font-weight: bold; }
+
+button {
+  cursor: pointer; }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: #b9cfff;
+  /* TODO: Use compass or bourbon for cross-browsering box-shadow */
+  box-shadow: 0 0 20px #000000; }
