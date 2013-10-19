@@ -19,19 +19,18 @@
 	<div id="global-wrapper" class="container">
     <div id="global-main">
       <% /* TODO: Use table classes to get consistent height */ %>
-      <div class="grid flush--left">
-        <h1 class="grid__item one-third">Todd Wolfson</h1>
-        <h2 class="grid__item one-half">
+      <div class="cf">
+        <h1 class="float--left push--left">Todd Wolfson</h1>
+        <h2 class="float--left push--left">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">Javascript</a> Developer
         </h2>
-<!-- TODO: Re-enable these when we are ready to sprite -->
-<!--         <a href="http://github.com/twolfson/" class="githubLink" target="_blank">GitHub</a>
-        <a href="http://twitter.com/twolfsn/" class="twitterLink" target="_blank">Twitter</a>
-        <a href="/index.xml" class="rssLink" target="_blank">RSS</a>
- -->
+        <!--
+        <a href="http://github.com/twolfson/" class="github-link  push--right" target="_blank">GitHub</a>
+        <a href="http://twitter.com/twolfsn/" class="twitter-link  push--right" target="_blank">Twitter</a>
+        <a href="/index.xml" class="rss-link push--right" target="_blank">RSS</a>
+        -->
       </div>
       <div class="grid flush--left">
-        <div id="global-nav">
         <ul class="nav float--left">
         <% var navLinks = [
                 { "name": "blog", "href": "/" },
@@ -42,17 +41,17 @@
             var navName = navLink.name,
                 iSelected = page === navName ? "isSelected" : "";
           %>
-          <li class="nav__item">
+          <li class="push--left">
             <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
           </li>
         <% }); %>
         </ul>
-        <ul class="nav float--right">
-          <li class="navlist-item">
+        <ul class="nav float--right push--right">
+          <li>
             <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
           </li>
         </ul>
-      </div></div>
+      </div>
       <%- body %>
     </div>
   </div>
