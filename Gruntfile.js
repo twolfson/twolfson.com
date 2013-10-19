@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
-    lint: {
+    jshint: {
       client: ['public/js/main.js']
     },
     // less: {
@@ -77,7 +77,8 @@ module.exports = function (grunt) {
   });
 
   // Load in grunt dependencies
-  grunt.loadNpmTasks('grunt-less');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-curl');
@@ -92,12 +93,13 @@ module.exports = function (grunt) {
   });
 
   // Register dependency tasks
-  grunt.registerTask('install', 'curl unzip');
+  grunt.registerTask('install', ['curl', 'unzip']);
 
   // Register css and js tasks
-  grunt.registerTask('js', 'jsmin-sourcemap');
-  grunt.registerTask('css', 'less');
+  grunt.registerTask('lint', ['jshint']);
+  grunt.registerTask('js', ['jsmin-sourcemap']);
+  grunt.registerTask('css', []);
 
   // Set up default action
-  grunt.registerTask('default', 'lint css js watch');
+  grunt.registerTask('default', ['lint', 'css', 'js', 'watch']);
 };
