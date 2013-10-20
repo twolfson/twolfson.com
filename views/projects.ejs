@@ -1,30 +1,30 @@
-<section id="project-section">
-  <article>
-    <div>
+<div id="projects">
+  <div>
+    <div class="projects__section">
       <%
         var _rowCounter = 1;
         function getRowClass() {
-          var klass = _rowCounter % 2 ? "odd-row" : "even-row";
+          var klass = _rowCounter % 2 ? "row--normal" : "row--dark";
           _rowCounter += 1;
           return klass;
         }
       %>
       <div>
-        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Scripts</h2>
+        <h2 class="text--center <%=getRowClass()%>">Scripts</h2>
       </div>
       <%
         projects.scripts.forEach(function (item) {
       %>
-      <div class="row <%=getRowClass()%> theme">
+      <div class="<%=getRowClass()%>">
         <%- partial('projects/script', item) %>
       </div>
       <%
         });
       %>
     </div>
-    <div>
+    <div class="projects__section">
       <div>
-        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Competitions</h2>
+        <h2 class="text--center <%=getRowClass()%>">Competitions</h2>
       </div>
       <%
         var competitions = projects.competitions,
@@ -38,29 +38,31 @@
               view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
-          <div class="row <%=getRowClass()%> theme">
+          <div class="<%=getRowClass()%>">
+            <div class="container__row">
         <% } %>
-            <%- partial(view, item) %>
+              <%- partial(view, item) %>
         <% if (isRowEnd) { %>
+            </div>
           </div>
         <% } %>
       <%
         });
       %>
     </div>
-    <div>
+    <div class="projects__section">
       <div>
-        <h2 class="layout-center <%=getRowClass()%> theme project-section-heading">Contributions</h2>
+        <h2 class="text--center <%=getRowClass()%>">Contributions</h2>
       </div>
       <%
         projects.contributions.forEach(function (item) {
       %>
-      <div class="row <%=getRowClass()%> theme">
+      <div class="<%=getRowClass()%>">
         <%- partial('projects/script', item) %>
       </div>
       <%
         });
       %>
     </div>
-  </article>
-</section>
+  </div>
+</div>

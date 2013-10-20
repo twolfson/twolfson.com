@@ -2,8 +2,8 @@
 var isCssOff = locals.type === 'cssOff',
     headerWidth = isCssOff ? "span2" : "span4";
 %>
-<div class="span6">
-  <div class="row row-nested">
+<div class="width6 hard--left float--left">
+  <div>
     <div class="<%=headerWidth%>">
       <a href="<%=pageUrl%>" target="_blank"><h3><%=name%></h3></a>
     </div>
@@ -20,7 +20,7 @@ var isCssOff = locals.type === 'cssOff',
       </div>
     <% } %>
   </div>
-  <div class="row row-nested">
+  <div>
     <div class="span4 competition-description">
       <p><%=competition%></p>
     </div>

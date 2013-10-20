@@ -1,12 +1,14 @@
-<div class="span3">
-  <a href="<%=pageUrl%>" target="_blank"><h3 title="<%=name%>"><%= locals.truncatedName ? locals.truncatedName : name%></h3></a>
-</div>
-<div class="span7 project-description">
-  <%-description%>
-</div>
-<div class="span1 hideLinks project-stars">
-  <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleStarIco" title="Starred">&nbsp;</span><span class="starCount"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span></a>
-</div>
-<div class="span1 hideLinks project-forks">
-  <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleForkIco" title="Forks">&nbsp;</span><span class="forkCount"><%=forks%></span></a>
+<div class="container__row">
+  <div class="span3">
+    <a href="<%=pageUrl%>" target="_blank"><h3 title="<%=name%>"><%= locals.truncatedName ? locals.truncatedName : name%></h3></a>
+  </div>
+  <div class="span7 project-description">
+    <%-description%>
+  </div>
+  <div class="span1 hideLinks project-stars">
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleStarIco" title="Starred">&nbsp;</span><span class="starCount"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span></a>
+  </div>
+  <div class="span1 hideLinks project-forks">
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleForkIco" title="Forks">&nbsp;</span><span class="forkCount"><%=forks%></span></a>
+  </div>
 </div>
