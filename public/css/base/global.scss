@@ -33,13 +33,17 @@ button {
 }
 
 .row--dark {
-  background: #F0F;
-  border-color: #FFF;
+  background: $light-bg;
+  border-color: $light-border;
   border-style: solid;
   border-top-width: 0;
   border-right-width: 0;
   border-bottom-width: 0;
   border-left-width: 0;
+}
+
+.row--bordered {
+  border-width: 2px !important;
 }
 
 .row--bordered--ends {
@@ -60,6 +64,7 @@ button {
   margin-left: $base-spacing-unit;
 }
 
+/* Helper for centering */
 .center--center {
   margin-left: auto !important;
   margin-right: auto !important;

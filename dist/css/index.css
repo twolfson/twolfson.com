@@ -2621,13 +2621,16 @@ button {
   box-shadow: 0 0 20px black; }
 
 .row--dark {
-  background: #F0F;
-  border-color: #FFF;
+  background: #c0bbff;
+  border-color: #8882d5;
   border-style: solid;
   border-top-width: 0;
   border-right-width: 0;
   border-bottom-width: 0;
   border-left-width: 0; }
+
+.row--bordered {
+  border-width: 2px !important; }
 
 .row--bordered--ends {
   border-top-width: 2px !important;
@@ -2644,6 +2647,7 @@ button {
   float: left;
   margin-left: 24px; }
 
+/* Helper for centering */
 .center--center {
   margin-left: auto !important;
   margin-right: auto !important; }
