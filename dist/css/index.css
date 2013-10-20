@@ -2603,7 +2603,7 @@ button {
 #global-wrapper,
 #global-footer {
   margin: 0 auto;
-  background: #b9cfff; }
+  background: white; }
 
 .row--dark {
   background: #F0F;
