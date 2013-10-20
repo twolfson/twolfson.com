@@ -32,23 +32,22 @@ button {
   @include box-shadow(0 0 20px #000000);
 }
 
-.row--dark {
-  background: $light-bg;
-  border-color: $light-border;
-  border-style: solid;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-}
-
 .row--bordered {
-  border-width: 2px !important;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .row--bordered--ends {
-  border-top-width: 2px !important;
-  border-bottom-width: 2px !important;
+  @extend .row--bordered;
+  border-width: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.row--dark {
+  background: $light-bg;
+  border-color: $light-border;
 }
 
 /* Navbar styling */

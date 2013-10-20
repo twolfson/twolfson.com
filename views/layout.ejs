@@ -39,7 +39,7 @@
 
             navLinks.forEach(function (navLink) {
               var navName = navLink.name,
-                  iSelected = page === navName ? "isSelected" : "";
+                  iSelected = page === navName ? "link--active" : "";
             %>
             <li class="nav--item">
               <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>

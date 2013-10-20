@@ -2620,21 +2620,19 @@ button {
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black; }
 
-.row--dark {
-  background: #c0bbff;
-  border-color: #8882d5;
+.row--bordered, .row--bordered--ends {
+  border-color: #000;
   border-style: solid;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0; }
-
-.row--bordered {
-  border-width: 2px !important; }
+  border-width: 2px; }
 
 .row--bordered--ends {
-  border-top-width: 2px !important;
-  border-bottom-width: 2px !important; }
+  border-width: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px; }
+
+.row--dark {
+  background: #c0bbff;
+  border-color: #8882d5; }
 
 /* Navbar styling */
 /* TODO: Relocate these */
