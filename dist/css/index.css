@@ -2594,9 +2594,6 @@ html.flexbox {
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
-body {
-  background: url("/public/images/white_plaster.png"); }
-
 a {
   font-weight: bold; }
 
