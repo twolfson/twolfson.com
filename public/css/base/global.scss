@@ -2,8 +2,24 @@ body {
   background: url('/public/images/white_plaster.png');
 }
 
-a {
+a,
+.link {
   font-weight: bold;
+  text-decoration: none;
+
+  &,
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover {
+    @extend .link--active;
+  }
+}
+
+.link--active {
+  color: $link-hover-color;
+  text-decoration: underline;
 }
 
 button {
@@ -14,10 +30,6 @@ button {
   margin: 0 auto;
   background: $dark-bg;
   @include box-shadow(0 0 20px #000000);
-}
-
-#global-footer {
-  width: 100%;
 }
 
 .row--dark {

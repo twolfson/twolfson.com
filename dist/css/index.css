@@ -2597,8 +2597,19 @@ html.flexbox {
 body {
   background: url("/public/images/white_plaster.png"); }
 
-a {
-  font-weight: bold; }
+a,
+.link {
+  font-weight: bold;
+  text-decoration: none; }
+  a, a:visited,
+  .link,
+  .link:visited {
+    color: #436dc4; }
+
+.link--active, a:hover,
+.link:hover {
+  color: #4f46c4;
+  text-decoration: underline; }
 
 button {
   cursor: pointer; }
@@ -2608,9 +2619,6 @@ button {
   background: #b9cfff;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black; }
-
-#global-footer {
-  width: 100%; }
 
 .row--dark {
   background: #F0F;
@@ -2635,6 +2643,10 @@ button {
   line-height: 32px;
   float: left;
   margin-left: 24px; }
+
+.center--center {
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 /*
 Sticky Footer Solution
