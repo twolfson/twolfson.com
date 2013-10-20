@@ -2603,11 +2603,10 @@ a {
 button {
   cursor: pointer; }
 
-#global-wrapper {
+#global-wrapper,
+#global-footer {
   margin: 0 auto;
-  background: #b9cfff;
-  -webkit-box-shadow: 0 0 20px black;
-  box-shadow: 0 0 20px black; }
+  background: #b9cfff; }
 
 .row--dark {
   background: #F0F;
