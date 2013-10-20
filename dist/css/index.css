@@ -2594,6 +2594,9 @@ html.flexbox {
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
+body {
+  background: url("/public/images/white_plaster.png"); }
+
 a {
   font-weight: bold; }
 
@@ -2603,7 +2606,9 @@ button {
 #global-wrapper,
 #global-footer {
   margin: 0 auto;
-  background: white; }
+  background: #b9cfff;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black; }
 
 .row--dark {
   background: #F0F;
@@ -2619,7 +2624,7 @@ button {
   border-bottom-width: 2px !important; }
 
 /* Navbar styling */
-/* TODO: These classes aren't very reusable */
+/* TODO: Relocate these */
 .nav {
   margin: 0;
   list-style: none; }
@@ -2628,6 +2633,48 @@ button {
   line-height: 32px;
   float: left;
   margin-left: 24px; }
+
+/*
+Sticky Footer Solution
+by Steve Hatcher
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/* must declare 0 margins on everything, also for main layout components use padding, not
+vertical margins (top and bottom) to add spacing, else those margins get added to total height
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+html,
+body {
+  height: 100%; }
+
+#global-wrapper {
+  min-height: 100%; }
+
+#global-main {
+  overflow: auto;
+  padding-bottom: 110px;
+  /* must be same height as the footer */ }
+
+#global-footer {
+  position: relative;
+  margin-top: -110px;
+  /* negative value of footer height */
+  height: 110px;
+  clear: both; }
+
+/*Opera Fix*/
+body:before {
+  /* thanks to Maleika (Kohoutec)*/
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/ }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
