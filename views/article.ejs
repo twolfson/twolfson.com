@@ -1,31 +1,33 @@
-<section id="articleSection">
-  <article class="post">
-    <header class="row">
-      <div class="span10">
-        <h1><%= article.title %></h1>
+<div id="article">
+  <div class="container__row">
+    <div class="span8">
+      <div>
+        <div>
+          <%= article.dateStr %>
+        </div>
+        <div>
+          <h1><%= article.title %></h1>
+        </div>
       </div>
-      <div class="span2 date text-right fluffToH1">
-        <%= article.dateStr %>
+
+      <div>
+        <%- article.content %>
       </div>
-    </header>
 
-    <section class="content row"><div class="span12 blogpost">
-      <%- article.content %>
-    </div></section>
-
-    <%
-      if (article.scripts) {
-        article.scripts.forEach(function (script) {
-    %>
-      <script src="<%= script %>"></script>
-    <%
-        });
-      }
-    %>
-  </article>
-  <div>
-    <h2>Related articles</h2>
-    <h2>Related projects</h2>
-    <h2>Recent articles</h2>
+      <%
+        if (article.scripts) {
+          article.scripts.forEach(function (script) {
+      %>
+          <script src="<%= script %>"></script>
+      <%
+          });
+        }
+      %>
+    </div>
+    <div class="span4">
+      <h2>Related articles</h2>
+      <h2>Related projects</h2>
+      <h2>Recent articles</h2>
+    </div>
   </div>
-</section>
+</div>
