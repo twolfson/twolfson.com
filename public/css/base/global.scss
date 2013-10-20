@@ -47,3 +47,8 @@ button {
   float: left;
   margin-left: $base-spacing-unit;
 }
+
+.center--center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
