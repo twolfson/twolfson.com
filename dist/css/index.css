@@ -2890,6 +2890,66 @@ body:before {
   margin-top: -32767px;
   /* thank you Erik J - negate effect of float*/ }
 
+.icon-bar-lines {
+  background-image: url(../images/sprites.png);
+  background-position: -256px -20px;
+  width: 32px;
+  height: 32px; }
+
+.icon-eye {
+  background-image: url(../images/sprites.png);
+  background-position: -224px -52px;
+  width: 32px;
+  height: 32px; }
+
+.icon-github {
+  background-image: url(../images/sprites.png);
+  background-position: -192px -84px;
+  width: 32px;
+  height: 32px; }
+
+.icon-heart {
+  background-image: url(../images/sprites.png);
+  background-position: -160px -116px;
+  width: 32px;
+  height: 32px; }
+
+.icon-purple-fork {
+  background-image: url(../images/sprites.png);
+  background-position: -128px -148px;
+  width: 32px;
+  height: 32px; }
+
+.icon-purple-star {
+  background-image: url(../images/sprites.png);
+  background-position: -96px -180px;
+  width: 32px;
+  height: 32px; }
+
+.icon-ribbon {
+  background-image: url(../images/sprites.png);
+  background-position: -64px -212px;
+  width: 32px;
+  height: 32px; }
+
+.icon-rss {
+  background-image: url(../images/sprites.png);
+  background-position: -32px -244px;
+  width: 32px;
+  height: 32px; }
+
+.icon-star {
+  background-image: url(../images/sprites.png);
+  background-position: -288px 0px;
+  width: 21px;
+  height: 20px; }
+
+.icon-twitter {
+  background-image: url(../images/sprites.png);
+  background-position: 0px -276px;
+  width: 32px;
+  height: 32px; }
+
 /** Container for document. It should always have gutters on the left and right **/
 .container {
   width: 980px; }
