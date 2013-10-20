@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       unmin: {
         files: {
           'dist/css/index.css': 'public/css/index.scss'
-        },
+        }
       }
     },
     'jsmin-sourcemap': {
@@ -41,8 +41,9 @@ module.exports = function (grunt) {
       all: {
         src: 'public/images/sprites/*.png',
         destImg: 'public/images/sprites.png',
-        destCSS: 'public/css/base/sprite-positions.less',
+        destCSS: 'public/css/base/sprites.scss',
         imgPath: '../images/sprites.png',
+        cssFormat: 'css',
         algorithm: 'alt-diagonal'
       }
     },
