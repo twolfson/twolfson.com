@@ -10,11 +10,14 @@ button {
   cursor: pointer;
 }
 
-#global-wrapper,
-#global-footer {
+#global-wrapper {
   margin: 0 auto;
   background: $dark-bg;
   @include box-shadow(0 0 20px #000000);
+}
+
+#global-footer {
+  width: 100%;
 }
 
 .row--dark {
