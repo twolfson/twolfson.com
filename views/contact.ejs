@@ -7,26 +7,26 @@
           // If there was no submission attempt
           if (locals.emailStatus === undefined) {
         %>
-        <div class="control-group">
-          <label for="name" class="control-label" required="required">Name:&nbsp;</label>
+        <div class="cf push--bottom">
+          <label for="name" class="span2 flush--left text--right" required="required">Name:&nbsp;</label>
           <input id="name" name="name" type="text" class="row--dark row--bordered span5" />
         </div>
-        <div class="control-group">
-          <label for="info" class="control-label" required="required">Contact Info:&nbsp;</label>
-          <input id="info" name="info" type="text" class="even-row theme border span5" />
+        <div class="cf push--bottom">
+          <label for="info" class="span2 flush--left text--right" required="required">Contact Info:&nbsp;</label>
+          <input id="info" name="info" type="text" class="row--bordered span5" />
         </div>
-        <div class="control-group">
-          <label for="message" class="control-label" required="required">Message:&nbsp;</label>
-          <textarea id="message" name="message" type="text" class="odd-row theme border span5"></textarea>
+        <div class="cf push--bottom">
+          <label for="message" class="span2 flush--left text--right" required="required">Message:&nbsp;</label>
+          <textarea id="message" name="message" type="text" class="row--dark row--bordered span5"></textarea>
         </div>
-        <div class="layout-center">
-          <button type="submit" id="submitButton" class="even-row theme border btn-xlarge">Contact Todd</button>
+        <div class="text--center">
+          <button type="submit" id="submitButton" class="row--dark row--bordered btn-xlarge">Contact Todd</button>
         </div>
         <%
           } else if (locals.emailStatus === true) {
           // Otherwise, if the submission was a success
         %>
-          <p class="layout-center">
+          <p class="text--center">
             Thank you for contacting me!
             <br/>
             I will respond to your request within 48 hours. Have a nice day!
@@ -34,7 +34,7 @@
         <%
           } else {
         %>
-          <p class="layout-center">
+          <p class="text--center">
             Ouch! An error seems to have occurred.
             <br/>
             <a href="javascript:location.reload();">Could you please try that again?</a>

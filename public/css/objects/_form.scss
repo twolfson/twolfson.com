@@ -1,0 +1,12 @@
+fieldset {
+  padding: 0;
+  @extend .push--bottom;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

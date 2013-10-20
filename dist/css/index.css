@@ -2308,7 +2308,7 @@ html.flexbox {
 .push--right {
   margin-right: 24px !important; }
 
-.push--bottom {
+.push--bottom, fieldset {
   margin-bottom: 24px !important; }
 
 .push--left, .span,
@@ -2788,3 +2788,13 @@ body:before {
 
 .width12 {
   width: 960px; }
+
+fieldset {
+  padding: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
