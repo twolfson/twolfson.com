@@ -2621,7 +2621,7 @@ button {
   box-shadow: 0 0 20px black; }
 
 .row--bordered, .row--bordered--ends {
-  border-color: #000;
+  border-color: #8882d5;
   border-style: solid;
   border-width: 2px; }
 
@@ -2630,9 +2630,14 @@ button {
   border-top-width: 2px;
   border-bottom-width: 2px; }
 
-.row--dark {
+/* TODO: Rename these to normal and alt */
+.row--light {
   background: #c0bbff;
   border-color: #8882d5; }
+
+.row--dark {
+  background: #b9cfff;
+  border-color: #7e9ad5; }
 
 /* Navbar styling */
 /* TODO: Relocate these */

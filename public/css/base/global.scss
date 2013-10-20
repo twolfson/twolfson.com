@@ -33,7 +33,7 @@ button {
 }
 
 .row--bordered {
-  border-color: #000;
+  border-color: $light-border;
   border-style: solid;
   border-width: 2px;
 }
@@ -45,9 +45,15 @@ button {
   border-bottom-width: 2px;
 }
 
-.row--dark {
+/* TODO: Rename these to normal and alt */
+.row--light {
   background: $light-bg;
   border-color: $light-border;
+}
+
+.row--dark {
+  background: $dark-bg;
+  border-color: $dark-border;
 }
 
 /* Navbar styling */
