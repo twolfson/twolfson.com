@@ -811,7 +811,7 @@ pre,
 .island,
 .islet {
   margin-bottom: 24px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.33333rem; }
   .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
   ul, .islet ol, .islet dl, .islet
   blockquote, .islet p, .islet address, .islet
@@ -822,14 +822,14 @@ pre,
   .island, .islet
   .islet {
     margin-bottom: 12px;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0.66667rem; }
 
 /**
  * Doubled up `margin-bottom` helper class.
  */
 .landmark {
   margin-bottom: 48px;
-  margin-bottom: 3rem; }
+  margin-bottom: 2.66667rem; }
 
 /**
  * `hr` elements only take up a few pixels, so we need to give them special
@@ -837,7 +837,7 @@ pre,
  */
 hr {
   margin-bottom: 22px;
-  margin-bottom: 1.375rem; }
+  margin-bottom: 1.22222rem; }
 
 /**
  * Where `margin-left` is concerned we want to try and indent certain elements
@@ -845,7 +845,7 @@ hr {
  */
 ul, ol, dd {
   margin-left: 48px;
-  margin-left: 3rem; }
+  margin-left: 2.66667rem; }
 
 /**
  * Base styles; unclassed HTML elements etc.
@@ -854,7 +854,7 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.125em/1.33333 "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-y: scroll;
   min-height: 100%; }
 
@@ -870,32 +870,32 @@ html {
  */
 h1, .alpha {
   font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.33333; }
 
 h2, .beta {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 1.66667rem;
   line-height: 1.6; }
 
 h3, .gamma {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.33333rem;
   line-height: 1; }
 
 h4, .delta {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1.11111rem;
   line-height: 1.2; }
 
 h5, .epsilon {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 0.88889rem;
   line-height: 1.5; }
 
 h6, .zeta {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.71429; }
 
 /**
@@ -917,17 +917,17 @@ hgroup .hN {
  */
 .giga {
   font-size: 96px;
-  font-size: 6rem;
+  font-size: 5.33333rem;
   line-height: 1; }
 
 .mega {
   font-size: 72px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 1; }
 
 .kilo {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 2.66667rem;
   line-height: 1; }
 
 /*------------------------------------*\
@@ -939,9 +939,9 @@ hgroup .hN {
  */
 .lede,
 .lead {
-  font-size: 18px;
+  font-size: 20.25px;
   font-size: 1.125rem;
-  line-height: 1.33333; }
+  line-height: 1.18519; }
 
 /*------------------------------------*\
     $SMALLPRINT
@@ -952,12 +952,12 @@ hgroup .hN {
 .smallprint,
 .milli {
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 2; }
 
 .micro {
   font-size: 10px;
-  font-size: 0.625rem;
+  font-size: 0.55556rem;
   line-height: 2.4; }
 
 /*------------------------------------*\

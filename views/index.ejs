@@ -3,12 +3,11 @@
     <%
       articles.forEach(function (article, i) {
     %>
-      <div class="post landmark">
-        <div><%= article.dateStr %></div>
+      <div class="landmark">
+        <small><%= article.dateStr %></small>
         <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
-        <div class="article-summary">
+        <div>
           <% /* Summary is in markdown and already in a <p> */ %>
-          <% /* TODO: Character count is still higher than wanted. Play with font-size */ %>
           <%- article.summary %>
         </div>
         <div>
