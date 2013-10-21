@@ -2902,6 +2902,11 @@ body:before {
   width: 32px;
   height: 32px; }
 
+.icon-github,
+.icon-twitter,
+.icon-rss {
+  display: inline-block; }
+
 .icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -84px;
