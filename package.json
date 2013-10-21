@@ -26,7 +26,8 @@
     "moment": "~2.1.0",
     "numscale": "0.0.3",
     "express-partials": "~0.1.1",
-    "consolidate": "~0.9.1"
+    "consolidate": "~0.9.1",
+    "unhtml": "~0.1.0"
   },
   "devDependencies": {
     "grunt-less": "~0.1.5",

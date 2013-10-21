@@ -21,5 +21,13 @@ articles.forEach(function (article) {
   article.dateStr = dateStr;
 });
 
+// Add a plain text summary for each article
+var unhtml = require('unhtml');
+articles.forEach(function (article) {
+  if (!article.txtSummary) {
+    article.txtSummary = unhtml(article.summary).trim().replace(/\n/g, ' ');
+  }
+});
+
 // Expose the articles
 module.exports = articles;
