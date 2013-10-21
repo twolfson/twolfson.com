@@ -2,6 +2,7 @@
   "title": "Release: git sqwish",
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 00:00:00",
+  "keywords": "git squash, git sqwish, rebase, merge conflict, rerere",
   "summary": "git squash without repetitive conflicts."
 }
 

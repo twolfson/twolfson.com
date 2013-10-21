@@ -2,6 +2,7 @@
   "title": "Bringing vertical rhythm to code",
   "author": "Todd Wolfson",
   "date": "Mon May 27 2013 01:00:00",
+  "keywords": "vertical rhythm, code, design code, typography",
   "summary": "An experiment and attempt at understanding my code patterns."
 }
 

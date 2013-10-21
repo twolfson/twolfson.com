@@ -2,6 +2,7 @@
   "title": "Life view: Free Will",
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 01:00:00",
+  "keywords": "life view, free will, philosophy",
   "summary": "Personal viewpoint on [Free Will](http://en.wikipedia.org/wiki/Free_will)."
 }
 
