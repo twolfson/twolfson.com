@@ -2,6 +2,7 @@
   "title": "BDD and the Future",
   "author": "Todd Wolfson",
   "date": "2013/05/27",
+  "keywords": "bdd, evolution, doubleshot, modular bdd",
   "summary": "A presentation overviewing the history of BDD and some of my experiments."
 }
 

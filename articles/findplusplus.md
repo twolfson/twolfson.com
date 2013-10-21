@@ -2,6 +2,7 @@
   "title": "Introducing Find++",
   "author": "Todd Wolfson",
   "date": "Mon Apr 22 2013 00:00:00",
+  "keywords": "find plus plus, sublime text, fpp, find++, notepad++, find in files",
   "summary": "[Find++](https://github.com/twolfson/FindPlusPlus) is an implementation of search utilites from [Notepad++](http://notepad-plus-plus.org/) for [Sublime Text 2](http://www.sublimetext.com/2)."
 }
 

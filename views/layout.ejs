@@ -1,6 +1,3 @@
-<%
-  var page = locals.page || '';
-%>
 <!doctype html>
 <head>
 	<title><%= locals.title || 'Todd Wolfson - JavaScript Developer' %></title>
@@ -38,7 +35,8 @@
           </li>
         </ul>
         <ul class="navlist pull-right">
-        <% var navLinks = [
+        <% var page = locals.page || '',
+               navLinks = [
                 { "name": "projects", "href": "/projects" },
                 { "name": "blog", "href": "/" },
                 { "name": "contact", "href": "/contact" }];
