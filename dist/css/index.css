@@ -2848,6 +2848,9 @@ button {
   margin-left: auto !important;
   margin-right: auto !important; }
 
+.align--baseline {
+  vertical-align: baseline; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
