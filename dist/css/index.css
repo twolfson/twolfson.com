@@ -1356,7 +1356,7 @@ td {
  */
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid #cccccc; }
+  border: 1px solid black; }
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
@@ -1782,6 +1782,58 @@ html.flexbox {
 
 .btn--hard {
   border-radius: 0; }
+
+/*------------------------------------*\
+    $RULES
+\*------------------------------------*/
+/**
+ * Horizontal rules, extend `hr`.
+ *
+ * Demo: jsfiddle.net/inuitcss/L6GuZ
+ *
+ */
+.rule {
+  color: black;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 23px;
+  margin-bottom: 1.4375rem; }
+
+/**
+ * Dotted rules
+ */
+.rule--dotted {
+  border-bottom-style: dotted; }
+
+/**
+ * Dashed rules
+ */
+.rule--dashed {
+  border-bottom-style: dashed; }
+
+/**
+ * Ornamental rules. Places a § over the rule.
+ */
+.rule--ornament {
+  position: relative;
+  /**
+  * Pass in an arbitrary ornament though a data attribute, e.g.:
+  *
+    <hr class="rule  rule--ornament" data-ornament="!">
+  *
+  */ }
+  .rule--ornament:after {
+    content: "§";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 0;
+    text-align: center;
+    border-style: none; }
+  .rule--ornament[data-ornament]:after {
+    content: attr(data-ornament); }
 
 /**
  * Style trumps; helper and brand classes

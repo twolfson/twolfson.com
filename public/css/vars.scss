@@ -30,6 +30,7 @@ $sans-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 
+$base-ui-color: #000;
 $base-font-family: $sans-font-family;
 $brand-face: "Lato", $sans-font-family;
 $brand-color: inherit;
@@ -64,7 +65,7 @@ $use-sprite:        false;
 $use-icon-text:     false;
 $use-beautons:      true;
 $use-lozenges:      false;
-$use-rules:         false;
+$use-rules:         true;
 $use-stats:         false;
 $use-greybox:       false;
 
