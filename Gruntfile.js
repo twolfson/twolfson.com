@@ -44,7 +44,8 @@ module.exports = function (grunt) {
         destCSS: 'public/css/base/sprites.scss',
         imgPath: '../images/sprites.png',
         cssFormat: 'css',
-        algorithm: 'alt-diagonal'
+        algorithm: 'alt-diagonal',
+        engine: 'canvas'
       }
     },
     curl: {
