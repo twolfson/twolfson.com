@@ -2,6 +2,7 @@
   "title": "A better shell",
   "author": "Todd Wolfson",
   "date": "2013/07/06",
+  "keywords": "bash, zsh, shell",
   "summary": "Thoughts on taking steps to make a better shell."
 }
 
