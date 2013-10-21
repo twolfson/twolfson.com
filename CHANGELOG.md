@@ -1,4 +1,6 @@
 # twolfson.com changelog
+1.26.1 - Fix for dev dependencies on `js-yaml`
+
 1.26.0 - Added SEO keywords and description for all pages and articles
 
 1.25.0 - Overhauled routes into a split of routes and bindings
