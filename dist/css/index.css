@@ -2431,11 +2431,11 @@ html.flexbox {
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Gudea", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
   color: inherit!important; }
 
 .brand-face {
-  font-family: "Gudea", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
