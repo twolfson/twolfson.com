@@ -26,41 +26,43 @@
     </div>
     <div class="span4">
       <% if (article.relatedArticles) { %>
-        <h2 class="gamma">Related articles</h2>
-        <% article.relatedArticles.forEach(function (relatedArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
-          <% /* DEV: Summary is wrapped in a paragraph already */ %>
-          <%- relatedArticle.summary %>
-          <% /* TODO: Use landmark over <div> */ %>
-          <% /* TODO: This is the start of a pattern */ %>
-          <div>&nbsp;</div>
-        <% }); %>
+          <h2 class="gamma">Related articles</h2>
+          <% article.relatedArticles.forEach(function (relatedArticle) { %>
+            <div class="cluster">
+              <h3 class="delta"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
+              <% /* DEV: Summary is wrapped in a paragraph already */ %>
+              <%- relatedArticle.summary %>
+            </div>
+          <% }); %>
       <% } %>
       <% if (article.relatedProjects) { %>
-        <h2 class="gamma">Related projects</h2>
-        <% article.relatedProjects.forEach(function (relatedProject) { %>
-          <% /* TODO: Verify url is proper */ %>
-          <h3 class="delta push-half--bottom"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
-          <% /* TODO: Determine if descript is inside of <p> or not */ %>
-          <p><%- relatedProject.description %></p>
-          <div>&nbsp;</div>
-        <% }); %>
+          <h2 class="gamma">Related projects</h2>
+          <% article.relatedProjects.forEach(function (relatedProject) { %>
+            <div class="cluster">
+              <% /* TODO: Verify url is proper */ %>
+              <h3 class="delta"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
+              <% /* TODO: Determine if descript is inside of <p> or not */ %>
+              <p><%- relatedProject.description %></p>
+            </div>
+          <% }); %>
       <% } %>
       <% if (article.topArticles) { %>
-        <h2 class="gamma">Top articles</h2>
-        <% article.topArticles.forEach(function (topArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
-          <%- topArticle.summary %>
-          <div>&nbsp;</div>
-        <% }); %>
+          <h2 class="gamma">Top articles</h2>
+          <% article.topArticles.forEach(function (topArticle) { %>
+            <div class="cluster">
+              <h3 class="delta"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
+              <%- topArticle.summary %>
+            </div>
+          <% }); %>
       <% } %>
       <% if (article.recentArticles) { %>
-        <h2 class="gamma">Recent articles</h2>
-        <% article.recentArticles.forEach(function (recentArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
-          <%- recentArticle.summary %>
-          <div>&nbsp;</div>
-        <% }); %>
+          <h2 class="gamma">Recent articles</h2>
+          <% article.recentArticles.forEach(function (recentArticle) { %>
+            <div class="cluster">
+              <h3 class="delta"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
+              <%- recentArticle.summary %>
+            </div>
+          <% }); %>
       <% } %>
     </div>
   </div>
