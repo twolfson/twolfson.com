@@ -28,7 +28,7 @@
       <% if (article.relatedArticles) { %>
         <h2 class="gamma">Related articles</h2>
         <% article.relatedArticles.forEach(function (relatedArticle) { %>
-          <h3 class="delta push-half--bottom"><%= relatedArticle.title %></h3>
+          <h3 class="delta push-half--bottom"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- relatedArticle.summary %>
         <% }); %>
@@ -36,15 +36,24 @@
       <% if (article.relatedProjects) { %>
         <h2 class="gamma">Related projects</h2>
         <% article.relatedProjects.forEach(function (relatedProject) { %>
-          <h3 class="delta push-half--bottom"><%= relatedProject.name %></h3>
+          <% /* TODO: Verify url is proper */ %>
+          <h3 class="delta push-half--bottom"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
           <% /* TODO: Determine if descript is inside of <p> or not */ %>
           <p><%- relatedProject.description %></p>
+        <% }); %>
+      <% } %>
+      <% if (article.featuredArticles) { %>
+        <h2 class="gamma">Featured articles</h2>
+        <% article.featuredArticles.forEach(function (featuredArticle) { %>
+          <h3 class="delta push-half--bottom"><a href="<%= featuredArticle.url %>"><%= featuredArticle.title %></a></h3>
+          <% /* DEV: Summary is wrapped in a paragraph already */ %>
+          <%- featuredArticle.summary %>
         <% }); %>
       <% } %>
       <% if (article.recentArticles) { %>
         <h2 class="gamma">Recent articles</h2>
         <% article.recentArticles.forEach(function (recentArticle) { %>
-          <h3 class="delta push-half--bottom"><%= recentArticle.title %></h3>
+          <h3 class="delta push-half--bottom"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- recentArticle.summary %>
         <% }); %>
