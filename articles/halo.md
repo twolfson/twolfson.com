@@ -2,6 +2,7 @@
   "title": "Halo - A modular MVC",
   "author": "Todd Wolfson",
   "date": "2013/03/17",
+  "keywords": "halo, mvc, front end",
   "summary": "An introduction to [Halo](https://github.com/Ensighten/Halo): its good, bad, and ugly parts."
 }
 

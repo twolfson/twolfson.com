@@ -3,6 +3,7 @@
   "_title": "Why your client-side framework deserves a&hellip;",
   "author": "Todd Wolfson",
   "date": "2012/07/04",
+  "keywords": "build chain, front end, mvc",
   "summary": "A screencast on my thoughts on client-side frameworks."
 }
 
