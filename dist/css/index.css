@@ -2880,14 +2880,14 @@ body {
 
 #global-main {
   overflow: auto;
-  padding-bottom: 110px;
+  padding-bottom: 86px;
   /* must be same height as the footer */ }
 
 #global-footer {
   position: relative;
-  margin-top: -110px;
+  margin-top: -86px;
   /* negative value of footer height */
-  height: 110px;
+  height: 86px;
   clear: both; }
 
 /*Opera Fix*/
