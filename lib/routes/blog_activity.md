@@ -20,3 +20,4 @@ git squash without repetitive conflicts
 Bash prompt with colors, git statuses, and git branches
 
 [sexy-bash-prompt]: https://github.com/twolfson/sexy-bash-prompt
+
