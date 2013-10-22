@@ -29,5 +29,20 @@ articles.forEach(function (article) {
   }
 });
 
+// Calculate reading speed for each article
+// TODO: Wiki says 250 words per minute so this is very generous timing
+var READING_SPEED = 100; // words per minute
+articles.forEach(function (article) {
+  // TODO: Make this more efficient by iterating rather than splitting
+  var txtContent = unhtml(article.content),
+      words = txtContent.split(/\s+/g).filter(function (word) {
+        // Remove strings without alphanumeric characters (e.g. `+`)
+        return word.match(/[A-Za-z0-9]/);
+      }),
+      wordCount = words.length,
+      readingTime =Math.round(READING_SPEED / wordCount);
+  article.readingTime = Math.max(readingTime, 1);
+});
+
 // Expose the articles
 module.exports = articles;
