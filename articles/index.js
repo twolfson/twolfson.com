@@ -61,11 +61,11 @@ Object.getOwnPropertyNames(projects).forEach(function (namespace) {
 });
 
 // Find and assert all related articles, related projects
-var FEATURED_ARTICLES = [
+var TOP_ARTICLES = [
   articleObj['Develop faster'],
   articleObj['Sexy bash prompt']
 ];
-FEATURED_ARTICLES.forEach(assert);
+TOP_ARTICLES.forEach(assert);
 articles.forEach(function (article) {
   // Count related items
   var relatedItems = 0;
@@ -94,8 +94,8 @@ articles.forEach(function (article) {
 
   // If there are not enough related items, add features projects
   if (relatedItems < 3) {
-    article.featuredArticles = FEATURED_ARTICLES.slice(0, 3 - relatedItems);
-    relatedItems += article.featuredArticles.length;
+    article.topArticles = TOP_ARTICLES.slice(0, 3 - relatedItems);
+    relatedItems += article.topArticles.length;
   }
 
   // If there are not enough related items, fill in recent articles
