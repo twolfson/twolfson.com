@@ -85,7 +85,7 @@ articles.forEach(function (article) {
 
   // If there are not enough related items, fill in recent articles
   if (relatedItems < 3) {
-    article.recentArticles = articles.slice(0, relatedItems);
+    article.recentArticles = articles.slice(0, 3 - relatedItems);
   }
 });
 
