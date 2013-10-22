@@ -3,16 +3,16 @@
     <%
       articles.forEach(function (article, i) {
     %>
-      <div class="landmark">
+      <div class="cluster">
         <small><%= article.dateStr %></small>
         <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         <div>
           <% /* Summary is in markdown and already in a <p> */ %>
           <%- article.summary %>
         </div>
-        <div>
-          <p><a href="<%= article.url %>">Reading time: <%= article.readingTime %> <%= article.readingTime === 1 ? 'minute' : 'minutes' %></a></p>
-        </div>
+        <p>
+          <a href="<%= article.url %>">Reading time: <%= article.readingTime %> <%= article.readingTime === 1 ? 'minute' : 'minutes' %></a>
+        </p>
       </div>
     <% }); %>
   </div>

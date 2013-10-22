@@ -83,3 +83,13 @@ button {
 // TODO: Add back code highlighting
 // TODO: Verify <aside> is proper size
 // TODO: Allow wide format for articles like Develop Faster
+
+.cluster {
+  // Provide double margin on the bottom of the cluster
+  @extend .landmark;
+
+  // Imply the sense that the content is well-packed
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: $base-spacing-unit / 2;
+  }
+}
