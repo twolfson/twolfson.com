@@ -44,7 +44,8 @@ articles.forEach(function (article) {
   article.readingTime = Math.max(readingTime, 1);
 });
 
-// Construct objects to look up articles and projectsby
+// Construct objects to look up articles and projects by
+// TODO: This is not the correct place to map relationships as projects can never read articles now =(
 var articleObj = {};
 articles.forEach(function (article) {
   articleObj[article.title] = article;
@@ -89,6 +90,7 @@ articles.forEach(function (article) {
     relatedItems += article.recentArticles.length;
   }
 
+  // Assert as a safeguard for articles
   assert.strictEqual(relatedItems, 3, 'Related items is not at 3 for "' + article.title + '"');
 });
 
