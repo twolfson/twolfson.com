@@ -1,5 +1,6 @@
 // Load in dependencies
-var moment = require('moment'),
+var assert = require('assert'),
+    moment = require('moment'),
     jojo = require('jojo'),
     utils = require('../utils');
 
@@ -43,16 +44,50 @@ articles.forEach(function (article) {
   article.readingTime = Math.max(readingTime, 1);
 });
 
-// Construct an object to look up articles by
+// Construct objects to look up articles and projectsby
 var articleObj = {};
 articles.forEach(function (article) {
   articleObj[article.title] = article;
 });
+var projects = require('../lib/projects'),
+    projectObj = {};
+Object.getOwnPropertyNames(projects).forEach(function (namespace) {
+  var projectsArr = projects[namespace];
+  projectsArr.forEach(function (project) {
+    projectObj[project.name] = project;
+  });
+});
 
 // Find and assert all related articles, related projects
+articles.forEach(function (article) {
+  // Count related items
+  var relatedItems = 0;
 
-// If there are not enough related items, fill in recent articles
-// TODO: This might be view logic
+  // Find related articles
+  var relatedArticleTitles = article.relatedArticles;
+  if (relatedArticleTitles) {
+    article.relatedArticles = relatedArticleTitles.map(function (title) {
+      var relatedArticle = articleObj[title];
+      assert(relatedArticle, 'Could not locate related article "' + title + '" for "' + article.title + '"');
+    });
+    relatedItems += relatedArticleTitles.length;
+  }
+
+  // Find related projects
+  var relatedProjectNames = article.relatedProjects;
+  if (relatedProjectNames) {
+    article.relatedProjects = relatedProjectNames.map(function (name) {
+      var relatedProject = projectObj[name];
+      assert(relatedProject, 'Could not locate related project "' + name + '" for "' + article.title + '"');
+    });
+    relatedItems += relatedProjectNames.length;
+  }
+
+  // If there are not enough related items, fill in recent articles
+  if (relatedItems < 3) {
+    article.recentArticles = articles.slice(0, relatedItems);
+  }
+});
 
 // Expose the articles
 module.exports = articles;
