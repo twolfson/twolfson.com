@@ -42,7 +42,6 @@ articles.forEach(function (article) {
       }),
       wordCount = words.length,
       readingTime =Math.round(wordCount / READING_SPEED);
-  article.wordCount = wordCount;
   article.readingTime = Math.max(readingTime, 1);
 });
 
