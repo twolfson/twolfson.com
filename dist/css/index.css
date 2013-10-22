@@ -1356,7 +1356,7 @@ td {
  */
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid black; }
+  border: 1px solid #1a1a1a; }
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
@@ -2788,7 +2788,8 @@ html.flexbox {
     width: 1px !important; } }
 /* endif */
 body {
-  background: url("/public/images/white_plaster.png"); }
+  background: url("/public/images/white_plaster.png");
+  color: #1a1a1a; }
 
 a,
 .link {

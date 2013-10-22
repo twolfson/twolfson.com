@@ -10,10 +10,13 @@
  * having to alter the framework itself.
  */
 
+$off-black: #1A1A1A;
+
 /* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
 /* TODO: Find out what colors these are and 2-color scheme it up */
 $link-color: #436DC4;
 $link-hover-color: #4F46C4;
+$text-color: $off-black;
 
 /* Background variants */
 $dark-bg: #B9CFFF;
@@ -48,7 +51,7 @@ $h6-size:           14px!default; // .zeta
 $milli-size:        12px!default;
 $micro-size:        10px!default;
 
-$base-ui-color: #000;
+$base-ui-color: $off-black;
 $base-font-family: $sans-font-family;
 $brand-face: "Lato", $sans-font-family;
 $brand-color: inherit;
