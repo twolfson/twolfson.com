@@ -31,6 +31,7 @@ articles.forEach(function (article) {
 // Calculate reading speed for each article
 // DEV: Wiki says 250 words per minute so this is very generous timing
 // DEV: Currently, this is 2 minutes for free will and 9 minutes for develop faster
+// TODO: Put reading time in RSS
 var READING_SPEED = 100; // words per minute
 articles.forEach(function (article) {
   // TODO: Make this more efficient by iterating rather than splitting
