@@ -27,7 +27,8 @@
     "numscale": "0.0.3",
     "express-partials": "~0.1.1",
     "consolidate": "~0.9.1",
-    "unhtml": "~0.1.0"
+    "unhtml": "~0.1.0",
+    "jade": "~0.35.0"
   },
   "devDependencies": {
     "grunt": "~0.3.17",

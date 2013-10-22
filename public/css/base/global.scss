@@ -93,12 +93,3 @@ button {
     margin-bottom: $base-spacing-unit / 2;
   }
 }
-
-.cluster--markdown {
-  @extend .cluster;
-
-  h3 {
-    margin-bottom: $base-spacing-unit;
-    margin-top:
-  }
-}

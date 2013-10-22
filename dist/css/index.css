@@ -827,7 +827,7 @@ pre,
 /**
  * Doubled up `margin-bottom` helper class.
  */
-.landmark, .cluster, .cluster--markdown {
+.landmark, .cluster {
   margin-bottom: 48px;
   margin-bottom: 2.66667rem; }
 
@@ -2852,11 +2852,8 @@ button {
 .align--baseline {
   vertical-align: baseline; }
 
-.cluster h1, .cluster--markdown h1, .cluster h2, .cluster--markdown h2, .cluster h3, .cluster--markdown h3, .cluster h4, .cluster--markdown h4, .cluster h5, .cluster--markdown h5, .cluster h6, .cluster--markdown h6 {
+.cluster h1, .cluster h2, .cluster h3, .cluster h4, .cluster h5, .cluster h6 {
   margin-bottom: 12px; }
-
-.cluster--markdown h3 {
-  margin-bottom: 24px; }
 
 /*
 Sticky Footer Solution
