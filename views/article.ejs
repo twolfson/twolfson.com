@@ -28,34 +28,38 @@
       <% if (article.relatedArticles) { %>
         <h2 class="gamma">Related articles</h2>
         <% article.relatedArticles.forEach(function (relatedArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
+          <h3 class="delta"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- relatedArticle.summary %>
+          <div class="push--bottom">&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.relatedProjects) { %>
         <h2 class="gamma">Related projects</h2>
         <% article.relatedProjects.forEach(function (relatedProject) { %>
           <% /* TODO: Verify url is proper */ %>
-          <h3 class="delta push-half--bottom"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
+          <h3 class="delta"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
           <% /* TODO: Determine if descript is inside of <p> or not */ %>
           <p><%- relatedProject.description %></p>
+          <div class="push--bottom">&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.topArticles) { %>
         <h2 class="gamma">Top articles</h2>
         <% article.topArticles.forEach(function (topArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
+          <h3 class="delta"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- topArticle.summary %>
+          <div class="push--bottom">&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.recentArticles) { %>
         <h2 class="gamma">Recent articles</h2>
         <% article.recentArticles.forEach(function (recentArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
+          <h3 class="delta"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- recentArticle.summary %>
+          <div class="push--bottom">&nbsp;</div>
         <% }); %>
       <% } %>
     </div>
