@@ -31,6 +31,7 @@
           <h3 class="delta push-half--bottom"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- relatedArticle.summary %>
+          <div>&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.relatedProjects) { %>
@@ -40,6 +41,7 @@
           <h3 class="delta push-half--bottom"><a href="<%= relatedProject.url %>"><%= relatedProject.name %></a></h3>
           <% /* TODO: Determine if descript is inside of <p> or not */ %>
           <p><%- relatedProject.description %></p>
+          <div>&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.topArticles) { %>
@@ -48,6 +50,7 @@
           <h3 class="delta push-half--bottom"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- topArticle.summary %>
+          <div>&nbsp;</div>
         <% }); %>
       <% } %>
       <% if (article.recentArticles) { %>
@@ -56,6 +59,7 @@
           <h3 class="delta push-half--bottom"><a href="<%= recentArticle.url %>"><%= recentArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
           <%- recentArticle.summary %>
+          <div>&nbsp;</div>
         <% }); %>
       <% } %>
     </div>
