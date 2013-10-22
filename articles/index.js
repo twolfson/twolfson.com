@@ -86,7 +86,10 @@ articles.forEach(function (article) {
   // If there are not enough related items, fill in recent articles
   if (relatedItems < 3) {
     article.recentArticles = articles.slice(0, 3 - relatedItems);
+    relatedItems += article.recentArticles.length;
   }
+
+  assert.strictEqual(relatedItems, 3, 'Related items is not at 3 for "' + article.title + '"');
 });
 
 // Expose the articles
