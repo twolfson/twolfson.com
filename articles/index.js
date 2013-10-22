@@ -41,7 +41,7 @@ articles.forEach(function (article) {
         return word.match(/[A-Za-z0-9]/);
       }),
       wordCount = words.length,
-      readingTime =Math.round(wordCount / READING_SPEED);
+      readingTime = Math.round(wordCount / READING_SPEED);
   article.readingTime = Math.max(readingTime, 1);
 });
 
