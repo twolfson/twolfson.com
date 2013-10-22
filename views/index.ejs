@@ -11,7 +11,7 @@
           <%- article.summary %>
         </div>
         <div>
-          <p><a href="<%= article.url %>">Reading time: <%= article.readingTime %> <%= article.readingTime === 1 ? 'minute' : 'minutes' %></a></p>
+          <p><a href="<%= article.url %>">Reading time: <%= article.readingTime %> <%= article.readingTime === 1 ? 'minute' : 'minutes' %>(<%= article.wordCount %>)</a></p>
         </div>
       </div>
     <% }); %>
