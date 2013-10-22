@@ -1,13 +1,11 @@
 // Load in dependencies
-var marked = require('marked'),
-    moment = require('moment'),
-    jojo = require('jojo');
+var moment = require('moment'),
+    jojo = require('jojo'),
+    utils = require('../utils');
 
 // Create a jojo middleware (and only use it to get articles from)
 var articles = jojo({
-  formatter: function (code) {
-    return marked.parse(code, {langPrefix: ''});
-  },
+  formatter: utils.markdownToHtml,
   render: false,
   author: 'Todd Wolfson',
   title: 'Todd Wolfson - Javascript Developer',
