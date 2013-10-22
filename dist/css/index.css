@@ -827,7 +827,7 @@ pre,
 /**
  * Doubled up `margin-bottom` helper class.
  */
-.landmark, .cluster {
+.landmark, .cluster, .cluster--aggressive {
   margin-bottom: 48px;
   margin-bottom: 2.66667rem; }
 
@@ -2852,7 +2852,10 @@ button {
 .align--baseline {
   vertical-align: baseline; }
 
-.cluster h1, .cluster h2, .cluster h3, .cluster h4, .cluster h5, .cluster h6 {
+.cluster h1, .cluster--aggressive h1, .cluster h2, .cluster--aggressive h2, .cluster h3, .cluster--aggressive h3, .cluster h4, .cluster--aggressive h4, .cluster h5, .cluster--aggressive h5, .cluster h6, .cluster--aggressive h6 {
+  margin-bottom: 12px; }
+
+.cluster--aggressive p {
   margin-bottom: 12px; }
 
 /*

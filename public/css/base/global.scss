@@ -93,3 +93,10 @@ button {
     margin-bottom: $base-spacing-unit / 2;
   }
 }
+
+.cluster--aggressive {
+  @extend .cluster;
+  p {
+    margin-bottom: $base-spacing-unit / 2;
+  }
+}

@@ -3,7 +3,7 @@
     <%
       articles.forEach(function (article, i) {
     %>
-      <div class="cluster">
+      <div class="cluster--aggressive">
         <small><%= article.dateStr %></small>
         <h2 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h2>
         <div>
