@@ -42,12 +42,12 @@
           <p><%- relatedProject.description %></p>
         <% }); %>
       <% } %>
-      <% if (article.featuredArticles) { %>
+      <% if (article.topArticles) { %>
         <h2 class="gamma">Top articles</h2>
-        <% article.featuredArticles.forEach(function (featuredArticle) { %>
-          <h3 class="delta push-half--bottom"><a href="<%= featuredArticle.url %>"><%= featuredArticle.title %></a></h3>
+        <% article.topArticles.forEach(function (topArticle) { %>
+          <h3 class="delta push-half--bottom"><a href="<%= topArticle.url %>"><%= topArticle.title %></a></h3>
           <% /* DEV: Summary is wrapped in a paragraph already */ %>
-          <%- featuredArticle.summary %>
+          <%- topArticle.summary %>
         <% }); %>
       <% } %>
       <% if (article.recentArticles) { %>
