@@ -3,6 +3,7 @@
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 02:00:00",
   "keywords": "life view, self, perception, philosophy",
+  "relatedArticles": ["Life view: Free Will"],
   "summary": "Personal viewpoint on how the self is shaped."
 }
 

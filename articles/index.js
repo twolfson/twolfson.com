@@ -71,6 +71,7 @@ articles.forEach(function (article) {
     article.relatedArticles = relatedArticleTitles.map(function (title) {
       var relatedArticle = articleObj[title];
       assert(relatedArticle, 'Could not locate related article "' + title + '" for "' + article.title + '"');
+      return relatedArticle;
     });
     relatedItems += relatedArticleTitles.length;
   }
@@ -81,6 +82,7 @@ articles.forEach(function (article) {
     article.relatedProjects = relatedProjectNames.map(function (name) {
       var relatedProject = projectObj[name];
       assert(relatedProject, 'Could not locate related project "' + name + '" for "' + article.title + '"');
+      return relatedProject;
     });
     relatedItems += relatedProjectNames.length;
   }
