@@ -28,7 +28,7 @@ articles.forEach(function (article) {
 });
 
 // Calculate reading speed for each article
-// TODO: Wiki says 250 words per minute so this is very generous timing
+// DEV: Wiki says 250 words per minute so this is very generous timing
 // DEV: Currently, this is 2 minutes for free will and 9 minutes for develop faster
 var READING_SPEED = 100; // words per minute
 articles.forEach(function (article) {
@@ -42,6 +42,17 @@ articles.forEach(function (article) {
       readingTime = Math.round(wordCount / READING_SPEED);
   article.readingTime = Math.max(readingTime, 1);
 });
+
+// Construct an object to look up articles by
+var articleObj = {};
+articles.forEach(function (article) {
+  articleObj[article.title] = article;
+});
+
+// Find and assert all related articles, related projects
+
+// If there are not enough related items, fill in recent articles
+// TODO: This might be view logic
 
 // Expose the articles
 module.exports = articles;
