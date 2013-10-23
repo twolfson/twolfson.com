@@ -2923,16 +2923,18 @@ body:before {
 .icon-rss,
 .icon-star,
 .icon-twitter {
-  display: inline-block; }
-
-.icon-purple-fork {
-  display: inline;
   font-size: 32px;
   line-height: 32px;
   padding-left: 32px;
   vertical-align: middle;
-  margin-right: 7px;
+  margin-right: 7px; }
+
+.icon-purple-star,
+.icon-purple-fork {
   margin-right: 0; }
+
+.icon-ribbon {
+  margin-right: 2px; }
 
 .icon-github {
   background-image: url(../images/sprites.png);
