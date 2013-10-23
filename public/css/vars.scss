@@ -61,6 +61,18 @@ $base-font-family: $sans-font-family;
 $brand-face: "Lato", $sans-font-family;
 $brand-color: inherit;
 
+// TODO: Verify <aside> is properly sized and maybe a little muted
+// TODO: It should definitely have a white bg with the | on the left
+
+// Set up for code chunk
+$code-color: #333;
+$code-bg: #f8f8ff;
+$code-comment-color: #998;
+$code-comment-style: italic;
+$code-keyword-color: #333;
+$code-keyword-weight: bold;
+
+
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
