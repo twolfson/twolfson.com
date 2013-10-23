@@ -15,13 +15,6 @@ $gutter-width: $base-spacing-unit;
   width: (($grid-width / $grid-columns) * $columns) - $gutter-offset;
 }
 
-[class*=span]:nth-child(2n) {
-  background: limegreen;
-}
-[class*=span]:nth-child(2n + 1) {
-  background: blue;
-}
-
 // TODO: Namespacing and such
 .span,
 .span1,
