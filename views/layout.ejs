@@ -24,11 +24,10 @@
       var gOverride = {
         urlBase: '/public/js/960gridder/',
         gColumns: 12,
-        gWidth: 27 / 2, // Gutter width (divided by 2?)
+        // gWidth: 27 / 2, // Gutter width (divided by 2?)
         // gWidth: 14, // Gutter width (divided by 2?)
         pHeight: 15,
         pOffset: 0,
-        center: false,
         size: 960
       };
       domready(function () {
@@ -36,9 +35,15 @@
         $960gridder.src = '/public/js/960gridder/960.gridder.js';
         document.body.appendChild($960gridder);
 
-        document.styleSheets[1].insertRule('#g-grid { left: 50%; margin-left: -(980px / 2) - gOverride.gWidth; }', 0);
       });
     </script>
+    <style>
+      #g-grid {
+        left: 50%;
+        /*margin-left: <%= -(980/2 + 27/2)%>px !important;*/
+        /*margin-left: -489.5px !important;*/
+      }
+    </style>
   <% } %>
 </head>
 <body>
