@@ -56,7 +56,8 @@
         </div>
       </div>
       <% /* TODO: Add back `island` on a per-page basis via push--top */ %>
-      <div class="row--light row--bordered--ends">
+      <% var navMargin = locals.navMargin === false ? '' : 'push--bottom' %>
+      <div class="row--light row--bordered--ends <%= navMargin %>">
         <% /* TODO: Consider changing line height for nav */ %>
         <div class="container__row">
           <ul class="nav">
