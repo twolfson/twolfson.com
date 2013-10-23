@@ -53,8 +53,8 @@ module.exports = function (grunt) {
       'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip',
 
       // Front-end dependencies
-      'public/js/ready.js': 'https://raw.github.com/ded/domready/master/ready.js',
-      'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/master/gator.js',
+      'public/js/ready.js': 'https://raw.github.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js',
+      'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
       'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/master/plugins/gator-legacy.js',
       'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js'
     },
