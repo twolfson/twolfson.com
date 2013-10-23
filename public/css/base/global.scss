@@ -4,7 +4,8 @@ body {
 }
 
 a,
-.link {
+.link,
+.link--underline {
   font-weight: bold;
   text-decoration: none;
 
@@ -21,6 +22,11 @@ a,
 .link--active {
   color: $link-hover-color;
   text-decoration: underline;
+}
+
+.link--underline:hover {
+  text-decoration: none;
+  border-bottom: 1px solid $link-hover-color;
 }
 
 button {

@@ -2793,18 +2793,26 @@ body {
   color: #1a1a1a; }
 
 a,
-.link {
+.link,
+.link--underline {
   font-weight: bold;
   text-decoration: none; }
   a, a:visited,
   .link,
-  .link:visited {
+  .link:visited,
+  .link--underline,
+  .link--underline:visited {
     color: #436dc4; }
 
 .link--active, a:hover,
-.link:hover {
+.link:hover,
+.link--underline:hover {
   color: #4f46c4;
   text-decoration: underline; }
+
+.link--underline:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #4f46c4; }
 
 button {
   cursor: pointer; }
