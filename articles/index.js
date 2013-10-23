@@ -2,11 +2,13 @@
 var assert = require('assert'),
     moment = require('moment'),
     jojo = require('jojo'),
-    utils = require('../utils');
+    marked = require('marked');
 
 // Create a jojo middleware (and only use it to get articles from)
 var articles = jojo({
-  formatter: utils.markdownToHtml,
+  formatter: function (md) {
+    return marked.parse(md, {langPrefix: ''});
+  },
   render: false,
   author: 'Todd Wolfson',
   title: 'Todd Wolfson - Javascript Developer',
