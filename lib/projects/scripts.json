@@ -1,7 +1,7 @@
 [
   {
     "name": "spritesmith",
-    "description": "Joins images together into a spritesheet and generates CSS variables",
+    "description": "Join images together into a spritesheet and CSS variables",
     "stars": 127,
     "forks": 18,
     "github": "Ensighten/grunt-spritesmith",
@@ -73,7 +73,7 @@
   },
   {
     "name": "fontsmith",
-    "description": "Compose SVGs into webfonts, character mappings, and CSS variables",
+    "description": "Compose SVGs into fonts and CSS/JS variables",
     "stars": 11,
     "forks": 0,
     "github": "twolfson/grunt-fontsmith",
@@ -82,7 +82,7 @@
   },
   {
     "name": "What size is my browser?",
-    "truncatedName": "What size is my&hellip;",
+    "truncatedName": "What size [&hellip;] browser?",
     "description": "Determine your browser dimensions via media queries",
     "stars": 6,
     "forks": 1,
