@@ -2999,6 +2999,12 @@ body:before {
 .container__row {
   width: 960px; }
 
+[class*=span]:nth-child(2n) {
+  background: limegreen; }
+
+[class*=span]:nth-child(2n + 1) {
+  background: blue; }
+
 .span,
 .span1,
 .span2,

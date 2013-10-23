@@ -12,6 +12,13 @@
   width: ((960px / 12) * $column) - $gutter;
 }
 
+[class*=span]:nth-child(2n) {
+  background: limegreen;
+}
+[class*=span]:nth-child(2n + 1) {
+  background: blue;
+}
+
 // TODO: Namespacing and such
 .span,
 .span1,
