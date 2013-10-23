@@ -1,14 +1,28 @@
 <div class="flexbox soft-half--top soft-half--bottom">
   <div class="flexbox__item width3">
-    <a href="<%=pageUrl%>" target="_blank"><h3 title="<%=name%>" class="flush--bottom"><%= locals.truncatedName ? locals.truncatedName : name%></h3></a>
+    <h3 title="<%=name%>" class="delta flush--bottom">
+      <a href="<%=pageUrl%>" target="_blank">
+        <%= locals.truncatedName ? locals.truncatedName : name%>
+      </a>
+    </h3>
   </div>
   <div class="flexbox__item width7 project-description">
     <%- description%>
   </div>
   <div class="flexbox__item width1 hideLinks project-stars">
-    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleStarIco" title="Starred">&nbsp;</span><span class="starCount"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span></a>
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink">
+      <span class="icon-purple-star" title="Stars">
+        <span class="accessibility">Stars</span>
+      </span>
+      <span><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span>
+    </a>
   </div>
   <div class="flexbox__item width1 hideLinks project-forks">
-    <a href="<%=srcUrl%>" target="_blank" class="fakeLink"><span class="purpleForkIco" title="Forks">&nbsp;</span><span class="forkCount"><%=forks%></span></a>
+    <a href="<%=srcUrl%>" target="_blank" class="fakeLink">
+      <span class="icon-purple-fork" title="Forks">
+        <span class="accessibility">Forks</span>
+      </span>
+      <span><%=forks%></span>
+    </a>
   </div>
 </div>
