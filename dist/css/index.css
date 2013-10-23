@@ -2995,7 +2995,7 @@ pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: ghostwhite; }
+  background: #f8f8ff; }
 
 pre .comment,
 pre .template_comment,
@@ -3024,7 +3024,7 @@ pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula {
-  color: #dd1144; }
+  color: #d14; }
 
 pre .title,
 pre .id {
@@ -3054,7 +3054,7 @@ pre .django .tag .keyword {
 pre .attribute,
 pre .variable,
 pre .lisp .body {
-  color: teal; }
+  color: #008080; }
 
 pre .regexp {
   color: #009926; }
@@ -3084,16 +3084,16 @@ pre .cdata {
   font-weight: bold; }
 
 pre .deletion {
-  background: #ffdddd; }
+  background: #fdd; }
 
 pre .addition {
-  background: #ddffdd; }
+  background: #dfd; }
 
 pre .diff .change {
   background: #0086b3; }
 
 pre .chunk {
-  color: #aaaaaa; }
+  color: #aaa; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
