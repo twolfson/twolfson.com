@@ -2,8 +2,8 @@
   {
     "name": "spritesmith",
     "description": "Join images together into a spritesheet and CSS variables",
-    "stars": 127,
-    "forks": 18,
+    "stars": 151,
+    "forks": 20,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,7 +11,7 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 118,
+    "stars": 122,
     "forks": 14,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
@@ -47,8 +47,8 @@
   {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
-    "stars": 25,
-    "forks": 2,
+    "stars": 27,
+    "forks": 3,
     "github": "twolfson/FindPlusPlus",
     "srcUrl": "https://github.com/twolfson/FindPlusPlus",
     "pageUrl": "https://github.com/twolfson/FindPlusPlus"
@@ -56,7 +56,7 @@
   {
     "name": "grunt-zip",
     "description": "Zip and unzip files via grunt",
-    "stars": 14,
+    "stars": 16,
     "forks": 3,
     "github": "twolfson/grunt-zip",
     "srcUrl": "https://github.com/twolfson/grunt-zip",
