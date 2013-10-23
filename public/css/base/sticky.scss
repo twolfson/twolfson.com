@@ -23,7 +23,7 @@ body {
   min-height: 100%;
 }
 
-$footer-height: 2px + ($base-spacing-unit / 2) + ($base-line-height + ($base-spacing-unit / 2)) * 2;
+$footer-height: 2px + $half-spacing-unit + ($base-line-height + $half-spacing-unit) * 2;
 #global-main {
   overflow: auto;
   padding-bottom: $footer-height; /* must be same height as the footer */

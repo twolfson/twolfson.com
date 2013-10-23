@@ -90,13 +90,13 @@ button {
 
   // Imply the content is well-packed by making header and first paragraph close
   h1,h2,h3,h4,h5,h6 {
-    margin-bottom: $base-spacing-unit / 2;
+    margin-bottom: $half-spacing-unit;
   }
 }
 
 .cluster--aggressive {
   @extend .cluster;
   p {
-    margin-bottom: $base-spacing-unit / 2;
+    margin-bottom: $half-spacing-unit;
   }
 }
