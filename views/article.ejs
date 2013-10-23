@@ -28,6 +28,7 @@
       <% if (article.relatedArticles) { %>
           <h2 class="gamma">Related articles</h2>
           <% article.relatedArticles.forEach(function (relatedArticle) { %>
+            <% /* TODO: Still hesitant on spacing between clusters. I would like a 1.5 landmark. See abandoning kaleido */ %>
             <div class="cluster">
               <h3 class="delta"><a href="<%= relatedArticle.url %>"><%= relatedArticle.title %></a></h3>
               <% /* DEV: Summary is wrapped in a paragraph already */ %>
