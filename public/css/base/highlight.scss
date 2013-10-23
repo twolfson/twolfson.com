@@ -1,24 +1,14 @@
 /*
 
 https://github.com/isagalaev/highlight.js/blob/7.3/src/styles/github.css
-// Modified variant by @twolfson
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
-pre,
-code {
+pre code {
+  display: block; padding: 0.5em;
   color: #333;
-  background: #f8f8ff;
-}
-
-pre {
-  display: block;
-}
-
-code {
-  padding-left: 5px;
-  padding-right: 5px;
+  background: #f8f8ff
 }
 
 pre .comment,
@@ -32,7 +22,7 @@ pre .javadoc {
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
-// pre .javascript .title,
+pre .javascript .title,
 pre .nginx .title,
 pre .subst,
 pre .request,
@@ -60,7 +50,7 @@ pre .id {
   font-weight: bold
 }
 
-// pre .javascript .title,
+pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
 pre .subst {
@@ -102,7 +92,7 @@ pre .symbol,
 pre .ruby .symbol .string,
 pre .lisp .keyword,
 pre .tex .special,
-pre .input_number {
+pre .prompt {
   color: #990073
 }
 
@@ -135,8 +125,4 @@ pre .diff .change {
 
 pre .chunk {
   color: #aaa
-}
-
-pre .tex .formula {
-  opacity: 0.5;
 }

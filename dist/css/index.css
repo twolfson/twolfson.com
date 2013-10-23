@@ -2985,17 +2985,17 @@ body:before {
   width: 32px;
   height: 32px; }
 
-pre,
-code {
+/*
+
+https://github.com/isagalaev/highlight.js/blob/7.3/src/styles/github.css
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+pre code {
+  display: block;
+  padding: 0.5em;
   color: #333;
-  background: #f8f8ff; }
-
-pre {
-  display: block; }
-
-code {
-  padding-left: 5px;
-  padding-right: 5px; }
+  background: ghostwhite; }
 
 pre .comment,
 pre .template_comment,
@@ -3007,6 +3007,7 @@ pre .javadoc {
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
+pre .javascript .title,
 pre .nginx .title,
 pre .subst,
 pre .request,
@@ -3030,6 +3031,7 @@ pre .id {
   color: #900;
   font-weight: bold; }
 
+pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
 pre .subst {
@@ -3065,7 +3067,7 @@ pre .symbol,
 pre .ruby .symbol .string,
 pre .lisp .keyword,
 pre .tex .special,
-pre .input_number {
+pre .prompt {
   color: #990073; }
 
 pre .built_in,
@@ -3092,9 +3094,6 @@ pre .diff .change {
 
 pre .chunk {
   color: #aaaaaa; }
-
-pre .tex .formula {
-  opacity: 0.5; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
