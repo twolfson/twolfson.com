@@ -55,7 +55,7 @@ module.exports = function (grunt) {
       // Front-end dependencies
       'public/js/ready.js': 'https://raw.github.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js',
       'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
-      'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/master/plugins/gator-legacy.js',
+      'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
       'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js',
 
       // Development dependencies
