@@ -20,27 +20,23 @@
   <script src="/public/js/index.js"></script>
   <% if (locals.enableGrid) { %>
     <script type="text/javascript">
+      // http://peol.github.io/960gridder/#overriding
       var gOverride = {
         urlBase: '/public/js/960gridder/',
-        gColor: '#EEEEEE',
         gColumns: 12,
-        gOpacity: 0.35,
-        gWidth: 10,
-        pColor: '#C0C0C0',
+        gWidth: 27 / 2, // Gutter width (divided by 2?)
+        // gWidth: 14, // Gutter width (divided by 2?)
         pHeight: 15,
         pOffset: 0,
-        pOpacity: 0.55,
-        center: true,
-        gEnabled: true,
-        pEnabled: true,
-        setupEnabled: true,
-        fixFlash: true,
+        center: false,
         size: 960
       };
       domready(function () {
         var $960gridder = document.createElement('script');
         $960gridder.src = '/public/js/960gridder/960.gridder.js';
         document.body.appendChild($960gridder);
+
+        document.styleSheets[1].insertRule('#g-grid { left: 50%; margin-left: -(980px / 2) - gOverride.gWidth; }', 0);
       });
     </script>
   <% } %>
