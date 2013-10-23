@@ -1,15 +1,18 @@
 /** Container for document. It should always have gutters on the left and right **/
+$grid-width: 960px;
+$grid-columns: 12;
+$gutter-width: $base-spacing-unit;
 .container {
-  width: 980px;
+  width: $grid-width + $gutter-width;
 }
 
 .container__row {
-  width: 960px;
+  width: $grid-width;
   @extend .cf;
 }
 
-@mixin column($column, $gutter) {
-  width: ((960px / 12) * $column) - $gutter;
+@mixin column($columns, $gutter-offset) {
+  width: (($grid-width / $grid-columns) * $columns) - $gutter-offset;
 }
 
 [class*=span]:nth-child(2n) {
@@ -51,44 +54,44 @@
 .width10,
 .width11,
 .width12 {
-  @extend .soft--left;
+  padding-left: $gutter-width;
 }
 
 .span1 {
-  @include column(1, $base-spacing-unit);
+  @include column(1, $gutter-width);
 }
 .span2 {
-  @include column(2, $base-spacing-unit);
+  @include column(2, $gutter-width);
 }
 .span3 {
-  @include column(3, $base-spacing-unit);
+  @include column(3, $gutter-width);
 }
 .span4 {
-  @include column(4, $base-spacing-unit);
+  @include column(4, $gutter-width);
 }
 .span5 {
-  @include column(5, $base-spacing-unit);
+  @include column(5, $gutter-width);
 }
 .span6 {
-  @include column(6, $base-spacing-unit);
+  @include column(6, $gutter-width);
 }
 .span7 {
-  @include column(7, $base-spacing-unit);
+  @include column(7, $gutter-width);
 }
 .span8 {
-  @include column(8, $base-spacing-unit);
+  @include column(8, $gutter-width);
 }
 .span9 {
-  @include column(9, $base-spacing-unit);
+  @include column(9, $gutter-width);
 }
 .span10 {
-  @include column(10, $base-spacing-unit);
+  @include column(10, $gutter-width);
 }
 .span11 {
-  @include column(11, $base-spacing-unit);
+  @include column(11, $gutter-width);
 }
 .span12 {
-  @include column(12, $base-spacing-unit);
+  @include column(12, $gutter-width);
 }
 
 .width1 {

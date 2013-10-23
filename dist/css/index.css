@@ -2589,19 +2589,7 @@ html.flexbox {
 .soft--bottom {
   padding-bottom: 27px !important; }
 
-.soft--left, .width,
-.width1,
-.width2,
-.width3,
-.width4,
-.width5,
-.width6,
-.width7,
-.width8,
-.width9,
-.width10,
-.width11,
-.width12 {
+.soft--left {
   padding-left: 27px !important; }
 
 .soft--ends {
@@ -2994,7 +2982,7 @@ body:before {
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
-  width: 980px; }
+  width: 987px; }
 
 .container__row {
   width: 960px; }
@@ -3020,6 +3008,21 @@ body:before {
 .span12 {
   float: left;
   display: block; }
+
+.width,
+.width1,
+.width2,
+.width3,
+.width4,
+.width5,
+.width6,
+.width7,
+.width8,
+.width9,
+.width10,
+.width11,
+.width12 {
+  padding-left: 27px; }
 
 .span1 {
   width: 53px; }
