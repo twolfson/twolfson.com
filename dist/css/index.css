@@ -2925,6 +2925,11 @@ body:before {
 .icon-twitter {
   display: inline-block; }
 
+.icon-purple-fork {
+  width: 32px;
+  height: 32px;
+  position: relative; }
+
 .icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -84px;
@@ -2937,7 +2942,10 @@ body:before {
   width: 32px;
   height: 32px; }
 
-.icon-purple-fork {
+.icon-purple-fork:after {
+  position: absolute;
+  display: block;
+  content: " ";
   background-image: url(../images/sprites.png);
   background-position: -128px -148px;
   width: 32px;
