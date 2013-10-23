@@ -106,3 +106,9 @@ button {
     margin-bottom: $half-spacing-unit;
   }
 }
+
+// Ignore content flow by breaking it out of the static layer
+// Used on projects page for numbers that leak into the gutter
+.ignore-flow {
+  position: absolute;
+}

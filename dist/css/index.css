@@ -2855,6 +2855,9 @@ button {
 .cluster--aggressive p {
   margin-bottom: 13.5px; }
 
+.ignore-flow {
+  position: absolute; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
