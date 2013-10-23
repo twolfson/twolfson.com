@@ -1,4 +1,4 @@
-<div class="flexbox soft-half--top soft-half--bottom">
+<div class="container__row flexbox soft-half--top soft-half--bottom">
   <div class="flexbox__item width3">
     <h3 title="<%=name%>" class="delta flush--bottom">
       <a href="<%=pageUrl%>" target="_blank">
@@ -6,10 +6,10 @@
       </a>
     </h3>
   </div>
-  <div class="flexbox__item width7 project-description">
+  <div class="flexbox__item width7 project-description" style="background: #FFF;">
     <%- description%>
   </div>
-  <div class="flexbox__item width1 hideLinks project-stars">
+  <div class="flexbox__item width1 hideLinks text--left project-stars" style="background: #F0F;">
     <a href="<%=srcUrl%>" target="_blank" class="fakeLink">
       <span class="icon-purple-star" title="Stars">
         <span class="accessibility">Stars</span>
@@ -17,7 +17,7 @@
       <span><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span>
     </a>
   </div>
-  <div class="flexbox__item width1 hideLinks project-forks">
+  <div class="flexbox__item width1 hideLinks text--left project-forks">
     <a href="<%=srcUrl%>" target="_blank" class="fakeLink">
       <span class="icon-purple-fork" title="Forks">
         <span class="accessibility">Forks</span>
