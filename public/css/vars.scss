@@ -64,14 +64,34 @@ $brand-color: inherit;
 // TODO: Verify <aside> is properly sized and maybe a little muted
 // TODO: It should definitely have a white bg with the | on the left
 
-// Set up for code chunk
+// Set up for code styles
 $code-color: #333;
 $code-bg: #f8f8ff;
 $code-comment-color: #998;
 $code-comment-style: italic;
 $code-keyword-color: #333;
 $code-keyword-weight: bold;
-
+$code-number-color: #099;
+$code-string-color: #d14;
+$code-title-color: #900;
+$code-title-weight: bold;
+$code-title-js-weight: normal;
+$code-class-title-color: #458;
+$code-class-title-weight: bold;
+$code-tag-color: #000080;
+$code-tag-weight: normal;
+$code-attribute-color: #008080;
+$code-regexp-color: #009926;
+$code-class-color: #458;
+$code-class-weight: bold;
+$code-symbol-color: #990073;
+$code-built-in-color: #0086b3;
+$code-preprocessor-color: #999;
+$code-font-weight: bold;
+$code-deletion-bg: #fdd;
+$code-addition-bg: #dfd;
+$code-diff-change-bg: #0086b3;
+$code-chunk-color: #aaa;
 
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS

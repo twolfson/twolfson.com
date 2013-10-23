@@ -5,6 +5,34 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
+$code-color: #333;
+$code-bg: #f8f8ff;
+$code-comment-color: #998;
+$code-comment-style: italic;
+$code-keyword-color: #333;
+$code-keyword-weight: bold;
+$code-number-color: #099;
+$code-string-color: #d14;
+$code-title-color: #900;
+$code-title-weight: bold;
+$code-title-js-weight: normal;
+$code-class-title-color: #458;
+$code-class-title-weight: bold;
+$code-tag-color: #000080;
+$code-tag-weight: normal;
+$code-attribute-color: #008080;
+$code-regexp-color: #009926;
+$code-class-color: #458;
+$code-class-weight: bold;
+$code-symbol-color: #990073;
+$code-built-in-color: #0086b3;
+$code-preprocessor-color: #999;
+$code-font-weight: bold;
+$code-deletion-bg: #fdd;
+$code-addition-bg: #dfd;
+$code-diff-change-bg: #0086b3;
+$code-chunk-color: #aaa;
+
 pre code {
   display: block;
   padding: 0.5em;
@@ -35,7 +63,6 @@ pre .status {
 pre .number,
 pre .hexcolor,
 pre .ruby .constant {
-  $code-number-color: #099;
   color: $code-number-color;
 }
 
@@ -43,14 +70,11 @@ pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula {
-  $code-string-color: #d14;
   color: $code-string-color;
 }
 
 pre .title,
 pre .id {
-  $code-title-color: #900;
-  $code-title-weight: bold;
   color: $code-title-color;
   font-weight: $code-title-weight;
 }
@@ -59,7 +83,6 @@ pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
 pre .subst {
-  $code-title-js-weight: normal;
   font-weight: $code-title-js-weight;
 }
 
@@ -67,8 +90,6 @@ pre .class .title,
 pre .haskell .type,
 pre .vhdl .literal,
 pre .tex .command {
-  $code-class-title-color: #458;
-  $code-class-title-weight: bold;
   color: $code-class-title-color;
   font-weight: $code-class-title-weight;
 }
@@ -77,8 +98,6 @@ pre .tag,
 pre .tag .title,
 pre .rules .property,
 pre .django .tag .keyword {
-  $code-tag-color: #000080;
-  $code-tag-weight: normal;
   color: $code-tag-color;
   font-weight: $code-tag-weight;
 }
@@ -86,18 +105,14 @@ pre .django .tag .keyword {
 pre .attribute,
 pre .variable,
 pre .lisp .body {
-  $code-attribute-color: #008080;
   color: $code-attribute-color;
 }
 
 pre .regexp {
-  $code-regexp-color: #009926;
   color: $code-regexp-color;
 }
 
 pre .class {
-  $code-class-color: #458;
-  $code-class-weight: bold;
   color: $code-class-color;
   font-weight: $code-class-weight;
 }
@@ -107,14 +122,12 @@ pre .ruby .symbol .string,
 pre .lisp .keyword,
 pre .tex .special,
 pre .prompt {
-  $code-symbol-color: #990073;
   color: $code-symbol-color;
 }
 
 pre .built_in,
 pre .lisp .title,
 pre .clojure .built_in {
-  $code-built-in-color: #0086b3;
   color: $code-built-in-color;
 }
 
@@ -123,28 +136,22 @@ pre .pi,
 pre .doctype,
 pre .shebang,
 pre .cdata {
-  $code-preprocessor-color: #999;
-  $code-font-weight: bold;
   color: $code-preprocessor-color;
   font-weight: $code-font-weight;
 }
 
 pre .deletion {
-  $code-deletion-bg: #fdd;
   background: $code-deletion-bg;
 }
 
 pre .addition {
-  $code-addition-bg: #dfd;
   background: $code-addition-bg;
 }
 
 pre .diff .change {
-  $code-diff-change-bg: #0086b3;
   background: $code-diff-change-bg;
 }
 
 pre .chunk {
-  $code-chunk-color: #aaa;
   color: $code-chunk-color;
 }
