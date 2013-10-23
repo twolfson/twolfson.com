@@ -11,7 +11,8 @@
         }
       %>
       <div>
-        <h2 class="text--center <%=getRowClass()%> push-half--bottom">Scripts</h2>
+        <% /* TODO: Is there a pattern for half-top/half-bottom */ %>
+        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Scripts</h2>
       </div>
       <%
         projects.scripts.forEach(function (item) {
@@ -25,7 +26,7 @@
     </div>
     <div class="projects__section">
       <div>
-        <h2 class="text--center <%=getRowClass()%>">Competitions</h2>
+        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Competitions</h2>
       </div>
       <%
         var competitions = projects.competitions,
@@ -53,7 +54,7 @@
     </div>
     <div class="projects__section">
       <div>
-        <h2 class="text--center <%=getRowClass()%>">Contributions</h2>
+        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Contributions</h2>
       </div>
       <%
         projects.contributions.forEach(function (item) {
