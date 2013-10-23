@@ -2834,10 +2834,10 @@ button {
 /* TODO: Relocate these */
 .nav {
   margin: 0;
-  list-style: none; }
+  list-style: none;
+  line-height: 36.5px; }
 
 .nav--item {
-  line-height: 32px;
   float: left;
   margin-left: 27px; }
 

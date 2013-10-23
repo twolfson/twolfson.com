@@ -42,14 +42,14 @@ button {
 .row--bordered {
   border-color: $light-border;
   border-style: solid;
-  border-width: 2px;
+  border-width: $base-border-width;
 }
 
 .row--bordered--ends {
   @extend .row--bordered;
   border-width: 0;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
+  border-top-width: $base-border-width;
+  border-bottom-width: $base-border-width;
 }
 
 /* TODO: Rename these to normal and alt */
@@ -68,10 +68,10 @@ button {
 .nav {
   margin: 0;
   list-style: none;
+  line-height: 1.5 * $base-spacing-unit - 2 * $base-border-width;
 }
 
 .nav--item {
-  line-height: 32px;
   float: left;
   margin-left: $base-spacing-unit;
 }

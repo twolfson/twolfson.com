@@ -25,7 +25,9 @@
         urlBase: '/public/js/960gridder/',
         gColumns: 12,
         gWidth: 27 / 2, // Gutter width (divided by 2?)
-        pHeight: 24 * (18 / 16) / 2, // Line height
+        // pHeight: 24 * (18 / 16) / 2, // Line height (divided by 2 for easier baseline)
+        pHeight: 15, // Line height (divided by 2 for easier baseline)
+        pOffset: 0, // Baseline offset
         size: 960
       };
       domready(function () {
@@ -41,16 +43,16 @@
 	<div id="global-wrapper" class="container">
     <div id="global-main">
       <% /* TODO: Remove all inline styles */ %>
-      <div class="flexbox container__row push-half--bottom" style="margin-top: 3px">
+      <div class="flexbox container__row push-half--top push-half--bottom">
         <h1 class="brand flexbox__item width4 align--baseline">Todd Wolfson</h1>
         <h2 class="brand flexbox__item width5 align--baseline">
           <a href="http://en.wikipedia.org/wiki/ECMAScript">JavaScript</a> Developer
         </h2>
         <div class="flexbox__item text--right">
           <% /* TODO: Re-align sprites */ %>
-          <a href="http://github.com/twolfson/" class="icon-github push--right" style="margin-top: 7px;" target="_blank"><span class="accessibility">GitHub</span></a>
-          <a href="http://twitter.com/twolfsn/" class="icon-twitter push--right" style="margin-top: 7px;" target="_blank"><span class="accessibility">Twitter</span></a>
-          <a href="/index.xml" class="icon-rss" style="margin-top: 7px;" target="_blank"><span class="accessibility">RSS</span></a>
+          <a href="http://github.com/twolfson/" class="icon-github push--right" target="_blank"><span class="accessibility">GitHub</span></a>
+          <a href="http://twitter.com/twolfsn/" class="icon-twitter push--right" target="_blank"><span class="accessibility">Twitter</span></a>
+          <a href="/index.xml" class="icon-rss" target="_blank"><span class="accessibility">RSS</span></a>
         </div>
       </div>
       <% /* TODO: Add back `island` on a per-page basis via push--top */ %>
