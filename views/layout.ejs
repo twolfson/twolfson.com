@@ -18,6 +18,32 @@
     window.env = "<%= process.env.NODE_ENV %>";
   </script>
   <script src="/public/js/index.js"></script>
+  <% if (locals.enableGrid) { %>
+    <script type="text/javascript">
+      var gOverride = {
+        urlBase: '//rawgithub.com/peol/960gridder/master/releases/1.3.1/',
+        gColor: '#EEEEEE',
+        gColumns: 12,
+        gOpacity: 0.35,
+        gWidth: 10,
+        pColor: '#C0C0C0',
+        pHeight: 15,
+        pOffset: 0,
+        pOpacity: 0.55,
+        center: true,
+        gEnabled: true,
+        pEnabled: true,
+        setupEnabled: true,
+        fixFlash: true,
+        size: 960
+      };
+      domready(function () {
+        var $960gridder = document.createElement('script');
+        $960gridder.src = '//rawgithub.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js';
+        document.body.appendChild($960gridder);
+      });
+    </script>
+  <% } %>
 </head>
 <body>
 	<div id="global-wrapper" class="container">
