@@ -33,6 +33,7 @@ $sans-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 
+// Scale up all fonts such that a blog post is ~75 characters per line
 $font-scale: 18 / 16;
 // $font-scale: 1;
 $base-font-size: 16px * $font-scale;
