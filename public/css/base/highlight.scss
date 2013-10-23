@@ -123,22 +123,28 @@ pre .pi,
 pre .doctype,
 pre .shebang,
 pre .cdata {
-  color: #999;
-  font-weight: bold;
+  $code-preprocessor-color: #999;
+  $code-font-weight: bold;
+  color: $code-preprocessor-color;
+  font-weight: $code-font-weight;
 }
 
 pre .deletion {
-  background: #fdd;
+  $code-deletion-bg: #fdd;
+  background: $code-deletion-bg;
 }
 
 pre .addition {
-  background: #dfd;
+  $code-addition-bg: #dfd;
+  background: $code-addition-bg;
 }
 
 pre .diff .change {
-  background: #0086b3;
+  $code-diff-change-bg: #0086b3;
+  background: $code-diff-change-bg;
 }
 
 pre .chunk {
-  color: #aaa;
+  $code-chunk-color: #aaa;
+  color: $code-chunk-color;
 }
