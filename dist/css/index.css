@@ -2925,6 +2925,15 @@ body:before {
 .icon-twitter {
   display: inline-block; }
 
+.icon-purple-fork {
+  display: inline;
+  font-size: 32px;
+  line-height: 32px;
+  padding-left: 32px;
+  vertical-align: middle;
+  margin-right: 7px;
+  margin-right: 0; }
+
 .icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -84px;
@@ -2938,7 +2947,6 @@ body:before {
   height: 32px; }
 
 .icon-purple-fork {
-  float: left;
   background-image: url(../images/sprites.png);
   background-position: -128px -148px;
   width: 32px;
