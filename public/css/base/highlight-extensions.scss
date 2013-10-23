@@ -1,0 +1,6 @@
+// Style inline code blocks
+code {
+  padding-left: $code-inline-spacing;
+  padding-right: $code-inline-spacing;
+  background: $code-bg;
+}

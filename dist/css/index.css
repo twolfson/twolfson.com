@@ -3095,6 +3095,11 @@ pre .diff .change {
 pre .chunk {
   color: #aaaaaa; }
 
+code {
+  padding-left: 9px;
+  padding-right: 9px;
+  background: ghostwhite; }
+
 /** Container for document. It should always have gutters on the left and right **/
 .container {
   width: 987px; }
