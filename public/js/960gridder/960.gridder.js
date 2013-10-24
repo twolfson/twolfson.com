@@ -376,8 +376,6 @@ function Grid() {
 			var horColumns =
 				((me.settings.height - me.settings.pOffset) / me.settings.pHeight);
 
-			console.log(horColumns, me.settings.height, me.settings.pOffset, me.settings.pHeight);
-
 			for (i = 0; i <= horColumns; i++) {
 				me._createEntity('horizontal', {
 					// top: ((me.settings.height / horColumns) * i) + me.settings.pOffset,
