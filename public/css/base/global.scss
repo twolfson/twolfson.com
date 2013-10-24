@@ -5,7 +5,7 @@ body {
 
 code {
   font-family: $mono-font-family;
-  // Prevent orphaned sections of code
+  // Prevent orphaned sections of code (see git-sqwish)
   display: inline-block;
 }
 
