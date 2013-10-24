@@ -59,7 +59,7 @@ function Grid() {
 		pressedKeys: [],
 		delayTimer: ''
 	};
-	
+
 	// Initialize grid settings object
 	me.settings =
 		(typeof(window.gOverride) === "undefined") ? {} : window.gOverride;
@@ -85,7 +85,7 @@ function Grid() {
 		scriptEl.src = me.settings.urlBase + "jquery.js";
 		document.body.appendChild(scriptEl);
 	}
-	
+
 	/* Internal method to create an grid entity.
 	 * @param type
 	 * Either 'vertical' or 'horizontal'
@@ -139,12 +139,12 @@ function Grid() {
 		 * found in the jquery.gridder.src.css file.
 		 */
 		 jQuery('<style type"text/css">#g-setup{position:absolute;top:150px;left:-310px;padding:6px;margin:0;list-style:none;width:320px!important;background-color:#d1cfe6;border:2px solid #a19bd1;z-index:2100;}#g-setup *{background:transparent!important;border:0!important;color:#58517c!important;font-family:Verdana,Geneva,sans-serif!important;font-size:10px!important;font-weight:normal!important;letter-spacing:normal!important;line-height:1!important;list-style-type:none!important;margin:0!important;padding:0!important;text-decoration:none!important;text-indent:0!important;text-transform:none!important;word-spacing:0!important;z-index:2100!important;}#g-setup .head{font-weight:bold!important;text-align:center;border-bottom:1px solid #7cb267!important;}#g-setup ul{width:150px;float:left!important;}#g-setup li{clear:left;padding:5px!important;}* html #g-setup li{clear:none!important;padding:4px!important;}#g-setup span{float:left!important;width:50px;padding:1px 4px 0 0!important;text-align:right!important;line-height:1.5!important;}#g-setup input,#g-setup select{float:left!important;width:70px;border:1px solid #a19bd1!important;background-color:#e7e6ee!important;padding:2px!important;}#g-setup select{width:77px;padding:0!important;}#g-setup-misc{margin-top:5px!important;clear:left;float:none!important;width:300px!important;border-top:1px solid #7cb267!important;}#g-setup-misc span{line-height:1.1!important;width:200px;}#g-setup-misc input{width:15px;padding:0!important;height:15px;}#g-setup-tab{width:26px;overflow:hidden;position:absolute;top:0;left:100%;margin-left:-26px!important;z-index:2100!important;}#g-setup-tab img{left:0;position:relative;}#g-grid{left:0;position:absolute;z-index:500;top:0;}#g-grid .g-vertical,#g-grid .g-horizontal{position:absolute;z-index:1000;}*:first-child+html #g-grid .g-horizontal,*:first-child+html #g-grid .g-vertical{margin-left:-1px;}#g-grid .g-horizontal{min-height:1px;height:1px;font-size:0;line-height:0;}</style>').appendTo('head');
-		
+
 		// Get initial document height
 		me.settings.height = jQuery(document).height();
 
 		if (me.settings.setupEnabled) {
-			
+
 			// Same as for the CSS, all the HTML used to setup 960 Gridder
 			jQuery('<div id="g-setup"><ul><li class="head">Vertical</li><li><span>Color</span><input id="g-setup-gColor" /></li><li><span>Opacity</span><input id="g-setup-gOpacity" /></li><li><span>Width</span><input id="g-setup-gWidth" /></li><li><span>Columns</span><select id="g-setup-gColumns"></select></li></ul><ul><li class="head">Horizontal</li><li><span>Color</span><input id="g-setup-pColor" /></li><li><span>Opacity</span><input id="g-setup-pOpacity" /></li><li><span>Height</span><input id="g-setup-pHeight" /></li><li><span>Offset</span><input id="g-setup-pOffset" /></li></ul><ul id="g-setup-misc"><li><span>Enable vertical (gutters)</span><input id="g-setup-gEnabled" type="checkbox" /></li><li><span>Enable horizontal (paragraphs)</span><input id="g-setup-pEnabled" type="checkbox" /></li><li><span>Invert vertical</span><input id="g-setup-invert" type="checkbox" /></li><li><span>Center grid</span><input id="g-setup-center" type="checkbox" /></li></ul><div style="clear: left;"></div><div id="g-setup-tab"><a href="javascript:;"><img src="http://gridder.andreehansson.se/releases/1.3.1/logo-sprite.png" alt="" /></a></div></div>').appendTo('body');
 
@@ -166,13 +166,13 @@ function Grid() {
 					}
 				}
 			}
-		
+
 			// Hook the show/hide text to toggle
 			jQuery('#g-setup').css('top', jQuery(window).scrollTop() + 150);
 			jQuery('#g-setup-tab a').click(function () {
 				me.toggleSetupWindow();
 			});
-			
+
 			// Hook "normal" input boxes to update values
 			jQuery('#g-setup input').keyup(function () {
 				var that = this;
@@ -181,12 +181,12 @@ function Grid() {
 					me.setVariable(jQuery(that).attr('id'), jQuery(that).val());
 				}, 700);
 			});
-			
+
 			// Hook selection box to update values
 			jQuery('#g-setup-gColumns').change(function() {
 				me.setVariable('gColumns', $(this).val());
 			});
-			
+
 			// Hook checkboxes to update values
 			jQuery('#g-setup-misc input').click(function () {
 				me.setVariable(jQuery(this).attr('id'), jQuery(this).attr('checked'));
@@ -204,7 +204,7 @@ function Grid() {
 				jQuery('#g-setup').css('top', jQuery().scrollTop() + 150);
 			});
 		}
-		
+
 		// We're checking if CTRL+ALT and one of toggle keys has been pressed
 		jQuery().keyup(function (e) {
 			 // CTRL + ALT is pressed
@@ -231,7 +231,7 @@ function Grid() {
 					});
 				}
 			}
-			
+
 			// Remove this key from the keys that are pressed
 			var splicePos = jQuery.inArray(e.which, me.settings.pressedKeys);
 			me.settings.pressedKeys.splice(splicePos, splicePos);
@@ -252,7 +252,7 @@ function Grid() {
 		else {
 			me._setVariable(arguments[0], arguments[1]);
 		}
-		
+
 		me.createGrid();
 	};
 
@@ -271,7 +271,7 @@ function Grid() {
 			jQuery('#g-setup').animate({ left: 0 }, 200);
 		}
 	};
-	
+
 	/* Main method, at least visually. It'll create (and remove existing)
 	 * grid on the website.
 	 */
@@ -286,7 +286,7 @@ function Grid() {
 			else {
 				jQuery(this).removeAttr('wmode');
 			}
-		
+
 			/* We need to remove the HTML and let the browser re-render it
 			 * Instead of .clone(), which does not work on IE on <embed>, we do me...
 			 */
@@ -294,15 +294,15 @@ function Grid() {
 			jQuery(this).parent().replaceWith(tmpEl);
 			jQuery(this).remove();
 		});
-	
+
 		// Remove any existing grid before we continue
 		jQuery('#g-grid').remove();
-		
+
 		// Create a object that'll help us control the grid objects
 		jQuery('<div id="g-grid"></div>')
 			.appendTo('body')
 			.css('width', me.settings.size);
-	
+
 		// Center our grid if specified to do so
 		if (me.settings.center) {
 			jQuery('#g-grid').css({
@@ -310,15 +310,15 @@ function Grid() {
 				marginLeft: -((me.settings.size / 2) + me.settings.gWidth)
 			});
 		}
-	
+
 		// Create vertical columns
 		if (me.settings.gEnabled && me.settings.gColumns > 0) {
-			
+
 			// Loop through until we have as many vertical columns as defined
 			if (me.settings.invert) {
 				jQuery().css('overflow-x', 'hidden');
 				var outerSpacing = (jQuery(window).width() - me.settings.size) / 2;
-				
+
 				// Create left outer line
 				me._createEntity('vertical', {
 					left: -outerSpacing,
@@ -327,7 +327,7 @@ function Grid() {
 					backgroundColor: me.settings.gColor,
 					opacity: me.settings.gOpacity
 				});
-				
+
 				// Create inner columns
 				for (var i = 0; i < me.settings.gColumns; i++) {
 					var w = (me.settings.size / me.settings.gColumns) - (me.settings.gWidth * 2);
@@ -375,10 +375,13 @@ function Grid() {
 			// Calculate how many rows the document should have
 			var horColumns =
 				((me.settings.height - me.settings.pOffset) / me.settings.pHeight);
-			
+
+			console.log(horColumns, me.settings.height, me.settings.pOffset, me.settings.pHeight);
+
 			for (i = 0; i <= horColumns; i++) {
 				me._createEntity('horizontal', {
-					top: ((me.settings.height / horColumns) * i) + me.settings.pOffset,
+					// top: ((me.settings.height / horColumns) * i) + me.settings.pOffset,
+					top: (me.settings.pHeight * i) + me.settings.pOffset,
 					left: '50%',
 					marginLeft: -(me.settings.size / 2),
 					width: (me.settings.size + (me.settings.gWidth * 2)),
