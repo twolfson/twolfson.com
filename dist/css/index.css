@@ -2816,6 +2816,7 @@ img,
 code,
 input,
 button,
+textarea,
 .rounded {
   border-radius: 3px; }
 
