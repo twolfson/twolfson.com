@@ -36,10 +36,10 @@ blockquote,
 }
 
 // Round all the things
-img,
-code,
-input,
-button,
+img, // Article + contact
+code, // Article (inline + block)
+input, // Contact
+button, // Contact
 .rounded {
   border-radius: $base-border-radius;
 }
