@@ -2710,6 +2710,9 @@ button {
 .btn--huge {
   padding: 13px 18px; }
 
+input {
+  padding: 6px; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
