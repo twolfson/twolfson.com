@@ -3,7 +3,6 @@
     <form class="width8 float--left hard--left" method="POST" action="/contact">
       <fieldset>
         <% /* TODO: Pad text inputs and textareas */ %>
-        <% /* TODO: Vertical align inputs + textarea via flexbox */ %>
         <% /* TODO: Play with sizing of contact button */ %>
         <% /* TODO: Play with border widths */ %>
         <% /* TODO: Look at success state */ %>
@@ -13,6 +12,7 @@
           // If there was no submission attempt
           if (locals.emailStatus === undefined) {
         %>
+        <% /* TODO: We can over abstract this into .control-group but too brittle */ %>
         <div class="flexbox push--bottom">
           <div class="flexbox__item width2">
             <label for="name" class="text--right" required="required">Name:&nbsp;</label>
