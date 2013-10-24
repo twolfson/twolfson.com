@@ -63,6 +63,16 @@ $brand-color: inherit;
 
 // Setup for highlight-extensions
 $code-inline-spacing: 9px;
+$code-bg: #f8f8ff;
+
+// A little muted to reduce emphasis
+$aside-color: #525252; // TODO: Try out margin color?
+// A little lighter than code (sod inner blocks can be distinguished)
+$aside-bg: $code-bg;
+// A little darker than $code-bg
+$aside-margin-bg: #A4A0A2;
+$aside-inline-spacing: 9px;
+$aside-margin-width: 5px;
 
 // TODO: Verify <aside> is properly sized and maybe a little muted
 // TODO: It should definitely have a white bg with the | on the left

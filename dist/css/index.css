@@ -2784,6 +2784,34 @@ code {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   display: inline-block; }
 
+blockquote {
+  quotes: "" ""; }
+
+blockquote p:before {
+  content: ""; }
+
+blockquote p:after {
+  content: ""; }
+
+blockquote q:before {
+  content: "‘";
+  content: open-quote; }
+
+blockquote q:after {
+  content: "’";
+  content: close-quote; }
+
+blockquote {
+  text-indent: 0; }
+
+blockquote,
+.aside {
+  color: #525252;
+  background: ghostwhite;
+  border-left: 5px solid #a4a0a2;
+  padding-left: 9px;
+  padding-right: 9px; }
+
 a,
 .link,
 .link--underline {

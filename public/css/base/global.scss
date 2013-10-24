@@ -9,6 +9,32 @@ code {
   display: inline-block;
 }
 
+// Undo blockquote defaults, go with github style of asides
+blockquote {
+  quotes: "" ""; }
+  blockquote p:before {
+    content: ""; }
+  blockquote p:after {
+    content: ""; }
+  blockquote q:before {
+    content: "‘";
+    content: open-quote; }
+  blockquote q:after {
+    content: "’";
+    content: close-quote; }
+
+blockquote {
+  text-indent: 0; }
+
+blockquote,
+.aside {
+  color: $aside-color;
+  background: $code-bg;
+  border-left: $aside-margin-width solid $aside-margin-bg;
+  padding-left: $aside-inline-spacing;
+  padding-right: $aside-inline-spacing;
+}
+
 a,
 .link,
 .link--underline {

@@ -5,33 +5,33 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
-$code-color: #333;
-$code-bg: #f8f8ff;
-$code-comment-color: #998;
-$code-comment-style: italic;
-$code-keyword-color: #333;
-$code-keyword-weight: bold;
-$code-number-color: #099;
-$code-string-color: #d14;
-$code-title-color: #900;
-$code-title-weight: bold;
-$code-title-js-weight: normal;
-$code-class-title-color: #458;
-$code-class-title-weight: bold;
-$code-tag-color: #000080;
-$code-tag-weight: normal;
-$code-attribute-color: #008080;
-$code-regexp-color: #009926;
-$code-class-color: #458;
-$code-class-weight: bold;
-$code-symbol-color: #990073;
-$code-built-in-color: #0086b3;
-$code-preprocessor-color: #999;
-$code-font-weight: bold;
-$code-deletion-bg: #fdd;
-$code-addition-bg: #dfd;
-$code-diff-change-bg: #0086b3;
-$code-chunk-color: #aaa;
+$code-color: #333!default;
+$code-bg: #f8f8ff!default;
+$code-comment-color: #998!default;
+$code-comment-style: italic!default;
+$code-keyword-color: #333!default;
+$code-keyword-weight: bold!default;
+$code-number-color: #099!default;
+$code-string-color: #d14!default;
+$code-title-color: #900!default;
+$code-title-weight: bold!default;
+$code-title-js-weight: normal!default;
+$code-class-title-color: #458!default;
+$code-class-title-weight: bold!default;
+$code-tag-color: #000080!default;
+$code-tag-weight: normal!default;
+$code-attribute-color: #008080!default;
+$code-regexp-color: #009926!default;
+$code-class-color: #458!default;
+$code-class-weight: bold!default;
+$code-symbol-color: #990073!default;
+$code-built-in-color: #0086b3!default;
+$code-preprocessor-color: #999!default;
+$code-font-weight: bold!default;
+$code-deletion-bg: #fdd!default;
+$code-addition-bg: #dfd!default;
+$code-diff-change-bg: #0086b3!default;
+$code-chunk-color: #aaa!default;
 
 pre code {
   display: block;
