@@ -2815,9 +2815,7 @@ blockquote,
 img,
 code,
 .round {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 a,
 .link,
@@ -2847,9 +2845,8 @@ button {
 #global-wrapper {
   margin: 0 auto;
   background: #b9cfff;
-  -webkit-box-shadow: compact(0 0 20px black, false, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(0 0 20px black, false, false, false, false, false, false, false, false);
-  box-shadow: compact(0 0 20px black, false, false, false, false, false, false, false, false); }
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black; }
 
 .row--bordered, .row--bordered--ends {
   border-color: #8882d5;

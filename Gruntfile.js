@@ -63,11 +63,10 @@ module.exports = function (grunt) {
       'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js'
     },
     'curl-dir': {
-      // SCSS mixins https://github.com/thoughtbot/bourbon/
+      // SCSS mixins
       'public/css/mixins': [
-        'https://raw.github.com/thoughtbot/bourbon/v2.1.0/app/assets/stylesheets/css3/_prefixer.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v2.1.0/app/assets/stylesheets/css3/_box-shadow.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v2.1.0/app/assets/stylesheets/css3/_border-radius.scss'
+        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
+        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss'
       ]
     },
     unzip: {

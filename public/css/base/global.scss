@@ -39,8 +39,9 @@ blockquote,
 img,
 code,
 .round {
+  // TODO: Cross-browser if we keep it
   // TODO: Variable me
-  @include border-radius(3px);
+  border-radius: 5px;
 }
 
 a,
