@@ -22,12 +22,20 @@
           </div>
         </div>
         <div class="cf push--bottom">
-          <label for="info" class="span2 flush--left text--right" required="required">Contact Info:&nbsp;</label>
-          <input id="info" name="info" type="text" class="row--dark row--bordered span5" />
+          <div class="flexbox__item width2">
+            <label for="info" class="text--right" required="required">Contact Info:&nbsp;</label>
+          </div>
+          <div class="flexbox__item width6">
+            <input id="info" name="info" type="text" class="row--dark row--bordered width5 hard--left" />
+          </div>
         </div>
-        <div class="cf push--bottom">
-          <label for="message" class="span2 flush--left text--right" required="required">Message:&nbsp;</label>
-          <textarea id="message" name="message" type="text" class="row--light row--bordered span5"></textarea>
+        <div class="flexbox push--bottom">
+          <div class="flexbox__item width2">
+            <label for="message" class="text--right" required="required">Message:&nbsp;</label>
+          </div>
+          <div class="flexbox__item width6">
+            <textarea id="message" name="message" type="text" class="row--light row--bordered width5 hard--left"></textarea>
+          </div>
         </div>
         <div class="text--center">
           <button type="submit" id="submitButton" class="row--light row--bordered btn--huge">Contact Todd</button>
