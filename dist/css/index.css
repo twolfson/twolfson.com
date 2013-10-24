@@ -2780,6 +2780,9 @@ body {
   background: url("/public/images/white_plaster.png");
   color: #1a1a1a; }
 
+code {
+  font-family: "PT Mono", Monaco, Menlo, Consolas, "Courier New", monospace; }
+
 a,
 .link,
 .link--underline {

@@ -3,6 +3,10 @@ body {
   color: $text-color;
 }
 
+code {
+  font-family: $mono-font-family;
+}
+
 a,
 .link,
 .link--underline {
