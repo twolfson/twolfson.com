@@ -5,6 +5,8 @@ body {
 
 code {
   font-family: $mono-font-family;
+  // Prevent orphaned sections of code
+  display: inline-block;
 }
 
 a,

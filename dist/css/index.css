@@ -2781,7 +2781,8 @@ body {
   color: #1a1a1a; }
 
 code {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  display: inline-block; }
 
 a,
 .link,
