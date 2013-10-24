@@ -35,6 +35,15 @@ blockquote,
   padding-right: $aside-inline-spacing;
 }
 
+// Round all the things
+img,
+code,
+.round {
+  // TODO: Cross-browser if we keep it
+  // TODO: Variable me
+  border-radius: 5px;
+}
+
 a,
 .link,
 .link--underline {
