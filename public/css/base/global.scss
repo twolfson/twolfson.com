@@ -38,10 +38,8 @@ blockquote,
 // Round all the things
 img,
 code,
-.round {
-  // TODO: Cross-browser if we keep it
-  // TODO: Variable me
-  border-radius: 5px;
+.rounded {
+  border-radius: $base-border-radius;
 }
 
 a,
