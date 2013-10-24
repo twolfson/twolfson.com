@@ -2710,7 +2710,8 @@ button {
 .btn--huge {
   padding: 13px 18px; }
 
-input {
+input,
+textarea {
   padding: 6px; }
 
 /*
