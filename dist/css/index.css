@@ -2814,6 +2814,8 @@ blockquote,
 
 img,
 code,
+input,
+button,
 .rounded {
   border-radius: 3px; }
 
