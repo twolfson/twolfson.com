@@ -73,6 +73,7 @@ articles.forEach(function (article) {
   var relatedItems = 0;
 
   // Find related articles
+  // TODO: Prevent any related article to include the active one
   var relatedArticleTitles = article.relatedArticles;
   if (relatedArticleTitles) {
     article.relatedArticles = relatedArticleTitles.map(function (title) {
