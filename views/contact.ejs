@@ -11,13 +11,13 @@
           // If there was no submission attempt
           if (locals.emailStatus === undefined) {
         %>
-        <% /* TODO: We can over abstract this into .control-group but too brittle */ %>
+        <% /* TODO: We can over abstract this into .control-group but too brittle (layout + layout) */ %>
         <div class="flexbox push--bottom">
           <div class="flexbox__item width2">
             <label for="name" class="text--right" required="required">Name:&nbsp;</label>
           </div>
           <div class="flexbox__item width6">
-            <% /* TODO: Get width-less widths */ %>
+            <% /* TODO*: Get width-less widths */ %>
             <input id="name" name="name" type="text" class="row--light row--bordered" value="test" style="width: 400px"/>
           </div>
         </div>
