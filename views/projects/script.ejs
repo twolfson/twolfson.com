@@ -1,26 +1,26 @@
-<div class="container__row soft-half--top soft-half--bottom">
-  <div class="span3">
+<div class="container__row flexbox soft-half--top soft-half--bottom">
+  <div class="flexbox__item width3">
     <h3 title="<%=name%>" class="delta flush--bottom">
       <a href="<%=pageUrl%>" target="_blank">
         <%= locals.truncatedName ? locals.truncatedName : name%>
       </a>
     </h3>
   </div>
-  <div class="span7 project-description">
+  <div class="flexbox__item width7 project-description">
     <%- description%>
   </div>
-  <div class="span1 project-stars">
-    <a href="<%=srcUrl%>" target="_blank" class="link--underline"
+  <div class="flexbox__item width1 project-stars">
+    <a href="<%=srcUrl%>" target="_blank" class="link--underline" style="position: relative; display: block;"
      ><span class="icon-purple-star" title="Stars"
        ><span class="accessibility">Stars</span></span>
-      <span><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span>
+      <span style="position: absolute; left: 32px; top: 0; line-height: 32px;"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span>
     </a>
   </div>
-  <div class="span1 project-forks">
+  <div class="flexbox__item width1 project-forks">
     <a href="<%=srcUrl%>" target="_blank" class="link--underline"
      ><span class="icon-purple-fork" title="Forks"
        ><span class="accessibility">Forks</span></span>
-      <span><%=forks%></span>
+      <span class="ignore-flow"><%=forks%></span>
     </a>
   </div>
 </div>
