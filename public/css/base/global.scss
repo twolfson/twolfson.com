@@ -9,6 +9,11 @@ code {
   display: inline-block;
 }
 
+img {
+  border: 2px solid $dark-border;
+  // TODO: If we keep this, add an update for the img borders in row--light/dark
+}
+
 // Undo blockquote defaults, go with github style of asides
 blockquote {
   quotes: "" ""; }
