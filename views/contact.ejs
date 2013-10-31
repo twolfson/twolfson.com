@@ -2,7 +2,8 @@
   <div class="container__row">
     <form class="width8 float--left hard--left" method="POST" action="/contact">
       <fieldset>
-        <!-- TODO: In Chrome 26, <legend> does not respect inner block elements -->
+        <% /* TODO: In Chrome 26, <legend> does not respect inner block elements */ %>
+        <% /* TODO: PhantomJS still seems to not be respecting it? */ %>
         <legend class="width8 gamma push--bottom"><h3 class="flush--bottom">Contact Details</h3></legend>
         <%
           // If there was no submission attempt
