@@ -1,4 +1,17 @@
 # twolfson.com changelog
+2.0.0 - Major redesign and refactor:
+
+- Upgraded from grunt@0.3 to grunt@0.4
+- Moved from LESS to SASS
+- Moved from Bootstrap to inuit.css
+- Moved from camelCase / hyphen-case CSS classes to BEM classes
+- Increased base font size to 18px
+- Updated hero font to Lato
+- Added grid preview via `?grid` on any URL when in dev
+- Updated project stats
+- Added activity section to homepage
+- Added related articles / projects section to articles
+
 1.26.1 - Fix for dev dependencies on `js-yaml`
 
 1.26.0 - Added SEO keywords and description for all pages and articles
