@@ -1,6 +1,5 @@
 {
   "title": "Why your client-side framework deserves a build chain",
-  "_title": "Why your client-side framework deserves a&hellip;",
   "author": "Todd Wolfson",
   "date": "2012/07/04",
   "keywords": "build chain, front end, mvc",

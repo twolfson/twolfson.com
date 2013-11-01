@@ -1,6 +1,5 @@
 {
   "title": "Hands-Free Refresh Anywhere - File Watcher et al.",
-  "_title": "Hands-Free Refresh Anywhere - File&hellip;",
   "author": "Todd Wolfson",
   "date": "2012/03/25",
   "keywords": "file watcher, live coding, hands free refresh",
