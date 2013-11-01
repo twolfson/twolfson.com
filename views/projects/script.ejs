@@ -9,14 +9,15 @@
   <div class="flexbox__item width7 project-description">
     <%- description%>
   </div>
-  <!-- TODO: Try floats inside of width1 -->
-  <div class="flexbox__item width2 hard--left">
-    <a href="<%=srcUrl%>" target="_blank" class="link--underline span1"
+  <div class="flexbox__item width1 project-stars">
+    <a href="<%=srcUrl%>" target="_blank" class="link--underline"
      ><span class="icon-purple-star" title="Stars"
        ><% /* <span class="accessibility">Stars</span> */ %></span>
       <span class="ignore-flow"><%=numscale({value: stars, maxLen: 4}).toLowerCase() %></span>
     </a>
-    <a href="<%=srcUrl%>" target="_blank" class="link--underline span1"
+  </div>
+  <div class="flexbox__item width1 project-forks">
+    <a href="<%=srcUrl%>" target="_blank" class="link--underline"
      ><span class="icon-purple-fork" title="Forks"
        ><% /* <span class="accessibility">Forks</span> */ %></span>
       <span class="ignore-flow"><%=forks%></span>
