@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.1.0 - Fixed up styles for contact page
+
 2.0.0 - Major redesign and refactor:
 
 - Upgraded from grunt@0.3 to grunt@0.4
