@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2012/03/25",
   "keywords": "css off",
-  "summary": "This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place."
+  "summary": "This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place.",
+  "relatedProjects": ["CSS Off"]
 }
 
 This is a partial continuation of my previous catch up post. I finally got my [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php) score; 61/100 points and 66th of 417 place.

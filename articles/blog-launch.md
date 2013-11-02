@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2012/02/21",
   "keywords": "first, blog post",
-  "summary": "This is my first blog post for twolfson.com!"
+  "summary": "This is my first blog post for twolfson.com!",
+  "relatedArticles": ["Catch up - CSS Off", "Catching up to date"]
 }
 
 This is my first blog post for twolfson.com! Hooray and thank you for reading it!

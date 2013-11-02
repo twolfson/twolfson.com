@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2012/07/04",
   "keywords": "build chain, front end, mvc",
-  "summary": "A screencast on my thoughts on client-side frameworks."
+  "summary": "A screencast on my thoughts on client-side frameworks.",
+  "relatedArticles": ["Builder - Build chain for your client side"]
 }
 
 I finally got around to making a screencast on my thoughts on client-side frameworks. This was a presentation I gave as a lightning talk in the past but took more time explaining this time.
