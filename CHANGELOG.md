@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.3.0 - Filled out related articles and projects
+
 2.2.2 - Accepting perceptual diffs
 
 2.2.1 - Tweak vertical alignment of header sprites again
