@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2012/09/09",
   "keywords": "bdd, pipe dreams, imagination",
-  "summary": "Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD."
+  "summary": "Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD.",
+  "relatedArticles": ["BDD and the Future"]
 }
 
 Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD. Also, I did make a point to mention these thoughts while at NodeConf SummerCamp 2012, so hopefully these thoughts will start spreading more prevalently.

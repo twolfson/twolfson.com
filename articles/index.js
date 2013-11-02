@@ -30,6 +30,8 @@ articles.forEach(function (article) {
   }
 });
 
+// TODO: Add hidden projects that can be linked to articles (e.g. doubleshot for bdd-and-the-future)
+
 // Calculate reading speed for each article
 // DEV: Wiki says 250 words per minute so this is very generous timing
 // DEV: Currently, this is 2 minutes for free will and 9 minutes for develop faster

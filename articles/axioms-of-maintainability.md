@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2013/07/11",
   "keywords": "maintainable code, maintainability, axiom, objective",
-  "summary": "Mathematical definitions and reasoning behind why abstracted code is maintainable code."
+  "summary": "Mathematical definitions and reasoning behind why abstracted code is maintainable code.",
+  "relatedArticles": ["Readability: Formalized"]
 }
 
 ## ax·i·om (noun)
