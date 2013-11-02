@@ -31,7 +31,7 @@ $gutter-width: $base-spacing-unit;
 .span12 {
   float: left;
   display: block;
-  @extend .push--left;
+  margin-left: $base-spacing-unit;
 }
 
 .width,
@@ -122,4 +122,10 @@ $gutter-width: $base-spacing-unit;
 }
 .width12 {
   @include column(12, 0);
+}
+
+// TODO: Apply to all .spanX.hard--left > .spanY (on the .spanX)
+.grid--nested {
+  margin-left: 0;
+  padding-left: 0;
 }
