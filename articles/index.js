@@ -72,6 +72,13 @@ articles.forEach(function (article) {
   // Count related items
   var relatedItems = 0;
 
+  // If we mistyped keys, warn yourself
+  Object.getOwnPropertyNames(article).forEach(function (key) {
+    if (key.match(/related/i) && !key.match(/^related(Articles|Projects)$/)) {
+      console.warn('Article "' + article.name + '" has property "' + key + '" (not `relatedArticles`, `relatedProjects`)');
+    }
+  });
+
   // Find related articles
   // TODO: Prevent any related article to include the active one
   var relatedArticleTitles = article.relatedArticles;
