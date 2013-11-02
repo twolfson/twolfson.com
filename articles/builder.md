@@ -4,7 +4,7 @@
   "date": "Mon Mar 11 2013 02:00:00",
   "keywords": " builder, front end, client side, build chain",
   "summary": "Another overdue introduction -- This time to [Builder](https://github.com/Ensighten/Builder), a framework for automating common client-side steps.",
-  "_relProjects": ["Halo"]
+  "relatedArticles": ["Halo - A modular MVC"]
 }
 
 [Builder][Builder] is a framework for automating common steps performed when rendering content on your client side.

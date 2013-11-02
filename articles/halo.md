@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2013/03/17",
   "keywords": "halo, mvc, front end",
-  "summary": "An introduction to [Halo](https://github.com/Ensighten/Halo): its good, bad, and ugly parts."
+  "summary": "An introduction to [Halo](https://github.com/Ensighten/Halo): its good, bad, and ugly parts.",
+  "relatedArticles": ["Builder - Build chain for your client side", "Why your client-side framework deserves a build chain"]
 }
 
 [Halo][Halo] is a client-side MVC framework based on [Addy Osmani's talks][addy-talks] about [Aura][aura]. The goal was to build a modular UI. We did this and took it to a bit of an extreme.

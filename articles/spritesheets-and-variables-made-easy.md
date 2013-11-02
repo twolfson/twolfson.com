@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2013/03/11",
   "keywords": "spritesheets, spritesmith, variables, scss, sass, stylus, less, css, json",
-  "summary": "A long overdue introduction to [Spritesmith](https://github.com/Ensighten/grunt-spritesmith) and its [components](https://github.com/Ensighten/grunt-spritesmith#contributing)."
+  "summary": "A long overdue introduction to [Spritesmith](https://github.com/Ensighten/grunt-spritesmith) and its [components](https://github.com/Ensighten/grunt-spritesmith#contributing).",
+  "relatedProjects": ["spritesmith"]
 }
 
 [grunt-spritesmith][grunt-spritesmith] is a grunt plugin takes in paths to sprites and outputs a spritesheet and CSS pre-processor variables.

@@ -3,8 +3,8 @@
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 02:00:00",
   "keywords": "life view, self, perception, philosophy",
-  "relatedArticles": ["Life view: Free Will"],
-  "summary": "Personal viewpoint on how the self is shaped."
+  "summary": "Personal viewpoint on how the self is shaped.",
+  "relatedArticles": ["Why I open source", "Life view: Free Will"]
 }
 
 I believe that people are shaped based on the circumstances they are born into and the experiences they encounter.

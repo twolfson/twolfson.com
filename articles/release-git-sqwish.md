@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 00:00:00",
   "keywords": "git squash, git sqwish, rebase, merge conflict, rerere",
-  "summary": "git squash without repetitive conflicts."
+  "summary": "git squash without repetitive conflicts.",
+  "relatedArticles": ["Develop faster"]
 }
 
 Introducing [git-sqwish][], a `git squash` without repetitive merge conflicts.

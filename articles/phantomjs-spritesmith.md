@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "Mon Apr 22 2013 01:00:00",
   "keywords": "phantomjs, spritesmith",
-  "summary": "A [phantomjs](http://phantomjs.org/) engine is now available for [spritesmith](https://github.com/Ensighten/spritesmith/), making the cross-platform barrier to entry super-low."
+  "summary": "A [phantomjs](http://phantomjs.org/) engine is now available for [spritesmith](https://github.com/Ensighten/spritesmith/), making the cross-platform barrier to entry super-low.",
+  "relatedProjects": ["spritesmith"]
 }
 
 A [phantomjs][phantomjs] engine is now available for [spritesmith][spritesmith], making the cross-platform barrier to entry super-low.
