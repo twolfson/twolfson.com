@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2013/09/08",
   "keywords": "line length, typography, code, editor",
-  "summary": "Experimenting with relative typographic line length limits applied to code."
+  "summary": "Experimenting with relative typographic line length limits applied to code.",
+  "relatedArticles": ["Bringing vertical rhythm to code"]
 }
 
 In typography, there is the notion of an optimal line length; an ideal amount of characters per line to make a section of text easier/faster to read.
