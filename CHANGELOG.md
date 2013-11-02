@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.2.0 - Fixed up vertical alignment of header sprites
+
 2.1.0 - Fixed up styles for contact page
 
 2.0.0 - Major redesign and refactor:
