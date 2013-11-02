@@ -69,8 +69,8 @@ var TOP_ARTICLES = [
 ];
 TOP_ARTICLES.forEach(assert);
 articles.forEach(function (article) {
-  // Count related items
-  var relatedItems = 0;
+  // Collect related items
+  var relatedItems = [];
 
   // If we mistyped keys, warn yourself
   Object.getOwnPropertyNames(article).forEach(function (key) {
@@ -83,39 +83,43 @@ articles.forEach(function (article) {
   // TODO: Prevent any related article to include the active one
   var relatedArticleTitles = article.relatedArticles;
   if (relatedArticleTitles) {
-    article.relatedArticles = relatedArticleTitles.map(function (title) {
+    var relatedArticles = relatedArticleTitles.map(function (title) {
       var relatedArticle = articleObj[title];
       assert(relatedArticle, 'Could not locate related article "' + title + '" for "' + article.title + '"');
       return relatedArticle;
     });
-    relatedItems += relatedArticleTitles.length;
+    article.relatedArticles = relatedArticles;
+    relatedItems.push.apply(relatedItems, relatedArticles);
   }
 
   // Find related projects
   var relatedProjectNames = article.relatedProjects;
   if (relatedProjectNames) {
-    article.relatedProjects = relatedProjectNames.map(function (name) {
+    var relatedProjects = relatedProjectNames.map(function (name) {
       var relatedProject = projectObj[name];
       assert(relatedProject, 'Could not locate related project "' + name + '" for "' + article.title + '"');
       return relatedProject;
     });
-    relatedItems += relatedProjectNames.length;
+    article.relatedProjects = relatedProjects;
+    relatedItems.push.apply(relatedItems, relatedProjects);
   }
 
   // If there are not enough related items, add features projects
-  if (relatedItems < 3) {
-    article.topArticles = TOP_ARTICLES.slice(0, 3 - relatedItems);
-    relatedItems += article.topArticles.length;
+  if (relatedItems.length < 3) {
+    var topArticles = TOP_ARTICLES.slice(0, 3 - relatedItems.length);
+    article.topArticles = topArticles;
+    relatedItems.push.apply(relatedItems, topArticles);
   }
 
   // If there are not enough related items, fill in recent articles
-  if (relatedItems < 3) {
-    article.recentArticles = articles.slice(0, 3 - relatedItems);
-    relatedItems += article.recentArticles.length;
+  if (relatedItems.length < 3) {
+    var recentArticles = articles.slice(0, 3 - relatedItems.length);
+    article.recentArticles = recentArticles;
+    relatedItems.push.apply(relatedItems, recentArticles);
   }
 
   // Assert as a safeguard for articles
-  assert.strictEqual(relatedItems, 3, 'Related items is not at 3 for "' + article.title + '"');
+  assert.strictEqual(relatedItems.length, 3, 'Related items is not at 3 for "' + article.title + '"');
 });
 
 // Expose the articles

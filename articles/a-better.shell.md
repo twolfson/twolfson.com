@@ -4,8 +4,7 @@
   "date": "2013/07/06",
   "keywords": "bash, zsh, shell",
   "summary": "Thoughts on taking steps to make a better shell.",
-  "related": ["Sexy bash prompt"],
-  "relatedProjects": ["Sexy bash prompt"]
+  "relatedArticles": ["Sexy bash prompt"]
 }
 
 A coworker sent me a [harmless tweet][kr-tweet] about using [zsh][zsh] over [bash][bash]. This got me thinking about how "good" these shells are.
