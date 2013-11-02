@@ -2,7 +2,7 @@
   "name": "twolfson.com",
   "description": "twolfson.com server",
   "author": "Todd Wolfson <todd@twolfson.com>",
-  "version": "2.2.20",
+  "version": "2.2.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
