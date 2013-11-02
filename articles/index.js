@@ -106,14 +106,18 @@ articles.forEach(function (article) {
 
   // If there are not enough related items, add features projects
   if (relatedItems.length < 3) {
-    var topArticles = TOP_ARTICLES.slice(0, 3 - relatedItems.length);
+    var topArticles = TOP_ARTICLES.filter(function (article) {
+      return relatedItems.indexOf(article) === -1;
+    }).slice(0, 3 - relatedItems.length);
     article.topArticles = topArticles;
     relatedItems.push.apply(relatedItems, topArticles);
   }
 
   // If there are not enough related items, fill in recent articles
   if (relatedItems.length < 3) {
-    var recentArticles = articles.slice(0, 3 - relatedItems.length);
+    var recentArticles = articles.filter(function (article) {
+      return relatedItems.indexOf(article) === -1;
+    }).slice(0, 3 - relatedItems.length);
     article.recentArticles = recentArticles;
     relatedItems.push.apply(relatedItems, recentArticles);
   }
