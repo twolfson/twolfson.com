@@ -59,7 +59,7 @@ articles.forEach(function (article) {
   }
 });
 
-// TODO-SOON: Add hidden projects that can be linked to articles (e.g. doubleshot for bdd-and-the-future)
+// TODO: Add hidden projects that can be linked to articles (e.g. doubleshot for bdd-and-the-future)
 
 // Calculate reading speed for each article
 // DEV: Wiki says 250 words per minute so this is very generous timing
