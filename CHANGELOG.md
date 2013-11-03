@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.5.1 - Fixed grunt dependency
+
 2.5.0 - Linkified "Todd Wolfson" to point to `/`
 
 2.4.0 - Added reading time to RSS
