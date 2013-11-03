@@ -2636,7 +2636,8 @@ a,
   color: #4f46c4;
   text-decoration: underline; }
 
-.link--underline:hover {
+.link--underline:hover,
+.link--underline:hover .ignore-flow {
   text-decoration: none;
   border-bottom: 1px solid #4f46c4; }
 

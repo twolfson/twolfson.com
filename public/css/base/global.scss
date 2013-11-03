@@ -72,8 +72,11 @@ a,
 
 // TODO: Test this style further
 .link--underline:hover {
-  text-decoration: none;
-  border-bottom: 1px solid $link-hover-color;
+  &,
+  .ignore-flow {
+    text-decoration: none;
+    border-bottom: 1px solid $link-hover-color;
+  }
 }
 
 .link--hidden {
