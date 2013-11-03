@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.8.0 - Added "Website redesigned and refactored" article
+
 2.7.1 - Upcast markdown headers to proper levels. Downcast header interpretation to go down one level
 
 2.7.0 - Removed underlining of stars and forks from projects page due to broken visuals
