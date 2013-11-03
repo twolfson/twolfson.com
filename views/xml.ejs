@@ -27,7 +27,7 @@
     <author>
       <name><%=config.author%></name>
     </author>
-    <summary type="html"><%=article.summary%></summary>
+    <summary type="html"><%=article.summary%><%= '<p><a href="' + article.url + '">Reading time: ' + article.readingTime + ' ' + (article.readingTime === 1 ? 'minute' : 'minutes') + '</a></p>' %></summary>
   </entry>
 <%
   });
