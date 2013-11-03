@@ -6,7 +6,7 @@
   "summary": "Major refresh to website CSS and backend"
 }
 
-Visual and backend touchups to [twolfson.com][] have been a long time coming. However, over the last couple of weeks, I took the initiative to move to a website I would be proud of.
+Visual and backend touchups for [twolfson.com][] have been a long time coming. However, over the last couple of weeks, I took the initiative to move to a website I would be proud of.
 
 [twolfson.com]: /
 
@@ -31,7 +31,7 @@ Inside of this refactor:
 [routes configuration]: https://github.com/twolfson/twolfson.com/tree/5738a2943023daa371800b15227ad38c55fa43d6/lib
 [SEO]: http://en.wikipedia.org/wiki/Search_engine_optimization
 
-The outcome is something I am much more happy to work on and maintain
+The outcome is something I am much more happy to work on and maintain.
 
 [![Before and after screenshot][before_after_thumb]][before_after_scaled]
 
