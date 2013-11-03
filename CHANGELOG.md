@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.10.0 - Added "How to linkify Markdown headers" article
+
 2.9.0 - Expanded highlight.js and added alias for `javascript` language as `js`
 
 2.8.0 - Added "Website redesigned and refactored" article
