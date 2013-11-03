@@ -44,7 +44,7 @@ Eventually, I wanted to display when commits have not been pushed. From this, th
 
 From this, I had some experiments with displaying more information but they fizzled (e.g. trailing slashes to show how many commits were unpushed).
 
-```
+```no-highlight
 ▵ = ahead by 1
 ▵\ = ahead by 2
 ▵\\ = ahead by 3

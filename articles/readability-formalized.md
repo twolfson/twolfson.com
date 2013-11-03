@@ -115,31 +115,31 @@ if (fruit.ripe) {
 
 Let `A` be a *sequence* containing code blocks with no identation. Let `a` be the *pattern set* of `A`. By definition,
 
-```
+```no-highlight
 a = {n_1·v_1, ..., n_m·v_m}, n_i = non-negative intenger, v_i = pattern
 ```
 
 Let `c` represent a *pattern* of indented code blocks. Let `B` be the indented version of `A` and `b` be its the *pattern set*. By construction,
 
-```
+```no-highlight
 b = {n_1·v_1, ..., n_m·v_m, n_c·c}
 ```
 
 The *readability* of `a` is
 
-```
+```no-highlight
 a = n_1 + ... + n_m
 ```
 
 and the *readability* of `b` is
 
-```
+```no-highlight
 b = n_1 + ... + n_m + n_c
 ```
 
 By transitivity of equality,
 
-```
+```no-highlight
 b - n_c = n_1 + ... + n_m
 b - n_c = a
 b = a + n_c
@@ -147,7 +147,7 @@ b = a + n_c
 
 By transitivity of inequality,
 
-```
+```no-highlight
 a + n_c > a
 b > a
 ```

@@ -17,7 +17,7 @@ domready(function () {
     _gaq.push(['_trackEvent', 'Link click', this.href || ('Unknown from: ' + window.location.href)]);
   });
 
-  // Alias `javascript` as `js
+  // Alias languages to their shorthands
   hljs.LANGUAGES.js = hljs.LANGUAGES.javascript;
 
   // Grab all <code>'s on the page and iterate them

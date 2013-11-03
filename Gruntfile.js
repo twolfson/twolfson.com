@@ -61,6 +61,8 @@ module.exports = function (grunt) {
       // Development dependencies
       'public/js/960gridder/960.gridder.js': 'https://raw.github.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
       'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js'
+
+      // bash, js, yaml, python, markdown, html, css, yml?, ruby, php
     },
     'curl-dir': {
       // SCSS mixins

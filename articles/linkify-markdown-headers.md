@@ -10,7 +10,7 @@ In GitHub, Markdown headers are automatically linked. To achieve the same effect
 
 [marked]: https://github.com/chjj/marked
 
-```javascript
+```js
 // Modify marked's tokenizer to wrap header text in an `<a>`
 var _tok = marked.Parser.prototype.tok;
 marked.Parser.prototype.tok = function () {
@@ -39,7 +39,7 @@ marked.Parser.prototype.tok = function () {
 
 The end result is:
 
-```javascript
+```js
 marked.parse('# Hello World');
 /*
 <h1 id="hello-world">

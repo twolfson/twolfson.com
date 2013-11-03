@@ -53,7 +53,7 @@ end
 
 Then, it was a series of thoughtful trial and error to get to the same error message. The important steps for me were:
 
-```python
+```bash
 # Install xvfb and libgtk2.0-0
 sudo apt-get install xvfb
 sudo apt-get install libgtk2.0-0

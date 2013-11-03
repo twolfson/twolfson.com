@@ -182,7 +182,7 @@ A strawberry:
 
 Proprietary line-delimited markup
 
-```
+```no-highlight
 A strawberry
   when washed
     is red

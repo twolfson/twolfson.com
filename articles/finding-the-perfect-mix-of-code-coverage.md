@@ -103,7 +103,7 @@ There are loose ends like detecting extensions of other libraries (e.g. [EventEm
 ## Overtesting parameters
 It is possible to overtest with API coverage. If we have a function like `sum(numA, numB);`, the expected inputs would be two `Number`s. We can test unexpected inputs but these also should be given a low weight.
 
-```
+```js
 // Average use case
 sum(2, 3);
 
