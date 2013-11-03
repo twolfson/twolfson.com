@@ -65,7 +65,7 @@ module.exports = function (grunt) {
             'csrfmiddlewaretoken': 'SameAsCookie',
 
             // See form on http://highlightjs.org/download/
-            // TODO: Code up yamlish, alias to yaml/yml
+            // TODO: Code up yamlish, alias to yaml
             // '1c.js': 'on',
             // 'actionscript.js': 'on',
             // 'apache.js': 'on',
@@ -142,18 +142,6 @@ module.exports = function (grunt) {
       // Development dependencies
       'public/js/960gridder/960.gridder.js': 'https://raw.github.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
       'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js'
-
-      // bash
-      // css
-      // html -> xml
-      // js
-      // markdown -> md?
-      // php
-      // python
-      // ruby
-      // yaml
-      // yml?
-      // TODO: yamlish
     },
     'curl-dir': {
       // SCSS mixins
@@ -222,7 +210,7 @@ module.exports = function (grunt) {
   });
 
   // Register dependency tasks
-  grunt.registerTask('install', ['curl', 'unzip', 'copy', 'html-prettyprinter']);
+  grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
 
   // Register css and js tasks
   grunt.registerTask('lint', ['jshint']);

@@ -20,7 +20,7 @@ From there, and reading enough articles about [PhantomJS][], I knew that I neede
 
 [PhantomJS]: http://phantomjs.org/
 
-```yml
+```yaml
 # Inside of .travis.yml
 before_script:
   - export DISPLAY=:99.0
