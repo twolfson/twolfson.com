@@ -4,6 +4,28 @@ var assert = require('assert'),
     jojo = require('jojo'),
     marked = require('marked');
 
+// Modify marked's tokenizer to wrap header text in an `<a>`
+var _tok = marked.Parser.prototype.tok;
+marked.Parser.prototype.tok = function () {
+  // If we are in a heading, return our customized heading parser
+  // https://github.com/chjj/marked/blob/ab84e8c6055b020f29134b93c86a9ae2ce955706/lib/marked.js#L845-L855
+  if (this.token.type === 'heading') {
+   return '<h'
+          + this.token.depth
+          + ' id="'
+          + this.options.headerPrefix
+          + this.token.text.toLowerCase().replace(/[^\w]+/g, '-')
+          + '">'
+          + this.inline.output(this.token.text)
+          + '</h'
+          + this.token.depth
+          + '>\n';
+  }
+
+  // Otherwise, run the normal function
+  return _tok.apply(this, arguments);
+};
+
 // Create a jojo middleware (and only use it to get articles from)
 var articles = jojo({
   formatter: function (md) {
