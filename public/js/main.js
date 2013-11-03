@@ -31,7 +31,10 @@ domready(function () {
 
   // Listen for click events on article headers
   function anchorToHeader(e) {
-    console.log('hey');
+    var id = this.id;
+    if (id) {
+      console.log(id);
+    }
   }
   Gator(document).on('click', '#article__content h1', anchorToHeader);
   Gator(document).on('click', '#article__content h2', anchorToHeader);
