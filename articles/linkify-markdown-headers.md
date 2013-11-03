@@ -6,7 +6,7 @@
   "summary": "Add links to your Markdown headers"
 }
 
-In GitHub, Markdown headers are automatically linked. To acheieve the same affect with the [marked][] node module, you need to override part of the lexer.
+In GitHub, Markdown headers are automatically linked. To achieve the same effect with the [marked][] node module, you need to override part of the lexer.
 
 [marked]: https://github.com/chjj/marked
 
