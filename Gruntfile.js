@@ -169,6 +169,11 @@ module.exports = function (grunt) {
       // Highlight.js's css
       'public/css/base/highlight.scss': 'tmp/highlight/styles/github.css'
     },
+    // DEV: Technically, this is beautifying JS but all the other plugins would overwrite the same file =_=
+    'html-prettyprinter': {
+      // Highlight.js's js
+      'public/js/highlight.js': 'tmp/highlight/highlight.pack.js'
+    },
     watch: {
       css: {
         files: 'public/css/**/*.scss',
@@ -182,14 +187,15 @@ module.exports = function (grunt) {
   });
 
   // Load in grunt dependencies
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-html-prettyprinter');
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
-  grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-zip');
-  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Create a grunt task to update projects
   grunt.registerTask('projects', 'Download projects info', function () {
