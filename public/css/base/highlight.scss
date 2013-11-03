@@ -1,51 +1,21 @@
 /*
 
-https://github.com/isagalaev/highlight.js/blob/7.3/src/styles/github.css
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
-$code-color: #333!default;
-$code-bg: #f8f8ff!default;
-$code-comment-color: #998!default;
-$code-comment-style: italic!default;
-$code-keyword-color: #333!default;
-$code-keyword-weight: bold!default;
-$code-number-color: #099!default;
-$code-string-color: #d14!default;
-$code-title-color: #900!default;
-$code-title-weight: bold!default;
-$code-title-js-weight: normal!default;
-$code-class-title-color: #458!default;
-$code-class-title-weight: bold!default;
-$code-tag-color: #000080!default;
-$code-tag-weight: normal!default;
-$code-attribute-color: #008080!default;
-$code-regexp-color: #009926!default;
-$code-class-color: #458!default;
-$code-class-weight: bold!default;
-$code-symbol-color: #990073!default;
-$code-built-in-color: #0086b3!default;
-$code-preprocessor-color: #999!default;
-$code-font-weight: bold!default;
-$code-deletion-bg: #fdd!default;
-$code-addition-bg: #dfd!default;
-$code-diff-change-bg: #0086b3!default;
-$code-chunk-color: #aaa!default;
-
 pre code {
-  display: block;
-  padding: 0.5em;
-  color: $code-color;
-  background: $code-bg;
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff
 }
 
 pre .comment,
 pre .template_comment,
 pre .diff .header,
 pre .javadoc {
-  color: $code-comment-color;
-  font-style: $code-comment-style;
+  color: #998;
+  font-style: italic
 }
 
 pre .keyword,
@@ -56,65 +26,67 @@ pre .nginx .title,
 pre .subst,
 pre .request,
 pre .status {
-  color: $code-keyword-color;
-  font-weight: $code-keyword-weight;
+  color: #333;
+  font-weight: bold
 }
 
 pre .number,
 pre .hexcolor,
 pre .ruby .constant {
-  color: $code-number-color;
+  color: #099;
 }
 
 pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula {
-  color: $code-string-color;
+  color: #d14
 }
 
 pre .title,
-pre .id {
-  color: $code-title-color;
-  font-weight: $code-title-weight;
+pre .id,
+pre .coffeescript .params,
+pre .scss .preprocessor {
+  color: #900;
+  font-weight: bold
 }
 
 pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
 pre .subst {
-  font-weight: $code-title-js-weight;
+  font-weight: normal
 }
 
 pre .class .title,
 pre .haskell .type,
 pre .vhdl .literal,
 pre .tex .command {
-  color: $code-class-title-color;
-  font-weight: $code-class-title-weight;
+  color: #458;
+  font-weight: bold
 }
 
 pre .tag,
 pre .tag .title,
 pre .rules .property,
 pre .django .tag .keyword {
-  color: $code-tag-color;
-  font-weight: $code-tag-weight;
+  color: #000080;
+  font-weight: normal
 }
 
 pre .attribute,
 pre .variable,
 pre .lisp .body {
-  color: $code-attribute-color;
+  color: #008080
 }
 
 pre .regexp {
-  color: $code-regexp-color;
+  color: #009926
 }
 
 pre .class {
-  color: $code-class-color;
-  font-weight: $code-class-weight;
+  color: #458;
+  font-weight: bold
 }
 
 pre .symbol,
@@ -122,13 +94,13 @@ pre .ruby .symbol .string,
 pre .lisp .keyword,
 pre .tex .special,
 pre .prompt {
-  color: $code-symbol-color;
+  color: #990073
 }
 
 pre .built_in,
 pre .lisp .title,
 pre .clojure .built_in {
-  color: $code-built-in-color;
+  color: #0086b3
 }
 
 pre .preprocessor,
@@ -136,22 +108,22 @@ pre .pi,
 pre .doctype,
 pre .shebang,
 pre .cdata {
-  color: $code-preprocessor-color;
-  font-weight: $code-font-weight;
+  color: #999;
+  font-weight: bold
 }
 
 pre .deletion {
-  background: $code-deletion-bg;
+  background: #fdd
 }
 
 pre .addition {
-  background: $code-addition-bg;
+  background: #dfd
 }
 
 pre .diff .change {
-  background: $code-diff-change-bg;
+  background: #0086b3
 }
 
 pre .chunk {
-  color: $code-chunk-color;
+  color: #aaa
 }
