@@ -171,10 +171,19 @@ textarea {
 // Consistently style all <hr>s
 // DEV: Copy/pasted from inuit/_rules.scss
 hr {
-    color: $base-ui-color;
-    border: none;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    margin-bottom: $base-spacing-unit - 1px;
-    margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
+  color: $base-ui-color;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: $base-spacing-unit - 1px;
+  margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
+}
+
+.text--normal {
+  &,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
 }

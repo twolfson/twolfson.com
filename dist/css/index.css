@@ -2710,6 +2710,10 @@ hr {
   margin-bottom: 26px;
   margin-bottom: 1.44444rem; }
 
+.text--normal, .text--normal:visited, .text--normal:hover {
+  text-decoration: none;
+  color: #1a1a1a; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
