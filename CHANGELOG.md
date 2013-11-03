@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.7.0 - Removed underlining of stars and forks from projects page due to broken visuals
+
 2.6.0 - Added links to each blog header
 
 2.5.1 - Fixed grunt dependency
