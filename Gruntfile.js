@@ -65,7 +65,6 @@ module.exports = function (grunt) {
             'csrfmiddlewaretoken': 'SameAsCookie',
 
             // See form on http://highlightjs.org/download/
-            // TODO: Code up yamlish, alias to yaml
             // '1c.js': 'on',
             // 'actionscript.js': 'on',
             // 'apache.js': 'on',
@@ -112,7 +111,8 @@ module.exports = function (grunt) {
             // 'perl.js': 'on',
             'php.js': 'on',
             // 'profile.js': 'on',
-            'python.js': 'on',
+            // TODO: YAML should be its own language but there is no highlighter...
+            'python.js': 'on', // alias: yaml
             // 'r.js': 'on',
             // 'rib.js': 'on',
             // 'rsl.js': 'on',
