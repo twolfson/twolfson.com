@@ -3,14 +3,14 @@ hljs.LANGUAGES.yaml = function (hljs) {
   return {
     contains: [
       // https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js
+      hljs.HASH_COMMENT_MODE,
       hljs.APOS_STRING_MODE,
-      hljs.QUOTE_STRING_MODE,
-      hljs.HASH_COMMENT_MODE
+      hljs.QUOTE_STRING_MODE
     ],
     keywords: {
       literal: 'true false'
     },
-    illegal: ''
+    illegal: /(<\/|->|\?)/
   };
 }(hljs);
 
