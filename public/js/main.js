@@ -28,4 +28,15 @@ domready(function () {
       hljs.highlightBlock(code);
     }
   }
+
+  // Listen for click events on article headers
+  function anchorToHeader(e) {
+    console.log('hey');
+  }
+  Gator(document).on('click', '#article__content h1', anchorToHeader);
+  Gator(document).on('click', '#article__content h2', anchorToHeader);
+  Gator(document).on('click', '#article__content h3', anchorToHeader);
+  Gator(document).on('click', '#article__content h4', anchorToHeader);
+  Gator(document).on('click', '#article__content h5', anchorToHeader);
+  Gator(document).on('click', '#article__content h6', anchorToHeader);
 });
