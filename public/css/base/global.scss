@@ -70,10 +70,8 @@ a,
   text-decoration: underline;
 }
 
-// TODO: Test this style further
 .link--underline:hover {
-  &,
-  .ignore-flow {
+  & {
     text-decoration: none;
     border-bottom: 1px solid $link-hover-color;
   }
