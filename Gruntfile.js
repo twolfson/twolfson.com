@@ -157,7 +157,17 @@ module.exports = function (grunt) {
         router: function (filepath) {
           return filepath.replace('inuit.css-5.0.0/', '');
         }
+      },
+
+      // Highlight.js
+      highlight: {
+        src: 'tmp/highlight.zip',
+        dest: 'tmp/highlight'
       }
+    },
+    copy: {
+      // Highlight.js's css
+      'public/css/base/highlight.scss': 'tmp/highlight/styles/github.css'
     },
     watch: {
       css: {
@@ -179,6 +189,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-zip');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Create a grunt task to update projects
   grunt.registerTask('projects', 'Download projects info', function () {
@@ -189,7 +200,7 @@ module.exports = function (grunt) {
   });
 
   // Register dependency tasks
-  grunt.registerTask('install', ['curl', 'unzip']);
+  grunt.registerTask('install', ['curl', 'unzip', 'copy']);
 
   // Register css and js tasks
   grunt.registerTask('lint', ['jshint']);
