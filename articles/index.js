@@ -10,13 +10,15 @@ marked.Parser.prototype.tok = function () {
   // If we are in a heading, return our customized heading parser
   // https://github.com/chjj/marked/blob/ab84e8c6055b020f29134b93c86a9ae2ce955706/lib/marked.js#L845-L855
   if (this.token.type === 'heading') {
-   return '<h'
+    var slug = this.token.text.toLowerCase().replace(/[^\w]+/g, '-');
+    return '<h'
           + this.token.depth
           + ' id="'
-          + this.options.headerPrefix
-          + this.token.text.toLowerCase().replace(/[^\w]+/g, '-')
+          + slug
           + '">'
+          + '<a href="#' + slug + '" class="link--hover-only">'
           + this.inline.output(this.token.text)
+          + '</a>'
           + '</h'
           + this.token.depth
           + '>\n';

@@ -45,6 +45,10 @@ textarea, // Contact
   border-radius: $base-border-radius;
 }
 
+.text--normal {
+  color: $text-color;
+}
+
 a,
 .link,
 .link--underline {
@@ -70,6 +74,27 @@ a,
 .link--underline:hover {
   text-decoration: none;
   border-bottom: 1px solid $link-hover-color;
+}
+
+.link--hidden {
+  &,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    @extend .text--normal;
+  }
+}
+
+.link--hover-only {
+  &,
+  &:visited {
+    text-decoration: none;
+    @extend .text--normal;
+  }
+
+  &:hover {
+    @extend .link--active;
+  }
 }
 
 button {
@@ -177,13 +202,4 @@ hr {
   border-bottom-style: solid;
   margin-bottom: $base-spacing-unit - 1px;
   margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
-}
-
-.text--normal {
-  &,
-  &:visited,
-  &:hover {
-    text-decoration: none;
-    color: $text-color;
-  }
 }

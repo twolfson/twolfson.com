@@ -2615,6 +2615,9 @@ textarea,
 .rounded {
   border-radius: 3px; }
 
+.text--normal, .link--hidden, .link--hidden:visited, .link--hidden:hover, .link--hover-only, .link--hover-only:visited {
+  color: #1a1a1a; }
+
 a,
 .link,
 .link--underline {
@@ -2629,13 +2632,19 @@ a,
 
 .link--active, a:hover,
 .link:hover,
-.link--underline:hover {
+.link--underline:hover, .link--hover-only:hover {
   color: #4f46c4;
   text-decoration: underline; }
 
 .link--underline:hover {
   text-decoration: none;
   border-bottom: 1px solid #4f46c4; }
+
+.link--hidden, .link--hidden:visited, .link--hidden:hover {
+  text-decoration: none; }
+
+.link--hover-only, .link--hover-only:visited {
+  text-decoration: none; }
 
 button {
   cursor: pointer; }
@@ -2709,10 +2718,6 @@ hr {
   border-bottom-style: solid;
   margin-bottom: 26px;
   margin-bottom: 1.44444rem; }
-
-.text--normal, .text--normal:visited, .text--normal:hover {
-  text-decoration: none;
-  color: #1a1a1a; }
 
 /*
 Sticky Footer Solution
