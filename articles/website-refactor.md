@@ -16,7 +16,7 @@ Inside of this refactor:
 - Moved from [LESS][] to [SASS][]
 - Moved from [Bootstrap][] to [inuit.css][]
 - Normalized all CSS classes to [BEM][] classes
-- Increased base font size to 18px for typographic readability
+- Increased base font size to `18px` for typographic readability
 - Added activity section to [homepage][]
 - Added related articles / projects section to each article
 - Re-arranged [routes configuration][]
