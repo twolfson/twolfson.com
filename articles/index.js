@@ -9,10 +9,7 @@ var articles = jojo({
   formatter: function (md) {
     return marked.parse(md, {langPrefix: ''});
   },
-  render: false,
-  author: 'Todd Wolfson',
-  title: 'Todd Wolfson - Javascript Developer',
-  url: 'http://twolfson.com/'
+  render: false
 }).articles;
 
 // Add a formatted date for each article
