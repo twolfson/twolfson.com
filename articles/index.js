@@ -27,6 +27,14 @@ articles.forEach(function (article) {
   }
 });
 
+// Add a title slug for each article
+articles.forEach(function (article) {
+  if (!article.titleSlug) {
+    // Grabbed from https://github.com/chjj/marked/blob/ab84e8c6055b020f29134b93c86a9ae2ce955706/lib/marked.js#L850
+    article.titleSlug = article.title.toLowerCase().replace(/[^\w]+/g, '-');
+  }
+});
+
 // TODO-SOON: Add hidden projects that can be linked to articles (e.g. doubleshot for bdd-and-the-future)
 
 // Calculate reading speed for each article
