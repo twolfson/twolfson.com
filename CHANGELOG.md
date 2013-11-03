@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.11.1 - Removed dead code in highlight-yaml
+
 2.11.0 - Fixed up all highlight files
 
 2.10.0 - Added "How to linkify Markdown headers" article
