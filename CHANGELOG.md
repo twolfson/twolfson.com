@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.9.0 - Expanded highlight.js and added alias for `javascript` language as `js`
+
 2.8.0 - Added "Website redesigned and refactored" article
 
 2.7.1 - Upcast markdown headers to proper levels. Downcast header interpretation to go down one level

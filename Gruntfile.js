@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
-        src: ['ready.js', 'highlight.pack.js', 'gator.js', 'gator-legacy.js', 'main.js'],
+        src: ['ready.js', 'highlight.js', 'gator.js', 'gator-legacy.js', 'main.js'],
         dest: '../../dist/js/index.js',
         destMap: '../../dist/js/index.js.map'
       },
