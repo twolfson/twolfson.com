@@ -167,12 +167,15 @@ module.exports = function (grunt) {
     },
     copy: {
       // Highlight.js's css
-      'public/css/base/highlight.scss': 'tmp/highlight/styles/github.css'
-    },
-    // DEV: Technically, this is beautifying JS but all the other plugins would overwrite the same file =_=
-    'html-prettyprinter': {
-      // Highlight.js's js
+      'public/css/base/highlight.scss': 'tmp/highlight/styles/github.css',
+
+      // TODO: We are copying minified content which is being beautified in place. Stop doing this.
       'public/js/highlight.js': 'tmp/highlight/highlight.pack.js'
+    },
+    jsbeautifier: {
+      highlight: {
+        src: 'public/js/highlight.js'
+      }
     },
     watch: {
       css: {
@@ -192,7 +195,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
-  grunt.loadNpmTasks('grunt-html-prettyprinter');
+  grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-zip');
@@ -206,7 +209,7 @@ module.exports = function (grunt) {
   });
 
   // Register dependency tasks
-  grunt.registerTask('install', ['curl', 'unzip', 'copy']);
+  grunt.registerTask('install', ['curl', 'unzip', 'copy', 'html-prettyprinter']);
 
   // Register css and js tasks
   grunt.registerTask('lint', ['jshint']);
