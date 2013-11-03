@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
-        src: ['ready.js', 'highlight.js', 'highlight-yaml.js', 'gator.js', 'gator-legacy.js', 'main.js'],
+        src: ['ready.js', 'highlight.js', 'gator.js', 'gator-legacy.js', 'main.js'],
         dest: '../../dist/js/index.js',
         destMap: '../../dist/js/index.js.map'
       },
@@ -112,6 +112,8 @@ module.exports = function (grunt) {
             'php.js': 'on',
             // 'profile.js': 'on',
             // TODO: YAML should be its own language but there is no highlighter...
+            // Good reference: https://github.com/ajaxorg/ace/blob/master/lib/ace/mode/yaml_highlight_rules.js
+            // https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js
             'python.js': 'on', // alias: yaml
             // 'r.js': 'on',
             // 'rib.js': 'on',

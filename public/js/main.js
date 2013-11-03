@@ -20,6 +20,7 @@ domready(function () {
   // Alias languages to their shorthands
   hljs.LANGUAGES.js = hljs.LANGUAGES.javascript;
   hljs.LANGUAGES.html = hljs.LANGUAGES.xml;
+  hljs.LANGUAGES.yaml = hljs.LANGUAGES.python;
 
   // Grab all <code>'s on the page and iterate them
   var $codeArr = document.getElementsByTagName('code'),
