@@ -12,7 +12,7 @@ This article will define readability from an objective perspective using formal 
 [defn]: http://en.wikipedia.org/wiki/Definition
 [theorem]: http://en.wikipedia.org/wiki/Theorem
 
-## Abstract
+# Abstract
 Readability is the consistency of patterns (e.g. layout, sequence) in a file, project, organization, and programming language. Having common patterns allows sections (e.g. variable declarations) to be recognized and interpretted faster.
 
 ```no-highlight
@@ -41,7 +41,7 @@ This also supports my theory/experiment on [applying vertical rhythm to code][ve
 
 [vert-rhythm]: /2013-05-27-bringing-vertical-rhythm-to-code
 
-## Definitions
+# Definitions
 
 Sequence - Array of characters which can be as little as a letter or as much as multiple lines.
 
@@ -87,7 +87,7 @@ Readability - [Cardinality][] of a *pattern set*; sum of the times each *pattern
 
 [Cardinality]: http://en.wikipedia.org/wiki/Multiset#Multiplicity_function
 
-## Proofs
+# Proofs
 
 **Proposition 1.1**: A *sequence* with indented code blocks is more readable than when it is not indented.
 
@@ -289,7 +289,7 @@ function smithOutputCoordinates (cb) {
 ...
 ```
 
-## Take aways
+# Take aways
 The embrace of visual patterns in code can be expanded from a *file* to a *project* to an *organization* to a *style guide* to a *programming language*.
 
 Code is more than an interface from you to your interpreter/compiler. It has an intermediate layer between you and your editor where you must interpret what it displays.

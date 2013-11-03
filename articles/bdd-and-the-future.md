@@ -16,8 +16,8 @@ The presentation can be [found here][presentation] with the source code on [GitH
 [presentation]: http://twolfson.github.io/behavioral-driven-development-and-the-future-presentation/utahjs/index.html
 [source]: https://github.com/twolfson/behavioral-driven-development-and-the-future-presentation/
 
-## Experiments
-### Skeleton / Crossbones
+# Experiments
+## Skeleton / Crossbones
 GitHub: [https://github.com/Ensighten/crossbones][crossbones]
 
 For a while, I have been experimenting with BDD. At first, I wanted a cross-framework test runner from [vows][vows] to [mocha][mocha]. This was initially called [Skeleton][skeleton], later renamed to [Crossbones][crossbones] and was successfully implemented in the [Sauron][sauron] test suite.
@@ -70,7 +70,7 @@ suite.exportTo('Mocha');
 var runner = mocha.run();
 ```
 
-### Sculptor
+## Sculptor
 GitHub: [https://github.com/twolfson/sculptor][sculptor]
 
 A long while after [Crossbones][crossbones] and its ultimate neglect, I thought about writing a framework for cross-compiling test suites. The key reason here was to flatten test suites into TDD-compatible flavors for [testling][testling].
@@ -79,7 +79,7 @@ I began hacking on this and [got quite far][sculptor] (it works with wrapping [v
 
 [sculptor]: https://github.com/twolfson/sculptor
 
-### doubleshot
+## doubleshot
 GitHub: [https://github.com/twolfson/doubleshot][doubleshot]
 
 After considering [Sculptor][sculptor] as an over-engineered project in attempt to find a holy grail.

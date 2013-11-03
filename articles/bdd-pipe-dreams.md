@@ -106,11 +106,11 @@ These two files will compile during the testing to
 ```
 
 The beauty
-----------
+==========
 This separation allows for not only a proper separation of behavior and implementation but it also allows for language agnosticism as well as framework agnosticism. The test itself does not need to be rewritten -- only the atomic behaviors and assertions.
 
 Backstory and attribution
---------------------------------
+================================
 I have been thinking about how to make my JS tests framework agnostic for a while now. I boiled it down to writing a normal set of tests (in Vows format of course) and a facade for interactions. Then, that would hook up to a proper engine for the test framework I wanted -- e.g. Mocha, Testling, JSTestDriver.
 
 Additionally, while watching the [JS Conf 2012 talks](http://2012.jsconf.us/), I watched the one by [Jacob Thorton (@fat)](https://twitter.com/fat). There was a part in there that stuck to me -- [Mustache's tests](https://github.com/janl/mustache.js/tree/master/test/_files) uses input/output files. This means, you take test1.input, process it, and if it matches test1.output then the test passes.

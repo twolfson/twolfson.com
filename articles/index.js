@@ -12,7 +12,7 @@ marked.Parser.prototype.tok = function () {
   if (this.token.type === 'heading') {
     var slug = this.token.text.toLowerCase().replace(/[^\w]+/g, '-');
     return '<h'
-          + this.token.depth
+          + (this.token.depth + 1)
           + ' id="'
           + slug
           + '">'

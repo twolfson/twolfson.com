@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.7.1 - Upcast markdown headers to proper levels. Downcast header interpretation to go down one level
+
 2.7.0 - Removed underlining of stars and forks from projects page due to broken visuals
 
 2.6.0 - Added links to each blog header

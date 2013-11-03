@@ -51,7 +51,7 @@ $content.find('.datepicker'); // [<input class="datepicker">]
 [Halo]: https://github.com/Ensighten/Halo
 
 Usage
------
+=====
 From my perspective, client-side markup (HTML or otherwise), should encapsulate any and all interactive components. As a result, [Builder][Builder] was designed to handle anything you throw at it; from template rendering to plugin instantiation.
 
 There are 4 steps which Builder runs through:
@@ -70,7 +70,7 @@ Builder can be [tweaked to your liking][tweaks] and has [presets][presets] which
 [presets]: https://github.com/Ensighten/Builder#presets
 
 Origin
-------
+======
 [Builder][Builder] came out of a want to <abbr title="don't repeat yourself">DRY</abbr> up client side code. I saw the pattern and repetition present that the same template engine and jQuery plugins would be called over and over in different places.
 
 I attempted to resolve the issue at first via [Mason.js][mason.js]. This would act as a post-template processor, converting strings to DOM elements via [its own custom markup][mason-examples].

@@ -28,7 +28,7 @@ Initially, I [attempted a proof of concept plugin][optimal-lines] within Sublime
 [optimal-lines]: https://github.com/twolfson/sublime-optimal-lines
 [pixlr]: http://pixlr.com/editor/
 
-### Highlighted sections
+# Highlighted sections
 Concept: Highlight "good" areas to write code within
 
 Reasoning: We want a guide to always present, even on good lines since it gives us something to aim for; pro-active rather than retro-active.
@@ -39,21 +39,21 @@ Flaws: The highlighting is overwhelming and draws attention away from code
 
 [highlighted]: /public/images/articles/optimal-line-length-theory/optimal-highlight.jpg
 
-### Colored ruler
+# Colored ruler
 Concept: Hint at level of scope to further visually separate indentation limitations.
 
 [![Colored ruler][colored]][colored]
 
 [colored]: /public/images/articles/optimal-line-length-theory/optimal-colored-ruler-continuous.jpg
 
-### Double colored ruler
+# Double colored ruler
 Concept: Provide a consistent even guide, similar to a track/rail.
 
 [![Double colored ruler][double-colored]][double-colored]
 
 [double-colored]: /public/images/articles/optimal-line-length-theory/optimal-lines-double-ruler.jpg
 
-### Bordered content
+# Bordered content
 Concept: Continuing with the rail concept but forcing focus to the content by blocking the outside (a la [blinders][]).
 
 [![Bordered content][bordered]][bordered]
