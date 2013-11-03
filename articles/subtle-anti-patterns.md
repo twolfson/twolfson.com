@@ -15,8 +15,8 @@ Below is a list of those that fall into the latter category but I have squeezed 
 As a reminder, anti-patterns are not things that should be avoided at all costs; they have their place in quick and simple code. However, for maintainable and future-proof reasons, it is better to avoid them.
 
 Anti-pattern #1: Writing directly to an object
-----------------------------------------------
-### The pattern
+==============================================
+## The pattern
 ```js
 var algorithms = {};
 algorithms['top-down'] = topDownFn;
@@ -24,12 +24,12 @@ algorithms['left-right'] = leftRightFn;
 algorithms['diagonal'] = diagFn;
 ```
 
-### Why this is bad
+## Why this is bad
 You have written a direct reference to the map. However, what if you want to move to an array store or the variable becomes abstracted into a class. In either of those cases, those last 3 lines will have to be updated.
 
 If that does not seem like a lot, imagine those were 20 lines and you wound up going back and forth a lot. There is a large margin for error and debugging will also not be fun.
 
-### How to make it better
+## How to make it better
 Your first thought is probably "objectify them into an array and iterate over that array". This is not bad for a first thought but as you will see in #2, it still does not fully hit the mark.
 
 It is best to abstract this into a helper function
@@ -58,7 +58,7 @@ AlgorithmKeeper.prototype = {
 };
 ```
 
-### Bonus
+## Bonus
 Now that we are going through a function, we can add additional one-off logic, effectively leaving the base function. This is great if the items you are adding are from a repo that you don't own.
 ```js
 function addAlgorithm(params) {
@@ -81,8 +81,8 @@ function addAlgorithm(params) {
 ```
 
 Anti-pattern #2: Binding by iterating over an array
----------------------------------------------------
-### The pattern
+===================================================
+## The pattern
 ```js
 var bindingElts = [{
       'name': 'top-down',
@@ -99,10 +99,10 @@ bindingElts.forEach(function (bindingElt) {
 });
 ```
 
-### Why this is bad
+## Why this is bad
 It is harder to distinguish items and account for one-off cases. Additionally, if there is an issue inside of the `forEach` itself, the stack trace will not inform you which item failed. The stack trace will provide the line number of `addAlgorithm` but nothing about the specific `bindingElt`.
 
-### How to make it better
+## How to make it better
 ```js
 addAlgorithm('top-down', topDownFn);
 addAlgorithm('left-right', leftRightFn);
@@ -111,7 +111,7 @@ addAlgorithm('diagonal', diagFn);
 
 This makes each item have a nice line number attached to the stack trace which will lead to faster debugging.
 
-### Bonus
+## Bonus
 If there is a problem we need to debug, we can take the trouble-maker line and pass it through a one-off function. This effectively isolates it from the noise of other bindings.
 
 ```js
@@ -126,8 +126,8 @@ addAlgorithm('diagonal', diagFn);
 ```
 
 Anti-pattern #3: Defining a finite set of similar types
--------------------------------------------------------
-### The pattern
+=======================================================
+## The pattern
 ```js
 var algorithms = {
       'top-down' : topDownFn,
@@ -136,10 +136,10 @@ var algorithms = {
     };
 ```
 
-### Why this is bad
+## Why this is bad
 This one isn't that bad but it *can* be improved. This pattern unintentionally limits others from adding new items to the set. Another side effect is that there is no easy way to hook into when an addition occurs.
 
-### How to make it better
+## How to make it better
 As we have demonstrated in #1, we can use a function like `addAlgorithm`. Then, we can expose `addAlgorithm` to make setting up another one easily for others.
 
 ```js
@@ -157,7 +157,7 @@ module.exports = {
 };
 ```
 
-### Bonus
+## Bonus
 What you might not notice at first glance is that `addAlgorithm` is the [Observer pattern](http://en.wikipedia.org/wiki/Observer_pattern).
 
 ```js
@@ -180,8 +180,8 @@ AlgorithmKeeper.on('add', function (name) {
 ```
 
 Anti-pattern #4: Composition of functions
------------------------------------------
-### The pattern
+=========================================
+## The pattern
 ```js
 function addSalt(str) {
   return str + 'salt';
@@ -194,7 +194,7 @@ var pasta = 'pasta';
 pasta = addSalt(addPepper(pasta));
 ```
 
-### Why this is bad
+## Why this is bad
 The code is not quickly and easily readible. However, the issue arises out of adding new items
 
 ```js
@@ -213,7 +213,7 @@ Ah, that is nice and [Lispy](http://en.wikipedia.org/wiki/Lisp_%28programming_la
 
 The worst would be to add all 4 functions into a single function. Then, all functional combinations would reach 15 functions `addSaltAndPepper`, `addSaltAndSauce`, &hellip;, `addSaltPepperSauceRosemary` (excluding noop). Clearly, that is not maintainable.
 
-### How to make it better
+## How to make it better
 If we step back, we can notice that we are constantly passing the same state into each function. Classes were **built** for this; functions are stateless and classes are stateful.
 
 If we move this into a class with a fluent interface, life becomes awesome.

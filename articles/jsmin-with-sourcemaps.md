@@ -10,7 +10,7 @@
 Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap).
 
 Example
--------
+=======
 grunt.js example
 ```js
 // Load in the jsmin-sourcemap task
@@ -50,7 +50,7 @@ var jqueryMinObj = jsmin({'code':jQuerySrc,'src':'jquery.js','dest':'jquery.min.
 ```
 
 Modules
--------
+=======
 Out of this, I have written *4* new node modules:
 
 - [node-jsmin2](https://github.com/twolfson/node-jsmin2/) - Direct port of JSMin from C to JS via string replacements
@@ -59,7 +59,7 @@ Out of this, I have written *4* new node modules:
 - [grunt-jsmin-sourcemap](https://github.com/twolfson/grunt-jsmin-sourcemap) - Grunt task for JSMin with sourcemap
 
 Journey to sourcemap glory
---------------------------
+==========================
 Below are the steps I have taken along the path to sourcemap glory.
 
 - Fork [node-jsmin](https://github.com/twolfson/node-jsmin/tree/dev/ignore.important.comments.for.now) and progressively rewrite to understand inner workings (not on `master`)

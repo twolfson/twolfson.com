@@ -29,7 +29,7 @@ grunt.initConfig({
 [grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
 
 Organization
-------------
+============
 [grunt-spritesmith][grunt-spritesmith] is composed of 5 separate modules. Each of them was built to be extensible at run-time.
 
 - [grunt-spritesmith][grunt-spritesmith] -- What you were shown above
@@ -43,7 +43,7 @@ Organization
 [json2css]: https://github.com/twolfson/json2css
 [content-demux]: http://github.com/twolfson/json-content-demux
 
-### grunt-spritesmith
+## grunt-spritesmith
 This acts as a glue layer for integration of [spritesmith][spritesmith] and [json2css][json2css] into [grunt][grunt].
 
 It expands the paths provided via [minimatch][minimatch], passes those on to [spritesmith][spritesmith], processes the coordinates via [json2css][json2css], and writes out the spritesheet and CSS variable declarations.
@@ -51,7 +51,7 @@ It expands the paths provided via [minimatch][minimatch], passes those on to [sp
 [grunt]: https://github.com/gruntjs/grunt/
 [minimatch]: https://github.com/isaacs/minimatch
 
-### spritesmith
+## spritesmith
 Spritesmith is where the magic happens. It was built with [cross-platform functionality][engines] in mind and took a lot of <abbr title="tender loving care">TLC</abbr> to get working just right.
 
 It reads in the images via its engine, lays them out via [layout][layout], adds the sprites to a canvas, output the canvas, and callback with everything.
@@ -63,13 +63,13 @@ Another aside: I wanted to add URL based engine (canvas via an API) but could no
 [engines]: https://github.com/Ensighten/spritesmith#requirements
 [node-canvas]: https://github.com/LearnBoost/node-canvas
 
-### layout
+## layout
 This was built for re-use and modular purification. It was made agnostic so that anything with a height and width dimension could be laid out in a specific algorithm.
 
-### json2css
+## json2css
 This was built for simplified unit testing and re-use. It was built so that new templates could be easily added and tested.
 
-### json-content-demux
+## json-content-demux
 This was built as an answer to a slick solution for encapsulating the relationship between template data and its template.
 
 It initially came from [toto][toto] and it has come up time and time again as a slick solution to this encapsulation. I have used it in [jojo][jojo] and want to use it as an [elegant solution][view-contained] for keeping template interactivity self-contained.
@@ -79,7 +79,7 @@ It initially came from [toto][toto] and it has come up time and time again as a 
 [view-contained]: https://gist.github.com/twolfson/4464886
 
 Ending
-------
+======
 This project was very fun to build and had a lot of thought put into it.
 
 I hope you enjoy using it!
