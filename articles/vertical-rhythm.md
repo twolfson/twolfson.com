@@ -52,7 +52,7 @@ foreach( $listing as $key => $item )
 
 I never questioned this transition or why I don't write more/less comments. It always has "just felt right".
 
-## Attempting to understand the intuitive
+# Attempting to understand the intuitive
 For a while I have been making an attempt to learn about design and user experience. One concept that has jumped out at me is [vertical rhythm][vert-rhythm].
 
 > In fact, it caused me to refactor my CSS to use [Twitter Bootstrap][bootstrap] so I could get [vertical rhythm][vert-rhythm-commit] on [twolfson.com][twolfson.com].
@@ -68,7 +68,7 @@ In short, [vertical rhythm][vert-rhythm] is a way of structuring headings and pa
 
 With this notion in mind, it would make sense for code blocks to be similarly formatted with comments in a consistent location. Therefore, increasing readability even though it is more text.
 
-### Without vertical rhythm
+## Without vertical rhythm
 ```js
 // In series
 async.waterfall([
@@ -92,7 +92,7 @@ async.waterfall([
         packedItems = packedObj.items;
 ```
 
-### With vertical rhythm
+## With vertical rhythm
 ```js
 // In series
 async.waterfall([

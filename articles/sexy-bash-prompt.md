@@ -15,7 +15,7 @@ It is a 2 line prompt that provides session information with distinct symbols fo
 [sexy-screenshot]: //rawgithub.com/twolfson/sexy-bash-prompt/408f877d133ff12ea0986b29c9a26b30af332c9e/screenshot.png
 [sexy-bash-prompt]: https://github.com/twolfson/sexy-bash-prompt
 
-## Origin
+# Origin
 A *very* long time ago, I was watching a [Paul Irish][] screencast and saw [sexy-bash-prompt][sexy-orig] for the first time. It took me a few tries to find but finally I discovered it hiding in a [gist][sexy-orig].
 
 > For reference, the most up-to-date original can be found in [gf3/dotfiles][]
@@ -27,7 +27,7 @@ A *very* long time ago, I was watching a [Paul Irish][] screencast and saw [sexy
 [gf3/dotfiles]: https://github.com/gf3/dotfiles/blob/master/.bash_prompt
 [sexy-orig-screenshot]: /public/images/articles/sexy-bash-prompt-original.png
 
-## Evolution
+# Evolution
 After finding the original, I forked it into my [dotfiles][] and updated the colors to be [colder][] (e.g. bluer).
 
 [dotfiles]: https://github.com/twolfson/dotfiles
@@ -50,7 +50,7 @@ From this, I had some experiments with displaying more information but they fizz
 ▵\\ = ahead by 3
 ```
 
-## Owning your identity
+# Owning your identity
 In July 2013, I decided to add the unpulled status to my bash prompt. This opened the introduced 4 more bash statuses that I had to manually test. Before this, it was a little tedious to test but it wasn't unbearable.
 
 To prevent wasting further time, I wrote a [flat file based test suite][flat-tests] making tests easily addable and debuggable.

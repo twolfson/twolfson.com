@@ -7,19 +7,19 @@
   "relatedArticles": ["Readability: Formalized"]
 }
 
-## ax·i·om (noun)
+# ax·i·om (noun)
 
 1. A statement or proposition that is regarded as being established, accepted, or self-evidently true.
 
 2. A statement or proposition on which an abstractly defined structure is based.
 
-## Introduction
+# Introduction
 
 In Math, axioms are foundational units used to built entire theories classifications upon (e.g. [group theory][group], [combinatorics][combo]). Without further ado, here are my axioms of maintainability.
 
 [combo]: http://en.wikipedia.org/wiki/Combinatorics
 
-## Definitions
+# Definitions
 
 `terminal character`, a [line feed][lf] or [end of file][eof] `character`.
 
@@ -42,8 +42,8 @@ console.log('Hello World!');
 
 [group]: https://en.wikipedia.org/wiki/Group_theory
 
-## Axioms
-### Axiom of emptiness
+# Axioms
+## Axiom of emptiness
 
 If a `line` contains no characters except for a `terminal character`, it has `zero` `cost of maintainenance`. The following example is intentionally blank.
 
@@ -51,7 +51,7 @@ If a `line` contains no characters except for a `terminal character`, it has `ze
 
 ```
 
-### Axiom of non-emptiness
+## Axiom of non-emptiness
 
 If a `line` that contains at least one character that is not a `terminal character`, has a `non-zero` `maintenance cost`.
 
@@ -60,7 +60,7 @@ If a `line` that contains at least one character that is not a `terminal charact
 console.log('...but I am so innocent ;_;');
 ```
 
-### Axiom of addition
+## Axiom of addition
 
 Given multiple `lines`, the cumulative `maintenance cost` is the sum of each `line`'s ``maintenance cost`.
 
@@ -69,7 +69,7 @@ Given multiple `lines`, the cumulative `maintenance cost` is the sum of each `li
 console.log('and this has a `cost` of 5. Then, then the cumulative `cost` is 6');
 ```
 
-## Applications
+# Applications
 Now that we have a short and sweet set of definitions and axioms, it is time for some applications.
 
 If you didn't notice, the `maintenance cost` is never defined in the theory; the application process should defines how a `cost` is calculated. In most cases, comments and whitespace are "cheap" to maintain:
@@ -102,7 +102,7 @@ The goal should not be to keep the total `maintenance cost` as low as possible b
 
 [logarithmic]: http://en.wikipedia.org/wiki/Logarithmic_growth
 
-### Explaining why copy/paste is bad via theory
+## Explaining why copy/paste is bad via theory
 Let's assume your application looks like:
 
 ```js
@@ -157,7 +157,7 @@ The above has a `maintenance code` of 147 and includes no comments. This is what
 
 Next, imagine what happens if `node` were to deprecate `fs.createReadStream`, almost half of the lines of code would need to be updated. On top of which, each would need to be tested, making everything more painful if you lack automated testing.
 
-### Explaining why DRY code and abstraction is good via theory
+## Explaining why DRY code and abstraction is good via theory
 
 If we [DRY][dry] up the code via a module like [express][express], normalize all requests to be to `.json`/`.html`, then the maintenance of the above code decreases significantly.
 

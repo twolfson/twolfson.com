@@ -14,7 +14,7 @@ The reason for this was updating one line of CSS verifying isolated changes for 
 
 If the technology sounds far-fetched, it is not and I had a working proof of concept.
 
-## Pre-existing technology
+# Pre-existing technology
 
 - [Resource-Collector][rc] can collect the information of resources from a webpage, and in theory even the information from an iframe.
 
@@ -26,7 +26,7 @@ If the technology sounds far-fetched, it is not and I had a working proof of con
 [fw]: https://github.com/twolfson/File-Watcher
 [domvas]: https://github.com/pbakaus/domvas
 
-## Technology built
+# Technology built
 
 - [iframe2image][], wrapper on top of [domvas][] that takes an `iframe` element and returns an image
 
@@ -38,7 +38,7 @@ If the technology sounds far-fetched, it is not and I had a working proof of con
 [snapshot.js]: https://github.com/twolfson/snapshot
 [screenshot-as-a-service]: https://github.com/fzaninotto/screenshot-as-a-service
 
-## Results
+# Results
 [snapshot.js][] was intended to be the flagship `engine`. However, due to implementation bugs in `svg+xml` images, it would not render some properties properly (e.g. `background-image`, `box-shadow`).
 
 [![snapshot.js working][kaleido-snapshot]][kaleido-snapshot]
@@ -51,7 +51,7 @@ However, the grid system with [screenshot-as-a-service][] worked quite well.
 
 [kaleido-screenshot]: /public/images/articles/kaleido-screenshot-as-a-service.png
 
-## Why the abandonment?
+# Why the abandonment?
 I am marking this project as a failed experiment since the in-browser results would not render properly. It is great that I got it workign with [screenshot-as-a-service][] but the purpose of the experiment was to be standlone in the browser.
 
 The reason I am marking it as abandoned now rather than back then is I know what the next steps forward are; perceptual diffs. These are starting to show up more and more, [Depicted][dpxdt] being the most identifiable service.

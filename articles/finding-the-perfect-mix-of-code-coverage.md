@@ -12,7 +12,7 @@
 [istanbul]: https://github.com/gotwarlost/istanbul
 [js-cov]: http://siliconforks.com/jscoverage/
 
-## Why do I need the perfect mix?
+# Why do I need the perfect mix?
 
 A library can have no tests (0% coverage) or can have overlapping tests which cover every line (100% coverage) but neither is preferred.
 
@@ -22,7 +22,7 @@ For 100% libraries, any alteration requires updating at least 1 test case even i
 
 To prevent manual testing and to reduce the pain of updating multiple tests for trivial changes, it is good to find the perfect mix for your library.
 
-## What is the perfect mix?
+# What is the perfect mix?
 
 The perfect mix has nothing to do with [code coverage][code-cov] at all. While it is a good metric to detect something breaking, API coverage is more practical.
 
@@ -54,7 +54,7 @@ If we look at the [test suite][child-tests], we will notice tests which are agai
 [child-tests]: https://github.com/twolfson/single-child/tree/91d15a69c091a65273284e5310ffbc4a341500d4/test
 [cmd-args-tests]: https://github.com/twolfson/single-child/blob/91d15a69c091a65273284e5310ffbc4a341500d4/test/single-child_test.content.js#L37-L41
 
-### Testing bugs
+## Testing bugs
 
 Additionally, any bugs that pop up should be tested with a weight which directly corresponds to the frequency of it occurring and indirectly to the ability to reproduce.
 
@@ -89,7 +89,7 @@ For example, in [phantomjssmith][phantomjssmith], a subset of [node-canvas][node
 [phantomjssmith-issue]: https://github.com/Ensighten/spritesmith/issues/11
 [phantomjssmith-test]: https://github.com/twolfson/spritesmith-engine-test/blob/932a6e9f34837cccb55f6fde070ae7998cda61fb/test_content.js#L41-L59
 
-## Is there a library for this?
+# Is there a library for this?
 Currently, there is not. The goal of this article was to introduce this idea.
 
 My visions for a library would use a [JSDoc block][jsdoc] to detect which methods are core, experimental, or exposed for extensibility. It would also indicate which parameters are required or optional.
@@ -99,8 +99,8 @@ There are loose ends like detecting extensions of other libraries (e.g. [EventEm
 [jsdoc]: http://v3.javascriptmvc.com/docs/DocumentJS.html#
 [event-emitter]: http://nodejs.org/api/events.html
 
-## Pitfalls
-### Overtesting parameters
+# Pitfalls
+## Overtesting parameters
 It is possible to overtest with API coverage. If we have a function like `sum(numA, numB);`, the expected inputs would be two `Number`s. We can test unexpected inputs but these also should be given a low weight.
 
 ```
