@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.13.0 - Added `gifsockets` to projects page
+
 2.12.0 - Added "Release: gifsockets" article
 
 2.11.1 - Removed dead code in highlight-yaml
