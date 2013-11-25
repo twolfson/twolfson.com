@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.14.0 - Added "UNLICENSE all the things" article
+
 2.13.0 - Added `gifsockets` to projects page
 
 2.12.0 - Added "Release: gifsockets" article
