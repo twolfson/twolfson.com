@@ -21,3 +21,19 @@ I began to question things after [a talk by Bryan Cantrill on Corporate Open Sou
 [Copyleft]: http://en.wikipedia.org/wiki/Copyleft
 
 Some months later, I come to re-read the [MIT][] license and realize that it is requiring attribution of forks. I am not okay with this.
+
+Following the same principles on [why I began open source][], the software I create should be entirely unrestricted. It belongs to the world, not me.
+
+[why I began open source]: /2013-04-22-why-i-open-source
+
+From this conclusion, I started to look for a license that suited my wants. I stuck around with the [MIT][] license for a few more months but eventually settled.
+
+I narrowed my choices down to the most common public domain licenses:
+
+- [WTFPL][] - Do What The Fuck You Want License, commonly used on [140byt.es][]
+- [CC0][] - Creative Commons 0, later on I discovered [gittip][] uses this
+- [UNLICENSE][] - The UNLICENSE, my current weapon of choice
+
+[WTFPL]: http://www.wtfpl.net/
+[140byt.es]: http://140byt.es/
+[gittip]: https://github.com/gittip/www.gittip.com/blob/10.1.42/CONTRIBUTING.md
