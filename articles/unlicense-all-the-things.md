@@ -31,9 +31,29 @@ From this conclusion, I started to look for a license that suited my wants. I st
 I narrowed my choices down to the most common public domain licenses:
 
 - [WTFPL][] - Do What The Fuck You Want License, commonly used on [140byt.es][]
-- [CC0][] - Creative Commons 0, later on I discovered [gittip][] uses this
+- [CC0][] - Creative Commons 1.0 Universal, the license used by [gittip][]
 - [UNLICENSE][] - The UNLICENSE, my current weapon of choice
 
 [WTFPL]: http://www.wtfpl.net/
 [140byt.es]: http://140byt.es/
 [gittip]: https://github.com/gittip/www.gittip.com/blob/10.1.42/CONTRIBUTING.md
+
+I did not choose [WTFPL][] because it was too informal and would not be well respected in court.
+
+I did not choose [CC0][] because it was too verbose; I wanted a license that was short and I could understand.
+
+I chose [UNLICENSE][] because it was short like the [MIT][] license and easily understood.
+
+There was one major concern I had with the [UNLICENSE][] was that it would not hold up in some jurisdictions. You cannot entirely waive your rights on a piece of software in some countries yet every article was vague about where/why. There is a [fallback clause in CC0][] about this (see #4). However, I still trudged on and started making the switch.
+
+[fallback clause in CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+A few months later, I decided to do my due diligence on the jurisdiction situation. I came up with it mostly being [Moral Rights][] on a piece of software. After reading through the list, I decided that I would not lower myself to their legal level by adjusting the license.
+
+http://en.wikipedia.org/wiki/Moral_rights#Table
+
+If someone was concerned about my open source software, they can reach out to me and I can license it to them/guarantee I won't sue them over it.
+
+[Moral Rights]: http://en.wikipedia.org/wiki/Moral_rights
+
+I am creating new repositories with the [UNLICENSE][] and progressivley transitioning over old ones.
