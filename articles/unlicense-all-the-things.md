@@ -20,7 +20,7 @@ I began to question things after [a talk by Bryan Cantrill on Corporate Open Sou
 [bryan-cantrill]: http://smartos.org/2012/07/27/corporate-open-source-anti-patterns-doing-it-wrong/
 [Copyleft]: http://en.wikipedia.org/wiki/Copyleft
 
-Some months later, I come to re-read the [MIT][] license and realize that it is requiring attribution of forks. I am not okay with this.
+Some months later, I re-read the [MIT][] license and realized that it required attribution inside all forked repositories. I am not okay with this.
 
 Following the same principles on [why I began open source][], the software I create should be entirely unrestricted. It belongs to the world, not me.
 
@@ -30,7 +30,7 @@ From this conclusion, I started to look for a license that suited my wants. I st
 
 I narrowed my choices down to the most common public domain licenses:
 
-- [WTFPL][] - Do What The Fuck You Want License, commonly used on [140byt.es][]
+- [WTFPL][] - Do What The Fuck You Want To Public License, commonly used on [140byt.es][]
 - [CC0][] - Creative Commons 1.0 Universal, the license used by [gittip][]
 - [UNLICENSE][] - The UNLICENSE, my current weapon of choice
 
@@ -45,16 +45,20 @@ I did not choose [CC0][] because it was too verbose; I wanted a license that was
 
 I chose [UNLICENSE][] because it was short like the [MIT][] license and easily understood.
 
-There was one major concern I had with the [UNLICENSE][] was that it would not hold up in some jurisdictions. You cannot entirely waive your rights on a piece of software in some countries yet every article was vague about where/why. There is a [fallback clause in CC0][] about this (see #4). However, I still trudged on and started making the switch.
+There was one major concern I had with the [UNLICENSE][]; it would not hold up in some jurisdictions. You cannot entirely waive your rights on a piece of software in some countries yet every article was vague about where/why. There is a [fallback clause in CC0][] about this (see #4). However, I trudged on and started making the switch.
 
 [fallback clause in CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
 
-A few months later, I decided to do my due diligence on the jurisdiction situation. I came up with it mostly being [Moral Rights][] on a piece of software. After reading through the list, I decided that I would not lower myself to their legal level by adjusting the license.
-
-http://en.wikipedia.org/wiki/Moral_rights#Table
-
-If someone was concerned about my open source software, they can reach out to me and I can license it to them/guarantee I won't sue them over it.
+A few months later, I decided to do my due diligence on the jurisdiction situation. I came up with it mostly being [Moral Rights][] on a piece of software.
 
 [Moral Rights]: http://en.wikipedia.org/wiki/Moral_rights
 
-I am creating new repositories with the [UNLICENSE][] and progressivley transitioning over old ones.
+http://en.wikipedia.org/wiki/Moral_rights#Table
+
+After reading through the list, I decided that I would not lower myself to their legal level by adjusting the license.
+
+> I contemplated releasing software anonymously to forego even these most basic rights. However, I consider that extreme at this current time.
+
+If someone is concerned about my open source software, they can reach out to me and I can license it to them/guarantee I won't sue them over it.
+
+At the time of writing, I have created/transitioned 23 repositories to [UNLICENSE][].
