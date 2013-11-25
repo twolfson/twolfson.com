@@ -36,6 +36,7 @@ I narrowed my choices down to the most common public domain licenses:
 
 [WTFPL]: http://www.wtfpl.net/
 [140byt.es]: http://140byt.es/
+[CC0]: http://creativecommons.org/publicdomain/zero/1.0/
 [gittip]: https://github.com/gittip/www.gittip.com/blob/10.1.42/CONTRIBUTING.md
 
 I did not choose [WTFPL][] because it was too informal and would not be well respected in court.
