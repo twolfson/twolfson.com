@@ -16,9 +16,17 @@ ideal characters per line and [begin applying it to code][optimal-lines-v1].
 
 [optimal-lines-v1]: /2013-09-08-optimal-line-length-theory
 
+![Proof of concept](/public/images/articles/optimal-lines-poc.png)
+
 Unfortunately, the concept was rough around the edges and I struggled at
-making it more appealing. A few weeks later, I attempted the approach of
+making it more appealing. A few weeks later, I took the next iteration
+which is what you see at the top.
 
 There is a piece that is still missing; as you type code, you magically hit
 a limit without any forewarning. I attempted to use a ruler for this but
 when you switched lines, it got frustrating to watch it jump around.
+
+![Ruler jump](/public/images/articles/optimal-lines-ruler.gif)
+
+I have a few thoughts lying around on how to solve this but the road ahead
+is a slow and viscous one.
