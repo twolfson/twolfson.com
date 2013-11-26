@@ -7,9 +7,11 @@
   "relatedArticles": ["Optimal line length theory"]
 }
 
-I am making progress with respect to relative line lengths inside of code.
+I am making progress with respect to [relative line lengths inside of code][sublime-optimal-lines].
 
-![Relative line length](/public/images/articles/optimal-lines.png)
+[sublime-optimal-lines]: https://github.com/twolfson/sublime-optimal-lines
+
+[![Relative line length](/public/images/articles/optimal-lines.png)][sublime-optimal-lines]
 
 A few months ago, I had the idea to apply the typographic concept of
 ideal characters per line and [begin applying it to code][optimal-lines-v1].
