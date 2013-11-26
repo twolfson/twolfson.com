@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.15.0 - Added "Optimal lines again" article
+
 2.14.0 - Added "UNLICENSE all the things" article
 
 2.13.0 - Added `gifsockets` to projects page
