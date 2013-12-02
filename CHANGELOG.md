@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.15.1 - Accepting latest perceptual diffs
+
 2.15.0 - Added "Optimal lines again" article
 
 2.14.0 - Added "UNLICENSE all the things" article
