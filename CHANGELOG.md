@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.16.0 - Adjusted environment info and exposed via /health
+
 2.15.1 - Accepting latest perceptual diffs
 
 2.15.0 - Added "Optimal lines again" article
