@@ -36,3 +36,18 @@ describe('twolfson.com script', function () {
     assert.notEqual(googleAnalyticsId, -1);
   });
 });
+
+describe('twolfson.com /health', function () {
+  before(function (done) {
+    var that = this,
+        healthEndpt = config.productionHost + '/health';
+    request.get(healthEndpt, function getIndexScript (err, res, body) {
+      that.body = body;
+      done(err);
+    });
+  });
+
+  it('does not have developer tools', function () {
+    assert.strictEqual(JSON.parse(this.body).env, 'production');
+  });
+});
