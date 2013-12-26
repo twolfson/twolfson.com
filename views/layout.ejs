@@ -70,14 +70,15 @@
 
             navLinks.forEach(function (navLink) {
               var navName = navLink.name,
-                  iSelected = page === navName ? "link--active" : "";
+                  isSelected = page === navName ? "link--active" : "";
             %>
             <li class="nav--item">
-              <a href="<%-navLink.href%>" class="<%=iSelected%>"><%=navName%></a>
+              <a href="<%-navLink.href%>" class="<%=isSelected%>"><%=navName%></a>
             </li>
-          <% }); %>
+          <% }); /* navLinks.forEach */ %>
             <li class="nav--item float--right">
-              <a href="https://www.gittip.com/twolfson/" target="_blank">support me</a>
+              <% var isSelected = page === 'support-me' ? "link--active" : ""; %>
+              <a href="/support-me" class="<%=isSelected%>">support me</a>
             </li>
           </ul>
           </ul>
