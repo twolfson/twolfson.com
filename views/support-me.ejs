@@ -9,7 +9,6 @@
   <!-- TODO: Don't use .support-btn or .support-btn-img. These are prototyping only! -->
   <style>
     .support-btn-container {
-      text-align: center;
     }
 
     .support-btn {
@@ -29,20 +28,21 @@
       height: 25px;
     }
   </style>
-  <!-- TODO: Maybe use flexbox for vertical alignment -->
-  <div class="span4 support-btn-container">
+  <!-- TODO: Maybe use flexbox for vertical alignment between buttons (should be fine but just in case?) -->
+  <!-- TODO: Fix up vertical aligment of images and text within buttons -->
+  <div class="span4 support-btn-container text--right">
     <button class="support-btn push--bottom">
       <img src="/public/images/sprites/gittip.png" alt="TODO" class="support-btn-img"/>
       Gittip
     </button>
   </div>
-  <div class="span4 support-btn-container">
+  <div class="span4 support-btn-container text--center">
     <button class="support-btn push--bottom">
       <img src="/public/images/sprites/flattr.png" alt="TODO" class="support-btn-img"/>
       Flattr
     </button>
   </div>
-  <div class="span4 support-btn-container">
+  <div class="span4 support-btn-container text--left">
     <button class="support-btn push--bottom">
       <img src="/public/images/sprites/paypal.png" alt="TODO" class="support-btn-img"/>
       Paypal
@@ -50,6 +50,8 @@
   </div>
 </div>
 <div class="row">
+  <div class="span1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <!-- TODO: Fix up vertical aligment of images and text -->
   <div class="span2">
     <img src="/public/images/sprites/bitcoin.png" alt="TODO" class="support-img"/>
     Bitcoin
@@ -57,9 +59,11 @@
   <div class="span8">
     <pre><code class="no-highlight">abcdef</code></pre>
   </div>
-  <div class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div class="span1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
 <div class="row">
+  <div class="span1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <!-- TODO: Fix up vertical aligment of images and text -->
   <div class="span2">
     <img src="/public/images/sprites/dogecoin.png" alt="TODO" class="support-img"/>
     Dogecoin
@@ -67,5 +71,5 @@
   <div class="span8">
     <pre><code class="no-highlight">doge</code></pre>
   </div>
-  <div class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div class="span1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
