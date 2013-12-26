@@ -64,7 +64,12 @@ module.exports = function (grunt) {
 
       // Development dependencies
       'public/js/960gridder/960.gridder.js': 'https://raw.github.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
-      'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js'
+      'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js',
+
+      // External sprites
+        // Bitcoin - http://bitcoin.org/en/press
+        'public/images/sprites/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
+        'public/images/sprites/dogecoin.png': 'http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png'
     },
     'curl-dir': {
       // SCSS mixins
