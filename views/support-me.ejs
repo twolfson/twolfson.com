@@ -8,11 +8,13 @@
   <!-- TODO: Use sprites -->
   <!-- TODO: Don't use .support-btn or .support-btn-img. These are prototyping only! -->
   <style>
+    .support-btn-container {
+      text-align: center;
+    }
+
     .support-btn {
       text-align: left;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 8px;
+      padding: 8px;
 
       /* TODO: Use consistent button style across website */
       background: linear-gradient(to bottom, #FFF 0%, #DDD 100%);
@@ -25,18 +27,24 @@
     }
   </style>
   <!-- TODO: Maybe use flexbox for vertical alignment -->
-  <button class="support-btn span4 push--bottom">
-    <img src="/public/images/sprites/gittip.png" alt="TODO" class="support-btn-img"/>
-    Gittip
-  </button>
-  <button class="support-btn span4 push--bottom">
-    <img src="/public/images/sprites/flattr.png" alt="TODO" class="support-btn-img"/>
-    Flattr
-  </button>
-  <button class="support-btn span4 push--bottom">
-    <img src="/public/images/sprites/paypal.png" alt="TODO" class="support-btn-img"/>
-    Paypal
-  </button>
+  <div class="span4 support-btn-container">
+    <button class="support-btn push--bottom">
+      <img src="/public/images/sprites/gittip.png" alt="TODO" class="support-btn-img"/>
+      Gittip
+    </button>
+  </div>
+  <div class="span4 support-btn-container">
+    <button class="support-btn push--bottom">
+      <img src="/public/images/sprites/flattr.png" alt="TODO" class="support-btn-img"/>
+      Flattr
+    </button>
+  </div>
+  <div class="span4 support-btn-container">
+    <button class="support-btn push--bottom">
+      <img src="/public/images/sprites/paypal.png" alt="TODO" class="support-btn-img"/>
+      Paypal
+    </button>
+  </div>
 </div>
 <div class="row">
   <div class="span2">
