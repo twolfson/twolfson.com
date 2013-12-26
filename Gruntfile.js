@@ -69,7 +69,12 @@ module.exports = function (grunt) {
       // External sprites
         // Bitcoin - http://bitcoin.org/en/press
         'public/images/sprites/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
-        'public/images/sprites/dogecoin.png': 'http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png'
+        // Dogecoin - http://dogecoin.com/
+        'public/images/sprites/dogecoin.png': 'http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png',
+        // Flattr, Gittip - https://github.com/codio/iloveopensource/tree/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images
+        'public/images/sprites/flattr.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/flattr.png',
+        'public/images/sprites/gittip.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/gittip.png'
+        // TODO: Get Paypal
     },
     'curl-dir': {
       // SCSS mixins
