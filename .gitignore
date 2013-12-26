@@ -6,3 +6,4 @@ tmp.png
 npm-debug.log
 tmp/
 .sass-cache/
+updateProduction.sh
