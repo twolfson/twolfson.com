@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.17.0 - Added article for release of `sublime-plugin-tests`
+
 2.16.1 - Added regression test for environment on production
 
 2.16.0 - Adjusted environment info and exposed via /health
