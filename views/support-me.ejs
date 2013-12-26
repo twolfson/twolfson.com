@@ -3,20 +3,37 @@
   <p>
     Thank you for supporting me! I really appreciate any and every donation =)
   </p>
-  <div>
-    <!-- TODO: Use sprites -->
-    <!-- TODO: Don't use .support-btn or .support-btn-img. These are prototyping only! -->
-    <button class="support-btn">
-      <img src="/public/images/sprites/gittip.png" alt="TODO" class="support-btn-img"/>
-      Gittip
-    </button>
-    <button class="support-btn">
-      <img src="/public/images/sprites/flattr.png" alt="TODO" class="support-btn-img"/>
-      Flattr
-    </button>
-    <button class="support-btn">
-      <img src="/public/images/sprites/paypal.png" alt="TODO" class="support-btn-img"/>
-      Paypal
-    </button>
-  </div>
 </div></div>
+<div class="row">
+  <!-- TODO: Use sprites -->
+  <!-- TODO: Don't use .support-btn or .support-btn-img. These are prototyping only! -->
+  <style>
+    .support-btn {
+      text-align: left;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 8px;
+
+      /* TODO: Use consistent button style across website */
+      background: linear-gradient(to bottom, #FFF 0%, #DDD 100%);
+      border: 0;
+    }
+
+    .support-btn-img {
+      height: 25px;
+    }
+  </style>
+  <!-- TODO: Maybe use flexbox for vertical alignment -->
+  <button class="support-btn span4">
+    <img src="/public/images/sprites/gittip.png" alt="TODO" class="support-btn-img"/>
+    Gittip
+  </button>
+  <button class="support-btn span4">
+    <img src="/public/images/sprites/flattr.png" alt="TODO" class="support-btn-img"/>
+    Flattr
+  </button>
+  <button class="support-btn span4">
+    <img src="/public/images/sprites/paypal.png" alt="TODO" class="support-btn-img"/>
+    Paypal
+  </button>
+</div>
