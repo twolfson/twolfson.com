@@ -73,8 +73,9 @@ module.exports = function (grunt) {
         'public/images/sprites/dogecoin.png': 'http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png',
         // Flattr, Gittip - https://github.com/codio/iloveopensource/tree/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images
         'public/images/sprites/flattr.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/flattr.png',
-        'public/images/sprites/gittip.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/gittip.png'
-        // TODO: Get Paypal
+        'public/images/sprites/gittip.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/gittip.png',
+        // Paypal - Google Image search
+        'public/images/sprites/paypal.png': 'http://modmyi.com/attachments/forums/iphone-4-4s-new-skins-themes-launches/523797d1305707431-dreamboard-buuf-ios5-release-paypal-icon.png'
     },
     'curl-dir': {
       // SCSS mixins
