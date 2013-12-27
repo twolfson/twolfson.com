@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.19.0 - Added "Support Me" page
+
 2.18.0 - Relocated grunt-curl for highlight.js into separate file
 
 2.17.0 - Added article for release of `sublime-plugin-tests`
