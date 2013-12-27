@@ -2705,7 +2705,13 @@ button {
   position: absolute; }
 
 .btn--future {
-  background: linear-gradient(to bottom, white 0%, #dddddd 100%);
+  background-color: white;
+  background-image: deprecated-webkit-gradient(linear, left top, left bottom, white 0%, #dddddd 100%);
+  background-image: -webkit-linear-gradient(to bottom, white 0%, #dddddd 100%);
+  background-image: -moz-linear-gradient(to bottom, white 0%, #dddddd 100%);
+  background-image: -ms-linear-gradient(to bottom, white 0%, #dddddd 100%);
+  background-image: -o-linear-gradient(to bottom, white 0%, #dddddd 100%);
+  background-image: linear-gradient(to bottom, white 0%, #dddddd 100%);
   border: 0; }
 
 .btn--medium {
