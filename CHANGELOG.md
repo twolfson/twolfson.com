@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.20.0 - Moved "Support Me" from standalone images to sprites
+
 2.19.0 - Added "Support Me" page
 
 2.18.0 - Relocated grunt-curl for highlight.js into separate file
