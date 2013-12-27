@@ -184,6 +184,11 @@ button {
 }
 
 // Personal beautons
+.btn--future {
+  background: linear-gradient(to bottom, #FFF 0%, #DDD 100%);
+  border: 0;
+}
+
 .btn--huge {
   padding: 13px 18px;
 }

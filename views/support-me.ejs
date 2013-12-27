@@ -6,49 +6,36 @@
 </div></div>
 <div class="container__row">
   <!-- TODO: Use sprites -->
-  <!-- TODO: Don't use .support-btn or .support-btn-img. These are prototyping only! -->
+  <!-- TODO: Don't use .support-btn or .valign--text-bottom. These are prototyping only! -->
   <style>
-    .support-btn-container {
-    }
-
     .support-btn {
       /* .btn--small? */
       padding: 8px;
 
-      /* .btn--future */
-      background: linear-gradient(to bottom, #FFF 0%, #DDD 100%);
-      border: 0;
-
       /* .span3 + float: none + display: inline, maybe flexbox as a container*/
       width: 213px;
     }
-
-    .support-img,
-    .support-btn-img {
-      /* .valign--text-bottom? */
-      vertical-align: text-bottom;
-    }
   </style>
-  <div class="span4 support-btn-container text--right">
+  <div class="span4 text--right">
     <a href="<%= gittipUrl %>">
-      <button class="support-btn push--bottom">
-        <img src="/public/images/sprites/gittip.png" alt="Gittip logo" class="support-btn-img"/>
+      <button class="support-btn btn--future push--bottom">
+        <img src="/public/images/sprites/gittip.png" alt="Gittip logo" class="valign--text-bottom"/>
         Gittip
       </button>
     </a>
   </div>
-  <div class="span4 support-btn-container text--center">
+  <div class="span4 text--center">
     <a href="<%= flattrUrl %>">
-      <button class="support-btn push--bottom">
-        <img src="/public/images/sprites/flattr.png" alt="Flattr logo" class="support-btn-img"/>
+      <button class="support-btn btn--future push--bottom">
+        <img src="/public/images/sprites/flattr.png" alt="Flattr logo" class="valign--text-bottom"/>
         Flattr
       </button>
     </a>
   </div>
-  <div class="span4 support-btn-container text--left">
+  <div class="span4 text--left">
     <a href="<%= paypalUrl %>">
-      <button class="support-btn push--bottom">
-        <img src="/public/images/sprites/paypal.png" alt="PayPal logo" class="support-btn-img"/>
+      <button class="support-btn btn--future push--bottom">
+        <img src="/public/images/sprites/paypal.png" alt="PayPal logo" class="valign--text-bottom"/>
         PayPal
       </button>
     </a>
@@ -57,7 +44,7 @@
 <div class="container__row flexbox push--bottom">
   <div class="flexbox__item width1">&nbsp;</div>
   <div class="flexbox__item width2">
-    <img src="/public/images/sprites/bitcoin.png" alt="Bitcoin logo" class="support-img"/>
+    <img src="/public/images/sprites/bitcoin.png" alt="Bitcoin logo" class="valign--text-bottom"/>
     Bitcoin
   </div>
   <div class="flexbox__item width8">
@@ -67,7 +54,7 @@
 <div class="container__row flexbox push--bottom">
   <div class="flexbox__item width1">&nbsp;</div>
   <div class="flexbox__item width2">
-    <img src="/public/images/sprites/dogecoin.png" alt="Dogecoin logo" class="support-img"/>
+    <img src="/public/images/sprites/dogecoin.png" alt="Dogecoin logo" class="valign--text-bottom"/>
     Dogecoin
   </div>
   <div class="flexbox__item width8">
