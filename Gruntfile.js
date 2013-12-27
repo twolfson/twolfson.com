@@ -68,11 +68,11 @@ module.exports = function (grunt) {
 
       // External sprites
         // Bitcoin - http://bitcoin.org/en/press
-        'public/images/sprites/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
+        'public/images/sprites_src/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
         // Dogecoin - http://imgur.com/a/CKqPP
-        'public/images/sprites/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
+        'public/images/sprites_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
         // Google image search
-        'public/images/sprites/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
+        'public/images/sprites_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
     },
     'curl-dir': {
       // SCSS mixins
