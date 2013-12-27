@@ -185,8 +185,7 @@ button {
 
 // Personal beautons
 .btn--future {
-  // TODO: Cross browser me
-  @include linear-gradient(to bottom, #FFF 0%, #DDD 100%);
+  @include linear-gradient(#FFF, #DDD);
   border: 0;
 }
 
