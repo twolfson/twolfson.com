@@ -10,7 +10,7 @@ module.exports = {
   inDevelopment: !inProduction,
   'support-me': {
     gittip: 'twolfson',
-    flattr: 'twolfson',
+    flattr: 'twolfsn',
     paypal: {
       name: 'Todd Wolfson',
       email: 'todd@twolfson.com'
