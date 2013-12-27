@@ -3012,40 +3012,40 @@ code {
 .width12 {
   padding-left: 27px; }
 
-.span1 {
+.span1, .inline-span1 {
   width: 53px; }
 
-.span2 {
+.span2, .inline-span2 {
   width: 133px; }
 
-.span3 {
+.span3, .inline-span3 {
   width: 213px; }
 
-.span4 {
+.span4, .inline-span4 {
   width: 293px; }
 
-.span5 {
+.span5, .inline-span5 {
   width: 373px; }
 
-.span6 {
+.span6, .inline-span6 {
   width: 453px; }
 
-.span7 {
+.span7, .inline-span7 {
   width: 533px; }
 
-.span8 {
+.span8, .inline-span8 {
   width: 613px; }
 
-.span9 {
+.span9, .inline-span9 {
   width: 693px; }
 
-.span10 {
+.span10, .inline-span10 {
   width: 773px; }
 
-.span11 {
+.span11, .inline-span11 {
   width: 853px; }
 
-.span12 {
+.span12, .inline-span12 {
   width: 933px; }
 
 .width1 {
