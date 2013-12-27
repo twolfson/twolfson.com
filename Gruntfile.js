@@ -72,7 +72,6 @@ module.exports = function (grunt) {
         // Dogecoin - http://imgur.com/a/CKqPP
         'public/images/sprites/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
         // Google image search
-        'public/images/sprites/flattr.png': 'http://flattr.com/_img/flattr-logo-og.png',
         'public/images/sprites/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
     },
     'curl-dir': {
