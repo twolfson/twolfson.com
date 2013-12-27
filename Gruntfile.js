@@ -71,11 +71,9 @@ module.exports = function (grunt) {
         'public/images/sprites/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
         // Dogecoin - http://imgur.com/a/CKqPP
         'public/images/sprites/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
-        // Flattr, Gittip - https://github.com/codio/iloveopensource/tree/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images
-        'public/images/sprites/flattr.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/flattr.png',
-        'public/images/sprites/gittip.png': 'https://raw.github.com/codio/iloveopensource/1cef112e6b6b227873877fe2566a7db612c9bbad/public/images/gittip.png',
-        // Paypal - Google Image search
-        'public/images/sprites/paypal.png': 'http://modmyi.com/attachments/forums/iphone-4-4s-new-skins-themes-launches/523797d1305707431-dreamboard-buuf-ios5-release-paypal-icon.png'
+        // Google image search
+        'public/images/sprites/flattr.png': 'http://flattr.com/_img/flattr-logo-og.png',
+        'public/images/sprites/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
     },
     'curl-dir': {
       // SCSS mixins
