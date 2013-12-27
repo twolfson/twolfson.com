@@ -81,6 +81,20 @@ module.exports = function (grunt) {
         'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss'
       ]
     },
+    image_resize: {
+      'support-me': {
+        files: {
+          'public/images/sprites/bitcoin.png': 'public/images/sprites_src/bitcoin.png',
+          'public/images/sprites/dogecoin.png': 'public/images/sprites_src/dogecoin.png',
+          'public/images/sprites/flattr.png': 'public/images/sprites_src/flattr.png',
+          'public/images/sprites/gittip.png': 'public/images/sprites_src/gittip.png',
+          'public/images/sprites/paypal.png': 'public/images/sprites_src/paypal.png'
+        },
+        options: {
+          height: 25
+        }
+      }
+    },
     unzip: {
       // Inuit.css
       inuit: {
@@ -127,6 +141,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-image-resize');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
