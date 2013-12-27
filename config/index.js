@@ -12,7 +12,7 @@ module.exports = {
     gittip: 'twolfson',
     flattr: 'twolfson',
     paypal: 'todd@twolfson.com',
-    bitcoin: 'TODO',
+    bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
     dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ'
   }
 };
