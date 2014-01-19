@@ -83,6 +83,16 @@ Copied 1 files
 Done, without errors.
 ```
 
+The tasks used above were:
+
+- [grunt-curl][], a HTTP/HTTPS file downloader
+- [grunt-zip][], an ZIP extractor
+- [grunt-copy][], a file copying task
+
+[grunt-curl]: https://github.com/twolfson/grunt-curl
+[grunt-zip]: https://github.com/twolfson/grunt-zip
+[grunt-copy]: https://github.com/gruntjs/grunt-contrib-copy
+
 Additional file sets that I use include [inuit.css][], [960gridder][] (not available on [bower][]), and [bourbon][] (not available at older versions on [bower][]).
 
 [inuit.css]: https://github.com/csswizardry/inuit.css
