@@ -20,7 +20,7 @@ Benefits to this approach include:
 [grunt]: http://gruntjs.com/
 [highlightjs]: http://highlightjs.org/
 
-On [twolfson.com][], I use the [following set of code][gruntfile]:
+Below is a [stripped down set][gruntfile] of what is used for [twolfson.com][]:
 
 [gruntfile]: https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js
 [twolfson.com]: /
@@ -33,12 +33,13 @@ grunt.initConfig({
     'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
     'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
 
+    // Example of complex flags
     highlight: {
       dest: 'tmp/highlight.zip',
       src: {
         url: 'http://highlightjs.org/download/',
         method: 'post',
-        form: {'bash.js': 'on'/*, ... */}
+        form: {'bash.js': 'on', 'css.js': 'on'/*, ... */}
       }
     }
   },
@@ -58,3 +59,32 @@ grunt.initConfig({
 grunt.registerTask('install', ['curl', 'unzip', 'copy']);
 ```
 
+Running `grunt install` yields:
+
+```bash
+Running "curl:public/js/ready.js" (curl) task
+File "public/js/ready.js" created.
+
+Running "curl:public/js/gator.js" (curl) task
+File "public/js/gator.js" created.
+
+Running "curl:public/js/gator-legacy.js" (curl) task
+File "public/js/gator-legacy.js" created.
+
+Running "unzip:highlight" (unzip) task
+File "tmp/highlight" created.
+
+Running "copy:public/css/base/highlight.scss" (copy) task
+Copied 1 files
+
+Running "copy:public/js/highlight.js" (copy) task
+Copied 1 files
+
+Done, without errors.
+```
+
+Additional file sets include [inuit.css][], [960gridder][] (not available on [bower][]), and [bourbon][] (not available at older versions on [bower][]).
+
+[inuit.css]: https://github.com/csswizardry/inuit.css
+[960gridder]: http://peol.github.io/960gridder/
+[bourbon]: http://bourbon.io/
