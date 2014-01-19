@@ -12,7 +12,7 @@ Benefits to this approach include:
 
 - No opt-in support required from repositories
 - Keep record of where dependencies came from
-- Manage complex sets of options for libraries (e.g. [highlightjs][])
+- Manage sets of options for compiled libraries (e.g. [highlightjs][])
 - Blends in to normal [grunt][] workflow
 
 [bower]: http://bower.io/
@@ -83,7 +83,7 @@ Copied 1 files
 Done, without errors.
 ```
 
-Additional file sets include [inuit.css][], [960gridder][] (not available on [bower][]), and [bourbon][] (not available at older versions on [bower][]).
+Additional file sets that I use include [inuit.css][], [960gridder][] (not available on [bower][]), and [bourbon][] (not available at older versions on [bower][]).
 
 [inuit.css]: https://github.com/csswizardry/inuit.css
 [960gridder]: http://peol.github.io/960gridder/
