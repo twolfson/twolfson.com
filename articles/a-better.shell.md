@@ -28,7 +28,11 @@ What if we dynamically picked up settings changes? No more `source ~/.bashrc` ev
 [subl]: http://sublimetext.com/
 
 ```bash
-dsh install sexy-prompt # Installs sexy-bash-prompt
-dsh install twolfson-dotfiles # Installs collection of multiple packages (e.g. twolfson-dotfiles-dir-aliases)
-dsh alias alert echo # Adds `alert` as an alias to `echo` permanently
+# Installs sexy-bash-prompt
+dsh install sexy-prompt
+# Installs collection of multiple packages
+  # (e.g. twolfson-dotfiles-dir-aliases)
+dsh install twolfson-dotfiles
+# Adds `alert` as an alias to `echo` permanently
+dsh alias alert echo
 ```

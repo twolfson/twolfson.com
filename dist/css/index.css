@@ -2575,8 +2575,12 @@ body {
   background: url("/public/images/white_plaster.png");
   color: #1a1a1a; }
 
+pre {
+  white-space: pre;
+  background: ghostwhite; }
+
 code {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
   display: inline-block; }
 
 blockquote {
@@ -2608,6 +2612,7 @@ blockquote,
   padding-right: 9px; }
 
 img,
+pre,
 code,
 input,
 button,
