@@ -46,7 +46,8 @@ If we look at the [test suite][child-tests], we will notice tests which are agai
 ```js
 'running a self-terminating command': function () {
   // Create a script that writes time to `tmp.txt`
-  this.child = new SingleChild('node', ['-e', 'require("fs").writeFileSync("tmp.txt", +new Date())']);
+  this.child = new SingleChild('node', ['-e',
+    'require("fs").writeFileSync("tmp.txt", +new Date())']);
 },
 // ... no events tests =(
 ```
