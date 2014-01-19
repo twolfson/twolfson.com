@@ -93,12 +93,6 @@ The tasks used above were:
 [grunt-zip]: https://github.com/twolfson/grunt-zip
 [grunt-copy]: https://github.com/gruntjs/grunt-contrib-copy
 
-Additional file sets that I use include [inuit.css][], [960gridder][] (not available on [bower][]), and [bourbon][] (not available at older versions on [bower][]).
-
-[inuit.css]: https://github.com/csswizardry/inuit.css
-[960gridder]: http://peol.github.io/960gridder/
-[bourbon]: http://bourbon.io/
-
 > This was originally inspired by [Bootstrap's customize feature][bootstrap-customize]. I wanted a solution to download a compiled custom flavor of [Bootstrap][].
 >
 > The original proof of concept downloaded the uncustomized version and can be found at: https://gist.github.com/twolfson/4526992
