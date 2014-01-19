@@ -2575,6 +2575,10 @@ body {
   background: url("/public/images/white_plaster.png");
   color: #1a1a1a; }
 
+pre {
+  white-space: pre;
+  background: ghostwhite; }
+
 code {
   font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
   display: inline-block; }
@@ -2608,6 +2612,7 @@ blockquote,
   padding-right: 9px; }
 
 img,
+pre,
 code,
 input,
 button,
@@ -2731,10 +2736,6 @@ hr {
   border-bottom-style: solid;
   margin-bottom: 26px;
   margin-bottom: 1.44444rem; }
-
-pre {
-  white-space: pre;
-  background: ghostwhite; }
 
 /*
 Sticky Footer Solution
