@@ -89,9 +89,9 @@ Additional file sets include [inuit.css][], [960gridder][] (not available on [bo
 [960gridder]: http://peol.github.io/960gridder/
 [bourbon]: http://bourbon.io/
 
-> The original inspiration for this came from [Bootstrap's customize feature][bootstrap-customize]. I wanted a solution to download a pre-compiled custom flavor of [Bootstrap][].
+> This was originally inspired by [Bootstrap's customize feature][bootstrap-customize]. I wanted a solution to download a compiled custom flavor of [Bootstrap][].
 >
-> The original proof of concept featured downloading the uncustomized flavor but it can be found here: https://gist.github.com/twolfson/4526992
+> The original proof of concept downloaded the uncustomized version and can be found at: https://gist.github.com/twolfson/4526992
 
 [bootstrap-customize]: http://twbs.github.io/bootstrap/customize/
 [Bootstrap]: http://twbs.github.io/bootstrap/
