@@ -2732,6 +2732,10 @@ hr {
   margin-bottom: 26px;
   margin-bottom: 1.44444rem; }
 
+pre {
+  white-space: pre;
+  background: ghostwhite; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
