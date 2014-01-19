@@ -8,10 +8,16 @@
 
 Every project has an investment cost; an acceptable balance between effort put in now and effort saved later.
 
-Higher level browser dependency solutions like [bower][] and [component][] work great for larger projects but not might be a quick drop-in solution for smaller projects. Additionally, they require opt-in support from repository owners which is not always available (e.g. on [microjs][] projects).
+The benefit of a low-tech solution over higher level ones (e.g. [bower][], [component][]) are:
+
+- No opt-in support required from repositories
+- Keep record of where dependencies came from
+- Manage complex sets of options for libraries (e.g. [highlightjs][])
+- Blends in to normal [grunt][] workflow
 
 [bower]:
 [component]:
+[highlightjs]: http://highlightjs.org/
 [microjs]: http://microjs.com/
 
 My solution for these projects is a combination of [grunt][] tasks that download and extract browser dependencies. On [twolfson.com][], I use the following set of code:
@@ -29,7 +35,6 @@ grunt.initConfig({
     'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
     'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
 
-    // http://highlightjs.org/
     highlight: {
       dest: 'tmp/highlight.zip',
       src: {
@@ -54,3 +59,4 @@ grunt.initConfig({
 // Combine all actions into a single task
 grunt.registerTask('install', ['curl', 'unzip', 'copy']);
 ```
+
