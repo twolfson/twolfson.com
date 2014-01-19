@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2014/01/19",
   "keywords": "low tech, dependency, bower, volo, jam, curl",
-  "summary": "An explanation and walkthrough of managing browser dependencies via [`grunt-zip`](https://github.com/twolfson/grunt-zip/) and [`grunt-curl`](https://github.com/twolfson/grunt-curl)."
+  "summary": "An explanation and walkthrough of managing browser dependencies via [`grunt-zip`](https://github.com/twolfson/grunt-zip) and [`grunt-curl`](https://github.com/twolfson/grunt-curl)."
 }
 
 For small projects, a high level dependency solution (e.g. [bower][], [component][]) can take up more time than it's worth. As a result, I opt for a combination of [grunt][] tasks that download and extract my dependencies.
