@@ -24,6 +24,7 @@ A copy can be found at: https://github.com/twolfson/twolfson.com/blob/2.17.0/Gru
 ```js
 grunt.initConfig({
   curl: {
+    // Micro libraries via http://microjs.com/
     'public/js/ready.js': 'https://raw.github.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js',
     'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
     'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
@@ -37,8 +38,19 @@ grunt.initConfig({
         form: {'bash.js': 'on'/*, ... */}
       }
     }
+  },
+  unzip: {
+    highlight: {
+      src: 'tmp/highlight.zip',
+      dest: 'tmp/highlight'
+    }
+  },
+  copy: {
+    'public/css/base/highlight.scss': 'tmp/highlight/styles/github.css',
+    'public/js/highlight.js': 'tmp/highlight/highlight.pack.js'
   }
 });
 
-grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
+// Combine all actions into a single task
+grunt.registerTask('install', ['curl', 'unzip', 'copy']);
 ```
