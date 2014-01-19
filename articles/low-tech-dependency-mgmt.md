@@ -14,6 +14,34 @@ Higher level browser dependency solutions like [bower][] and [component][] work 
 [component]:
 [microjs]: http://microjs.com/
 
-My solution for these projects is a combination of [grunt][] tasks that download
+My solution for these projects is a combination of [grunt][] tasks that download and extract browser dependencies. On [twolfson.com][], I use the following set of code:
 
 [grunt]:
+[twolfson.com]: /
+
+A copy can be found at: [https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js]
+
+```js
+grunt.initConfig({
+  curl: {
+    'public/js/ready.js': 'https://raw.github.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js',
+    'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
+    'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
+
+    // http://highlightjs.org/
+    highlight: {
+      dest: 'tmp/highlight.zip',
+      src: {
+        url: 'http://highlightjs.org/download/',
+        method: 'post',
+        headers: {
+          'Cookie': 'csrftoken=SameAsCookie'
+        },
+        form: {
+          'csrfmiddlewaretoken': 'SameAsCookie',
+
+  }
+});
+
+grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
+```
