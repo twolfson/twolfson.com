@@ -19,7 +19,7 @@ My solution for these projects is a combination of [grunt][] tasks that download
 [grunt]:
 [twolfson.com]: /
 
-A copy can be found at: [https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js]
+A copy can be found at: https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js
 
 ```js
 grunt.initConfig({
@@ -34,12 +34,9 @@ grunt.initConfig({
       src: {
         url: 'http://highlightjs.org/download/',
         method: 'post',
-        headers: {
-          'Cookie': 'csrftoken=SameAsCookie'
-        },
-        form: {
-          'csrfmiddlewaretoken': 'SameAsCookie',
-
+        form: {'bash.js': 'on'/*, ... */}
+      }
+    }
   }
 });
 
