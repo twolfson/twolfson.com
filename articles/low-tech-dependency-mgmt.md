@@ -6,26 +6,24 @@
   "summary": "An explanation and walkthrough of managing browser dependencies via [`grunt-zip`](https://github.com/twolfson/grunt-zip/) and [`grunt-curl`](https://github.com/twolfson/grunt-curl)."
 }
 
-Every project has an investment cost; an acceptable balance between effort put in now and effort saved later.
+For small projects, a high level dependency solution (e.g. [bower][], [component][]) can take up more time than it's worth. As a result, I opt for a combination of [grunt][] tasks that download and extract my dependencies.
 
-The benefit of a low-tech solution over higher level ones (e.g. [bower][], [component][]) are:
+Benefits to this approach include:
 
 - No opt-in support required from repositories
 - Keep record of where dependencies came from
 - Manage complex sets of options for libraries (e.g. [highlightjs][])
 - Blends in to normal [grunt][] workflow
 
-[bower]:
-[component]:
+[bower]: http://bower.io/
+[component]: http://component.io/
+[grunt]: http://gruntjs.com/
 [highlightjs]: http://highlightjs.org/
-[microjs]: http://microjs.com/
 
-My solution for these projects is a combination of [grunt][] tasks that download and extract browser dependencies. On [twolfson.com][], I use the following set of code:
+On [twolfson.com][], I use the [following set of code][gruntfile]:
 
-[grunt]:
+[gruntfile]: https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js
 [twolfson.com]: /
-
-A copy can be found at: https://github.com/twolfson/twolfson.com/blob/2.17.0/Gruntfile.js
 
 ```js
 grunt.initConfig({
