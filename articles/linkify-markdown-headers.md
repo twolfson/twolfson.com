@@ -11,16 +11,14 @@ In GitHub, Markdown headers are automatically linked. To achieve the same effect
 [marked]: https://github.com/chjj/marked
 
 ```js
-// Modify marked's tokenizer to wrap
-// header text in an `<a>`
+// Modify marked's tokenizer to wrap header text in an `<a>`
 var _tok = marked.Parser.prototype.tok;
 marked.Parser.prototype.tok = function () {
   // If this is a heading, use our custom parser
   // https://github.com/chjj/marked/blob/v0.2.10/lib/marked.js#L845-L855
   // NOTE: This is for marked@0.2.10
   if (this.token.type === 'heading') {
-    var headerText = this.token.text.toLowerCase();
-    var slug = headerText.replace(/[^\w]+/g, '-');
+    var slug = this.token.text.toLowerCase().replace(/[^\w]+/g, '-');
     return '<h'
           + this.token.depth
           + ' id="'
