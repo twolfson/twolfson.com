@@ -2,26 +2,24 @@ h3 Current focus
 .cluster
   :markdown
     #### [Foundry][]
-    Publishing is currently a problem solved by dotfiles. There is no generic solution that has reusable parts between people.
+    Publishing is currently a problem [solved by dotfiles][git-release]. There is no generic solution that has reusable parts between people.
 
-    Personally, I have been using a fork of [git-extra's `git release`][git-release] script for a while but got fed up with the lack of customization and tests.
-
-    As a result, I am building [foundry][Foundry], a pluggable library that can publish to multiple repositories (e.g. `npm`, `bower`, `component`, `git tag`, `PyPI`).
+    To fix this, I am building a plugin based library that can publish to multiple repositories (e.g. `npm`, `bower`, `component`, `git tag`, `PyPI`).
 
     [Foundry]: https://github.com/twolfson/foundry
-    [git-release]: https://github.com/twolfson/sublime-plugin-tests
+    [git-release]: https://github.com/twolfson/dotfiles/blob/0.29.0/git-template-dir/hooks/post-release.sh
 
 h3 Recent completions
 .cluster
   :markdown
     #### [Sublime plugin tests][]
-    [Sublime Text][] does not have a proper testing framework. With the disparity of Python 2 and 3, it makes cross-version plugins even harder.
-
-    To solve this problem, I am developing a testing framework that can be integrated with [Travis CI][] for full automated tests.
+    Testing framework for [Sublime Text][] 2 and 3 that can be integrated with [Vagrant][] and [Travis CI][] for automated headless testing.
 
     [Sublime plugin tests]: https://github.com/twolfson/sublime-plugin-tests
     [Sublime Text]: http://sublimetext.com
+    [Vagrant]: http://www.vagrantup.com/
     [Travis CI]: https://travis-ci.org/
+
 .cluster
   :markdown
     #### [git-sqwish][]
