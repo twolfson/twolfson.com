@@ -1,4 +1,6 @@
 # twolfson.com changelog
+2.23.0 - Updated "Current focus"
+
 2.22.0 - Added article for "Low tech dependency management"
 
 2.21.0 - Moved to `Ubuntu Mono` and scrolling `code` blocks
