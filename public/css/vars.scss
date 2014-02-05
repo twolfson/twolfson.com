@@ -15,8 +15,10 @@ $off-black: #1A1A1A;
 /* TODO: Add CSS optimizer to build chain (perfect use case perceptual diffs) */
 /* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
 /* TODO: Find out what colors these are and 2-color scheme it up */
-$link-color: #0075D3;
-$link-hover-color: #3972ED;
+// $link-color: #0075D3;
+// $link-hover-color: #3972ED;
+$link-color: $blue;
+$link-hover-color: $aqua;
 $text-color: $off-black;
 
 /* Background variants */
