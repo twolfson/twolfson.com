@@ -2571,22 +2571,6 @@ html.flexbox {
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
-/* Prettier Links */
-a {
-  transition: color .3s ease-in-out; }
-
-a:link {
-  color: #0074d9; }
-
-a:visited {
-  color: #b10dc9; }
-
-a:hover {
-  color: #7fdbff; }
-
-a:active {
-  color: #ff851b; }
-
 body {
   color: #1a1a1a; }
 
@@ -2648,17 +2632,17 @@ a,
   .link:visited,
   .link--underline,
   .link--underline:visited {
-    color: #0074d9; }
+    color: #0075d3; }
 
 .link--active, a:hover,
 .link:hover,
 .link--underline:hover, .link--hover-only:hover {
-  color: #7fdbff;
+  color: #3972ed;
   text-decoration: underline; }
 
 .link--underline:hover {
   text-decoration: none;
-  border-bottom: 1px solid #7fdbff; }
+  border-bottom: 1px solid #3972ed; }
 
 .link--hidden, .link--hidden:visited, .link--hidden:hover {
   text-decoration: none; }

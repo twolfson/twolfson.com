@@ -75,12 +75,6 @@ module.exports = function (grunt) {
         'public/images/sprites_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
     },
     'curl-dir': {
-      // CSS colors
-      'public/css/colors': [
-        'https://raw.github.com/mrmrs/colors/8363c0a290539740b2b87f92f761ea048b0aa13d/sass/_links.scss',
-        'https://raw.github.com/mrmrs/colors/8363c0a290539740b2b87f92f761ea048b0aa13d/sass/_variables.scss'
-      ],
-
       // SCSS mixins
       'public/css/mixins': [
         'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
