@@ -2655,9 +2655,7 @@ button {
 
 #global-wrapper {
   margin: 0 auto;
-  background: white;
-  -webkit-box-shadow: 0 0 20px black;
-  box-shadow: 0 0 20px black; }
+  background: white; }
 
 .row--bordered, .row--bordered--ends {
   border-color: #666666;
