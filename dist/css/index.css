@@ -2572,7 +2572,6 @@ html.flexbox {
     width: 1px !important; } }
 /* endif */
 body {
-  background: url("/public/images/white_plaster.png");
   color: #1a1a1a; }
 
 pre {
@@ -2633,17 +2632,17 @@ a,
   .link:visited,
   .link--underline,
   .link--underline:visited {
-    color: #436dc4; }
+    color: #325192; }
 
 .link--active, a:hover,
 .link:hover,
 .link--underline:hover, .link--hover-only:hover {
-  color: #4f46c4;
+  color: #3972ed;
   text-decoration: underline; }
 
 .link--underline:hover {
   text-decoration: none;
-  border-bottom: 1px solid #4f46c4; }
+  border-bottom: 1px solid #3972ed; }
 
 .link--hidden, .link--hidden:visited, .link--hidden:hover {
   text-decoration: none; }
@@ -2656,12 +2655,12 @@ button {
 
 #global-wrapper {
   margin: 0 auto;
-  background: #b9cfff;
+  background: white;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black; }
 
 .row--bordered, .row--bordered--ends {
-  border-color: #8882d5;
+  border-color: #666666;
   border-style: solid;
   border-width: 2px; }
 
@@ -2672,12 +2671,12 @@ button {
 
 /* TODO: Rename these to normal and alt */
 .row--light {
-  background: #c0bbff;
-  border-color: #8882d5; }
+  background: white;
+  border-color: #666666; }
 
 .row--dark {
-  background: #b9cfff;
-  border-color: #7e9ad5; }
+  background: white;
+  border-color: #666666; }
 
 /* Navbar styling */
 /* TODO: Relocate these */
