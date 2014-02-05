@@ -61,6 +61,7 @@ a,
 .link--underline {
   font-weight: bold;
   text-decoration: none;
+  @include transition('color 0.3s ease-in-out');
 
   &,
   &:visited {
