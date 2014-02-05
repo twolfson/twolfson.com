@@ -2576,7 +2576,10 @@ body {
 
 pre {
   white-space: pre;
-  background: ghostwhite; }
+  background: #f7f7f7;
+  border: 1px solid #dddddd; }
+  pre code {
+    border: 0; }
 
 code {
   font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -2605,7 +2608,7 @@ blockquote {
 blockquote,
 .aside {
   color: #525252;
-  background: #fefefe;
+  background: #f2f2f2;
   border-left: 5px solid #a4a0a2;
   padding-left: 9px;
   padding-right: 9px; }
@@ -2873,7 +2876,7 @@ pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: ghostwhite; }
+  background: #f7f7f7; }
 
 pre .comment,
 pre .template_comment,
@@ -2978,7 +2981,8 @@ pre .chunk {
 code {
   padding-left: 9px;
   padding-right: 9px;
-  background: ghostwhite; }
+  background: #f7f7f7;
+  border: 1px solid #dddddd; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {

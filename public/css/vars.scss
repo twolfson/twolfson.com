@@ -63,12 +63,13 @@ $brand-color: inherit;
 
 // Setup for highlight-extensions
 $code-inline-spacing: 9px;
-$code-bg: #f8f8ff;
+$code-bg: #F7F7F7;
+$code-border: #DDDDDD;
 
 // A little muted to reduce emphasis
 $aside-color: #525252;
-// A little lighter than code (sod inner blocks can be distinguished)
-$aside-bg: #FEFEFE;
+// A little lighter than code (so inner blocks can be distinguished)
+$aside-bg: #F2F2F2;
 // A little darker than $code-bg
 $aside-margin-bg: #A4A0A2;
 $aside-inline-spacing: 9px;
