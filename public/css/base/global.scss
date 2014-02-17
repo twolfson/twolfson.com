@@ -3,6 +3,8 @@ body {
   color: $text-color;
 }
 
+// TODO: Verify that `em` is appropriate for code (I think it is)
+
 // Style all `pre` blocks to act as code blocks
 pre {
   white-space: pre;
