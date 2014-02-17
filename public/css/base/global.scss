@@ -209,7 +209,13 @@ button {
 input,
 textarea {
   padding: 6px;
+  @include transition(border-color 0.3s ease-in-out);
+
+  &:focus {
+    border-color: $dark-border-color;
+  }
 }
+
 
 // Consistently style all <hr>s
 // DEV: Copy/pasted from inuit/_rules.scss

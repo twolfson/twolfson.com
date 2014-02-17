@@ -19,6 +19,7 @@ $text-color: $off-black;
 /* Background variants */
 $base-background: #FDFDFD;
 $base-border-color: #666;
+$dark-border-color: #444;
 
 $feature-bg: #B4E8FF;
 $feature-bg-selected: #E2F6FF;
@@ -71,7 +72,7 @@ $aside-inline-spacing: 9px;
 $aside-margin-width: 5px;
 
 $btn-bg: #F2F2F2;
-$btn-bg--hover: #DBDBDB;
+$btn-bg--hover: #E7E7E7;
 
 // TODO: Verify <aside> is properly sized and maybe a little muted
 // TODO: It should definitely have a white bg with the | on the left

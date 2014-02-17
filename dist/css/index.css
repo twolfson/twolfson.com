@@ -2715,7 +2715,7 @@ button {
 
 .btn:hover,
 .btn:active {
-  background: #dbdbdb; }
+  background: #e7e7e7; }
 
 .btn--medium {
   padding: 8px 18px; }
@@ -2725,7 +2725,15 @@ button {
 
 input,
 textarea {
-  padding: 6px; }
+  padding: 6px;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  -ms-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out; }
+  input:focus,
+  textarea:focus {
+    border-color: #444444; }
 
 hr {
   color: #1a1a1a;
