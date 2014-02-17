@@ -232,3 +232,11 @@ hr {
   margin-bottom: $base-spacing-unit - 1px;
   margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
 }
+
+.project {
+  @include transition(background 0.3s ease-in-out);
+
+  &:hover {
+    background: #F4F4F4;
+  }
+}

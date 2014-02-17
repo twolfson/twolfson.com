@@ -2736,6 +2736,15 @@ hr {
   margin-bottom: 26px;
   margin-bottom: 1.44444rem; }
 
+.project {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out; }
+  .project:hover {
+    background: #F4F4F4; }
+
 /*
 Sticky Footer Solution
 by Steve Hatcher
