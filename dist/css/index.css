@@ -10,13 +10,7 @@
  * using your own, so you can completely modify how inuit.css works without ever
  * having to alter the framework itself.
  */
-/* TODO: Add CSS optimizer to build chain (perfect use case perceptual diffs) */
-/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
-/* TODO: Find out what colors these are and 2-color scheme it up */
 /* Background variants */
-body {
-  background: #f3f3f3; }
-
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -2575,6 +2569,7 @@ html.flexbox {
     width: 1px !important; } }
 /* endif */
 body {
+  background: #fdfdfd;
   color: #1a1a1a; }
 
 pre {
@@ -2665,8 +2660,7 @@ button {
   cursor: pointer; }
 
 #global-wrapper {
-  margin: 0 auto;
-  background: #f3f3f3; }
+  margin: 0 auto; }
 
 .row--bordered, .row--bordered--ends {
   border-color: #666666;
@@ -2678,15 +2672,7 @@ button {
   border-top-width: 2px;
   border-bottom-width: 2px; }
 
-/* TODO: Rename these to normal and alt */
-.row--light {
-  background: #f3f3f3;
-  border-color: #666666; }
-
-.row--dark {
-  background: #f3f3f3;
-  border-color: #666666; }
-
+/* TODO: Remove these from HTML */
 /* Navbar styling */
 /* TODO: Relocate these */
 .nav {

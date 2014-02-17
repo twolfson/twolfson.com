@@ -12,22 +12,13 @@
 
 $off-black: #1A1A1A;
 
-/* TODO: Add CSS optimizer to build chain (perfect use case perceptual diffs) */
-/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
-/* TODO: Find out what colors these are and 2-color scheme it up */
 $link-color: #1C79C4;
 $link-hover-color: #3972ED;
 $text-color: $off-black;
 
 /* Background variants */
-$dark-bg: #F3F3F3;
-$dark-border: #666;
-$light-bg: $dark-bg;
-$light-border: #666;
-
-body {
-  background: $dark-bg;
-}
+$base-background: #FDFDFD;
+$base-border-color: #666;
 
 $feature-bg: #B4E8FF;
 $feature-bg-selected: #E2F6FF;

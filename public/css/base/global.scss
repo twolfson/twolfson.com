@@ -4,6 +4,7 @@
 // TODO: Fix up support-me page
 
 body {
+  background: $base-background;
   color: $text-color;
 }
 
@@ -121,11 +122,10 @@ button {
 
 #global-wrapper {
   margin: 0 auto;
-  background: $dark-bg;
 }
 
 .row--bordered {
-  border-color: $light-border;
+  border-color: $base-border-color;
   border-style: solid;
   border-width: $base-border-width;
 }
@@ -137,15 +137,10 @@ button {
   border-bottom-width: $base-border-width;
 }
 
-/* TODO: Rename these to normal and alt */
+/* TODO: Remove these from HTML */
 .row--light {
-  background: $light-bg;
-  border-color: $light-border;
 }
-
 .row--dark {
-  background: $dark-bg;
-  border-color: $dark-border;
 }
 
 /* Navbar styling */
