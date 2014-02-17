@@ -195,11 +195,6 @@ button {
 }
 
 // Personal beautons
-.btn--future {
-  @include linear-gradient(#FFF, #DDD);
-  border: 0;
-}
-
 .btn--medium {
   padding: 8px 18px;
 }

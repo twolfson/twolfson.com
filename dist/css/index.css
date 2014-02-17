@@ -2703,16 +2703,6 @@ button {
 .ignore-flow {
   position: absolute; }
 
-.btn--future {
-  background-color: white;
-  background-image: deprecated-webkit-gradient(linear, left top, left bottom, white, #dddddd);
-  background-image: -webkit-linear-gradient(top, white, #dddddd);
-  background-image: -moz-linear-gradient(top, white, #dddddd);
-  background-image: -ms-linear-gradient(top, white, #dddddd);
-  background-image: -o-linear-gradient(top, white, #dddddd);
-  background-image: linear-gradient(top, white, #dddddd);
-  border: 0; }
-
 .btn--medium {
   padding: 8px 18px; }
 
