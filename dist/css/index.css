@@ -2971,7 +2971,8 @@ code {
   padding-left: 9px;
   padding-right: 9px;
   background: #f7f7f7;
-  border: 1px solid #dddddd; }
+  border: 1px solid #dddddd;
+  font-size: 0.9em; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {
