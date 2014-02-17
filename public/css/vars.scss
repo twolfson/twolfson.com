@@ -20,10 +20,14 @@ $link-hover-color: #3972ED;
 $text-color: $off-black;
 
 /* Background variants */
-$dark-bg: #FFF;
+$dark-bg: #F3F3F3;
 $dark-border: #666;
-$light-bg: #FFF;
+$light-bg: $dark-bg;
 $light-border: #666;
+
+body {
+  background: $dark-bg;
+}
 
 $feature-bg: #B4E8FF;
 $feature-bg-selected: #E2F6FF;

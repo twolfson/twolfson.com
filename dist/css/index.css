@@ -14,6 +14,9 @@
 /* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
 /* TODO: Find out what colors these are and 2-color scheme it up */
 /* Background variants */
+body {
+  background: #f3f3f3; }
+
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -2663,7 +2666,7 @@ button {
 
 #global-wrapper {
   margin: 0 auto;
-  background: white; }
+  background: #f3f3f3; }
 
 .row--bordered, .row--bordered--ends {
   border-color: #666666;
@@ -2677,11 +2680,11 @@ button {
 
 /* TODO: Rename these to normal and alt */
 .row--light {
-  background: white;
+  background: #f3f3f3;
   border-color: #666666; }
 
 .row--dark {
-  background: white;
+  background: #f3f3f3;
   border-color: #666666; }
 
 /* Navbar styling */
