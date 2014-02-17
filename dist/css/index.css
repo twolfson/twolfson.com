@@ -32,6 +32,13 @@
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+.projects__section .row--dark,
+.projects__section .row--light {
+  transition: background 0.3s ease-in-out; }
+  .projects__section .row--dark:hover,
+  .projects__section .row--light:hover {
+    background: #F4F4F4; }
+
 /*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
