@@ -15,3 +15,10 @@ If you are vague on the inner workings on of [gulp][], it is [node's vanilla str
 
 [node-streams]: http://nodejs.org/api/stream.html
 [vinyl]: https://github.com/wearefractal/vinyl
+
+This [slideshow][gulp-slideshow] by [@contra][], one of gulp's authors, and explains this concept nicely.
+
+[gulp-slideshow]: http://slid.es/contra/gulp
+[@contra]: https://twitter.com/eschoff
+
+<iframe src="//slid.es/contra/gulp/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
