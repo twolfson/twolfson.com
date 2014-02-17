@@ -134,18 +134,3 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
-
-// TODO: Add hover transition to buttons
-
-// TODO: Relocate this as a class
-.projects__section {
-  .row--dark,
-  .row--light {
-    // TODO: Use include
-    transition: background 0.3s ease-in-out;
-
-    &:hover {
-      background: #F4F4F4;
-    }
-  }
-}

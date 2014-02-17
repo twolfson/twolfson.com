@@ -196,6 +196,7 @@ button {
 
 // Personal beautons
 .btn {
+  @include transition(background 0.3s ease-in-out);
   border-color: $base-border-color;
   border-style: solid;
   border-width: $base-border-width;

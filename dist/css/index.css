@@ -32,13 +32,6 @@
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
-.projects__section .row--dark,
-.projects__section .row--light {
-  transition: background 0.3s ease-in-out; }
-  .projects__section .row--dark:hover,
-  .projects__section .row--light:hover {
-    background: #F4F4F4; }
-
 /*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
@@ -2711,6 +2704,11 @@ button {
   position: absolute; }
 
 .btn {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   border-color: #666666;
   border-style: solid;
   border-width: 2px;
