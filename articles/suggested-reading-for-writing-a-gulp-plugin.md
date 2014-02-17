@@ -25,13 +25,13 @@ This [slideshow][gulp-slideshow] by [@contra][], one of gulp's authors, and expl
 
 <iframe src="//slid.es/contra/gulp/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-If you are shaky on your knowledge of streams, some good reading/activies are:
+If you are shaky on your knowledge of streams, some good references are:
 
 - http://nodeschool.io/
 - https://github.com/substack/stream-handbook
 - Write a streaming library outside of gulp
 
-If you are uncertain of where to get started/are stuck, try reading some other gulp plugins.
+If you are uncertain of where to get started/are stuck, try reading some other gulp plugins:
 
 - https://github.com/wearefractal/gulp-concat
 - https://github.com/sindresorhus/gulp-rev
