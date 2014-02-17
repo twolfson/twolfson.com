@@ -195,6 +195,18 @@ button {
 }
 
 // Personal beautons
+.btn {
+  border-color: $base-border-color;
+  border-style: solid;
+  border-width: $base-border-width;
+  background: $btn-bg;
+}
+
+.btn:hover,
+.btn:active {
+  background: $btn-bg--hover;
+}
+
 .btn--medium {
   padding: 8px 18px;
 }
