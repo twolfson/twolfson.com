@@ -4,18 +4,15 @@
       articles.forEach(function (article, i) {
     %>
       <div class="cluster--aggressive">
-        <p class="flush--bottom">
-          <small><%= article.dateStr %></small>
+        <p class="muted">
+          <!-- <small><%= article.dateStr %></small> -->
+          <%= article.dateStr %>
         </p>
-        <!-- TODO: Remove inline style -->
-        <h3 title="<%= article.title %>" style="line-height: 1.2em;"><a href="<%= article.url %>"><%= article._title || article.title %></a></h3>
+        <h3 title="<%= article.title %>"><a href="<%= article.url %>"><%= article._title || article.title %></a></h3>
         <div>
           <% /* Summary is in markdown and already in a <p> */ %>
           <%- article.summary %>
         </div>
-        <p>
-          <a href="<%= article.url %>">Reading time: <%= article.readingTime %> <%= article.readingTime === 1 ? 'minute' : 'minutes' %></a>
-        </p>
       </div>
     <% }); %>
   </div>
