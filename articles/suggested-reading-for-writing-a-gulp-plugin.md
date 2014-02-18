@@ -2,7 +2,7 @@
   "title": "Suggested reading for writing a gulp plugin",
   "author": "Todd Wolfson",
   "date": "2014-02-17T03:14:08.194-08:00",
-  "keywords": "sublime, sublime text, plugin, test",
+  "keywords": "gulp, gulpplugin, gulp plugin, resources, references, articles",
   "summary": "Overview of good resources for creating a [gulp](http://gulpjs.com/) plugin"
 }
 
