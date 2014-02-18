@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.2.0 - Wrote "Suggested reading for writing a gulp plugin" article
+
 3.1.0 - Moved from `express.bodyParser` to `express.urlencoded` to fix error messages
 
 3.0.0 - Moved to white color theme:
