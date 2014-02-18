@@ -10,9 +10,6 @@
  * using your own, so you can completely modify how inuit.css works without ever
  * having to alter the framework itself.
  */
-/* TODO: Add CSS optimizer to build chain (perfect use case perceptual diffs) */
-/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
-/* TODO: Find out what colors these are and 2-color scheme it up */
 /* Background variants */
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
@@ -2572,12 +2569,15 @@ html.flexbox {
     width: 1px !important; } }
 /* endif */
 body {
-  background: url("/public/images/white_plaster.png");
+  background: #fdfdfd;
   color: #1a1a1a; }
 
 pre {
   white-space: pre;
-  background: ghostwhite; }
+  background: #f7f7f7;
+  border: 1px solid #dddddd; }
+  pre code {
+    border: 0; }
 
 code {
   font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -2606,7 +2606,7 @@ blockquote {
 blockquote,
 .aside {
   color: #525252;
-  background: #fefefe;
+  background: #f2f2f2;
   border-left: 5px solid #a4a0a2;
   padding-left: 9px;
   padding-right: 9px; }
@@ -2627,23 +2627,28 @@ a,
 .link,
 .link--underline {
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; }
   a, a:visited,
   .link,
   .link:visited,
   .link--underline,
   .link--underline:visited {
-    color: #436dc4; }
+    color: #1c79c4; }
 
 .link--active, a:hover,
 .link:hover,
 .link--underline:hover, .link--hover-only:hover {
-  color: #4f46c4;
+  color: #3972ed;
   text-decoration: underline; }
 
 .link--underline:hover {
   text-decoration: none;
-  border-bottom: 1px solid #4f46c4; }
+  border-bottom: 1px solid #3972ed; }
 
 .link--hidden, .link--hidden:visited, .link--hidden:hover {
   text-decoration: none; }
@@ -2655,13 +2660,10 @@ button {
   cursor: pointer; }
 
 #global-wrapper {
-  margin: 0 auto;
-  background: #b9cfff;
-  -webkit-box-shadow: 0 0 20px black;
-  box-shadow: 0 0 20px black; }
+  margin: 0 auto; }
 
 .row--bordered, .row--bordered--ends {
-  border-color: #8882d5;
+  border-color: #666666;
   border-style: solid;
   border-width: 2px; }
 
@@ -2669,15 +2671,6 @@ button {
   border-width: 0;
   border-top-width: 2px;
   border-bottom-width: 2px; }
-
-/* TODO: Rename these to normal and alt */
-.row--light {
-  background: #c0bbff;
-  border-color: #8882d5; }
-
-.row--dark {
-  background: #b9cfff;
-  border-color: #7e9ad5; }
 
 /* Navbar styling */
 /* TODO: Relocate these */
@@ -2709,15 +2702,20 @@ button {
 .ignore-flow {
   position: absolute; }
 
-.btn--future {
-  background-color: white;
-  background-image: deprecated-webkit-gradient(linear, left top, left bottom, white, #dddddd);
-  background-image: -webkit-linear-gradient(top, white, #dddddd);
-  background-image: -moz-linear-gradient(top, white, #dddddd);
-  background-image: -ms-linear-gradient(top, white, #dddddd);
-  background-image: -o-linear-gradient(top, white, #dddddd);
-  background-image: linear-gradient(top, white, #dddddd);
-  border: 0; }
+.btn {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 2px;
+  background: #f2f2f2; }
+
+.btn:hover,
+.btn:active {
+  background: #e7e7e7; }
 
 .btn--medium {
   padding: 8px 18px; }
@@ -2727,7 +2725,15 @@ button {
 
 input,
 textarea {
-  padding: 6px; }
+  padding: 6px;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  -ms-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out; }
+  input:focus,
+  textarea:focus {
+    border-color: #444444; }
 
 hr {
   color: #1a1a1a;
@@ -2871,7 +2877,7 @@ pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: ghostwhite; }
+  background: #f7f7f7; }
 
 pre .comment,
 pre .template_comment,
@@ -2976,7 +2982,9 @@ pre .chunk {
 code {
   padding-left: 9px;
   padding-right: 9px;
-  background: ghostwhite; }
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  font-size: 0.9em; }
 
 /** Container for document. It should always have gutters on the left and right **/
 .container {

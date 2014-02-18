@@ -1,5 +1,5 @@
 body {
-  background: url('/public/images/white_plaster.png');
+  background: $base-background;
   color: $text-color;
 }
 
@@ -7,6 +7,11 @@ body {
 pre {
   white-space: pre;
   background: $code-bg;
+  border: 1px solid $code-border;
+
+  code {
+    border: 0;
+  }
 }
 
 code {
@@ -61,6 +66,7 @@ a,
 .link--underline {
   font-weight: bold;
   text-decoration: none;
+  @include transition(color 0.3s ease-in-out);
 
   &,
   &:visited {
@@ -111,12 +117,10 @@ button {
 
 #global-wrapper {
   margin: 0 auto;
-  background: $dark-bg;
-  @include box-shadow(0 0 20px #000000);
 }
 
 .row--bordered {
-  border-color: $light-border;
+  border-color: $base-border-color;
   border-style: solid;
   border-width: $base-border-width;
 }
@@ -126,17 +130,6 @@ button {
   border-width: 0;
   border-top-width: $base-border-width;
   border-bottom-width: $base-border-width;
-}
-
-/* TODO: Rename these to normal and alt */
-.row--light {
-  background: $light-bg;
-  border-color: $light-border;
-}
-
-.row--dark {
-  background: $dark-bg;
-  border-color: $dark-border;
 }
 
 /* Navbar styling */
@@ -191,9 +184,17 @@ button {
 }
 
 // Personal beautons
-.btn--future {
-  @include linear-gradient(#FFF, #DDD);
-  border: 0;
+.btn {
+  @include transition(background 0.3s ease-in-out);
+  border-color: $base-border-color;
+  border-style: solid;
+  border-width: $base-border-width;
+  background: $btn-bg;
+}
+
+.btn:hover,
+.btn:active {
+  background: $btn-bg--hover;
 }
 
 .btn--medium {
@@ -208,7 +209,13 @@ button {
 input,
 textarea {
   padding: 6px;
+  @include transition(border-color 0.3s ease-in-out);
+
+  &:focus {
+    border-color: $dark-border-color;
+  }
 }
+
 
 // Consistently style all <hr>s
 // DEV: Copy/pasted from inuit/_rules.scss

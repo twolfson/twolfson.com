@@ -12,7 +12,7 @@ marked.Parser.prototype.tok = function () {
   if (this.token.type === 'heading') {
     var slug = this.token.text.toLowerCase().replace(/[^\w]+/g, '-');
     return '<h'
-          + (this.token.depth + 1)
+          + (this.token.depth + 2)
           + ' id="'
           + slug
           + '">'
@@ -60,22 +60,6 @@ articles.forEach(function (article) {
 });
 
 // TODO: Add hidden projects that can be linked to articles (e.g. doubleshot for bdd-and-the-future)
-
-// Calculate reading speed for each article
-// DEV: Wiki says 250 words per minute so this is very generous timing
-// DEV: Currently, this is 2 minutes for free will and 9 minutes for develop faster
-var READING_SPEED = 100; // words per minute
-articles.forEach(function (article) {
-  // TODO: Make this more efficient by iterating rather than splitting
-  var txtContent = unhtml(article.content),
-      words = txtContent.split(/\s+/g).filter(function (word) {
-        // Remove strings without alphanumeric characters (e.g. `+`)
-        return word.match(/[A-Za-z0-9]/);
-      }),
-      wordCount = words.length,
-      readingTime = Math.round(wordCount / READING_SPEED);
-  article.readingTime = Math.max(readingTime, 1);
-});
 
 // Construct objects to look up articles and projects by
 // TODO: This is not the correct place to map relationships as projects can never read articles now =(

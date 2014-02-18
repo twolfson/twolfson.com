@@ -3,4 +3,6 @@ code {
   padding-left: $code-inline-spacing;
   padding-right: $code-inline-spacing;
   background: $code-bg;
+  border: 1px solid $code-border;
+  font-size: 0.9em;
 }

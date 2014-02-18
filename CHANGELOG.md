@@ -1,4 +1,14 @@
 # twolfson.com changelog
+3.1.0 - Moved from `express.bodyParser` to `express.urlencoded` to fix error messages
+
+3.0.0 - Moved to white color theme:
+
+- Removed row coloring
+- Added transition colors to links, inputs, and textareas
+- Made support page buttons consistent with contact form
+- Removed less_css folder
+- Removed white plaster image
+
 2.23.0 - Updated "Current focus"
 
 2.22.0 - Added article for "Low tech dependency management"

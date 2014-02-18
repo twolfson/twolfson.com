@@ -1,23 +1,15 @@
 <div id="projects" class="push--bottom">
   <div>
     <div class="projects__section">
-      <%
-        var _rowCounter = 1;
-        function getRowClass() {
-          var klass = _rowCounter % 2 ? "row--dark" : "row--light";
-          _rowCounter += 1;
-          return klass;
-        }
-      %>
       <div>
         <% /* TODO: Is there a pattern for half-top/half-bottom */ %>
         <% /* TODO: When cauterizing patterning, search for half-ends too */ %>
-        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Scripts</h2>
+        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Scripts</h2>
       </div>
       <%
         projects.scripts.forEach(function (item) {
       %>
-      <div class="<%=getRowClass()%>">
+      <div>
         <%- partial('projects/script', item) %>
       </div>
       <%
@@ -26,7 +18,7 @@
     </div>
     <div class="projects__section">
       <div>
-        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Competitions</h2>
+        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Competitions</h2>
       </div>
       <%
         var competitions = projects.competitions,
@@ -40,7 +32,7 @@
               view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
-          <div class="<%=getRowClass()%>">
+          <div>
             <div class="container__row">
         <% } %>
               <%- partial(view, item) %>
@@ -54,12 +46,12 @@
     </div>
     <div class="projects__section">
       <div>
-        <h2 class="text--center <%=getRowClass()%> soft-half--top soft-half--bottom flush--bottom">Contributions</h2>
+        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Contributions</h2>
       </div>
       <%
         projects.contributions.forEach(function (item) {
       %>
-      <div class="<%=getRowClass()%>">
+      <div>
         <%- partial('projects/script', item) %>
       </div>
       <%

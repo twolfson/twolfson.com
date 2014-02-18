@@ -12,18 +12,14 @@
 
 $off-black: #1A1A1A;
 
-/* TODO: Add CSS optimizer to build chain (perfect use case perceptual diffs) */
-/* Color Scheme: http://colorschemedesigner.com/#3K51Jhp--l2Sy */
-/* TODO: Find out what colors these are and 2-color scheme it up */
-$link-color: #436DC4;
-$link-hover-color: #4F46C4;
+$link-color: #1C79C4;
+$link-hover-color: #3972ED;
 $text-color: $off-black;
 
 /* Background variants */
-$dark-bg: #B9CFFF;
-$dark-border: #7E9AD5;
-$light-bg: #C0BBFF;
-$light-border: #8882D5;
+$base-background: #FDFDFD;
+$base-border-color: #666;
+$dark-border-color: #444;
 
 $feature-bg: #B4E8FF;
 $feature-bg-selected: #E2F6FF;
@@ -63,16 +59,20 @@ $brand-color: inherit;
 
 // Setup for highlight-extensions
 $code-inline-spacing: 9px;
-$code-bg: #f8f8ff;
+$code-bg: #F7F7F7;
+$code-border: #DDDDDD;
 
 // A little muted to reduce emphasis
 $aside-color: #525252;
-// A little lighter than code (sod inner blocks can be distinguished)
-$aside-bg: #FEFEFE;
+// A little lighter than code (so inner blocks can be distinguished)
+$aside-bg: #F2F2F2;
 // A little darker than $code-bg
 $aside-margin-bg: #A4A0A2;
 $aside-inline-spacing: 9px;
 $aside-margin-width: 5px;
+
+$btn-bg: #F2F2F2;
+$btn-bg--hover: #E7E7E7;
 
 // TODO: Verify <aside> is properly sized and maybe a little muted
 // TODO: It should definitely have a white bg with the | on the left
