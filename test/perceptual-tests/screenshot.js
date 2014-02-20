@@ -33,8 +33,15 @@ if (!imgDest) {
 var page = webpage.create();
 page.onError = errorFn;
 page.open(url, function (status) {
+  // If the status is bad, throw an error
+
+  // Wait for the page to load
+  console.log(page.evaluate(function () {
+    return document.body.innerHTML.slice(0, 10);
+  }));
+
   // Screenshot the page
-  page.render(imgDest);
+  console.log('render', page.render(imgDest));
 
   // Leave the program
   phantom.exit();
