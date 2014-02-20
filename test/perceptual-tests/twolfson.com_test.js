@@ -18,7 +18,9 @@ try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
 // TODO: Optimize space via tarballing expected files?
 var browsers = ['phantomjs'],
     baseUrl = 'http://localhost:8080',
-    urls = require('./urls');
+    // DEV: js-yaml is required to make this require work properly
+    yml = require('js-yaml'),
+    urls = require('./urls.yml');
 
 // For each of the URLs
 async.map(urls, function (_url, done) {
