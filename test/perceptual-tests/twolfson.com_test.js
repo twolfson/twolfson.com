@@ -2,7 +2,8 @@
 var fs = require('fs'),
     exec = require('child_process').exec,
     async = require('async'),
-    imageDiff = require('image-diff');
+    imageDiff = require('image-diff'),
+    shellQuote = require('shell-quote');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -30,7 +31,9 @@ async.map(urls, function (_url, done) {
       escapedUrl = encodeURIComponent(url),
       filepath = '/' + escapedUrl + '.png',
       actualImg = actualScreenshots + filepath;
-  exec('phantomjs screenshot.js ' + url + ' ' + actualImg, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
+  var phantomJsCmd = shellQuote.quote([('phantomjs', 'screenshot.js', url, actualImg]);
+  console.log(phantomJsCmd);
+  exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
     if (stdout) { console.log('STDOUT: ', stdout); }
@@ -42,6 +45,7 @@ async.map(urls, function (_url, done) {
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
 
+    console.log(actualImg);
     imageDiff({
       actualImage: actualImg,
       expectedImage: expectedScreenshots + filepath,
