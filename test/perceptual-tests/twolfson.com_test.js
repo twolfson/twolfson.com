@@ -1,10 +1,7 @@
 // Load in dependencies
 var fs = require('fs'),
-    yml = require('js-yaml'),
     exec = require('child_process').exec,
-    async = require('async'),
-    slug = require('slug'),
-    TempFile = require('temporary/lib/file');
+    async = require('async');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -23,7 +20,7 @@ var browsers = ['phantomjs'],
     urls = require('./urls');
 
 // For each of the URLs
-async.map(urls, function (_url, cb) {
+async.map(urls, function (_url, done) {
   // TODO: mocha-ify this
   // Screenshot the webpage
   var url = baseUrl + _url,
@@ -38,155 +35,13 @@ async.map(urls, function (_url, cb) {
     if (stdout) { console.log('STDOUT: ', stdout); }
 
     // If there is an error, callback with it
-    if (err) { return cb(err); }
+    if (err) { return done(err); }
 
     // TODO: Emit an event instead
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
 
-    // If the expectedImg exists, diff the images
-    if (fs.existsSync(expectedImg)) {
-      // Get the sizes of the images
-      async.parallel([
-        function getActualSize (cb) {
-          exec('identify ' + actualImg, cb);
-        },
-        function getExpectedSize (cb) {
-          exec('identify ' + expectedImg, cb);
-        }
-      ], function processResults(err, results) {
-        // If there was an error, callback
-        if (err) { return cb(err); }
 
-        // Process the image sizes
-        var actualStdout = results[0][0],
-            actualSize = actualStdout.match(/(\d+)x(\d+)/),
-            actualWidth = +actualSize[1],
-            actualHeight = +actualSize[2],
-            expectedStdout = results[1][0],
-            expectedSize = expectedStdout.match(/(\d+)x(\d+)/),
-            expectedWidth = +expectedSize[1],
-            expectedHeight = +expectedSize[2];
-
-        // If the sizes are different
-        if (actualWidth !== expectedWidth || actualHeight !== expectedHeight) {
-          // Find the maximum dimensions
-          var width = Math.max(actualWidth, expectedWidth),
-              height = Math.max(actualHeight, expectedHeight),
-              geometry = width + 'x' + height + '+0+0';
-
-          // Resize both images
-          async.parallel([
-            function resizeActualImage (cb) {
-              // Save the original file path and generate a temporary file
-              var origFile = actualImg,
-                  tmpFile = new TempFile();
-
-              // Save over the original path
-              actualImg = tmpFile.path + '.png';
-
-              // Crop our file
-              var cmd = [
-                    'convert',
-                    origFile,
-
-                    // Fill in new space with white background
-                    '-bordercolor white',
-                    '-border ' + (width - actualWidth) +
-                      'x' + (height - actualHeight),
-
-                    // Anchor image to upper-left
-                    '-gravity SouthEast',
-
-                    // Specify new image size
-                    '-crop ' + geometry,
-
-                    // Specify the image location
-                    actualImg
-                  ].join(' ');
-              exec(cmd, cb);
-            },
-            function resizeExpectedImage (cb) {
-              // Save the original file path and generate a temporary file
-              var origFile = expectedImg,
-                  tmpFile = new TempFile();
-
-              // Save over the original path
-              expectedImg = tmpFile.path + '.png';
-
-              // Crop our file
-              var cmd = [
-                    'convert',
-                    origFile,
-
-                    // Fill in new space with white background
-                    '-bordercolor white',
-                    '-border ' + (width - expectedWidth) +
-                      'x' + (height - expectedHeight),
-
-                    // Anchor image to upper-left
-                    '-gravity SouthEast',
-
-                    // Specify new image size
-                    '-crop ' + geometry,
-
-                    // Specify the image location
-                    expectedImg
-                  ].join(' ');
-              exec(cmd, cb);
-            }
-          ], getDiff);
-        } else {
-        // Otherwise, get the diff
-          getDiff();
-        }
-
-        // TODO: I hate this file. Very un-reusable.
-        function getDiff(err) {
-          // If there was an error, callback with it
-          if (err) { return cb(err); }
-
-          // Otherwise, diff the images
-          var diffCmd = [
-                'compare',
-                '-verbose',
-                '-metric RMSE',
-                '-highlight-color RED',
-                '-compose Src',
-                actualImg,
-                expectedImg,
-                diffImg
-              ].join(' ');
-          exec(diffCmd, processDiff);
-        }
-      });
-    } else {
-    // Otherwise, save the new image as the diff
-      fs.writeFileSync(diffImg, fs.readFileSync(actualImg, 'binary'),'binary');
-      processDiff(null, '', 'New image created!');
-    }
-
-    function processDiff(err, stdout, stderr) {
-      // If stdout exists, log it
-      if (stdout) { console.log('STDOUT: ', stdout); }
-
-      // If there is an error, callback with it
-      if (err && !stderr) { return cb(err); }
-
-      // If they don't match, create an error
-      // TODO: This will become an assert
-      var result = {
-            url: url,
-            pass: true,
-            stderr: stderr
-          };
-      if (stderr.indexOf('all: 0 (0)') === -1) {
-        result.pass = false;
-      }
-
-      // Callback with our error
-      cb(null, result);
-    }
   });
 }, function (err, results) {
   // If there was an error, log it and leave
