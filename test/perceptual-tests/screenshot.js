@@ -39,7 +39,6 @@ function retry(fn, times, cb) {
       cb(new Error('Retry exceeded ' + times));
     } else {
       i += 1;
-      console.log('retrying');
       setTimeout(retryFn, 100);
     }
   }
