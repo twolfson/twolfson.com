@@ -29,20 +29,42 @@ if (!imgDest) {
   throw new Error('No img destination was specified.');
 }
 
+// Create helper function to retry
+function retry(fn, times, cb) {
+  var i = 0;
+  function retryFn() {
+    if (fn()) {
+      cb();
+    } else if (i > times) {
+      cb(new Error('Retry exceeded ' + times));
+    } else {
+      i += 1;
+      console.log('retrying');
+      setTimeout(retryFn, 100);
+    }
+  }
+  retryFn();
+}
+
 // Load the compose webpage
 var page = webpage.create();
 page.onError = errorFn;
 page.open(url, function (status) {
   // If the status is bad, throw an error
+  if (status !== 'success') {
+    throw new Error('"' + url + '" opened with bad status: "' + status + '"');
+  }
 
-  // Wait for the page to load
-  console.log(page.evaluate(function () {
-    return document.body.innerHTML.slice(0, 10);
-  }));
+  // Wait for render to work
+  retry(function renderPage () {
+    return page.render(imgDest);
+  }, 10, function handleError (err) {
+    // If there was an error, throw it
+    if (err) {
+      throw err;
+    }
 
-  // Screenshot the page
-  console.log('render', page.render(imgDest));
-
-  // Leave the program
-  phantom.exit();
+    // Leave the program
+    phantom.exit();
+  });
 });
