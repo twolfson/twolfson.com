@@ -1,7 +1,8 @@
 // Load in dependencies
 var fs = require('fs'),
     exec = require('child_process').exec,
-    async = require('async');
+    async = require('async'),
+    imageDiff = require('image-diff');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -26,9 +27,7 @@ async.map(urls, function (_url, done) {
   var url = baseUrl + _url,
       escapedUrl = encodeURIComponent(url),
       filepath = '/' + escapedUrl + '.png',
-      expectedImg = expectedScreenshots + filepath,
-      actualImg = actualScreenshots + filepath,
-      diffImg = screenshotDiffs + filepath;
+      actualImg = actualScreenshots + filepath;
   exec('phantomjs screenshot.js ' + url + ' ' + actualImg, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
@@ -41,7 +40,20 @@ async.map(urls, function (_url, done) {
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
 
+    imageDiff({
+      actualImage: actualImg,
+      expectedImage: expectedScreenshots + filepath,
+      diffImage: screenshotDiffs + filepath
+    }, function handleDiffResult (err, imagesAreSame) {
+      // If there was an error, callback with it
+      if (err) { return done(err); }
 
+      // Otherwise, callback with result
+      done(null, {
+        url: url,
+        pass: imagesAreSame
+      });
+    });
   });
 }, function (err, results) {
   // If there was an error, log it and leave
@@ -59,7 +71,6 @@ async.map(urls, function (_url, done) {
   if (failedResults.length > 0) {
     failedResults.forEach(function (result) {
       console.log('Failed result for ' + result.url);
-      // console.log(result.stderr);
     });
     process.exit(1);
   } else {
