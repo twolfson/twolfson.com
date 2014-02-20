@@ -32,7 +32,6 @@ async.map(urls, function (_url, done) {
       filepath = '/' + escapedUrl + '.png',
       actualImg = actualScreenshots + filepath;
   var phantomJsCmd = shellQuote.quote(['phantomjs', 'screenshot.js', url, actualImg]);
-  console.log(phantomJsCmd);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
@@ -45,7 +44,6 @@ async.map(urls, function (_url, done) {
     // Notify the user that we have screenshotted successfully
     console.log('Successfully screenshotted ' + url);
 
-    console.log(actualImg);
     imageDiff({
       actualImage: actualImg,
       expectedImage: expectedScreenshots + filepath,
