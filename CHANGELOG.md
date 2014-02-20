@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.3.0 - Removed all carriage returns. Fixes #23
+
 3.2.1 - Fixed up keywords for suggested reading article
 
 3.2.0 - Wrote "Suggested reading for writing a gulp plugin" article
