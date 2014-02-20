@@ -31,7 +31,7 @@ async.map(urls, function (_url, done) {
       escapedUrl = encodeURIComponent(url),
       filepath = '/' + escapedUrl + '.png',
       actualImg = actualScreenshots + filepath;
-  var phantomJsCmd = shellQuote.quote([('phantomjs', 'screenshot.js', url, actualImg]);
+  var phantomJsCmd = shellQuote.quote(['phantomjs', 'screenshot.js', url, actualImg]);
   console.log(phantomJsCmd);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
