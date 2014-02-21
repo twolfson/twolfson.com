@@ -3,6 +3,7 @@ var fs = require('fs'),
     exec = require('child_process').exec,
     async = require('async'),
     imageDiff = require('image-diff'),
+    rimraf = require('rimraf'),
     shellQuote = require('shell-quote');
 
 // Set up common variables
@@ -10,8 +11,12 @@ var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
     screenshotDiffs = __dirname + '/screenshot_diffs';
 
+// Clean up actual screenshots and diffs
+rimraf.sync(actualScreenshots);
+rimraf.sync(screenshotDiffs);
+
 // Ensure the screenshot diff directory exists
-try { fs.mkdirSync(screenshotDiffs); } catch (e) {}
+fs.mkdirSync(screenshotDiffs);
 
 // Set up unabstracted variables
 // TODO: Move browsers, urls into standalone files
