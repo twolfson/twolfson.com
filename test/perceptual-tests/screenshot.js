@@ -33,14 +33,18 @@ if (!imgDest) {
 function retry(fn, times, cb) {
   var i = 0;
   function retryFn() {
-    if (fn()) {
-      cb();
-    } else if (i > times) {
-      cb(new Error('Retry exceeded ' + times));
-    } else {
-      i += 1;
-      setTimeout(retryFn, 100);
-    }
+    fn(function (err, result) {
+      if (err) {
+        return cb(err);
+      } else if (result) {
+        cb();
+      } else if (i > times) {
+        cb(new Error('Retry exceeded ' + times));
+      } else {
+        i += 1;
+        setTimeout(retryFn, 100);
+      }
+    });
   }
   retryFn();
 }
@@ -55,31 +59,9 @@ page.open(url, function (status) {
   }
 
   // Wait for render to work
-  retry(function renderPage () {
-    // Determine if there are screencasts and they have loaded
-    var screencastsLoaded = page.evaluate(function () {
-      // Get the screencasts
-      var $screencasts = document.getElementsByClassName('screencast');
-
-      // If there are none, return
-      if ($screencasts.length === 0) {
-        return true;
-      }
-
-      // Otherwise, verify each has children
-      return [].every.call($screencasts, function ($screencast) {
-        return $screencast.childNodes.length;
-      });
-    });
-
-    // If there are and they have not, wait
-    console.log(screencastsLoaded);
-    if (!screencastsLoaded) {
-      return false;
-    }
-
+  retry(function renderPage (cb) {
     // Otherwise, attempt to render
-    return page.render(imgDest);
+    cb(null, page.render(imgDest));
   }, 10, function handleError (err) {
     // If there was an error, throw it
     if (err) {
