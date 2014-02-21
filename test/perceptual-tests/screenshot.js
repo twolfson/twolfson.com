@@ -62,13 +62,12 @@ page.open(url, function (status) {
       var $screencasts = document.getElementsByClassName('screencast');
 
       // If there are none, return
-      return $screencasts.length;
       if ($screencasts.length === 0) {
         return true;
       }
 
       // Otherwise, verify each has children
-      [].all.call($screencasts, function ($screencast) {
+      return [].every.call($screencasts, function ($screencast) {
         return $screencast.childNodes.length;
       });
     });
