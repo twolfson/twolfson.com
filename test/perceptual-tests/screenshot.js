@@ -33,6 +33,8 @@ if (!imgDest) {
 function retry(fn, times, cb) {
   var i = 0;
   function retryFn() {
+
+    console.log(page.evaluate(function () { return document.readyState; }));
     if (fn()) {
       cb();
     } else if (i > times) {
