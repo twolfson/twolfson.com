@@ -38,7 +38,7 @@ Writing README.md...OK
 Done, without errors.
 ```
 
-<p id="init-screencast"></p>
+<p id="init-screencast" class="screencast"></p>
 
 ## Tools used
 
@@ -60,7 +60,7 @@ I stick to tools that have `watch` or `hook` functionality so that human actions
 
 If the project has a build chain (e.g. minify JS, build CSS), then I place those tasks into a [Gruntfile][grunt] and behind a [watch task][watch] to run the task when files change.
 
-<p id="grunt-screencast"></p>
+<p id="grunt-screencast" class="screencast"></p>
 
 [grunt]: http://gruntjs.com/
 [watch]: https://github.com/gruntjs/grunt-contrib-watch
@@ -73,14 +73,14 @@ If the restart is a blocking action, then I use [listen-spawn][] to perform the 
 
 [listen-spawn]: https://github.com/twolfson/listen-spawn
 
-<p id="nodemon-screencast"></p>
+<p id="nodemon-screencast" class="screencast"></p>
 
 If the project needs a browser refresh to see changes, then I use [python-livereload][] with the [Firefox extension][ff-livereload] to refresh the browser when files change.
 
 [python-livereload]: https://github.com/lepture/python-livereload
 [ff-livereload]: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 
-<p id="livereload-screencast"></p>
+<p id="livereload-screencast" class="screencast"></p>
 
 If the browser refresh performs a blocking action, then I use [tiny-lr][] triggers a reload when it receives HTTP requests.
 
@@ -106,14 +106,14 @@ in 0.7 seconds automatically...
  create mode 100644 abc
 ```
 
-<p id="autocorrect-screencast"></p>
+<p id="autocorrect-screencast" class="screencast"></p>
 
 ## Catch issues faster
 To reduce the bottleneck of waiting for test results, projects are built as small modules. This reduces the size of each test suite, effectively shortening the testing time.
 
 During development, I run test suites via [nodemon][] or a `--watch` parameter which allows me to see failing tests pop up as they happen.
 
-<p id="watch-screencast"></p>
+<p id="watch-screencast" class="screencast"></p>
 
 If a bug is reported, I write a test against it to prevent them from happening again and reducing the manual testing bottleneck.
 
