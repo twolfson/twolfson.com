@@ -31,7 +31,8 @@
       <p><a href="<%=path%>"><%=path%></a></p>
       <div>
         <%
-          ['actual_screenshots', 'diff_screenshots', 'expected_screenshots'].forEach(function (dir) {
+          // ['actual_screenshots', 'diff_screenshots', 'expected_screenshots'].forEach(function (dir) {
+          ['diff_screenshots'].forEach(function (dir) {
             var filepath = '/test/perceptual-tests/' + dir + '/' + escapedUrl + '.png';
         %>
             <a href="<%=filepath%>" target="_blank"><img src="<%=filepath%>"/></a>
