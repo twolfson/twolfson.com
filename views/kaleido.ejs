@@ -26,7 +26,7 @@
     urls.forEach(function renderScreenshot (path) {
       var url = 'http://localhost:8080' + path,
           escapedUrl = encodeURIComponent(encodeURIComponent(url)),
-          filepath = '/test/perceptual-tests/screenshot_diffs/' + escapedUrl + '.png';
+          filepath = '/test/perceptual-tests/diff_screenshots/' + escapedUrl + '.png';
   %>
     <div class="media">
       <p><a href="<%=path%>"><%=path%></a></p>

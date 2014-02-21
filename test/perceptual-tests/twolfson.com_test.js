@@ -9,7 +9,7 @@ var fs = require('fs'),
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
-    diffScreenshots = __dirname + '/screenshot_diffs';
+    diffScreenshots = __dirname + '/diff_screenshots';
 
 // Clean up actual screenshots and diffs
 rimraf.sync(actualScreenshots);
