@@ -33,8 +33,6 @@ if (!imgDest) {
 function retry(fn, times, cb) {
   var i = 0;
   function retryFn() {
-
-    console.log(page.evaluate(function () { return document.readyState; }));
     if (fn()) {
       cb();
     } else if (i > times) {
@@ -58,6 +56,30 @@ page.open(url, function (status) {
 
   // Wait for render to work
   retry(function renderPage () {
+    // Determine if there are screencasts and they have loaded
+    var screencastsLoaded = page.evaluate(function () {
+      // Get the screencasts
+      var $screencasts = document.getElementsByClassName('screencast');
+
+      // If there are none, return
+      return $screencasts.length;
+      if ($screencasts.length === 0) {
+        return true;
+      }
+
+      // Otherwise, verify each has children
+      [].all.call($screencasts, function ($screencast) {
+        return $screencast.childNodes.length;
+      });
+    });
+
+    // If there are and they have not, wait
+    console.log(screencastsLoaded);
+    if (!screencastsLoaded) {
+      return false;
+    }
+
+    // Otherwise, attempt to render
     return page.render(imgDest);
   }, 10, function handleError (err) {
     // If there was an error, throw it
