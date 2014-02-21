@@ -60,18 +60,16 @@ page.open(url, function (status) {
 
   // Wait for render to work
   retry(function renderPage (cb) {
-    // If there are screencasts, wait for a bit
-    var screencastsExist = page.evaluate(function () {
-      return document.getElementsByClassName('screencast').length;
+    // Remove all screencast elements
+    page.evaluate(function () {
+      var $screencasts = document.getElementsByClassName('screencast');
+      [].forEach.call($screencasts, function ($screencast) {
+       $screencast.parentNode.removeChild($screencast);
+      });
     });
-    if (screencastsExist) {
-      setTimeout(function () {
-        cb(null, page.render(imgDest));
-      }, 500);
-    // Otherwise, attempt to render
-    } else {
-      cb(null, page.render(imgDest));
-    }
+
+    // Attempt to render
+    cb(null, page.render(imgDest));
   }, 10, function handleError (err) {
     // If there was an error, throw it
     if (err) {
