@@ -9,14 +9,14 @@ var fs = require('fs'),
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
-    screenshotDiffs = __dirname + '/screenshot_diffs';
+    diffScreenshots = __dirname + '/screenshot_diffs';
 
 // Clean up actual screenshots and diffs
 rimraf.sync(actualScreenshots);
-rimraf.sync(screenshotDiffs);
+rimraf.sync(diffScreenshots);
 
 // Ensure the screenshot diff directory exists
-fs.mkdirSync(screenshotDiffs);
+fs.mkdirSync(diffScreenshots);
 
 // Set up unabstracted variables
 // TODO: Move browsers, urls into standalone files
@@ -52,7 +52,7 @@ async.map(urls, function (_url, done) {
     imageDiff({
       actualImage: actualImg,
       expectedImage: expectedScreenshots + filepath,
-      diffImage: screenshotDiffs + filepath
+      diffImage: diffScreenshots + filepath
     }, function handleDiffResult (err, imagesAreSame) {
       // If there was an error, callback with it
       if (err) { return done(err); }
