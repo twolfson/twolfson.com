@@ -60,8 +60,18 @@ page.open(url, function (status) {
 
   // Wait for render to work
   retry(function renderPage (cb) {
+    // If there are screencasts, wait for a bit
+    var screencastsExist = page.evaluate(function () {
+      return document.getElementsByClassName('screencast').length;
+    });
+    if (screencastsExist) {
+      setTimeout(function () {
+        cb(null, page.render(imgDest));
+      }, 500);
     // Otherwise, attempt to render
-    cb(null, page.render(imgDest));
+    } else {
+      cb(null, page.render(imgDest));
+    }
   }, 10, function handleError (err) {
     // If there was an error, throw it
     if (err) {
