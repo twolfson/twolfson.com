@@ -60,16 +60,30 @@ page.open(url, function (status) {
 
   // Wait for render to work
   retry(function renderPage (cb) {
-    // Remove all screencast elements
-    page.evaluate(function () {
-      var $screencasts = document.getElementsByClassName('screencast');
-      [].forEach.call($screencasts, function ($screencast) {
-       $screencast.parentNode.removeChild($screencast);
-      });
+    // Determine if we have screencasts
+    var screencastsExist = page.evaluate(function () {
+      return document.getElementsByClassName('screencast').length;
     });
 
-    // Attempt to render
-    cb(null, page.render(imgDest));
+    // If there are screencasts
+    if (screencastsExist) {
+      // Wait for a bit
+      setTimeout(function () {
+        // Remove all canvas elements
+        page.evaluate(function () {
+          var $canvases = document.getElementsByTagName('canvas');
+          [].forEach.call($canvases, function ($canvas) {
+            $canvas.parentNode.removeChild($canvas);
+          });
+        });
+
+        // and render
+        cb(null, page.render(imgDest));
+      }, 500);
+    // Otherwise, attempt to render
+    } else {
+      cb(null, page.render(imgDest));
+    }
   }, 10, function handleError (err) {
     // If there was an error, throw it
     if (err) {
