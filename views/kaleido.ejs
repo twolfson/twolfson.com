@@ -25,13 +25,19 @@
   <%
     urls.forEach(function renderScreenshot (path) {
       var url = 'http://localhost:8080' + path,
-          escapedUrl = encodeURIComponent(encodeURIComponent(url)),
-          filepath = '/test/perceptual-tests/diff_screenshots/' + escapedUrl + '.png';
+          escapedUrl = encodeURIComponent(encodeURIComponent(url));
   %>
     <div class="media">
       <p><a href="<%=path%>"><%=path%></a></p>
       <div>
-        <a href="<%=filepath%>" target="_blank"><img src="<%=filepath%>"/></a>
+        <%
+          ['actual_screenshots', 'diff_screenshots', 'expected_screenshots'].forEach(function (dir) {
+            var filepath = '/test/perceptual-tests/' + dir + '/' + escapedUrl + '.png';
+        %>
+            <a href="<%=filepath%>" target="_blank"><img src="<%=filepath%>"/></a>
+        <%
+          });
+        %>
       </div>
     </div>
   <%
