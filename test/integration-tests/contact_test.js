@@ -53,11 +53,11 @@ describe.only('A submission to /contact', function () {
   it('does not have form elements', function () {
     expect(this.err).to.equal(null);
     expect(this.res.statusCode).to.equal(200);
-    // expect(this.body).to.not.contain('<input');
+    expect(this.body).to.not.contain('<input');
   });
 
   it('thanks you for submitting ;)', function () {
-    // expect(this.body).to.match(/thank you/i);
+    expect(this.body).to.match(/thank you/i);
   });
 });
 
