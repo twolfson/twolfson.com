@@ -1,41 +1,47 @@
 var controllers = require('./controllers');
 
 exports.common = function () {
-    // Blog
-    // TODO: Integrate Travis CI to local testing (with notifications)
-    // TODO: Add test for xml rendering
-    var articles = require('../articles');
-    router.get('/', routes.blog.index({articles: articles}));
-    articles.forEach(function (article) {
-      // DEV: Escape '+' as express coerces URL to a regexp
-      var url = article.url.replace(/\+/g, '\\+');
-      router.get(url, routes.blog.article({article: article}));
-    });
-    router.get('/index.xml', routes.blog.rss({articles: articles}));
+  // Generate a router
+  var router = new express.Router();
 
-    // Projects pages
-    router.get('/projects', routes.projects);
+  // Blog
+  // TODO: Integrate Travis CI to local testing (with notifications)
+  // TODO: Add test for xml rendering
+  var articles = require('../articles');
+  router.get('/', controllers.blog.index({articles: articles}));
+  articles.forEach(function (article) {
+    // DEV: Escape '+' as express coerces URL to a regexp
+    var url = article.url.replace(/\+/g, '\\+');
+    router.get(url, controllers.blog.article({article: article}));
+  });
+  router.get('/index.xml', controllers.blog.rss({articles: articles}));
 
-    // Contact pages
-    router.get('/contact', routes.contact.index);
-    if (config.inDevelopment) {
-      router.get('/contact/failure', routes.contact.devFailure);
-      router.get('/contact/success', routes.contact.devSuccess);
-    }
-    router.post('/contact', express.urlencoded(), routes.contact.submit);
+  // Projects pages
+  router.get('/projects', controllers.projects);
 
-    // If we are in development, add a kaleidoscope test page
-    if (config.inDevelopment) {
-      router.get('/kaleido', routes.kaleido);
-    }
+  // Contact pages
+  router.get('/contact', controllers.contact.index);
+  if (config.inDevelopment) {
+    router.get('/contact/failure', controllers.contact.devFailure);
+    router.get('/contact/success', controllers.contact.devSuccess);
+  }
+  router.post('/contact', express.urlencoded(), controllers.contact.submit);
 
-    // Support me
-    router.get('/support-me', routes['support-me'](config));
+  // If we are in development, add a kaleidoscope test page
+  if (config.inDevelopment) {
+    router.get('/kaleido', controllers.kaleido);
+  }
 
-    // License and health
-    router.get('/license', routes.license);
-    router.get('/health', routes.health);
+  // Support me
+  router.get('/support-me', controllers['support-me'](config));
 
-    // If the page is not found, throw an error and render the 404 page
-    router.all('*', routes['404']);
+  // License and health
+  router.get('/license', controllers.license);
+  router.get('/health', controllers.health);
+
+  // If the page is not found, throw an error and render the 404 page
+  router.all('*', controllers['404']);
+
+  // router.middleware has signature of `function (req, res, next) {}`
+  return router.middleware;
 };
