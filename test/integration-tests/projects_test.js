@@ -38,7 +38,6 @@ describe('A request to /projects', function () {
     // Assert there are stars
     // DEV: text seems to be returning a weird number
     var starCountStr = $starCount.html().trim();
-    console.log('wat', $starCount.html().length);
     var starCount = +starCountStr;
     expect(starCountStr).to.not.equal('');
     expect(starCount).to.not.equal(0);
