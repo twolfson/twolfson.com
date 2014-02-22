@@ -69,8 +69,8 @@ Server.prototype = {
 
     // TODO: Add error handler here
   },
-  listen: function (port) {
-    this._app = this.app.listen(port);
+  listen: function () {
+    this._app = this.app.listen(this.config.url.internal.port);
   },
   destroy: function (cb) {
     this._app.close(cb || function noop () {});
@@ -87,6 +87,6 @@ if (require.main === module) {
   var env = process.env.NODE_ENV || 'development';
   var settings = require('../config').getSettings({env: env});
   var server = new Server(settings);
-  server.listen(settings.url.external.port);
+  server.listen();
   console.log('Server running at ' + url.format(settings.url.external) + '/');
 }

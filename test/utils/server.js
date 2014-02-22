@@ -34,5 +34,5 @@ exports.getUrl = function (paramStr) {
   }
 
   // Generate and return url
-  return url.format(_.defaults({}, params, exports.getSettings()));
+  return url.format(_.defaults({}, params, exports.getSettings().url.internal));
 };
