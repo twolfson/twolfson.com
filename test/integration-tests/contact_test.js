@@ -11,28 +11,26 @@ describe('A request to the /contact form', function () {
   });
 });
 
-describe.skip('A submission to twolfson.com/contact', function () {
-  var options = {
-    url: '/contact',
-    method: 'POST',
-    form: {
-      'name': 'bdd test',
-      'info': 'n/a',
-      'message': 'Hello World!'
-    }
-  };
+describe('A submission to /contact', function () {
+  serverUtils.run();
   before(function (done) {
     this.timeout(5000);
-    config.navigateToRaw.call(this, options, done);
+    httpUtils._save({
+      url: '/contact',
+      method: 'POST',
+      form: {
+        'name': 'bdd test',
+        'info': 'n/a',
+        'message': 'Hello World!'
+      }
+    }).call(this, done);
   });
 
   it('does not have form elements', function () {
-    var body = this.body;
-    assert.strictEqual(body.indexOf('<input'), -1);
+    expect(this.body).to.not.contain('<input');
   });
 
   it('thanks you for submitting ;)', function () {
-    var body = this.body;
-    assert(body.match(/thank you/i));
+    expect(this.body).to.match(/thank you/i);
   });
 });
