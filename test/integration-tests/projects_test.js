@@ -32,7 +32,7 @@ describe('A request to /projects', function () {
   it('is counting stars', function () {
     // Grab starCount
     var $ = this.window.$;
-    var $starCount = $('project-stars__count');
+    var $starCount = $('.project-stars__count');
     expect($starCount.length).to.not.equal(0);
 
     // Assert there are stars
