@@ -36,9 +36,8 @@ async.map(urls, function (pathname, done) {
   // TODO: mocha-ify this
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname),
-      escapedUrl = encodeURIComponent(url),
-      filepath = '/' + escapedUrl + '.png',
-      actualImg = actualScreenshots + filepath;
+      filename = encodeURIComponent(pathname) + '.png',
+      actualImg = actualScreenshots + '/' + filename;
   var phantomJsCmd = shellQuote.quote(['phantomjs', 'screenshot.js', url, actualImg]);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
@@ -54,8 +53,8 @@ async.map(urls, function (pathname, done) {
 
     imageDiff({
       actualImage: actualImg,
-      expectedImage: expectedScreenshots + filepath,
-      diffImage: diffScreenshots + filepath
+      expectedImage: expectedScreenshots + '/' + filename,
+      diffImage: diffScreenshots + '/' + filename
     }, function handleDiffResult (err, imagesAreSame) {
       // If there was an error, callback with it
       if (err) { return done(err); }

@@ -8,7 +8,7 @@ describe('twolfson.com/contact', function () {
   });
 });
 
-describe('A submission to twolfson.com/contact', function () {
+describe.skip('A submission to twolfson.com/contact', function () {
   var options = {
     url: '/contact',
     method: 'POST',
