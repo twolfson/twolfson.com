@@ -1,9 +1,11 @@
 var url = require('url');
 var _ = require('underscore');
-var Server = require('../../../');
+var Server = require('../../');
 
 exports.getSettings = function () {
   return {
+    protocol: 'http',
+    hostname: 'localhost',
     port: 1337
   };
 };
