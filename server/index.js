@@ -36,10 +36,10 @@ Server.prototype = {
     if (config.addDevelopmentRoutes) {
       // Host /test for kaleidoscope
       app.use('/test', express['static'](__dirname + '/../test'));
-      app.use(routes.development);
+      app.use(routes.development(config));
     }
     if (config.addTestRoutes) {
-      app.use(routes.test);
+      app.use(routes.test(config));
     }
 
     // TODO: Relocate into a controller which is somehow more self-aware
