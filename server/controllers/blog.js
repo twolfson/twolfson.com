@@ -4,6 +4,8 @@ var fs = require('fs'),
     activityJade = fs.readFileSync(__dirname + '/blog_activity.jade', 'utf8'),
     activityHtml = jade.render(activityJade);
 
+// TODO: Relocate jade into views
+
 // Render homepage
 exports.index = function (config) {
   var articles = config.articles;
