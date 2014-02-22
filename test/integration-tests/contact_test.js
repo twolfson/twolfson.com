@@ -11,7 +11,7 @@ describe('A request to the /contact form', function () {
   });
 });
 
-describe('A submission to /contact', function () {
+describe.only('A submission to /contact', function () {
   serverUtils.run();
   before(function (done) {
     this.timeout(5000);
