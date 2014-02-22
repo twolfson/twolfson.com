@@ -1,4 +1,6 @@
-var Server = require('../');
+var url = require('url');
+var _ = require('underscore');
+var Server = require('../../../');
 
 exports.getSettings = function () {
   return {
@@ -16,6 +18,19 @@ exports.run = function () {
   after(function stopServer (done) {
     server.destroy(done);
   });
+};
+
+exports.getUrl = function (paramStr) {
+  // Fallback string as pathname
+  var params = paramStr;
+  if (typeof params === 'string') {
+    params = {
+      pathname: paramStr
+    };
+  }
+
+  // Generate and return url
+  return url.format(_.defaults({}, params, exports.getSettings()));
 };
 // Set up config
 var config = {

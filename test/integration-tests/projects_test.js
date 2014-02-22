@@ -1,4 +1,5 @@
-require('./setup');
+var serverUtils = require('./utils/server');
+
 describe('twolfson.com/projects', function () {
   before(function (done) {
     // Open the proper page

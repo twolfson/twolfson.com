@@ -50,7 +50,8 @@
     "grunt-image-resize": "~0.3.0",
     "image-diff": "~1.0.1",
     "shell-quote": "~1.4.1",
-    "rimraf": "~2.2.6"
+    "rimraf": "~2.2.6",
+    "underscore": "~1.6.0"
   },
   "license": "MIT",
   "private": true
