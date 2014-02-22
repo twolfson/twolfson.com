@@ -30,7 +30,7 @@ describe.only('A submission to /contact', function () {
   serverUtils.run();
   before(function startSmtp () {
     var settings = serverUtils.getSettings();
-    this.smtpServer = simplesmtp.createSimpleServer({SMTPBanner:"My Server"}, function(req){
+    this.smtpServer = simplesmtp.createServer({SMTPBanner:"My Server"}, function(req){
       console.log('req', req);
       req.pipe(process.stdout);
       req.accept();
