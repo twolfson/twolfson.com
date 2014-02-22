@@ -9,6 +9,8 @@ exports.common = function (config) {
 
   // Blog
   // TODO: Move these onto config with a required parameter of `articles/article`
+  // TODO: Namespce articles with /articles or /blog, set up redirects for all previously existing routes
+  // TODO: Should we also redirect / to /articles or /blog?
   var articles = config.articles;
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
