@@ -13,6 +13,7 @@ module.exports = new Settings({
       return {
         env: this.ENV,
         numscale: numscale.scale,
+        projects: require('./models/projects'),
         config: {
           author: 'Todd Wolfson',
           title: 'Todd Wolfson - Javascript Developer',

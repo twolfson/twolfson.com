@@ -55,9 +55,6 @@ Server.prototype = {
     });
     app.get('/index.xml', controllers.blog.rss({articles: articles}));
 
-    // TODO: Move projects into config
-    app.locals.projects = require('./models/projects');
-
     // Bind routes
     app.use(routes.common(config));
 
