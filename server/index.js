@@ -33,20 +33,13 @@ Server.prototype = {
     _.extend(app.locals, config['app.locals']);
 
     // Add test and development specific routes
+    if (config.addDevelopmentRoutes) {
+      // Host /test for kaleidoscope
+      app.use('/test', express['static'](__dirname + '/../test'));
+      app.use(routes.development);
+    }
     if (config.addTestRoutes) {
       app.use(routes.test);
-    }
-
-    // If we are in development, check for a grid flag
-    // TODO: Make this addGridMiddleware
-    if (config.inDevelopment) {
-      app.all('*', function (req, res, next) {
-        // If there is a grid param, save it
-        res.locals.enableGrid = req.query.grid !== undefined;
-
-        // Continue
-        next();
-      });
     }
 
     // TODO: Relocate into a controller which is somehow more self-aware

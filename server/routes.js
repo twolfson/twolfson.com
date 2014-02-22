@@ -12,10 +12,6 @@ exports.common = function (config) {
 
   // Contact pages
   router.get('/contact', controllers.contact.index(config));
-  if (config.inDevelopment) {
-    router.get('/contact/failure', controllers.contact.devFailure(config));
-    router.get('/contact/success', controllers.contact.devSuccess(config));
-  }
   router.post('/contact', express.urlencoded(), controllers.contact.submit(config));
 
   // If we are in development, add a kaleidoscope test page
@@ -38,11 +34,25 @@ exports.common = function (config) {
   return router.middleware;
 };
 
+exports.development = function (config) {
+  var router = new express.Router();
+
+  // Check for a grid flag
+  router.all('*', function (req, res, next) {
+    // If there is a grid param, save it
+    res.locals.enableGrid = req.query.grid !== undefined;
+    next();
+  });
+
+  return router.middleware;
+};
+
 exports.test = function (config) {
   var router = new express.Router();
 
-  // Host /test for kaleidoscope
-  app.use('/test', express['static'](__dirname + '/../test'));
+  // Host failure/success pages for screenshotting (and direct viewing in dev)
+  router.get('/contact/failure', controllers.contact.devFailure(config));
+  router.get('/contact/success', controllers.contact.devSuccess(config));
 
   return router.middleware;
 };

@@ -6,6 +6,8 @@ module.exports = new Settings({
   common: {
     inDevelopment: true,
     inProduction: false,
+    addDevelopmentRoutes: true,
+    addTestRoutes: true,
     'app.locals': Settings.lazy(function () {
       return {
         env: this.ENV,
@@ -66,6 +68,8 @@ module.exports = new Settings({
   production: {
     inDevelopment: false,
     inProduction: true,
+    addDevelopmentRoutes: false,
+    addTestRoutes: false,
     url: {
       internal: {
         protocol: 'http',
