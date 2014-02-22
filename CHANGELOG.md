@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.11.2 - Fixed broken RSS feed
+
 3.11.1 - Fixed up ordering of 'support-me' config
 
 3.11.0 - Moved to shallow-settings for per-environment configuration
