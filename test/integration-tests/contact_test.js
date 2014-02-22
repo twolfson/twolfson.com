@@ -59,6 +59,11 @@ describe.only('A submission to /contact', function () {
   it('thanks you for submitting ;)', function () {
     expect(this.body).to.match(/thank you/i);
   });
+
+  it('sent an email', function () {
+    expect(this.messages).to.have.property('length', 2);
+    expect(this.messages[0].toString()).to.contain('Name: bdd test\nInfo: n/a\nMessage: Hello World!');
+  });
 });
 
 describe('A failing submission to /contact', function () {
