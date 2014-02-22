@@ -16,7 +16,7 @@ describe('A submission to /contact', function () {
   before(function (done) {
     this.timeout(5000);
     httpUtils._save({
-      url: '/contact',
+      url: serverUtils.getUrl('/contact'),
       method: 'POST',
       form: {
         'name': 'bdd test',
