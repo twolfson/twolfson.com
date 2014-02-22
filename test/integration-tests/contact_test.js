@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var smtp = require('smtp-protocol');
+var simplesmtp = require('simplesmtp');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
@@ -30,35 +30,17 @@ describe.only('A submission to /contact', function () {
   serverUtils.run();
   before(function startSmtp () {
     var settings = serverUtils.getSettings();
-    this.smtpServer = smtp.createServer(function handleReq (req) {
-      console.log('request', req);
-      req.on('data', function () {
-        console.log('wheee');
-      });
-      req.on('to', function (to, ack) {
-        console.log('TOOOOO');
-        var domain = to.split('@')[1] || 'localhost';
-        if (domain === 'localhost') {
-          ack.accept();
-        } else {
-          ack.reject();
-        }
-      });
-
-      req.on('message', function (stream, ack) {
-        console.log('from: ' + req.from);
-        console.log('to: ' + req.to);
-
-        stream.pipe(process.stdout, { end : false });
-        ack.accept();
-      });
+    this.smtpServer = simplesmtp.createSimpleServer({SMTPBanner:"My Server"}, function(req){
+      console.log('req', req);
+      req.pipe(process.stdout);
+      req.accept();
     });
     console.log(settings.mail.port);
     this.smtpServer.listen(settings.mail.port);
   });
-  after(function stopSmtp (done) {
-    this.smtpServer.close(done);
-  });
+  // after(function stopSmtp (done) {
+  //   this.smtpServer.close(done);
+  // });
   makeContactRequest();
 
   it('does not have form elements', function () {
