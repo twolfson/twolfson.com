@@ -46,7 +46,6 @@ Server.prototype = {
     var controllers = require('./controllers');
     // Blog
     // TODO: Integrate Travis CI to local testing (with notifications)
-    // TODO: Add test for xml rendering
     var articles = require('../articles');
     app.get('/', controllers.blog.index({articles: articles}));
     articles.forEach(function (article) {
