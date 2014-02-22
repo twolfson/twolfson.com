@@ -18,7 +18,7 @@ module.exports = new Settings({
         },
         env: this.ENV,
         numscale: numscale.scale,
-        projects: require('./models/projects')
+        projects: require('../server/models/projects')
       };
     }),
     mail: Settings.lazy(function () {
