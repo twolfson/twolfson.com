@@ -32,38 +32,7 @@ exports.getUrl = function (paramStr) {
   // Generate and return url
   return url.format(_.defaults({}, params, exports.getSettings()));
 };
-// Set up config
-var config = {
-  host: 'http://127.0.0.1:8080',
-  httpsHost: 'https://twolfson.com',
-  productionHost: 'http://twolfson.com',
-  url: function getUrl (path) {
-    return this.host + path;
-  },
-  navigateToRaw: function (options, cb) {
-    // If the options are a string
-    if (typeof options === 'string') {
-      options = config.url(options);
-    } else {
-      options.url = config.url(options.url);
-    }
 
-    // Call request
-    var that = this;
-    request(options, function getPage (err, res, body) {
-      // Save response
-      that.err = err;
-      that.res = res;
-      that.body = body;
-
-      // Callback
-      cb(err);
-    });
-  },
-  navigateTo: function (options) {
-    return function navFn (cb) {
-      return config.navigateToRaw.call(this, options, cb);
-    };
-  }
-};
-global.config = config;
+// host: 'http://127.0.0.1:8080',
+// httpsHost: 'https://twolfson.com',
+// productionHost: 'http://twolfson.com',
