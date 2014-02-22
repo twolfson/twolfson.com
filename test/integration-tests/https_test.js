@@ -1,28 +1,19 @@
-require('./setup');
-describe('twolfson.com', function () {
-  before(function (done) {
-    var that = this,
-        httpsPage = config.httpsHost + '/';
-    request.get(httpsPage, function getHttpsPage (err, res, body) {
-      that.err = err;
-      that.res = res;
-      that.body = body;
-      done(err);
-    });
-  });
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
 
-  // TODO: Move to sculptor for easier common usage of these tests
-  it('is responding', function () {
-    assert(!this.err);
+describe('twolfson.com', function () {
+  httpUtils.save({
+    url: 'https://twolfson.com/',
+    followRedirect: false
   });
 
   it('is responding with valid status code', function () {
-    var statusCode = this.res.statusCode;
-    assert(statusCode >= 200, statusCode + ' is not above 200');
-    assert(statusCode < 300, statusCode + ' is not under 300');
+    expect(this.err).to.equal(null);
+    expect(this.res).to.have.property('statusCode', 200);
   });
 
   it('is responding with content', function () {
-    assert(this.body);
+    expect(this.body).to.contain('Todd Wolfson');
   });
 });
