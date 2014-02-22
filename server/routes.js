@@ -10,13 +10,13 @@ exports.common = function (config) {
   // Blog
   // TODO: Move these onto config with a required parameter of `articles/article`
   var articles = config.articles;
-  app.get('/', controllers.blog.index({articles: articles}));
+  router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     // DEV: Escape '+' as express coerces URL to a regexp
     var url = article.url.replace(/\+/g, '\\+');
-    app.get(url, controllers.blog.article({article: article}));
+    router.get(url, controllers.blog.article({article: article}));
   });
-  app.get('/index.xml', controllers.blog.rss({articles: articles}));
+  router.get('/index.xml', controllers.blog.rss({articles: articles}));
 
   // Projects pages
   router.get('/projects', controllers.projects(config));
