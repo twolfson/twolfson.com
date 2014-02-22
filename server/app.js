@@ -1,6 +1,7 @@
 // Create the server
-var express = require('express'),
-    config = require('../config');
+var express = require('express');
+var config = require('../config');
+var routes = require('./routes');
 
 function Server() {
   this.app = express();
@@ -18,6 +19,7 @@ Server.prototype = {
     app.use('/public', express['static'](__dirname + '/../public'));
 
     // Host /test for kaleidoscope
+    // TODO: Make this host test routes
     if (config.inDevelopment) {
       app.use('/test', express['static'](__dirname + '/../test'));
     }
@@ -28,15 +30,8 @@ Server.prototype = {
     // Localize app
     var app = this.app;
 
-    // Configure routes
-    var routes = require('./routes');
-    app.locals.config = {
-      author: 'Todd Wolfson',
-      title: 'Todd Wolfson - Javascript Developer',
-      url: 'http://twolfson.com/'
-    };
-
     // If we are in development, check for a grid flag
+    // TODO: Make this addGridMiddleware
     if (config.inDevelopment) {
       app.all('*', function (req, res, next) {
         // If there is a grid param, save it
@@ -47,45 +42,12 @@ Server.prototype = {
       });
     }
 
-    // Blog
-    // TODO: Integrate Travis CI to local testing (with notifications)
-    // TODO: Add test for xml rendering
-    var articles = require('../articles');
-    app.get('/', routes.blog.index({articles: articles}));
-    articles.forEach(function (article) {
-      // DEV: Escape '+' as express coerces URL to a regexp
-      var url = article.url.replace(/\+/g, '\\+');
-      app.get(url, routes.blog.article({article: article}));
-    });
-    app.get('/index.xml', routes.blog.rss({articles: articles}));
-
-    // Projects pages
+    // TODO: Move projects into config
     app.locals.numscale = require('numscale').scale;
     app.locals.projects = require('./projects');
-    app.get('/projects', routes.projects);
 
-    // Contact pages
-    app.get('/contact', routes.contact.index);
-    if (config.inDevelopment) {
-      app.get('/contact/failure', routes.contact.devFailure);
-      app.get('/contact/success', routes.contact.devSuccess);
-    }
-    app.post('/contact', express.urlencoded(), routes.contact.submit);
-
-    // If we are in development, add a kaleidoscope test page
-    if (config.inDevelopment) {
-      app.get('/kaleido', routes.kaleido);
-    }
-
-    // Support me
-    app.get('/support-me', routes['support-me'](config));
-
-    // License and health
-    app.get('/license', routes.license);
-    app.get('/health', routes.health);
-
-    // If the page is not found, throw an error and render the 404 page
-    app.all('*', routes['404']);
+    // Bind routes
+    app.use(routes.common);
   },
   listen: function (port) {
     this.app.listen(port);

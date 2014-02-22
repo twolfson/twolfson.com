@@ -17,5 +17,12 @@ module.exports = {
     },
     bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
     dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ'
+  },
+  'app.locals': {
+    config: {
+      author: 'Todd Wolfson',
+      title: 'Todd Wolfson - Javascript Developer',
+      url: 'http://twolfson.com/'
+    }
   }
 };
