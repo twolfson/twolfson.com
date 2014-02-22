@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var simplesmtp = require('simplesmtp');
+var smtp = require('smtp-protocol');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
@@ -28,19 +28,26 @@ describe('A request to the /contact form', function () {
 
 describe.only('A submission to /contact', function () {
   serverUtils.run();
-  before(function startSmtp () {
+  before(function startSmtp (done) {
     var settings = serverUtils.getSettings();
-    this.smtpServer = simplesmtp.createServer({SMTPBanner:"My Server"}, function(req){
-      console.log('req', req);
-      req.pipe(process.stdout);
-      req.accept();
+    this.smtpServer = smtp.createServer();
+    this.smtpServer.listen(settings.mail.port, function listening () {
+      this.smtpServer.on("data", function(envelope, chunk)
+         {
+            console.log('aaa', chunk);
+         });
+
+      this.smtpServer.on("dataReady", function(envelope, callback)
+         {
+            console.log('heee');
+            callback(null);
+         });
+      done();
     });
-    console.log(settings.mail.port);
-    this.smtpServer.listen(settings.mail.port);
   });
-  // after(function stopSmtp (done) {
-  //   this.smtpServer.close(done);
-  // });
+  after(function stopSmtp (done) {
+    this.smtpServer.close(done);
+  });
   makeContactRequest();
 
   it('does not have form elements', function () {

@@ -55,8 +55,7 @@
     "underscore": "~1.6.0",
     "request-mocha": "~0.2.0",
     "chai": "~1.9.0",
-    "smtp-protocol": "~1.0.1",
-    "simplesmtp": "~0.3.21"
+    "smtp-protocol": "~1.0.1"
   },
   "license": "MIT",
   "private": true
