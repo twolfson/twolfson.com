@@ -28,7 +28,8 @@
     "express-partials": "~0.1.1",
     "consolidate": "~0.9.1",
     "unhtml": "~0.1.0",
-    "jade": "~0.35.0"
+    "jade": "~0.35.0",
+    "shallow-settings": "~0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -1,12 +1,11 @@
 // Create the server
 var express = require('express');
-var CONFIG = require('../config');
 var routes = require('./routes');
 
-function Server(/* CONFIG */) {
+function Server(config) {
   // Create an app and save config for bindings/later
   this.app = express();
-  this.config = CONFIG;
+  this.config = config;
 
   // Register common items
   this.registerViewEngine();
@@ -84,7 +83,10 @@ module.exports = Server;
 // Begin listening for requests
 // TODO: Move into `bin` script
 if (require.main === module) {
-  var server = new Server();
-  server.listen(8080);
-  console.log('Server running at http://127.0.0.1:8080/');
+  var url = require('url');
+  var env = process.env.NODE_ENV || 'development';
+  var settings = require('../config').getSettings({env: env});
+  var server = new Server(settings);
+  server.listen(settings.url.external.port);
+  console.log('Server running at ' + url.format(settings.url.external) + '/');
 }
