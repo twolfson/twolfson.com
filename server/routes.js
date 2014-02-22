@@ -1,5 +1,8 @@
+// Load in dependencies
+var express = require('express');
 var controllers = require('./controllers');
 
+// Define common routes
 exports.common = function () {
   // Generate a router
   var router = new express.Router();
