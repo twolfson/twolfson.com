@@ -6,7 +6,8 @@ var serverUtils = require('../utils/server');
 describe('twolfson.com', function () {
   httpUtils.save({
     url: 'https://twolfson.com/',
-    followRedirect: false
+    followRedirect: false,
+    strictSSL: false
   });
 
   it('is responding with valid status code', function () {
