@@ -32,6 +32,7 @@ exports.common = function () {
 
   // If the page is not found, throw an error and render the 404 page
   router.all('*', controllers['404']);
+  // TODO: Add error handler here
 
   // router.middleware has signature of `function (req, res, next) {}`
   return router.middleware;

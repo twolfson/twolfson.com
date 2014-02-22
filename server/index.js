@@ -62,6 +62,8 @@ Server.prototype = {
 
     // Bind routes
     app.use(routes.common);
+
+    // TODO: Add error handler here
   },
   listen: function (port) {
     this.app.listen(port);
