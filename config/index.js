@@ -13,6 +13,9 @@ module.exports = new Settings({
       return require('../articles');
     }),
     'app.locals': Settings.lazy(function () {
+      // TODO: This is very bad technique but models/projects is worse
+      global.loadProjects = this.ENV === 'production';
+      console.log('w', global.loadProjects);
       return {
         config: {
           author: 'Todd Wolfson',

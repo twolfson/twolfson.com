@@ -92,7 +92,8 @@ var second = 1000,
 setInterval(updateStats, everyHour);
 
 // If we are in production, fetch now
-if (!module.parent) {
+console.log(global.loadProjects);
+if (global.loadProjects || !module.parent) {
   process.nextTick(updateStats);
 }
 
