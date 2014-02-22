@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.6.0 - Removing carriage returns for good
+
 3.5.0 - Moved to `image-diff` and hardened perceptual diffs
 
 3.4.0 - Reverted since we were too aggressive
