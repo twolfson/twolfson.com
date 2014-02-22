@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.11.0 - Moved to shallow-settings for per-environment configuration
+
 3.10.0 - Refactored `lib` with split routes/controllers convention. Fixes #24
 
 3.9.0 - Refactored tests to start up/tear down server
