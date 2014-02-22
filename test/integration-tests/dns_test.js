@@ -19,13 +19,9 @@ describe('twolfsn.com (http)', function () {
 
 // TODO: This is non-functional =(
 describe.skip('twolfsn.com (https)', function () {
-  before(function (done) {
-    var that = this;
-    request.get('https://twolfsn.com', function (err, res) {
-      that.err = err;
-      that.res = res;
-      done(err);
-    });
+  httpUtils.save({
+    url: 'https://twolfsn.com',
+    followRedirect: false
   });
 
   it('redirects to twolfson.com', function () {
