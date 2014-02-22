@@ -13,7 +13,9 @@ module.exports = new Settings({
         url: 'http://twolfson.com/'
       }
     },
-    mail: require('./mail'),
+    mail: Settings.lazy(function () {
+      return require('./mail');
+    }),
     'support-me': {
       gittip: 'twolfson',
       flattr: 'twolfsn',
