@@ -18,7 +18,7 @@
   "dependencies": {
     "ejs": "~0.8.4",
     "jojo": "~1.1.0",
-    "express": "~3.4.1",
+    "express": "~3.4.8",
     "gitter": "~0.2.0",
     "marked": "~0.2.6",
     "emailjs": "0.3.4",
