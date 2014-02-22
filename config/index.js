@@ -44,7 +44,7 @@ module.exports = new Settings({
   test: {
     mail: {
       'user': 'this-is-a-test@twolfson.com',
-      'password': 'keyboardcat',
+      'password': 'helloyesthisisdoge',
       'host': 'localhost:1338'
     },
     url: {
