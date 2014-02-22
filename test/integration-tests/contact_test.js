@@ -1,10 +1,13 @@
-require('./setup');
-describe('twolfson.com/contact', function () {
-  before(config.navigateTo('/contact'));
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
+
+describe('A request to the /contact form', function () {
+  serverUtils.run();
+  httpUtils.save(serverUtils.getUrl('/contact'));
 
   it('has form elements', function () {
-    var body = this.body;
-    assert.notEqual(body.indexOf('<input'), -1);
+    expect(this.body).to.contain('<input');
   });
 });
 
