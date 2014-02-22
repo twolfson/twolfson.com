@@ -2,7 +2,7 @@
   "name": "twolfson.com",
   "description": "twolfson.com server",
   "author": "Todd Wolfson <todd@twolfson.com>",
-  "version": "3.8.0",
+  "version": "3.9.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
@@ -50,7 +50,10 @@
     "grunt-image-resize": "~0.3.0",
     "image-diff": "~1.0.1",
     "shell-quote": "~1.4.1",
-    "rimraf": "~2.2.6"
+    "rimraf": "~2.2.6",
+    "underscore": "~1.6.0",
+    "request-mocha": "~0.2.0",
+    "chai": "~1.9.0"
   },
   "license": "MIT",
   "private": true

@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.9.0 - Refactored tests to start up/tear down server
+
 3.8.0 - Deleted unused images
 
 3.7.0 - Deleted unused portfolio files

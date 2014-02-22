@@ -71,11 +71,20 @@ Server.prototype = {
     // TODO: Add error handler here
   },
   listen: function (port) {
-    this.app.listen(port);
+    this._app = this.app.listen(port);
+  },
+  destroy: function (cb) {
+    this._app.close(cb || function noop () {});
   }
 };
 
+// Export the server
+module.exports = Server;
+
 // Begin listening for requests
-var server = new Server();
-server.listen(8080);
-console.log('Server running at http://127.0.0.1:8080/');
+// TODO: Move into `bin` script
+if (require.main === module) {
+  var server = new Server();
+  server.listen(8080);
+  console.log('Server running at http://127.0.0.1:8080/');
+}

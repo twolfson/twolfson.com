@@ -1,35 +1,36 @@
-require('./setup');
-describe('twolfson.com/contact', function () {
-  before(config.navigateTo('/contact'));
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
+
+describe('A request to the /contact form', function () {
+  serverUtils.run();
+  httpUtils.save(serverUtils.getUrl('/contact'));
 
   it('has form elements', function () {
-    var body = this.body;
-    assert.notEqual(body.indexOf('<input'), -1);
+    expect(this.body).to.contain('<input');
   });
 });
 
-describe('A submission to twolfson.com/contact', function () {
-  var options = {
-    url: '/contact',
-    method: 'POST',
-    form: {
-      'name': 'bdd test',
-      'info': 'n/a',
-      'message': 'Hello World!'
-    }
-  };
+describe('A submission to /contact', function () {
+  serverUtils.run();
   before(function (done) {
     this.timeout(5000);
-    config.navigateToRaw.call(this, options, done);
+    httpUtils._save({
+      url: serverUtils.getUrl('/contact'),
+      method: 'POST',
+      form: {
+        'name': 'bdd test',
+        'info': 'n/a',
+        'message': 'Hello World!'
+      }
+    }).call(this, done);
   });
 
   it('does not have form elements', function () {
-    var body = this.body;
-    assert.strictEqual(body.indexOf('<input'), -1);
+    expect(this.body).to.not.contain('<input');
   });
 
   it('thanks you for submitting ;)', function () {
-    var body = this.body;
-    assert(body.match(/thank you/i));
+    expect(this.body).to.match(/thank you/i);
   });
 });

@@ -4,7 +4,8 @@ var fs = require('fs'),
     async = require('async'),
     imageDiff = require('image-diff'),
     rimraf = require('rimraf'),
-    shellQuote = require('shell-quote');
+    shellQuote = require('shell-quote'),
+    serverUtils = require('../utils/server');
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots',
@@ -23,19 +24,20 @@ fs.mkdirSync(diffScreenshots);
 // TODO: See notes in https://gist.github.com/twolfson/6077989
 // TODO: Optimize space via tarballing expected files?
 var browsers = ['phantomjs'],
-    baseUrl = 'http://localhost:8080',
     // DEV: js-yaml is required to make this require work properly
     yml = require('js-yaml'),
     urls = require('./urls.yml');
 
+// Start a server
+var server = serverUtils.startServer();
+
 // For each of the URLs
-async.map(urls, function (_url, done) {
+async.map(urls, function (pathname, done) {
   // TODO: mocha-ify this
   // Screenshot the webpage
-  var url = baseUrl + _url,
-      escapedUrl = encodeURIComponent(url),
-      filepath = '/' + escapedUrl + '.png',
-      actualImg = actualScreenshots + filepath;
+  var url = serverUtils.getUrl(pathname),
+      filename = encodeURIComponent(pathname) + '.png',
+      actualImg = actualScreenshots + '/' + filename;
   var phantomJsCmd = shellQuote.quote(['phantomjs', 'screenshot.js', url, actualImg]);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
@@ -51,8 +53,8 @@ async.map(urls, function (_url, done) {
 
     imageDiff({
       actualImage: actualImg,
-      expectedImage: expectedScreenshots + filepath,
-      diffImage: diffScreenshots + filepath
+      expectedImage: expectedScreenshots + '/' + filename,
+      diffImage: diffScreenshots + '/' + filename
     }, function handleDiffResult (err, imagesAreSame) {
       // If there was an error, callback with it
       if (err) { return done(err); }
@@ -65,26 +67,29 @@ async.map(urls, function (_url, done) {
     });
   });
 }, function (err, results) {
-  // If there was an error, log it and leave
-  if (err) {
-    console.error('ERROR: ', err);
-    return process.exit(1);
-  }
+  // Take down server
+  server.destroy(function () {
+    // If there was an error, log it and leave
+    if (err) {
+      console.error('ERROR: ', err);
+      return process.exit(1);
+    }
 
-  // Otherwise, determine if there were any failures
-  var failedResults = results.filter(function (result) {
-        return !result.pass;
+    // Otherwise, determine if there were any failures
+    var failedResults = results.filter(function (result) {
+          return !result.pass;
+        });
+
+    // If there were failures, log them and leave
+    if (failedResults.length > 0) {
+      failedResults.forEach(function (result) {
+        console.log('Failed result for ' + result.url);
       });
-
-  // If there were failures, log them and leave
-  if (failedResults.length > 0) {
-    failedResults.forEach(function (result) {
-      console.log('Failed result for ' + result.url);
-    });
-    process.exit(1);
-  } else {
-  // Otherwise, exit gracefully
-    console.log('All done!');
-    process.exit(0);
-  }
+      process.exit(1);
+    } else {
+    // Otherwise, exit gracefully
+      console.log('All done!');
+      process.exit(0);
+    }
+  });
 });

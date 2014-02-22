@@ -1,41 +1,32 @@
 // DEV: This is actually testing our DNS and not a server but meh.
-require('./setup');
+// TODO: Relocate into production-tests
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
+
 describe('twolfsn.com (http)', function () {
-  before(function (done) {
-    var that = this,
-        options = {url: 'http://twolfsn.com', followRedirect: false};
-    request.get(options, function (err, res) {
-      that.err = err;
-      that.res = res;
-      done(err);
-    });
-  });
-
-  testTwolfsn();
-});
-
-// TODO: This is non-functional =(
-// describe('twolfsn.com (https)', function () {
-//   before(function (done) {
-//     var that = this;
-//     request.get('https://twolfsn.com', function (err, res) {
-//       that.err = err;
-//       that.res = res;
-//       done(err);
-//     });
-//   });
-
-//   testTwolfsn();
-// });
-
-function testTwolfsn() {
-  it('responds', function () {
-    assert(!this.err);
+  httpUtils.save({
+    url: 'http://twolfsn.com',
+    followRedirect: false
   });
 
   it('redirects to twolfson.com', function () {
-    var res = this.res;
-    assert.strictEqual(res.statusCode, 301);
-    assert.strictEqual(res.headers.location, 'http://twolfson.com/');
+    expect(this.err).to.equal(null);
+    expect(this.res).to.have.property('statusCode', 301);
+    expect(this.res.headers).to.have.property('location', 'http://twolfson.com/');
   });
-}
+});
+
+// TODO: This is non-functional =(
+describe.skip('twolfsn.com (https)', function () {
+  httpUtils.save({
+    url: 'https://twolfsn.com',
+    followRedirect: false
+  });
+
+  it('redirects to twolfson.com', function () {
+    expect(this.err).to.equal(null);
+    expect(this.res).to.have.property('statusCode', 301);
+    expect(this.res.headers).to.have.property('location', 'https://twolfson.com/');
+  });
+});

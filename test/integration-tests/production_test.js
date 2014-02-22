@@ -1,53 +1,32 @@
-require('./setup');
-describe('twolfson.com', function () {
-  before(function (done) {
-    var that = this,
-        index = config.productionHost + '/';
-    request.get(index, function getIndexPage (err, res, body) {
-      that.body = body;
-      done(err);
-    });
-  });
+// TODO: Relocate into production test
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
 
-  it('does not have developer tools', function () {
-    var body = this.body,
-        health = body.indexOf('/health'),
-        stylesheet = body.indexOf('link[rel="stylesheet"]');
-    assert.strictEqual(health, -1);
-    assert.strictEqual(stylesheet, -1);
+describe('A request to twolfson.com', function () {
+  httpUtils.save('http://twolfson.com/');
+
+  it('does not have the /health endpoint', function () {
+    expect(this.err).to.equal(null);
+    expect(this.body).to.not.contain('/health');
   });
 });
 
-describe('twolfson.com script', function () {
-  before(function (done) {
-    var that = this,
-        indexScript = config.productionHost + '/public/js/index.js';
-    request.get(indexScript, function getIndexScript (err, res, script) {
-      that.script = script;
-      done(err);
-    });
-  });
+describe('A request to the twolfson.com/index.js', function () {
+  httpUtils.save('http://twolfson.com/public/js/index.js');
 
-  it('does not have developer tools', function () {
-    var script = this.script,
-        googleAnalytics = script.indexOf('_gaq'),
-        googleAnalyticsId = script.indexOf('UA-17165993-1');
-    assert.notEqual(googleAnalytics, -1);
-    assert.notEqual(googleAnalyticsId, -1);
+  it('contains the expected Google Analytics id', function () {
+    expect(this.err).to.equal(null);
+    expect(this.body).to.contain('_gaq');
+    expect(this.body).to.contain('UA-17165993-1');
   });
 });
 
-describe('twolfson.com /health', function () {
-  before(function (done) {
-    var that = this,
-        healthEndpt = config.productionHost + '/health';
-    request.get(healthEndpt, function getIndexScript (err, res, body) {
-      that.body = body;
-      done(err);
-    });
-  });
+describe('A request to twolfson.com/health', function () {
+  httpUtils.save('http://twolfson.com/health');
 
-  it('does not have developer tools', function () {
-    assert.strictEqual(JSON.parse(this.body).env, 'production');
+  it('marks the environment as production', function () {
+    expect(this.err).to.equal(null);
+    expect(JSON.parse(this.body)).to.have.property('env', 'production');
   });
 });

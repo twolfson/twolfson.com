@@ -1,34 +1,18 @@
-// Load in setup
-require('./setup');
+// TODO: Relocate into production test
+var expect = require('chai').expect;
+var httpUtils = require('../utils/http');
+var serverUtils = require('../utils/server');
 
 // Start our test suite
-describe('twolfson.com', function () {
-  before(function (done) {
-    // Grab index page
-    var that = this,
-        index = config.url('/');
-    request.get(index, function getIndexPage (err, res, body) {
-      // Save response
-      that.err = err;
-      that.res = res;
-      that.body = body;
-
-      // Callback
-      done(err);
-    });
-  });
-
-  it('is responding', function () {
-    assert(!this.err);
-  });
+describe('A request to twolfson.com', function () {
+   httpUtils.save('http://twolfson.com/');
 
   it('is responding with valid status code', function () {
-    var statusCode = this.res.statusCode;
-    assert(statusCode >= 200, statusCode + ' is not above 200');
-    assert(statusCode < 300, statusCode + ' is not under 300');
+    expect(this.err).to.equal(null);
+    expect(this.res).to.have.property('statusCode', 200);
   });
 
   it('is responding with content', function () {
-    assert(this.body);
+    expect(this.body).to.contain('Todd Wolfson');
   });
 });
