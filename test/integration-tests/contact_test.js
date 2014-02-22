@@ -45,3 +45,13 @@ describe.only('A submission to /contact', function () {
     // expect(this.body).to.match(/thank you/i);
   });
 });
+
+describe.skip('A failing submission to /contact', function () {
+  serverUtils.run();
+
+  it('receives a prompt to try again later', function () {
+    expect(this.err).to.equal(null);
+    expect(this.res.statusCode).to.equal(500);
+    expect(this.body).to.match('Try again laterrrrr');
+  });
+});
