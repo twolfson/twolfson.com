@@ -19,7 +19,9 @@ describe.only('A request to /index.xml', function () {
   });
 
   it('returns a list of articles', function () {
-    console.log(this.xml);
-    expect(this.xml).to.equal(null);
+    expect(this.xml.feed.title).to.deep.equal(['Todd Wolfson - Javascript Developer']);
+    expect(this.xml.feed.id).to.deep.equal(['http://twolfson.com/']);
+    expect(this.xml.feed.author).to.be.deep.equal([{name: ['Todd Wolfson']}]);
+    expect(this.xml.feed.entry.length).to.be.greaterThan(0);
   });
 });
