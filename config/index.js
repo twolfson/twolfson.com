@@ -11,7 +11,7 @@ module.exports = new Settings({
         url: 'http://twolfson.com/'
       }
     },
-    // TODO: Disable mail in tests, mock method, or mock a server (preferred)
+    // TODO: Mock method or mock a server (preferred)
     mail: require('./mail'),
     'support-me': {
       gittip: 'twolfson',
@@ -40,6 +40,11 @@ module.exports = new Settings({
     // Same as common
   },
   test: {
+    mail: {
+      'user': 'this-is-a-test@twolfson.com',
+      'password': 'keyboardcat',
+      'host': 'localhost:1338'
+    },
     url: {
       internal: {
         protocol: 'http',
