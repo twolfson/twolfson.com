@@ -5,7 +5,7 @@ var jQuerySrc = fs.readFileSync(__dirname + '/../test_files/jquery.js', 'utf8');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
-describe('twolfson.com/projects', function () {
+describe('A request to /projects', function () {
   serverUtils.run();
   httpUtils.save(serverUtils.getUrl('/projects'));
   before(function handleError (done) {
@@ -18,6 +18,7 @@ describe('twolfson.com/projects', function () {
   before(function loadPage (done) {
     // Create a window object
     var that = this;
+    console.log(this.body);
     jsdom.env({
       html: this.body,
       src: [jQuerySrc],
@@ -33,12 +34,10 @@ describe('twolfson.com/projects', function () {
     // Grab starCount
     var $ = this.window.$;
     var $starCount = $('.starCount');
-    console.log($starCount);
     assert.notEqual($starCount.length, 0);
 
     // Assert there are stars
-    // text seems to be returning a weird number
-    // var starCountStr = $starCount.text().trim(),
+    // DEV: text seems to be returning a weird number
     var starCountStr = $starCount.html().trim();
     var starCount = +starCountStr;
     assert.notEqual(starCountStr, '');
