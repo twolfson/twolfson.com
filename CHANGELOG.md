@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.11.3 - Relocated underscore dependency
+
 3.11.2 - Fixed broken RSS feed
 
 3.11.1 - Fixed up ordering of 'support-me' config
