@@ -3,7 +3,7 @@ var _ = require('underscore');
 var Server = require('../../');
 
 exports.getSettings = function (params) {
-  var config = require('../config');
+  var config = require('../../config');
   return _.extend({}, config.getSettings({env: 'test'}), params || {});
 };
 
