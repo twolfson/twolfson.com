@@ -1,7 +1,7 @@
 {
   "name": "twolfson.com",
   "description": "twolfson.com server",
-  "version": "3.11.1",
+  "version": "3.13.0",
   "homepage": "https://github.com/twolfson/twolfson.com",
   "author": {
     "name": "Todd Wolfson",
@@ -46,7 +46,8 @@
     "consolidate": "~0.9.1",
     "unhtml": "~0.1.0",
     "jade": "~0.35.0",
-    "shallow-settings": "~0.1.0"
+    "shallow-settings": "~0.1.0",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -69,10 +70,10 @@
     "image-diff": "~1.0.1",
     "shell-quote": "~1.4.1",
     "rimraf": "~2.2.6",
-    "underscore": "~1.6.0",
     "request-mocha": "~0.2.0",
     "chai": "~1.9.0",
-    "simplesmtp": "~0.3.21"
+    "simplesmtp": "~0.3.21",
+    "xml2js": "~0.4.1"
   },
   "private": true
 }

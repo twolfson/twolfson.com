@@ -1,4 +1,12 @@
 # twolfson.com changelog
+3.13.0 - Added test for environment and RSS
+
+3.12.0 - Updated references to env
+
+3.11.3 - Relocated underscore dependency
+
+3.11.2 - Fixed broken RSS feed
+
 3.11.1 - Fixed up ordering of 'support-me' config
 
 3.11.0 - Moved to shallow-settings for per-environment configuration

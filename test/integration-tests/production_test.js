@@ -6,6 +6,10 @@ var serverUtils = require('../utils/server');
 describe('A request to twolfson.com', function () {
   httpUtils.save('http://twolfson.com/');
 
+  it('has environment set to "production"', function () {
+    expect(this.body).to.contain('window.env = "production";');
+  });
+
   it('does not have the /health endpoint', function () {
     expect(this.err).to.equal(null);
     expect(this.body).to.not.contain('/health');
