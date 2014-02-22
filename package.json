@@ -1,13 +1,30 @@
 {
   "name": "twolfson.com",
   "description": "twolfson.com server",
-  "author": "Todd Wolfson <todd@twolfson.com>",
   "version": "3.10.0",
+  "homepage": "https://github.com/twolfson/twolfson.com",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
   },
+  "bugs": {
+    "url": "https://github.com/twolfson/twolfson.com/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/twolfson/twolfson.com/blob/master/LICENSE-MIT"
+    }
+  ],
   "main": "server/index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
   "scripts": {
     "start": "node server/index.js",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
@@ -57,6 +74,5 @@
     "chai": "~1.9.0",
     "simplesmtp": "~0.3.21"
   },
-  "license": "MIT",
   "private": true
 }
