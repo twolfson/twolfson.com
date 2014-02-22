@@ -56,7 +56,6 @@ Server.prototype = {
     app.get('/index.xml', controllers.blog.rss({articles: articles}));
 
     // TODO: Move projects into config
-    app.locals.numscale = require('numscale').scale;
     app.locals.projects = require('./models/projects');
 
     // Bind routes

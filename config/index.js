@@ -1,4 +1,5 @@
 // Load in dependencies
+var numscale = require('numscale');
 var Settings = require('shallow-settings');
 
 // Define our settings
@@ -11,6 +12,7 @@ module.exports = new Settings({
     'app.locals': Settings.lazy(function () {
       return {
         env: this.ENV,
+        numscale: numscale.scale,
         config: {
           author: 'Todd Wolfson',
           title: 'Todd Wolfson - Javascript Developer',
