@@ -10,12 +10,17 @@ exports.getSettings = function () {
   };
 };
 
+exports.startServer = function () {
+  var settings = exports.getSettings();
+  var server = new Server();
+  server.listen(settings.port);
+  return server;
+};
+
 exports.run = function () {
   var server;
-  var settings = exports.getSettings();
   before(function startServer () {
-    server = new Server();
-    server.listen(settings.port);
+    server = exports.startServer();
   });
   after(function stopServer (done) {
     server.destroy(done);
