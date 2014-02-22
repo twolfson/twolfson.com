@@ -32,6 +32,7 @@ describe.only('A submission to /contact', function () {
     var settings = serverUtils.getSettings();
     this.smtpServer = smtp.createServer(function handleReq (req) {
       req.on('to', function (to, ack) {
+        console.log('hi');
         var domain = to.split('@')[1] || 'localhost';
         if (domain === 'localhost') {
           ack.accept();
@@ -48,6 +49,7 @@ describe.only('A submission to /contact', function () {
         ack.accept();
       });
     });
+    console.log(settings.mail.port);
     this.smtpServer.listen(settings.mail.port);
   });
   after(function stopSmtp (done) {
