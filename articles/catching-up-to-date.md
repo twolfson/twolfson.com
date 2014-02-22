@@ -28,7 +28,7 @@ Contests
 [CSS Off](http://www.unmatchedstyle.com/cssoff/index.php)
 -------------------------------------------------------------
 - [Design](http://www.unmatchedstyle.com/cssoff/signup.php)
-- [Submission](http://twolfson.com/public/portfolio/css_off/index.html) - Waiting for score
+- [Submission](http://twolfson.github.io/CSS-Off--2011-/) - Waiting for score
 
 [JS1K](http://js1k.com/)
 ------------------------
