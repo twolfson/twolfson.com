@@ -5,8 +5,6 @@ var Settings = require('shallow-settings');
 // Define our settings
 module.exports = new Settings({
   common: {
-    inDevelopment: true,
-    inProduction: false,
     addDevelopmentRoutes: true,
     addTestRoutes: true,
     articles: Settings.lazy(function () {
@@ -78,8 +76,6 @@ module.exports = new Settings({
     }
   },
   production: {
-    inDevelopment: false,
-    inProduction: true,
     addDevelopmentRoutes: false,
     addTestRoutes: false,
     updateProjectsImmediately: true,
