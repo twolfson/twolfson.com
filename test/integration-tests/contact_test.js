@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var smtp = require('smtp-protocol');
+var simplesmtp = require('simplesmtp');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
@@ -30,14 +30,15 @@ describe.only('A submission to /contact', function () {
   serverUtils.run();
   before(function startSmtp (done) {
     var settings = serverUtils.getSettings();
-    this.smtpServer = smtp.createServer();
-    this.smtpServer.listen(settings.mail.port, function listening () {
-      this.smtpServer.on("data", function(envelope, chunk)
+    var smtpServer = simplesmtp.createServer();
+    this.smtpServer = smtpServer;
+    smtpServer.listen(settings.mail.port, function listening () {
+      smtpServer.on("data", function(envelope, chunk)
          {
             console.log('aaa', chunk);
          });
 
-      this.smtpServer.on("dataReady", function(envelope, callback)
+      smtpServer.on("dataReady", function(envelope, callback)
          {
             console.log('heee');
             callback(null);
