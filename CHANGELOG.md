@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.7.0 - Deleted unused portfolio files
+
 3.6.0 - Removing carriage returns for good
 
 3.5.0 - Moved to `image-diff` and hardened perceptual diffs
