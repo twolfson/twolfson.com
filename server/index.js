@@ -22,13 +22,6 @@ Server.prototype = {
     app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
-
-    // Host /test for kaleidoscope
-    // TODO: Move this into test route bindings
-    if (this.config.inDevelopment) {
-      app.use('/test', express['static'](__dirname + '/../test'));
-    }
-
     app.use(require('express-partials')());
   },
   addRoutes: function () {
