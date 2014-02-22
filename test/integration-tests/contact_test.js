@@ -26,11 +26,26 @@ describe('A request to the /contact form', function () {
   });
 });
 
-describe('A submission to /contact', function () {
+describe.only('A submission to /contact', function () {
   serverUtils.run();
   before(function startSmtp () {
     this.smtpServer = smtp.createServer(function handleReq (req) {
+      req.on('to', function (to, ack) {
+        var domain = to.split('@')[1] || 'localhost';
+        if (domain === 'localhost') {
+          ack.accept();
+        } else {
+          ack.reject();
+        }
+      });
 
+      req.on('message', function (stream, ack) {
+        console.log('from: ' + req.from);
+        console.log('to: ' + req.to);
+
+        stream.pipe(process.stdout, { end : false });
+        ack.accept();
+      });
     });
     this.smtpServer.listen(1338);
   });
@@ -50,7 +65,7 @@ describe('A submission to /contact', function () {
   });
 });
 
-describe.only('A failing submission to /contact', function () {
+describe('A failing submission to /contact', function () {
   serverUtils.run();
   makeContactRequest();
 
