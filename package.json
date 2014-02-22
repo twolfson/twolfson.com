@@ -7,9 +7,9 @@
     "type": "git",
     "url": "git://github.com/twolfson/twolfson.com.git"
   },
-  "main": "lib/app.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node lib/app.js",
+    "start": "node server/index.js",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test": "npm run test-perceptual && npm run test-integration",
