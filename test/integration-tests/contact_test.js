@@ -31,8 +31,12 @@ describe.only('A submission to /contact', function () {
   before(function startSmtp () {
     var settings = serverUtils.getSettings();
     this.smtpServer = smtp.createServer(function handleReq (req) {
+      console.log('request', req);
+      req.on('data', function () {
+        console.log('wheee');
+      });
       req.on('to', function (to, ack) {
-        console.log('hi');
+        console.log('TOOOOO');
         var domain = to.split('@')[1] || 'localhost';
         if (domain === 'localhost') {
           ack.accept();
