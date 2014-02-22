@@ -42,9 +42,23 @@ Server.prototype = {
       });
     }
 
+    // TODO: Relocate into a controller which is somehow more self-aware
+    var controllers = require('./controllers');
+    // Blog
+    // TODO: Integrate Travis CI to local testing (with notifications)
+    // TODO: Add test for xml rendering
+    var articles = require('../articles');
+    app.get('/', controllers.blog.index({articles: articles}));
+    articles.forEach(function (article) {
+      // DEV: Escape '+' as express coerces URL to a regexp
+      var url = article.url.replace(/\+/g, '\\+');
+      app.get(url, controllers.blog.article({article: article}));
+    });
+    app.get('/index.xml', controllers.blog.rss({articles: articles}));
+
     // TODO: Move projects into config
     app.locals.numscale = require('numscale').scale;
-    app.locals.projects = require('./projects');
+    app.locals.projects = require('./models/projects');
 
     // Bind routes
     app.use(routes.common);

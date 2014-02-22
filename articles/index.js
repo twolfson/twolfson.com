@@ -67,7 +67,7 @@ var articleObj = {};
 articles.forEach(function (article) {
   articleObj[article.title] = article;
 });
-var projects = require('../lib/projects'),
+var projects = require('../server/models/projects'),
     projectObj = {};
 Object.getOwnPropertyNames(projects).forEach(function (namespace) {
   var projectsArr = projects[namespace];

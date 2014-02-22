@@ -7,18 +7,6 @@ exports.common = function () {
   // Generate a router
   var router = new express.Router();
 
-  // Blog
-  // TODO: Integrate Travis CI to local testing (with notifications)
-  // TODO: Add test for xml rendering
-  var articles = require('../articles');
-  router.get('/', controllers.blog.index({articles: articles}));
-  articles.forEach(function (article) {
-    // DEV: Escape '+' as express coerces URL to a regexp
-    var url = article.url.replace(/\+/g, '\\+');
-    router.get(url, controllers.blog.article({article: article}));
-  });
-  router.get('/index.xml', controllers.blog.rss({articles: articles}));
-
   // Projects pages
   router.get('/projects', controllers.projects);
 
