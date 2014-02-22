@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.12.0 - Updated references to env
+
 3.11.3 - Relocated underscore dependency
 
 3.11.2 - Fixed broken RSS feed
