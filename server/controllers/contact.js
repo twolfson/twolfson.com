@@ -36,7 +36,7 @@ exports.index = function (config) {
 // Contact page (submission)
 exports.submit = function (config) {
   var emailConf = config.mail;
-  assert(emailConfig, 'Config did not contain "mail"');
+  assert(emailConf, 'Config did not contain "mail"');
   var emailServer = email.server.connect(emailConf);
 
   return [
