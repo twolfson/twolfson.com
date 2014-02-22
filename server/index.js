@@ -1,10 +1,14 @@
 // Create the server
 var express = require('express');
-var config = require('../config');
+var CONFIG = require('../config');
 var routes = require('./routes');
 
-function Server() {
+function Server(/* CONFIG */) {
+  // Create an app and save config for bindings/later
   this.app = express();
+  this.config = CONFIG;
+
+  // Register common items
   this.registerViewEngine();
   this.addRoutes();
 }
@@ -14,21 +18,22 @@ Server.prototype = {
     var app = this.app;
     app.engine('ejs', require('consolidate').ejs);
     app.set('view engine', 'ejs');
-    app.set('views', __dirname + '/../views');
+    app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
 
     // Host /test for kaleidoscope
-    // TODO: Make this host test routes
-    if (config.inDevelopment) {
+    // TODO: Move this into test route bindings
+    if (this.config.inDevelopment) {
       app.use('/test', express['static'](__dirname + '/../test'));
     }
 
     app.use(require('express-partials')());
   },
   addRoutes: function () {
-    // Localize app
+    // Localize app and config
     var app = this.app;
+    var config = this.config;
 
     // If we are in development, check for a grid flag
     // TODO: Make this addGridMiddleware
