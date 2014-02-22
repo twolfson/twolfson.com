@@ -17,14 +17,14 @@ module.exports = new Settings({
       return require('./mail');
     }),
     'support-me': {
-      gittip: 'twolfson',
+      bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
+      dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
       flattr: 'twolfsn',
+      gittip: 'twolfson',
       paypal: {
         name: 'Todd Wolfson',
         email: 'todd@twolfson.com'
       },
-      bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
-      dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ'
     },
     url: {
       internal: {
