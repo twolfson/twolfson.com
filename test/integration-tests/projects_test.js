@@ -1,4 +1,7 @@
+var assert = require('assert');
+var fs = require('fs');
 var jsdom = require('jsdom');
+var jQuerySrc = fs.readFileSync(__dirname + '/../test_files/jquery.js', 'utf8');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
@@ -16,14 +19,11 @@ describe('twolfson.com/projects', function () {
     // Create a window object
     var that = this;
     jsdom.env({
-      html: that.body,
-      src: [jquerySrc],
+      html: this.body,
+      src: [jQuerySrc],
       done: function getProjectsWindow (err, window) {
         // Save the info about the window
-        that.windowErr = err;
         that.window = window;
-
-        // Callback with any error
         done(err);
       }
     });
@@ -31,15 +31,16 @@ describe('twolfson.com/projects', function () {
 
   it('is counting stars', function () {
     // Grab starCount
-    var $ = this.window.$,
-        $starCount = $('.starCount');
+    var $ = this.window.$;
+    var $starCount = $('.starCount');
+    console.log($starCount);
     assert.notEqual($starCount.length, 0);
 
     // Assert there are stars
     // text seems to be returning a weird number
     // var starCountStr = $starCount.text().trim(),
-    var starCountStr = $starCount.html().trim(),
-        starCount = +starCountStr;
+    var starCountStr = $starCount.html().trim();
+    var starCount = +starCountStr;
     assert.notEqual(starCountStr, '');
     assert.notEqual(starCount, 0);
 
