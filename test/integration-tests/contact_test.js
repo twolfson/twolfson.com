@@ -26,7 +26,7 @@ describe('A request to the /contact form', function () {
   });
 });
 
-describe.only('A submission to /contact', function () {
+describe('A submission to /contact', function () {
   serverUtils.run();
   before(function startSmtp (done) {
     var settings = serverUtils.getSettings();

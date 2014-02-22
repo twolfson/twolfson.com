@@ -13,7 +13,6 @@ module.exports = new Settings({
         url: 'http://twolfson.com/'
       }
     },
-    // TODO: Mock method or mock a server (preferred)
     mail: require('./mail'),
     'support-me': {
       gittip: 'twolfson',
