@@ -66,7 +66,7 @@ Server.prototype = {
     app.locals.projects = require('./models/projects');
 
     // Bind routes
-    app.use(routes.common);
+    app.use(routes.common(config));
 
     // TODO: Add error handler here
   },
