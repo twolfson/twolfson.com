@@ -1,6 +1,5 @@
 // Set up for file references
-var config = require('../../../config'),
-    scriptsFile = __dirname + '/scripts.json',
+var scriptsFile = __dirname + '/scripts.json',
     competitionsFile = __dirname + '/competitions.json',
     contributionsFile = __dirname + '/contributions.json';
 
@@ -93,7 +92,7 @@ var second = 1000,
 setInterval(updateStats, everyHour);
 
 // If we are in production, fetch now
-if (config.inProduction || !module.parent) {
+if (!module.parent) {
   process.nextTick(updateStats);
 }
 
