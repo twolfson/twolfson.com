@@ -20,19 +20,17 @@ Server.prototype = {
     app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
-
-    // Host /test for kaleidoscope
-    // TODO: Move this into test route bindings
-    if (this.config.inDevelopment) {
-      app.use('/test', express['static'](__dirname + '/../test'));
-    }
-
     app.use(require('express-partials')());
   },
   addRoutes: function () {
     // Localize app and config
     var app = this.app;
     var config = this.config;
+
+    // Add test and development specific routes
+    if (config.addTestRoutes) {
+      app.use(routes.test);
+    }
 
     // If we are in development, check for a grid flag
     // TODO: Make this addGridMiddleware

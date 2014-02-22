@@ -37,3 +37,12 @@ exports.common = function (config) {
   // router.middleware has signature of `function (req, res, next) {}`
   return router.middleware;
 };
+
+exports.test = function (config) {
+  var router = new express.Router();
+
+  // Host /test for kaleidoscope
+  app.use('/test', express['static'](__dirname + '/../test'));
+
+  return router.middleware;
+};
