@@ -1,3 +1,4 @@
+var jsdom = require('jsdom');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
