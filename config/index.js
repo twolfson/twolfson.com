@@ -43,8 +43,6 @@ module.exports = new Settings({
   },
   test: {
     mail: {
-      // user: 'this-is-a-test@twolfson.com',
-      // password: 'helloyesthisisdoge',
       host: 'localhost',
       port: 1338
     },
