@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.5.0 - Moved to `image-diff` and hardened perceptual diffs
+
 3.4.0 - Reverted since we were too aggressive
 
 3.3.0 - Removed all carriage returns. Fixes #23
