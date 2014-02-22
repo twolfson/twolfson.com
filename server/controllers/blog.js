@@ -1,10 +1,9 @@
 // Load and convert activity
+// TODO: Relocate jade into views
 var fs = require('fs'),
     jade = require('jade'),
     activityJade = fs.readFileSync(__dirname + '/blog_activity.jade', 'utf8'),
     activityHtml = jade.render(activityJade);
-
-// TODO: Relocate jade into views
 
 // Render homepage
 exports.index = function (config) {
