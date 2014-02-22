@@ -16,7 +16,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <% /* Output environment */ %>
   <script type="text/javascript">
-    window.env = "<%= process.env.NODE_ENV %>";
+    window.env = "<%= locals.env %>";
   </script>
   <script src="/public/js/index.js"></script>
   <% if (locals.enableGrid) { %>

@@ -64,7 +64,7 @@ exports.health = function (config) {
         'uptime': process.uptime(),
         'memory': process.memoryUsage(),
         'pid': process.pid,
-        'env': config.env
+        'env': config.ENV
       };
       res.send(retObj);
     }

@@ -6,13 +6,16 @@ module.exports = new Settings({
   common: {
     inDevelopment: true,
     inProduction: false,
-    'app.locals': {
-      config: {
-        author: 'Todd Wolfson',
-        title: 'Todd Wolfson - Javascript Developer',
-        url: 'http://twolfson.com/'
-      }
-    },
+    'app.locals': Settings.lazy(function () {
+      return {
+        env: this.ENV,
+        config: {
+          author: 'Todd Wolfson',
+          title: 'Todd Wolfson - Javascript Developer',
+          url: 'http://twolfson.com/'
+        }
+      };
+    }),
     mail: Settings.lazy(function () {
       return require('./mail');
     }),
