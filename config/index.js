@@ -14,8 +14,10 @@ module.exports = new Settings({
     }),
     'app.locals': Settings.lazy(function () {
       // TODO: This is very bad technique but models/projects is worse
-      global.loadProjects = this.ENV === 'production';
-      console.log('w', global.loadProjects);
+      var projects = require('../server/models/projects');
+      if (this.updateProjectsImmediately) {
+        process.nextTick(global.updateProjects);
+      }
       return {
         config: {
           author: 'Todd Wolfson',
@@ -24,7 +26,7 @@ module.exports = new Settings({
         },
         env: this.ENV,
         numscale: numscale.scale,
-        projects: require('../server/models/projects')
+        projects: projects
       };
     }),
     mail: Settings.lazy(function () {
@@ -40,6 +42,7 @@ module.exports = new Settings({
         email: 'todd@twolfson.com'
       },
     },
+    updateProjectsImmediately: false,
     url: {
       internal: {
         protocol: 'http',
@@ -79,6 +82,7 @@ module.exports = new Settings({
     inProduction: true,
     addDevelopmentRoutes: false,
     addTestRoutes: false,
+    updateProjectsImmediately: true,
     url: {
       internal: {
         protocol: 'http',
