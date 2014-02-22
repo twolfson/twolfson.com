@@ -11,10 +11,6 @@ var expectedScreenshots = __dirname + '/expected_screenshots',
     actualScreenshots = __dirname + '/actual_screenshots',
     diffScreenshots = __dirname + '/diff_screenshots';
 
-// TODO: BEFORE LANDING, UPGRADE IMAGE-DIFF
-// TODO: BEFORE LANDING, UPGRADE IMAGE-DIFF
-// TODO: BEFORE LANDING, UPGRADE IMAGE-DIFF
-
 // Clean up actual screenshots and diffs
 rimraf.sync(actualScreenshots);
 rimraf.sync(diffScreenshots);
