@@ -9,6 +9,9 @@ module.exports = new Settings({
     inProduction: false,
     addDevelopmentRoutes: true,
     addTestRoutes: true,
+    articles: Settings.lazy(function () {
+      return require('../articles');
+    }),
     'app.locals': Settings.lazy(function () {
       return {
         config: {
