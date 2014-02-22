@@ -11,14 +11,14 @@ module.exports = new Settings({
     addTestRoutes: true,
     'app.locals': Settings.lazy(function () {
       return {
-        env: this.ENV,
-        numscale: numscale.scale,
-        projects: require('./models/projects'),
         config: {
           author: 'Todd Wolfson',
           title: 'Todd Wolfson - Javascript Developer',
           url: 'http://twolfson.com/'
-        }
+        },
+        env: this.ENV,
+        numscale: numscale.scale,
+        projects: require('./models/projects')
       };
     }),
     mail: Settings.lazy(function () {
