@@ -27,11 +27,6 @@ exports.common = function (config) {
   router.get('/contact', controllers.contact.index(config));
   router.post('/contact', express.urlencoded(), controllers.contact.submit(config));
 
-  // If we are in development, add a kaleidoscope test page
-  if (config.inDevelopment) {
-    router.get('/kaleido', controllers.kaleido(config));
-  }
-
   // Support me
   router.get('/support-me', controllers['support-me'](config));
 
@@ -56,6 +51,9 @@ exports.development = function (config) {
     res.locals.enableGrid = req.query.grid !== undefined;
     next();
   });
+
+  // Add a kaleidoscope test page
+  router.get('/kaleido', controllers.kaleido(config));
 
   return router.middleware;
 };
