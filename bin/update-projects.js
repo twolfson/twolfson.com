@@ -36,7 +36,8 @@ projects.update(function (err) {
     }
 
     // Otherwise, exit the program
-    console.log('Projects should be updated');
+    console.log('THIS SCRIPT IS UNDER CONSTRUCTION!!!');
+    // console.log('Projects should be updated');
     process.exit();
   });
 });
