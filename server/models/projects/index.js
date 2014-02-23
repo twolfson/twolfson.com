@@ -13,6 +13,18 @@ var competitionModels = competitionsJson.map(function (competitionJson) {
 var competitions = new Backbone.Collection(competitionModels, {
   model: CompetitionProject
 });
+var contributionModels = contributionsJson.map(function (contributionJson) {
+  return new ScriptProject(contributionJson);
+});
+var contributions = new Backbone.Collection(contributionModels, {
+  model: ScriptProject
+});
+var scriptModels = scriptsJson.map(function (scriptJson) {
+  return new ScriptProject(scriptJson);
+});
+var scripts = new Backbone.Collection(scriptModels, {
+  model: ScriptProject
+});
 
 function updateStats(cb) {
   // Update each of the types
@@ -29,6 +41,6 @@ global.updateProjects = updateStats;
 
 module.exports = {
   competitions: competitions.toJSON(),
-  contributions: contributionsJson,
-  scripts: scriptsJson
+  contributions: contributions.toJSON(),
+  scripts: scripts.toJSON()
 };
