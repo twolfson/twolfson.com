@@ -28,7 +28,7 @@ function updateStats(cb) {
 global.updateProjects = updateStats;
 
 module.exports = {
-  competitions: competitionsJson,
+  competitions: competitions.toJSON(),
   contributions: contributionsJson,
   scripts: scriptsJson
 };
