@@ -37,7 +37,6 @@
     "ejs": "~0.8.4",
     "jojo": "~1.1.0",
     "express": "~3.4.8",
-    "gitter": "~0.2.0",
     "marked": "~0.2.6",
     "emailjs": "0.3.4",
     "request": "~2.27.0",
@@ -48,7 +47,8 @@
     "unhtml": "~0.1.0",
     "jade": "~0.35.0",
     "shallow-settings": "~0.1.0",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "github": "~0.1.14"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
