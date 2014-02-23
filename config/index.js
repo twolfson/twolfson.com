@@ -29,15 +29,8 @@ module.exports = new Settings({
         projects: projects
       };
     }),
-    // TODO: Restore common logger
-    // errorLogger: Settings.lazy(function () {
-    //   return errorLoggers.common();
-    // }),
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.production({
-        environment: this.ENV,
-        revision: pkg.version
-      });
+      return errorLoggers.common();
     }),
     mail: Settings.lazy(function () {
       return require('./secret').mail;
