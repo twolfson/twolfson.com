@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.17.0 - Added error handlers
+
 3.16.1 - Accepted latest perceptual diffs
 
 3.16.0 - Moved server start to an executable script
