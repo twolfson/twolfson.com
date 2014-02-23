@@ -4,13 +4,13 @@ exports.missingPage = function (config) {
 
 exports.errorEncountered = function (config) {
   return function handleError (err, req, res, next) {
-    // Log and potentially throw the error
-    config.errorLogger(err, req);
+    // If we should throw errors, throw the error
     if (config.throwCaughtErrors) {
       throw err;
     }
 
-    // Render a 500 page
+    // Log the error and render a 500
+    config.errorLogger(err, req);
     exports[500](req, res);
   };
 };
