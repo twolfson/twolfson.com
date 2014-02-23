@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.14.0 - Removed inDevelopment/inProduction from config
+
 3.13.0 - Added test for environment and RSS
 
 3.12.0 - Updated references to env
