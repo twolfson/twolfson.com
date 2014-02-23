@@ -29,5 +29,12 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 module.exports = {
   competitions: new CompetitionCollection(competitionModels),
   contributions: new ScriptCollection(contributionModels),
-  scripts: new ScriptCollection(scriptModels)
+  scripts: new ScriptCollection(scriptModels),
+  toJSON: function () {
+    return {
+      competitions: this.competitions.toJSON(),
+      contributions: this.contributions.toJSON(),
+      scripts: this.scripts.toJSON()
+    };
+  }
 };

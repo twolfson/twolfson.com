@@ -1,10 +1,6 @@
 module.exports = function (config) {
   var projects = require('../models/projects');
-  var stringifiedProjects = {
-    competitions: projects.competitions.toJSON(),
-    contributions: projects.contributions.toJSON(),
-    scripts: projects.scripts.toJSON()
-  };
+  var stringifiedProjects = projects.toJSON();
   return [
     function projectsFn (req, res) {
       res.render('projects', {
