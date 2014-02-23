@@ -2,6 +2,7 @@
 var numscale = require('numscale');
 var Settings = require('shallow-settings');
 var errorLoggers = require('./error-loggers');
+var pkg = require('../package.json');
 
 // Define our settings
 module.exports = new Settings({
@@ -35,15 +36,13 @@ module.exports = new Settings({
     errorLogger: Settings.lazy(function () {
       return errorLoggers.production({
         environment: this.ENV,
-        revision: this['package'].version
+        revision: pkg.version
       });
     }),
     mail: Settings.lazy(function () {
       return require('./mail');
     }),
-    'package': Settings.lazy(function () {
-      return require('../package.json');
-    }),
+    'package': pkg,
     'support-me': {
       bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
       dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
@@ -97,7 +96,7 @@ module.exports = new Settings({
     errorLogger: Settings.lazy(function () {
       return errorLoggers.production({
         environment: this.ENV,
-        revision: this['package'].version
+        revision: pkg.version
       });
     }),
     updateProjectsImmediately: true,
