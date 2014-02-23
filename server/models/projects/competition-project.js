@@ -1,9 +1,9 @@
-var Backbone = require('backbone');
+var Project = require('./project');
 var https = require('https');
 
-var CompetitionRepo = Backbone.Model.extend({
+var CompetitionRepo = Project.extend({
   save: function () {
-    // TODO: Save to disk
+    // TODO: Save to disk (maybe this is a project method)
   },
   update: function (cb) {
     // If it an mdn file, update it
