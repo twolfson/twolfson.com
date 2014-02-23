@@ -57,12 +57,12 @@ exports.update = function (done) {
     function updateCompetitions (cb) {
       exports.competitions.update(cb);
     },
-    // function updateContributions (cb) {
-    //   exports.contributions.update(cb);
-    // },
-    // function updateScripts (cb) {
-    //   exports.scripts.update(cb);
-    // }
+    function updateContributions (cb) {
+      exports.contributions.update(cb);
+    },
+    function updateScripts (cb) {
+      exports.scripts.update(cb);
+    }
   ], done);
 };
 exports.save = function (done) {
