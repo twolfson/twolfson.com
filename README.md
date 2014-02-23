@@ -2,7 +2,7 @@
 
 Repository for [http://twolfson.com/][].
 
-This server is written on top of [express][express], for routing and views, and [jojo][jojo], for blog entries.
+This server is written on top of [express][], for routing and views, and [jojo][], for blog entries.
 
 [http://twolfson.com/]: http://twolfson.com/
 [express]: http://expressjs.com/
