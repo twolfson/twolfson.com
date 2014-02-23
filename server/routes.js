@@ -68,5 +68,8 @@ exports.test = function (config) {
   router.get('/contact/failure', controllers.contact.devFailure(config));
   router.get('/contact/success', controllers.contact.devSuccess(config));
 
+  // Host 500 page for screenshotting
+  router.get('/500', controllers['error-handlers'][500]);
+
   return router.middleware;
 };
