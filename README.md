@@ -17,7 +17,7 @@ This server is written on top of [express][], for routing and views, and [jojo][
 - `server/` - Container for majority of app
     - `index.js` - Constructor for server that binds view and routing middlewares
     - `controllers/` - Business logic for server endpoints
-    - `models/projects/` - Assortment of competitions, contributions, and scripts
+    - `models/` - External data for the server to read in
     - `routes.js` - Attachements for `controllers/` to URLs
     - `views/` - HTML templates written in [ejs][]
 - `public/` - CSS, images, and JavaScript for client side pages
