@@ -35,7 +35,7 @@
     "test-integration": "mocha test/integration-tests",
     "test-production": "mocha test/production-tests",
     "test": "npm run test-integration && npm run test-perceptual",
-    "update-projects": "node server/models/projects/index.js"
+    "update-projects": "node bin/update-projects.js"
   },
   "dependencies": {
     "ejs": "~0.8.4",
