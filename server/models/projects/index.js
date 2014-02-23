@@ -46,12 +46,10 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 exports.competitions = new CompetitionCollection(competitionModels, {
   filepath: __dirname + '/competitions.json'
 });
-// exports.contributions = new ScriptCollection(contributionModels, {
-exports.contributions = new ScriptCollection([], {
+exports.contributions = new ScriptCollection(contributionModels, {
   filepath: __dirname + '/contributions.json'
 });
-// exports.scripts = new ScriptCollection(scriptModels, {
-exports.scripts = new ScriptCollection([], {
+exports.scripts = new ScriptCollection(scriptModels, {
   filepath: __dirname + '/scripts.json'
 });
 
