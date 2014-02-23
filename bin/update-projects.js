@@ -23,8 +23,10 @@ projects.update(function (err) {
     if (aName < bName) { return -1; }
     return 0;
   }
-  contributions.sortBy(sortProjects);
-  scripts.sortBy(sortProjects);
+  projects.contributions.comparator = sortProjects;
+  projects.scripts.comparator = sortProjects;
+  projects.contributions.sort();
+  projects.scripts.sort();
 
   // Save the projects to disk
   projects.save(function (err) {
