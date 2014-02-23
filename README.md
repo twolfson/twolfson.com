@@ -1,6 +1,6 @@
 # twolfson.com [![Build status](https://travis-ci.org/twolfson/twolfson.com.png?branch=master)](https://travis-ci.org/twolfson/twolfson.com)
 
-Repository for [http://twolfson.com/][].
+Repository for [http://twolfson.com/][]
 
 This server is written on top of [express][], for routing and views, and [jojo][], for blog entries.
 
