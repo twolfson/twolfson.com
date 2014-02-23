@@ -7,5 +7,9 @@ matrix:
   allow_failures:
     - node_js: "0.11"
 
+script:
+  # TODO: Get the entire test suite running
+  - npm run test-integration
+
 notifications:
   email: false
