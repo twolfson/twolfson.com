@@ -33,6 +33,7 @@
     "start": "node server/index.js",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
+    "test-production": "mocha test/production-tests",
     "test": "npm run test-perceptual && npm run test-integration",
     "update-projects": "node server/models/projects/index.js"
   },
