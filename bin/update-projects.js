@@ -1,7 +1,17 @@
-// TODO: Stop using ugly global
+// TODO: Get this working...
 var fs = require('fs');
 var updateStats = require('../server/models/projects');
-updateStats = global.updateStats;
+function updateStats(cb) {
+  // Update each of the types
+  scripts.forEach(updateScript);
+  competitions.forEach(updateCompetition);
+  contributions.forEach(updateScript);
+
+  // If there is a callback, run it
+  if (cb) {
+    cb();
+  }
+}
 updateStats(function handleStatsUpdate () {
   // Sort the scripts and contributions by stars then forks
   function sortRepos(a, b) {
