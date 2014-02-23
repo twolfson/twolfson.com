@@ -1,12 +1,18 @@
-// Set up for file references
-var competitionsFile = __dirname + '/competitions.json';
-var contributionsFile = __dirname + '/contributions.json';
-var scriptsFile = __dirname + '/scripts.json';
+// Load in the dependencies
+var Backbone = require('backbone');
+var competitionsJson = require('./competitions');
+var CompetitionProject = require('./competition-project');
+var contributionsJson = require('./contributions');
+var scriptsJson = require('./scripts');
+var ScriptProject = require('./script-project');
 
-// Load in all the files
-var scripts = require(scriptsFile);
-var competitions = require(competitionsFile);
-var contributions = require(contributionsFile);
+// Create collections for each type
+var competitionModels = competitionsJson.map(function (competitionJson) {
+  return new CompetitionProject(competitionJson);
+});
+var competitions = new Backbone.Collection(competitionModels, {
+  model: CompetitionProject
+});
 
 function updateStats(cb) {
   // Update each of the types
@@ -22,7 +28,7 @@ function updateStats(cb) {
 global.updateProjects = updateStats;
 
 module.exports = {
-  competitions: competitions,
-  contributions: contributions,
-  scripts: scripts
+  competitions: competitionsJson,
+  contributions: contributionsJson,
+  scripts: scriptsJson
 };

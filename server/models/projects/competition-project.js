@@ -65,3 +65,4 @@ var CompetitionRepo = Project.extend({
     });
   }
 });
+module.exports = CompetitionRepo;

@@ -46,3 +46,4 @@ var ScriptRepo = Project.extend({
     });
   }
 });
+module.exports = ScriptRepo;
