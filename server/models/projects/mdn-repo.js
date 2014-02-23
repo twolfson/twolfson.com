@@ -1,8 +1,4 @@
-var Backbone = require('backbone');
 var https = require('https');
-
-var MdnRepo = Backbone.Model.extend({
-});
 function fetchMDNStats(name, cb) {
   // Make a request to MDN
   var path = '/en-US/demos/detail/' + name;
