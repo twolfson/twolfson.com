@@ -42,13 +42,14 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 });
 
 // Generate and return collections for each project type
-exports.competitions = new CompetitionCollection(competitionModels, {
+// TODO: Remove slices
+exports.competitions = new CompetitionCollection(competitionModels.slice(0, 1), {
   filepath: __dirname + '/competitions.json'
 });
-exports.contributions = new ScriptCollection(contributionModels, {
+exports.contributions = new ScriptCollection(contributionModels.slice(0, 1), {
   filepath: __dirname + '/contributions.json'
 });
-exports.scripts = new ScriptCollection(scriptModels, {
+exports.scripts = new ScriptCollection(scriptModels.slice(0, 1), {
   filepath: __dirname + '/scripts.json'
 });
 

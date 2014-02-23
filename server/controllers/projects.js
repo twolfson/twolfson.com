@@ -1,6 +1,37 @@
+var projects = require('../models/projects');
+
 module.exports = function (config) {
-  var projects = require('../models/projects');
   var stringifiedProjects = projects.toJSON();
+
+  // If we should update the projects immediately, do so
+  if (config.projectOptions.updateImmediately) {
+    projects.update(function handleUpdate (err) {
+      // If there was an error, log it
+      if (err) {
+        return config.errorLogger(err);
+      }
+
+      // Otherwise, update stringified projects
+      stringifiedProjects = projects.toJSON();
+    });
+  }
+
+  // If we have an update interval, update the `stringifiedProjects` every interval
+  var updateInterval = config.projectOptions.updateInterval;
+  if (updateInterval) {
+    setInterval(function updateProjectsInterval () {
+      projects.update(function handleUpdate(err) {
+        // If there was an error, log it
+        if (err) {
+          return config.errorLogger(err);
+        }
+
+        // Otherwise, update stringified projects
+        stringifiedProjects = projects.toJSON();
+      });
+    }, updateInterval);
+  }
+
   return [
     function projectsFn (req, res) {
       res.render('projects', {

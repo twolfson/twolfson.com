@@ -30,6 +30,10 @@ module.exports = new Settings({
       return require('./secret').mail;
     }),
     'package': pkg,
+    projectOptions: {
+      updateImmediately: false,
+      updateInterval: null
+    },
     'support-me': {
       bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
       dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
@@ -41,7 +45,6 @@ module.exports = new Settings({
       },
     },
     throwCaughtErrors: false,
-    updateProjectsImmediately: false,
     url: {
       internal: {
         protocol: 'http',
@@ -89,7 +92,10 @@ module.exports = new Settings({
         revision: pkg.version
       });
     }),
-    updateProjectsImmediately: true,
+    projectOptions: {
+      updateImmediately: true,
+      updateInterval: 1000 * 60 * 60 // 1 hour
+    },
     url: {
       internal: {
         protocol: 'http',
