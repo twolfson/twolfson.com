@@ -28,11 +28,21 @@ module.exports = new Settings({
         projects: projects
       };
     }),
+    // TODO: Restore common logger
+    // errorLogger: Settings.lazy(function () {
+    //   return errorLoggers.common();
+    // }),
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.common();
+      return errorLoggers.production({
+        environment: this.ENV,
+        revision: this['package'].version
+      });
     }),
     mail: Settings.lazy(function () {
       return require('./mail');
+    }),
+    'package': Settings.lazy(function () {
+      return require('../package.json');
     }),
     'support-me': {
       bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
@@ -85,7 +95,10 @@ module.exports = new Settings({
     addDevelopmentRoutes: false,
     addTestRoutes: false,
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.production();
+      return errorLoggers.production({
+        environment: this.ENV,
+        revision: this['package'].version
+      });
     }),
     updateProjectsImmediately: true,
     url: {

@@ -55,10 +55,8 @@ exports.license = function (config) {
 };
 
 // Render a health page
-// TODO: Relocate package info into config
-var pkg = require('../../package.json');
-var pkgVersion = pkg.version;
 exports.health = function (config) {
+  var pkgVersion = config['package'].version;
   return [
     function healthFn (req, res) {
       var retObj = {
