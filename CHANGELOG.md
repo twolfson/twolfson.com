@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.15.0 - Repaired broken state of projects
+
 3.14.0 - Removed inDevelopment/inProduction from config
 
 3.13.0 - Added test for environment and RSS
