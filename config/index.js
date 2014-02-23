@@ -46,6 +46,7 @@ module.exports = new Settings({
         email: 'todd@twolfson.com'
       },
     },
+    throwCaughtErrors: false,
     updateProjectsImmediately: false,
     url: {
       internal: {
@@ -70,6 +71,7 @@ module.exports = new Settings({
       host: 'localhost',
       port: 1338
     },
+    throwCaughtErrors: true,
     url: {
       internal: {
         protocol: 'http',

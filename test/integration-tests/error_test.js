@@ -4,7 +4,7 @@ var serverUtils = require('../utils/server');
 
 describe.only('An error generating request', function () {
   serverUtils.run();
-  httpUtils.save('/errors/assertion');
+  httpUtils.save(serverUtils.getUrl('/errors/assertion'));
 
   it('sends a 500 page', function () {
     console.log(this.err);
