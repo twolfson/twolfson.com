@@ -12,7 +12,10 @@ exports.console = function (params) {
 
 exports.cache = function (params) {
   return function cacheLogger (err, req) {
-    params.errors.push(err, req);
+    params.errors.push({
+      err: err,
+      req: req
+    });
   };
 };
 

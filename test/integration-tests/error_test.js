@@ -4,8 +4,8 @@ var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
 describe.only('An error generating request', function () {
-  var messages = [];
-  var logger = errorLoggers.cache({messages: messages});
+  var errors = [];
+  var logger = errorLoggers.cache({errors: errors});
   serverUtils.run({
     errorLogger: logger,
     throwCaughtErrors: false
@@ -19,6 +19,8 @@ describe.only('An error generating request', function () {
   });
 
   it('logs an error to `errorLogger`', function () {
-    expect(messages).to.have.property('length', 1);
+    expect(errors).to.have.property('length', 1);
+    expect(errors[0].err.message).to.contain('"hello" === "world"');
+    expect(errors[0].req.url).to.contain('/errors/assertion');
   });
 });
