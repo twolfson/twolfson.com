@@ -8,33 +8,6 @@ exports['error-generators'] = require('./error-generators');
 exports['error-handlers'] = require('./error-handlers');
 exports['support-me'] = require('./support-me');
 
-// Portfolio page
-exports.projects = function (config) {
-  // TODO: Re-enabling project auto-updating
-  //   // Every hour, update the stats
-  // // console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
-  // var second = 1000,
-  //     everyHour = second * 60 * 60;
-  // setInterval(updateStats, everyHour);
-  var projects = require('../models/projects');
-  if (config.updateProjectsImmediately) {
-    process.nextTick(global.updateProjects);
-  }
-  return [
-    function projectsFn (req, res) {
-      res.render('projects', {
-        page: 'projects',
-        title: 'Todd Wolfson - Projects',
-        // TODO: I really dislike view configuration being placed in the route
-        navMargin: false,
-        seoKeywords: 'dev tools, web tools, spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++',
-        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++',
-        projects: projects
-      });
-    }
-  ];
-};
-
 // Kaleido page
 exports.kaleido = function (config) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
