@@ -34,7 +34,7 @@
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test-production": "mocha test/production-tests",
-    "test": "npm run test-perceptual && npm run test-integration",
+    "test": "npm run test-integration && npm run test-perceptual",
     "update-projects": "node server/models/projects/index.js"
   },
   "dependencies": {
