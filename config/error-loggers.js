@@ -6,8 +6,7 @@ var rollbarConfig = require('./secret').rollbar;
 // Define our error loggers
 exports.common = function (params) {
   return function consoleRollbar (err, req) {
-    var msg = util.format('[error-logger]: %s %s %s', req.method, req.url, util.inspect(err));
-    util.log(msg);
+    console.error('[error-logger]: ', req.method, req.url, err);
   };
 };
 
