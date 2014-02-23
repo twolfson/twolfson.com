@@ -34,6 +34,9 @@ exports.common = function (config) {
   router.get('/license', controllers.license(config));
   router.get('/health', controllers.health(config));
 
+  // Error generators
+  router.get('/errors/assertion', controllers['error-generators'].assertion(config));
+
   // Handle missing pages and errors in controllers
   router.all('*', controllers['error-handlers'].missingPage(config));
   router.all('*', controllers['error-handlers'].errorEncountered(config));
