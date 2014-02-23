@@ -98,7 +98,7 @@ if (!module.parent) {
       // Exit the program
       console.log('Projects should be updated');
       process.exit();
-    }, 1000);
+    }, 2000);
   });
 }
 global.updateProjects = updateStats;

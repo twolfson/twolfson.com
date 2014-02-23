@@ -150,14 +150,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-zip');
 
-  // Create a grunt task to update projects
-  grunt.registerTask('projects', 'Download projects info', function () {
-    var cp = require('child_process'),
-        done = this.async();
-    cp.exec('node ' + __dirname + '/projects/index.js');
-    setTimeout(done, 2000);
-  });
-
   // Register dependency tasks
   grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
 
