@@ -6,11 +6,14 @@ describe.only('An error generating request', function () {
   serverUtils.run();
   httpUtils.save('/errors/assertion');
 
-  it.skip('logs an error to `errorLogger`', function () {
-
+  it('sends a 500 page', function () {
+    console.log(this.err);
+    expect(this.err).to.equal(null);
+    expect(this.res.statusCode).to.equal(500);
+    expect(this.body).to.contain('Todd Wolfson');
   });
 
-  it('sends a 500 page', function () {
+  it.skip('logs an error to `errorLogger`', function () {
 
   });
 });
