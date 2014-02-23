@@ -27,6 +27,15 @@
     "pageUrl": "https://github.com/twolfson/File-Watcher"
   },
   {
+    "name": "grunt-zip",
+    "description": "Zip and unzip files via grunt",
+    "stars": 39,
+    "forks": 6,
+    "github": "twolfson/grunt-zip",
+    "srcUrl": "https://github.com/twolfson/grunt-zip",
+    "pageUrl": "https://github.com/twolfson/grunt-zip"
+  },
+  {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
     "stars": 38,
@@ -45,24 +54,6 @@
     "pageUrl": "https://github.com/twolfson/jojo"
   },
   {
-    "name": "Find++",
-    "description": "Find code quickly in Sublime Text",
-    "stars": 28,
-    "forks": 3,
-    "github": "twolfson/FindPlusPlus",
-    "srcUrl": "https://github.com/twolfson/FindPlusPlus",
-    "pageUrl": "https://github.com/twolfson/FindPlusPlus"
-  },
-  {
-    "name": "grunt-zip",
-    "description": "Zip and unzip files via grunt",
-    "stars": 39,
-    "forks": 6,
-    "github": "twolfson/grunt-zip",
-    "srcUrl": "https://github.com/twolfson/grunt-zip",
-    "pageUrl": "https://github.com/twolfson/grunt-zip"
-  },
-  {
     "name": "grunt-curl",
     "description": "Download files from the internet via grunt",
     "stars": 29,
@@ -72,13 +63,13 @@
     "pageUrl": "https://github.com/twolfson/grunt-curl"
   },
   {
-    "name": "gifsockets",
-    "description": "Stream never-ending animated GIFs",
-    "stars": 14,
-    "forks": 1,
-    "github": "twolfson/gifsockets",
-    "srcUrl": "https://github.com/twolfson/gifsockets",
-    "pageUrl": "https://github.com/twolfson/gifsockets"
+    "name": "Find++",
+    "description": "Find code quickly in Sublime Text",
+    "stars": 28,
+    "forks": 3,
+    "github": "twolfson/FindPlusPlus",
+    "srcUrl": "https://github.com/twolfson/FindPlusPlus",
+    "pageUrl": "https://github.com/twolfson/FindPlusPlus"
   },
   {
     "name": "fontsmith",
@@ -90,14 +81,13 @@
     "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
   },
   {
-    "name": "What size is my browser?",
-    "truncatedName": "What size [&hellip;] browser?",
-    "description": "Determine your browser dimensions via media queries",
-    "stars": 6,
+    "name": "gifsockets",
+    "description": "Stream never-ending animated GIFs",
+    "stars": 14,
     "forks": 1,
-    "github": "twolfson/whatsizeismybrowser",
-    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
-    "pageUrl": "http://whatsizeismybrowser.com/"
+    "github": "twolfson/gifsockets",
+    "srcUrl": "https://github.com/twolfson/gifsockets",
+    "pageUrl": "https://github.com/twolfson/gifsockets"
   },
   {
     "name": "bookmarks",
@@ -107,6 +97,16 @@
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
+  },
+  {
+    "name": "What size is my browser?",
+    "truncatedName": "What size [&hellip;] browser?",
+    "description": "Determine your browser dimensions via media queries",
+    "stars": 6,
+    "forks": 1,
+    "github": "twolfson/whatsizeismybrowser",
+    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
+    "pageUrl": "http://whatsizeismybrowser.com/"
   },
   {
     "name": "dotfiles",
