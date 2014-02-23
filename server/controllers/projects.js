@@ -3,6 +3,7 @@ var projects = require('../models/projects');
 module.exports = function (config) {
   var stringifiedProjects = projects.toJSON();
 
+  // TODO: Should we do this elsewhere? It does not belong in a controller which can be reloaded again and again
   // If we should update the projects immediately, do so
   if (config.projectOptions.updateImmediately) {
     projects.update(function handleUpdate (err) {
