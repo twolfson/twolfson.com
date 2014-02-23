@@ -2,11 +2,7 @@
 var fs = require('fs');
 var async = require('async');
 var Backbone = require('backbone');
-// TODO: Load these on initialize?
-var competitionsJson = require('./competitions');
 var CompetitionProject = require('./competition-project');
-var contributionsJson = require('./contributions');
-var scriptsJson = require('./scripts');
 var ScriptProject = require('./script-project');
 
 // Define common collections
@@ -17,6 +13,11 @@ var ProjectCollection = Backbone.Collection.extend({
   },
   save: function (cb) {
     fs.writeFile(this.filepath, JSON.stringify(this.toJSON(), null, 2), cb);
+  },
+  update: function (done) {
+    async.forEach(this.models, function updateProject (project, cb) {
+      project.update(cb);
+    }, done);
   }
 });
 var CompetitionCollection = ProjectCollection.extend({
@@ -27,12 +28,15 @@ var ScriptCollection = ProjectCollection.extend({
 });
 
 // Create models for each type
+var competitionsJson = require('./competitions');
 var competitionModels = competitionsJson.map(function (competitionJson) {
   return new CompetitionProject(competitionJson);
 });
+var contributionsJson = require('./contributions');
 var contributionModels = contributionsJson.map(function (contributionJson) {
   return new ScriptProject(contributionJson);
 });
+var scriptsJson = require('./scripts');
 var scriptModels = scriptsJson.map(function (scriptJson) {
   return new ScriptProject(scriptJson);
 });
@@ -48,12 +52,20 @@ exports.scripts = new ScriptCollection(scriptModels, {
   filepath: __dirname + '/scripts.json'
 });
 
-exports.update  = function (cb) {
-  // TODO: Invoke async.parallel + update on all projects
-  process.nextTick(cb);
+exports.update = function (done) {
+  async.parallel([
+    function updateCompetitions (cb) {
+      exports.competitions.update(cb);
+    },
+    function updateContributions (cb) {
+      exports.contributions.update(cb);
+    },
+    function updateScripts (cb) {
+      exports.scripts.update(cb);
+    }
+  ], done);
 };
 exports.save = function (done) {
-  // TODO: Save each toJSON format to disk
   async.parallel([
     function saveCompetitions (cb) {
       exports.competitions.save(cb);

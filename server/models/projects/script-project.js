@@ -9,12 +9,13 @@ var ScriptRepo = Project.extend({
   update: function (cb) {
     // If it not a gist, update it
     var github = this.get('github') || '';
+    var that = this;
     if (github.indexOf('gist') === -1) {
       this._fetchGitHubStats(github, function (err, data) {
         // If there is no error, update the script
         if (!err) {
-          if (data.stars !== undefined) { this.set('stars', data.stars); }
-          if (data.forks !== undefined) { this.set('forks', data.forks); }
+          if (data.stars !== undefined) { that.set('stars', data.stars); }
+          if (data.forks !== undefined) { that.set('forks', data.forks); }
         }
 
         if (cb) {
