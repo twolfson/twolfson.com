@@ -49,9 +49,8 @@ exports.kaleido = function (config) {
 };
 
 // Render a LICENSE page
-// TODO: Relocate MIT license into app.locals in config?
-var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
 exports.license = function (config) {
+  var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
   return [
     function licenseFn (req, res) {
       res.render('license', {
