@@ -37,16 +37,7 @@ function updateScript(script) {
 function updateCompetition(competition) {
   // If it an mdn file, update it
   var mdn = competition.mdn;
-  if (mdn) {
-    fetchMDNStats(mdn, function (err, data) {
-      // If there is no error, update the competition
-      if (!err) {
-        if (data.views !== undefined) { competition.views = data.views; }
-        if (data.likes !== undefined) { competition.likes = data.likes; }
-      }
-    });
-  }
-}
+
 function updateStats(cb) {
   // Update each of the types
   scripts.forEach(updateScript);
