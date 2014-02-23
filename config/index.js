@@ -62,6 +62,8 @@ module.exports = new Settings({
     // Same as common
   },
   test: {
+    addDevelopmentRoutes: false,
+    addTestRoutes: true,
     mail: {
       host: 'localhost',
       port: 1338
