@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.18.1 - Updated README with latest structure
+
 3.18.0 - Removed production tests and added Travis CI for integration tests
 
 3.17.0 - Added error handlers
