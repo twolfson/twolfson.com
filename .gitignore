@@ -1,4 +1,3 @@
-config/mail.js
 node_modules/
 test/perceptual-tests/actual_screenshots/
 test/perceptual-tests/diff_screenshots/
@@ -7,3 +6,4 @@ npm-debug.log
 tmp/
 .sass-cache/
 updateProduction.sh
+config/secret.js

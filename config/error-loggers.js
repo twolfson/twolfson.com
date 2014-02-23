@@ -10,6 +10,7 @@ exports.common = function (params) {
 
 exports.production = function (params) {
   rollbar.init(params);
+  console.log('hai');
   return function consoleRollbar (err, req) {
     console.error(arguments);
   };

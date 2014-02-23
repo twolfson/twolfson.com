@@ -40,7 +40,7 @@ module.exports = new Settings({
       });
     }),
     mail: Settings.lazy(function () {
-      return require('./mail');
+      return require('./secret').mail;
     }),
     'package': pkg,
     'support-me': {
