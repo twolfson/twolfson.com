@@ -34,9 +34,9 @@ exports.common = function (config) {
   router.get('/license', controllers.license(config));
   router.get('/health', controllers.health(config));
 
-  // If the page is not found, throw an error and render the 404 page
-  router.all('*', controllers['404'](config));
-  // TODO: Add error handler here
+  // Handle missing pages and errors in controllers
+  router.all('*', controllers['error-handlers'].missingPage(config));
+  router.all('*', controllers['error-handlers'].errorEncountered(config));
 
   // router.middleware has signature of `function (req, res, next) {}`
   return router.middleware;

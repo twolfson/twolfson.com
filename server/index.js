@@ -1,6 +1,7 @@
 // Load in dependencies
 var _ = require('underscore');
 var express = require('express');
+var controllers = require('./controllers');
 var routes = require('./routes');
 
 // Define a server constructor
@@ -25,6 +26,7 @@ Server.prototype = {
     app.use(require('express-partials')());
   },
   addRoutes: function () {
+    // TODO: Integrate Travis CI to local testing (with notifications)
     // Localize app and config
     var app = this.app;
     var config = this.config;
@@ -45,8 +47,8 @@ Server.prototype = {
     // Bind routes
     app.use(routes.common(config));
 
-    // TODO: Integrate Travis CI to local testing (with notifications)
-    // TODO: Add error handler here
+    // Handle middleware errors
+    app.use(controllers['error-handlers'].errorEncountered(config));
   },
   listen: function () {
     this._app = this.app.listen(this.config.url.internal.port);
