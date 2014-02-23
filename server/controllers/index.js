@@ -4,6 +4,8 @@ var fs = require('fs');
 // Load in controller groups
 exports.blog = require('./blog');
 exports.contact = require('./contact');
+exports['error-generators'] = require('./error-generators');
+exports['error-handlers'] = require('./error-handlers');
 exports['support-me'] = require('./support-me');
 
 // Portfolio page
