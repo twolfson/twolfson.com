@@ -49,9 +49,9 @@ function updateCompetition(competition) {
 }
 function updateStats(cb) {
   // Update each of the types
-  scripts.slice(0, 1).forEach(updateScript);
-  // competitions.forEach(updateCompetition);
-  // contributions.forEach(updateScript);
+  scripts.forEach(updateScript);
+  competitions.forEach(updateCompetition);
+  contributions.forEach(updateScript);
 
   // If there is a callback, run it
   if (cb) {

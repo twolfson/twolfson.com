@@ -11,8 +11,8 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 122,
-    "forks": 14,
+    "stars": 165,
+    "forks": 22,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
@@ -29,8 +29,8 @@
   {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
-    "stars": 33,
-    "forks": 2,
+    "stars": 38,
+    "forks": 4,
     "github": "twolfson/grunt-jsmin-sourcemap",
     "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
@@ -38,7 +38,7 @@
   {
     "name": "jojo",
     "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 29,
+    "stars": 32,
     "forks": 2,
     "github": "twolfson/jojo",
     "srcUrl": "https://github.com/twolfson/jojo",
@@ -47,7 +47,7 @@
   {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
-    "stars": 27,
+    "stars": 28,
     "forks": 3,
     "github": "twolfson/FindPlusPlus",
     "srcUrl": "https://github.com/twolfson/FindPlusPlus",
@@ -56,8 +56,8 @@
   {
     "name": "grunt-zip",
     "description": "Zip and unzip files via grunt",
-    "stars": 16,
-    "forks": 3,
+    "stars": 39,
+    "forks": 6,
     "github": "twolfson/grunt-zip",
     "srcUrl": "https://github.com/twolfson/grunt-zip",
     "pageUrl": "https://github.com/twolfson/grunt-zip"
@@ -65,8 +65,8 @@
   {
     "name": "grunt-curl",
     "description": "Download files from the internet via grunt",
-    "stars": 13,
-    "forks": 4,
+    "stars": 29,
+    "forks": 10,
     "github": "twolfson/grunt-curl",
     "srcUrl": "https://github.com/twolfson/grunt-curl",
     "pageUrl": "https://github.com/twolfson/grunt-curl"
@@ -74,7 +74,7 @@
   {
     "name": "gifsockets",
     "description": "Stream never-ending animated GIFs",
-    "stars": 13,
+    "stars": 14,
     "forks": 1,
     "github": "twolfson/gifsockets",
     "srcUrl": "https://github.com/twolfson/gifsockets",
@@ -83,8 +83,8 @@
   {
     "name": "fontsmith",
     "description": "Compose SVGs into fonts and CSS/JS variables",
-    "stars": 11,
-    "forks": 0,
+    "stars": 18,
+    "forks": 1,
     "github": "twolfson/grunt-fontsmith",
     "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
     "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
@@ -102,8 +102,8 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 2,
-    "forks": 0,
+    "stars": 10,
+    "forks": 1,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
