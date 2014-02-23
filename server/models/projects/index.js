@@ -37,11 +37,13 @@ module.exports = {
   scripts: new ScriptCollection(scriptModels, {
     filepath: __dirname + '/scripts.json'
   }),
-  update: function () {
+  update: function (cb) {
     // TODO: Invoke async.parallel + update on all projects
+    process.nextTick(cb);
   },
-  save: function () {
+  save: function (cb) {
     // TODO: Save each toJSON format to disk
+    process.nextTick(cb);
   },
   toJSON: function () {
     return {
