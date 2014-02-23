@@ -22,6 +22,8 @@ var ScriptRepo = Project.extend({
           cb(err);
         }
       });
+    } else if (cb) {
+      process.nextTick(cb);
     }
   },
   _fetchGitHubStats: function (repo, cb) {

@@ -5,7 +5,7 @@ var CompetitionRepo = Project.extend({
   update: function (cb) {
     // If it an mdn file, update it
     var mdn = this.get('mdn');
-    console.log('wat2');
+    console.log('wat2', this.get('name'));
     var that = this;
     if (mdn) {
     console.log('fetching', mdn);
@@ -21,6 +21,8 @@ var CompetitionRepo = Project.extend({
           cb(err);
         }
       });
+    } else if (cb) {
+      process.nextTick(cb);
     }
   },
   _fetchMDNStats: function (name, cb) {
