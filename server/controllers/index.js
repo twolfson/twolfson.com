@@ -10,6 +10,12 @@ exports['support-me'] = require('./support-me');
 
 // Portfolio page
 exports.projects = function (config) {
+  // TODO: Re-enabling project auto-updating
+  //   // Every hour, update the stats
+  // // console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
+  // var second = 1000,
+  //     everyHour = second * 60 * 60;
+  // setInterval(updateStats, everyHour);
   var projects = require('../models/projects');
   if (config.updateProjectsImmediately) {
     process.nextTick(global.updateProjects);

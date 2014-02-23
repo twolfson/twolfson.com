@@ -1,23 +1,13 @@
 // Set up for file references
-var scriptsFile = __dirname + '/scripts.json',
-    competitionsFile = __dirname + '/competitions.json',
-    contributionsFile = __dirname + '/contributions.json';
+var competitionsFile = __dirname + '/competitions.json';
+var contributionsFile = __dirname + '/contributions.json';
+var scriptsFile = __dirname + '/scripts.json';
 
 // Load in all the files
-var scripts = require(scriptsFile),
-    competitions = require(competitionsFile),
-    contributions = require(contributionsFile),
-    fs = require('fs'),
-    fetchRepoStats = require('./fetchRepoStats'),
-    fetchMDNStats = require('./fetchMDNStats');
-
-// Generate a srcUrl and pageUrl for scripts, competitions, and contributions
-scripts.forEach(saveSrcUrl);
-scripts.forEach(savePageUrl);
-competitions.forEach(saveSrcUrl);
-competitions.forEach(savePageUrl);
-contributions.forEach(saveSrcUrl);
-contributions.forEach(savePageUrl);
+var fs = require('fs');
+var scripts = require(scriptsFile);
+var competitions = require(competitionsFile);
+var contributions = require(contributionsFile);
 
 // Now and every hour from now, update file stats
 function noop() {}
@@ -34,9 +24,6 @@ function updateScript(script) {
     });
   }
 }
-function updateCompetition(competition) {
-  // If it an mdn file, update it
-  var mdn = competition.mdn;
 
 function updateStats(cb) {
   // Update each of the types
@@ -49,12 +36,6 @@ function updateStats(cb) {
     cb();
   }
 }
-
-// Every hour, update the stats
-// console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
-var second = 1000,
-    everyHour = second * 60 * 60;
-setInterval(updateStats, everyHour);
 
 // If we are in production, fetch now
 if (!module.parent) {
@@ -97,7 +78,7 @@ if (!module.parent) {
 global.updateProjects = updateStats;
 
 module.exports = {
-  "scripts": scripts,
-  "competitions": competitions,
-  "contributions": contributions
+  competitions: competitions,
+  contributions: contributions,
+  scripts: scripts
 };

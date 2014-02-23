@@ -5,7 +5,8 @@ var CompetitionRepo = Backbone.Model.extend({
   save: function () {
     // TODO: Save to disk
   },
-  update: function () {
+  update: function (cb) {
+    // If it an mdn file, update it
     var mdn = this.get('mdn');
     var that = this;
     if (mdn) {
@@ -14,6 +15,10 @@ var CompetitionRepo = Backbone.Model.extend({
         if (!err) {
           if (data.views !== undefined) { that.set('views', data.views); }
           if (data.likes !== undefined) { that.set('likes', data.likes); }
+        }
+
+        if (cb) {
+          cb(err);
         }
       });
     }
