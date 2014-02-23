@@ -10,6 +10,10 @@ exports['support-me'] = require('./support-me');
 
 // Portfolio page
 exports.projects = function (config) {
+  var projects = require('../models/projects');
+  if (config.updateProjectsImmediately) {
+    process.nextTick(global.updateProjects);
+  }
   return [
     function projectsFn (req, res) {
       res.render('projects', {
@@ -18,7 +22,8 @@ exports.projects = function (config) {
         // TODO: I really dislike view configuration being placed in the route
         navMargin: false,
         seoKeywords: 'dev tools, web tools, spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++',
-        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++'
+        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++',
+        projects: projects
       });
     }
   ];

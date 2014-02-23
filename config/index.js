@@ -13,11 +13,6 @@ module.exports = new Settings({
       return require('../articles');
     }),
     'app.locals': Settings.lazy(function () {
-      // TODO: This is very bad technique but models/projects is worse
-      var projects = require('../server/models/projects');
-      if (this.updateProjectsImmediately) {
-        process.nextTick(global.updateProjects);
-      }
       return {
         config: {
           author: 'Todd Wolfson',
@@ -25,8 +20,7 @@ module.exports = new Settings({
           url: 'http://twolfson.com/'
         },
         env: this.ENV,
-        numscale: numscale.scale,
-        projects: projects
+        numscale: numscale.scale
       };
     }),
     errorLogger: Settings.lazy(function () {
