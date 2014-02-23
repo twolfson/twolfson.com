@@ -1,6 +1,7 @@
 // Load in dependencies
 var numscale = require('numscale');
 var Settings = require('shallow-settings');
+var errorLoggers = require('./error-loggers');
 
 // Define our settings
 module.exports = new Settings({
@@ -26,6 +27,9 @@ module.exports = new Settings({
         numscale: numscale.scale,
         projects: projects
       };
+    }),
+    errorLogger: Settings.lazy(function () {
+      return errorLoggers.common();
     }),
     mail: Settings.lazy(function () {
       return require('./mail');
@@ -78,6 +82,9 @@ module.exports = new Settings({
   production: {
     addDevelopmentRoutes: false,
     addTestRoutes: false,
+    errorLogger: Settings.lazy(function () {
+      return errorLoggers.production();
+    }),
     updateProjectsImmediately: true,
     url: {
       internal: {
