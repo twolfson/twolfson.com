@@ -1,11 +1,13 @@
 // Load in dependencies
+var util = require('util');
 var rollbar = require('rollbar');
 var rollbarConfig = require('./secret').rollbar;
 
 // Define our error loggers
 exports.common = function (params) {
   return function consoleRollbar (err, req) {
-    console.error('Error encountered:', err, req.method, req.url);
+    var msg = util.format('[error-logger]: %s %s %s', req.method, req.url, util.inspect(err));
+    util.log(msg);
   };
 };
 
