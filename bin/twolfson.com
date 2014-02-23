@@ -3,6 +3,7 @@
 // Load in dependencies
 var assert = require('assert');
 var url = require('url');
+var Server = require('../');
 
 // Set up CLI parser
 var program = require('commander');
