@@ -1,5 +1,7 @@
 var projects = require('../server/models/projects');
+console.log('wat');
 projects.update(function (err) {
+  console.log('hai');
   // If there was an error, throw it
   if (err) {
     throw err;
