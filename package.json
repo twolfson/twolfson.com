@@ -21,6 +21,9 @@
       "url": "https://github.com/twolfson/twolfson.com/blob/master/LICENSE-MIT"
     }
   ],
+  "bin": {
+    "twolfson.com": "bin/twolfson.com"
+  },
   "main": "server/index.js",
   "engines": {
     "node": ">= 0.8.0"

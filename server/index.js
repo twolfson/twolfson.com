@@ -58,14 +58,3 @@ Server.prototype = {
 
 // Export the server
 module.exports = Server;
-
-// Begin listening for requests
-// TODO: Move into `bin` script
-if (require.main === module) {
-  var url = require('url');
-  var env = process.env.NODE_ENV || 'development';
-  var settings = require('../config').getSettings({env: env});
-  var server = new Server(settings);
-  server.listen();
-  console.log('Server running at ' + url.format(settings.url.external) + '/');
-}
