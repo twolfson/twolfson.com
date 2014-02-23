@@ -27,6 +27,8 @@ console.log('Server running at ' + serverUrl);
 
 // Catch any uncaught exceptions
 // DEV: This intentionally comes after server initialization and listen
-process.on('uncaughtException', function (err) {
-  settings.errorLogger('Uncaught exception: ', err);
+process.nextTick(function () {
+  process.on('uncaughtException', function (err) {
+    settings.errorLogger('Uncaught exception: ', err);
+  });
 });
