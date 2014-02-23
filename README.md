@@ -15,15 +15,17 @@ This server is written on top of [express][], for routing and views, and [jojo][
 - `config/` - Per-environment configuations
 - `dist/` - Minified public files
 - `server/` - Container for majority of app
-    - `app.js` - Server setup and route binding
+    - `index.js` - Constructor for server that binds view and routing middlewares
+    - `controllers/` - Business logic for server endpoints
     - `models/projects/` - Assortment of competitions, contributions, and scripts
-    - `routes.js` - Declaration of route functionality
-    - `views/` - Scripted HTML components written in [ejs][]
-- `public/` - CSS and JS for the pages
+    - `routes.js` - Attachements for `controllers/` to URLs
+    - `views/` - HTML templates written in [ejs][]
+- `public/` - CSS, images, and JavaScript for client side pages
 - `test/` - Container for various test types
     - `integrations-tests/` - BDD tests written in [mocha][] that test server behavior
     - `perceptual-tests/` - [Perceptual diffs][] that detect visual changes across pages
     - `production-tests/` - BDD tests written in [Mocha][mocha] for [twolfson.com][twolfson.com]
+    - `utils/` - Common utilities used for starting up/tearing down servers and making HTTP requests
 
 [GitHub Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
 [ejs]: https://github.com/visionmedia/ejs/
@@ -31,6 +33,7 @@ This server is written on top of [express][], for routing and views, and [jojo][
 [Perceptual diffs]: http://www.youtube.com/watch?v=UMnZiTL0tUc
 
 ### Files
+- `CHANGELOG.md` - Record of changes that have happened on the server
 - `README.md` - Documentation for the project
 - `Gruntfile.js` - A [grunt][grunt] implementation for linting and minification.
 
