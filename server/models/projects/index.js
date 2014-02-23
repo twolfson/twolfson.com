@@ -24,10 +24,8 @@ function noop() {}
 function updateScript(script) {
   // If it not a gist, update it
   var github = script.github || '';
-  console.log(script);
   if (github.indexOf('gist') === -1) {
     fetchRepoStats(github, function (err, data) {
-      console.log(err, data);
       // If there is no error, update the script
       if (!err) {
         if (data.stars !== undefined) { script.stars = data.stars; }
@@ -39,7 +37,6 @@ function updateScript(script) {
 function updateCompetition(competition) {
   // If it an mdn file, update it
   var mdn = competition.mdn;
-  console.log(competition);
   if (mdn) {
     fetchMDNStats(mdn, function (err, data) {
       // If there is no error, update the competition
