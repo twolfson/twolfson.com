@@ -1,7 +1,6 @@
 // Load in dependencies
 var util = require('util');
 var rollbar = require('rollbar');
-var rollbarConfig = require('./secret').rollbar;
 
 // Define our error loggers
 exports.console = function (params) {
@@ -19,8 +18,8 @@ exports.cache = function (params) {
   };
 };
 
-exports.rollbar = function (params) {
-  rollbar.init(rollbarConfig.serverToken, params);
+exports.rollbar = function (token, params) {
+  rollbar.init(token, params);
   return function rollbarLogger (err, req) {
     rollbar.handleError(err, req);
   };

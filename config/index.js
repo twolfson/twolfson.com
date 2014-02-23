@@ -89,7 +89,8 @@ module.exports = new Settings({
     addDevelopmentRoutes: false,
     addTestRoutes: false,
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.rollbar({
+      var rollbarConfig = require('./secret').rollbar;
+      return errorLoggers.rollbar(rollbarConfig.serverToken, {
         environment: this.ENV,
         revision: pkg.version
       });
