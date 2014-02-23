@@ -3,7 +3,7 @@ var errorLoggers = require('../../config/error-loggers');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
-describe.only('An error generating request', function () {
+describe('An error generating request', function () {
   var errors = [];
   var logger = errorLoggers.cache({errors: errors});
   serverUtils.run({
