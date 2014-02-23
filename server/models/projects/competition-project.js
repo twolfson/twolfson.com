@@ -5,13 +5,10 @@ var CompetitionRepo = Project.extend({
   update: function (cb) {
     // If it an mdn file, update it
     var mdn = this.get('mdn');
-    console.log('wat2', this.get('name'));
     var that = this;
     if (mdn) {
-    console.log('fetching', mdn);
       this._fetchMDNStats(mdn, function (err, data) {
         // If there is no error, update the competition
-    console.log('uhhh');
         if (!err) {
           if (data.views !== undefined) { that.set('views', data.views); }
           if (data.likes !== undefined) { that.set('likes', data.likes); }
