@@ -16,7 +16,7 @@ var ProjectCollection = Backbone.Collection.extend({
     this.filepath = options.filepath;
   },
   save: function (cb) {
-    fs.writeFile(this.filepath, this.toJSON(), cb);
+    fs.writeFile(this.filepath, JSON.stringify(this.toJSON(), null, 2), cb);
   }
 });
 var CompetitionCollection = ProjectCollection.extend({
