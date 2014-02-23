@@ -54,7 +54,8 @@
     "underscore": "~1.6.0",
     "github": "~0.1.14",
     "commander": "~2.1.0",
-    "rollbar": "~0.3.1"
+    "rollbar": "~0.3.1",
+    "backbone": "~1.1.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
