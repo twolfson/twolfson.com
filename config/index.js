@@ -30,7 +30,7 @@ module.exports = new Settings({
       };
     }),
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.common();
+      return errorLoggers['console']();
     }),
     mail: Settings.lazy(function () {
       return require('./secret').mail;
@@ -87,7 +87,7 @@ module.exports = new Settings({
     addDevelopmentRoutes: false,
     addTestRoutes: false,
     errorLogger: Settings.lazy(function () {
-      return errorLoggers.production({
+      return errorLoggers.rollbar({
         environment: this.ENV,
         revision: pkg.version
       });
