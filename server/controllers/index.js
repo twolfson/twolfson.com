@@ -1,5 +1,9 @@
-// Blog routes
+// Load in dependencies
+var fs = require('fs');
+
+// Load in controller groups
 exports.blog = require('./blog');
+exports.contact = require('./contact');
 exports['support-me'] = require('./support-me');
 
 // Portfolio page
@@ -18,9 +22,6 @@ exports.projects = function (config) {
   ];
 };
 
-// Contact route
-exports.contact = require('./contact');
-
 // Kaleido page
 exports.kaleido = function (config) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
@@ -36,7 +37,6 @@ exports.kaleido = function (config) {
 
 // Render a LICENSE page
 // TODO: Relocate MIT license into app.locals in config?
-var fs = require('fs');
 var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
 exports.license = function (config) {
   return [
@@ -67,16 +67,6 @@ exports.health = function (config) {
         'env': config.ENV
       };
       res.send(retObj);
-    }
-  ];
-};
-
-// 404 page (no SEO here)
-exports['404'] = function (config) {
-  return [
-    function error404Fn (req, res) {
-      res.status(404);
-      res.render('404', {'page': '404'});
     }
   ];
 };
