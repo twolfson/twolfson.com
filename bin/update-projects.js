@@ -1,5 +1,3 @@
-// TODO: Get this working...
-var fs = require('fs');
 var projects = require('../server/models/projects');
 projects.update(function (err) {
   // If there was an error, throw it

@@ -1,4 +1,5 @@
 // Load in the dependencies
+var fs = require('fs');
 var Backbone = require('backbone');
 var competitionsJson = require('./competitions');
 var CompetitionProject = require('./competition-project');
@@ -27,9 +28,21 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 
 // Generate and return collections for each project type
 module.exports = {
-  competitions: new CompetitionCollection(competitionModels),
-  contributions: new ScriptCollection(contributionModels),
-  scripts: new ScriptCollection(scriptModels),
+  competitions: new CompetitionCollection(competitionModels, {
+    filepath: __dirname + '/competitions.json'
+  }),
+  contributions: new ScriptCollection(contributionModels, {
+    filepath: __dirname + '/contributions.json'
+  }),
+  scripts: new ScriptCollection(scriptModels, {
+    filepath: __dirname + '/scripts.json'
+  }),
+  update: function () {
+    // TODO: Invoke async.parallel + update on all projects
+  },
+  save: function () {
+    // TODO: Save each toJSON format to disk
+  },
   toJSON: function () {
     return {
       competitions: this.competitions.toJSON(),
