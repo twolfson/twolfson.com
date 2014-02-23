@@ -5,7 +5,7 @@ var rollbarConfig = require('./secret').rollbar;
 // Define our error loggers
 exports.common = function (params) {
   return function consoleRollbar (err, req) {
-    console.error('Error encountered:', err, req.url);
+    console.error('Error encountered:', err, req.method, req.url);
   };
 };
 
