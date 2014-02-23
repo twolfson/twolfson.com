@@ -27,7 +27,7 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 
 // Generate and return collections for each project type
 module.exports = {
-  competitions: new CompetitionCollection(competitionModels).toJSON(),
-  contributions: new ScriptCollection(contributionModels).toJSON(),
-  scripts: new ScriptCollection(scriptModels).toJSON()
+  competitions: new CompetitionCollection(competitionModels),
+  contributions: new ScriptCollection(contributionModels),
+  scripts: new ScriptCollection(scriptModels)
 };
