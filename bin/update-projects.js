@@ -1,6 +1,6 @@
 // TODO: Stop using ugly global
 var fs = require('fs');
-var updateStats = require('./index');
+var updateStats = require('../server/models/projects');
 updateStats = global.updateStats;
 updateStats(function handleStatsUpdate () {
   // Sort the scripts and contributions by stars then forks
