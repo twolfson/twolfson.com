@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.16.0 - Moved server start to an executable script
+
 3.15.0 - Repaired broken state of projects
 
 3.14.0 - Removed inDevelopment/inProduction from config
