@@ -55,7 +55,8 @@
     "github": "~0.1.14",
     "commander": "~2.1.0",
     "rollbar": "~0.3.1",
-    "backbone": "~1.1.2"
+    "backbone": "~1.1.2",
+    "async": "~0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -64,7 +65,6 @@
     "mocha": "~1.8.1",
     "jsdom": "~0.5.1",
     "grunt-curl": "~1.2.1",
-    "async": "~0.2.9",
     "slug": "~0.3.3",
     "temporary": "0.0.5",
     "js-yaml": "~2.1.0",
