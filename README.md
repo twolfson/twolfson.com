@@ -1,4 +1,4 @@
-# twolfson.com
+# twolfson.com [![Build status](https://travis-ci.org/twolfson/twolfson.com.png?branch=master)](https://travis-ci.org/twolfson/twolfson.com)
 
 Repository for [http://twolfson.com/][twolfson.com]. This is a server rather than static files due to a [contact form][contact].
 
