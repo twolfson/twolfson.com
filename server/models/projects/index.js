@@ -24,8 +24,10 @@ function noop() {}
 function updateScript(script) {
   // If it not a gist, update it
   var github = script.github || '';
+  console.log(script);
   if (github.indexOf('gist') === -1) {
     fetchRepoStats(github, function (err, data) {
+      console.log(err, data);
       // If there is no error, update the script
       if (!err) {
         if (data.stars !== undefined) { script.stars = data.stars; }
@@ -37,6 +39,7 @@ function updateScript(script) {
 function updateCompetition(competition) {
   // If it an mdn file, update it
   var mdn = competition.mdn;
+  console.log(competition);
   if (mdn) {
     fetchMDNStats(mdn, function (err, data) {
       // If there is no error, update the competition
@@ -68,37 +71,39 @@ setInterval(updateStats, everyHour);
 // If we are in production, fetch now
 if (!module.parent) {
   process.nextTick(function updateStatsNow () {
-    // Sort the scripts and contributions by stars then forks
-    function sortRepos(a, b) {
-      var aStars = a.stars,
-          bStars = b.stars;
-      if (aStars < bStars) { return 1; }
-      if (aStars > bStars) { return -1; }
+    updateStats(function handleStatsUpdate () {
+      // Sort the scripts and contributions by stars then forks
+      function sortRepos(a, b) {
+        var aStars = a.stars,
+            bStars = b.stars;
+        if (aStars < bStars) { return 1; }
+        if (aStars > bStars) { return -1; }
 
-      var aForks = a.forks,
-          bForks = b.forks;
-      if (aForks < bForks) { return 1; }
-      if (aForks > bForks) { return -1; }
+        var aForks = a.forks,
+            bForks = b.forks;
+        if (aForks < bForks) { return 1; }
+        if (aForks > bForks) { return -1; }
 
-      var aName = a.name,
-          bName = b.name;
-      if (aName > bName) { return 1; }
-      if (aName < bName) { return -1; }
-      return 0;
-    }
-    scripts.sort(sortRepos);
-    contributions.sort(sortRepos);
+        var aName = a.name,
+            bName = b.name;
+        if (aName > bName) { return 1; }
+        if (aName < bName) { return -1; }
+        return 0;
+      }
+      scripts.sort(sortRepos);
+      contributions.sort(sortRepos);
 
-    // In a minute, save the updates to their respective JSON files
-    setTimeout(function () {
-      fs.writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2), 'utf8');
-      fs.writeFileSync(competitionsFile, JSON.stringify(competitions, null, 2), 'utf8');
-      fs.writeFileSync(contributionsFile, JSON.stringify(contributions, null, 2), 'utf8');
+      // In a minute, save the updates to their respective JSON files
+      setTimeout(function () {
+        fs.writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2), 'utf8');
+        fs.writeFileSync(competitionsFile, JSON.stringify(competitions, null, 2), 'utf8');
+        fs.writeFileSync(contributionsFile, JSON.stringify(contributions, null, 2), 'utf8');
 
-      // Exit the program
-      console.log('Projects should be updated');
-      process.exit();
-    }, 2000);
+        // Exit the program
+        console.log('Projects should be updated');
+        process.exit();
+      }, 2000);
+    });
   });
 }
 global.updateProjects = updateStats;
