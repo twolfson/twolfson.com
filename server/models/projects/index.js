@@ -47,14 +47,27 @@ function updateCompetition(competition) {
     });
   }
 }
-function updateStats() {
+function updateStats(cb) {
   // Update each of the types
   scripts.forEach(updateScript);
   competitions.forEach(updateCompetition);
   contributions.forEach(updateScript);
 
-  // If we are being run standalone, save file
-  if (!module.parent) {
+  // If there is a callback, run it
+  if (cb) {
+    cb();
+  }
+}
+
+// Every hour, update the stats
+// console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
+var second = 1000,
+    everyHour = second * 60 * 60;
+setInterval(updateStats, everyHour);
+
+// If we are in production, fetch now
+if (!module.parent) {
+  process.nextTick(function updateStatsNow () {
     // Sort the scripts and contributions by stars then forks
     function sortRepos(a, b) {
       var aStars = a.stars,
@@ -78,22 +91,15 @@ function updateStats() {
 
     // In a minute, save the updates to their respective JSON files
     setTimeout(function () {
-      fs.writeFile(scriptsFile, JSON.stringify(scripts, null, 2), noop);
-      fs.writeFile(competitionsFile, JSON.stringify(competitions, null, 2), noop);
-      fs.writeFile(contributionsFile, JSON.stringify(contributions, null, 2), noop);
+      fs.writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2), 'utf8');
+      fs.writeFileSync(competitionsFile, JSON.stringify(competitions, null, 2), 'utf8');
+      fs.writeFileSync(contributionsFile, JSON.stringify(contributions, null, 2), 'utf8');
+
+      // Exit the program
+      console.log('Projects should be updated');
+      process.exit();
     }, 1000);
-  }
-}
-
-// Every hour, update the stats
-// console.log('*** WARNING: OFFLINE FETCH IS DISABLED ***');
-var second = 1000,
-    everyHour = second * 60 * 60;
-setInterval(updateStats, everyHour);
-
-// If we are in production, fetch now
-if (!module.parent) {
-  process.nextTick(updateStats);
+  });
 }
 global.updateProjects = updateStats;
 
