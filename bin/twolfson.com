@@ -29,6 +29,6 @@ console.log('Server running at ' + serverUrl);
 // DEV: This intentionally comes after server initialization and listen
 process.nextTick(function () {
   process.on('uncaughtException', function (err) {
-    settings.errorLogger('Uncaught exception: ', err);
+    settings.errorLogger(err);
   });
 });

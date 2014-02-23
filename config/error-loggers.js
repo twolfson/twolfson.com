@@ -5,13 +5,13 @@ var rollbarConfig = require('./secret').rollbar;
 // Define our error loggers
 exports.common = function (params) {
   return function consoleRollbar (err, req) {
-    console.error(arguments);
+    console.error('Error encountered:', err, req.url);
   };
 };
 
 exports.production = function (params) {
   rollbar.init(rollbarConfig.serverToken, params);
   return function consoleRollbar (err, req) {
-    console.error(arguments);
+    rollbar.handleError(err, req);
   };
 };
