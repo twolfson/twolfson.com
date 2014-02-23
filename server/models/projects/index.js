@@ -48,18 +48,18 @@ exports.competitions = new CompetitionCollection(competitionModels, {
 exports.contributions = new ScriptCollection(contributionModels, {
   filepath: __dirname + '/contributions.json'
 });
-exports.scripts = new ScriptCollection(scriptModels, {
+exports.scripts = new ScriptCollection(scriptModels.slice(0, 1), {
   filepath: __dirname + '/scripts.json'
 });
 
 exports.update = function (done) {
   async.parallel([
-    function updateCompetitions (cb) {
-      exports.competitions.update(cb);
-    },
-    function updateContributions (cb) {
-      exports.contributions.update(cb);
-    },
+    // function updateCompetitions (cb) {
+    //   exports.competitions.update(cb);
+    // },
+    // function updateContributions (cb) {
+    //   exports.contributions.update(cb);
+    // },
     function updateScripts (cb) {
       exports.scripts.update(cb);
     }
