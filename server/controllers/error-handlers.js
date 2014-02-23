@@ -18,6 +18,7 @@ exports[404] = function (req, res) {
 
 // 500 page
 exports[500] = function (req, res) {
+  // TODO: Create me
   res.status(500);
   res.render('500', {'page': '500'});
 };
