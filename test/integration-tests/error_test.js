@@ -20,8 +20,7 @@ describe('An error generating request', function () {
 
   it('logs an error to `errorLogger`', function () {
     expect(errors).to.have.property('length', 1);
-    console.log(errors[0]);
-    expect(errors[0].err.message).to.contain('"hello" === "world"');
-    expect(errors[0].req.url).to.contain('/errors/assertion');
+    expect(errors[0].err.name).to.equal('AssertionError');
+    expect(errors[0].req.url).to.equal('/errors/assertion');
   });
 });
