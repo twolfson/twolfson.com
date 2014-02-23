@@ -48,7 +48,7 @@ exports.competitions = new CompetitionCollection(competitionModels, {
 exports.contributions = new ScriptCollection(contributionModels, {
   filepath: __dirname + '/contributions.json'
 });
-exports.scripts = new ScriptCollection(scriptModels.slice(0, 1), {
+exports.scripts = new ScriptCollection(scriptModels, {
   filepath: __dirname + '/scripts.json'
 });
 
