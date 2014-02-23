@@ -24,3 +24,9 @@ server.listen();
 // Notify the user that the server is running
 var serverUrl = url.format(settings.url.external) + '/';
 console.log('Server running at ' + serverUrl);
+
+// Catch any uncaught exceptions
+// DEV: This intentionally comes after server initialization and listen
+process.on('uncaughtException', function (err) {
+  settings.errorLogger('Uncaught exception: ', err);
+});
