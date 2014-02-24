@@ -15,6 +15,8 @@ if test "$(echo "$result" | underscore extract 'rsp.stat')" != '"ok"'; then
   echo "There was a problem uploading \"$filepath\"" 1>&2
   echo "$result" 1>&2
 else
-  echo "Uploaded \"$filepath\" to $(echo "$result" | underscore extract 'rsp.image.original_image')"
+  echo "Uploaded \"$filepath\""
+  echo "    Image URL: $(echo "$result" | underscore extract 'rsp.image.original_image')"
+  echo "    Image page: $(echo "$result" | underscore extract 'rsp.image.imgur_page')"
   echo "    Delete via: $(echo "$result" | underscore extract 'rsp.image.delete_page')"
 fi
