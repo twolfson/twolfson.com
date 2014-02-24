@@ -4,25 +4,10 @@ var fs = require('fs');
 // Load in controller groups
 exports.blog = require('./blog');
 exports.contact = require('./contact');
+exports.projects = require('./projects');
 exports['error-generators'] = require('./error-generators');
 exports['error-handlers'] = require('./error-handlers');
 exports['support-me'] = require('./support-me');
-
-// Portfolio page
-exports.projects = function (config) {
-  return [
-    function projectsFn (req, res) {
-      res.render('projects', {
-        page: 'projects',
-        title: 'Todd Wolfson - Projects',
-        // TODO: I really dislike view configuration being placed in the route
-        navMargin: false,
-        seoKeywords: 'dev tools, web tools, spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++',
-        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, File Watcher, jsmin-sourcemap, Find++'
-      });
-    }
-  ];
-};
 
 // Kaleido page
 exports.kaleido = function (config) {
@@ -38,9 +23,8 @@ exports.kaleido = function (config) {
 };
 
 // Render a LICENSE page
-// TODO: Relocate MIT license into app.locals in config?
-var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
 exports.license = function (config) {
+  var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
   return [
     function licenseFn (req, res) {
       res.render('license', {

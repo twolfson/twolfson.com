@@ -1,8 +1,8 @@
 // Load in dependencies
-var assert = require('assert'),
-    moment = require('moment'),
-    jojo = require('jojo'),
-    marked = require('marked');
+var assert = require('assert');
+var moment = require('moment');
+var jojo = require('jojo');
+var marked = require('marked');
 
 // Modify marked's tokenizer to wrap header text in an `<a>`
 var _tok = marked.Parser.prototype.tok;
@@ -67,8 +67,8 @@ var articleObj = {};
 articles.forEach(function (article) {
   articleObj[article.title] = article;
 });
-var projects = require('../server/models/projects'),
-    projectObj = {};
+var projects = require('../server/models/projects').toJSON();
+var projectObj = {};
 Object.getOwnPropertyNames(projects).forEach(function (namespace) {
   var projectsArr = projects[namespace];
   projectsArr.forEach(function (project) {
