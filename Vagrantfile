@@ -5,6 +5,11 @@ Vagrant.configure("2") do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
+  # Set up memory since image diffs are CPU intensive
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+  end
+
   # Update apt-get once
   $update_apt_get = <<SCRIPT
   if ! test -f .updated_apt_get; then
