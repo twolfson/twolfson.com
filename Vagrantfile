@@ -39,7 +39,7 @@ SCRIPT
     cd /tmp
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
     tar xvf phantomjs-1.9.7-linux-x86_64.tar.bz2
-    sudo cp phantomjs-1.9.7/bin/phantomjs /usr/local/bin/
+    sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/
   fi
 SCRIPT
   config.vm.provision "shell", inline: $install_phantomjs
