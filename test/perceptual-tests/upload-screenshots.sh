@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Install underscore-cli for hacking
-if ! which underscore &> /dev/null; then
-  sudo npm install -g underscore-cli
-fi
-
 # Navigate to pereceptual-test directory
 cd test/perceptual-tests
 
