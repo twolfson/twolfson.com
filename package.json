@@ -31,11 +31,12 @@
   "scripts": {
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
     "start": "node server/index.js",
+    "test": "npm run test-integration && npm run vagrant-test-perceptual",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test-production": "mocha test/production-tests",
-    "test": "npm run test-integration && npm run test-perceptual",
-    "update-projects": "node bin/update-projects.js"
+    "update-projects": "node bin/update-projects.js",
+    "vagrant-test-perceptual": "vagrant ssh -c \"cd /vagrant && npm run test-perceptual\""
   },
   "dependencies": {
     "ejs": "~0.8.4",
