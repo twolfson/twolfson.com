@@ -19,7 +19,7 @@ if test "$(echo "$result" | underscore extract 'rsp.stat')" != '"ok"'; then
 else
   echo "Uploaded \"$filepath\""
   echo "    Image URL: $(echo "$result" | underscore extract 'rsp.image.original_image')"
-  delete_cmds="$delete_cmds; curl http://imgur.com/api/delete/$(echo "$result" | underscore extract 'rsp.image.delete_hash').json"
+  delete_cmds="$delete_cmds; curl http://imgur.com/api/delete/$(echo "$result" | underscore extract 'rsp.image.delete_hash' --outfmt text).json"
 fi
 
 echo "Delete via:"
