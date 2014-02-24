@@ -7,3 +7,4 @@ tmp/
 .sass-cache/
 updateProduction.sh
 config/secret.js
+.vagrant/
