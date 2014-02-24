@@ -4,6 +4,9 @@
 cd test/perceptual-tests
 
 # Prepare location to collect delete commands
+if test "$TRAVIS_BUILD_NUMBER" = ""; then
+  TRAVIS_BUILD_NUMBER="dev"
+fi
 output_dir="tmp/travis/$TRAVIS_BUILD_NUMBER"
 download_cmds=""
 delete_cmds=""
@@ -28,7 +31,7 @@ done
 echo "All uploads complete!"
 echo ""
 echo "Download via:"
-echo "    mkdir -p $output_dir"
+echo "    mkdir -p $output_dir/{actual,diff}_screenshots"
 echo "    $download_cmds"
 echo "Delete via:"
 echo "    $delete_cmds"
