@@ -7,5 +7,12 @@ matrix:
   allow_failures:
     - node_js: "0.11"
 
+script:
+  # Run integration tests
+  - npm run test-integration
+
+  # Run perceptual diff tests (upon failure, upload to imgur)
+  - "npm run test-perceptual || (./test/perceptual-tests/upload-screenshots.sh && exit 1)"
+
 notifications:
   email: false
