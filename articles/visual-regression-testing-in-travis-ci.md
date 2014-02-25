@@ -100,3 +100,13 @@ I integrate with my `.travis.yml` as an upload action upon failure:
 script:
   - 'npm run test-perceptual || (./test/perceptual-tests/upload-screenshots.sh && exit 1)'
 ```
+
+The result is something like https://travis-ci.org/twolfson/twolfson.com/jobs/19562314 which presents me with a long list of `wget` commands to download my diffs and screenshots for local browsing.
+
+```bash
+Download via:
+    mkdir -p tmp/travis/104/{actual,diff}_screenshots
+    wget -O "tmp/travis/104/actual_screenshots/%2F500.png" "http://i.imgur.com/0A6KhoL.png"
+    wget -O "tmp/travis/104/actual_screenshots/%2F2013-07-24-abandoned-project%3A-kaleidoscope.png" "http://i.imgur.com/KAldKME.png"
+...
+```
