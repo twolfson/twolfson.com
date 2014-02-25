@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.21.0 - Integrated perceptual diffs into Travis CI (sacrificing accuracy for now)
+
 3.20.0 - Updated `npm start` to point to `bin/twolfson.com`
 
 3.19.0 - Refactored projects to use Backbone and be more scriptable
