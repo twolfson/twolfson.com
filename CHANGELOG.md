@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.20.0 - Updated `npm start` to point to `bin/twolfson.com`
+
 3.19.0 - Refactored projects to use Backbone and be more scriptable
 
 3.18.1 - Updated README with latest structure
