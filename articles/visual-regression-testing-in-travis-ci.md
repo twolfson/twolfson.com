@@ -132,4 +132,4 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-If the stars align, you should be able to use these screenshots as your expected to match with [Travis CI][].
+If the stars align, you should be able to use these Vagrant screenshots as your expected images for [Travis CI][] to match.  ![passing.png](/public/images/articles/visual-regression/passing.png)
