@@ -27,3 +27,20 @@ Since the tests are visual, they require consistency across their screenshot env
 [BrowserStack]: http://www.browserstack.com/
 
 For this blog post, we will be walking through the first option, near-identical environments.
+
+For [twolfson.com][], I use a home-grown screenshot + [`image-diff`][] script.
+
+https://github.com/twolfson/twolfson.com/blob/3.21.0/test/perceptual-tests/twolfson.com_test.js
+
+> At the initial time I wrote this, only `dpxdt` existed which was overkill for me.
+
+There are a few existing solutions if you want something out of the box:
+
+- https://github.com/facebook/huxley
+- https://github.com/bslatkin/dpxdt
+- https://github.com/BBC-News/wraith
+- https://github.com/Huddle/PhantomCSS
+- https://github.com/stefanjudis/grunt-photoBox
+
+[twolfson.com]: http://twolfson.com/
+[`image-diff`]: http://github.com/uber/image-diff
