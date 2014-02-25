@@ -9,11 +9,10 @@ matrix:
 
 script:
   # Run integration tests
-  - fc-list
   - npm run test-integration
 
   # Run perceptual diff tests (upon failure, upload to imgur)
-  - "npm run test-perceptual || (./test/perceptual-tests/upload-screenshots.sh && exit 1)"
+  - 'npm run test-perceptual || ((test "$UPLOAD_RESULTS" = "TRUE" && ./test/perceptual-tests/upload-screenshots.sh) && exit 1)'
 
 notifications:
   email: false
