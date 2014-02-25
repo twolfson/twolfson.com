@@ -79,7 +79,7 @@ page.open(url, function (status) {
 
         // and render
         cb(null, page.render(imgDest));
-      }, 500);
+      }, 1000);
     // Otherwise, attempt to render
     } else {
       cb(null, page.render(imgDest));
