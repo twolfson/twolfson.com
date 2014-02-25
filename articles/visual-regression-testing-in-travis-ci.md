@@ -32,8 +32,6 @@ For [twolfson.com][], I use a home-grown screenshot + [`image-diff`][] script.
 
 https://github.com/twolfson/twolfson.com/blob/3.21.0/test/perceptual-tests/twolfson.com_test.js
 
-> At the time I wrote the script, only `dpxdt` existed which was overkill for me.
-
 There are a few existing solutions if you want something out of the box:
 
 - https://github.com/facebook/huxley
@@ -41,6 +39,8 @@ There are a few existing solutions if you want something out of the box:
 - https://github.com/BBC-News/wraith
 - https://github.com/Huddle/PhantomCSS
 - https://github.com/stefanjudis/grunt-photoBox
+
+> At the time I wrote the script, only `dpxdt` existed which was overkill for me.
 
 [twolfson.com]: http://twolfson.com/
 [`image-diff`]: http://github.com/uber/image-diff
