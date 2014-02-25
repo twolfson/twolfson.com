@@ -110,3 +110,5 @@ Download via:
     wget -O "tmp/travis/104/actual_screenshots/%2F2013-07-24-abandoned-project%3A-kaleidoscope.png" "http://i.imgur.com/KAldKME.png"
 ...
 ```
+
+The script does include deletion commands for each image so be sure to run them when you are done downloading.
