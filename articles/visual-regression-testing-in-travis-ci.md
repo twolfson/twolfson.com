@@ -17,7 +17,7 @@ Since the tests are visual, they require consistency across their screenshot env
 
 - Use near-identical isolated environment to test environment (e.g. [Ubuntu][] [Vagrant][] for [Travis CI][])
 - Use consistent isolated sub-environment in development and test environment (e.g [Vagrant][] for both)
-    - This will not work if your test environment is virtualized (e.g. [Travis CI][])
+    - If your test environment is virtualized, this will not work (e.g. [Travis CI][])
 - Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][])
 
 [Ubuntu]: http://www.ubuntu.com/
