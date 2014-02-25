@@ -111,4 +111,4 @@ Download via:
 ...
 ```
 
-The script does include deletion commands for each image so be sure to run them when you are done downloading.
+The script includes deletion commands for each image so be sure to run them when you are done downloading.
