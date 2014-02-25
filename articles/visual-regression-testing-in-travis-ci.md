@@ -32,7 +32,7 @@ For [twolfson.com][], I use a home-grown screenshot + [`image-diff`][] script.
 
 https://github.com/twolfson/twolfson.com/blob/3.21.0/test/perceptual-tests/twolfson.com_test.js
 
-> At the initial time I wrote this, only `dpxdt` existed which was overkill for me.
+> At the time I wrote the script, only `dpxdt` existed which was overkill for me.
 
 There are a few existing solutions if you want something out of the box:
 
