@@ -10,7 +10,6 @@
 
 [pdiff-presentation]: http://youtu.be/UMnZiTL0tUc
 
-// TODO: Add me (LICENSE page with one `d`, two `d's`, and diff; marked as actual, expected, diff)
 [![Example image of perceptual diff][example-diff]][example-diff]
 
 [example-diff]: /public/images/articles/visual-regression/example-diff.png
