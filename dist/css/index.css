@@ -852,7 +852,7 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 1.125em/1.5 "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font: 1.125em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-y: scroll;
   min-height: 100%; }
 
