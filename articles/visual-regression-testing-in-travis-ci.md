@@ -132,4 +132,4 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-If the stars align, you should be able to use these screenshots as your expected to match with [Travis CI][]. It is recommended to avoid using [Travis CI][] as the only source for generating screenshots due to the time it takes to for each iteration.
+If the stars align, you should be able to use these screenshots as your expected to match with [Travis CI][].
