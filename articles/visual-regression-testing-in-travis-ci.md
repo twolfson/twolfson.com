@@ -13,14 +13,17 @@
 // TODO: Add me (LICENSE page with one `d`, two `d's`, and diff; marked as actual, expected, diff)
 ![Example image of perceptual diff]()
 
-Unfortunately, since the tests themselves are visual, they require consistency between the screenshotting mechanisms. Even between Linux versions and Travis CI, consistency is not guaranteed due to different fonts. There are a few solutions for this:
+Since the tests are visual, they require consistency across their screenshot environments. The most common problem is different fonts which can lead to alternate renderings. There are a few solutions for this:
 
-- Run tests inside of near-identical isolated environment to test environment (e.g. Ubuntu Vagrant for Travis CI)
-- Run tests inside of isolated sub-environment in development and test environment (e.g Vagrant for both)
-    - This will not work if your test environment is virtualized (e.g. Travis CI)
-- Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][]) and compare locally
+- Use near-identical isolated environment to test environment (e.g. [Ubuntu][] [Vagrant][] for [Travis CI][])
+- Use consistent isolated sub-environment in development and test environment (e.g [Vagrant][] for both)
+    - This will not work if your test environment is virtualized (e.g. [Travis CI][])
+- Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][])
 
+[Ubuntu]:
+[Vagrant]:
+[Travis CI]:
 [Sauce Labs]: https://saucelabs.com/
-[Browser Stack]: http://www.browserstack.com/
+[BrowserStack]: http://www.browserstack.com/
 
-For this blog post, we will be walking through the first option.
+For this blog post, we will be walking through the first option, near-identical environments.
