@@ -33,7 +33,6 @@ var server = serverUtils.startServer();
 
 // For each of the URLs
 async.map(urls, function (pathname, done) {
-  // TODO: mocha-ify this
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname),
       filename = encodeURIComponent(pathname) + '.png',
