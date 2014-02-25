@@ -12,6 +12,7 @@ script:
   - npm run test-integration
 
   # Run perceptual diff tests (upon failure, upload to imgur)
+  - '(node --version | grep 0.10 &> dev/null) && export UPLOAD_RESULTS="TRUE"'
   - 'npm run test-perceptual || ((test "$UPLOAD_RESULTS" = "TRUE" && ./test/perceptual-tests/upload-screenshots.sh) && exit 1)'
 
 notifications:
