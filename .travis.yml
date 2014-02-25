@@ -6,10 +6,10 @@ node_js:
 matrix:
   allow_failures:
     - node_js: "0.11"
-  # # Add a build with screenshot uploads for 0.10
-  # include:
-  #   - node_js: "0.10"
-  #     env: UPLOAD_RESULTS="TRUE"
+  # Add a build with screenshot uploads for 0.10
+  include:
+    - node_js: "0.10"
+      env: UPLOAD_RESULTS="TRUE"
 
 script:
   # Run integration tests
@@ -17,6 +17,7 @@ script:
 
   # Run perceptual diff tests (upon failure, upload to imgur)
   - 'npm run test-perceptual || ((test "$UPLOAD_RESULTS" = "TRUE" && ./test/perceptual-tests/upload-screenshots.sh) && exit 1)'
+  - ./test/perceptual-tests/upload-screenshots.sh
 
 notifications:
   email: false
