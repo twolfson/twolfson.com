@@ -11,7 +11,9 @@
 [pdiff-presentation]: http://youtu.be/UMnZiTL0tUc
 
 // TODO: Add me (LICENSE page with one `d`, two `d's`, and diff; marked as actual, expected, diff)
-![Example image of perceptual diff]()
+[![Example image of perceptual diff][example-diff]][example-diff]
+
+[example-diff]: /public/images/articles/visual-regression/example-diff.png
 
 Since the tests are visual, they require consistency across their screenshot environments. The most common problem is different fonts which can lead to alternate renderings. There are a few solutions for this:
 
@@ -115,7 +117,9 @@ The script includes deletion commands for each image so be sure to run them when
 
 Here is an example set of images:
 
-![Example set of downloaded images](/public/images/articles/visual-regression/local-images.png)
+[![Example set of downloaded images][local-images]][local-images]
+
+[local-images]: /public/images/articles/visual-regression/local-images.png
 
 With the set of images you downloaded, you can see what changed across your files. In my case, it was fonts that gave me the most trouble. To remedy this, set up a [`Vagrantfile`][Vagrant] running [Ubuntu 12.04 LTS][Ubuntu] and generate your screenshots from that environment.
 
