@@ -20,9 +20,9 @@ Since the tests are visual, they require consistency across their screenshot env
     - This will not work if your test environment is virtualized (e.g. [Travis CI][])
 - Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][])
 
-[Ubuntu]:
-[Vagrant]:
-[Travis CI]:
+[Ubuntu]: http://www.ubuntu.com/
+[Vagrant]: http://www.vagrantup.com/
+[Travis CI]: https://travis-ci.org/
 [Sauce Labs]: https://saucelabs.com/
 [BrowserStack]: http://www.browserstack.com/
 
