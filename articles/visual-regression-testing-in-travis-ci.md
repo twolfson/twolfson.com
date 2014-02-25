@@ -112,3 +112,21 @@ Download via:
 ```
 
 The script includes deletion commands for each image so be sure to run them when you are done downloading.
+
+Here is an example set of images:
+
+![Example set of downloaded images](/public/images/articles/visual-regression/local-images.png)
+
+With the set of images you downloaded, you can see what changed across your files. In my case, it was fonts that gave me the most trouble. To remedy this, set up a [`Vagrantfile`][Vagrant] running [Ubuntu 12.04 LTS][Ubuntu] and generate your screenshots from that environment.
+
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  # Install test dependencies
+  # Then, use `vagrant ssh` to run your screenshot commands
+end
+```
+
+If the stars align, you should be able to use these screenshots as your expected to match with [Travis CI][]. It is recommended to avoid using [Travis CI][] as the only source for generating screenshots due to the time it takes to for each iteration.
