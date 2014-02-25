@@ -1,7 +1,7 @@
 {
   "name": "twolfson.com",
   "description": "twolfson.com server",
-  "version": "3.19.0",
+  "version": "3.20.0",
   "homepage": "https://github.com/twolfson/twolfson.com",
   "author": {
     "name": "Todd Wolfson",
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
-    "start": "node server/index.js",
+    "start": "bin/twolfson.com",
     "test": "npm run test-integration && npm run vagrant-test-perceptual",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
