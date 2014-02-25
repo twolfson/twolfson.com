@@ -852,7 +852,7 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 1.125em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.125em/1.5 "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   overflow-y: scroll;
   min-height: 100%; }
 
@@ -2236,11 +2236,11 @@ html.flexbox {
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif!important;
   color: inherit!important; }
 
 .brand-face {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif!important; }
 
 .brand-color,
 .brand-colour {

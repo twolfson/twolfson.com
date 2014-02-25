@@ -9,6 +9,7 @@ matrix:
 
 script:
   # Run integration tests
+  - fc-list
   - npm run test-integration
 
   # Run perceptual diff tests (upon failure, upload to imgur)
