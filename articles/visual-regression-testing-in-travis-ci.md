@@ -118,7 +118,7 @@ Here is an example set of images:
 
 With the set of images, I can see the discrepencies and aim to resolve them. In my case, it is fonts that give me the most trouble. To remedy this, I use a [`Vagrantfile`][Vagrant] that mimics [Travis CI][] as close as possible.
 
-[Travis CI][] runs an [Ubuntu 12.04 LTS 64bit][Ubuntu] image. More info can be found here:
+[Travis CI][] runs an [Ubuntu 12.04 LTS 64 bit][Ubuntu] image. More info can be found here:
 
 http://docs.travis-ci.com/user/ci-environment/
 
