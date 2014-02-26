@@ -14,21 +14,6 @@
 
 [example-diff]: /public/images/articles/visual-regression/example-diff.png
 
-Since the tests are visual, they require consistency across their screenshot environments. The most common problem is different fonts which can lead to alternate renderings. There are a few solutions for this:
-
-- Use near-identical isolated environment to test environment (e.g. [Ubuntu][] [Vagrant][] for [Travis CI][])
-- Use consistent isolated sub-environment in development and test environment (e.g [Vagrant][] for both)
-    - If your test environment is virtualized, this will not work (e.g. [Travis CI][])
-- Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][])
-
-[Ubuntu]: http://www.ubuntu.com/
-[Vagrant]: http://www.vagrantup.com/
-[Travis CI]: https://travis-ci.org/
-[Sauce Labs]: https://saucelabs.com/
-[BrowserStack]: http://www.browserstack.com/
-
-For this blog post, we will be walking through the first option, near-identical environments.
-
 For [twolfson.com][], I use a home-grown screenshot + [`image-diff`][] script.
 
 https://github.com/twolfson/twolfson.com/blob/3.21.0/test/perceptual-tests/twolfson.com_test.js
@@ -45,6 +30,21 @@ There are a few existing solutions if you want something out of the box:
 
 [twolfson.com]: http://twolfson.com/
 [`image-diff`]: http://github.com/uber/image-diff
+
+Once you have your test suite set up, add in [Travis CI][]. After the first test run, you should run into consistency issues (e.g. fonts not the same). There are a few solutions for this:
+
+- Use near-identical isolated environment to test environment (e.g. [Ubuntu][] [Vagrant][] for [Travis CI][])
+- Use consistent isolated sub-environment in development and test environment (e.g [Vagrant][] for both)
+    - If your test environment is virtualized, this will not work (e.g. [Travis CI][])
+- Generate screenshots in remote environment (e.g. [Sauce Labs][], [BrowserStack][])
+
+[Ubuntu]: http://www.ubuntu.com/
+[Vagrant]: http://www.vagrantup.com/
+[Travis CI]: https://travis-ci.org/
+[Sauce Labs]: https://saucelabs.com/
+[BrowserStack]: http://www.browserstack.com/
+
+For this blog post, we will be walking through the first option, near-identical environments.
 
 Once you have your perceptual diffs set up, you should be generating screenshots and diffs locally. Next, install your `.travis.yml` including any dependencies such that the screenshots are being generated in Travis CI as well.
 
