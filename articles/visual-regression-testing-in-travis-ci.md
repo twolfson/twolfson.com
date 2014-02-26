@@ -116,7 +116,7 @@ Here is an example set of images:
 
 [local-images]: /public/images/articles/visual-regression/local-images.png
 
-With the set of images, I can see the discrepencies and aim to resolve them. In my case, it is fonts that give me the most trouble. To remedy this, I use a [`Vagrantfile`][Vagrant] that mimics [Travis CI][] as close as possible.
+With the set of images, I can see the discrapencies and aim to resolve them. In my case, it is fonts that give me the most trouble. To remedy this, I use a [`Vagrantfile`][Vagrant] that mimics [Travis CI][] as close as possible.
 
 [Travis CI][] runs an [Ubuntu 12.04 LTS 64 bit][Ubuntu] image. More info can be found here:
 
