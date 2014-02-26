@@ -18,7 +18,7 @@ For [twolfson.com][], I use a home-grown screenshot + [`image-diff`][] script.
 
 https://github.com/twolfson/twolfson.com/blob/3.21.0/test/perceptual-tests/twolfson.com_test.js
 
-There are a few existing solutions if you want something out of the box:
+If you want something out of the box, there are a few existing solutions:
 
 - https://github.com/facebook/huxley
 - https://github.com/bslatkin/dpxdt
