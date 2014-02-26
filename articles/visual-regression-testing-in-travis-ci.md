@@ -31,7 +31,7 @@ If you want something out of the box, there are a few existing solutions:
 [twolfson.com]: http://twolfson.com/
 [`image-diff`]: http://github.com/uber/image-diff
 
-Once you have your test suite set up, add in [Travis CI][]. After the first test run, you should run into consistency issues (e.g. fonts not the same). There are a few solutions for this:
+Once you have your test suite set up, add in [Travis CI][]. After the first test run, you should run into consistency issues (e.g. fonts are not the same). There are a few solutions for this:
 
 - Use near-identical isolated environment to test environment (e.g. [Ubuntu][] [Vagrant][] for [Travis CI][])
 - Use consistent isolated sub-environment in development and test environment (e.g [Vagrant][] for both)
