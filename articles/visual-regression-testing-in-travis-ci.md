@@ -44,11 +44,9 @@ Once you have your test suite set up, add in [Travis CI][]. After the first test
 [Sauce Labs]: https://saucelabs.com/
 [BrowserStack]: http://www.browserstack.com/
 
-For this blog post, we will be walking through the first option, near-identical environments.
+For this blog post, we will be walking through setting up near-identical environments.
 
-Once you have your perceptual diffs set up, you should be generating screenshots and diffs locally. Next, install your `.travis.yml` including any dependencies such that the screenshots are being generated in Travis CI as well.
-
-It is likely that the tests will fail because your expected screenshots differ from the actual ones due to different fonts. To see what your extract your screenshots from Travis CI, I have written a script that uploads my actual and diff screenshots to [imgur.com][].
+To gain insight into what Travis CI's screenshots look like I have written a script that uploads my actual and diff screenshots to [imgur.com][].
 
 [imgur.com]: http://imgur.com/
 
@@ -95,7 +93,7 @@ echo "Delete via:"
 echo -e "    $delete_cmds"
 ```
 
-I integrate with my `.travis.yml` as an upload action upon failure:
+Inside my `.travis.yml`, I run the upload script when a failure occurs:
 
 ```yml
 script:
@@ -112,15 +110,17 @@ Download via:
 ...
 ```
 
-The script includes deletion commands for each image so be sure to run them when you are done downloading.
-
 Here is an example set of images:
 
 [![Example set of downloaded images][local-images]][local-images]
 
 [local-images]: /public/images/articles/visual-regression/local-images.png
 
-With the set of images you downloaded, you can see what changed across your files. In my case, it was fonts that gave me the most trouble. To remedy this, set up a [`Vagrantfile`][Vagrant] running [Ubuntu 12.04 LTS][Ubuntu] and generate your screenshots from that environment.
+With the set of images, I can see the discrepencies and aim to resolve them. In my case, it is fonts that give me the most trouble. To remedy this, I use a [`Vagrantfile`][Vagrant] that mimics [Travis CI][] as close as possible.
+
+[Travis CI][] runs an [Ubuntu 12.04 LTS 64bit][Ubuntu] image. More info can be found here:
+
+http://docs.travis-ci.com/user/ci-environment/
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -132,4 +132,6 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-If the stars align, you should be able to use these Vagrant screenshots as your expected images for [Travis CI][] to match.  ![passing.png](/public/images/articles/visual-regression/passing.png)
+Then, I rely on Vagrant to generate a local set of expected screenshots and deliver them to [Travis CI][].
+
+If the stars align, then the expected images will match and your tests will pass.  ![passing.png](/public/images/articles/visual-regression/passing.png)
