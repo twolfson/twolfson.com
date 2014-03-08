@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.23.0 - Updated blog activity to include `twolfson.com` refresh
+
 3.22.0 - Added 'Visual regression testing' article
 
 3.21.0 - Integrated perceptual diffs into Travis CI (sacrificing accuracy for now)
