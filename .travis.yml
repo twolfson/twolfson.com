@@ -19,4 +19,8 @@ script:
   - 'npm run test-perceptual || ((test "$UPLOAD_RESULTS" = "TRUE" && ./test/perceptual-tests/upload-screenshots.sh) && exit 1)'
 
 notifications:
-  email: false
+  email:
+    recipients:
+      - todd@twolfson.com
+    on_success: change
+    on_failure: change
