@@ -17,11 +17,15 @@
 
 ![Screenshot of foundry releasing foundry](/public/images/articles/release-foundry.png)
 
-The existing release management solutions are either [dotfiles][dot-release] or an explicit set of repositories. Eventually, I was fed up not being able to share my setup with others without a complex set of instructions. Then, [foundry][] was born.
+[foundry][] is available on [GitHub][]: https://github.com/twolfson/foundry
+
+[GitHub]: http://github.com/
+
+The existing release management solutions are either [dotfiles][dot-release] or an release to a fixed set of repositories. I was fed up not being able to easily share my setup with others and [foundry][] was born.
 
 [dot-release]: https://github.com/twolfson/dotfiles/blob/0.29.0/git-template-dir/hooks/post-release.sh
 
-This release includes plugins that I frequently use and have been dogfooding since the start of development
+This release includes the following plugins:
 
 - [foundry-release-bower][], manages `version` in `bower.json`
 - [foundry-release-component][], manages `version` in `component.json`
@@ -36,11 +40,4 @@ This release includes plugins that I frequently use and have been dogfooding sin
 [foundry-release-npm]: https://github.com/twolfson/foundry-release-npm
 [foundry-release-pypi]: https://github.com/twolfson/foundry-release-pypi
 
-The [plugin specification][] can be found at: https://github.com/twolfson/foundry-release-spec
-
-[plugin specification]: https://github.com/twolfson/foundry-release-spec
-
-[foundry][] is available on [GitHub][]: https://github.com/twolfson/foundry
-
-[GitHub]: http://github.com/
-
+Installation instructions and plugin documentation can be found at: https://github.com/twolfson/foundry
