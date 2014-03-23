@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.24.1 - Accepted latest perceptual diffs
+
 3.24.0 - Added article for "Release: foundry"
 
 3.23.2 - Fixed perceptual diff regression
