@@ -21,7 +21,9 @@
 
 [GitHub]: http://github.com/
 
-The existing release management solutions are either [dotfiles][dot-release] or an release to a fixed set of repositories. I was fed up not being able to easily share my setup with others and [foundry][] was born.
+The existing release management solutions are sub-par; either being trapped in someone's [dotfiles][dot-release] or hardcoded to specific repositories.
+
+I wanted something that was both sharable and modular. Hence, [foundry][] was born.
 
 [dot-release]: https://github.com/twolfson/dotfiles/blob/0.29.0/git-template-dir/hooks/post-release.sh
 
