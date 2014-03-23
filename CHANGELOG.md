@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.24.0 - Added article for "Release: foundry"
+
 3.23.2 - Fixed perceptual diff regression
 
 3.23.1 - Updated Travis CI to be aggressive with notifications
