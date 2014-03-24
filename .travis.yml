@@ -11,6 +11,10 @@ matrix:
   #   - node_js: "0.10"
   #     env: UPLOAD_RESULTS="TRUE"
 
+install:
+  # Output phantomjs version
+  - phantomjs --version
+
 script:
   # Run integration tests
   - npm run test-integration
