@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.24.2 - Disabling Travis CI testing for /projects temporarily due to HTML entity issue
+
 3.24.1 - Accepted latest perceptual diffs
 
 3.24.0 - Added article for "Release: foundry"
