@@ -41,8 +41,10 @@ SCRIPT
   # Install test dependency on `phantomjs`
   $install_phantomjs = <<SCRIPT
   if ! which phantomjs &> /dev/null; then
-    cd /vagrant
-    ./test/utils/install-phantomjs.sh
+    cd /tmp
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+    tar xvf phantomjs-1.9.7-linux-x86_64.tar.bz2
+    sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/
   fi
 SCRIPT
   config.vm.provision "shell", inline: $install_phantomjs

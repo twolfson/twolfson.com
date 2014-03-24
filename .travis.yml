@@ -11,16 +11,6 @@ matrix:
   #   - node_js: "0.10"
   #     env: UPLOAD_RESULTS="TRUE"
 
-install:
-  # Install a consistent version of PhantomJS
-  - ./test/utils/install-phantomjs.sh
-
-  # Output phantomjs version
-  - phantomjs --version
-
-  # Install node modules
-  - npm install
-
 script:
   # Run integration tests
   - npm run test-integration
