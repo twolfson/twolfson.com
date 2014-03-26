@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.24.3 - Re-enabling Travis CI testing for /projects due to HTML entity issue itself -_-;;. Reference discussion: https://github.com/travis-ci/travis-ci/issues/2095
+
 3.24.2 - Disabling Travis CI testing for /projects temporarily due to HTML entity issue
 
 3.24.1 - Accepted latest perceptual diffs
