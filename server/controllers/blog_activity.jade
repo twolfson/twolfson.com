@@ -1,6 +1,23 @@
 h3 Current focus
 .cluster
   :markdown
+    #### [Reverse templating][reverse-mustache]
+    Generating input variables from a template and its contents.
+
+    [reverse-mustache]: https://github.com/twolfson/reverse-mustache
+
+    ```js
+    reverseMustache({
+        template: 'hello {{place}}',
+        content: 'hello world'
+    });
+    // {place: 'world'}
+    ```
+
+
+h3 Recent completions
+.cluster
+  :markdown
     #### [foundry][]
     Publishing is currently a problem [solved by dotfiles][git-release]. There is no generic solution that has reusable parts between people.
 
@@ -9,7 +26,6 @@ h3 Current focus
     [foundry]: https://github.com/twolfson/foundry
     [git-release]: https://github.com/twolfson/dotfiles/blob/0.29.0/git-template-dir/hooks/post-release.sh
 
-h3 Recent completions
 .cluster
   :markdown
     #### [twolfson.com][] refresh
