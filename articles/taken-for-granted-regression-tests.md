@@ -43,9 +43,11 @@ describe('An image', function () {
 });
 ```
 
-Unfortunately, our test suite is naive and misses the bug. We release our library as `0.1.0` and after a week, we get a bug report that someone's image is being cropped. The bug itself is known as a *regression*. We can fix the issue and release it, but we should want to prevent the issue from happening again. This is known as a *regression test*.
+Unfortunately, our test suite is naive and misses the issue. We release our library as `0.1.0` and after a week, we get a bug report that someone's image is being cropped. The bug itself is known as a *regression*.
 
-First, we will write our test first to verify we have reproduced the bug.
+We could fix the issue and release it, but we should want to prevent the issue from happening again. This is known as a *regression test*.
+
+First, we will write our test first which should fail, verifying we have reproduced the bug.
 
 ```js
 describe('An image with uneven dimensions', function () {
@@ -68,5 +70,18 @@ describe('An image with uneven dimensions', function () {
   });
 });
 ```
+
+Next, we will patch the issue:
+
+```js
+function scaleImage(img, scale) {
+  return {
+    width: img.width * scale,
+    height: img.height * scale
+  };
+}
+```
+
+Now, our tests are passing and we have prevented the issue from occuring again.
 
 While this is a concept that seems intuitive upon explanation, it was an "a-ha" moment of discovery for myself a couple years into becoming a developer.
