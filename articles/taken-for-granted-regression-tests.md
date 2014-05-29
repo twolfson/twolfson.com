@@ -22,23 +22,17 @@ function scaleImage(img, scale) {
 and we have a test suite for it
 
 ```js
-describe('An image', function () {
-  before(function setupImg () {
-    this.img = {
+describe('An image when scaled by 2x', function () {
+  before(function scaleImg () {
+    this.result = scaleImage({
       width: 25,
       height: 25
-    };
+    }, 2);
   });
 
-  describe('when scaled by 2', function () {
-    before(function scaleImg () {
-      this.result = scaleImage(this.img, 2);
-    });
-
-    it('scales to doubles the height and width', function () {
-      expect(this.result.width).to.equal(50);
-      expect(this.result.height).to.equal(50);
-    });
+  it('scales to doubles the height and width', function () {
+    expect(this.result.width).to.equal(50);
+    expect(this.result.height).to.equal(50);
   });
 });
 ```
@@ -50,23 +44,17 @@ We could fix the issue and release it, but we should want to prevent the issue f
 First, we will write our test first which should fail, verifying we have reproduced the bug.
 
 ```js
-describe('An image with uneven dimensions', function () {
-  before(function setupImg () {
-    this.img = {
+describe('An image with uneven dimensions when scaled by 2x', function () {
+  before(function scaleImg () {
+    this.result = scaleImage({
       width: 25,
       height: 30
-    };
+    }, 2);
   });
 
-  describe('when scaled by 2', function () {
-    before(function scaleImg () {
-      this.result = scaleImage(this.img, 2);
-    });
-
-    it('scales to doubles the height and width', function () {
-      expect(this.result.width).to.equal(50);
-      expect(this.result.height).to.equal(60);
-    });
+  it('scales to doubles the height and width', function () {
+    expect(this.result.width).to.equal(50);
+    expect(this.result.height).to.equal(60);
   });
 });
 ```
