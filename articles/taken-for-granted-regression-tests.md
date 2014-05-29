@@ -36,8 +36,8 @@ describe('An image', function () {
     });
 
     it('scales to doubles the height and width', function () {
-      expect(this.width).to.equal(50);
-      expect(this.height).to.equal(50);
+      expect(this.result.width).to.equal(50);
+      expect(this.result.height).to.equal(50);
     });
   });
 });
@@ -64,8 +64,8 @@ describe('An image with uneven dimensions', function () {
     });
 
     it('scales to doubles the height and width', function () {
-      expect(this.width).to.equal(50);
-      expect(this.height).to.equal(60);
+      expect(this.result.width).to.equal(50);
+      expect(this.result.height).to.equal(60);
     });
   });
 });
