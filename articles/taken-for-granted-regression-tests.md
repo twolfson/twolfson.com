@@ -37,7 +37,7 @@ describe('An image when scaled by 2x', function () {
 });
 ```
 
-Unfortunately, our test suite is naive and misses the issue. We release our library as `0.1.0` and after a week, we get a bug report that someone's image is being cropped. The bug itself is known as a *regression*.
+Unfortunately, our test suite is naive and misses the issue. We release our library and after a week, we get a bug report that some images are being cropped. This type of bug is known as a *regression*, as in "an expected behavior has been undone".
 
 We could fix the issue and release it, but we should want to prevent the issue from happening again. This is known as a *regression test*.
 
