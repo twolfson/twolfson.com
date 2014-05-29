@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2014-05-28T23:42:55-07:00",
   "keywords": "taken for granted, regression tests, protip",
-  "summary": "Guide to getting [visual regression testing/perceptual diffs](http://youtu.be/UMnZiTL0tUc) set up in [Travis CI](https://travis-ci.org/)"
+  "summary": "There are some &quot;a-ha&quot; moments on the road to becoming a better developer. This article visits one of mine, regression tests."
 }
 
 [Visual regression tests/perceptual diffs][pdiff-presentation] are a way to test your website to verify the appearance stays consistent.
