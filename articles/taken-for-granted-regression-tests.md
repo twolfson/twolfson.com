@@ -35,15 +35,38 @@ describe('An image', function () {
       this.result = scaleImage(this.img, 2);
     });
 
-    it('scales to double the height and width', function () {
+    it('scales to doubles the height and width', function () {
       expect(this.width).to.equal(50);
       expect(this.height).to.equal(50);
     });
   });
 });
-
 ```
 
-Then, we release this module as a `0.1.0` and people begin to use it. Unfortunately, we don't catch our
+Unfortunately, our test suite is naive and misses the bug. We release our library as `0.1.0` and after a week, we get a bug report that someone's image is being cropped. The bug itself is known as a *regression*. We can fix the issue and release it, but we should want to prevent the issue from happening again. This is known as a *regression test*.
+
+First, we will write our test first to verify we have reproduced the bug.
+
+```js
+describe('An image with uneven dimensions', function () {
+  before(function setupImg () {
+    this.img = {
+      width: 25,
+      height: 30
+    };
+  });
+
+  describe('when scaled by 2', function () {
+    before(function scaleImg () {
+      this.result = scaleImage(this.img, 2);
+    });
+
+    it('scales to doubles the height and width', function () {
+      expect(this.width).to.equal(50);
+      expect(this.height).to.equal(60);
+    });
+  });
+});
+```
 
 While this is a concept that seems intuitive upon explanation, it was an "a-ha" moment of discovery for myself a couple years into becoming a developer.
