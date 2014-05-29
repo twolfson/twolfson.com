@@ -11,13 +11,39 @@ Regression tests are tests that prevent unexpected behavior that occurred in a n
 Let's pretend we are working on an image scaling library which has a flaw in it:
 
 ```js
-function scaleDimensions(params) {
-  var scale = params.scale; // Example scale: 2
+function scaleImage(img, scale) {
   return {
-    height: params.height * scale,
-    width: params.height * scale
+    width: img.height * scale,
+    height: img.height * scale
   };
 }
 ```
+
+and we have a test suite for it
+
+```js
+describe('An image', function () {
+  before(function setupImg () {
+    this.img = {
+      width: 25,
+      height: 25
+    };
+  });
+
+  describe('when scaled by 2', function () {
+    before(function scaleImg () {
+      this.result = scaleImage(this.img, 2);
+    });
+
+    it('scales to double the height and width', function () {
+      expect(this.width).to.equal(50);
+      expect(this.height).to.equal(50);
+    });
+  });
+});
+
+```
+
+Then, we release this module as a `0.1.0` and people begin to use it. Unfortunately, we don't catch our
 
 While this is a concept that seems intuitive upon explanation, it was an "a-ha" moment of discovery for myself a couple years into becoming a developer.
