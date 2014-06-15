@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.26.0 - Added article for "Taken for granted: Regression tests"
+
 3.25.0 - Updated activity with "Reverse templating"
 
 3.24.3 - Re-enabling Travis CI testing for /projects due to HTML entity issue itself -_-;;. Reference discussion: https://github.com/travis-ci/travis-ci/issues/2095
