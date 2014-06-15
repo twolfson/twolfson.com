@@ -11,6 +11,9 @@ matrix:
   #   - node_js: "0.10"
   #     env: UPLOAD_RESULTS="TRUE"
 
+before_install:
+  - npm install npm@latest -g
+
 script:
   # Run integration tests
   - npm run test-integration
