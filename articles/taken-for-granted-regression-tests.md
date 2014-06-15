@@ -19,7 +19,7 @@ function scaleImage(img, scale) {
 }
 ```
 
-and we have a test suite for it
+and we have a test suite for it:
 
 ```js
 describe('An image when scaled by 2x', function () {
@@ -74,4 +74,4 @@ function scaleImage(img, scale) {
 
 Now, our tests are passing and we have prevented the issue from occuring again.
 
-While this is a concept that seems intuitive upon explanation, it was an "a-ha" moment of discovery for myself a couple years into becoming a developer.
+While this concept seems intuitive upon explanation, it was an "a-ha" moment of discovery for myself a couple years into becoming a developer.
