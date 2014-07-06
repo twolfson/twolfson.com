@@ -33,13 +33,12 @@ exports.getSettings = function (options) {
   settings.articles = require('../articles');
   settings['app.locals'] = {
     config: {
-        author: 'Todd Wolfson',
-        title: 'Todd Wolfson - Javascript Developer',
-        url: 'http://twolfson.com/'
-      },
-      env: settings.ENV,
-      numscale: numscale.scale
-    };
+      author: 'Todd Wolfson',
+      title: 'Todd Wolfson - Javascript Developer',
+      url: 'http://twolfson.com/'
+    },
+    env: settings.ENV,
+    numscale: numscale.scale
   };
     // TODO: Bring me back via `errorLogger`
     // errorLogger: Settings.lazy(function () {
@@ -69,7 +68,7 @@ exports.getSettings = function (options) {
     paypal: {
       name: 'Todd Wolfson',
       email: 'todd@twolfson.com'
-    },
+    }
   };
-  return retObj;
+  return settings;
 };
