@@ -63,7 +63,7 @@ exports.getSettings = function (options) {
     settings.mail = require('./secret').mail;
   }
 
-  // Continue with tame information
+  // Complete and return our settings
   settings['package'] = pkg;
   settings['support-me'] = {
     bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
