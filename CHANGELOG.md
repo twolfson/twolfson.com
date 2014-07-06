@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.28.0 - Improved documentation
+
 3.27.0 - Updated blog activity
 
 3.26.1 - Fix Travis CI semver issues
