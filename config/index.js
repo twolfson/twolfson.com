@@ -6,16 +6,21 @@ var errorLoggers = require('./error-loggers');
 var pkg = require('../package.json');
 
 // Union all of our settings
-var config = {};
+var config = {common: {}, development: {}, test: {}, production: {}};
 [require('./error'), require('./generic'), require('./url')].forEach(function addConfig (_config) {
   // Assert that the new config has no repeated keys
-  var sameKeys = _.intersection(Object.keys(config), Object.keys(_config));
+  var oldKeys = _.union(_.keys(config.common), _.keys(config.development), _.keys(config.test), _.keys(config.production));
+  var newKeys = _.union(_.keys(_config.common), _.keys(_config.development), _.keys(_config.test), _.keys(_config.production));
+  var sameKeys = _.intersection(oldKeys, newKeys);
   if (sameKeys.length > 0) {
     throw new Error('Duplicate keys found in multiple configs. Expected none. Found: ' + JSON.stringify(sameKeys));
   }
 
   // Add on the new properties
-  config = _.extend(config, _config);
+  _.extend(config.common, _config.common);
+  _.extend(config.development, _config.development);
+  _.extend(config.test, _config.test);
+  _.extend(config.production, _config.production);
 });
 
 // Define our settings
@@ -24,7 +29,7 @@ exports.getSettings = function (options) {
 };
 
 module.exports = new Settings({
-  common: _.extend({}, urlConfig.common, {
+  // common: _.extend({}, urlConfig.common, {
     articles: Settings.lazy(function () {
       return require('../articles');
     }),
@@ -58,13 +63,13 @@ module.exports = new Settings({
         email: 'todd@twolfson.com'
       },
     }
-  }),
-  development: _.extend({}, urlConfig.development, {
-    // Same as common
-  }),
-  test: _.extend({}, urlConfig.test, {
-  }),
-  production: _.extend({}, urlConfig.production, {
+  // }),
+  // development: _.extend({}, urlConfig.development, {
+  //   // Same as common
+  // }),
+  // test: _.extend({}, urlConfig.test, {
+  // }),
+  // production: _.extend({}, urlConfig.production, {
     // TODO: Bring me back via `errorLogger`
     // errorLogger: Settings.lazy(function () {
     //   var rollbarConfig = require('./secret').rollbar;
@@ -73,5 +78,5 @@ module.exports = new Settings({
     //     revision: pkg.version
     //   });
     // }),
-  })
+  // })
 });
