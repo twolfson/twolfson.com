@@ -31,7 +31,7 @@ The server should be accessible via your browser at [http://localhost:8080/](htt
 ### CSS
 CSS is compiled via [SASS][] and managed via [`grunt`][]. The CSS framework we use is [`inuit.css`][] to provide a nice base layer of [OOCSS][] and [BEM][].
 
-CSS compilation is run by default as part of the main `grunt` task but can be run standalone.
+CSS compilation is run by default as part of the main `grunt` task but can be run standalone:
 
 ```bash
 grunt # Compiles and watches CSS for changes
@@ -51,7 +51,21 @@ Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run
 grunt sprite
 ```
 
+[`grunt-spritesmith`]: https://github.com/Ensighten/grunt-spritesmith
 
+### JS
+External JS libraries are managed via [`grunt-curl`][] and [`grunt-zip`][]. See [Low tech dependency management via grunt tasks][lo-fi-grunt].
+
+As with CSS these are run by default as part of the main `grunt` task but can be run standalone:
+
+```bash
+grunt # Compiles and watches JS for changes
+grunt js # Compile JS once
+```
+
+[`grunt-curl`]: https://github.com/twolfson/grunt-curl
+[`grunt-zip`]: https://github.com/twolfson/grunt-zip
+[lo-fi-grunt]: /2014-01-19-low-tech-dependency-management-via-grunt-tasks
 
 ### Code organization
 #### Folders
