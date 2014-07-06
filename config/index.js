@@ -28,14 +28,11 @@ module.exports = new Settings({
     // errorLogger: Settings.lazy(function () {
     //   return errorLoggers['console']();
     // }),
-    mail: Settings.lazy(function () {
-      return require('./secret').mail;
-    }),
+    // TODO: Bring me back via `secret`
+    // mail: Settings.lazy(function () {
+    //   return require('./secret').mail;
+    // }),
     'package': pkg,
-    projectOptions: {
-      updateImmediately: false,
-      updateInterval: null
-    },
     'support-me': {
       bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
       dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
@@ -51,22 +48,15 @@ module.exports = new Settings({
     // Same as common
   }),
   test: _.extend({}, urlConfig.test, {
-    mail: {
-      host: 'localhost',
-      port: 1338
-    },
   }),
   production: _.extend({}, urlConfig.production, {
-    errorLogger: Settings.lazy(function () {
-      var rollbarConfig = require('./secret').rollbar;
-      return errorLoggers.rollbar(rollbarConfig.serverToken, {
-        environment: this.ENV,
-        revision: pkg.version
-      });
-    }),
-    projectOptions: {
-      updateImmediately: true,
-      updateInterval: 1000 * 60 * 60 // 1 hour
-    }
+    // TODO: Bring me back via `errorLogger`
+    // errorLogger: Settings.lazy(function () {
+    //   var rollbarConfig = require('./secret').rollbar;
+    //   return errorLoggers.rollbar(rollbarConfig.serverToken, {
+    //     environment: this.ENV,
+    //     revision: pkg.version
+    //   });
+    // }),
   })
 });
