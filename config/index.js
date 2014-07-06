@@ -29,7 +29,7 @@ exports.getSettings = function (options) {
   var _settings = new Settings(config);
   var settings = _settings.getSettings(options);
 
-  // Return our settings
+  // Set up dynamic config
   settings.articles = require('../articles');
   settings['app.locals'] = {
     config: {
@@ -40,25 +40,30 @@ exports.getSettings = function (options) {
     env: settings.ENV,
     numscale: numscale.scale
   };
-    // TODO: Bring me back via `errorLogger`
-    // errorLogger: Settings.lazy(function () {
-    //   return errorLoggers['console']();
-    // }),
-  // production: _.extend({}, urlConfig.production, {
-    // TODO: Bring me back via `errorLogger`
-    // errorLogger: Settings.lazy(function () {
-    //   var rollbarConfig = require('./secret').rollbar;
-    //   return errorLoggers.rollbar(rollbarConfig.serverToken, {
-    //     environment: this.ENV,
-    //     revision: pkg.version
-    //   });
-    // }),
-  // })
 
-    // TODO: Bring me back via `secret`
-    // mail: Settings.lazy(function () {
-    //   return require('./secret').mail;
-    // }),
+  // Set up our error logger
+  var errorLogger = settings.errorLogger;
+  switch (errorLogger) {
+    case 'console':
+      settings.errorLogger = errorLoggers['console']();
+      break;
+    case 'production':
+      var rollbarConfig = require('./secret').rollbar;
+      settings.errorLogger = errorLoggers.rollbar(rollbarConfig.serverToken, {
+        environment: settings.ENV,
+        revision: pkg.version
+      });
+      break;
+    default:
+      throw new Error('Expected `errorLogger` to be "console" or "production" but was "' + errorLogger);
+  }
+
+  // If mail depends on secret info, load it
+  if (settings.mail === 'secret') {
+    settings.mail = require('./secret').mail;
+  }
+
+  // Continue with tame information
   settings['package'] = pkg;
   settings['support-me'] = {
     bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
