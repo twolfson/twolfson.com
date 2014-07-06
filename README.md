@@ -4,9 +4,14 @@ Repository for [http://twolfson.com/][]
 
 This server is written on top of [express][], for routing and views, and [jojo][], for blog entries.
 
+We use [`inuit.css`][] as our CSS framework to provide good [OOCSS][] and [BEM][] conventions.
+
 [http://twolfson.com/]: http://twolfson.com/
 [express]: http://expressjs.com/
 [jojo]: https://github.com/twolfson/jojo/
+[`inuit.css`]: https://github.com/csswizardry/inuit.css
+[OOCSS]: http://oocss.org/
+[BEM]: http://bem.info/
 
 ## Getting started
 The following steps will get a server running locally:
@@ -27,10 +32,14 @@ npm start # should say 'Server running at http://localhost:8080/'
 
 The server should be accessible via your browser at [http://localhost:8080/](http://localhost:8080/)
 
-## Development
-### Assets
+## Documentation
+### Development
 #### CSS
-CSS is compiled via [SASS][] and managed via [`grunt`][]. The CSS framework we use is [`inuit.css`][] to provide a nice base layer of [OOCSS][] and [BEM][].
+CSS is compiled via [SASS][]. We depend on `ruby-sass@3.3.4` (requires [`gem`][] to be installed).
+
+```bash
+gem install sass -v 3.3.4
+```
 
 CSS compilation is run by default as part of the main `grunt` task but can be run standalone:
 
@@ -40,10 +49,8 @@ grunt css # Compile CSS once
 ```
 
 [SASS]: http://sass-lang.com/
+[`gem`]: https://rubygems.org/
 [`grunt`]: http://gruntjs.com/
-[`inuit.css`]: https://github.com/csswizardry/inuit.css
-[OOCSS]: http://oocss.org/
-[BEM]: http://bem.info/
 
 #### Images
 Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run via a standalone [`grunt`][] task:
