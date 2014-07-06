@@ -4,7 +4,7 @@ Repository for [http://twolfson.com/][]
 
 This server is written on top of [express][], for routing and views, and [jojo][], for blog entries.
 
-We use [`inuit.css`][] as our CSS framework to provide good [OOCSS][] and [BEM][] conventions.
+We use [`inuit.css`][] as our CSS framework to provide [OOCSS][] and [BEM][] conventions.
 
 [http://twolfson.com/]: http://twolfson.com/
 [express]: http://expressjs.com/
