@@ -18,6 +18,21 @@ h3 Current focus
 h3 Recent completions
 .cluster
   :markdown
+    #### [Reverse templating][reverse-mustache]
+    Generating input variables from a template and its contents.
+
+    [reverse-mustache]: https://github.com/twolfson/reverse-mustache
+
+    ```js
+    reverseMustache({
+        template: 'hello {{place}}',
+        content: 'hello world'
+    });
+    // {place: 'world'}
+    ```
+
+.cluster
+  :markdown
     #### [foundry][]
     Publishing is currently a problem [solved by dotfiles][git-release]. There is no generic solution that has reusable parts between people.
 
