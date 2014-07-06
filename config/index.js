@@ -25,11 +25,12 @@ var config = {common: {}, development: {}, test: {}, production: {}};
 
 // Define our settings
 exports.getSettings = function (options) {
-  // Load
-};
+  // Load our settings
+  var _settings = new Settings(config);
+  var settings = _settings.getSettings(options);
 
-module.exports = new Settings({
-  // common: _.extend({}, urlConfig.common, {
+  // Return our settings
+  var retObj = {
     articles: Settings.lazy(function () {
       return require('../articles');
     }),
@@ -63,12 +64,6 @@ module.exports = new Settings({
         email: 'todd@twolfson.com'
       },
     }
-  // }),
-  // development: _.extend({}, urlConfig.development, {
-  //   // Same as common
-  // }),
-  // test: _.extend({}, urlConfig.test, {
-  // }),
   // production: _.extend({}, urlConfig.production, {
     // TODO: Bring me back via `errorLogger`
     // errorLogger: Settings.lazy(function () {
@@ -79,4 +74,6 @@ module.exports = new Settings({
     //   });
     // }),
   // })
-});
+  };
+  return retObj;
+};
