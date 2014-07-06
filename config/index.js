@@ -1,14 +1,14 @@
 // Load in dependencies
-var numscale = require('numscale');
 var Settings = require('shallow-settings');
+var _ = require('underscore');
+var numscale = require('numscale');
 var errorLoggers = require('./error-loggers');
 var pkg = require('../package.json');
+var urlConfig = require('./url');
 
 // Define our settings
 module.exports = new Settings({
-  common: {
-    addDevelopmentRoutes: true,
-    addTestRoutes: true,
+  common: _.extend({}, urlConfig.common, {
     articles: Settings.lazy(function () {
       return require('../articles');
     }),
@@ -44,47 +44,19 @@ module.exports = new Settings({
         email: 'todd@twolfson.com'
       },
     },
-    throwCaughtErrors: false,
-    url: {
-      internal: {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: 8080
-      },
-      external: {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: 8080
-      }
-    }
-  },
+    throwCaughtErrors: false
+  }),
   development: {
     // Same as common
   },
-  test: {
-    addDevelopmentRoutes: false,
-    addTestRoutes: true,
+  test: _.extend({}, urlConfig.test, {
     mail: {
       host: 'localhost',
       port: 1338
     },
-    throwCaughtErrors: true,
-    url: {
-      internal: {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: 1337
-      },
-      external: {
-        protocol: 'http',
-        hostname: 'twolfson.test',
-        port: 1337
-      }
-    }
-  },
-  production: {
-    addDevelopmentRoutes: false,
-    addTestRoutes: false,
+    throwCaughtErrors: true
+  }),
+  production: _.extend({}, urlConfig.production, {
     errorLogger: Settings.lazy(function () {
       var rollbarConfig = require('./secret').rollbar;
       return errorLoggers.rollbar(rollbarConfig.serverToken, {
@@ -95,17 +67,6 @@ module.exports = new Settings({
     projectOptions: {
       updateImmediately: true,
       updateInterval: 1000 * 60 * 60 // 1 hour
-    },
-    url: {
-      internal: {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: 8080
-      },
-      external: {
-        protocol: 'http',
-        hostname: 'twolfson.com'
-      }
     }
-  }
+  })
 });
