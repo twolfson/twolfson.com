@@ -30,40 +30,21 @@ exports.getSettings = function (options) {
   var settings = _settings.getSettings(options);
 
   // Return our settings
-  var retObj = {
-    articles: Settings.lazy(function () {
-      return require('../articles');
-    }),
-    'app.locals': Settings.lazy(function () {
-      return {
-        config: {
-          author: 'Todd Wolfson',
-          title: 'Todd Wolfson - Javascript Developer',
-          url: 'http://twolfson.com/'
-        },
-        env: this.ENV,
-        numscale: numscale.scale
-      };
-    }),
+  settings.articles = require('../articles');
+  settings['app.locals'] = {
+    config: {
+        author: 'Todd Wolfson',
+        title: 'Todd Wolfson - Javascript Developer',
+        url: 'http://twolfson.com/'
+      },
+      env: settings.ENV,
+      numscale: numscale.scale
+    };
+  };
     // TODO: Bring me back via `errorLogger`
     // errorLogger: Settings.lazy(function () {
     //   return errorLoggers['console']();
     // }),
-    // TODO: Bring me back via `secret`
-    // mail: Settings.lazy(function () {
-    //   return require('./secret').mail;
-    // }),
-    'package': pkg,
-    'support-me': {
-      bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
-      dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
-      flattr: 'twolfsn',
-      gittip: 'twolfson',
-      paypal: {
-        name: 'Todd Wolfson',
-        email: 'todd@twolfson.com'
-      },
-    }
   // production: _.extend({}, urlConfig.production, {
     // TODO: Bring me back via `errorLogger`
     // errorLogger: Settings.lazy(function () {
@@ -74,6 +55,21 @@ exports.getSettings = function (options) {
     //   });
     // }),
   // })
+
+    // TODO: Bring me back via `secret`
+    // mail: Settings.lazy(function () {
+    //   return require('./secret').mail;
+    // }),
+  settings['package'] = pkg;
+  settings['support-me'] = {
+    bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
+    dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
+    flattr: 'twolfsn',
+    gittip: 'twolfson',
+    paypal: {
+      name: 'Todd Wolfson',
+      email: 'todd@twolfson.com'
+    },
   };
   return retObj;
 };
