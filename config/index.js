@@ -47,7 +47,7 @@ exports.getSettings = function (options) {
     case 'console':
       settings.errorLogger = errorLoggers['console']();
       break;
-    case 'production':
+    case 'rollbar':
       var rollbarConfig = require('./secret').rollbar;
       settings.errorLogger = errorLoggers.rollbar(rollbarConfig.serverToken, {
         environment: settings.ENV,
