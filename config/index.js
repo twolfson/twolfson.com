@@ -1,13 +1,20 @@
 // Load in dependencies
-var Settings = require('shallow-settings');
 var _ = require('underscore');
+var Settings = require('shallow-settings');
 var numscale = require('numscale');
-var errorConfig = require('./error');
 var errorLoggers = require('./error-loggers');
 var pkg = require('../package.json');
+
+// Union all of our settings
+var errorConfig = require('./error');
+var genericConfig = require('./generic');
 var urlConfig = require('./url');
 
 // Define our settings
+exports.getSettings = function (options) {
+  // Load
+};
+
 module.exports = new Settings({
   common: _.extend({}, urlConfig.common, {
     articles: Settings.lazy(function () {
