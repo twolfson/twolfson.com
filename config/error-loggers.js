@@ -1,5 +1,4 @@
 // Load in dependencies
-var util = require('util');
 var rollbar = require('rollbar');
 
 // Define our error loggers
