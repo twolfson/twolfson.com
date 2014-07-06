@@ -2,6 +2,7 @@
 var Settings = require('shallow-settings');
 var _ = require('underscore');
 var numscale = require('numscale');
+var errorConfig = require('./error');
 var errorLoggers = require('./error-loggers');
 var pkg = require('../package.json');
 var urlConfig = require('./url');
@@ -23,9 +24,10 @@ module.exports = new Settings({
         numscale: numscale.scale
       };
     }),
-    errorLogger: Settings.lazy(function () {
-      return errorLoggers['console']();
-    }),
+    // TODO: Bring me back via `errorLogger`
+    // errorLogger: Settings.lazy(function () {
+    //   return errorLoggers['console']();
+    // }),
     mail: Settings.lazy(function () {
       return require('./secret').mail;
     }),
@@ -43,18 +45,16 @@ module.exports = new Settings({
         name: 'Todd Wolfson',
         email: 'todd@twolfson.com'
       },
-    },
-    throwCaughtErrors: false
+    }
   }),
-  development: {
+  development: _.extend({}, urlConfig.development, {
     // Same as common
-  },
+  }),
   test: _.extend({}, urlConfig.test, {
     mail: {
       host: 'localhost',
       port: 1338
     },
-    throwCaughtErrors: true
   }),
   production: _.extend({}, urlConfig.production, {
     errorLogger: Settings.lazy(function () {
