@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.27.0 - Updated blog activity
+
 3.26.1 - Fix Travis CI semver issues
 
 3.26.0 - Added article for "Taken for granted: Regression tests"
