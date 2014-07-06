@@ -15,6 +15,9 @@ module.exports = {
       }
     }
   },
+  development: {
+    // Same as common
+  },
   test: {
     addDevelopmentRoutes: false,
     addTestRoutes: true,
