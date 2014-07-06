@@ -28,6 +28,31 @@ npm start # should say 'Server running at http://localhost:8080/'
 The server should be accessible via your browser at [http://localhost:8080/](http://localhost:8080/)
 
 ## Development
+### CSS
+CSS is compiled via [SASS][] and managed via [`grunt`][]. The CSS framework we use is [`inuit.css`][] to provide a nice base layer of [OOCSS][] and [BEM][].
+
+CSS compilation is run by default as part of the main `grunt` task but can be run standalone.
+
+```bash
+grunt # Compiles and watches CSS for changes
+grunt css # Compile CSS once
+```
+
+[SASS]: http://sass-lang.com/
+[`grunt`]: http://gruntjs.com/
+[`inuit.css`]: https://github.com/csswizardry/inuit.css
+[OOCSS]: http://oocss.org/
+[BEM]: http://bem.info/
+
+### Images
+Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run via a standalone [`grunt`][] task:
+
+```bash
+grunt sprite
+```
+
+
+
 ### Code organization
 #### Folders
 - `articles/` - [GitHub Flavored Markdown][] files for blog posts
