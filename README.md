@@ -8,8 +8,28 @@ This server is written on top of [express][], for routing and views, and [jojo][
 [express]: http://expressjs.com/
 [jojo]: https://github.com/twolfson/jojo/
 
-## Code organization
-### Folders
+## Getting started
+The following steps will get a server running locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/twolfson/twolfson.com
+cd twolfson.com
+
+# Install dependencies
+npm install
+
+# Run the server
+npm start # should say 'Server running at http://localhost:8080/'
+# For continuous development, use `nodemon`
+# nodemon -x bin/twolfson.com
+```
+
+The server should be accessible via your browser at [http://localhost:8080/](http://localhost:8080/)
+
+## Development
+### Code organization
+#### Folders
 - `articles/` - [GitHub Flavored Markdown][] files for blog posts
 - `bin/twolfson.com` - Executable to start `twolfson.com` locally
 - `config/` - Per-environment configuations
@@ -32,7 +52,7 @@ This server is written on top of [express][], for routing and views, and [jojo][
 [mocha]: https://github.com/visionmedia/mocha/
 [Perceptual diffs]: http://www.youtube.com/watch?v=UMnZiTL0tUc
 
-### Files
+#### Files
 - `CHANGELOG.md` - Record of changes that have happened on the server
 - `README.md` - Documentation for the project
 - `Gruntfile.js` - A [grunt][grunt] implementation for linting and minification.
@@ -48,6 +68,6 @@ Support this project and [others by twolfson][gittip] via [gittip][].
 [gittip]: https://www.gittip.com/twolfson/
 
 ## License
-Copyright (c) 2013 Todd Wolfson
+Copyright (c) 2013-2014 Todd Wolfson
 
 Licensed under the MIT license.
