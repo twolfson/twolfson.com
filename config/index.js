@@ -6,9 +6,17 @@ var errorLoggers = require('./error-loggers');
 var pkg = require('../package.json');
 
 // Union all of our settings
-var errorConfig = require('./error');
-var genericConfig = require('./generic');
-var urlConfig = require('./url');
+var config = {};
+[require('./error'), require('./generic'), require('./url')].forEach(function addConfig (_config) {
+  // Assert that the new config has no repeated keys
+  var sameKeys = _.intersection(Object.keys(config), Object.keys(_config));
+  if (sameKeys.length > 0) {
+    throw new Error('Duplicate keys found in multiple configs. Expected none. Found: ' + JSON.stringify(sameKeys));
+  }
+
+  // Add on the new properties
+  config = _.extend(config, _config);
+});
 
 // Define our settings
 exports.getSettings = function (options) {
