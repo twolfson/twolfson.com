@@ -12,7 +12,7 @@ I am taking a break from everything and moving to Japan for 3 months.
 I have quit Uber and in a more general sense, web development. I will be living in Japan as a tourist from July 17th to October 13th.
 
 # Why?
-Before we can I never chose web development as my career path, it happened to be the best choice when I graduated college. I started when I was in high school and continued doing freelance while in college. In college, I was a Math and Chemistry major. But, I wound up hating Chemistry and there are no jobs in Math except for academia.
+Web development was less of a choice and more of the only practical option when I graduated college. I started developing when I was in high school and continued doing freelance while in college. I was a Math and Chemistry major. but, I wound up hating Chemistry and there are no jobs in Math except for academia. As a result, I went into web development full time.
 
 I have achieved a level of comfort in web development. I feel that it is time to step out of my comfort zone, look back on what I have been doing. I want to clear my head from work, think about what I would like to achieve, and decide whether to continue with web development or start doing something else.
 
