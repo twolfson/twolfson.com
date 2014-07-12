@@ -12,18 +12,14 @@ I am taking a break from everything and moving to Japan for 3 months.
 I have quit Uber and in a more general sense, web development. I will be living in Japan as a tourist from July 17th to October 13th.
 
 # Why?
-Web development was less of a choice and more of the only practical option when I graduated college. I started developing when I was in high school and continued doing freelance while in college. I was a Math and Chemistry major. but, I wound up hating Chemistry and there are no jobs in Math except for academia. As a result, I went into web development full time.
+Web development was less of a "choice" and more the "only practical option" when I graduated college. I did freelance web development from high school through college. I was a Math and Chemistry major but, I wound up hating Chemistry and there are no jobs in Math except for academia. As a result, I went into web development full time.
 
-I have achieved a level of comfort in web development. I feel that it is time to step out of my comfort zone, look back on what I have been doing. I want to clear my head from work, think about what I would like to achieve, and decide whether to continue with web development or start doing something else.
+I am at a comfortable level in web development. I feel that it is time to step out of my comfort zone, clear my head from work/open source, and start reflecting on things.
+
+I want to look at what I have been doing, consider what I want to achieve, and from there, decide whether to continue with web development or start doing something else.
 
 # What about X?
-I am putting everything into a minimal state before I leave.
-
-- Car? Storage
-- Apartment? Terminating lease
-- Open source? Maintenance only, no new features
+I am putting everything into a minimal state before I leave. For example, I am only performing maintenance on open source projects; no new features.
 
 # What are your plans in Japan?
 I will be staying in a foreigner house in Ebisu but beyond that, I don't have any plans.
-
-I want to explore Japan and learn about another culture. I want to reflect on my philosphies, question my morals, and experiment with new ideas.
