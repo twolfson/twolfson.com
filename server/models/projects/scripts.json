@@ -18,24 +18,6 @@
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
   },
   {
-    "name": "grunt-zip",
-    "description": "Zip and unzip files via grunt",
-    "stars": 52,
-    "forks": 8,
-    "github": "twolfson/grunt-zip",
-    "srcUrl": "https://github.com/twolfson/grunt-zip",
-    "pageUrl": "https://github.com/twolfson/grunt-zip"
-  },
-  {
-    "name": "grunt-curl",
-    "description": "Download files from the internet via grunt",
-    "stars": 50,
-    "forks": 14,
-    "github": "twolfson/grunt-curl",
-    "srcUrl": "https://github.com/twolfson/grunt-curl",
-    "pageUrl": "https://github.com/twolfson/grunt-curl"
-  },
-  {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
     "stars": 40,
