@@ -90,6 +90,15 @@
     "pageUrl": "https://github.com/uber/eight-track"
   },
   {
+    "name": "foundry",
+    "description": "Release manager for npm, bower, component, PyPI, git tags, and any plugin you can write",
+    "stars": 18,
+    "forks": 3,
+    "github": "twolfson/foundry",
+    "srcUrl": "https://github.com/twolfson/foundry",
+    "pageUrl": "https://github.com/twolfson/foundry"
+  },
+  {
     "name": "gifsockets",
     "description": "Stream never-ending animated GIFs",
     "stars": 18,
