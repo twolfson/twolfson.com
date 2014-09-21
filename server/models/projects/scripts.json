@@ -91,7 +91,7 @@
   },
   {
     "name": "foundry",
-    "description": "Release manager for npm, bower, component, PyPI, git tags, and any plugin you can write",
+    "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
     "stars": 18,
     "forks": 3,
     "github": "twolfson/foundry",
