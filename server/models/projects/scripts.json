@@ -2,8 +2,8 @@
   {
     "name": "spritesmith",
     "description": "Join images together into a spritesheet and CSS variables",
-    "stars": 328,
-    "forks": 30,
+    "stars": 678,
+    "forks": 50,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,8 +11,8 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 165,
-    "forks": 22,
+    "stars": 242,
+    "forks": 36,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
@@ -20,7 +20,7 @@
   {
     "name": "File Watcher",
     "description": "Watch your files for a hands-free browser refresh!",
-    "stars": 90,
+    "stars": 91,
     "forks": 1,
     "github": "twolfson/File-Watcher",
     "srcUrl": "https://github.com/twolfson/File-Watcher",
@@ -29,44 +29,35 @@
   {
     "name": "grunt-zip",
     "description": "Zip and unzip files via grunt",
-    "stars": 39,
-    "forks": 6,
+    "stars": 52,
+    "forks": 8,
     "github": "twolfson/grunt-zip",
     "srcUrl": "https://github.com/twolfson/grunt-zip",
     "pageUrl": "https://github.com/twolfson/grunt-zip"
   },
   {
-    "name": "jsmin-sourcemap",
-    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
-    "stars": 38,
-    "forks": 4,
-    "github": "twolfson/grunt-jsmin-sourcemap",
-    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
-    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
-  },
-  {
-    "name": "jojo",
-    "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 32,
-    "forks": 2,
-    "github": "twolfson/jojo",
-    "srcUrl": "https://github.com/twolfson/jojo",
-    "pageUrl": "https://github.com/twolfson/jojo"
-  },
-  {
     "name": "grunt-curl",
     "description": "Download files from the internet via grunt",
-    "stars": 29,
-    "forks": 10,
+    "stars": 50,
+    "forks": 14,
     "github": "twolfson/grunt-curl",
     "srcUrl": "https://github.com/twolfson/grunt-curl",
     "pageUrl": "https://github.com/twolfson/grunt-curl"
   },
   {
+    "name": "jsmin-sourcemap",
+    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
+    "stars": 40,
+    "forks": 5,
+    "github": "twolfson/grunt-jsmin-sourcemap",
+    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
+    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
+  },
+  {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
-    "stars": 28,
-    "forks": 3,
+    "stars": 38,
+    "forks": 5,
     "github": "twolfson/FindPlusPlus",
     "srcUrl": "https://github.com/twolfson/FindPlusPlus",
     "pageUrl": "https://github.com/twolfson/FindPlusPlus"
@@ -74,16 +65,25 @@
   {
     "name": "fontsmith",
     "description": "Compose SVGs into fonts and CSS/JS variables",
-    "stars": 18,
-    "forks": 1,
+    "stars": 34,
+    "forks": 7,
     "github": "twolfson/grunt-fontsmith",
     "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
     "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
   },
   {
+    "name": "jojo",
+    "description": "the 10 second blog engine for hackers (in javascript)",
+    "stars": 34,
+    "forks": 2,
+    "github": "twolfson/jojo",
+    "srcUrl": "https://github.com/twolfson/jojo",
+    "pageUrl": "https://github.com/twolfson/jojo"
+  },
+  {
     "name": "gifsockets",
     "description": "Stream never-ending animated GIFs",
-    "stars": 14,
+    "stars": 18,
     "forks": 1,
     "github": "twolfson/gifsockets",
     "srcUrl": "https://github.com/twolfson/gifsockets",
@@ -92,8 +92,8 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 10,
-    "forks": 1,
+    "stars": 11,
+    "forks": 3,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
@@ -111,7 +111,7 @@
   {
     "name": "dotfiles",
     "description": "My dotfiles, documentation, and Linux workflow",
-    "stars": 1,
+    "stars": 3,
     "forks": 0,
     "github": "twolfson/dotfiles",
     "srcUrl": "https://github.com/twolfson/dotfiles",
