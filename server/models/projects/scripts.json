@@ -45,6 +45,15 @@
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
   },
   {
+    "name": "image-diff",
+    "description": "Create image differential between two images",
+    "stars": 39,
+    "forks": 4,
+    "github": "uber/image-diff",
+    "srcUrl": "https://github.com/uber/image-diff",
+    "pageUrl": "https://github.com/uber/image-diff"
+  },
+  {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
     "stars": 38,
@@ -70,6 +79,15 @@
     "github": "twolfson/jojo",
     "srcUrl": "https://github.com/twolfson/jojo",
     "pageUrl": "https://github.com/twolfson/jojo"
+  },
+  {
+    "name": "eight-track",
+    "description": "Record and playback HTTP requests",
+    "stars": 18,
+    "forks": 3,
+    "github": "uber/eight-track",
+    "srcUrl": "https://github.com/uber/eight-track",
+    "pageUrl": "https://github.com/uber/eight-track"
   },
   {
     "name": "gifsockets",
