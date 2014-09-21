@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.31.0 - Updated project list and statistics
+
 3.30.0 - Completed "Taking a break" article
 
 3.29.0 - Explored granular configurations
