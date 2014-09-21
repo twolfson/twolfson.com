@@ -54,12 +54,12 @@ exports.scripts = new ScriptCollection(scriptModels, {
 
 exports.update = function (done) {
   async.parallel([
-    // function updateCompetitions (cb) {
-    //   exports.competitions.update(cb);
-    // },
-    // function updateContributions (cb) {
-    //   exports.contributions.update(cb);
-    // },
+    function updateCompetitions (cb) {
+      exports.competitions.update(cb);
+    },
+    function updateContributions (cb) {
+      exports.contributions.update(cb);
+    },
     function updateScripts (cb) {
       exports.scripts.update(cb);
     }
