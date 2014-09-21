@@ -4,8 +4,8 @@
   "date": "2012/03/16",
   "keywords": "css query, resource collector, mdn dev derby, css off, js1k",
   "summary": "A summary of all the contests, scripts I have written, and everything else I meant to write about since my arrival in California.",
-  "_relProjects": ["CSS Query"],
-  "relatedProjects": ["File Watcher", "Media Query Sprites", "IndexedDB Editor"]
+  "_relProjects": ["File Watcher", "CSS Query"],
+  "relatedProjects": ["Media Query Sprites", "IndexedDB Editor"]
 }
 
 In this post, I would like to sum up all of the contests, scripts I have written, and everything else I meant to write about since my arrival in California (mid-May 2011). So, without further ado here they are:

@@ -4,7 +4,7 @@
   "date": "2012/03/25",
   "keywords": "file watcher, live coding, hands free refresh",
   "summary": "When [UMS' CSS Off](http://www.unmatchedstyle.com/cssoff/) started in Late October, I was getting frustrated at needing to manually refresh for any page change -- no matter how small.",
-  "relatedProjects": ["File Watcher"]
+  "_relProjects": ["File Watcher"]
 }
 
 Backstory
