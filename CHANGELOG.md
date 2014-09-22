@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.33.0 - Added more projects to contributions
+
 3.32.0 - Updated project statistics once more
 
 3.31.0 - Updated project list and statistics
