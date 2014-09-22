@@ -63,6 +63,15 @@
     "pageUrl": "https://github.com/twolfson/jojo"
   },
   {
+    "name": "foundry",
+    "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
+    "stars": 27,
+    "forks": 4,
+    "github": "twolfson/foundry",
+    "srcUrl": "https://github.com/twolfson/foundry",
+    "pageUrl": "https://github.com/twolfson/foundry"
+  },
+  {
     "name": "eight-track",
     "description": "Record and playback HTTP requests",
     "stars": 18,
@@ -70,15 +79,6 @@
     "github": "uber/eight-track",
     "srcUrl": "https://github.com/uber/eight-track",
     "pageUrl": "https://github.com/uber/eight-track"
-  },
-  {
-    "name": "foundry",
-    "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
-    "stars": 18,
-    "forks": 3,
-    "github": "twolfson/foundry",
-    "srcUrl": "https://github.com/twolfson/foundry",
-    "pageUrl": "https://github.com/twolfson/foundry"
   },
   {
     "name": "gifsockets",
