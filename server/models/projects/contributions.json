@@ -1,5 +1,14 @@
 [
   {
+    "name": "git-extras",
+    "description": "Collection of git utilities",
+    "stars": 4278,
+    "forks": 321,
+    "github": "visionmedia/git-extras",
+    "srcUrl": "https://github.com/visionmedia/git-extras",
+    "pageUrl": "https://github.com/visionmedia/git-extras"
+  },
+  {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
     "stars": 3831,
@@ -27,6 +36,15 @@
     "pageUrl": "https://github.com/gratipay/gratipay.com"
   },
   {
+    "name": "npm-www",
+    "description": "<a href=\"http://npmjs.org/\" target=\"_blank\">http://npmjs.org/</a> website",
+    "stars": 597,
+    "forks": 203,
+    "github": "npm/npm-www",
+    "srcUrl": "https://github.com/npm/npm-www",
+    "pageUrl": "https://github.com/npm/npm-www"
+  },
+  {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
     "stars": 444,
@@ -34,5 +52,14 @@
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
+  },
+  {
+    "name": "python-livereload",
+    "description": "livereload server in python",
+    "stars": 225,
+    "forks": 49,
+    "github": "lepture/python-livereload",
+    "srcUrl": "https://github.com/lepture/python-livereload",
+    "pageUrl": "https://github.com/lepture/python-livereload"
   }
 ]
