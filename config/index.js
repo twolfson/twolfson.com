@@ -34,7 +34,7 @@ exports.getSettings = function (options) {
   settings['app.locals'] = {
     config: {
       author: 'Todd Wolfson',
-      title: 'Todd Wolfson - Javascript Developer',
+      title: 'Todd Wolfson - Software Engineer',
       url: 'http://twolfson.com/'
     },
     env: settings.ENV,

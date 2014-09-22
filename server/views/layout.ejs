@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-	<title><%= locals.title || 'Todd Wolfson - JavaScript Developer' %></title>
+	<title><%= locals.title || config.title %></title>
   <link rel="shortcut icon" href="/public/images/favicon.ico" />
   <link href='//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono' rel='stylesheet' type='text/css'>
   <% /* TODO: Consider beautifying output HTML */ %>
@@ -50,7 +50,7 @@
           <a href="/" class="link--hidden">Todd Wolfson</a>
         </h1>
         <h2 class="brand flexbox__item width5 align--baseline">
-          <a href="http://en.wikipedia.org/wiki/ECMAScript">JavaScript</a> Developer
+          Software Engineer
         </h2>
         <div class="flexbox__item text--right alpha">
           <a href="http://github.com/twolfson/" class="icon-github push--right" target="_blank"><% /* <span class="accessibility">GitHub</span> */ %></a>
