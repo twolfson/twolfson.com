@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.34.0 - Updated title from "JavaScript Developer" to "Software Engineer"
+
 3.33.0 - Added more projects to contributions
 
 3.32.0 - Updated project statistics once more
