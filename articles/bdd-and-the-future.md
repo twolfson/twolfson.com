@@ -23,7 +23,7 @@ GitHub: [https://github.com/Ensighten/crossbones][crossbones]
 For a while, I have been experimenting with BDD. At first, I wanted a cross-framework test runner from [vows][vows] to [mocha][mocha]. This was initially called [Skeleton][skeleton], later renamed to [Crossbones][crossbones] and was successfully implemented in the [Sauron][sauron] test suite.
 
 [vows]: http://vowsjs.org/
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [skeleton]: https://github.com/Ensighten/Sauron/blob/9fde7eceba9c21dbb123676fe607ac93561b2e51/src-test/Skeleton.js
 [crossbones]: https://github.com/Ensighten/crossbones
 [sauron]: https://github.com/Ensighten/Sauron/blob/9fde7eceba9c21dbb123676fe607ac93561b2e51/src-test/Sauron.test.js

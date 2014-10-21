@@ -4,9 +4,9 @@
     "description": "Collection of git utilities",
     "stars": 4278,
     "forks": 321,
-    "github": "visionmedia/git-extras",
-    "srcUrl": "https://github.com/visionmedia/git-extras",
-    "pageUrl": "https://github.com/visionmedia/git-extras"
+    "github": "tj/git-extras",
+    "srcUrl": "https://github.com/tj/git-extras",
+    "pageUrl": "https://github.com/tj/git-extras"
   },
   {
     "name": "nodemon",

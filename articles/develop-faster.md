@@ -131,7 +131,7 @@ Additionally, using perceptual diffs can prevents visual regressions during majo
 # Publishing updates
 For releasing, I use a fork of [git-extras][]'s [git-release][] that passes version to the pre-release/post-release hooks. The hooks perform the following:
 
-[git-extras]: https://github.com/visionmedia/git-extras
+[git-extras]: https://github.com/tj/git-extras
 [git-release]: https://github.com/twolfson/git-extras/blob/dev/personal.mix/bin/git-release
 
 - If a `package.json` exists, update the [node][] package version

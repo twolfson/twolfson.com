@@ -95,8 +95,8 @@ grunt js # Compile JS once
     - `utils/` - Common utilities used for starting up/tearing down servers and making HTTP requests
 
 [GitHub Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
-[ejs]: https://github.com/visionmedia/ejs/
-[mocha]: https://github.com/visionmedia/mocha/
+[ejs]: https://github.com/tj/ejs/
+[mocha]: https://github.com/tj/mocha/
 [Perceptual diffs]: http://www.youtube.com/watch?v=UMnZiTL0tUc
 
 #### Files
