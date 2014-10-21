@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.35.0 - Updated all visionmedia URLs to their new counterparts
+
 3.34.1 - Accepted latest perceptual diffs and fixed `npm@2` + Travis CI issue
 
 3.34.0 - Updated title from "JavaScript Developer" to "Software Engineer"
