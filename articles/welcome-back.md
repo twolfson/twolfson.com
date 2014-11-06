@@ -15,7 +15,7 @@ My first couple of weeks were rough. Once you leave the train stations, English 
 My cell phone wasn't compatible with the mobile bands in Japan and I wound up getting a new phone shipped from my parents. This limited how far I was willing to venture because getting lost can no longer be fixed by Google Maps.
 
 ## Adaptation
-Eventually, I adjusted, got my phone, and started learning up [Japanese][] (日本ご). I had been studying [hiragana][] and [katakana][] for a month before but my reading speed was very slow. It took about a month and a lot of drills to start reading the characters quickly.
+Eventually, I adjusted, got my phone, and started learning up [Japanese][] (`日本ご`). I had been studying [hiragana][] and [katakana][] for a month before but my reading speed was very slow. It took about a month and a lot of drills to start reading the characters quickly.
 
 > **Quick lesson:** [Japanese][] has 3 scripts: [hiragana][], [katakana][], and [kanji][]. Japanese has 50 sounds as part of the language (a, i, u, e, o, ka, ki, ku, ke, ko, sa, se, ...). Hiragana and katakana are direct representations of these sounds (i.e. a [syllabary][]) (e.g. `あ, い, う` for `a, i, u`). Hiragana is used to represent native Japanese words and particles (e.g. `りんご` (ri-n-go) is apple, `の` is "of"). Katakana is used to represent words taken from other languages (e.g. `コーヒー` (ko-o-hi-i, sounds like kooh-hee) is coffee, `オレンジ` (o-re-n-ji) is orange). Kanji are pictographs of words (e.g. `人` (ひと, hi-to) is a person; a stick figure's legs).
 
@@ -28,7 +28,7 @@ Eventually, I adjusted, got my phone, and started learning up [Japanese][] (日�
 [syllabary]: http://en.wikipedia.org/wiki/Syllabary
 
 ## Comfort
-After a month, I had become semi-comfortable in Japan. After 2 months, I was used to daily life and interacting with a language I partially understood. I stayed in Tokyo (東京) for most of the 3 months but for 1 week I explored the rest of Japan (日本). If you are interested in all of the vivid details, I documented it in a Tumblr:
+After a month, I had become semi-comfortable in Japan. After 2 months, I was used to daily life and interacting with a language I partially understood. I stayed in Tokyo (`東京`) for most of the 3 months but for 1 week I explored the rest of Japan (`日本`). If you are interested in all of the vivid details, I documented it in a Tumblr:
 
 http://toddisinjapan.tumblr.com/
 
