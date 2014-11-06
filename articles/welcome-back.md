@@ -10,9 +10,9 @@ I am back from Japan. It was an amazing experience; I met a lot of interesting p
 
 # Experience
 ## First weeks
-My first couple of weeks were rough. Once you leave the airport and train stations, English becomes uncommon. When I was finding my house for the first time, I kept on reading the maps wrong. Once I found my neighborhood, I wasn't certain it was it (no English translation on the signs). Eventually, I made it.
+My first couple of weeks were rough. Once you leave the train stations, English becomes uncommon. When I was finding my house for the first time, I had trouble with the maps (some had no English, others shifted compass orientation). Once I found my neighborhood, I wasn't certain it was it (no English translation on the signs).
 
-My cell phone wasn't compatible with the mobile bands in Japan and I wound up getting a new phone shipped from my parents. This meant getting lost would be very painful since directions in English would be hard to come by.
+My cell phone wasn't compatible with the mobile bands in Japan and I wound up getting a new phone shipped from my parents. This limited how far I was willing to venture because getting lost can no longer be fixed by Google Maps.
 
 ## Adaptation
 Eventually, I adjusted, got my phone, and started learning up [Japanese][] (日本ご). I had been studying [hiragana][] and [katakana][] for a month before but my reading speed was very slow. It took about a month and a lot of drills to start reading the characters quickly.
