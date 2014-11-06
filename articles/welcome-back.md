@@ -33,7 +33,7 @@ After a month, I had become semi-comfortable in Japan. After 2 months, I was use
 http://toddisinjapan.tumblr.com/
 
 ## Reverse culture shock
-When I came back to the States, there were a lot of things I had to adjust back to; head bowing not being widely recognized, remembering to tip, using acknowledgements other than `はい` (hai). In fact, I still slip up every now and then and use a snippet from Japanese culture.
+When I came back to the States, there were a lot of things I had to adjust back to; head bowing not being widely recognized, remembering to tip, using acknowledgements other than `はい` (ha-i). In fact, I still slip up every now and then and use a snippet from Japanese culture.
 
 # Life path
 The journey to Japan began because I wanted to reflect on my life path. Unfortunately, most of the time was spent doing tourism and learning Japanese. Only the last month stuck towards future reflection. During that time, I attempted to draw up some ideas for entrepreneurship but nothing stuck.
