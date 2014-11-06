@@ -6,20 +6,22 @@
   "summary": "I am back from Japan. This is a debreif of my experience and what my plans are."
 }
 
-I am taking a break from everything and moving to Japan for 3 months.
+I am back from Japan. It was an amazing experience; I met a lot of interesting people, adapted to a new culture, and started learning another language. It is a humbling experience to be in a country that speaks a different langauge for a long term. It makes you realize how necessary it is to speak the same language as natives.
 
-# What?
-I have quit Uber and in a more general sense, web development. I will be living in Japan as a tourist from July 17th to October 13th.
+# Experience
+## First weeks
+My first couple of weeks were rough. Once you leave the airport and train stations, English becomes uncommon. When I was finding my house for the first time, I kept on reading the maps wrong. Once I found my neighborhood, I wasn't certain it was it (no English translation on the signs). Eventually, I made it.
 
-# Why?
-Web development was less of a "choice" and more the "only practical option" when I graduated college. I did freelance web development from high school through college. I was a Math and Chemistry major but, I wound up hating Chemistry and there are no jobs in Math except for academia. As a result, I went into web development full time.
+My cell phone wasn't compatible with the mobile bands in Japan and I wound up getting a new phone shipped from my parents. This meant getting lost would be very painful since directions in English would be hard to come by.
 
-I am at a comfortable level in web development. I feel that it is time to step out of my comfort zone, clear my head from work/open source, and start reflecting on things.
+## Adaptation
+Eventually, I adjusted, got my phone, and started learning up [Japanese][] (日本ご). I had been studying [hiragana][] and [katakana][] for a month before but my reading speed was very slow. It took about a month and a lot of drills to start reading the characters quickly.
 
-I want to look at what I have been doing, consider what I want to achieve, and from there, decide whether to continue with web development or start doing something else.
+> **Quick lesson:** [Japanese][] has 3 scripts: [hiragana][], [katakana][], and [kanji][]. Japanese has 50 sounds as part of the language (a, i, u, e, o, ka, ki, ku, ke, ko, sa, se, ...). Hiragan
 
-# What about X?
-I am putting everything into a minimal state before I leave. For example, I am only performing maintenance on open source projects; no new features.
+[Japanese]: http://en.wikipedia.org/wiki/Japanese_language
+[hiragana]: http://en.wikipedia.org/wiki/Hiragana
+[katakana]: http://en.wikipedia.org/wiki/Katakana
+[kanji]: http://en.wikipedia.org/wiki/Kanji
 
-# What are your plans in Japan?
-I will be staying in a foreigner house in Ebisu but beyond that, I don't have any plans.
+# Future plans
