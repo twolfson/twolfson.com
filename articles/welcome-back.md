@@ -27,4 +27,18 @@ Eventually, I adjusted, got my phone, and started learning up [Japanese][] (日�
 [kanji]: http://en.wikipedia.org/wiki/Kanji
 [syllabary]: http://en.wikipedia.org/wiki/Syllabary
 
+## Comfort
+After a month, I had become semi-comfortable in Japan. After 2 months, I was used to daily life and interacting with a language I partially understood. I stayed in Tokyo (東京) for most of the 3 months but for 1 week I explored the rest of Japan (日本). If you are interested in all of the vivid details, I documented it in a Tumblr:
+
+http://toddisinjapan.tumblr.com/
+
+## Reverse culture shock
+When I came back to the States, there were a lot of things I had to adjust back to; head bowing not being widely recognized, remembering to tip, using acknowledgements other than `はい` (hai). In fact, I still slip up every now and then and use a snippet from Japanese culture.
+
+# Life path
+The journey to Japan began because I wanted to reflect on my life path. Unfortunately, most of the time was spent doing tourism and learning Japanese. Only the last month stuck towards future reflection. During that time, I attempted to draw up some ideas for entrepreneurship but nothing stuck.
+
 # Future plans
+I am still passionate about web development. It is a field that directly influences the evolution of humanity, which is something I want to donate my efforts towards. Additionally, I am exploring information security, which is a field that would widen and deepen my knowledge about technology as a whole.
+
+I am currently in Los Angeles as a temporary city to explore while I find my next city/job. When the next steps of my life journey are secured, I will write up another life-related post.
