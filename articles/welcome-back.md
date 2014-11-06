@@ -6,7 +6,7 @@
   "summary": "I am back from Japan. This is a debreif of my experience and what my plans are."
 }
 
-I am back from Japan. It was an amazing experience; I met a lot of interesting people, adapted to a new culture, and started learning another language. It is a humbling experience to be in a country that speaks a different langauge for a long term. It makes you realize how necessary it is to speak the same language as natives.
+I am back from Japan. It was an amazing experience; I met a lot of interesting people, adapted to a new culture, and started learning another language. It is humbling to live in a country that speaks a different langauge. You realize how practical speaking the same language is.
 
 # Experience
 ## First weeks
