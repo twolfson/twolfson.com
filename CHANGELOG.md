@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.38.0 - Missed merge for `3.37.0`
+
 3.37.0 - Updated activity to include AST work
 
 3.36.0 - Wrote up "Welcome back" article
