@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.36.0 - Wrote up "Welcome back" article
+
 3.35.0 - Updated all visionmedia URLs to their new counterparts
 
 3.34.1 - Accepted latest perceptual diffs and fixed `npm@2` + Travis CI issue
