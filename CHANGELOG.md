@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.39.0 - Added `twofson-style` for consistent linting/styles
+
 3.38.0 - Missed merge for `3.37.0`
 
 3.37.0 - Updated activity to include AST work
