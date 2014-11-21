@@ -1,7 +1,6 @@
 // TODO: Relocate into production test
 var expect = require('chai').expect;
 var httpUtils = require('../utils/http');
-var serverUtils = require('../utils/server');
 
 describe('A request to twolfson.com', function () {
   httpUtils.save('http://twolfson.com/');

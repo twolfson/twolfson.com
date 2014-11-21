@@ -1,8 +1,13 @@
+/* jshint maxlen: 150 */
+// Ignore long URL
+
+// Load in our dependencies
 var expect = require('chai').expect;
 var simplesmtp = require('simplesmtp');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
+// Define test utility
 function makeContactRequest() {
   before(function (done) {
     httpUtils._save({
@@ -17,6 +22,7 @@ function makeContactRequest() {
   });
 }
 
+// Start our tests
 describe('A request to the /contact form', function () {
   serverUtils.run();
   httpUtils.save(serverUtils.getUrl('/contact'));

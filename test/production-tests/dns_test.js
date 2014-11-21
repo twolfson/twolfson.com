@@ -2,7 +2,6 @@
 // TODO: Relocate into production-tests
 var expect = require('chai').expect;
 var httpUtils = require('../utils/http');
-var serverUtils = require('../utils/server');
 
 describe('twolfsn.com (http)', function () {
   httpUtils.save({
