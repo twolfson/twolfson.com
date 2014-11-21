@@ -1,5 +1,6 @@
 // Load in dependencies
-var fs = require('fs'),
+var assert = require('assert')
+    fs = require('fs'),
     exec = require('child_process').exec,
     async = require('async'),
     imageDiff = require('image-diff'),
@@ -27,6 +28,7 @@ var browsers = ['phantomjs'],
     // DEV: js-yaml is required to make this require work properly
     yml = require('js-yaml'),
     urls = require('./urls.yml');
+assert(yml); // DEV: We use assert to silence jshint complaints
 
 // Start a server
 var server = serverUtils.startServer();
@@ -37,7 +39,7 @@ async.map(urls, function (pathname, done) {
   var url = serverUtils.getUrl(pathname),
       filename = encodeURIComponent(pathname) + '.png',
       actualImg = actualScreenshots + '/' + filename;
-  var phantomJsCmd = shellQuote.quote(['phantomjs', 'screenshot.js', url, actualImg]);
+  var phantomJsCmd = shellQuote.quote(['phantomjs', 'phantomjs_scripts/screenshot.js', url, actualImg]);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
