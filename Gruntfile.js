@@ -1,3 +1,5 @@
+/* jslint maxlen: 200 */
+// Allow super long line length for URLs
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
