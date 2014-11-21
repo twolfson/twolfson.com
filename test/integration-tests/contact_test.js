@@ -1,6 +1,3 @@
-/* jshint maxlen: 150 */
-// Ignore long URL
-
 // Load in our dependencies
 var expect = require('chai').expect;
 var simplesmtp = require('simplesmtp');
