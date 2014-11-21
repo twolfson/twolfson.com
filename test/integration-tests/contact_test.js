@@ -14,9 +14,9 @@ function makeContactRequest() {
       url: serverUtils.getUrl('/contact'),
       method: 'POST',
       form: {
-        'name': 'bdd test',
-        'info': 'n/a',
-        'message': 'Hello World!'
+        name: 'bdd test',
+        info: 'n/a',
+        message: 'Hello World!'
       }
     }).call(this, done);
   });

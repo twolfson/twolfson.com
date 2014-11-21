@@ -21,7 +21,7 @@ module.exports = function (config) {
   var updateInterval = config.projectOptions.updateInterval;
   if (updateInterval) {
     setInterval(function updateProjectsInterval () {
-      projects.update(function handleUpdate(err) {
+      projects.update(function handleUpdate (err) {
         // If there was an error, log it
         if (err) {
           return config.errorLogger(err);

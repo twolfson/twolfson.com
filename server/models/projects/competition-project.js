@@ -26,7 +26,7 @@ var CompetitionRepo = Project.extend({
     // Make a request to MDN
     // TODO: Make this its own repo
     var path = '/en-US/demos/detail/' + name;
-    https.get({'host': 'developer.mozilla.org', 'path': path}, function (res) {
+    https.get({host: 'developer.mozilla.org', path: path}, function (res) {
       // Collect data
       var html = '';
       res.on('data', function (chunk) {
@@ -36,9 +36,9 @@ var CompetitionRepo = Project.extend({
       // Once all the data is collected
       res.on('end', function () {
         // Find the view and like count
-        var viewArr = html.match(/(\d+) views/),
-            likeArr = html.match(/(\d+) likes/),
-            retObj = {};
+        var viewArr = html.match(/(\d+) views/);
+        var likeArr = html.match(/(\d+) likes/);
+        var retObj = {};
 
         // Carefully pick them out
         try {
