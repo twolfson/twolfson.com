@@ -2,7 +2,7 @@
 var rollbar = require('rollbar');
 
 // Define our error loggers
-exports.console = function (/*params*/) {
+exports.console = function (params) {
   return function consoleLogger (err, req) {
     console.error('[error-logger]: ', req.method, req.url, err);
   };

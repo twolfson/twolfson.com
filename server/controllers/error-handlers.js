@@ -1,9 +1,9 @@
-exports.missingPage = function (/*config*/) {
+exports.missingPage = function (config) {
   return exports[404];
 };
 
 exports.errorEncountered = function (config) {
-  return function handleError (err, req, res/*, next*/) {
+  return function handleError (err, req, res, next) {
     // If we should throw errors, throw the error
     if (config.throwCaughtErrors) {
       throw err;

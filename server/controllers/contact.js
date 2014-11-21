@@ -3,7 +3,7 @@ var assert = require('assert');
 var email = require('emailjs');
 
 // Success/failure pages for testing
-exports.devSuccess = function (/*config*/) {
+exports.devSuccess = function (config) {
   return [
     function devSuccessFn (req, res) {
       res.locals.emailStatus = true;
@@ -11,7 +11,7 @@ exports.devSuccess = function (/*config*/) {
     }
   ];
 };
-exports.devFailure = function (/*config*/) {
+exports.devFailure = function (config) {
   return [
     function devFailureFn (req, res) {
       res.locals.emailStatus = false;
@@ -21,7 +21,7 @@ exports.devFailure = function (/*config*/) {
 };
 
 // Default page
-exports.index = function (/*config*/) {
+exports.index = function (config) {
   return [
     function indexFn (req, res) {
       // TODO: There seems to be a res.locals leak somehow which requires a locals.emailStatus = null
