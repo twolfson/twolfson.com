@@ -51,7 +51,7 @@ exports.getSettings = function (options) {
   var errorLogger = settings.errorLogger;
   switch (errorLogger) {
     case 'console':
-      settings.errorLogger = errorLoggers['console']();
+      settings.errorLogger = errorLoggers.console();
       break;
     case 'rollbar':
       var rollbarConfig = require('./secret').rollbar;
