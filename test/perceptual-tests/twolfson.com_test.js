@@ -1,17 +1,17 @@
 // Load in dependencies
-var assert = require('assert'),
-    fs = require('fs'),
-    exec = require('child_process').exec,
-    async = require('async'),
-    imageDiff = require('image-diff'),
-    rimraf = require('rimraf'),
-    shellQuote = require('shell-quote'),
-    serverUtils = require('../utils/server');
+var assert = require('assert');
+var fs = require('fs');
+var exec = require('child_process').exec;
+var async = require('async');
+var imageDiff = require('image-diff');
+var rimraf = require('rimraf');
+var shellQuote = require('shell-quote');
+var serverUtils = require('../utils/server');
 
 // Set up common variables
-var expectedScreenshots = __dirname + '/expected_screenshots',
-    actualScreenshots = __dirname + '/actual_screenshots',
-    diffScreenshots = __dirname + '/diff_screenshots';
+var expectedScreenshots = __dirname + '/expected_screenshots';
+var actualScreenshots = __dirname + '/actual_screenshots';
+var diffScreenshots = __dirname + '/diff_screenshots';
 
 // Clean up actual screenshots and diffs
 rimraf.sync(actualScreenshots);
@@ -36,9 +36,9 @@ var server = serverUtils.startServer();
 // For each of the URLs
 async.map(urls, function (pathname, done) {
   // Screenshot the webpage
-  var url = serverUtils.getUrl(pathname),
-      filename = encodeURIComponent(pathname) + '.png',
-      actualImg = actualScreenshots + '/' + filename;
+  var url = serverUtils.getUrl(pathname);
+  var filename = encodeURIComponent(pathname) + '.png';
+  var actualImg = actualScreenshots + '/' + filename;
   var phantomJsCmd = shellQuote.quote(['phantomjs', 'phantomjs_scripts/screenshot.js', url, actualImg]);
   exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
