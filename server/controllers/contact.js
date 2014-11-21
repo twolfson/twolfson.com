@@ -3,32 +3,32 @@ var assert = require('assert');
 var email = require('emailjs');
 
 // Success/failure pages for testing
-exports.devSuccess = function (config) {
+exports.devSuccess = function (/*config*/) {
   return [
     function devSuccessFn (req, res) {
       res.locals.emailStatus = true;
-      render(req, res);
+      exports._render(req, res);
     }
   ];
 };
-exports.devFailure = function (config) {
+exports.devFailure = function (/*config*/) {
   return [
     function devFailureFn (req, res) {
       res.locals.emailStatus = false;
-      render(req, res);
+      exports._render(req, res);
     }
   ];
 };
 
 // Default page
-exports.index = function (config) {
+exports.index = function (/*config*/) {
   return [
     function indexFn (req, res) {
       // TODO: There seems to be a res.locals leak somehow which requires a locals.emailStatus = null
       // TODO: To reproduce, navigate to /contact/failure -> visit /contact
       // TODO: Expected: Normal contact form. Actual: Failure page displayed
       res.locals.emailStatus = null;
-      render(req, res);
+      exports._render(req, res);
     }
   ];
 };
@@ -56,23 +56,23 @@ exports.submit = function (config) {
         'from': 'No Reply <no-reply@twolfson.com>',
         'to': 'Todd Wolfson <todd@twolfson.com>',
         'subject': 'Incoming query from twolfson.com'
-      }, function handleEmailSent (err, message) {
+      }, function handleEmailSent (err/*, message*/) {
         res.locals.emailStatus = !err;
         if (err) {
           res.status(502);
         }
-        render(req, res);
+        exports._render(req, res);
       });
     }
   ];
 };
 
 // Common render function
-function render(req, res) {
+exports._render = function (req, res) {
   res.render('contact', {
     page: 'contact',
     title: 'Todd Wolfson - Contact',
     seoKeywords: 'contact, email, Todd Wolfson, twolfson, twolfsn',
     seoDescription: 'Contact Todd Wolfson via a form'
   });
-}
+};

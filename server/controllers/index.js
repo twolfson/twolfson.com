@@ -1,4 +1,5 @@
 // Load in dependencies
+var assert = require('assert');
 var fs = require('fs');
 
 // Load in controller groups
@@ -10,9 +11,10 @@ exports['error-handlers'] = require('./error-handlers');
 exports['support-me'] = require('./support-me');
 
 // Kaleido page
-exports.kaleido = function (config) {
+exports.kaleido = function (/*config*/) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
   var yaml = require('js-yaml');
+  assert(yaml); // DEV: Required to silence jshint
   var urls = require('../../test/perceptual-tests/urls');
 
   return [
@@ -23,7 +25,7 @@ exports.kaleido = function (config) {
 };
 
 // Render a LICENSE page
-exports.license = function (config) {
+exports.license = function (/*config*/) {
   var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
   return [
     function licenseFn (req, res) {

@@ -40,8 +40,10 @@ module.exports = function (config) {
         title: 'Todd Wolfson - Projects',
         // TODO: I really dislike view configuration being placed in the route
         navMargin: false,
-        seoKeywords: 'dev tools, web tools, spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry',
-        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry',
+        seoKeywords: 'dev tools, web tools, spritesmith, sexy-bash-prompt, jsmin-sourcemap, ' +
+          'Find++, image-diff, eight-track, gifsockets, foundry',
+        seoDescription: 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, jsmin-sourcemap, ' +
+          'Find++, image-diff, eight-track, gifsockets, foundry',
         projects: stringifiedProjects
       });
     }
