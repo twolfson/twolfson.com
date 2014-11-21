@@ -9,8 +9,14 @@ var pkg = require('../package.json');
 var config = {common: {}, development: {}, test: {}, production: {}};
 [require('./error'), require('./generic'), require('./url')].forEach(function addConfig (_config) {
   // Assert that the new config has no repeated keys
-  var oldKeys = _.union(_.keys(config.common), _.keys(config.development), _.keys(config.test), _.keys(config.production));
-  var newKeys = _.union(_.keys(_config.common), _.keys(_config.development), _.keys(_config.test), _.keys(_config.production));
+  var oldKeys = _.union(
+    _.keys(config.common), _.keys(config.development),
+    _.keys(config.test), _.keys(config.production)
+  );
+  var newKeys = _.union(
+    _.keys(_config.common), _.keys(_config.development),
+    _.keys(_config.test), _.keys(_config.production)
+  );
   var sameKeys = _.intersection(oldKeys, newKeys);
   if (sameKeys.length > 0) {
     throw new Error('Duplicate keys found in multiple configs. Expected none. Found: ' + JSON.stringify(sameKeys));
