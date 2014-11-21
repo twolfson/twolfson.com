@@ -1,5 +1,5 @@
 // Load in dependencies
-var assert = require('assert')
+var assert = require('assert'),
     fs = require('fs'),
     exec = require('child_process').exec,
     async = require('async'),
@@ -24,10 +24,10 @@ fs.mkdirSync(diffScreenshots);
 // TODO: Move browsers, urls into standalone files
 // TODO: See notes in https://gist.github.com/twolfson/6077989
 // TODO: Optimize space via tarballing expected files?
-var browsers = ['phantomjs'],
-    // DEV: js-yaml is required to make this require work properly
-    yml = require('js-yaml'),
-    urls = require('./urls.yml');
+// var browsers = ['phantomjs'];
+// DEV: js-yaml is required to make this require work properly
+var yml = require('js-yaml');
+var urls = require('./urls.yml');
 assert(yml); // DEV: We use assert to silence jshint complaints
 
 // Start a server
