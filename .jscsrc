@@ -1,11 +1,21 @@
 {
-  "requireCurlyBraces": true,
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch",
+    "finally",
+    "with"
+  ],
   "requireSpaceAfterKeywords": true,
   "requireSpaceBeforeBlockStatements": true,
   "requireSpacesInConditionalExpression": true,
   "requireSpacesInFunctionExpression": {
-      "beforeOpeningRoundBrace": true,
-      "beforeOpeningCurlyBrace": true
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
   },
   "requireSpacesInFunctionDeclaration": {
     "beforeOpeningCurlyBrace": true
@@ -30,13 +40,19 @@
   "requireSpaceBeforeBinaryOperators": true,
   "requireSpaceAfterBinaryOperators": true,
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
-  "disallowKeywords": ["with"],
+  "disallowKeywords": [
+    "with"
+  ],
   "disallowMultipleLineStrings": true,
   "disallowMultipleLineBreaks": true,
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
   "disallowTrailingComma": true,
-  "disallowKeywordsOnNewLine": ["else", "catch", "finally"],
+  "disallowKeywordsOnNewLine": [
+    "else",
+    "catch",
+    "finally"
+  ],
   "requireLineFeedAtFileEnd": true,
   "maximumLineLength": {
     "value": 120,
@@ -47,8 +63,13 @@
   "requireSpaceAfterLineComment": true,
   "disallowNewlineBeforeBlockStatements": true,
   "validateLineBreaks": "LF",
-  "validateQuoteMarks": {"mark": "'", "escape": true},
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true
+  },
   "validateIndentation": 2,
   "validateParameterSeparator": ", ",
-  "safeContextKeyword": ["that"]
+  "safeContextKeyword": [
+    "that"
+  ]
 }
