@@ -1,4 +1,5 @@
 /* jslint maxlen: 200 */
+// jscs:disable maximumLineLength
 // Allow super long line length for URLs
 module.exports = function (grunt) {
   // Configure the project
@@ -74,7 +75,7 @@ module.exports = function (grunt) {
         // Dogecoin - http://imgur.com/a/CKqPP
         'public/images/sprites_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
         // Google image search
-        'public/images/sprites_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240',
+        'public/images/sprites_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240'
     },
     'curl-dir': {
       // SCSS mixins
