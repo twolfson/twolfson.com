@@ -46,11 +46,11 @@ exports.health = function (config) {
   return [
     function healthFn (req, res) {
       var retObj = {
-        'version': pkgVersion,
-        'uptime': process.uptime(),
-        'memory': process.memoryUsage(),
-        'pid': process.pid,
-        'env': config.ENV
+        version: pkgVersion,
+        uptime: process.uptime(),
+        memory: process.memoryUsage(),
+        pid: process.pid,
+        env: config.ENV
       };
       res.send(retObj);
     }

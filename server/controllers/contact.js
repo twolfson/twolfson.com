@@ -42,8 +42,8 @@ exports.submit = function (config) {
   return [
     function submitFn (req, res) {
       // Parse the body
-      var body = req.body,
-          message = '';
+      var body = req.body;
+      var message = '';
 
       // Compose the text message
       message += 'Name: ' + body.name + '\n';
@@ -52,10 +52,10 @@ exports.submit = function (config) {
 
       // Send a message to todd
       emailServer.send({
-        'text': message,
-        'from': 'No Reply <no-reply@twolfson.com>',
-        'to': 'Todd Wolfson <todd@twolfson.com>',
-        'subject': 'Incoming query from twolfson.com'
+        text: message,
+        from: 'No Reply <no-reply@twolfson.com>',
+        to: 'Todd Wolfson <todd@twolfson.com>',
+        subject: 'Incoming query from twolfson.com'
       }, function handleEmailSent (err/*, message*/) {
         res.locals.emailStatus = !err;
         if (err) {

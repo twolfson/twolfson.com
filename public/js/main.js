@@ -4,11 +4,13 @@ _gaq.push(['_setAccount',
            window.env === 'production' ? 'UA-17165993-1' : 'UA-17165993-3']);
 _gaq.push(['_trackPageview']);
 
+// jscs:disable
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+// jscs:enable
 
 // When the DOM is ready
 domready(function () {
@@ -23,9 +25,9 @@ domready(function () {
   hljs.LANGUAGES.yaml = hljs.LANGUAGES.python;
 
   // Grab all <code>'s on the page and iterate them
-  var $codeArr = document.getElementsByTagName('code'),
-      i = 0,
-      len = $codeArr.length;
+  var $codeArr = document.getElementsByTagName('code');
+  var i = 0;
+  var len = $codeArr.length;
   for (; i < len; i++) {
     // Highlight the code block
     var code = $codeArr[i];

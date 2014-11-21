@@ -4,10 +4,10 @@ exports.curl = {
     url: 'http://highlightjs.org/download/',
     method: 'post',
     headers: {
-      'Cookie': 'csrftoken=SameAsCookie'
+      Cookie: 'csrftoken=SameAsCookie'
     },
     form: {
-      'csrfmiddlewaretoken': 'SameAsCookie',
+      csrfmiddlewaretoken: 'SameAsCookie',
 
       // See form on http://highlightjs.org/download/
       // '1c.js': 'on',
