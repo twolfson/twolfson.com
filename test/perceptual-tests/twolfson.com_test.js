@@ -82,7 +82,9 @@ async.map(urls, function (pathname, done) {
         // [2386:1122/071837:ERROR:web_data_service_backend.cc(54)] Cannot initialize the web database: 1
         // [2386:1122/071838:WARNING:nw_form_database_service.cc(21)] initializing autocomplete database failed
         // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
-        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename|connection.cc|web_data_service_backend.cc|nw_form_database_service.cc|simple_index_file.cc/);
+        // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+        // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
+        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename|connection.cc|web_data_service_backend.cc|nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc|process_singleton_posix.cc/);
       }).join('\n');
     }
 
