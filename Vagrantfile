@@ -47,5 +47,10 @@ SCRIPT
     sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/
   fi
 SCRIPT
+  # node-webkit proposed changes
+  # wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
+  # sudo cp node-webkit-v0.10.5-linux-x64 /usr/local/lib/node-webkit/ -R
+  # sudo chown vagrant:staff -R /usr/local/lib/node-webkit/
+  # sudo ln -s /usr/local/lib/node-webkit/nw /usr/local/bin/nw
   config.vm.provision "shell", inline: $install_phantomjs
 end
