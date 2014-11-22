@@ -19,8 +19,8 @@ before_install:
   - ./test/utils/install-node-webkit.sh "$USER"
 
 script:
-  # # Run integration tests
-  # - npm run test-integration
+  # Run integration tests
+  - npm run test-integration
 
   # Run perceptual diff tests (upon failure, upload to imgur)
   - 'npm run test-perceptual || ((test "$UPLOAD_RESULTS" = "TRUE" && ./test/perceptual-tests/upload-screenshots.sh) && exit 1)'

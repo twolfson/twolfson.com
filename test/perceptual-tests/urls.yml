@@ -1,17 +1,15 @@
-- /
-- /2012-11-17-subtle-anti-patterns
-- /2013-07-11-axioms-of-maintainability # Blog post with code highlighting
-- /2013-07-24-abandoned-project:-kaleidoscope # Blog post with images
-# Disabled due timing issues and I want to verify Travis compat first
-# TODO: Undisable me
-# - /2013-07-27-develop-faster # Blog post with tables
-- /2013-08-15-sexy-bash-prompt # Top blog post which can relate to itself
-- /2012-03-25-catch-up---css-off # Related project that is a competition (no description on projects page but on article)
-- /projects
-- /contact
-- /contact/success
-- /contact/failure
-- /404
-- /500
-- /license
-- /support-me
+# - /
+# - /2012-11-17-subtle-anti-patterns
+# - /2013-07-11-axioms-of-maintainability # Blog post with code highlighting
+# - /2013-07-24-abandoned-project:-kaleidoscope # Blog post with images
+- /2013-07-27-develop-faster # Blog post with tables
+# - /2013-08-15-sexy-bash-prompt # Top blog post which can relate to itself
+# - /2012-03-25-catch-up---css-off # Related project that is a competition (no description on projects page but on article)
+# - /projects
+# - /contact
+# - /contact/success
+# - /contact/failure
+# - /404
+# - /500
+# - /license
+# - /support-me
