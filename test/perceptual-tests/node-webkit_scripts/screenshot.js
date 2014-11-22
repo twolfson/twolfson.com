@@ -42,21 +42,21 @@ win.on('loaded', function handleLoad () {
   var paddingWidth = guiWidth - viewportWidth;
   var paddingHeight = guiHeight - viewportHeight;
 
-  // // Resize to full content height/width
-  // win.resizeTo(
-  //   win.window.document.body.scrollWidth + paddingWidth,
-  //   win.window.document.body.scrollHeight + paddingHeight);
+  // Resize to full content height/width
+  win.resizeTo(
+    win.window.document.body.scrollWidth + paddingWidth,
+    win.window.document.body.scrollHeight + paddingHeight);
 
-  // // Wait for resize to take effect
-  // // TODO: Place me on an async loop `async.until`
-  // setTimeout(function waitForResize () {
-  //   // Wait for a bit longer
-  //   setTimeout(function waitForCanvasesToLoad () {
-      // // Remove all canvas elements
-      // var $canvases = win.window.document.getElementsByTagName('canvas');
-      // [].forEach.call($canvases, function ($canvas) {
-      //   $canvas.parentNode.removeChild($canvas);
-      // });
+  // Wait for resize to take effect
+  // TODO: Place me on an async loop `async.until`
+  setTimeout(function waitForResize () {
+    // Wait for a bit longer
+    setTimeout(function waitForCanvasesToLoad () {
+      // Remove all canvas elements
+      var $canvases = win.window.document.getElementsByTagName('canvas');
+      [].forEach.call($canvases, function ($canvas) {
+        $canvas.parentNode.removeChild($canvas);
+      });
 
       // Render and exit
       win.capturePage(function handleScreenshot (buff) {
@@ -73,6 +73,6 @@ win.on('loaded', function handleLoad () {
         fs.writeFileSync(imgDest, buff);
         process.exit();
       }, {format: 'png', datatype: 'buffer'});
-  //   }, 1000);
-  // }, 100);
+    }, 1000);
+  }, 100);
 });
