@@ -8,6 +8,7 @@ process.on('uncaughtException', function handleErr (err) {
 var assert = require('assert');
 var fs = require('fs');
 var gui = require('nw.gui');
+var path = require('path');
 
 // Grab the arguments
 var url = gui.App.argv[0];
@@ -61,6 +62,16 @@ win.on('loaded', function handleLoad () {
 
       // Render and exit
       win.capturePage(function handleScreenshot (buff) {
+        // If there is no existing directory create one
+        try {
+          fs.mkdirSync(path.dirname(imgDest));
+        } catch (err) {
+          if (err.code !== 'EEXIST') {
+            throw err;
+          }
+        }
+
+        // Write our our image and leave
         fs.writeFileSync(imgDest, buff);
         process.exit();
       }, {format: 'png', datatype: 'buffer'});
