@@ -10,6 +10,8 @@ var rimraf = require('rimraf');
 var shellQuote = require('shell-quote');
 var serverUtils = require('../utils/server');
 
+// TODO: Before landing, re-enable canvas removal (causes timing issues)
+
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots';
 var actualScreenshots = __dirname + '/actual_screenshots';
