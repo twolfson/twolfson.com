@@ -81,7 +81,8 @@ async.map(urls, function (pathname, done) {
         // [2386:1122/071837:ERROR:connection.cc(1060)] Web sqlite error 5, errno 0: database is locked, sql: CREATE TABLE meta(key LONGVARCHAR NOT NULL UNIQUE PRIMARY KEY, value LONGVARCHAR)
         // [2386:1122/071837:ERROR:web_data_service_backend.cc(54)] Cannot initialize the web database: 1
         // [2386:1122/071838:WARNING:nw_form_database_service.cc(21)] initializing autocomplete database failed
-        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename|connection.cc|web_data_service_backend.cc|nw_form_database_service.cc/);
+        // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
+        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename|connection.cc|web_data_service_backend.cc|nw_form_database_service.cc|simple_index_file.cc/);
       }).join('\n');
     }
 
