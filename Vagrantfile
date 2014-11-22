@@ -41,9 +41,14 @@ SCRIPT
   # Install test dependency on `node-webkit`
   $install_nw = <<SCRIPT
   if ! which nw &> /dev/null; then
+    # Install chrome deps (one of node-webkit runtime deps)
+    # http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/
+    wget -q -O - "https://dl-ssl.google.com/linux/linux_signing_key.pub" | sudo apt-key add -
+    sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
+    sudo apt-get update
+
     # Install node-webkit deps
-    sudo apt-get install -y gconf2 libnotify-bin x11-xserver-utils xdg-utils xvfb
-# sudo apt-get install  dconf-gsettings-backend dconf-service indicator-application libappindicator1 libappindicator3-1 libcairo-gobject2 libdbusmenu-gtk3-4 libdconf0 libfile-basedir-perl libfile-desktopentry-perl libfile-mimeinfo-perl libgtk-3-0 libgtk-3-bin libgtk-3-common libindicator3-7 libindicator7 x11-xserver-utils xdg-utils
+    sudo apt-get install -y gconf2 xvfb google-chrome-stable
 
     # Install node-webkit itself
     /vagrant/test/utils/install-node-webkit.sh "vagrant"
