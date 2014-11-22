@@ -21,7 +21,7 @@ assert(url, 'No url was specified.');
 assert(imgDest, 'No img destination was specified.');
 
 var indexes = _.range(1, 100);
-async.eachLimit(indexes, 50, function generateScreenshot (i, done) {
+async.eachLimit(indexes, 10, function generateScreenshot (i, done) {
   // Navigate to a website in a new window
   // DEV: Otherwise, we lose our script after navigating
   var guiWidth = 800;
