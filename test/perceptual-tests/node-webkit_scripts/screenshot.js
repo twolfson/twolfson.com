@@ -10,8 +10,9 @@ var fs = require('fs');
 var gui = require('nw.gui');
 
 // Grab the arguments
-var url = process.argv[2];
-var imgDest = process.argv[3];
+var url = gui.App.argv[0];
+var imgDest = gui.App.argv[1];
+console.log(gui.App.argv);
 
 // Assert against url and image destination
 assert(url, 'No url was specified.');
