@@ -9,11 +9,11 @@ fi
 
 # Download and extract the file
 cd /tmp
-wget http://dl.node-webkit.org/v0.11.1/node-webkit-v0.11.1-linux-x64.tar.gz
-tar xvf node-webkit-v0.11.1-linux-x64.tar.gz
+wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
+tar xvf node-webkit-v0.10.5-linux-x64.tar.gz
 
 # Copy over the files
-sudo cp node-webkit-v0.11.1-linux-x64 /usr/local/lib/node-webkit/ -R
+sudo cp node-webkit-v0.10.5-linux-x64 /usr/local/lib/node-webkit/ -R
 sudo ln -s /usr/local/lib/node-webkit/nw /usr/local/bin/nw
 
 # Adjust permissions
