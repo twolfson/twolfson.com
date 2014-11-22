@@ -3,6 +3,7 @@ var assert = require('assert');
 var fs = require('fs');
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
+var _ = require('underscore');
 var async = require('async');
 var imageDiff = require('image-diff');
 var rimraf = require('rimraf');
@@ -65,9 +66,9 @@ async.map(urls, function (pathname, done) {
   var screenshotCmd = shellQuote.quote(['nw', '.', url, actualImg]);
   exec(screenshotCmd, {
     cwd: __dirname + '/node-webkit_scripts/',
-    env: {
+    env: _.defaults({
       DISPLAY: DISPLAY
-    }
+    }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
