@@ -12,7 +12,6 @@ var gui = require('nw.gui');
 // Grab the arguments
 var url = gui.App.argv[0];
 var imgDest = gui.App.argv[1];
-console.log(gui.App.argv);
 
 // Assert against url and image destination
 assert(url, 'No url was specified.');
