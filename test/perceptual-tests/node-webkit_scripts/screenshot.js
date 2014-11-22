@@ -9,6 +9,7 @@ var assert = require('assert');
 var fs = require('fs');
 var gui = require('nw.gui');
 var path = require('path');
+var cssControls = require('css-controls');
 
 // Grab the arguments
 var url = gui.App.argv[0];
@@ -50,22 +51,18 @@ win.on('loaded', function handleLoad () {
   // Wait for resize to take effect
   // TODO: Place me on an async loop `async.until`
   setTimeout(function waitForResize () {
-    // Wait for a bit longer
-    setTimeout(function waitForCanvasesToLoad () {
-      // Remove all canvas elements
-      var $canvases = win.window.document.getElementsByTagName('canvas');
-      [].forEach.call($canvases, function ($canvas) {
-        $canvas.parentNode.removeChild($canvas);
-      });
+    // Hide all <canvas> elements
+    // DEV: develop-faster has timer based draws so there can be issues
+    // http://www.quirksmode.org/dom/w3c_css.html
+    cssControls.addRule(win.window.document.styleSheets[0], 'canvas', 'display: none;');
 
-      // Render and exit
-      win.capturePage(function handleScreenshot (buff) {
-        // Write our our image and leave
-        fs.writeFile(imgDest, buff, function handleSave (err) {
-          win.close();
-          process.exit();
-        });
-      }, {format: 'png', datatype: 'buffer'});
-    }, 1000);
+    // Render and exit
+    win.capturePage(function handleScreenshot (buff) {
+      // Write our our image and leave
+      fs.writeFile(imgDest, buff, function handleSave (err) {
+        win.close();
+        process.exit();
+      });
+    }, {format: 'png', datatype: 'buffer'});
   }, 100);
 });
