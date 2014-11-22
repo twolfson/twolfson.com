@@ -52,13 +52,11 @@ win.on('loaded', function handleLoad () {
   setTimeout(function waitForResize () {
     // Wait for a bit longer
     setTimeout(function waitForCanvasesToLoad () {
-      // // TODO: Remove all canvas elements
-      // win.evaluate(function () {
-      //   var $canvases = document.getElementsByTagName('canvas');
-      //   [].forEach.call($canvases, function ($canvas) {
-      //     $canvas.parentNode.removeChild($canvas);
-      //   });
-      // });
+      // Remove all canvas elements
+      var $canvases = win.window.document.getElementsByTagName('canvas');
+      [].forEach.call($canvases, function ($canvas) {
+        $canvas.parentNode.removeChild($canvas);
+      });
 
       // Render and exit
       win.capturePage(function handleScreenshot (buff) {
