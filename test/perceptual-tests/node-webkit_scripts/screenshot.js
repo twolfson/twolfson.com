@@ -1,7 +1,8 @@
-// TODO: When an error occurs, log it and exit
-// process.on('uncaughtException', function handleErr (err) {
-//   process.exit(1);
-// });
+// When an error occurs, log it and exit
+process.on('uncaughtException', function handleErr (err) {
+  console.error(err);
+  process.exit(1);
+});
 
 // Load in dependencies
 var assert = require('assert');
