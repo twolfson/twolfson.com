@@ -9,18 +9,23 @@ var assert = require('assert');
 var fs = require('fs');
 var gui = require('nw.gui');
 var path = require('path');
-var _ = require('underscore');
 var async = require('async');
+var yaml = require('js-yaml');
 
 // Grab the arguments
-var url = gui.App.argv[0];
+var urlsFilepath = gui.App.argv[0];
 var imgDest = gui.App.argv[1];
 
+
 // Assert against url and image destination
-assert(url, 'No url was specified.');
+assert(urlsFilepath, 'No url was specified.');
 assert(imgDest, 'No img destination was specified.');
 
-var indexes = _.range(1, 100);
+// Load in our URLs
+var urlsContent = fs.readFileSync(urlsFilepath, 'utf8');
+var urls = yaml.parse(urlsContent);
+
+//
 async.eachLimit(indexes, 5, function generateScreenshot (i, done) {
   // Navigate to a website in a new window
   // DEV: Otherwise, we lose our script after navigating

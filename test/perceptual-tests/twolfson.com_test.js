@@ -1,16 +1,12 @@
 // Load in dependencies
 var assert = require('assert');
 var fs = require('fs');
-var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
 var _ = require('underscore');
-var async = require('async');
 var imageDiff = require('image-diff');
 var rimraf = require('rimraf');
 var shellQuote = require('shell-quote');
 var serverUtils = require('../utils/server');
-
-// TODO: Before landing, re-enable canvas removal (causes timing issues)
 
 // Set up common variables
 var expectedScreenshots = __dirname + '/expected_screenshots';
@@ -22,17 +18,8 @@ rimraf.sync(actualScreenshots);
 rimraf.sync(diffScreenshots);
 
 // Ensure the screenshot diff directory exists
+fs.mkdirSync(actualScreenshots);
 fs.mkdirSync(diffScreenshots);
-
-// Set up unabstracted variables
-// TODO: Move browsers, urls into standalone files
-// TODO: See notes in https://gist.github.com/twolfson/6077989
-// TODO: Optimize space via tarballing expected files?
-// var browsers = ['phantomjs'];
-// DEV: js-yaml is required to make this require work properly
-var yml = require('js-yaml');
-var urls = require('./urls.yml');
-assert(yml); // DEV: We use assert to silence jshint complaints
 
 // Start a server
 var server = serverUtils.startServer();
@@ -58,6 +45,11 @@ xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
   console.error('XVFB STDERR:', xvfbStderr);
   process.exit(1);
 });
+
+// DEV: js-yaml is required to make this require work properly
+var yml = require('js-yaml');
+var urls = require('./urls.yml');
+assert(yml); // DEV: We use assert to silence jshint complaints
 
 // For each of the URLs
 async.map(urls, function (pathname, done) {
