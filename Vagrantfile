@@ -38,19 +38,16 @@ SCRIPT
 SCRIPT
   config.vm.provision "shell", inline: $install_imagemagick
 
-  # Install test dependency on `phantomjs`
-  $install_phantomjs = <<SCRIPT
-  if ! which phantomjs &> /dev/null; then
+  # Install test dependency on `node-webkit`
+  $install_nw = <<SCRIPT
+  if ! which nw &> /dev/null; then
     cd /tmp
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-    tar xvf phantomjs-1.9.7-linux-x86_64.tar.bz2
-    sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/
+    wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
+    tar xvf node-webkit-v0.10.5-linux-x64.tar.gz
+    cp node-webkit-v0.10.5-linux-x64 /usr/local/lib/node-webkit/ -R
+    chown vagrant -R /usr/local/lib/node-webkit/ -R
+    ln -s /usr/local/lib/node-webkit/nw /usr/local/bin/nw
   fi
 SCRIPT
-  # node-webkit proposed changes
-  # wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
-  # sudo cp node-webkit-v0.10.5-linux-x64 /usr/local/lib/node-webkit/ -R
-  # sudo chown vagrant:staff -R /usr/local/lib/node-webkit/
-  # sudo ln -s /usr/local/lib/node-webkit/nw /usr/local/bin/nw
-  config.vm.provision "shell", inline: $install_phantomjs
+  config.vm.provision "shell", inline: $install_nw
 end
