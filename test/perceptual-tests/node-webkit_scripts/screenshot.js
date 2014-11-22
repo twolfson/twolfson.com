@@ -9,65 +9,54 @@ var assert = require('assert');
 var fs = require('fs');
 var gui = require('nw.gui');
 var path = require('path');
-var async = require('async');
-var yaml = require('js-yaml');
 
 // Grab the arguments
-var urlsFilepath = gui.App.argv[0];
+var url = gui.App.argv[0];
 var imgDest = gui.App.argv[1];
 
-
 // Assert against url and image destination
-assert(urlsFilepath, 'No url was specified.');
+assert(url, 'No url was specified.');
 assert(imgDest, 'No img destination was specified.');
 
-// Load in our URLs
-var urlsContent = fs.readFileSync(urlsFilepath, 'utf8');
-var urls = yaml.parse(urlsContent);
+// Navigate to a website in a new window
+// DEV: Otherwise, we lose our script after navigating
+var guiWidth = 800;
+var guiHeight = 600;
+// var win = gui.Window.open('http://google.com/', {
+var win = gui.Window.open(url, {
+  width: guiWidth,
+  height: guiHeight,
+  toolbar: false,
+  frame: false
+});
 
-//
-async.eachLimit(indexes, 5, function generateScreenshot (i, done) {
-  // Navigate to a website in a new window
-  // DEV: Otherwise, we lose our script after navigating
-  var guiWidth = 800;
-  var guiHeight = 600;
-  // var win = gui.Window.open('http://google.com/', {
-  var win = gui.Window.open(url, {
-    width: guiWidth,
-    height: guiHeight,
-    toolbar: false,
-    frame: false
-  });
+// When all the assets load (e.g. images, CSS, JS)
+win.on('loaded', function handleLoad () {
+  // Calculate how of the much window dimensions are padding
+  var viewportWidth = Math.max(
+    win.window.document.documentElement.clientWidth,
+    win.window.innerWidth || 0);
+  var viewportHeight = Math.max(
+    win.window.document.documentElement.clientHeight,
+    win.window.innerHeight || 0);
+  var paddingWidth = guiWidth - viewportWidth;
+  var paddingHeight = guiHeight - viewportHeight;
 
-  console.log(i);
+  // Resize to full content height/width
+  win.resizeTo(
+    win.window.document.body.scrollWidth + paddingWidth,
+    win.window.document.body.scrollHeight + paddingHeight);
 
-  // When all the assets load (e.g. images, CSS, JS)
-  win.on('loaded', function handleLoad () {
-    // Calculate how of the much window dimensions are padding
-    var viewportWidth = Math.max(
-      win.window.document.documentElement.clientWidth,
-      win.window.innerWidth || 0);
-    var viewportHeight = Math.max(
-      win.window.document.documentElement.clientHeight,
-      win.window.innerHeight || 0);
-    var paddingWidth = guiWidth - viewportWidth;
-    var paddingHeight = guiHeight - viewportHeight;
-
-    // Resize to full content height/width
-    win.resizeTo(
-      win.window.document.body.scrollWidth + paddingWidth,
-      win.window.document.body.scrollHeight + paddingHeight);
-
-    // Wait for resize to take effect
-    // TODO: Place me on an async loop `async.until`
-    setTimeout(function waitForResize () {
-      // Wait for a bit longer
-      setTimeout(function waitForCanvasesToLoad () {
-        // Remove all canvas elements
-        var $canvases = win.window.document.getElementsByTagName('canvas');
-        [].forEach.call($canvases, function ($canvas) {
-          $canvas.parentNode.removeChild($canvas);
-        });
+  // Wait for resize to take effect
+  // TODO: Place me on an async loop `async.until`
+  setTimeout(function waitForResize () {
+    // Wait for a bit longer
+    setTimeout(function waitForCanvasesToLoad () {
+      // Remove all canvas elements
+      var $canvases = win.window.document.getElementsByTagName('canvas');
+      [].forEach.call($canvases, function ($canvas) {
+        $canvas.parentNode.removeChild($canvas);
+      });
 
         // Render and exit
         win.capturePage(function handleScreenshot (buff) {
