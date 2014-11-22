@@ -23,11 +23,6 @@ rimraf.sync(diffScreenshots);
 fs.mkdirSync(actualScreenshots);
 fs.mkdirSync(diffScreenshots);
 
-// Set up unabstracted variables
-// TODO: Move browsers, urls into standalone files
-// TODO: See notes in https://gist.github.com/twolfson/6077989
-// TODO: Optimize space via tarballing expected files?
-// var browsers = ['phantomjs'];
 // DEV: js-yaml is required to make this require work properly
 var yml = require('js-yaml');
 var urls = require('./urls.yml');
@@ -59,7 +54,7 @@ xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
 });
 
 // For each of the URLs
-async.map(urls, function (pathname, done) {
+async.mapLimit(urls, 5, function comparePages (pathname, done) {
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
@@ -113,7 +108,7 @@ async.map(urls, function (pathname, done) {
       });
     });
   });
-}, function (err, results) {
+}, function handleResults (err, results) {
   // Stop Xvfb
   xvfbChild.kill();
   xvfbChild.removeAllListeners('exit');
