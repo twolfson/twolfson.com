@@ -43,6 +43,7 @@ SCRIPT
   if ! which nw &> /dev/null; then
     # Install node-webkit deps
     sudo apt-get install -y gconf2 libnotify-bin x11-xserver-utils xdg-utils xvfb
+# sudo apt-get install  dconf-gsettings-backend dconf-service indicator-application libappindicator1 libappindicator3-1 libcairo-gobject2 libdbusmenu-gtk3-4 libdconf0 libfile-basedir-perl libfile-desktopentry-perl libfile-mimeinfo-perl libgtk-3-0 libgtk-3-bin libgtk-3-common libindicator3-7 libindicator7 x11-xserver-utils xdg-utils
 
     # Install node-webkit itself
     /vagrant/test/utils/install-node-webkit.sh "vagrant"
