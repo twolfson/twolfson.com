@@ -72,16 +72,18 @@ async.map(urls, function (pathname, done) {
       DISPLAY: DISPLAY
     }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
-    // If stderr or stdout exist, log them
-    stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
-      // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
-      // Xlib:  extension "RANDR" missing on display ":99".
-      // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
-      return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename/);
-    }).join('\n');
+    // Filter common errors
     if (stderr) {
-      console.log('NODE-WEBKIT STDERR: ', stderr);
+      stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
+        // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
+        // Xlib:  extension "RANDR" missing on display ":99".
+        // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
+        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename/);
+      }).join('\n');
     }
+
+    // If stderr or stdout exist, log them
+    if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
     if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
 
     // If there is an error, callback with it
