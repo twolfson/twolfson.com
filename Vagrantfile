@@ -41,21 +41,10 @@ SCRIPT
   # Install test dependency on `node-webkit`
   $install_nw = <<SCRIPT
   if ! which nw &> /dev/null; then
-    # gconf2
-    # Useless
-      # http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/
-      # wget -q -O - "https://dl-ssl.google.com/linux/linux_signing_key.pub" | sudo apt-key add -
-      # sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
-      # sudo apt-get update
-      # sudo apt-get install google-chrome-stable
-        # dconf-gsettings-backend dconf-service indicator-application libappindicator1 libappindicator3-1
-        # libcairo-gobject2 libdbusmenu-gtk3-4 libdconf0 libfile-basedir-perl libfile-desktopentry-perl
-        # libfile-mimeinfo-perl libgtk-3-0 libgtk-3-bin libgtk-3-common libindicator3-7 libindicator7 libxss1
-        # x11-xserver-utils xdg-utils
-    # libnotify-bin
+    # Install node-webkit deps
+    sudo apt-get install -y gconf2 libnotify-bin xvfb
 
-    sudo apt-get install -y xvfb
-
+    # Install node-webkit itself
     cd /tmp
     wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
     tar xvf node-webkit-v0.10.5-linux-x64.tar.gz
