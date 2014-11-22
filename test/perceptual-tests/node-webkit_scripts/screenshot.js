@@ -5,9 +5,8 @@
 
 // Load in dependencies
 var assert = require('assert');
-var app = require('app');
 var fs = require('fs');
-var BrowserWindow = require('browser-window');
+var gui = require('nw.gui');
 
 // Grab the arguments
 var url = process.argv[2];
@@ -17,24 +16,39 @@ var imgDest = process.argv[3];
 assert(url, 'No url was specified.');
 assert(imgDest, 'No img destination was specified.');
 
-// When the app is ready
-app.on('ready', function onready () {
-  // Open our browser in an invisible window
-  // https://github.com/atom/atom-shell/blob/v0.17.2/docs/api/browser-window.md
-  var win = new BrowserWindow({
-    width: null,
-    height: null,
-    show: false,
-    // TODO: This changes between versions
-    // TODO: Does the domready error cause different renderings?
-    'node-integration': 'disable',
-    'enable-larger-than-screen': true
-  });
-  win.loadUrl(url);
+// Navigate to a website in a new window
+// DEV: Otherwise, we lose our script after navigating
+var guiWidth = 800;
+var guiHeight = 600;
+// var win = gui.Window.open('http://google.com/', {
+var win = gui.Window.open(url, {
+  width: guiWidth,
+  height: guiHeight,
+  toolbar: false,
+  frame: false
+});
 
-  // When it loads, screenshot it
-  win.webContents.on('did-finish-load', function () {
-    // Wait for a bit
+// When all the assets load (e.g. images, CSS, JS)
+win.on('loaded', function handleLoad () {
+  // Calculate how of the much window dimensions are padding
+  var viewportWidth = Math.max(
+    win.window.document.documentElement.clientWidth,
+    win.window.innerWidth || 0);
+  var viewportHeight = Math.max(
+    win.window.document.documentElement.clientHeight,
+    win.window.innerHeight || 0);
+  var paddingWidth = guiWidth - viewportWidth;
+  var paddingHeight = guiHeight - viewportHeight;
+
+  // Resize to full content height/width
+  win.resizeTo(
+    win.window.document.body.scrollWidth + paddingWidth,
+    win.window.document.body.scrollHeight + paddingHeight);
+
+  // Wait for resize to take effect
+  // TODO: Place me on an async loop `async.until`
+  setTimeout(function waitForResize () {
+    // Wait for a bit longer
     setTimeout(function waitForCanvasesToLoad () {
       // // TODO: Remove all canvas elements
       // win.evaluate(function () {
@@ -44,19 +58,11 @@ app.on('ready', function onready () {
       //   });
       // });
 
-      // Adjust the browser size to encompass the whole page
-      // TODO: Can't figure out how to get this context without injecting a script into the browser context
-      // TODO: Unless we upgrade to a version `preload` but then we have lost our rendering =(
-      console.log(win.getSize(), win.getContentSize());
-      win.webContents.executeJavaScript('console.log(typeof require);');
-      console.log(win.webContents);
-
       // Render and exit
-      win.capturePage(function handleCapture (img) {
-        fs.writeFileSync(imgDest, img);
+      win.capturePage(function handleScreenshot (buff) {
+        fs.writeFileSync(imgDest, buff);
         process.exit();
-      });
+      }, {format: 'png', datatype: 'buffer'});
     }, 1000);
-  });
+  }, 100);
 });
-
