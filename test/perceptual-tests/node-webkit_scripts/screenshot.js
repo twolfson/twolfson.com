@@ -7,7 +7,6 @@ process.on('uncaughtException', function handleErr (err) {
 var assert = require('assert');
 var fs = require('fs');
 var gui = require('nw.gui');
-var path = require('path');
 var cssControls = require('css-controls');
 
 // Grab the arguments
