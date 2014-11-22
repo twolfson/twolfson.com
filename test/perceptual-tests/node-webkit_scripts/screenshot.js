@@ -21,7 +21,7 @@ assert(url, 'No url was specified.');
 assert(imgDest, 'No img destination was specified.');
 
 var indexes = _.range(1, 100);
-async.eachLimit(indexes, 10, function generateScreenshot (i, done) {
+async.eachLimit(indexes, 5, function generateScreenshot (i, done) {
   // Navigate to a website in a new window
   // DEV: Otherwise, we lose our script after navigating
   var guiWidth = 800;
@@ -33,6 +33,8 @@ async.eachLimit(indexes, 10, function generateScreenshot (i, done) {
     toolbar: false,
     frame: false
   });
+
+  console.log(i);
 
   // When all the assets load (e.g. images, CSS, JS)
   win.on('loaded', function handleLoad () {
@@ -74,7 +76,10 @@ async.eachLimit(indexes, 10, function generateScreenshot (i, done) {
           }
 
           // Write our our image and leave
-          fs.writeFile(imgDest + i + '.png', buff, done);
+          fs.writeFile(imgDest + i + '.png', buff, function handleSave (err) {
+            win.close();
+            done(err);
+          });
         }, {format: 'png', datatype: 'buffer'});
       }, 1000);
     }, 100);
