@@ -45,12 +45,7 @@ SCRIPT
     sudo apt-get install -y gconf2 libnotify-bin xvfb
 
     # Install node-webkit itself
-    cd /tmp
-    wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
-    tar xvf node-webkit-v0.10.5-linux-x64.tar.gz
-    cp node-webkit-v0.10.5-linux-x64 /usr/local/lib/node-webkit/ -R
-    chown vagrant -R /usr/local/lib/node-webkit/ -R
-    ln -s /usr/local/lib/node-webkit/nw /usr/local/bin/nw
+    /vagrant/test/utils/install-node-webkit.sh "vagrant"
   fi
 SCRIPT
   config.vm.provision "shell", inline: $install_nw
