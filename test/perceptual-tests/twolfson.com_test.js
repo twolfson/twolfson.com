@@ -73,10 +73,11 @@ async.map(urls, function (pathname, done) {
     }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
+    stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
+      return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename/);
+    }).join('\n');
     if (stderr) {
-      console.log('NODE-WEBKIT STDERR: ', stderr.split(/\n/g).filter(function removeCommon (line) {
-        return !line.match(/process_singleton_linux.cc/);
-      }).join('\n'));
+      console.log('NODE-WEBKIT STDERR: ', stderr);
     }
     if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
 
