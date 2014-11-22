@@ -2,6 +2,7 @@
 var assert = require('assert');
 var fs = require('fs');
 var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
 var async = require('async');
 var imageDiff = require('image-diff');
 var rimraf = require('rimraf');
@@ -33,6 +34,28 @@ assert(yml); // DEV: We use assert to silence jshint complaints
 // Start a server
 var server = serverUtils.startServer();
 
+// Start up Xvfb
+var DISPLAY = ':99';
+var xvfbChild = spawn('Xvfb', [DISPLAY]);
+
+// Collect xvfb stdout and stderr
+var xvfbStdout = '';
+var xvfbStderr = '';
+xvfbChild.stdout.on('data', function addStdout (buff) {
+  xvfbStdout += buff;
+});
+xvfbChild.stderr.on('data', function addStderr (buff) {
+  xvfbStderr += buff;
+});
+
+// If xvfb terminates
+xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
+  console.error('Xvfb exited early', code);
+  console.error('XVFB STDOUT:', xvfbStdout);
+  console.error('XVFB STDERR:', xvfbStderr);
+  process.exit(1);
+});
+
 // For each of the URLs
 async.map(urls, function (pathname, done) {
   // Screenshot the webpage
@@ -40,10 +63,15 @@ async.map(urls, function (pathname, done) {
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
   var screenshotCmd = shellQuote.quote(['nw', '.', url, actualImg]);
-  exec(screenshotCmd, {cwd: __dirname + '/node-webkit_scripts/'}, function processScreenshot (err, stdout, stderr) {
+  exec(screenshotCmd, {
+    cwd: __dirname + '/node-webkit_scripts/',
+    env: {
+      DISPLAY: DISPLAY
+    }
+  }, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
-    if (stderr) { console.log('STDERR: ', stderr); }
-    if (stdout) { console.log('STDOUT: ', stdout); }
+    if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
+    if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
 
     // If there is an error, callback with it
     if (err) { return done(err); }
@@ -68,29 +96,34 @@ async.map(urls, function (pathname, done) {
     });
   });
 }, function (err, results) {
-  // Take down server
-  server.destroy(function () {
-    // If there was an error, log it and leave
-    if (err) {
-      console.error('ERROR: ', err);
-      return process.exit(1);
-    }
+  // Stop Xvfb
+  xvfbChild.kill();
+  xvfbChild.removeAllListeners('exit');
+  xvfbChild.on('exit', function handleXvfbExit () {
+    // Take down server
+    server.destroy(function handleServerExit () {
+      // If there was an error, log it and leave
+      if (err) {
+        console.error('SERVER-DESTROY ERROR: ', err);
+        return process.exit(1);
+      }
 
-    // Otherwise, determine if there were any failures
-    var failedResults = results.filter(function (result) {
-          return !result.pass;
-        });
-
-    // If there were failures, log them and leave
-    if (failedResults.length > 0) {
-      failedResults.forEach(function (result) {
-        console.log('Failed result for ' + result.url);
+      // Otherwise, determine if there were any failures
+      var failedResults = results.filter(function (result) {
+        return !result.pass;
       });
-      process.exit(1);
-    } else {
-    // Otherwise, exit gracefully
-      console.log('All done!');
-      process.exit(0);
-    }
+
+      // If there were failures, log them and leave
+      if (failedResults.length > 0) {
+        failedResults.forEach(function (result) {
+          console.log('Failed result for ' + result.url);
+        });
+        process.exit(1);
+      } else {
+      // Otherwise, exit gracefully
+        console.log('All done!');
+        process.exit(0);
+      }
+    });
   });
 });
