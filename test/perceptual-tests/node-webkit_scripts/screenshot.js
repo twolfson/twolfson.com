@@ -58,26 +58,14 @@ win.on('loaded', function handleLoad () {
         $canvas.parentNode.removeChild($canvas);
       });
 
-        // Render and exit
-        win.capturePage(function handleScreenshot (buff) {
-          // If there is no existing directory create one
-          try {
-            fs.mkdirSync(path.dirname(imgDest));
-          } catch (err) {
-            if (err.code !== 'EEXIST') {
-              return done(err);
-            }
-          }
-
-          // Write our our image and leave
-          fs.writeFile(imgDest + i + '.png', buff, function handleSave (err) {
-            win.close();
-            done(err);
-          });
-        }, {format: 'png', datatype: 'buffer'});
-      }, 1000);
-    }, 100);
-  });
-}, function allDone () {
-  process.exit();
+      // Render and exit
+      win.capturePage(function handleScreenshot (buff) {
+        // Write our our image and leave
+        fs.writeFile(imgDest, buff, function handleSave (err) {
+          win.close();
+          process.exit();
+        });
+      }, {format: 'png', datatype: 'buffer'});
+    }, 1000);
+  }, 100);
 });
