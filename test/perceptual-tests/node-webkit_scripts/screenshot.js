@@ -53,7 +53,7 @@ win.on('loaded', function handleLoad () {
     // Hide all <canvas> elements
     // DEV: develop-faster has timer based draws so there can be issues
     // http://www.quirksmode.org/dom/w3c_css.html
-    cssControls.addRule(win.window.document.styleSheets[0], 'canvas', 'display: none;');
+    cssControls.addRule(win.window.document.styleSheets[1], 'canvas', 'display: none;');
 
     // Render and exit
     win.capturePage(function handleScreenshot (buff) {
