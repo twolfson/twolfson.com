@@ -39,8 +39,8 @@ async.map(urls, function (pathname, done) {
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
-  var phantomJsCmd = shellQuote.quote(['phantomjs', 'phantomjs_scripts/screenshot.js', url, actualImg]);
-  exec(phantomJsCmd, {cwd: __dirname}, function processScreenshot (err, stdout, stderr) {
+  var screenshotCmd = shellQuote.quote(['nw', '.', url, actualImg]);
+  exec(screenshotCmd, {cwd: __dirname + '/node-webkit_scripts/'}, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
     if (stderr) { console.log('STDERR: ', stderr); }
     if (stdout) { console.log('STDOUT: ', stdout); }
