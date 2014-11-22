@@ -54,7 +54,7 @@ xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
 });
 
 // For each of the URLs
-async.mapLimit(urls, 5, function comparePages (pathname, done) {
+async.mapLimit(urls, 2, function comparePages (pathname, done) {
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';

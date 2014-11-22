@@ -55,13 +55,16 @@ win.on('loaded', function handleLoad () {
     // http://www.quirksmode.org/dom/w3c_css.html
     cssControls.addRule(win.window.document.styleSheets[1], 'canvas', 'display: none;');
 
-    // Render and exit
-    win.capturePage(function handleScreenshot (buff) {
-      // Write our our image and leave
-      fs.writeFile(imgDest, buff, function handleSave (err) {
-        win.close();
-        process.exit();
-      });
-    }, {format: 'png', datatype: 'buffer'});
+    // Wait for page to stabilize/load elements
+    setTimeout(function waitForStabilization () {
+      // Render and exit
+      win.capturePage(function handleScreenshot (buff) {
+        // Write our our image and leave
+        fs.writeFile(imgDest, buff, function handleSave (err) {
+          win.close();
+          process.exit();
+        });
+      }, {format: 'png', datatype: 'buffer'});
+    }, 1000);
   }, 100);
 });
