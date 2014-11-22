@@ -54,7 +54,7 @@ SCRIPT
         # x11-xserver-utils xdg-utils
     # libnotify-bin
 
-
+    sudo apt-get install -y xvfb
 
     cd /tmp
     wget http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz
