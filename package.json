@@ -33,12 +33,12 @@
     "lint": "jshint bin/ config/ docs/ grunt/ server/ test/integration-tests/ test/perceptual-tests/*.js test/production-tests/ test/utils/ *.js && grunt jshint:client && jscs bin/ config/ docs/ grunt/ public/js/main.js server/  test/integration-tests/ test/perceptual-tests/*.js test/production-tests/ test/utils/ *.js",
     "pretest": "twolfson-style install",
     "start": "bin/twolfson.com",
-    "test": "npm run lint && npm run test-integration && npm run vagrant-test-perceptual",
-    "_test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
+    "test": "npm run lint && npm run test-integration && npm run test-perceptual",
+    "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
     "test-integration": "mocha test/integration-tests",
     "test-production": "mocha test/production-tests",
     "update-projects": "node bin/update-projects.js",
-    "vagrant-test-perceptual": "vagrant ssh -c \"cd /vagrant && npm run _test-perceptual\""
+    "vagrant-test-perceptual": "vagrant ssh -c \"cd /vagrant && npm run test-perceptual\""
   },
   "dependencies": {
     "async": "~0.2.9",
