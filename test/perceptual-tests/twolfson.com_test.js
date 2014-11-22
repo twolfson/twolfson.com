@@ -69,6 +69,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     // Filter common errors
     if (stderr) {
       stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
+        // jscs:disable maximumLineLength
         // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
         // Xlib:  extension "RANDR" missing on display ":99".
         // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
@@ -78,7 +79,11 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
         // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
         // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
         // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
-        return !line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"|process.mainModule.filename|connection.cc|web_data_service_backend.cc|nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc|process_singleton_posix.cc/);
+        // jscs:enable
+        return !(line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"/) ||
+          line.match(/process.mainModule.filename|connection.cc|web_data_service_backend.cc/) ||
+          line.match(/nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc/) ||
+          line.match(/process_singleton_posix.cc/));
       }).join('\n');
     }
 
