@@ -73,7 +73,11 @@ async.map(urls, function (pathname, done) {
     }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
     // If stderr or stdout exist, log them
-    if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
+    if (stderr) {
+      console.log('NODE-WEBKIT STDERR: ', stderr.split(/\n/g).filter(function removeCommon (line) {
+        return !line.match(/process_singleton_linux.cc/);
+      }).join('\n'));
+    }
     if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
 
     // If there is an error, callback with it
