@@ -1,8 +1,7 @@
-// Unbind alert message handler and exit instead
-process.removeAllListeners('uncaughtException');
-process.on('uncaughtException', function handleErr (err) {
-  process.exit(1);
-});
+// TODO: When an error occurs, log it and exit
+// process.on('uncaughtException', function handleErr (err) {
+//   process.exit(1);
+// });
 
 // Load in dependencies
 var assert = require('assert');
