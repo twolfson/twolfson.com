@@ -1,7 +1,6 @@
 // When an error occurs, log it and exit
 process.on('uncaughtException', function handleErr (err) {
-  console.error(err);
-  process.exit(1);
+  throw err;
 });
 
 // Load in dependencies
