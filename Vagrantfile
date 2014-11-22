@@ -42,7 +42,7 @@ SCRIPT
   $install_nw = <<SCRIPT
   if ! which nw &> /dev/null; then
     # Install node-webkit deps
-    sudo apt-get install -y gconf2 libnotify-bin xvfb
+    sudo apt-get install -y gconf2 libnotify-bin x11-xserver-utils xdg-utils xvfb
 
     # Install node-webkit itself
     /vagrant/test/utils/install-node-webkit.sh "vagrant"
