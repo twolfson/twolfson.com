@@ -1,3 +1,11 @@
+{
+  "title": "Moving from PhantomJS to node-webkit",
+  "author": "Todd Wolfson",
+  "date": "2014-11-22T17:04:40-0800",
+  "keywords": "phantomjs, node-webkit, screenshot, perceptual diff, visual regression",
+  "summary": "Moving my visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
+}
+
 # Why?
 ## Over phantomjs
 - Get access to `node_modules/` without needing to bend over backwards (e.g. limit selection, pre-process scripts)
