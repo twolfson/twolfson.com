@@ -6,6 +6,27 @@
   "summary": "Moving my visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
 }
 
+My website has a test suite that involves visual regression tests; screenshot different webpages and compares against an expected set:
+
+https://github.com/twolfson/twolfson.com/tree/3.39.0/test/perceptual-tests/expected_screenshots
+
+> For those of you interested in getting this set up, see http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
+
+In the past, I was using [PhantomJS][] which works great but has some downsides:
+
+- Doesn't always play nice with `node_modules/` (e.g. lacks `process` variable)
+- Rendering not always accurate
+    - Doesn't load webfonts properly
+    - Sometimes CSS rules are screwy (e.g. `border-radius`)
+
+[PhantomJS]: http://phantomjs.org/
+[node-webkit]: https://github.com/rogerwang/node-webkit
+
+This doesn't stop the test suite from running but can lead to frustration/unnecessary gotchas. Earlier this month, I had an ephiphany that I could start using [node-webkit][]/[atom-shell][] over [PhantomJS][] to fix these problems.
+
+This weekend, I took my first shot and here are the results:
+
+
 # Why?
 ## Over phantomjs
 - Get access to `node_modules/` without needing to bend over backwards (e.g. limit selection, pre-process scripts)
