@@ -6,43 +6,52 @@
   "summary": "Moving my visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
 }
 
-My website has a test suite that involves visual regression tests; screenshot different webpages and compares against an expected set:
+My website has a [test suite with visual regression tests][visual-regression-tests]; screenshot different webpages and compares against an expected set of images:
 
 https://github.com/twolfson/twolfson.com/tree/3.39.0/test/perceptual-tests/expected_screenshots
 
-> For those of you interested in getting this set up, see http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
+[visual-regression-tests]: http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
 
-In the past, I was using [PhantomJS][] which works great but has some downsides:
-
-- Doesn't always play nice with `node_modules/` (e.g. lacks `process` variable)
-- Rendering not always accurate
-    - Doesn't load webfonts properly
-    - Sometimes CSS rules are screwy (e.g. `border-radius`)
+This weekend, I switched from [PhantomJS][] to [node-webkit][] and am happy with the results:
 
 [PhantomJS]: http://phantomjs.org/
 [node-webkit]: https://github.com/rogerwang/node-webkit
+[atom-shell]: https://github.com/atom/atom-shell
 
-This doesn't stop the test suite from running but can lead to frustration/unnecessary gotchas. Earlier this month, I had an ephiphany that I could start using [node-webkit][]/[atom-shell][] over [PhantomJS][] to fix these problems.
+[![Comparison][comparison-img]][comparison-img]
 
-This weekend, I took my first shot and here are the results:
+[comparison-img]: /public/images/articles/moving-from-phantomjs-to-node-webkit/comparison.png
 
+# Benefits
+- `node_modules/` always work (e.g. no `process` is `undefined` issues)
+- `node_modules/` are automatically resolved via `require`
+- Rendering is more accurate (e.g. web fonts load)
 
-# Why?
-## Over phantomjs
-- Get access to `node_modules/` without needing to bend over backwards (e.g. limit selection, pre-process scripts)
-- More accurate rendering (e.g. web fonts load)
-
-## Over atom-shell
-- Buffering was broken in latest version (link to issue)
-- In latest working version (`0.17.2`?), it didn't have a way to talk directly to a page with a disabled `node` context
-    - We disabled the `node` context for accuracy purposes
-
-## Downsides
-- Slow startup time
-- Need to defined `index.html` and `package.json`
+# Downsides
+- `node-webkit` has a slow startup time
+- Need to define `index.html` and `package.json` to load JS in `node-friendly` context
     - This can be worked around with a script wrapper (e.g. build a node module for it)
 
 # Gotchas
-- Need to limit scripts to not be very concurrent
-    - Would occasionally yield white screens otherwise
-- 0.10.5 had a strange bug that would occasionally render an underline on a link when all others don't have one
+- There were concurrency issues, we had to throttle it to 2 screenshot runs at the same time
+    - Otherwise, we would see white screens sometimes
+- `node-webkit@0.10.5` would occasionally draw an underline for a link when all others didn't have one
+    - Upon upgrading to `node-webkit@0.11.1`, these issues went away
+- Need to use `Xvfb` to exceed maximum desktop screenshot size (e.g. `2000` height on `1080` tall resolution)
+- Need to keep on using [Vagrant][] to match [Travis CI][] renders
+
+[Vagrant]: http://vagrantup.com/
+[Travis CI]: https://travis-ci.org/
+
+# Why not [atom-shell][]?
+My first attempt was with [atom-shell][]. However, there was an issue with screenshotting in the latest release (`0.19.3`):
+
+https://github.com/atom/atom-shell/issues/847
+
+The latest version that would capture screenshot (`0.17.2`) didn't have a mechanism for reading data from a website when `node-integration` was disabled. This was disabled to verify the website was accurate as possible.
+
+# Links
+- `node-webkit` screenshot script
+    - https://github.com/twolfson/twolfson.com/blob/3.40.0/test/perceptual-tests/node-webkit_scripts/screenshot.js
+- Perceptual diff test suite
+    - https://github.com/twolfson/twolfson.com/blob/3.40.0/test/perceptual-tests/twolfson.com_test.js
