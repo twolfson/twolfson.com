@@ -12,7 +12,7 @@ https://github.com/twolfson/twolfson.com/tree/3.39.0/test/perceptual-tests/expec
 
 [visual-regression-tests]: http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
 
-This weekend, I switched from [PhantomJS][] to [node-webkit][] and am happy with the results:
+This weekend, I switched it from [PhantomJS][] to [node-webkit][] and am happy with the results:
 
 [PhantomJS]: http://phantomjs.org/
 [node-webkit]: https://github.com/rogerwang/node-webkit
@@ -48,7 +48,7 @@ My first attempt was with [atom-shell][]. However, there was an issue with scree
 
 https://github.com/atom/atom-shell/issues/847
 
-The latest version that would capture screenshot (`0.17.2`) didn't have a mechanism for reading data from a website when `node-integration` was disabled. This was disabled to verify the website was accurate as possible.
+The latest version that would capture screenshots (`0.17.2`) didn't have a mechanism for reading data from a website when `node-integration` was disabled. This was disabled to verify the website was accurate as possible.
 
 # Links
 - `node-webkit` screenshot script
