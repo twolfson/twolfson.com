@@ -50,6 +50,11 @@ https://github.com/atom/atom-shell/issues/847
 
 The latest version that would capture screenshots (`0.17.2`) didn't have a mechanism for reading data from a website when `node-integration` was disabled. This was disabled to verify the website was accurate as possible.
 
+# Why not [Selenium][]?
+Selenium is definitely the most accurate set of screenshots. However, setup and installation is not as easy as [`node-webkit`][]. Additionally, I wanted to verify that [`node-webkit`][] was a viable platform for future scripts.
+
+[Selenium]: http://www.seleniumhq.org/
+
 # Links
 - `node-webkit` screenshot script
     - https://github.com/twolfson/twolfson.com/blob/3.40.0/test/perceptual-tests/node-webkit_scripts/screenshot.js
