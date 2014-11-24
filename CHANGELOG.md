@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.41.0 - Wrote "Moving from PhantomJS to node-webkit" article
+
 3.40.0 - Moved to `node-webkit` for screenshotting
 
 3.39.0 - Added `twofson-style` for consistent linting/styles
