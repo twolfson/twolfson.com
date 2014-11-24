@@ -6,9 +6,9 @@
   "summary": "Transferring visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
 }
 
-My website has a [test suite with visual regression tests][visual-regression-tests]; screenshot different webpages and compares against an expected set of images:
+My website has a [test suite with visual regression tests][visual-regression-tests]; screenshot different webpages and compare against a set of expected images:
 
-https://github.com/twolfson/twolfson.com/tree/3.39.0/test/perceptual-tests/expected_screenshots
+https://github.com/twolfson/twolfson.com/tree/3.40.0/test/perceptual-tests/expected_screenshots
 
 [visual-regression-tests]: http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
 
@@ -51,7 +51,9 @@ https://github.com/atom/atom-shell/issues/847
 The latest version that would capture screenshots (`0.17.2`) didn't have a mechanism for reading data from a website when `node-integration` was disabled. This was disabled to verify the website was accurate as possible.
 
 # Why not [Selenium][]?
-Selenium is definitely the most accurate set of screenshots. However, setup and installation is not as easy as [`node-webkit`][]. Additionally, I wanted to verify that [`node-webkit`][] was a viable platform for future scripts.
+Selenium is would yield the most accurate set of screenshots. However setup, installation, and maintenance are not as easy as [node-webkit][].
+
+Additionally, I wanted to verify that [node-webkit][] was a viable replacement for future [PhantomJS][] scripts for the benefits listed earlier.
 
 [Selenium]: http://www.seleniumhq.org/
 
