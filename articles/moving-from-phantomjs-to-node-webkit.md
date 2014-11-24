@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2014-11-22T17:04:40-0800",
   "keywords": "phantomjs, node-webkit, screenshot, perceptual diff, visual regression",
-  "summary": "Moving my visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
+  "summary": "Transferring visual regression tests from [PhantomJS](http://phantomjs.org/) to [node-webkit](https://github.com/rogerwang/node-webkit) for better `node_modules/` support and more accurate screenshots."
 }
 
 My website has a [test suite with visual regression tests][visual-regression-tests]; screenshot different webpages and compares against an expected set of images:
