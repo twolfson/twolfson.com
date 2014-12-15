@@ -43,12 +43,11 @@ module.exports = function (grunt) {
     sprite: {
       all: {
         src: 'public/images/sprites/*.png',
-        destImg: 'public/images/sprites.png',
-        destCSS: 'public/css/base/sprites.scss',
+        dest: 'public/images/sprites.png',
+        destCss: 'public/css/base/sprites.scss',
         imgPath: '../images/sprites.png',
         cssFormat: 'css',
-        algorithm: 'alt-diagonal',
-        engine: 'canvas'
+        algorithm: 'alt-diagonal'
       }
     },
     curl: {
