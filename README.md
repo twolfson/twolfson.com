@@ -107,12 +107,12 @@ grunt js # Compile JS once
 [grunt]: http://gruntjs.com/
 
 ## Donating
-Support this project and [others by twolfson][gittip] via [gittip][].
+Support this project and [others by twolfson][gratipay] via [gratipay][].
 
-[![Support via Gittip][gittip-badge]][gittip]
+[![Support via Gratipay][gratipay-badge]][gratipay]
 
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/twolfson/
+[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+[gratipay]: https://www.gratipay.com/twolfson/
 
 ## License
 Copyright (c) 2013-2014 Todd Wolfson

@@ -10,10 +10,10 @@ module.exports = function (config) {
       var supportSource = req.query.support || 'generic';
       res.render('support-me', {
         page: 'support-me',
-        gittipUrl: url.format({
+        gratipayUrl: url.format({
           protocol: 'https:',
-          hostname: 'www.gittip.com',
-          pathname: '/twolfson/'
+          hostname: 'gratipay.com',
+          pathname: '/' + supportConfig.gratipay + '/'
         }),
         // TODO: Include the page of origin from URL
         paypalUrl: url.format({

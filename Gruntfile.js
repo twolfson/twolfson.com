@@ -74,7 +74,7 @@ module.exports = function (grunt) {
         // Dogecoin - http://imgur.com/a/CKqPP
         'public/images/support_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
         // Google image search
-        'public/images/support_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240'
+        'public/images/support_src/gratipay.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gratipay-logo-256.png?1367418240'
     },
     'curl-dir': {
       // SCSS mixins
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
           'public/images/support/bitcoin.png': 'public/images/support_src/bitcoin.png',
           'public/images/support/dogecoin.png': 'public/images/support_src/dogecoin.png',
           'public/images/support/flattr.png': 'public/images/support_src/flattr.png',
-          'public/images/support/gittip.png': 'public/images/support_src/gittip.png',
+          'public/images/support/gratipay.png': 'public/images/support_src/gratipay.png',
           'public/images/support/paypal.png': 'public/images/support_src/paypal.png'
         },
         options: {

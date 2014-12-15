@@ -75,7 +75,7 @@ exports.getSettings = function (options) {
     bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
     dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
     flattr: 'twolfsn',
-    gittip: 'twolfson',
+    gratipay: 'twolfson',
     paypal: {
       name: 'Todd Wolfson',
       email: 'todd@twolfson.com'
