@@ -70,11 +70,11 @@ module.exports = function (grunt) {
 
       // External sprites
         // Bitcoin - http://bitcoin.org/en/press
-        'public/images/sprites_src/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
+        'public/images/support_src/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
         // Dogecoin - http://imgur.com/a/CKqPP
-        'public/images/sprites_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
+        'public/images/support_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
         // Google image search
-        'public/images/sprites_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240'
+        'public/images/support_src/gittip.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gittip-logo-256.png?1367418240'
     },
     'curl-dir': {
       // SCSS mixins
@@ -89,11 +89,11 @@ module.exports = function (grunt) {
     image_resize: {
       'support-me': {
         files: {
-          'public/images/sprites/bitcoin.png': 'public/images/sprites_src/bitcoin.png',
-          'public/images/sprites/dogecoin.png': 'public/images/sprites_src/dogecoin.png',
-          'public/images/sprites/flattr.png': 'public/images/sprites_src/flattr.png',
-          'public/images/sprites/gittip.png': 'public/images/sprites_src/gittip.png',
-          'public/images/sprites/paypal.png': 'public/images/sprites_src/paypal.png'
+          'public/images/support/bitcoin.png': 'public/images/support_src/bitcoin.png',
+          'public/images/support/dogecoin.png': 'public/images/support_src/dogecoin.png',
+          'public/images/support/flattr.png': 'public/images/support_src/flattr.png',
+          'public/images/support/gittip.png': 'public/images/support_src/gittip.png',
+          'public/images/support/paypal.png': 'public/images/support_src/paypal.png'
         },
         options: {
           height: 25
