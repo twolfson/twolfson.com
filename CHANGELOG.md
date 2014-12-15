@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.43.0 - Updated `gittip` references to `gratipay`
+
 3.42.0 - Upgraded to `grunt-spritesmith@3.1.0`
 
 3.41.0 - Wrote "Moving from PhantomJS to node-webkit" article
