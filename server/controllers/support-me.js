@@ -2,7 +2,7 @@ var url = require('url');
 
 module.exports = function (config) {
   // Blue sky of options
-  // Gittip, Flattr, Paypal, Google Wallet, Amazon Payments
+  // Gratipay, Flattr, Paypal, Google Wallet, Amazon Payments
   // Square cash, Bitcoin, Dogecoin, Litecoin, Twitter tip (cannot remember name)
   return [
     function renderIndex (req, res) {
@@ -48,9 +48,8 @@ module.exports = function (config) {
         }),
         donationConfig: supportConfig,
         title: 'Todd Wolfson - Support Me',
-        seoKeywords: 'Todd Wolfson, twolfson, twolfsn, support me, paypal, gittip',
-        // TODO: Update when we have the final list
-        seoDescription: 'Support Todd Wolfson via PayPal, Flatter, and Gittip'
+        seoKeywords: 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin',
+        seoDescription: 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin'
       });
     }
   ];
