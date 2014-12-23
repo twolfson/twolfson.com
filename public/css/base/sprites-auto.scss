@@ -1,0 +1,180 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$bar-lines-name: 'bar-lines';
+$bar-lines-x: 256px;
+$bar-lines-y: 20px;
+$bar-lines-offset-x: -256px;
+$bar-lines-offset-y: -20px;
+$bar-lines-width: 32px;
+$bar-lines-height: 32px;
+$bar-lines-total-width: 309px;
+$bar-lines-total-height: 308px;
+$bar-lines-image: '../images/sprites.png';
+$bar-lines: 256px 20px -256px -20px 32px 32px 309px 308px '../images/sprites.png' 'bar-lines';
+$eye-name: 'eye';
+$eye-x: 224px;
+$eye-y: 52px;
+$eye-offset-x: -224px;
+$eye-offset-y: -52px;
+$eye-width: 32px;
+$eye-height: 32px;
+$eye-total-width: 309px;
+$eye-total-height: 308px;
+$eye-image: '../images/sprites.png';
+$eye: 224px 52px -224px -52px 32px 32px 309px 308px '../images/sprites.png' 'eye';
+$github-name: 'github';
+$github-x: 192px;
+$github-y: 84px;
+$github-offset-x: -192px;
+$github-offset-y: -84px;
+$github-width: 32px;
+$github-height: 32px;
+$github-total-width: 309px;
+$github-total-height: 308px;
+$github-image: '../images/sprites.png';
+$github: 192px 84px -192px -84px 32px 32px 309px 308px '../images/sprites.png' 'github';
+$heart-name: 'heart';
+$heart-x: 160px;
+$heart-y: 116px;
+$heart-offset-x: -160px;
+$heart-offset-y: -116px;
+$heart-width: 32px;
+$heart-height: 32px;
+$heart-total-width: 309px;
+$heart-total-height: 308px;
+$heart-image: '../images/sprites.png';
+$heart: 160px 116px -160px -116px 32px 32px 309px 308px '../images/sprites.png' 'heart';
+$purple-fork-name: 'purple-fork';
+$purple-fork-x: 128px;
+$purple-fork-y: 148px;
+$purple-fork-offset-x: -128px;
+$purple-fork-offset-y: -148px;
+$purple-fork-width: 32px;
+$purple-fork-height: 32px;
+$purple-fork-total-width: 309px;
+$purple-fork-total-height: 308px;
+$purple-fork-image: '../images/sprites.png';
+$purple-fork: 128px 148px -128px -148px 32px 32px 309px 308px '../images/sprites.png' 'purple-fork';
+$purple-star-name: 'purple-star';
+$purple-star-x: 96px;
+$purple-star-y: 180px;
+$purple-star-offset-x: -96px;
+$purple-star-offset-y: -180px;
+$purple-star-width: 32px;
+$purple-star-height: 32px;
+$purple-star-total-width: 309px;
+$purple-star-total-height: 308px;
+$purple-star-image: '../images/sprites.png';
+$purple-star: 96px 180px -96px -180px 32px 32px 309px 308px '../images/sprites.png' 'purple-star';
+$ribbon-name: 'ribbon';
+$ribbon-x: 64px;
+$ribbon-y: 212px;
+$ribbon-offset-x: -64px;
+$ribbon-offset-y: -212px;
+$ribbon-width: 32px;
+$ribbon-height: 32px;
+$ribbon-total-width: 309px;
+$ribbon-total-height: 308px;
+$ribbon-image: '../images/sprites.png';
+$ribbon: 64px 212px -64px -212px 32px 32px 309px 308px '../images/sprites.png' 'ribbon';
+$rss-name: 'rss';
+$rss-x: 32px;
+$rss-y: 244px;
+$rss-offset-x: -32px;
+$rss-offset-y: -244px;
+$rss-width: 32px;
+$rss-height: 32px;
+$rss-total-width: 309px;
+$rss-total-height: 308px;
+$rss-image: '../images/sprites.png';
+$rss: 32px 244px -32px -244px 32px 32px 309px 308px '../images/sprites.png' 'rss';
+$star-name: 'star';
+$star-x: 288px;
+$star-y: 0px;
+$star-offset-x: -288px;
+$star-offset-y: 0px;
+$star-width: 21px;
+$star-height: 20px;
+$star-total-width: 309px;
+$star-total-height: 308px;
+$star-image: '../images/sprites.png';
+$star: 288px 0px -288px 0px 21px 20px 309px 308px '../images/sprites.png' 'star';
+$twitter-name: 'twitter';
+$twitter-x: 0px;
+$twitter-y: 276px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -276px;
+$twitter-width: 32px;
+$twitter-height: 32px;
+$twitter-total-width: 309px;
+$twitter-total-height: 308px;
+$twitter-image: '../images/sprites.png';
+$twitter: 0px 276px 0px -276px 32px 32px 309px 308px '../images/sprites.png' 'twitter';
+$spritesheet-width: 309px;
+$spritesheet-height: 308px;
+$spritesheet-image: '../images/sprites.png';
+$spritesheet-sprites: $bar-lines $eye $github $heart $purple-fork $purple-star $ribbon $rss $star $twitter;
+$spritesheet: 309px 308px '../images/sprites.png' $spritesheet-sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
