@@ -1,67 +1,45 @@
-/*
-Icon classes can be used entirely standalone. They are named after their original file names.
+// Include spritesheet variables/mixins
+@import "sprites-auto";
 
-```html
-<i class="icon-home"></i>
-```
-*/
-.icon-bar-lines {
-  background-image: url(../images/sprites.png);
-  background-position: -256px -20px;
-  width: 32px;
-  height: 32px;
-}
-.icon-eye {
-  background-image: url(../images/sprites.png);
-  background-position: -224px -52px;
-  width: 32px;
-  height: 32px;
-}
-.icon-github {
-  background-image: url(../images/sprites.png);
-  background-position: -192px -84px;
-  width: 32px;
-  height: 32px;
-}
-.icon-heart {
-  background-image: url(../images/sprites.png);
-  background-position: -160px -116px;
-  width: 32px;
-  height: 32px;
-}
+// Generate CSS equivalent of sprite info
+/*
 .icon-purple-fork {
   background-image: url(../images/sprites.png);
   background-position: -128px -148px;
   width: 32px;
   height: 32px;
 }
-.icon-purple-star {
-  background-image: url(../images/sprites.png);
-  background-position: -96px -180px;
-  width: 32px;
-  height: 32px;
+*/
+@each $sprite in $sprites {
+  $sprite-name: nth($sprite, 10);
+  .icon-#{$sprite-name} {
+    @include sprite($sprite);
+  }
 }
-.icon-ribbon {
-  background-image: url(../images/sprites.png);
-  background-position: -64px -212px;
-  width: 32px;
-  height: 32px;
-}
-.icon-rss {
-  background-image: url(../images/sprites.png);
-  background-position: -32px -244px;
-  width: 32px;
-  height: 32px;
-}
-.icon-star {
-  background-image: url(../images/sprites.png);
-  background-position: -288px 0px;
-  width: 21px;
-  height: 20px;
-}
+
+// Perform overrides for visual customization
+.icon-bar-lines,
+.icon-eye,
+.icon-github,
+.icon-heart,
+.icon-purple-fork,
+.icon-purple-star,
+.icon-ribbon,
+.icon-rss,
+.icon-star,
 .icon-twitter {
-  background-image: url(../images/sprites.png);
-  background-position: 0px -276px;
-  width: 32px;
-  height: 32px;
+  font-size: 32px;
+  line-height: 32px;
+  padding-left: 32px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.icon-purple-star,
+.icon-purple-fork {
+  margin-right: 0;
+}
+
+.icon-ribbon {
+  margin-right: 2px;
 }
