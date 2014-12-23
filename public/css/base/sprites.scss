@@ -17,34 +17,6 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 32px;
   height: 32px;
 }
-
-// TODO: Put this outside (to be optimized with these classes)
-.icon-bar-lines,
-.icon-eye,
-.icon-github,
-.icon-heart,
-.icon-purple-fork,
-.icon-purple-star,
-.icon-ribbon,
-.icon-rss,
-.icon-star,
-.icon-twitter {
-  font-size: 32px;
-  line-height: 32px;
-  padding-left: 32px;
-  vertical-align: middle;
-  margin-right: 7px;
-}
-
-.icon-purple-star,
-.icon-purple-fork {
-  margin-right: 0;
-}
-
-.icon-ribbon {
-  margin-right: 2px;
-}
-
 .icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -84px;

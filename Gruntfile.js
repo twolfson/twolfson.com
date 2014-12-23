@@ -44,9 +44,8 @@ module.exports = function (grunt) {
       all: {
         src: 'public/images/sprites/*.png',
         dest: 'public/images/sprites.png',
-        destCss: 'public/css/base/sprites.scss',
+        destCss: 'public/css/base/sprites-auto.scss',
         imgPath: '../images/sprites.png',
-        cssFormat: 'css',
         algorithm: 'alt-diagonal'
       }
     },
