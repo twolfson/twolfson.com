@@ -160,5 +160,6 @@ module.exports = function (grunt) {
   grunt.registerTask('css', ['sass']);
 
   // Set up default action
-  grunt.registerTask('default', ['lint', 'css', 'js', 'watch']);
+  grunt.registerTask('build', ['lint', 'css', 'js']);
+  grunt.registerTask('default', ['build', 'watch']);
 };
