@@ -1354,7 +1354,7 @@ td {
  */
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid #1a1a1a; }
+  border: 1px solid #1A1A1A; }
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
@@ -2236,11 +2236,11 @@ html.flexbox {
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif!important;
   color: inherit!important; }
 
 .brand-face {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
+  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
@@ -2478,7 +2478,7 @@ html.flexbox {
  *
  */
 .go:after {
-  content: "\00A0»" !important; }
+  content: " »" !important; }
 
 /**
  * Apply capital case to an element (usually a `strong`).
@@ -2569,13 +2569,13 @@ html.flexbox {
     width: 1px !important; } }
 /* endif */
 body {
-  background: #fdfdfd;
-  color: #1a1a1a; }
+  background: #FDFDFD;
+  color: #1A1A1A; }
 
 pre {
   white-space: pre;
-  background: #f7f7f7;
-  border: 1px solid #dddddd; }
+  background: #F7F7F7;
+  border: 1px solid #DDDDDD; }
   pre code {
     border: 0; }
 
@@ -2606,8 +2606,8 @@ blockquote {
 blockquote,
 .aside {
   color: #525252;
-  background: #f2f2f2;
-  border-left: 5px solid #a4a0a2;
+  background: #F2F2F2;
+  border-left: 5px solid #A4A0A2;
   padding-left: 9px;
   padding-right: 9px; }
 
@@ -2621,7 +2621,7 @@ textarea,
   border-radius: 3px; }
 
 .text--normal, .link--hidden, .link--hidden:visited, .link--hidden:hover, .link--hover-only, .link--hover-only:visited {
-  color: #1a1a1a; }
+  color: #1A1A1A; }
 
 a,
 .link,
@@ -2638,17 +2638,17 @@ a,
   .link:visited,
   .link--underline,
   .link--underline:visited {
-    color: #1c79c4; }
+    color: #1C79C4; }
 
 .link--active, a:hover,
 .link:hover,
 .link--underline:hover, .link--hover-only:hover {
-  color: #3972ed;
+  color: #3972ED;
   text-decoration: underline; }
 
 .link--underline:hover {
   text-decoration: none;
-  border-bottom: 1px solid #3972ed; }
+  border-bottom: 1px solid #3972ED; }
 
 .link--hidden, .link--hidden:visited, .link--hidden:hover {
   text-decoration: none; }
@@ -2663,7 +2663,7 @@ button {
   margin: 0 auto; }
 
 .row--bordered, .row--bordered--ends {
-  border-color: #666666;
+  border-color: #666;
   border-style: solid;
   border-width: 2px; }
 
@@ -2708,14 +2708,14 @@ button {
   -ms-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  border-color: #666666;
+  border-color: #666;
   border-style: solid;
   border-width: 2px;
-  background: #f2f2f2; }
+  background: #F2F2F2; }
 
 .btn:hover,
 .btn:active {
-  background: #e7e7e7; }
+  background: #E7E7E7; }
 
 .btn--medium {
   padding: 8px 18px; }
@@ -2733,10 +2733,10 @@ textarea {
   transition: border-color 0.3s ease-in-out; }
   input:focus,
   textarea:focus {
-    border-color: #444444; }
+    border-color: #444; }
 
 hr {
-  color: #1a1a1a;
+  color: #1A1A1A;
   border: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -2785,6 +2785,13 @@ body:before {
   margin-top: -32767px;
   /* thank you Erik J - negate effect of float*/ }
 
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
 .icon-bar-lines {
   background-image: url(../images/sprites.png);
   background-position: -256px -20px;
@@ -2877,7 +2884,7 @@ pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: #f7f7f7; }
+  background: #F7F7F7; }
 
 pre .comment,
 pre .template_comment,
@@ -2906,7 +2913,7 @@ pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula {
-  color: #dd1144; }
+  color: #d14; }
 
 pre .title,
 pre .id,
@@ -2938,7 +2945,7 @@ pre .django .tag .keyword {
 pre .attribute,
 pre .variable,
 pre .lisp .body {
-  color: teal; }
+  color: #008080; }
 
 pre .regexp {
   color: #009926; }
@@ -2968,22 +2975,22 @@ pre .cdata {
   font-weight: bold; }
 
 pre .deletion {
-  background: #ffdddd; }
+  background: #fdd; }
 
 pre .addition {
-  background: #ddffdd; }
+  background: #dfd; }
 
 pre .diff .change {
   background: #0086b3; }
 
 pre .chunk {
-  color: #aaaaaa; }
+  color: #aaa; }
 
 code {
   padding-left: 9px;
   padding-right: 9px;
-  background: #f7f7f7;
-  border: 1px solid #dddddd;
+  background: #F7F7F7;
+  border: 1px solid #DDDDDD;
   font-size: 0.9em; }
 
 /** Container for document. It should always have gutters on the left and right **/
@@ -3113,3 +3120,5 @@ legend {
 
 .valign--text-bottom {
   vertical-align: text-bottom; }
+
+/*# sourceMappingURL=index.css.map */
