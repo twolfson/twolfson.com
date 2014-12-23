@@ -10,7 +10,7 @@
   height: 32px;
 }
 */
-@each $sprite in $sprites {
+@each $sprite in $spritesheet-sprites {
   $sprite-name: nth($sprite, 10);
   .icon-#{$sprite-name} {
     @include sprite($sprite);
