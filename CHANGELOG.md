@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.44.0 - Built latest set of files
+
 3.43.0 - Updated `gittip` references to `gratipay`
 
 3.42.0 - Upgraded to `grunt-spritesmith@3.1.0`
