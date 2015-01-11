@@ -12,12 +12,30 @@ Writing a library/application that talks to other services can be a pain to test
 [Python]: http://www.python.org/
 [VCR]: https://github.com/vcr/vcr
 [Cassette]: https://github.com/uber/cassette
-[Node.js]: http://nodejs.org/
 
 ```
+// In our process, overwrite the basic HTTP handler to use this logic:
 GET /info
-  -> If /info is stored on disk
+  -> If /info is stored on disk, send saved response
+  -> Else
+    -> Request /info from original server
+    -> Save /info response to disk
+    -> Forward /info to original request
 ```
+
+At Uber, we took this one step further and made an HTTP server instead of overwriting in-process logic.
+
+# Pros
+- Responses are as accurate as last time they were saved
+- Works with distributed systems (e.g. `child processes`)
+- To maintain/update fixtures, delete files and re-run tests
+- Can base test mocks off of real responses
+    - See `fixed-server` example later on
+        - TODO: Document me and verify we have it
+        - TODO: Link me
+
+# Cons
+- Some services require
 
 To solve this problem, we wrote two libraries:
 
