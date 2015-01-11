@@ -26,6 +26,7 @@ GET /info
 At Uber, we took this one step further and made an HTTP server instead of overwriting in-process logic.
 
 # Pros
+- No need to write all mocks by hand
 - Responses are as accurate as last time they were saved
 - Works with distributed systems (e.g. `child processes`)
 - To maintain/update fixtures, delete files and re-run tests
@@ -35,10 +36,17 @@ At Uber, we took this one step further and made an HTTP server instead of overwr
         - TODO: Link me
 
 # Cons
-- Some services require
+- Some services require gymnastics to talk to
+    - Some libraries hardcode URLs
+    - Expiring data can require extra work
 
-To solve this problem, we wrote two libraries:
+# Solution
+Our server was written in 2 parts:
 
--
+- [eight-track][], a [connect][] middleware that caches HTTP responses to disk
+- [fixed-server][], an HTTP server factory for starting a server with pre-defined responses on per-test basis
+    - Useful for testing bad/unexpected responses (e.g. 403, 500)
 
-# Pros
+[eight-track]: https://github.com/uber/eight-track
+[connect]: https://github.com/senchalabs/connect/
+[fixed-server]: https://github.com/uber/fixed-server
