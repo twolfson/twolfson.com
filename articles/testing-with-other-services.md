@@ -168,3 +168,91 @@ describe('A request to a proxy server', function () {
 ```
 
 *Hosted example can be found at https://gist.github.com/twolfson/4dfa7dcdcb42b592c048*
+
+# Mocked yet accurate responses
+Sometimes we want to test against data in hard to generate scenarios (e.g. a search is empty, a creation date is in 1970). We can combine [eight-track][] and [fixed-server][] to receive normal data, then modify it for our fixture.
+
+```js
+// Load in dependencies
+var eightTrack = require('eight-track');
+var expect = require('chai').expect;
+var FixedServer = require('fixed-server');
+var httpUtils = require('request-mocha')(require('request'));
+
+// Create a test server factory with modifying endpoints
+var githubEightTrack = eightTrack({
+  url: 'https://api.github.com',
+  fixtureDir: 'data/github-eight-track'
+});
+var FixedGithub = new FixedServer({port: 1337});
+FixedGithub.addFixtures({
+  'GET 200 /repos/uber/eight-track': {
+    method: 'get',
+    route: '/repos/uber/eight-track',
+    // Playback directly with eight-track
+    response: githubEightTrack
+  },
+  'GET 200 /repos/uber/eight-track#no-watchers': {
+    method: 'get',
+    route: '/repos/uber/eight-track',
+    response: function (localReq, localRes) {
+      // Forward request via eight-track
+      githubEightTrack.forwardRequest(localReq, handleResponse);
+      function handleResponse(err, externalRes, externalBody) {
+        // If there was an error, throw it
+        if (err) {
+          throw err;
+        }
+
+        // Otherwise, extract the JSON and modify the watchers
+        var repoInfo = JSON.parse(externalBody);
+        repoInfo.watchers = 0;
+        localRes.send(repoInfo);
+      }
+    }
+  }
+  // We can add the 500 response from the previous example
+  //   for entirely fake data
+});
+
+// Start our tests
+describe('A GitHub repo', function () {
+  describe('is very popular', function () {
+    // Launch a FixedServer with real data
+    FixedGithub.run(['GET 200 /repos/uber/eight-track']);
+    httpUtils.save({
+      url: 'http://localhost:1337/repos/uber/eight-track',
+      headers: {
+        'User-Agent': 'node-request'
+      }
+    });
+
+    // Make assertions about request
+    it('has some stargazers', function () {
+      expect(this.err).to.equal(null);
+      expect(this.res.statusCode).to.equal(200);
+      expect(JSON.parse(this.body).watchers).to.be.at.least(1);
+    });
+  });
+
+  describe('is very young', function () {
+    // Launch a FixedServer hosting with a modified response
+    FixedGithub.run(['GET 200 /repos/uber/eight-track#no-watchers']);
+    httpUtils.save({
+      url: 'http://localhost:1337/repos/uber/eight-track',
+      headers: {
+        'User-Agent': 'node-request'
+      }
+    });
+
+    // Make assertions about request
+    it('has no watchers', function () {
+      expect(this.err).to.equal(null);
+      expect(this.res.statusCode).to.equal(200);
+      expect(JSON.parse(this.body).watchers).to.equal(0);
+    });
+  });
+});
+```
+
+*Hosted example can be found at https://gist.github.com/twolfson/d00e379cfea0860a175b*
