@@ -50,3 +50,65 @@ Our server was written in 2 parts:
 [eight-track]: https://github.com/uber/eight-track
 [connect]: https://github.com/senchalabs/connect/
 [fixed-server]: https://github.com/uber/fixed-server
+
+# Fixturing HTTP responses
+[eight-track][] is a middleware that can be used with any HTTP server (e.g. node's [http][], [express][]).
+
+[http]: http://nodejs.org/api/http.html#http_http_createserver_requestlistener
+[express]: http://expressjs.com/
+
+It works on the same principle as explained above; when a request is received, if it is saved on disk, then send the result. Otherwise, make the request, save the result to disk, and send the result from disk. Here is an example of using [eight-track][] in testing:
+
+```js
+// Load in test dependencies
+var http = require('http');
+var eightTrack = require('eight-track');
+var expect = require('chai').expect;
+var request = require('request');
+
+// Start tests
+describe('A request to our server', function () {
+  // Create temporary eight-track server (forwards requests to twolfson.com)
+  before(function startEightTrack () {
+    this.twolfsonEightTrack = http.createServer(eightTrack({
+      url: 'http://twolfson.com',
+      fixtureDir: 'data/twolfson-eight-track'
+    }));
+    this.twolfsonEightTrack.listen(1337);
+  });
+  after(function cleanup (done) {
+    this.twolfsonEightTrack.close(done);
+    delete this.twolfsonEightTrack;
+  });
+
+  // Make request to eight-track server (could proxy to twolfson.com)
+  before(function makeRequestToServer (done) {
+    var that = this;
+    request({
+      // Inside your application, it should be configured to point
+      //   to an eight-track server when testing
+      url: 'http://localhost:1337/'
+    }, function handleRes (err, res, body) {
+      // Save body and callback with error
+      that.body = body;
+      done(err);
+    });
+  });
+
+  // Make assertions about request
+  it('receives the expected content', function () {
+    expect(this.body).to.contain('Todd Wolfson');
+  });
+});
+
+// First run of `npm test`
+//   saves `/data/twolfson-eight-track/GET_%252F_0a89...json` to disk
+//   replies with original response
+
+// Second run of `npm test`
+//    finds and replies with cached response under `/data/twolfson-eight-track/GET_%252F_0a89...json`
+```
+
+*Hosted example can be found at [https://gist.github.com/twolfson/c12a75a018ce0d1b2b12][]*
+
+[https://gist.github.com/twolfson/c12a75a018ce0d1b2b12]: https://gist.github.com/twolfson/c12a75a018ce0d1b2b12
