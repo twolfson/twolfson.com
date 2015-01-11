@@ -109,6 +109,62 @@ describe('A request to our server', function () {
 //    finds and replies with cached response under `/data/twolfson-eight-track/GET_%252F_0a89...json`
 ```
 
-*Hosted example can be found at [https://gist.github.com/twolfson/c12a75a018ce0d1b2b12][]*
+*Hosted example can be found at https://gist.github.com/twolfson/c12a75a018ce0d1b2b12*
 
-[https://gist.github.com/twolfson/c12a75a018ce0d1b2b12]: https://gist.github.com/twolfson/c12a75a018ce0d1b2b12
+# Creating static responses
+[fixed-server][] is the fixture equivalent for HTTP responses; define all responses in one file, decide which responses to use on a per-test basis.
+ In this example below, we will test against our server sending back both a valid (`200`) and invalid (`500`) response from the same location.
+
+```js
+// Load in dependencies
+var expect = require('chai').expect;
+var FixedServer = require('fixed-server');
+var httpUtils = require('request-mocha')(require('request'));
+
+// Create a test server factory
+// DEV: For logical consistency, we use keys which represent the route
+var FixedApi = new FixedServer({port: 1337});
+FixedApi.addFixtures({
+  'GET 200 /': {
+    method: 'get',
+    route: '/',
+    response: function (req, res) {
+      res.send('Hello World');
+    }
+  },
+  'GET 500 /': {
+    method: 'get',
+    route: '/',
+    response: function (req, res) {
+      res.status(500).send('An error has occurred');
+    }
+  }
+});
+
+// Start tests
+describe('A request to a proxy server', function () {
+  describe('with an operating backend', function () {
+    // Launch a FixedApi hosting a 200 route
+    FixedApi.run(['GET 200 /']);
+    httpUtils.save('http://localhost:1337/');
+
+    // Verify against our 200 route
+    it('receives a 200 response', function () {
+      expect(this.res).to.have.property('statusCode', 200);
+    });
+  });
+
+  describe('with an non-functional backend', function () {
+    // Launch a FixedApi hosting a 500 route
+    FixedApi.run(['GET 500 /']);
+    httpUtils.save('http://localhost:1337/');
+
+    // Verify against our 500 route
+    it('receives a 500 response', function () {
+      expect(this.res).to.have.property('statusCode', 500);
+    });
+  });
+});
+```
+
+*Hosted example can be found at https://gist.github.com/twolfson/4dfa7dcdcb42b592c048*
