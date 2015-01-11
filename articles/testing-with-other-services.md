@@ -6,7 +6,7 @@
   "summary": "Introduction to using [eight-track](https://github.com/uber/eight-track) and [fixed-server](https://github.com/uber/fixed-server) for writing tests while handling other services."
 }
 
-Writing a library/application that talks to other services can be a pain to test and maintain. Tests should be as accurate as possible while being consistent and stable. This problem has been solved in [Ruby][] and [Python][] via [VCR][] and [Cassette][] respectively:
+A library/application that talks to other services should have tests that are accurate, consistent, and stable. This problem has been solved in [Ruby][] and [Python][] via [VCR][] and [Cassette][] respectively:
 
 [Ruby]: https://www.ruby-lang.org/en/
 [Python]: http://www.python.org/
