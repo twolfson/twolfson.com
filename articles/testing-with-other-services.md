@@ -6,6 +6,8 @@
   "summary": "Introduction to using [eight-track](https://github.com/uber/eight-track) and [fixed-server](https://github.com/uber/fixed-server) for writing tests while handling other services."
 }
 
+// TODO: Before publishing, update our gists
+
 A library/application that talks to other services should have tests that are accurate, consistent, and stable. This problem has been solved in [Ruby][] and [Python][] via [VCR][] and [Cassette][] respectively:
 
 [Ruby]: https://www.ruby-lang.org/en/
@@ -26,10 +28,10 @@ GET /info
 At Uber, we took this one step further and made an HTTP server instead of overwriting in-process logic.
 
 # Pros
-- No need to write all mocks by hand
-- Responses are as accurate as last time they were saved
+- No need to write mock responses by hand
+- Responses are as accurate as the last time they were saved
 - Works with distributed systems (e.g. `child processes`)
-- To maintain/update fixtures, delete files and re-run tests
+- To maintain/update fixtures: delete files and re-run tests
 - Can base mock responses on real responses
     - See [hybrid example at the bottom](#mocked-yet-accurate-responses)
 
@@ -39,7 +41,7 @@ At Uber, we took this one step further and made an HTTP server instead of overwr
     - Expiring data can require extra work
 
 # Solution
-Our server was written in 2 parts:
+We wrote 2 libraries that work together to solve this problem:
 
 - [eight-track][], a [connect][] middleware that caches HTTP responses to disk
 - [fixed-server][], an HTTP server factory for starting a server with pre-defined responses on per-test basis
@@ -66,7 +68,7 @@ var request = require('request');
 
 // Start tests
 describe('A request to our server', function () {
-  // Create temporary eight-track server (forwards requests to twolfson.com)
+  // Create a temporary eight-track server (forwards requests to twolfson.com)
   before(function startEightTrack () {
     this.twolfsonEightTrack = http.createServer(eightTrack({
       url: 'http://twolfson.com',
@@ -83,8 +85,6 @@ describe('A request to our server', function () {
   before(function makeRequestToServer (done) {
     var that = this;
     request({
-      // Inside your application, it should be configured to point
-      //   to an eight-track server when testing
       url: 'http://localhost:1337/'
     }, function handleRes (err, res, body) {
       // Save body and callback with error
@@ -100,18 +100,17 @@ describe('A request to our server', function () {
 });
 
 // First run of `npm test`
-//   saves `/data/twolfson-eight-track/GET_%252F_0a89...json` to disk
+//   saves `data/twolfson-eight-track/GET_%252F_0a89...json` to disk
 //   replies with original response
 
 // Second run of `npm test`
-//    finds and replies with cached response under `/data/twolfson-eight-track/GET_%252F_0a89...json`
+//    finds and replies with cached response under `data/twolfson-eight-track/GET_%252F_0a89...json`
 ```
 
-*Hosted example can be found at https://gist.github.com/twolfson/c12a75a018ce0d1b2b12*
+> Hosted example can be found at https://gist.github.com/twolfson/c12a75a018ce0d1b2b12
 
 # Creating static responses
-[fixed-server][] is the fixture equivalent for HTTP responses; define all responses in one file, decide which responses to use on a per-test basis.
- In this example below, we will test against our server sending back both a valid (`200`) and invalid (`500`) response from the same location.
+[fixed-server][] is the fixture equivalent for HTTP responses; define all responses in one file, decide which responses to use on a per-test basis. In the example below, we will test against our server sending back both a valid (`200`) and invalid (`500`) response from the same location.
 
 ```js
 // Load in dependencies
@@ -165,10 +164,10 @@ describe('A request to a proxy server', function () {
 });
 ```
 
-*Hosted example can be found at https://gist.github.com/twolfson/4dfa7dcdcb42b592c048*
+> Hosted example can be found at https://gist.github.com/twolfson/4dfa7dcdcb42b592c048
 
 # Mocked yet accurate responses
-Sometimes we want to test against data in hard to generate scenarios (e.g. a search is empty, a creation date is in 1970). We can combine [eight-track][] and [fixed-server][] to receive normal data, then modify it for our fixture.
+Sometimes we want to test against data in hard to generate scenarios (e.g. a search is empty, missing property). We can combine [eight-track][] and [fixed-server][] to receive normal data, then modify it for our fixture.
 
 ```js
 // Load in dependencies
@@ -253,4 +252,4 @@ describe('A GitHub repo', function () {
 });
 ```
 
-*Hosted example can be found at https://gist.github.com/twolfson/d00e379cfea0860a175b*
+> Hosted example can be found at https://gist.github.com/twolfson/d00e379cfea0860a175b
