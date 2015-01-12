@@ -30,10 +30,8 @@ At Uber, we took this one step further and made an HTTP server instead of overwr
 - Responses are as accurate as last time they were saved
 - Works with distributed systems (e.g. `child processes`)
 - To maintain/update fixtures, delete files and re-run tests
-- Can base test mocks off of real responses
-    - See `fixed-server` example later on
-        - TODO: Document me and verify we have it
-        - TODO: Link me
+- Can base mock responses on real responses
+    - See [hybrid example at the bottom](#mocked-yet-accurate-responses)
 
 # Cons
 - Some services require gymnastics to talk to
