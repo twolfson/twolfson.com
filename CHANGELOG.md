@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.46.1 - Fixed missing dependency in Vagrant and got working perceptual diffs
+
 3.46.0 - Wrote "Testing with other services" article
 
 3.45.0 - Upgraded to `grunt-spritesmith@3.5.0` to pick up `spritesheet` variables/mixins
