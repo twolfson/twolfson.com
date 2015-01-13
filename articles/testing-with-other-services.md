@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2015-01-11T15:26:10-0600",
   "keywords": "testing, services, http, eight-track, fixed-server, soa",
-  "summary": "Introduction to using [eight-track](https://github.com/uber/eight-track) and [fixed-server](https://github.com/uber/fixed-server) for writing tests while handling other services."
+  "summary": "Introduction to using [eight-track](https://github.com/uber/eight-track) and [fixed-server](https://github.com/uber/fixed-server) for writing tests with other services."
 }
 
 // TODO: Before publishing, update our gists
@@ -25,7 +25,7 @@ GET /info
     -> Forward /info to original request
 ```
 
-At Uber, we took this one step further and made an HTTP server instead of overwriting in-process logic.
+We took this one step further and made an HTTP server instead of overwriting in-process logic.
 
 # Pros
 - No need to write mock responses by hand
@@ -57,7 +57,7 @@ We wrote 2 libraries that work together to solve this problem:
 [http]: http://nodejs.org/api/http.html#http_http_createserver_requestlistener
 [express]: http://expressjs.com/
 
-It works on the same principle as explained above; when a request is received, if it is saved on disk, then send the result. Otherwise, make the request, save the result to disk, and send the result from disk. Here is an example of using [eight-track][] in testing:
+It works on the same principle as explained above; when a request is received, if there is a copy on disk, then send it back. Otherwise, make the request, save a copy to disk, and send it back. Here is an example of using [eight-track][] in testing:
 
 ```js
 // Load in test dependencies
