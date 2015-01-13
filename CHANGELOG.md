@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.46.0 - Wrote "Testing with other services" article
+
 3.45.0 - Upgraded to `grunt-spritesmith@3.5.0` to pick up `spritesheet` variables/mixins
 
 3.44.0 - Built latest set of files
