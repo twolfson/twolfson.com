@@ -48,7 +48,7 @@ SCRIPT
     sudo apt-get update
 
     # Install node-webkit deps
-    sudo apt-get install -y gconf2 xvfb google-chrome-stable
+    sudo apt-get install -y gconf2 xvfb google-chrome-stable libnotify-dev
 
     # Install node-webkit itself
     /vagrant/test/utils/install-node-webkit.sh "vagrant"
