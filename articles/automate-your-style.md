@@ -29,15 +29,31 @@ The above graph is of an experience I had while leading a team at Uber. We added
 
 Instead of writing up a style guide and making the engineer relearn it, we added [jscs][] to the project and the results were instant. The engineer got instant feedback via the test suite and all future PR comments were focused on actual issues rather than style discrepencies.
 
-A code style guide is great for repository, team-wide, and possibly company-wide consistency. However, a written document is prone to errors:
+## Overview
+There are 2 categories for linting/style checking tools: *validators* and *formatters*.
 
-- Humans are verifying styles are maintained
-- Different teams might have different styles
-
-For a while, there has been [JSLint][] and [JSHint][] but these focused on common mistakes (e.g. referenced an undeclared variable) rather than style issues (e.g. use a separate `var` for each variable).
+A *validator* scans through the code and points out issues. For example:
 
 ```js
-// More of a style discrepency than lint error
-function a() {}
-function b () {}
+Extra comma following the final element of an array or object literal at Gruntfile.js :
+    11 |      all: {
+    12 |        files: {
+    13 |          'dist/css/index.min.css': 'public/css/index.scss',
+-------------------------------------------------------------------^
+    14 |        },
+    15 |        options: {
+```
+
+A *formatter* automatically adjusts the code. For example, it converts:
+
+```js
+var hello = 'world',
+    goodbye = 'moon';
+```
+
+to:
+
+```js
+var hello = 'world';
+var goodbye = 'moon';
 ```
