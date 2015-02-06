@@ -79,3 +79,21 @@ var goodbye = 'moon';
 [JSLint]: http://www.jslint.com/
 [JSHint]: http://jshint.org/
 [ESLint]:  http://eslint.org/
+
+## Wrappers
+At the time of writing, most of these tools have options unique to themselves. As a result, it is becoming common to write wrappers to perform validation:
+
+- [standard][] - Globally installed style checker that relies on its internal set of configurations
+    - Website: https://github.com/feross/standard
+- [fashion-show][] - Per-fork configured style checker
+    - Website: https://github.com/indexzero/fashion-show
+- [twolfson-style][] - Personal flavor with lint-only command `precheck`
+    - This was inspired by past conversations at Uber and [lint-trap][]
+    - Website: https://github.com/twolfson/twolfson-style
+- [lint-trap][] - Uber flavored linter with custom text editor integrations
+    - Website: https://github.com/uber/lint-trap
+
+[standard]: https://github.com/feross/standard
+[fashion-show]: https://github.com/indexzero/fashion-show
+[twolfson-style]: https://github.com/twolfson/twolfson-style
+[lint-trap]: https://github.com/uber/lint-trap
