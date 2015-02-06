@@ -6,6 +6,25 @@
   "summary": "Introduction to automatically checking and formatting code style."
 }
 
+// TODO: Show proposition upfront
+
+```
+ Comments on PRs about style
+
+20 | --------\
+   |          |
+   |          |
+   |          |
+   |          |
+ 1 |          \--\
+ 0 |              -------
+   -----------------------
+            |
+   Introduction of `jscs`
+
+          Time
+```
+
 A code style guide is great for repository, team-wide, and possibly company-wide consistency. However, a written document is prone to errors:
 
 - Humans are verifying styles are maintained
