@@ -29,31 +29,36 @@ def main():
     # Start a new graph
     fig = pyplot.figure()
 
+    # Add labels and a title
+    pyplot.xlabel('Time')
+    pyplot.title('Comments on PRs about style')
+
     # Define our axes and limits
-    ax = fig.add_subplot(1, 1, 1)
+    # http://matplotlib.org/xkcd/api/pyplot_api.html#matplotlib.pyplot.subplot
+    ax = fig.add_subplot(1, 1, 1)  # cols, rows, plot number
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
     pyplot.xticks([])
-    pyplot.yticks([])
-    ax.set_ylim([-30, 10])
+    # TODO: Hide right side of tick
+    pyplot.yticks([20])
+    ax.set_ylim([0, 25])
 
     # Generate 100 nodes for our graph and draw them
-    data = numpy.ones(100)
-    data[70:] -= numpy.arange(30)
+    # http://wiki.scipy.org/Numpy_Example_List#fill
+    data = numpy.zeros(100)
+    data.fill(20)
+    inflection_point = 50
+    data[inflection_point:inflection_point+9] = numpy.arange(20, 2, -2)
+    data[inflection_point+9:] = numpy.ones(100 - (inflection_point + 9))
     pyplot.plot(data)
 
     # Add our annotation
     pyplot.annotate(
-        'THE DAY I REALIZED\nI COULD COOK BACON\nWHENEVER I WANTED',
-        xy=(70, 1), arrowprops=dict(arrowstyle='->'), xytext=(15, -10))
-
-    # Add labels and a title
-    pyplot.xlabel('time')
-    pyplot.ylabel('my overall health')
-    pyplot.title('CLAIMS OF SUPERNATURAL POWERS')
+        'Introduction of `jscs`',
+        xy=(inflection_point, 20), arrowprops=dict(arrowstyle='->'), xytext=(10, 15))
 
     # Save the image
-    pyplot.savefig('hi.png')
+    pyplot.savefig('graph.png')
 
 if __name__ == '__main__':
     main()
