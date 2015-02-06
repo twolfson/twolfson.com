@@ -82,13 +82,13 @@ var goodbye = 'moon';
 [ESLint]:  http://eslint.org/
 
 ### Wrappers
-At the time of writing, most of these tools have options unique to themselves. As a result, it is becoming common to write wrappers to perform validation:
+Most of these tools have options unique to themselves. As a result, it is becoming common to write wrappers to run multiple tools with predefined configurations:
 
-- [standard][] - Globally installed style checker that relies on its internal set of configurations
+- [standard][] - Relies on an internal set of configurations
     - Website: https://github.com/feross/standard
-- [fashion-show][] - Per-fork configured style checker
+- [fashion-show][] - Fork for initial setup and reuse indefinitely
     - Website: https://github.com/indexzero/fashion-show
-- [twolfson-style][] - Personal flavor with lint-only command `precheck`
+- [twolfson-style][] - Installs configurations to repository and runs tools against installed files
     - This was inspired by past conversations at Uber and [lint-trap][]
     - Website: https://github.com/twolfson/twolfson-style
 - [lint-trap][] - Uber flavored linter with custom text editor integrations
