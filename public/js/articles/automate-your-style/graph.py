@@ -1,7 +1,7 @@
 # Load in our dependencies
 # Forking from http://matplotlib.org/xkcd/examples/showcase/xkcd.html
-from matplotlib import pyplot as plt
-import numpy as np
+from matplotlib import pyplot
+import numpy
 
 """
  Comments on PRs about style
@@ -23,45 +23,36 @@ import numpy as np
 
 def main():
     """Generate and save an image as per the docstring above"""
-    # Define our style as
-    plt.xkcd()
+    # Define our style as XKCD
+    pyplot.xkcd()
 
-    fig = plt.figure()
+    # Start a new graph
+    fig = pyplot.figure()
+
+    # Define our axes and limits
     ax = fig.add_subplot(1, 1, 1)
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
-    plt.xticks([])
-    plt.yticks([])
+    pyplot.xticks([])
+    pyplot.yticks([])
     ax.set_ylim([-30, 10])
 
-    data = np.ones(100)
-    data[70:] -= np.arange(30)
+    # Generate 100 nodes for our graph
+    data = numpy.ones(100)
+    data[70:] -= numpy.arange(30)
+    print data
 
-    plt.annotate(
+    pyplot.annotate(
         'THE DAY I REALIZED\nI COULD COOK BACON\nWHENEVER I WANTED',
         xy=(70, 1), arrowprops=dict(arrowstyle='->'), xytext=(15, -10))
 
-    plt.plot(data)
+    pyplot.plot(data)
 
-    plt.xlabel('time')
-    plt.ylabel('my overall health')
+    pyplot.xlabel('time')
+    pyplot.ylabel('my overall health')
+    pyplot.title('CLAIMS OF SUPERNATURAL POWERS')
 
-    # fig = plt.figure()
-    # ax = fig.add_subplot(1, 1, 1)
-    # ax.bar([-0.125, 1.0-0.125], [0, 100], 0.25)
-    # ax.spines['right'].set_color('none')
-    # ax.spines['top'].set_color('none')
-    # ax.xaxis.set_ticks_position('bottom')
-    # ax.set_xticks([0, 1])
-    # ax.set_xlim([-0.5, 1.5])
-    # ax.set_ylim([0, 110])
-    # ax.set_xticklabels(['CONFIRMED BY\nEXPERIMENT', 'REFUTED BY\nEXPERIMENT'])
-    # plt.yticks([])
-
-    plt.title("CLAIMS OF SUPERNATURAL POWERS")
-
-    # plt.show()
-    plt.savefig('hi.png')
+    pyplot.savefig('hi.png')
 
 if __name__ == '__main__':
     main()
