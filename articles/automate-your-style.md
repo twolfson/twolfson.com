@@ -32,7 +32,7 @@ Instead of writing up a style guide and making the engineers memorize it, we add
 
 [jscs]: https://github.com/jscs-dev/node-jscs
 
-# Overview
+# Tools
 There are 2 categories for linting/style checking tools: *validators* and *formatters*.
 
 A *validator* scans through the code and points out issues. For example:
@@ -61,7 +61,7 @@ var hello = 'world';
 var goodbye = 'moon';
 ```
 
-# Validators
+## Validators
 *Validators* have been around for much longer and as a result, have more features and are less error-prone.
 
 - [JSLint][] - One of the older linters, focused on programming mistakes
@@ -81,7 +81,7 @@ var goodbye = 'moon';
 [JSHint]: http://jshint.org/
 [ESLint]:  http://eslint.org/
 
-## Wrappers
+### Wrappers
 At the time of writing, most of these tools have options unique to themselves. As a result, it is becoming common to write wrappers to perform validation:
 
 - [standard][] - Globally installed style checker that relies on its internal set of configurations
@@ -99,7 +99,7 @@ At the time of writing, most of these tools have options unique to themselves. A
 [twolfson-style]: https://github.com/twolfson/twolfson-style
 [lint-trap]: https://github.com/uber/lint-trap
 
-# Formatters
+## Formatters
 *Formatters* are an emerging set of tools and as a result, have less features.
 
 - [escodegen][] - Older formatter with options for linting and style
