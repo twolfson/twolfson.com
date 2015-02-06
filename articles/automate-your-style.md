@@ -25,6 +25,10 @@
           Time
 ```
 
+At Uber, I was working on a team with another engineer and we had a mutually consistent of coding style. Then, 2 more engineers joined and were coming from very different projects. The adjustment period was painful; one of the first PRs was way off base from the repo's style. However, it wasn't the engineer's fault. We had never rigorously defined a style guide and to force him to relearn our bespoke style from memorization would be tedious for everyone.
+
+We grabbed [jscs][] which I had been eyeballing for a few months and the results were instant. The engineer was able to get instant feedback via the test suite and all my PR comments were focused on actual issues rather than noise about style discrepencies.
+
 A code style guide is great for repository, team-wide, and possibly company-wide consistency. However, a written document is prone to errors:
 
 - Humans are verifying styles are maintained
