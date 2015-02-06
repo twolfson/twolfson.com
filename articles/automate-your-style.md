@@ -29,7 +29,9 @@ The above graph is of an experience I had while leading a team at Uber. We added
 
 Instead of writing up a style guide and making the engineer relearn it, we added [jscs][] to the project and the results were instant. The engineer got instant feedback via the test suite and all future PR comments were focused on actual issues rather than style discrepencies.
 
-## Overview
+[jscs]: https://github.com/jscs-dev/node-jscs
+
+# Overview
 There are 2 categories for linting/style checking tools: *validators* and *formatters*.
 
 A *validator* scans through the code and points out issues. For example:
@@ -57,3 +59,23 @@ to:
 var hello = 'world';
 var goodbye = 'moon';
 ```
+
+# Validators
+*Validators* have been around for much longer and as a result, have more features and are less error-prone.
+
+- [JSLint][] - One of the older linters, focused on programming mistakes
+    - Website: http://www.jslint.com/
+    - Options: http://www.jslint.com/lint.html#options
+- [JSHint][] - [JSLint][] replacement with more relaxed rules and a few style options
+    - Website: http://jshint.org/
+    - Options: http://jshint.com/docs/options/
+- [ESLint][] - Plugin based linter with a bunch of style options
+    - Website: http://eslint.org/
+    - Options: http://eslint.org/docs/rules/
+- [jscs][] - Focuses on style options with a large comprehensive list
+    - Website: http://jscs.info/
+    - Options: http://jscs.info/rules.html
+
+[JSLint]: http://www.jslint.com/
+[JSHint]: http://jshint.org/
+[ESLint]:  http://eslint.org/
