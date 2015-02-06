@@ -6,25 +6,7 @@
   "summary": "Introduction to automatically checking and formatting code style."
 }
 
-// TODO: Move to actual image
-// TODO: Consider http://matplotlib.org/xkcd/examples/showcase/xkcd.html
-
-```
- Comments on PRs about style
-
-20 | --------\
-   |          |
-   |          |
-   |          |
-   |          |
- 1 |          \--\
- 0 |              -------
-   -----------------------
-            |
-   Introduction of `jscs`
-
-          Time
-```
+![Steep decline of style comments in PRs when `jscs` is introduced](/public/images/articles/automate-your-style/graph.png)
 
 The above graph is of an experience I had while leading a team at Uber. We added 2 new engineers from projects with different languages and styles. The first PR was good code but very inconsistent with the existing coding practices.
 
