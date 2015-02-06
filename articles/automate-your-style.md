@@ -66,7 +66,7 @@ var goodbye = 'moon';
 - [JSLint][] - One of the older linters, focused on programming mistakes
     - Website: http://www.jslint.com/
     - Options: http://www.jslint.com/lint.html#options
-- [JSHint][] - [JSLint][] replacement with more relaxed rules and a few style options
+- [JSHint][] - [JSLint][] replacement with relaxed rules and style options
     - Website: http://jshint.org/
     - Options: http://jshint.com/docs/options/
 - [ESLint][] - Plugin based linter with a bunch of style options
@@ -97,3 +97,23 @@ At the time of writing, most of these tools have options unique to themselves. A
 [fashion-show]: https://github.com/indexzero/fashion-show
 [twolfson-style]: https://github.com/twolfson/twolfson-style
 [lint-trap]: https://github.com/uber/lint-trap
+
+# Formatters
+*Formatters* are an emerging set of tools and as a result, have less features.
+
+- [escodegen][] - Older formatter with options for linting and style
+    - Website: https://github.com/estools/escodegen
+    - Options: https://github.com/estools/escodegen/wiki/API
+- [fixmyjs][] - Wraps [escodegen][] to present fixes for common JSHint issues
+    - Website: https://github.com/jshint/fixmyjs
+    - Options: https://github.com/jshint/fixmyjs/tree/b3544129#options
+- [esformatter][] - Plugin based formatter with a growing set of plugins
+    - Website: https://github.com/millermedeiros/esformatter
+    - Options: https://github.com/millermedeiros/esformatter/blob/v0.4.3/lib/preset/default.json
+    - Plugins: https://github.com/millermedeiros/esformatter/wiki/Plugins
+    - Unfortunately, the options require knowledge of the [SpiderMonkey AST][]
+
+[escodegen]: https://github.com/estools/escodegen
+[fixmyjs]: https://github.com/jshint/fixmyjs
+[esformatter]: https://github.com/millermedeiros/esformatter
+[SpiderMonkey AST]: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API
