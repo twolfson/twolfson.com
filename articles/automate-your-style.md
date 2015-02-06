@@ -8,7 +8,7 @@
 
 ![Steep decline of style comments in PRs when `jscs` is introduced](/public/images/articles/automate-your-style/graph.png)
 
-The above graph is of an experience I had while leading a team at Uber. We added 2 new engineers from projects with different languages and styles. The first PR was good code but very inconsistent with the existing coding practices.
+The above graph is from an experience I had while leading a team at Uber. We added 2 new engineers from projects with different languages and styles. The first PR was good code but very inconsistent with the existing coding practices.
 
 Instead of writing up a style guide and making the engineers memorize it, we added [jscs][] to the project and instantly fixed everything. The engineer got continuous feedback for style conflicts via the test suite and all future PR comments were focused on actual issues rather than style discrepencies.
 

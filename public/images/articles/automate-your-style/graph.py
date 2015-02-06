@@ -27,7 +27,8 @@ def main():
     pyplot.xkcd()
 
     # Start a new graph
-    fig = pyplot.figure()
+    dpi = 72
+    fig = pyplot.figure(1, figsize=(600 / dpi, 400 / dpi))
 
     # Add labels and a title
     pyplot.xlabel('Time')
@@ -61,7 +62,7 @@ def main():
         xy=(inflection_point, 20), arrowprops=dict(arrowstyle='->'), xytext=(10, 15))
 
     # Save the image
-    pyplot.savefig('graph.png')
+    pyplot.savefig('graph.png', dpi=dpi)
 
 if __name__ == '__main__':
     main()
