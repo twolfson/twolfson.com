@@ -39,9 +39,12 @@ def main():
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
     pyplot.xticks([])
-    # TODO: Hide right side of tick
     pyplot.yticks([20])
     ax.set_ylim([0, 25])
+
+    # Hide right side of ticks
+    # http://stackoverflow.com/questions/9051494/customizing-just-one-side-of-tick-marks-in-matplotlib-using-spines
+    ax.yaxis.set_ticks_position('none')
 
     # Generate 100 nodes for our graph and draw them
     # http://wiki.scipy.org/Numpy_Example_List#fill
