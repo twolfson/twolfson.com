@@ -7,6 +7,7 @@
 }
 
 // TODO: Move to actual image
+// TODO: Consider http://matplotlib.org/xkcd/examples/showcase/xkcd.html
 
 ```
  Comments on PRs about style
