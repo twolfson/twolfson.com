@@ -10,7 +10,7 @@
 
 The above graph is from an experience I had while leading a team at Uber. We added 2 new engineers from projects with different languages and styles. The first PR was good code but very inconsistent with the existing coding practices.
 
-Instead of writing up a style guide and making the engineers memorize it, we added [jscs][] to the project and instantly fixed everything. The engineer got continuous feedback for style conflicts via the test suite and all future PR comments were focused on actual issues rather than style discrepencies.
+Instead of writing up a style guide and making the engineers memorize it, we added [jscs][] to the project and instantly fixed everything. The engineer got quick feedback for style conflicts via the test suite and all future PR comments were focused on actual issues rather than style discrepencies.
 
 [jscs]: https://github.com/jscs-dev/node-jscs
 
@@ -44,7 +44,7 @@ var goodbye = 'moon';
 ```
 
 ## Validators
-*Validators* have been around for much longer and as a result, have more features and are less error-prone.
+*Validators* have been around for much longer and as a result, have more features than *formatters*.
 
 - [JSLint][] - One of the older linters, focused on programming mistakes
     - Website: http://www.jslint.com/
@@ -87,10 +87,10 @@ Most of these tools have options unique to themselves. As a result, it is becomi
 - [escodegen][] - Older formatter with options for linting and style
     - Website: https://github.com/estools/escodegen
     - Options: https://github.com/estools/escodegen/wiki/API
-- [fixmyjs][] - Wraps [escodegen][] to present fixes for common JSHint issues
+- [fixmyjs][] - Wraps [escodegen][] to present fixes for JSHint issues
     - Website: https://github.com/jshint/fixmyjs
     - Options: https://github.com/jshint/fixmyjs/tree/b3544129#options
-- [esformatter][] - Plugin based formatter with a growing set of plugins
+- [esformatter][] - Plugin based formatter with a growing set of choices
     - Website: https://github.com/millermedeiros/esformatter
     - Options: https://github.com/millermedeiros/esformatter/blob/v0.4.3/lib/preset/default.json
     - Plugins: https://github.com/millermedeiros/esformatter/wiki/Plugins
