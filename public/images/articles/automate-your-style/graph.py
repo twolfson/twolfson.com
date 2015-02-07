@@ -40,12 +40,12 @@ def main():
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
     pyplot.xticks([])
-    pyplot.yticks([1, 20])
-    ax.set_yticklabels(['0', '20'])
-    ax.set_ylim([0, 25])
+    pyplot.yticks([0, 20])
+    ax.set_ylim([-1, 25])
 
     # Hide right side of ticks
     # http://stackoverflow.com/questions/9051494/customizing-just-one-side-of-tick-marks-in-matplotlib-using-spines
+    # http://matplotlib.org/api/axis_api.html
     ax.yaxis.set_ticks_position('none')
 
     # Generate 100 nodes for our graph and draw them
@@ -53,8 +53,8 @@ def main():
     data = numpy.zeros(100)
     data.fill(20)
     inflection_point = 50
-    data[inflection_point:inflection_point+9] = numpy.arange(20, 2, -2)
-    data[inflection_point+9:] = numpy.ones(100 - (inflection_point + 9))
+    data[inflection_point:inflection_point+10] = numpy.arange(20, 0, -2)
+    data[inflection_point+10:] = numpy.zeros(100 - (inflection_point + 10))
     pyplot.plot(data)
 
     # Add our annotation
