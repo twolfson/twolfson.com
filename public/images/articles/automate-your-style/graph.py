@@ -40,7 +40,8 @@ def main():
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
     pyplot.xticks([])
-    pyplot.yticks([20])
+    pyplot.yticks([1, 20])
+    ax.set_yticklabels(['0', '20'])
     ax.set_ylim([0, 25])
 
     # Hide right side of ticks
