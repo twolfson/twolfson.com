@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.47.0 - Wrote "Automate your style" article
+
 3.46.1 - Fixed missing dependency in Vagrant and got working perceptual diffs
 
 3.46.0 - Wrote "Testing with other services" article
