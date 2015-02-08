@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.48.1 - Accepted latest perceptual diffs
+
 3.48.0 - Updated "Recent activity"
 
 3.47.0 - Wrote "Automate your style" article
