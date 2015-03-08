@@ -2,7 +2,7 @@
 html
   head
     //- TODO: Assert all of this meta content
-  	title= locals.title || config.title
+    title= locals.title || config.title
     link(rel="shortcut icon", href="/public/images/favicon.ico")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono", type="text/css")
     //- TODO: Revisit hack on comment
@@ -57,10 +57,10 @@ html
         .row--bordered--ends(class=navMargin)
           .container__row
             ul.nav
-              - var navLinks = []; %>
-              - navLinks.push({name: 'blog', href: '/'}); %>
-              - navLinks.push({name: 'projects', href: '/projects'}); %>
-              - navLinks.push({name: 'contact', href: '/contact'}); %>
+              - var navLinks = [];
+              - navLinks.push({name: 'blog', href: '/'});
+              - navLinks.push({name: 'projects', href: '/projects'});
+              - navLinks.push({name: 'contact', href: '/contact'});
               for navLink in navLinks
                 - var navName = navLink.name;
                 - var isSelected = page === navName ? 'link--active' : '';
