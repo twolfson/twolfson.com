@@ -7,7 +7,7 @@
         h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
       for item in projects.scripts
         div
-          //- != partial('projects/script.jade', item)
+          != partial('projects/script.jade', item)
     .projects__section
       div
         h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Competitions
@@ -33,4 +33,4 @@
         h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
       for item in projects.contributions
         div
-          //- != partial('projects/script.jade', item)
+          != partial('projects/script.jade', item)
