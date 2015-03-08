@@ -29,15 +29,15 @@
           }
 
           // If there are 2 items on this row, split them side by side
-          var complimentItem = competition[i + 1];
-          if (complimentItem) {
+          var complementItem = competitions[i + 1];
+          if (complementItem) {
       %>
         <div>
           <div class="container__row">
-            <%- partial('projects/competition.jade', item) %>
+            <%- partial('projects/competition.ejs', item) %>
           </div>
           <div class="container__row">
-            <%- partial('projects/competition.jade', complementItem) %>
+            <%- partial('projects/competition.ejs', complementItem) %>
           </div>
         </div>
       <%
@@ -46,7 +46,7 @@
       %>
         <div>
           <div class="container__row">
-            <%- partial('projects/competitionThin.jade', complementItem) %>
+            <%- partial('projects/competitionThin.ejs', item) %>
           </div>
         </div>
       <%
