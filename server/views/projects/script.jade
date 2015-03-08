@@ -1,7 +1,7 @@
 .container__row.flexbox.soft-half--top.soft-half--bottom
   .flexbox__item.width3
     h3.delta.flush--bottom(title=name)
-      a(href=pageUrl, target="_blank")= locals.truncatedName ? locals.truncatedName : name
+      a(href=pageUrl, target="_blank")!= locals.truncatedName ? locals.truncatedName : name
   .flexbox__item.width7.project-description
     != description
   //- TODO: Restore underlining when we move to fonts. Currently removed due to ignore-flow not obeying underline rules in Chrome
