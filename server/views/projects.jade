@@ -14,7 +14,7 @@
       for item, i in projects.competitions
         //- Emulate step 2 by skipping all odd numbers (e.g. skip `1` for [0, 1])
         if i % 2 == 1
-          continue
+          - continue;
 
         //- If there are 2 items on this row, split them side by side
         - var complementItem = projects.competitions[i + 1];
