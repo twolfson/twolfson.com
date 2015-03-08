@@ -69,8 +69,8 @@
           <% navLinks.push({ "name": "contact", "href": "/contact" }); %>
           <%
             navLinks.forEach(function (navLink) {
-              var navName = navLink.name,
-                  isSelected = page === navName ? "link--active" : "";
+              var navName = navLink.name;
+              var isSelected = page === navName ? "link--active" : "";
           %>
             <li class="nav--item">
               <a href="<%-navLink.href%>" class="<%=isSelected%>"><%=navName%></a>
