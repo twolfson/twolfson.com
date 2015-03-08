@@ -1,6 +1,9 @@
 // Load in dependencies
 var _ = require('underscore');
 var express = require('express');
+var expressPartials = require('express-partials');
+var ejsEngine = require('consolidate').ejs;
+var jadeEngine = require('jade').__express;
 var controllers = require('./controllers');
 var routes = require('./routes');
 
@@ -18,15 +21,15 @@ Server.prototype = {
   registerViewEngine: function () {
     // Set up view engine and static files for pages
     var app = this.app;
-    app.engine('ejs', require('consolidate').ejs);
+    app.engine('ejs', ejsEngine);
+    app.engine('jade', jadeEngine);
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
-    app.use(require('express-partials')());
+    app.use(expressPartials());
   },
   addRoutes: function () {
-    // TODO: Integrate Travis CI to local testing (with notifications)
     // Localize app and config
     var app = this.app;
     var config = this.config;

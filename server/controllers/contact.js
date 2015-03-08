@@ -69,7 +69,7 @@ exports.submit = function (config) {
 
 // Common render function
 exports._render = function (req, res) {
-  res.render('contact', {
+  res.render('contact.ejs', {
     page: 'contact',
     title: 'Todd Wolfson - Contact',
     seoKeywords: 'contact, email, Todd Wolfson, twolfson, twolfsn',

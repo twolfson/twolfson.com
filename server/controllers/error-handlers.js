@@ -18,12 +18,12 @@ exports.errorEncountered = function (config) {
 // 404 page (no SEO here)
 exports[404] = function (req, res) {
   res.status(404);
-  res.render('404', {page: '404'});
+  res.render('404.ejs', {page: '404'});
 };
 
 // 500 page
 exports[500] = function (req, res) {
   // TODO: Create me
   res.status(500);
-  res.render('500', {page: '500'});
+  res.render('500.ejs', {page: '500'});
 };

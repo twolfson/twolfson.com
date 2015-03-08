@@ -1,19 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 <head>
 	<title><%= locals.title || config.title %></title>
-  <link rel="shortcut icon" href="/public/images/favicon.ico" />
-  <link href='//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono' rel='stylesheet' type='text/css'>
-  <% /* TODO: Consider beautifying output HTML */ %>
-  <!-- Full CSS available at /public/css/index.css -->
-  <link rel="stylesheet" type="text/css" media="all" href="/public/css/index.min.css"/>
-  <link rel="alternate" type="application/atom+xml" title="twolfson.com blog feed" href="/index.xml" />
+  <link rel="shortcut icon" href="/public/images/favicon.ico">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono" type="text/css">
+  <!-- Full CSS available at /public/css/index.css .-->
+  <link rel="stylesheet" href="/public/css/index.min.css" type="text/css" media="all">
+  <link rel="alternate" href="/index.xml" title="twolfson.com blog feed" type="application/atom+xml">
   <% if (locals.seoKeywords) { %>
     <meta name="keywords" content="<%= seoKeywords %>">
   <% } %>
   <% if (locals.seoDescription) { %>
     <meta name="description" content="<%= seoDescription %>">
   <% } %>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <% /* Output environment */ %>
   <script type="text/javascript">
     window.env = "<%= locals.env %>";
@@ -90,18 +90,9 @@
   <div id="global-footer" class="container text--center center--center">
     <div>
       <% /* TODO: Verify hr is styled across all browsers */ %>
-      <hr class="width5 center--center push-half--bottom"/>
+      <hr class="width5 center--center push-half--bottom">
     </div>
-    <p class="flush--bottom">
-      <small>
-        Built by
-        <a href="/contact">Todd Wolfson</a>
-        under the
-        <a href="/license">MIT License</a>
-        <br/>
-        Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a>
-      </small>
-    </p>
+    <p class="flush--bottom"><small>Built by <a href="/contact">Todd Wolfson</a> under the <a href="/license">MIT License</a><br>Powered by <a href="http://expressjs.com/">express</a> and <a href="http://twolfson.github.com/jojo/">jojo</a></small></p>
   </div>
 </body>
 </html>

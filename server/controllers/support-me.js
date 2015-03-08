@@ -8,7 +8,7 @@ module.exports = function (config) {
     function renderIndex (req, res) {
       var supportConfig = config['support-me'];
       var supportSource = req.query.support || 'generic';
-      res.render('support-me', {
+      res.render('support-me.ejs', {
         page: 'support-me',
         gratipayUrl: url.format({
           protocol: 'https:',
