@@ -4,8 +4,8 @@
   <id><%=config.url%></id>
 <%
   if (articles.length > 0) {
-    var updatedDate = articles[0].date,
-        updatedDateStr = updatedDate.toISOString();
+    var updatedDate = articles[0].date;
+    var updatedDateStr = updatedDate.toISOString();
 %>
   <updated><%=updatedDateStr%></updated>
 <%
