@@ -13,7 +13,7 @@
         h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Competitions
       for item, i in projects.competitions
         //- Emulate step 2 by skipping all odd numbers (e.g. skip `1` for [0, 1])
-        if i % 2 === 1
+        if i % 2 == 1
           continue
 
         //- If there are 2 items on this row, split them side by side
@@ -21,8 +21,8 @@
         if complementItem
           div
             .container__row
-              //- != partial('projects/competition.jade', item)
-              //- != partial('projects/competition.jade', complementItem)
+              != partial('projects/competition.jade', item)
+              != partial('projects/competition.jade', complementItem)
         else
           //- Otherwise, render a long item
           div
