@@ -10,7 +10,7 @@ exports.index = function (config) {
   var articles = config.articles;
   return [
     function renderIndex (req, res) {
-      res.render('index.jade', {
+      res.render('index.ejs', {
         page: 'blog',
         articles: articles,
         activity: activityHtml,
