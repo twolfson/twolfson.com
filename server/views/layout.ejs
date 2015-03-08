@@ -63,15 +63,15 @@
       <div class="row--bordered--ends <%= navMargin %>">
         <div class="container__row">
           <ul class="nav">
-          <% var navLinks = [
-                  { "name": "blog", "href": "/" },
-                  { "name": "projects", "href": "/projects" },
-                  { "name": "contact", "href": "/contact" }];
-
+          <% var navLinks = []; %>
+          <% navLinks.push({ "name": "blog", "href": "/" }); %>
+          <% navLinks.push({ "name": "projects", "href": "/projects" }); %>
+          <% navLinks.push({ "name": "contact", "href": "/contact" }); %>
+          <%
             navLinks.forEach(function (navLink) {
               var navName = navLink.name,
                   isSelected = page === navName ? "link--active" : "";
-            %>
+          %>
             <li class="nav--item">
               <a href="<%-navLink.href%>" class="<%=isSelected%>"><%=navName%></a>
             </li>
