@@ -22,25 +22,35 @@
       </div>
       <%
         var competitions = projects.competitions;
-        var lenMinusOne = competitions.length - 1;
         competitions.forEach(function (item, i) {
-          var isEven = i % 2 === 0;
-          var isLastItem = i === lenMinusOne;
-          var isOwnRow = isEven && isLastItem;
-          var isRowStart = isEven;
-          var isRowEnd = !isEven || isOwnRow;
-          var view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
+          // Emulate step 2 by skipping all odd numbers (e.g. skip `1` for [0, 1])
+          if (i % 2 === 1) {
+            return;
+          }
+
+          // If there are 2 items on this row, split them side by side
+          var complimentItem = competition[i + 1];
+          if (complimentItem) {
       %>
-        <% if (isRowStart) { %>
-          <div>
-            <div class="container__row">
-        <% } %>
-              <%- partial(view, item) %>
-        <% if (isRowEnd) { %>
-            </div>
+        <div>
+          <div class="container__row">
+            <%- partial('projects/competition.jade', item) %>
           </div>
-        <% } %>
+          <div class="container__row">
+            <%- partial('projects/competition.jade', complementItem) %>
+          </div>
+        </div>
       <%
+          // Otherwise, render a long item
+          } else {
+      %>
+        <div>
+          <div class="container__row">
+            <%- partial('projects/competitionThin.jade', complementItem) %>
+          </div>
+        </div>
+      <%
+          }
         });
       %>
     </div>
