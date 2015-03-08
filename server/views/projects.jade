@@ -1,70 +1,36 @@
-<div id="projects" class="push--bottom">
-  <div>
-    <div class="projects__section">
-      <div>
-        <% /* TODO: Is there a pattern for half-top/half-bottom */ %>
-        <% /* TODO: When cauterizing patterning, search for half-ends too */ %>
-        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Scripts</h2>
-      </div>
-      <%
-        projects.scripts.forEach(function (item) {
-      %>
-      <div>
-        <%- partial('projects/script', item) %>
-      </div>
-      <%
-        });
-      %>
-    </div>
-    <div class="projects__section">
-      <div>
-        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Competitions</h2>
-      </div>
-      <%
-        var competitions = projects.competitions;
-        competitions.forEach(function (item, i) {
-          // Emulate step 2 by skipping all odd numbers (e.g. skip `1` for [0, 1])
-          if (i % 2 === 1) {
-            return;
-          }
+#projects.push--bottom
+  div
+    .projects__section
+      div
+        //- TODO: Is there a pattern for half-top/half-bottom
+        //- TODO: When cauterizing patterning, search for half-ends too
+        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
+      for item in projects.scripts
+        div
+          != partial('projects/script', item)
+    .projects__section
+      div
+        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Competitions
+      for item in projects.competitions
+        //- Emulate step 2 by skipping all odd numbers (e.g. skip `1` for [0, 1])
+        if i % 2 === 1
+          continue
 
-          // If there are 2 items on this row, split them side by side
-          var complementItem = competitions[i + 1];
-          if (complementItem) {
-      %>
-        <div>
-          <div class="container__row">
-            <%- partial('projects/competition.ejs', item) %>
-            <%- partial('projects/competition.ejs', complementItem) %>
-          </div>
-        </div>
-      <%
-          // Otherwise, render a long item
-          } else {
-      %>
-        <div>
-          <div class="container__row">
-            <%- partial('projects/competitionThin.ejs', item) %>
-          </div>
-        </div>
-      <%
-          }
-        });
-      %>
-    </div>
-    <div class="projects__section">
-      <div>
-        <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Contributions</h2>
-      </div>
-      <%
-        projects.contributions.forEach(function (item) {
-      %>
-      <div>
-        <%- partial('projects/script', item) %>
-      </div>
-      <%
-        });
-      %>
-    </div>
-  </div>
-</div>
+        //- If there are 2 items on this row, split them side by side
+        - var complementItem = competitions[i + 1];
+        if complementItem
+          div
+            .container__row
+              //- != partial('projects/competition.ejs', item)
+              //- != partial('projects/competition.ejs', complementItem)
+        //- Otherwise, render a long item
+        else
+          div
+            .container__row
+              //- != partial('projects/competitionThin.ejs', item)
+    .projects__section
+      div
+        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
+      for item in projects.contributions
+        div
+          != partial('projects/script', item)
