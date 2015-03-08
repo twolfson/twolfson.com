@@ -27,7 +27,7 @@ exports.article = function (config) {
   var article = config.article;
   return [
     function renderArticle (req, res) {
-      res.render('article.ejs', {
+      res.render('article.jade', {
         page: 'blog',
         article: article,
         title: article.title + ' - Todd Wolfson',
