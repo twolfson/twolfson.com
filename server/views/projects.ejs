@@ -21,15 +21,15 @@
         <h2 class="text--center soft-half--top soft-half--bottom flush--bottom">Competitions</h2>
       </div>
       <%
-        var competitions = projects.competitions,
-            lenMinusOne = competitions.length - 1;
+        var competitions = projects.competitions;
+        var lenMinusOne = competitions.length - 1;
         competitions.forEach(function (item, i) {
-          var isEven = i % 2 === 0,
-              isLastItem = i === lenMinusOne,
-              isOwnRow = isEven && isLastItem,
-              isRowStart = isEven,
-              isRowEnd = !isEven || isOwnRow,
-              view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
+          var isEven = i % 2 === 0;
+          var isLastItem = i === lenMinusOne;
+          var isOwnRow = isEven && isLastItem;
+          var isRowStart = isEven;
+          var isRowEnd = !isEven || isOwnRow;
+          var view = isOwnRow ? 'projects/competitionThin' : 'projects/competition';
       %>
         <% if (isRowStart) { %>
           <div>
