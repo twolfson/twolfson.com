@@ -1,4 +1,5 @@
 // Load in dependencies
+var beautify = require('html').prettyPrint;
 var minify = require('html-minifier').minify;
 var request = require('request');
 
@@ -13,5 +14,6 @@ request('http://localhost:8080/', function (err, res, body) {
   var minHtml = minify(body, {
     collapseWhitespace: true
   });
-  console.log(minHtml);
+  var beautyHtml = beautify(minHtml);
+  console.log(beautyHtml);
 });
