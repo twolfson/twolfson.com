@@ -1,6 +1,8 @@
 // Load in our dependencies
 var assert = require('assert');
 var assertDiff = require('assert-diff');
+var cheerio = require('cheerio');
+var sortedObject = require('sorted-object');
 var fs = require('fs');
 var beautify = require('html').prettyPrint;
 var minify = require('html-minifier').minify;
@@ -32,7 +34,17 @@ var urls = [
 ];
 
 function normalize(body) {
-  var minHtml = minify(body, {
+  // Parse HTML and reserialize to re-order our attributes
+  var $ = cheerio.load(body);
+  $('*').each(function handleNode (i, node) {
+    if (node.attribs) {
+      node.attribs = sortedObject(node.attribs);
+    }
+  });
+  var sortedHtml = $('html').html();
+
+  // Correct all our whitespace
+  var minHtml = minify(sortedHtml, {
     collapseWhitespace: true,
     removeEmptyAttributes: true
   });
