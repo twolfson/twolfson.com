@@ -47,11 +47,13 @@ html
           h2.brand.flexbox__item.width5.align--baseline Software Engineer
           .flexbox__item.text--right.alpha
             a.icon-github.push--right(href="http://github.com/twolfson/" target="_blank")
-                //- <span class="accessibility">GitHub</span>
+              //- <span class="accessibility">GitHub</span>
+            = " "
             a.icon-twitter.push--right(href="http://twitter.com/twolfsn/" target="_blank")
-                //- <span class="accessibility">Twitter</span>
+              //- <span class="accessibility">Twitter</span>
+            = " "
             a.icon-rss(href="/index.xml" target="_blank")
-                //- <span class="accessibility">RSS</span>
+              //- <span class="accessibility">RSS</span>
         //- TODO: Add back `island` on a per-page basis via push--top
         - var navMargin = locals.navMargin === false ? '' : 'push--bottom';
         .row--bordered--ends(class=navMargin)
