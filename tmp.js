@@ -10,6 +10,7 @@ request('http://localhost:8080/', function (err, res, body) {
   }
 
   // Otherwise, coerce our data
+  // TODO: We want to compare HTML ordering and attributes but need to preserve structure somehow...
   var dom = htmlparser2.parseDOM(body);
   var node = dom[0];
   while (node) {
