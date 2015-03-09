@@ -1,15 +1,17 @@
 // Load in our dependencies
 var assert = require('assert');
+var assertDiff = require('assert-diff');
 var fs = require('fs');
 var beautify = require('html').prettyPrint;
+var diff = require('diff');
 var minify = require('html-minifier').minify;
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
 // Load in our target URLs
 var urls = [
-  // `urls.yml`
-  '/',
+  // // `urls.yml`
+  // '/',
   // '/2012-11-17-subtle-anti-patterns',
   // '/2013-07-11-axioms-of-maintainability # Blog post with code highlighting',
   // '/2013-07-24-abandoned-project:-kaleidoscope # Blog post with images',
@@ -20,7 +22,7 @@ var urls = [
   // '/contact',
   // '/contact/success',
   // '/contact/failure',
-  // '/404',
+  '/404',
   // '/500',
   // '/license',
   // '/support-me',
@@ -61,7 +63,7 @@ describe('A request to', function () {
         var prettyExpectedContent = normalize(expectedContent);
 
         // TODO: Move to a better diff mechanism
-        assert.strictEqual(prettyActualContent, prettyExpectedContent);
+        assertDiff.strictEqual(prettyExpectedContent, prettyActualContent);
       });
     });
   });
