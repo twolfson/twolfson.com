@@ -19,7 +19,7 @@ exports.kaleido = function (config) {
 
   return [
     function kaleidoFn (req, res) {
-      res.render('kaleido.ejs', {layout: false, urls: urls});
+      res.render('kaleido.jade', {layout: false, urls: urls});
     }
   ];
 };
@@ -29,7 +29,7 @@ exports.license = function (config) {
   var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
   return [
     function licenseFn (req, res) {
-      res.render('license.ejs', {
+      res.render('license.jade', {
         page: 'license',
         license: license,
         title: 'Todd Wolfson - License',
