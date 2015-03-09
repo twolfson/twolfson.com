@@ -86,7 +86,7 @@ grunt js # Compile JS once
     - `controllers/` - Business logic for server endpoints
     - `models/` - External data for the server to read in
     - `routes.js` - Attachements for `controllers/` to URLs
-    - `views/` - HTML templates written in [ejs][]
+    - `views/` - HTML templates written in [Jade][]
 - `public/` - CSS, images, and JavaScript for client side pages
 - `test/` - Container for various test types
     - `integrations-tests/` - BDD tests written in [mocha][] that test server behavior
@@ -95,7 +95,7 @@ grunt js # Compile JS once
     - `utils/` - Common utilities used for starting up/tearing down servers and making HTTP requests
 
 [GitHub Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
-[ejs]: https://github.com/tj/ejs/
+[Jade]: http://jade-lang.com/
 [mocha]: https://github.com/tj/mocha/
 [Perceptual diffs]: http://www.youtube.com/watch?v=UMnZiTL0tUc
 
