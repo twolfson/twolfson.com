@@ -1,0 +1,45 @@
+#contact
+  .container__row
+    form.width8.float--left.hard--left(method="POST", action="/contact")
+      fieldset
+        //- TODO: In Chrome 26, <legend> does not respect inner block elements
+        //- TODO: PhantomJS still seems to not be respecting it?
+        legend.width8.gamma.push--bottom
+          h3.flush--bottom Contact Details
+        //- If there was no submission attempt
+        if locals.emailStatus === null
+          .flexbox.push--bottom
+            .flexbox__item.width2
+              label.text--right(for="name", required="required") Name:&nbsp;
+            .flexbox__item.width6
+              input#name.row--bordered.span5.flush--left(name="name", type="text")
+          .cf.push--bottom
+            .flexbox__item.width2
+              label.text--right(for="info", required="required") Contact Info:&nbsp;
+            .flexbox__item.width6
+              input#info.row--bordered.span5.flush--left(name="info", type="text")
+          .flexbox.push--bottom
+            .flexbox__item.width2
+              label.text--right(for="message", required="required") Message:&nbsp;
+            .flexbox__item.width6
+              textarea#message.row--bordered.span5.flush--left(name="message", type="text", rows="3")
+          .text--center
+            button#submitButton.btn.btn--huge.delta(type="submit") Contact Todd
+        else if locals.emailStatus === true
+          //- Otherwise, if the submission was a success
+          p.text--center
+            | Thank you for contacting me!
+            br
+            | I will respond to your request within 48 hours. Have a nice day!
+        else
+          p.text--center
+            | Ouch! An error seems to have occurred.
+            br
+            a(href="javascript:location.reload();") Could you please try that again?
+    .span4
+      p
+        //- TODO: Did hover over the image previously underline the text?
+        a(href="http://www.aaronwax.com/")
+          div
+            img(src="/public/images/todd.jpg", alt="Photograph of Todd Wolfson taken by A.J. Wax")
+          .text--center Photograph taken by A.J. Wax
