@@ -13,31 +13,31 @@
         script(src=script)
   .span4
     if article.relatedArticles
-        h2.gamma Related articles
-        for relatedArticle in article.relatedArticles
-          .cluster
-            h3.delta
-              a(href=relatedArticle.url)= relatedArticle.title
-            //- DEV: Summary is wrapped in a paragraph already
-            != relatedArticle.summary
+      h2.gamma Related articles
+      for relatedArticle in article.relatedArticles
+        .cluster
+          h3.delta
+            a(href=relatedArticle.url)= relatedArticle.title
+          //- DEV: Summary is wrapped in a paragraph already
+          != relatedArticle.summary
     if article.relatedProjects
       h2.gamma Related projects
-        for relatedProject in article.relatedProjects
-          .cluster
-            h3.delta
-              a(href=relatedProject.pageUrl)= relatedProject.name
-            p!= relatedProject.description
+      for relatedProject in article.relatedProjects
+        .cluster
+          h3.delta
+            a(href=relatedProject.pageUrl)= relatedProject.name
+          p!= relatedProject.description
     if article.topArticles
       h2.gamma Top articles
-        for topArticle in article.topArticles
-          .cluster
-            h3.delta
-              a(href=topArticle.url)= topArticle.title
-            != topArticle.summary
+      for topArticle in article.topArticles
+        .cluster
+          h3.delta
+            a(href=topArticle.url)= topArticle.title
+          != topArticle.summary
     if article.recentArticles
-        h2.gamma Recent articles
-        for recentArticle in article.recentArticles
-          .cluster
-            h3.delta
-              a(href=recentArticle.url)= recentArticle.title
-            != recentArticle.summary
+      h2.gamma Recent articles
+      for recentArticle in article.recentArticles
+        .cluster
+          h3.delta
+            a(href=recentArticle.url)= recentArticle.title
+          != recentArticle.summary
