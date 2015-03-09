@@ -1,5 +1,5 @@
 // Load in dependencies
-var htmlparser2 = require('htmlparser2');
+var minify = require('html-minifier').minify;
 var request = require('request');
 
 // Make a request, normalize our HTML via Cheerio
@@ -9,12 +9,9 @@ request('http://localhost:8080/', function (err, res, body) {
     throw err;
   }
 
-  // Otherwise, coerce our data
-  // TODO: We want to compare HTML ordering and attributes but need to preserve structure somehow...
-  var dom = htmlparser2.parseDOM(body);
-  var node = dom[0];
-  while (node) {
-    console.log('node', node);
-    node = node.next;
-  }
+  // Otherwise, minify then beautify our HTML
+  var minHtml = minify(body, {
+    collapseWhitespace: true
+  });
+  console.log(minHtml);
 });
