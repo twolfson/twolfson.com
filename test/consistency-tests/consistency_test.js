@@ -1,7 +1,9 @@
 // Load in our dependencies
 var assert = require('assert');
+var assertDiff = require('assert-diff');
 var fs = require('fs');
 var beautify = require('html').prettyPrint;
+var diff = require('diff');
 var minify = require('html-minifier').minify;
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
@@ -61,7 +63,7 @@ describe('A request to', function () {
         var prettyExpectedContent = normalize(expectedContent);
 
         // TODO: Move to a better diff mechanism
-        assert.strictEqual(prettyActualContent, prettyExpectedContent);
+        assertDiff.strictEqual(prettyExpectedContent, prettyActualContent);
       });
     });
   });
