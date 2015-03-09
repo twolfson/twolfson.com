@@ -1,0 +1,33 @@
+doctype
+html
+  head
+    title Kaleidoscope test page
+    style.
+      body {
+        margin: 0;
+        background: linen;
+      }
+
+      .media {
+        width: 300px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 50px;
+      }
+
+      .media img {
+        max-width: 300px;
+        max-height: 300px;
+      }
+  body
+    for path in urls
+      - var escapedPath = encodeURIComponent(encodeURIComponent(path));
+      .media
+        p
+          a(href=path)= path
+        div
+          // for dir in ['actual_screenshots', 'diff_screenshots', 'expected_screenshots']
+          for dir in ['diff_screenshots']
+            - var filepath = '/test/perceptual-tests/' + dir + '/' + escapedPath + '.png';
+            a(href=filepath, target="_blank")
+              img(src=filepath)

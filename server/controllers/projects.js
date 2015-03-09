@@ -35,7 +35,7 @@ module.exports = function (config) {
 
   return [
     function projectsFn (req, res) {
-      res.render('projects.ejs', {
+      res.render('projects.jade', {
         page: 'projects',
         title: 'Todd Wolfson - Projects',
         // TODO: I really dislike view configuration being placed in the route

@@ -1,0 +1,20 @@
+doctype xml
+feed(xmlns="http://www.w3.org/2005/Atom")
+  title= config.title
+  id= config.url
+  if articles.length > 0
+    - var updatedDate = articles[0].date;
+    - var updatedDateStr = updatedDate.toISOString();
+    updated= updatedDateStr
+  author
+    name= config.author
+  for article in articles
+    entry
+      title= article.title
+      link(rel="alternate", href=article.url)
+      id= article.url
+      published= article.date.toISOString()
+      updated= article.date.toISOString()
+      author
+        name= config.author
+      summary(type="html")= article.summary

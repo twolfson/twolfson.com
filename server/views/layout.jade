@@ -1,0 +1,90 @@
+doctype html
+html
+  head
+    //- TODO: Assert all of this meta content
+    title= locals.title || config.title
+    link(rel="shortcut icon", href="/public/images/favicon.ico")
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono", type="text/css")
+    //- TODO: Revisit hack on comment
+    //= "Full CSS available at /public/css/index.css"
+    link(rel="stylesheet", href="/public/css/index.min.css", type="text/css", media="all")
+    link(rel="alternate", href="/index.xml", title="twolfson.com blog feed", type="application/atom+xml")
+    if locals.seoKeywords
+      meta(name="keywords", content=seoKeywords)
+    if locals.seoDescription
+      meta(name="description", content=seoDescription)
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    //- Output environment
+    //- TODO: Assert this is the same
+    script(type="text/javascript").
+      window.env = "<%= locals.env %>";
+    script(src="/public/js/index.js")
+    if locals.enableGrid
+      script(type="text/javascript").
+        // http://peol.github.io/960gridder/#overriding
+        var gOverride = {
+          urlBase: '/public/js/960gridder/',
+          gColumns: 12,
+          gWidth: 27 / 2, // Gutter width (divided by 2?)
+          // pColor: '#333',
+          pHeight: 27 / 2, // Line height (divided by 2 for easier baseline)
+          // pOffset: 9, // Baseline offset
+          size: 960
+        };
+        domready(function () {
+          var $960gridder = document.createElement('script');
+          $960gridder.src = '/public/js/960gridder/960.gridder.js';
+          document.body.appendChild($960gridder);
+        });
+  body
+    div#global-wrapper.container
+      div#global-main
+        //- TODO: Restore accessibility classes to sprites (visually test Chrome) -_-;;
+        //- TODO: Gather screenshots in all browsers
+        .flexbox.container__row.push-half--top.push-half--bottom
+          h1.brand.flexbox__item.width4.align--baseline
+            a.link--hidden(href="/") Todd Wolfson
+          h2.brand.flexbox__item.width5.align--baseline Software Engineer
+          .flexbox__item.text--right.alpha
+            a.icon-github.push--right(href="http://github.com/twolfson/" target="_blank")
+                //- <span class="accessibility">GitHub</span>
+            a.icon-twitter.push--right(href="http://twitter.com/twolfsn/" target="_blank")
+                //- <span class="accessibility">Twitter</span>
+            a.icon-rss(href="/index.xml" target="_blank")
+                //- <span class="accessibility">RSS</span>
+        //- TODO: Add back `island` on a per-page basis via push--top
+        - var navMargin = locals.navMargin === false ? '' : 'push--bottom';
+        .row--bordered--ends(class=navMargin)
+          .container__row
+            ul.nav
+              - var navLinks = [];
+              - navLinks.push({name: 'blog', href: '/'});
+              - navLinks.push({name: 'projects', href: '/projects'});
+              - navLinks.push({name: 'contact', href: '/contact'});
+              for navLink in navLinks
+                - var navName = navLink.name;
+                - var isSelected = page === navName ? 'link--active' : '';
+                li.nav--item
+                  a(href!=navLink.href, class=isSelected)= navName
+              li.nav--item.float--right
+                - var isSelected = page === 'support-me' ? 'link--active' : '';
+                a(href="/support-me", class=isSelected) support me
+        != body
+    //- end of #global-wrapper
+    #global-footer.container.text--center.center--center
+      div
+        //- TODO: Verify hr is styled across all browsers
+        hr.width5.center--center.push-half--bottom
+      p.flush--bottom
+        small
+          = "Built by "
+          a(href="/contact") Todd Wolfson
+          = " under the "
+          a(href="/license") MIT License
+          //- TODO: Remove excess whitespace
+          = " "
+          br
+          = "Powered by "
+          a(href="http://expressjs.com/") express
+          = " and "
+          a(href="http://twolfson.github.com/jojo/") jojo

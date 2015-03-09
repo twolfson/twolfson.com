@@ -1,0 +1,37 @@
+.container__row
+  .span12
+    h1 Support Me
+    p Thank you for supporting me! I really appreciate any and every donation =)
+.container__row
+  .span4.text--right
+    a(href=gratipayUrl)
+      button.inline-span3.btn.btn--medium.push--bottom
+        img.valign--text-bottom(src="/public/images/support/gratipay.png", alt="Graitpay logo")
+        //- TODO: Repair name typos ^v
+        = " Graitpay"
+  .span4.text--center
+    a(href=flattrUrl)
+      button.inline-span3.btn.btn--medium.row--bordered.push--bottom
+        img.valign--text-bottom(src="/public/images/support/flattr.png", alt="Flattr logo")
+        = " Flattr"
+  .span4.text--left
+    a(href=paypalUrl)
+      button.inline-span3.btn.btn--medium.row--bordered.push--bottom
+        img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
+        = " PayPal"
+.container__row.flexbox.push--bottom
+  .flexbox__item.width1 &nbsp;
+  .flexbox__item.width2
+    img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Bitcoin logo")
+    = " Bitcoin"
+  .flexbox__item.width8
+    pre.flush--bottom
+      code.no-highlight= donationConfig.bitcoin
+.container__row.flexbox.push--bottom
+  .flexbox__item.width1 &nbsp;
+  .flexbox__item.width2
+    img.valign--text-bottom(src="/public/images/support/dogecoin.png", alt="Dogecoin logo")
+    = " Dogecoin"
+  .flexbox__item.width8
+    pre.flush--bottom
+      code.no-highlight= donationConfig.dogecoin
