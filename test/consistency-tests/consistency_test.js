@@ -12,7 +12,7 @@ var serverUtils = require('../utils/server');
 // Load in our target URLs
 var urls = [
   // // `urls.yml`
-  // '/',
+  '/',
   // '/2012-11-17-subtle-anti-patterns',
   // '/2013-07-11-axioms-of-maintainability # Blog post with code highlighting',
   // '/2013-07-24-abandoned-project:-kaleidoscope # Blog post with images',
