@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.50.0 - Moved from EJS to Jade
+
 3.49.0 - Cleaned up EJS and made loops saner to make Jade transition easier
 
 3.48.1 - Accepted latest perceptual diffs
