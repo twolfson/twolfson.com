@@ -22,7 +22,7 @@
             .flexbox__item.width2
               label.text--right(for="message", required="required") Message:&nbsp;
             .flexbox__item.width6
-              textarea#message.row--bordered.span5.flush--left(name="message", type="text", rows="3")
+              textarea#message.row--bordered.span5.flush--left(name="message", rows="3")
           .text--center
             button#submitButton.btn.btn--huge.delta(type="submit") Contact Todd
         else if locals.emailStatus === true
