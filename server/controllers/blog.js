@@ -42,7 +42,7 @@ exports.article = function (config) {
 exports.rss = function (config) {
   return [
     function renderRss (req, res) {
-      res.render('xml.ejs', {layout: false, articles: config.articles});
+      res.render('xml.jade', {layout: false, articles: config.articles});
     }
   ];
 };
