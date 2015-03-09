@@ -11,7 +11,7 @@ var serverUtils = require('../utils/server');
 
 // Load in our target URLs
 var urls = [
-  // // `urls.yml`
+  // `urls.yml`
   '/',
   '/2012-11-17-subtle-anti-patterns',
   '/2013-07-11-axioms-of-maintainability # Blog post with code highlighting',
@@ -24,13 +24,13 @@ var urls = [
   '/contact/success',
   '/contact/failure',
   '/404',
-  // '/500',
-  // '/license',
-  // '/support-me',
+  '/500',
+  '/license',
+  '/support-me',
 
-  // // Custom extras
-  // '/index.xml',
-  // '/kaleido'
+  // Custom extras
+  '/index.xml',
+  '/kaleido'
 ];
 
 function normalize(body) {
