@@ -3,7 +3,6 @@ var assert = require('assert');
 var assertDiff = require('assert-diff');
 var fs = require('fs');
 var beautify = require('html').prettyPrint;
-var diff = require('diff');
 var minify = require('html-minifier').minify;
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
@@ -34,7 +33,8 @@ var urls = [
 
 function normalize(body) {
   var minHtml = minify(body, {
-    collapseWhitespace: true
+    collapseWhitespace: true,
+    removeEmptyAttributes: true
   });
   var beautyHtml = beautify(minHtml);
   return beautyHtml;
