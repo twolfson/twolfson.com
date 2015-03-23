@@ -272,15 +272,15 @@ The provided mixins are intended to be used with the array-like variables
 @mixin retina-sprite($sprite-pair) {
   @include sprite(nth($sprite-pair, 2));
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-         only screen and (   min--moz-device-pixel-ratio: 2),
-         only screen and (     -o-min-device-pixel-ratio: 2/1),
-         only screen and (        min-device-pixel-ratio: 2),
-         only screen and (                min-resolution: 192dpi),
-         only screen and (                min-resolution: 2dppx) {
+  // @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  //        only screen and (   min--moz-device-pixel-ratio: 2),
+  //        only screen and (     -o-min-device-pixel-ratio: 2/1),
+  //        only screen and (        min-device-pixel-ratio: 2),
+  //        only screen and (                min-resolution: 192dpi),
+  //        only screen and (                min-resolution: 2dppx) {
     @include sprite-image(nth($sprite-pair, 3));
     @include sprite-background-size(nth($sprite-pair, 2));
-  }
+  // }
 }
 
 /*
