@@ -266,7 +266,7 @@ The provided mixins are intended to be used with the array-like variables
   @include sprite-height($sprite);
 }
 @mixin sprite-background-size($sprite) {
-  background-size: nth($sprite, 6) nth($sprite, 7);
+  background-size: nth($sprite, 7) nth($sprite, 8);
 }
 
 @mixin retina-sprite($sprite-pair) {
