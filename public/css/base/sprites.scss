@@ -14,8 +14,8 @@ $retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $r
 
 // TODO: Consider renaming sprite pairs to retina pairs
 @each $sprite-pair in $retina-pairs {
-  $sprite-name: nth(nth($sprite-pair, 1), 10);
-  .#{$sprite-name} {
+  $sprite-name: nth($sprite-pair, 1);
+  .icon-#{$sprite-name} {
     @include retina-sprite($sprite-pair);
   }
 }

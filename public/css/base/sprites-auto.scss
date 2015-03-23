@@ -219,15 +219,15 @@ $spritesheet-retina-height: 576px;
 $spritesheet-retina-image: '../images/sprites-2x.png';
 $spritesheet-retina-sprites: ($bar-lines-normal, $eye-normal, $github-normal, $heart-normal, $purple-fork-normal, $purple-star-normal, $ribbon-normal, $rss-normal, $twitter-normal, );
 $spritesheet-retina: (576px, 576px, '../images/sprites-2x.png', $spritesheet-retina-sprites, );
-$bar-lines: $bar-lines-normal, $bar-lines-2x;
-$eye: $eye-normal, $eye-2x;
-$github: $github-normal, $github-2x;
-$heart: $heart-normal, $heart-2x;
-$purple-fork: $purple-fork-normal, $purple-fork-2x;
-$purple-star: $purple-star-normal, $purple-star-2x;
-$ribbon: $ribbon-normal, $ribbon-2x;
-$rss: $rss-normal, $rss-2x;
-$twitter: $twitter-normal, $twitter-2x;
+$bar-lines: 'bar-lines', $bar-lines-normal, $bar-lines-2x;
+$eye: 'eye', $eye-normal, $eye-2x;
+$github: 'github', $github-normal, $github-2x;
+$heart: 'heart', $heart-normal, $heart-2x;
+$purple-fork: 'purple-fork', $purple-fork-normal, $purple-fork-2x;
+$purple-star: 'purple-star', $purple-star-normal, $purple-star-2x;
+$ribbon: 'ribbon', $ribbon-normal, $ribbon-2x;
+$rss: 'rss', $rss-normal, $rss-2x;
+$twitter: 'twitter', $twitter-normal, $twitter-2x;
 
 /*
 The provided mixins are intended to be used with the array-like variables
@@ -270,7 +270,7 @@ The provided mixins are intended to be used with the array-like variables
 }
 
 @mixin retina-sprite($sprite-pair) {
-  @include sprite(nth($sprite-pair, 1));
+  @include sprite(nth($sprite-pair, 2));
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
          only screen and (   min--moz-device-pixel-ratio: 2),
@@ -278,8 +278,8 @@ The provided mixins are intended to be used with the array-like variables
          only screen and (        min-device-pixel-ratio: 2),
          only screen and (                min-resolution: 192dpi),
          only screen and (                min-resolution: 2dppx) {
-    @include sprite-image(nth($sprite-pair, 2));
-    @include sprite-background-size(nth($sprite-pair, 1));
+    @include sprite-image(nth($sprite-pair, 3));
+    @include sprite-background-size(nth($sprite-pair, 2));
   }
 }
 
@@ -291,9 +291,9 @@ The `sprites` mixin generates identical output to the CSS template
 */
 @mixin retina-sprites($sprite-pairs) {
   @each $sprite-pair in $sprite-pairs {
-    $sprite-name: nth(nth($sprite-pair, 1), 10);
+    $sprite-name: nth($sprite-pair, 1);
     .#{$sprite-name} {
-      @include retina-sprite($sprite-pair);
+      @include sprite-pair($sprite-pair);
     }
   }
 }
