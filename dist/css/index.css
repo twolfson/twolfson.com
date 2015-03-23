@@ -2823,93 +2823,93 @@ The `sprites` mixin generates identical output to the CSS template
   height: 32px;
 }
 */
-.bar-lines {
+.icon-bar-lines {
   background-image: url(../images/sprites.png);
   background-position: -256px 0px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .bar-lines {
+    .icon-bar-lines {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.eye {
+.icon-eye {
   background-image: url(../images/sprites.png);
   background-position: -224px -32px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .eye {
+    .icon-eye {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.github {
+.icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -64px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .github {
+    .icon-github {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.heart {
+.icon-heart {
   background-image: url(../images/sprites.png);
   background-position: -160px -96px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .heart {
+    .icon-heart {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.purple-fork {
+.icon-purple-fork {
   background-image: url(../images/sprites.png);
   background-position: -128px -128px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .purple-fork {
+    .icon-purple-fork {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.purple-star {
+.icon-purple-star {
   background-image: url(../images/sprites.png);
   background-position: -96px -160px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .purple-star {
+    .icon-purple-star {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.ribbon {
+.icon-ribbon {
   background-image: url(../images/sprites.png);
   background-position: -64px -192px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .ribbon {
+    .icon-ribbon {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.rss {
+.icon-rss {
   background-image: url(../images/sprites.png);
   background-position: -32px -224px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .rss {
+    .icon-rss {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
-.twitter {
+.icon-twitter {
   background-image: url(../images/sprites.png);
   background-position: 0px -256px;
   width: 32px;
   height: 32px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .twitter {
+    .icon-twitter {
       background-image: url(../images/sprites-2x.png);
       background-size: 32px 288px; } }
 
