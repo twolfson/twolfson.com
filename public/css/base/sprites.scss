@@ -10,6 +10,7 @@
   height: 32px;
 }
 */
+// TODO: We need to define retina pairs in our template
 $retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter;
 
 // TODO: Consider renaming sprite pairs to retina pairs
@@ -29,7 +30,6 @@ $retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $r
 .icon-purple-star,
 .icon-ribbon,
 .icon-rss,
-.icon-star,
 .icon-twitter {
   font-size: 32px;
   line-height: 32px;
