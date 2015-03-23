@@ -43,9 +43,12 @@ module.exports = function (grunt) {
     sprite: {
       all: {
         src: 'public/images/sprites/*.png',
+        retinaSrcFilter: 'public/images/sprites/*-2x.png',
         dest: 'public/images/sprites.png',
+        retinaDest: 'public/images/sprites-2x.png',
         destCss: 'public/css/base/sprites-auto.scss',
         imgPath: '../images/sprites.png',
+        retinaImgPath: '../images/sprites-2x.png',
         algorithm: 'alt-diagonal'
       }
     },
