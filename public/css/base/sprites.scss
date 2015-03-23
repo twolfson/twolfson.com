@@ -10,10 +10,13 @@
   height: 32px;
 }
 */
-@each $sprite in $spritesheet-sprites {
-  $sprite-name: nth($sprite, 10);
-  .icon-#{$sprite-name} {
-    @include sprite($sprite);
+$retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter;
+
+// TODO: Consider renaming sprite pairs to retina pairs
+@each $sprite-pair in $retina-pairs {
+  $sprite-name: nth(nth($sprite-pair, 1), 10);
+  .#{$sprite-name} {
+    @include sprite-pair($sprite-pair);
   }
 }
 

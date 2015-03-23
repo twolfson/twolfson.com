@@ -270,7 +270,7 @@ The provided mixins are intended to be used with the array-like variables
 }
 
 @mixin retina-sprite($sprite-pair) {
-  @include sprite(nth($sprite-pair, 0));
+  @include sprite(nth($sprite-pair, 1));
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
          only screen and (   min--moz-device-pixel-ratio: 2),
@@ -278,8 +278,8 @@ The provided mixins are intended to be used with the array-like variables
          only screen and (        min-device-pixel-ratio: 2),
          only screen and (                min-resolution: 192dpi),
          only screen and (                min-resolution: 2dppx) {
-    @include sprite-image(nth($sprite-pair, 1));
-    @include sprite-background-size(nth($sprite-pair, 0));
+    @include sprite-image(nth($sprite-pair, 2));
+    @include sprite-background-size(nth($sprite-pair, 1));
   }
 }
 
@@ -291,7 +291,7 @@ The `sprites` mixin generates identical output to the CSS template
 */
 @mixin retina-sprites($sprite-pairs) {
   @each $sprite-pair in $sprite-pairs {
-    $sprite-name: nth(nth($sprite-pair, 0), 10);
+    $sprite-name: nth(nth($sprite-pair, 1), 10);
     .#{$sprite-name} {
       @include sprite-pair($sprite-pair);
     }
