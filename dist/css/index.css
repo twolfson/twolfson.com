@@ -2823,65 +2823,95 @@ The `sprites` mixin generates identical output to the CSS template
   height: 32px;
 }
 */
-.icon-bar-lines {
+.bar-lines-normal {
   background-image: url(../images/sprites.png);
-  background-position: -256px -20px;
+  background-position: -256px 0px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .bar-lines-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-eye {
+.eye-normal {
   background-image: url(../images/sprites.png);
-  background-position: -224px -52px;
+  background-position: -224px -32px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .eye-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-github {
+.github-normal {
   background-image: url(../images/sprites.png);
-  background-position: -192px -84px;
+  background-position: -192px -64px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .github-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-heart {
+.heart-normal {
   background-image: url(../images/sprites.png);
-  background-position: -160px -116px;
+  background-position: -160px -96px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .heart-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-purple-fork {
+.purple-fork-normal {
   background-image: url(../images/sprites.png);
-  background-position: -128px -148px;
+  background-position: -128px -128px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .purple-fork-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-purple-star {
+.purple-star-normal {
   background-image: url(../images/sprites.png);
-  background-position: -96px -180px;
+  background-position: -96px -160px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .purple-star-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-ribbon {
+.ribbon-normal {
   background-image: url(../images/sprites.png);
-  background-position: -64px -212px;
+  background-position: -64px -192px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .ribbon-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-rss {
+.rss-normal {
   background-image: url(../images/sprites.png);
-  background-position: -32px -244px;
+  background-position: -32px -224px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .rss-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
-.icon-star {
+.twitter-normal {
   background-image: url(../images/sprites.png);
-  background-position: -288px 0px;
-  width: 21px;
-  height: 20px; }
-
-.icon-twitter {
-  background-image: url(../images/sprites.png);
-  background-position: 0px -276px;
+  background-position: 0px -256px;
   width: 32px;
   height: 32px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .twitter-normal {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 32px 288px; } }
 
 .icon-bar-lines,
 .icon-eye,

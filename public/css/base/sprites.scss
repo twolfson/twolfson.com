@@ -16,7 +16,7 @@ $retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $r
 @each $sprite-pair in $retina-pairs {
   $sprite-name: nth(nth($sprite-pair, 1), 10);
   .#{$sprite-name} {
-    @include sprite-pair($sprite-pair);
+    @include retina-sprite($sprite-pair);
   }
 }
 

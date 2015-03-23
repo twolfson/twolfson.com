@@ -293,7 +293,7 @@ The `sprites` mixin generates identical output to the CSS template
   @each $sprite-pair in $sprite-pairs {
     $sprite-name: nth(nth($sprite-pair, 1), 10);
     .#{$sprite-name} {
-      @include sprite-pair($sprite-pair);
+      @include retina-sprite($sprite-pair);
     }
   }
 }
