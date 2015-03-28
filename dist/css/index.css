@@ -2799,6 +2799,11 @@ At the bottom of this section, we provide information about the spritesheet itse
 $spritesheet: width height image $spritesheet-sprites;
 */
 /*
+These are variables that map to original `normal` and `retina` sprite counterparts.
+
+The list formats are intended to be used with mixins like `retina-sprite` and `retina-sprites`
+*/
+/*
 The provided mixins are intended to be used with the array-like variables
 
 .icon-home {
@@ -2810,10 +2815,26 @@ The provided mixins are intended to be used with the array-like variables
 }
 */
 /*
+The `sprite-retina` mixin is intended to be used on a `sprite-group`.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home = ('icon-home', $icon-home-normal, $icon-home-retina);
+
+.icon-home {
+  @include retina-sprite($icon-home);
+}
+*/
+/*
 The `sprites` mixin generates identical output to the CSS template
   but can be overridden inside of SCSS
 
 @include sprites($spritesheet-sprites);
+*/
+/*
+The `retina-sprites` mixin generates classes for retina sprite groups
+
+@include retina-sprites($retina-sprites);
 */
 /*
 .icon-purple-fork {
@@ -2827,73 +2848,91 @@ The `sprites` mixin generates identical output to the CSS template
   background-image: url(../images/sprites.png);
   background-position: -256px 0px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-bar-lines {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-eye {
   background-image: url(../images/sprites.png);
   background-position: -224px -32px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-eye {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-github {
   background-image: url(../images/sprites.png);
   background-position: -192px -64px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-github {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-heart {
   background-image: url(../images/sprites.png);
   background-position: -160px -96px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-heart {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-purple-fork {
   background-image: url(../images/sprites.png);
   background-position: -128px -128px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-purple-fork {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-purple-star {
   background-image: url(../images/sprites.png);
   background-position: -96px -160px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-purple-star {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-ribbon {
   background-image: url(../images/sprites.png);
   background-position: -64px -192px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-ribbon {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-rss {
   background-image: url(../images/sprites.png);
   background-position: -32px -224px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-rss {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-twitter {
   background-image: url(../images/sprites.png);
   background-position: 0px -256px;
   width: 32px;
-  height: 32px;
-  background-image: url(../images/sprites-2x.png);
-  background-size: 288px 288px; }
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-twitter {
+      background-image: url(../images/sprites-2x.png);
+      background-size: 288px 288px; } }
 
 .icon-bar-lines,
 .icon-eye,
