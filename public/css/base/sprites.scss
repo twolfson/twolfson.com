@@ -10,14 +10,10 @@
   height: 32px;
 }
 */
-// TODO: We need to define retina pairs in our template
-$retina-pairs: $bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter;
-
-// TODO: Consider renaming sprite pairs to retina pairs
-@each $sprite-pair in $retina-pairs {
-  $sprite-name: nth($sprite-pair, 1);
+@each $retina-sprite in $retina-sprites {
+  $sprite-name: nth($retina-sprite, 1);
   .icon-#{$sprite-name} {
-    @include retina-sprite($sprite-pair);
+    @include retina-sprite($retina-sprite);
   }
 }
 
