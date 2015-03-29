@@ -11,105 +11,105 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-$bar-lines-normal-name: 'bar-lines-normal';
-$bar-lines-normal-x: 256px;
-$bar-lines-normal-y: 0px;
-$bar-lines-normal-offset-x: -256px;
-$bar-lines-normal-offset-y: 0px;
-$bar-lines-normal-width: 32px;
-$bar-lines-normal-height: 32px;
-$bar-lines-normal-total-width: 288px;
-$bar-lines-normal-total-height: 288px;
-$bar-lines-normal-image: '../images/sprites.png';
-$bar-lines-normal: (256px, 0px, -256px, 0px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'bar-lines-normal', );
-$eye-normal-name: 'eye-normal';
-$eye-normal-x: 224px;
-$eye-normal-y: 32px;
-$eye-normal-offset-x: -224px;
-$eye-normal-offset-y: -32px;
-$eye-normal-width: 32px;
-$eye-normal-height: 32px;
-$eye-normal-total-width: 288px;
-$eye-normal-total-height: 288px;
-$eye-normal-image: '../images/sprites.png';
-$eye-normal: (224px, 32px, -224px, -32px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'eye-normal', );
-$github-normal-name: 'github-normal';
-$github-normal-x: 192px;
-$github-normal-y: 64px;
-$github-normal-offset-x: -192px;
-$github-normal-offset-y: -64px;
-$github-normal-width: 32px;
-$github-normal-height: 32px;
-$github-normal-total-width: 288px;
-$github-normal-total-height: 288px;
-$github-normal-image: '../images/sprites.png';
-$github-normal: (192px, 64px, -192px, -64px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'github-normal', );
-$heart-normal-name: 'heart-normal';
-$heart-normal-x: 160px;
-$heart-normal-y: 96px;
-$heart-normal-offset-x: -160px;
-$heart-normal-offset-y: -96px;
-$heart-normal-width: 32px;
-$heart-normal-height: 32px;
-$heart-normal-total-width: 288px;
-$heart-normal-total-height: 288px;
-$heart-normal-image: '../images/sprites.png';
-$heart-normal: (160px, 96px, -160px, -96px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'heart-normal', );
-$purple-fork-normal-name: 'purple-fork-normal';
-$purple-fork-normal-x: 128px;
-$purple-fork-normal-y: 128px;
-$purple-fork-normal-offset-x: -128px;
-$purple-fork-normal-offset-y: -128px;
-$purple-fork-normal-width: 32px;
-$purple-fork-normal-height: 32px;
-$purple-fork-normal-total-width: 288px;
-$purple-fork-normal-total-height: 288px;
-$purple-fork-normal-image: '../images/sprites.png';
-$purple-fork-normal: (128px, 128px, -128px, -128px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'purple-fork-normal', );
-$purple-star-normal-name: 'purple-star-normal';
-$purple-star-normal-x: 96px;
-$purple-star-normal-y: 160px;
-$purple-star-normal-offset-x: -96px;
-$purple-star-normal-offset-y: -160px;
-$purple-star-normal-width: 32px;
-$purple-star-normal-height: 32px;
-$purple-star-normal-total-width: 288px;
-$purple-star-normal-total-height: 288px;
-$purple-star-normal-image: '../images/sprites.png';
-$purple-star-normal: (96px, 160px, -96px, -160px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'purple-star-normal', );
-$ribbon-normal-name: 'ribbon-normal';
-$ribbon-normal-x: 64px;
-$ribbon-normal-y: 192px;
-$ribbon-normal-offset-x: -64px;
-$ribbon-normal-offset-y: -192px;
-$ribbon-normal-width: 32px;
-$ribbon-normal-height: 32px;
-$ribbon-normal-total-width: 288px;
-$ribbon-normal-total-height: 288px;
-$ribbon-normal-image: '../images/sprites.png';
-$ribbon-normal: (64px, 192px, -64px, -192px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'ribbon-normal', );
-$rss-normal-name: 'rss-normal';
-$rss-normal-x: 32px;
-$rss-normal-y: 224px;
-$rss-normal-offset-x: -32px;
-$rss-normal-offset-y: -224px;
-$rss-normal-width: 32px;
-$rss-normal-height: 32px;
-$rss-normal-total-width: 288px;
-$rss-normal-total-height: 288px;
-$rss-normal-image: '../images/sprites.png';
-$rss-normal: (32px, 224px, -32px, -224px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'rss-normal', );
-$twitter-normal-name: 'twitter-normal';
-$twitter-normal-x: 0px;
-$twitter-normal-y: 256px;
-$twitter-normal-offset-x: 0px;
-$twitter-normal-offset-y: -256px;
-$twitter-normal-width: 32px;
-$twitter-normal-height: 32px;
-$twitter-normal-total-width: 288px;
-$twitter-normal-total-height: 288px;
-$twitter-normal-image: '../images/sprites.png';
-$twitter-normal: (0px, 256px, 0px, -256px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'twitter-normal', );
+$bar-lines-name: 'bar-lines';
+$bar-lines-x: 256px;
+$bar-lines-y: 0px;
+$bar-lines-offset-x: -256px;
+$bar-lines-offset-y: 0px;
+$bar-lines-width: 32px;
+$bar-lines-height: 32px;
+$bar-lines-total-width: 288px;
+$bar-lines-total-height: 288px;
+$bar-lines-image: '../images/sprites.png';
+$bar-lines: (256px, 0px, -256px, 0px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'bar-lines', );
+$eye-name: 'eye';
+$eye-x: 224px;
+$eye-y: 32px;
+$eye-offset-x: -224px;
+$eye-offset-y: -32px;
+$eye-width: 32px;
+$eye-height: 32px;
+$eye-total-width: 288px;
+$eye-total-height: 288px;
+$eye-image: '../images/sprites.png';
+$eye: (224px, 32px, -224px, -32px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'eye', );
+$github-name: 'github';
+$github-x: 192px;
+$github-y: 64px;
+$github-offset-x: -192px;
+$github-offset-y: -64px;
+$github-width: 32px;
+$github-height: 32px;
+$github-total-width: 288px;
+$github-total-height: 288px;
+$github-image: '../images/sprites.png';
+$github: (192px, 64px, -192px, -64px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'github', );
+$heart-name: 'heart';
+$heart-x: 160px;
+$heart-y: 96px;
+$heart-offset-x: -160px;
+$heart-offset-y: -96px;
+$heart-width: 32px;
+$heart-height: 32px;
+$heart-total-width: 288px;
+$heart-total-height: 288px;
+$heart-image: '../images/sprites.png';
+$heart: (160px, 96px, -160px, -96px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'heart', );
+$purple-fork-name: 'purple-fork';
+$purple-fork-x: 128px;
+$purple-fork-y: 128px;
+$purple-fork-offset-x: -128px;
+$purple-fork-offset-y: -128px;
+$purple-fork-width: 32px;
+$purple-fork-height: 32px;
+$purple-fork-total-width: 288px;
+$purple-fork-total-height: 288px;
+$purple-fork-image: '../images/sprites.png';
+$purple-fork: (128px, 128px, -128px, -128px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'purple-fork', );
+$purple-star-name: 'purple-star';
+$purple-star-x: 96px;
+$purple-star-y: 160px;
+$purple-star-offset-x: -96px;
+$purple-star-offset-y: -160px;
+$purple-star-width: 32px;
+$purple-star-height: 32px;
+$purple-star-total-width: 288px;
+$purple-star-total-height: 288px;
+$purple-star-image: '../images/sprites.png';
+$purple-star: (96px, 160px, -96px, -160px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'purple-star', );
+$ribbon-name: 'ribbon';
+$ribbon-x: 64px;
+$ribbon-y: 192px;
+$ribbon-offset-x: -64px;
+$ribbon-offset-y: -192px;
+$ribbon-width: 32px;
+$ribbon-height: 32px;
+$ribbon-total-width: 288px;
+$ribbon-total-height: 288px;
+$ribbon-image: '../images/sprites.png';
+$ribbon: (64px, 192px, -64px, -192px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'ribbon', );
+$rss-name: 'rss';
+$rss-x: 32px;
+$rss-y: 224px;
+$rss-offset-x: -32px;
+$rss-offset-y: -224px;
+$rss-width: 32px;
+$rss-height: 32px;
+$rss-total-width: 288px;
+$rss-total-height: 288px;
+$rss-image: '../images/sprites.png';
+$rss: (32px, 224px, -32px, -224px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'rss', );
+$twitter-name: 'twitter';
+$twitter-x: 0px;
+$twitter-y: 256px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -256px;
+$twitter-width: 32px;
+$twitter-height: 32px;
+$twitter-total-width: 288px;
+$twitter-total-height: 288px;
+$twitter-image: '../images/sprites.png';
+$twitter: (0px, 256px, 0px, -256px, 32px, 32px, 288px, 288px, '../images/sprites.png', 'twitter', );
 $bar-lines-2x-name: 'bar-lines-2x';
 $bar-lines-2x-x: 512px;
 $bar-lines-2x-y: 0px;
@@ -212,7 +212,7 @@ $twitter-2x: (0px, 512px, 0px, -512px, 64px, 64px, 576px, 576px, '../images/spri
 $spritesheet-width: 288px;
 $spritesheet-height: 288px;
 $spritesheet-image: '../images/sprites.png';
-$spritesheet-sprites: ($bar-lines-normal, $eye-normal, $github-normal, $heart-normal, $purple-fork-normal, $purple-star-normal, $ribbon-normal, $rss-normal, $twitter-normal, );
+$spritesheet-sprites: ($bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter, );
 $spritesheet: (288px, 288px, '../images/sprites.png', $spritesheet-sprites, );
 $spritesheet-retina-width: 576px;
 $spritesheet-retina-height: 576px;
@@ -221,29 +221,29 @@ $spritesheet-retina-sprites: ($bar-lines-2x, $eye-2x, $github-2x, $heart-2x, $pu
 $spritesheet-retina: (576px, 576px, '../images/sprites-2x.png', $spritesheet-retina-sprites, );
 
 /*
-These are variables that map to original `normal` and `retina` sprite counterparts.
+These variables are known as "retina groups", they are mappings to `normal` and `retina` sprite variables.
 
 The list formats are intended to be used with mixins like `retina-sprite` and `retina-sprites`
 */
-$bar-lines-name: 'bar-lines';
-$bar-lines: ('bar-lines', $bar-lines-normal, $bar-lines-2x, );
-$eye-name: 'eye';
-$eye: ('eye', $eye-normal, $eye-2x, );
-$github-name: 'github';
-$github: ('github', $github-normal, $github-2x, );
-$heart-name: 'heart';
-$heart: ('heart', $heart-normal, $heart-2x, );
-$purple-fork-name: 'purple-fork';
-$purple-fork: ('purple-fork', $purple-fork-normal, $purple-fork-2x, );
-$purple-star-name: 'purple-star';
-$purple-star: ('purple-star', $purple-star-normal, $purple-star-2x, );
-$ribbon-name: 'ribbon';
-$ribbon: ('ribbon', $ribbon-normal, $ribbon-2x, );
-$rss-name: 'rss';
-$rss: ('rss', $rss-normal, $rss-2x, );
-$twitter-name: 'twitter';
-$twitter: ('twitter', $twitter-normal, $twitter-2x, );
-$retina-sprites: ($bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter, );
+$bar-lines-group-name: 'bar-lines';
+$bar-lines-group: ('bar-lines', $bar-lines, $bar-lines-2x, );
+$eye-group-name: 'eye';
+$eye-group: ('eye', $eye, $eye-2x, );
+$github-group-name: 'github';
+$github-group: ('github', $github, $github-2x, );
+$heart-group-name: 'heart';
+$heart-group: ('heart', $heart, $heart-2x, );
+$purple-fork-group-name: 'purple-fork';
+$purple-fork-group: ('purple-fork', $purple-fork, $purple-fork-2x, );
+$purple-star-group-name: 'purple-star';
+$purple-star-group: ('purple-star', $purple-star, $purple-star-2x, );
+$ribbon-group-name: 'ribbon';
+$ribbon-group: ('ribbon', $ribbon, $ribbon-2x, );
+$rss-group-name: 'rss';
+$rss-group: ('rss', $rss, $rss-2x, );
+$twitter-group-name: 'twitter';
+$twitter-group: ('twitter', $twitter, $twitter-2x, );
+$retina-groups: ($bar-lines-group, $eye-group, $github-group, $heart-group, $purple-fork-group, $purple-star-group, $ribbon-group, $rss-group, $twitter-group, );
 
 /*
 The provided mixins are intended to be used with the array-like variables
@@ -283,23 +283,23 @@ The provided mixins are intended to be used with the array-like variables
 }
 
 /*
-The `sprite-retina` mixin is intended to be used on a `sprite-group`.
+The `sprite-retina` mixin is intended to be used on a "retina group".
 
 The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
 
-$icon-home = ('icon-home', $icon-home-normal, $icon-home-retina);
+$icon-home-group = ('icon-home', $icon-home, $icon-home-retina);
 
 .icon-home {
-  @include retina-sprite($icon-home);
+  @include retina-sprite($icon-home-group);
 }
 */
 @mixin sprite-background-size($sprite) {
   background-size: nth($sprite, 7) nth($sprite, 8);
 }
 
-@mixin retina-sprite($sprite-group) {
-  $normal-sprite: nth($sprite-group, 2);
-  $retina-sprite: nth($sprite-group, 3);
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
   @include sprite($normal-sprite);
 
   @media (-webkit-min-device-pixel-ratio: 2),
@@ -327,13 +327,13 @@ The `sprites` mixin generates identical output to the CSS template
 /*
 The `retina-sprites` mixin generates classes for retina sprite groups
 
-@include retina-sprites($retina-sprites);
+@include retina-sprites($retina-groups);
 */
-@mixin retina-sprites($retina-sprites) {
-  @each $retina-sprite in $retina-sprites {
-    $sprite-name: nth($retina-sprite, 1);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
     .#{$sprite-name} {
-      @include retina-sprite($retina-sprite);
+      @include retina-sprite($retina-group);
     }
   }
 }
