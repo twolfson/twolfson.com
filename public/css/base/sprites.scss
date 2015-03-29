@@ -10,10 +10,10 @@
   height: 32px;
 }
 */
-@each $retina-sprite in $retina-sprites {
-  $sprite-name: nth($retina-sprite, 1);
+@each $retina-group in $retina-groups {
+  $sprite-name: nth($retina-group, 1);
   .icon-#{$sprite-name} {
-    @include retina-sprite($retina-sprite);
+    @include retina-sprite($retina-group);
   }
 }
 
