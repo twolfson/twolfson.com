@@ -2799,9 +2799,9 @@ At the bottom of this section, we provide information about the spritesheet itse
 $spritesheet: width height image $spritesheet-sprites;
 */
 /*
-These variables are known as "retina groups", they are mappings to `normal` and `retina` sprite variables.
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
 
-The list formats are intended to be used with mixins like `retina-sprite` and `retina-sprites`
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
 */
 /*
 The provided mixins are intended to be used with the array-like variables
@@ -2815,11 +2815,12 @@ The provided mixins are intended to be used with the array-like variables
 }
 */
 /*
-The `sprite-retina` mixin is intended to be used on a "retina group".
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
 
 The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
 
-$icon-home-group = ('icon-home', $icon-home, $icon-home-retina);
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
 
 .icon-home {
   @include retina-sprite($icon-home-group);
@@ -2832,7 +2833,8 @@ The `sprites` mixin generates identical output to the CSS template
 @include sprites($spritesheet-sprites);
 */
 /*
-The `retina-sprites` mixin generates classes for retina sprite groups
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
 
 @include retina-sprites($retina-groups);
 */

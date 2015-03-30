@@ -214,16 +214,16 @@ $spritesheet-height: 288px;
 $spritesheet-image: '../images/sprites.png';
 $spritesheet-sprites: ($bar-lines, $eye, $github, $heart, $purple-fork, $purple-star, $ribbon, $rss, $twitter, );
 $spritesheet: (288px, 288px, '../images/sprites.png', $spritesheet-sprites, );
-$spritesheet-retina-width: 576px;
-$spritesheet-retina-height: 576px;
-$spritesheet-retina-image: '../images/sprites-2x.png';
-$spritesheet-retina-sprites: ($bar-lines-2x, $eye-2x, $github-2x, $heart-2x, $purple-fork-2x, $purple-star-2x, $ribbon-2x, $rss-2x, $twitter-2x, );
-$spritesheet-retina: (576px, 576px, '../images/sprites-2x.png', $spritesheet-retina-sprites, );
+$retina-spritesheet-width: 576px;
+$retina-spritesheet-height: 576px;
+$retina-spritesheet-image: '../images/sprites-2x.png';
+$retina-spritesheet-sprites: ($bar-lines-2x, $eye-2x, $github-2x, $heart-2x, $purple-fork-2x, $purple-star-2x, $ribbon-2x, $rss-2x, $twitter-2x, );
+$retina-spritesheet: (576px, 576px, '../images/sprites-2x.png', $retina-spritesheet-sprites, );
 
 /*
-These variables are known as "retina groups", they are mappings to `normal` and `retina` sprite variables.
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
 
-The list formats are intended to be used with mixins like `retina-sprite` and `retina-sprites`
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
 */
 $bar-lines-group-name: 'bar-lines';
 $bar-lines-group: ('bar-lines', $bar-lines, $bar-lines-2x, );
@@ -283,18 +283,21 @@ The provided mixins are intended to be used with the array-like variables
 }
 
 /*
-The `sprite-retina` mixin is intended to be used on a "retina group".
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
 
 The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
 
-$icon-home-group = ('icon-home', $icon-home, $icon-home-retina);
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
 
 .icon-home {
   @include retina-sprite($icon-home-group);
 }
 */
 @mixin sprite-background-size($sprite) {
-  background-size: nth($sprite, 7) nth($sprite, 8);
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
 }
 
 @mixin retina-sprite($retina-group) {
@@ -325,7 +328,8 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /*
-The `retina-sprites` mixin generates classes for retina sprite groups
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
 
 @include retina-sprites($retina-groups);
 */
