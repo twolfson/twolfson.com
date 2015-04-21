@@ -43,7 +43,21 @@ For you to follow along, we have created a [gist] with the images we are working
 
 For [grunt-spritesmith][] we need to provide all images via the `src`. This guarantees we will support plugins like [grunt-newer][] which require observing all origin images.
 
-With
+//- TODO: List out folder structure
+
+//- TODO: List out images and names
+
+```js
+src: ['*.png'] // Includes normal and `-2x` images
+```
+
+With retina support we need to indicate to [grunt-spritesmith][] which of these images is a retina image or not. To do this, we use the same [glob][] pattern we did for `src` but focused at `retina` sprites:
+
+//- TODO: We should provide finished product up front and explain details here
+
+```js
+retinaSrcFilter: ['*-2x.png']  // Only includes `-2x` images
+```
 
 //- TODO: Do we really want to go into this much detail? Yes, we should be helpful. But we need to be wary of using gists since they don't support nesting/good structure.
 
