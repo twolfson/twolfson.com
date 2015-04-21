@@ -59,6 +59,12 @@ With retina support we need to indicate to [grunt-spritesmith][] which of these 
 retinaSrcFilter: ['*-2x.png']  // Only includes `-2x` images
 ```
 
+// TODO: Outputting a normal and retina spritesheet
+
+// TODO: Outputting a single CSS file
+
+// TODO: More documentation and details can be found in the [grunt-spritesmith][] documentation
+
 //- TODO: Do we really want to go into this much detail? Yes, we should be helpful. But we need to be wary of using gists since they don't support nesting/good structure.
 
 # gulp
