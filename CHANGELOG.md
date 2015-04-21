@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.52.1 - Accepted latest perceptual diffs
+
 3.52.0 - Upgraded to `grunt-spritesmith@4.5.0` and added retina sprites
 
 3.51.0 - Added minor cleanups discovered during Jade transition
