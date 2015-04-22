@@ -195,7 +195,9 @@ Retina images, duplicate images that are twice as large (scaled 2x) for retina d
 
 For you to follow along, we have created a [gist][gulp-gist] with the images and configuration we are working with:
 
-// TODO: Create me
+https://gist.github.com/twolfson/860a1d47e483bc34e1fa
+
+[gulp-gist]: https://gist.github.com/twolfson/860a1d47e483bc34e1fa
 
 We will set up a `gulpfile.js` with the following config:
 
