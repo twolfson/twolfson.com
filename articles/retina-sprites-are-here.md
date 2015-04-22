@@ -10,7 +10,7 @@
 
 ![Retina spritesheet][]
 
-[Normal spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet.png)
+[Normal spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet.png
 [Retina spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet-2x.png
 
 [spritesmith][grunt-spritesmith] now supports retina spritesheets in its [grunt][grunt-spritesmith] and [gulp][gulp.spritesmith] flavors:
@@ -24,8 +24,6 @@ https://github.com/twolfson/gulp.spritesmith
 
 In this article, we will walk through getting set up with both the [grunt](#grunt) and [gulp](#gulp) flavors.
 
-//- TODO: Verify heading links work
-
 # grunt
 In a retina spritesheet project, we have 2 sets of images:
 
@@ -33,17 +31,17 @@ Normal images, showed to any user with a non-retina display:
 
 ![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
 
-[Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png)
-[GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png)
-[Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png)
+[Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png
+[GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
+[Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
 
 Retina images, duplicate images that are twice as large (scaled 2x) for retina displays. When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
 
 ![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
 
-[Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png)
-[Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png)
-[Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png)
+[Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png
+[Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
+[Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png
 
 For you to follow along, we have created a [gist][grunt-gist] with the images and configuration we are working with:
 
@@ -169,6 +167,8 @@ The final results are:
 ```
 
 More documentation and details can be found in the [grunt-spritesmith][] documentation.
+
+https://github.com/Ensighten/grunt-spritesmith
 
 # gulp
 
