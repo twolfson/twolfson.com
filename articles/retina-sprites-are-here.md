@@ -8,10 +8,9 @@
 
 ![Normal spritesheet][]
 
-[Normal spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet.png)
-
 ![Retina spritesheet][]
 
+[Normal spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet.png)
 [Retina spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet-2x.png
 
 [spritesmith][grunt-spritesmith] now supports retina spritesheets in its [grunt][grunt-spritesmith] and [gulp][gulp.spritesmith] flavors:
@@ -46,9 +45,11 @@ Retina images, duplicate images that are twice as large (scaled 2x) for retina d
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png)
 [Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png)
 
-For you to follow along, we have created a [gist] with the images and configuration we are working with:
+For you to follow along, we have created a [gist][grunt-gist] with the images and configuration we are working with:
 
-//- TODO: Add URL to grunt-spritesmith gist
+https://gist.github.com/twolfson/f9d046b1e312809fced0
+
+[grunt-gist]: https://gist.github.com/twolfson/f9d046b1e312809fced0
 
 We will set up a `Gruntfile.js` with the following config:
 
@@ -108,7 +109,7 @@ The `src` parameter is the images we will be combining into a spritesheet. When 
 src: ['*.png']
 ```
 
-// TODO: Link to `grunt-newer`
+[grunt-newer]: https://github.com/tschaub/grunt-newer
 
 The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
 
@@ -144,7 +145,13 @@ grunt sass
 
 The final results are:
 
-TODO: Link to spritesheets
+**Spritesheets:**
+
+![Normal spritesheet][]
+
+![Retina spritesheet][]
+
+**CSS:**
 
 ```css
 .fork {
@@ -161,7 +168,7 @@ TODO: Link to spritesheets
 /* ... */
 ```
 
-// TODO: More documentation and details can be found in the [grunt-spritesmith][] documentation
+More documentation and details can be found in the [grunt-spritesmith][] documentation.
 
 # gulp
 
