@@ -104,7 +104,7 @@ The `src` parameter is the images we will be combining into a spritesheet. When 
 > We provide all images via `src` to guarantee support for plugins like [grunt-newer][] which require observing all origin images.
 
 ```js
-src: ['*.png']
+src: ['*.png'],
 ```
 
 [grunt-newer]: https://github.com/tschaub/grunt-newer
@@ -112,7 +112,7 @@ src: ['*.png']
 The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
 
 ```js
-retinaSrcFilter: ['*-2x.png']
+retinaSrcFilter: ['*-2x.png'],
 ```
 
 The `dest` and `retinaDest` parameters indicate where our normal and retina spritesheets should be saved to respectfully.
@@ -125,7 +125,7 @@ retinaDest: 'dist/spritesheet-2x.png',
 The `destCss` paramter indiciates where to save our spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
 
 ```js
-destCss: 'sprites.scss',
+destCss: 'sprites.scss'
 ```
 
 ## Compiled result
