@@ -138,17 +138,29 @@ The final results are:
 TODO: Link to spritesheets
 
 ```css
-.github {
-  // TODO: Show me
-}
+.fork {
+  background-image: url(dist/spritesheet.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .fork {
+      background-image: url(dist/spritesheet-2x.png);
+      background-size: 64px 64px; } }
 
-@media {
-  .github {
-    // TODO: Show me
-  }
-}
+.github {
+/* ... */
 ```
 
 // TODO: More documentation and details can be found in the [grunt-spritesmith][] documentation
 
 # gulp
+
+## Attribution
+[GitHub][github-icon] and [Twitter][twitter-icon] icons were taken from [Alex Peattie's JustVector Social Icons][justvector].
+
+[Fork][noun-fork-icon] designed by [P.J. Onori][onori] from The Noun Project
+
+[justvector]: http://alexpeattie.com/projects/justvector_icons/
+[noun-fork-icon]: http://thenounproject.com/noun/fork/#icon-No2813
+[onori]: http://thenounproject.com/somerandomdude
