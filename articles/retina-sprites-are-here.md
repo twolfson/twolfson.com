@@ -41,22 +41,41 @@ For you to follow along, we have created a [gist] with the images we are working
 
 //- TODO: Add URL to grunt-spritesmith gist
 
-For [grunt-spritesmith][] we need to provide all images via the `src`. This guarantees we will support plugins like [grunt-newer][] which require observing all origin images.
-
-//- TODO: List out folder structure
-
-//- TODO: List out images and names
+We will set up our `Gruntfile.js` with the following config:
 
 ```js
-src: ['*.png'] // Includes normal and `-2x` images
+{
+  // Include all normal and `-2x` (retina) images
+  //   e.g. `github.png`, `github-2x.png`
+  src: ['*.png'],
+
+  // Filter out `-2x` (retina) images to separate spritesheet
+  //   e.g. `github-2x.png`, `twitter-2x.png`
+  retinaSrcFilter: ['*-2x.png'],
+
+  // Generate a normal and a `-2x` (retina) spritesheet
+  dest: 'dist/spritesheet.png',
+  retinaDest: 'dist/spritesheet-2x.png',
+
+  // Generate SCSS variables/mixins for both spritesheets
+  destCss: 'dist/sprites.scss'
+}
 ```
 
-With retina support we need to indicate to [grunt-spritesmith][] which of these images is a retina image or not. To do this, we use the same [glob][] pattern we did for `src` but focused at `retina` sprites:
+The `src` parameter is the images we will be combining into a spritesheet. When we are generating a retina spritesheet, we include all normal and retina images via `src`. We will separate the retina ones via a filter later on.
 
-//- TODO: We should provide finished product up front and explain details here
+> We provide all images via `src` to guarantee support for plugins like [grunt-newer][] which require observing all origin images.
 
 ```js
-retinaSrcFilter: ['*-2x.png']  // Only includes `-2x` images
+src: ['*.png']
+```
+
+// TODO: Link to `grunt-newer`
+
+The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
+
+```js
+retinaSrcFilter: ['*-2x.png']
 ```
 
 // TODO: Outputting a normal and retina spritesheet
@@ -65,8 +84,4 @@ retinaSrcFilter: ['*-2x.png']  // Only includes `-2x` images
 
 // TODO: More documentation and details can be found in the [grunt-spritesmith][] documentation
 
-//- TODO: Do we really want to go into this much detail? Yes, we should be helpful. But we need to be wary of using gists since they don't support nesting/good structure.
-
 # gulp
-
-# What took so long?
