@@ -29,7 +29,7 @@ In a retina spritesheet project, we have 2 sets of images:
 
 Normal images, showed to any user with a non-retina display
 
-![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
+![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
 [Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
@@ -37,7 +37,7 @@ Normal images, showed to any user with a non-retina display
 
 Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
 
-![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
+![Retina fork sprite][] ![Retina github sprite][] ![Retina twitter sprite][]
 
 [Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
@@ -177,7 +177,7 @@ In a retina spritesheet project, we have 2 sets of images:
 
 Normal images, showed to any user with a non-retina display
 
-![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
+![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
 [Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
@@ -185,7 +185,7 @@ Normal images, showed to any user with a non-retina display
 
 Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
 
-![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
+![Retina fork sprite][] ![Retina github sprite][] ![Retina twitter sprite][]
 
 [Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
