@@ -6,36 +6,45 @@
   "summary": "[spritesmith](https://github.com/Ensighten/grunt-spritesmith) now supports retina sprites. This is an introduction to start using them."
 }
 
-//- TODO: Add spritesheet and retina spritesheet images
+![Normal spritesheet][]
 
-![1x spritesheet](#)
+[Normal spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet.png)
 
-![2x spritesheet](#)
+![Retina spritesheet][]
+
+[Retina spritesheet]: /public/images/articles/retina-sprites-are-here/spritesheet-2x.png
 
 [spritesmith][grunt-spritesmith] now supports retina spritesheets in its [grunt][grunt-spritesmith] and [gulp][gulp.spritesmith] flavors:
 
-//- TODO: Add URL to grunt-spritesmith
+https://github.com/Ensighten/grunt-spritesmith
 
-//- TODO: Add URL to gulp.spritesmith
+https://github.com/twolfson/gulp.spritesmith
 
-In this article, we will walk through getting set up with both the [grunt](#) and [gulp](#) flavors.
+[grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
+[gulp.spritesmith]: https://github.com/twolfson/gulp.spritesmith
 
-//- TODO: Link to proper headings
+In this article, we will walk through getting set up with both the [grunt](#grunt) and [gulp](#gulp) flavors.
+
+//- TODO: Verify heading links work
 
 # grunt
 In a retina spritesheet project, we have 2 sets of images:
 
 Normal images, showed to any user with a non-retina display:
 
-//- TODO: Link me
+![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
 
-![Normal images](#)
+[Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png)
+[GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png)
+[Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png)
 
 Retina images, duplicate images that are twice as large (scaled 2x) for retina displays. When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
 
-//- TODO: Link me
+![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
 
-![Retina images](#)
+[Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png)
+[Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png)
+[Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png)
 
 For you to follow along, we have created a [gist] with the images and configuration we are working with:
 
