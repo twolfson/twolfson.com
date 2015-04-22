@@ -211,15 +211,26 @@ gulp.task('sass', function generateSass () {
     .pipe(gulp.dest('dist/'));
 });
 gulp.task('sprite', function generateSpritesheets () {
-  // TODO: Document me more
+  // Use all normal and `-2x` (retina) images as `src`
+  //   e.g. `github.png`, `github-2x.png`
   var spriteData = gulp.src('*.png')
     .pipe(spritesmith({
+      // Filter out `-2x` (retina) images to separate spritesheet
+      //   e.g. `github-2x.png`, `twitter-2x.png`
       retinaSrcFilter: '*-2x.png',
+
+      // Generate a normal and a `-2x` (retina) spritesheet
       imgName: 'spritesheet.png',
       retinaImgName: 'spritesheet-2x.png',
+
+      // Generate SCSS variables/mixins for both spritesheets
       cssName: 'sprites.scss'
     }));
+
+  // Deliver spritesheets to `dist/` folder as they are completed
   spriteData.img.pipe(gulp.dest('dist/'));
+
+  // Deliver CSS to `./` to be imported by `index.scss`
   spriteData.css.pipe(gulp.dest('./'));
 });
 ```
