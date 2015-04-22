@@ -91,10 +91,10 @@ module.exports = function (grunt) {
 Additionally, we will set up a SCSS file that relies on the compiled SCSS from `spritesmith`:
 
 ```scss
-# Load in our compiled SCSS variables
+// Load in our compiled SCSS variables
 @import 'sprites.scss';
 
-# Generate sprite rules and media queries
+// Generate sprite rules and media queries
 @include retina-sprites($retina-groups);
 ```
 
