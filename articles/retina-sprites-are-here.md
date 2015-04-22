@@ -203,6 +203,7 @@ We will set up a `gulpfile.js` with the following config:
 
 ```js
 // Load in our dependencies
+var gulp = require('gulp');
 var sass = require('gulp-sass');
 var spritesmith = require('gulp.spritesmith');
 
@@ -298,13 +299,13 @@ The final results are:
 
 ```css
 .fork {
-  background-image: url(dist/spritesheet.png);
+  background-image: url(spritesheet.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .fork {
-      background-image: url(dist/spritesheet-2x.png);
+      background-image: url(spritesheet-2x.png);
       background-size: 64px 64px; } }
 
 .github {
