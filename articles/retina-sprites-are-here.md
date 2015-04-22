@@ -124,7 +124,7 @@ dest: 'dist/spritesheet.png',
 retinaDest: 'dist/spritesheet-2x.png',
 ```
 
-The `destCss` paramter indiciates where to save our spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
+The `destCss` parameter indiciates where to save our spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
 
 ```js
 destCss: 'sprites.scss'
@@ -245,9 +245,73 @@ Additionally, we will set up a SCSS file that relies on the compiled SCSS from `
 @include retina-sprites($retina-groups);
 ```
 
-// TODO: Document parameters
+## `sprite` conifg
+All images, both normal and retina, are imported via the same `gulp.src` mechanism. We will separate the retina ones via a filter later on.
 
-// TODO: Document final result
+```js
+var spriteData = gulp.src('*.png')
+```
+
+The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
+
+```js
+retinaSrcFilter: '*-2x.png',
+```
+
+The `imgName` and `retinaimgName` parameters indicate how we should name our normal and retina spritesheets respectfully.
+
+```js
+imgName: 'spritesheet.png',
+retinaImgName: 'spritesheet-2x.png',
+```
+
+The `cssName` paramter indiciates what to name our file containing spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
+
+```js
+cssName: 'sprites.scss'
+```
+
+## Compiled result
+To yield our result, we will compiled the spritesheet once and then generate CSS from that.
+
+We prefer to keep these separate since recompiling sprites on every CSS generation is costly in terms of time.
+
+```bash
+# Generate our spritesheets
+gulp sprite
+
+# Compile our CSS
+gulp sass
+```
+
+The final results are:
+
+**Spritesheets:**
+
+![Normal spritesheet][]
+
+![Retina spritesheet][]
+
+**CSS:**
+
+```css
+.fork {
+  background-image: url(dist/spritesheet.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .fork {
+      background-image: url(dist/spritesheet-2x.png);
+      background-size: 64px 64px; } }
+
+.github {
+/* ... */
+```
+
+More documentation and details can be found in the [gulp.spritesmith][] documentation.
+
+https://github.com/twolfson/gulp.spritesmith
 
 ## Attribution
 GitHub and Twitter icons were taken from [Alex Peattie's JustVector Social Icons][justvector].
