@@ -114,7 +114,11 @@ dest: 'dist/spritesheet.png',
 retinaDest: 'dist/spritesheet-2x.png',
 ```
 
-The `
+The `destCss` paramter indiciates where to save our spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
+
+```js
+destCss: 'sprites.scss',
+```
 
 ## Compiled result
 To yield our result, we will compiled the spritesheet once and then generate CSS from that.
