@@ -27,7 +27,7 @@ In this article, we will walk through getting set up with both the [grunt](#grun
 # grunt
 In a retina spritesheet project, we have 2 sets of images:
 
-Normal images, showed to any user with a non-retina display:
+Normal images, showed to any user with a non-retina display
 
 ![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
 
@@ -35,13 +35,15 @@ Normal images, showed to any user with a non-retina display:
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
 [Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
 
-Retina images, duplicate images that are twice as large (scaled 2x) for retina displays. When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
+Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
 
 ![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
 
 [Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
 [Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png
+
+> When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
 
 For you to follow along, we have created a [gist][grunt-gist] with the images and configuration we are working with:
 
