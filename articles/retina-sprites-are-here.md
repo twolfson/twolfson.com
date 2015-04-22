@@ -173,9 +173,73 @@ More documentation and details can be found in the [grunt-spritesmith][] documen
 https://github.com/Ensighten/grunt-spritesmith
 
 # gulp
+In a retina spritesheet project, we have 2 sets of images:
+
+Normal images, showed to any user with a non-retina display
+
+![Fork sprite][] ![GitHub sprite][]  ![Twitter sprite][]
+
+[Fork sprite]: /public/images/articles/retina-sprites-are-here/fork.png
+[GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
+[Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
+
+Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
+
+![Retina fork sprite][] ![Retina github sprite][]  ![Retina twitter sprite][]
+
+[Retina fork sprite]: /public/images/articles/retina-sprites-are-here/fork-2x.png
+[Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
+[Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png
+
+> When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
+
+For you to follow along, we have created a [gist][gulp-gist] with the images and configuration we are working with:
+
+// TODO: Create me
+
+We will set up a `gulpfile.js` with the following config:
+
+```js
+// Load in our dependencies
+var sass = require('gulp-sass');
+var spritesmith = require('gulp.spritesmith');
+
+// Define our tasks
+gulp.task('sass', function generateSass () {
+  gulp.src('index.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('dist/'));
+});
+gulp.task('sprite', function generateSpritesheets () {
+  // TODO: Document me more
+  var spriteData = gulp.src('*.png')
+    .pipe(spritesmith({
+      retinaSrcFilter: '*-2x.png',
+      imgName: 'spritesheet.png',
+      retinaImgName: 'spritesheet-2x.png',
+      cssName: 'sprites.scss'
+    }));
+  spriteData.img.pipe(gulp.dest('dist/'));
+  spriteData.css.pipe(gulp.dest('./'));
+});
+```
+
+Additionally, we will set up a SCSS file that relies on the compiled SCSS from `spritesmith`:
+
+```scss
+// Load in our compiled SCSS variables
+@import 'sprites.scss';
+
+// Generate sprite rules and media queries
+@include retina-sprites($retina-groups);
+```
+
+// TODO: Document parameters
+
+// TODO: Document final result
 
 ## Attribution
-[GitHub][github-icon] and [Twitter][twitter-icon] icons were taken from [Alex Peattie's JustVector Social Icons][justvector].
+GitHub and Twitter icons were taken from [Alex Peattie's JustVector Social Icons][justvector].
 
 [Fork][noun-fork-icon] designed by [P.J. Onori][onori] from The Noun Project
 
