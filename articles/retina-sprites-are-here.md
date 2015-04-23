@@ -31,7 +31,7 @@ In this article, we will walk through getting set up with both the [grunt](#grun
 ## Background
 In a retina spritesheet project, we have 2 sets of images:
 
-Normal images, showed to any user with a non-retina display.
+Normal images are images that are showed to any user with a non-retina display.
 
 ![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
@@ -39,7 +39,7 @@ Normal images, showed to any user with a non-retina display.
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
 [Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
 
-Retina images, duplicate images that are twice as large (scaled 2x) for retina displays.
+Retina images are duplicate images that are twice as large (scaled 2x) for retina displays.
 
 ![Retina fork sprite][] ![Retina github sprite][] ![Retina twitter sprite][]
 
@@ -105,7 +105,7 @@ Additionally, we will set up a SCSS file that relies on the compiled SCSS from `
 @include retina-sprites($retina-groups);
 ```
 
-## `sprite` conifg
+## `sprite` config
 The `src` parameter is the images we will be combining into a spritesheet. When we are generating a retina spritesheet, we include all normal and retina images via `src`. We will separate the retina ones via a filter later on.
 
 > We provide all images via `src` to guarantee support for plugins like [grunt-newer][] which require observing all origin images.
@@ -181,7 +181,7 @@ https://github.com/Ensighten/grunt-spritesmith
 ## Background
 In a retina spritesheet project, we have 2 sets of images:
 
-Normal images, showed to any user with a non-retina display
+Normal images are typical images showed to any user with a non-retina display.
 
 ![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
@@ -189,7 +189,7 @@ Normal images, showed to any user with a non-retina display
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
 [Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
 
-Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
+Retina images are duplicate images that are twice as large (scaled 2x) for retina displays.
 
 ![Retina fork sprite][] ![Retina github sprite][] ![Retina twitter sprite][]
 
