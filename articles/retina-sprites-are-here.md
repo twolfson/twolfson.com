@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2015-04-21T00:00:00-0500",
   "keywords": "retina, sprite, spritesheet, spritesmith",
-  "summary": "[spritesmith](https://github.com/Ensighten/grunt-spritesmith) now supports retina sprites. This is an introduction to start using them."
+  "summary": "[spritesmith](https://github.com/Ensighten/grunt-spritesmith) now supports retina sprites. This is an introduction to using them."
 }
 
 ![Normal spritesheet][]
