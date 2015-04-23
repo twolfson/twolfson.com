@@ -22,12 +22,16 @@ https://github.com/twolfson/gulp.spritesmith
 [grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
 [gulp.spritesmith]: https://github.com/twolfson/gulp.spritesmith
 
-In this article, we will walk through getting set up with both the [grunt](#grunt) and [gulp](#gulp) flavors.
+In this article, we will walk through getting set up with both the [grunt](#grunt-example) and [gulp](#gulp-example) flavors.
 
-# grunt
+- [Grunt example](#grunt-example)
+- [gulp example](#gulp-example)
+
+# Grunt example
+## Background
 In a retina spritesheet project, we have 2 sets of images:
 
-Normal images, showed to any user with a non-retina display
+Normal images, showed to any user with a non-retina display.
 
 ![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
@@ -35,7 +39,7 @@ Normal images, showed to any user with a non-retina display
 [GitHub sprite]: /public/images/articles/retina-sprites-are-here/github.png
 [Twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter.png
 
-Retina images, duplicate images that are twice as large (scaled 2x) for retina displays
+Retina images, duplicate images that are twice as large (scaled 2x) for retina displays.
 
 ![Retina fork sprite][] ![Retina github sprite][] ![Retina twitter sprite][]
 
@@ -43,8 +47,9 @@ Retina images, duplicate images that are twice as large (scaled 2x) for retina d
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
 [Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png
 
-> When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
+> When viewed, retina images are scaled down to the same size as the normal images to provide a higher pixel density.
 
+## Example
 For you to follow along, we have created a [gist][grunt-gist] with the images and configuration we are working with:
 
 https://gist.github.com/twolfson/f9d046b1e312809fced0
@@ -172,7 +177,8 @@ More documentation and details can be found in the [grunt-spritesmith][] documen
 
 https://github.com/Ensighten/grunt-spritesmith
 
-# gulp
+# gulp example
+## Background
 In a retina spritesheet project, we have 2 sets of images:
 
 Normal images, showed to any user with a non-retina display
@@ -193,6 +199,7 @@ Retina images, duplicate images that are twice as large (scaled 2x) for retina d
 
 > When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
 
+## Example
 For you to follow along, we have created a [gist][gulp-gist] with the images and configuration we are working with:
 
 https://gist.github.com/twolfson/860a1d47e483bc34e1fa
