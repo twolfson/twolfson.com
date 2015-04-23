@@ -136,7 +136,7 @@ destCss: 'sprites.scss'
 ```
 
 ## Compiled result
-To yield our result, we will compiled the spritesheet once and then generate CSS from that.
+To yield our result, we will compile the spritesheet once and then generate CSS from that.
 
 We prefer to keep these separate since recompiling sprites on every CSS generation is costly in terms of time.
 
@@ -181,7 +181,7 @@ https://github.com/Ensighten/grunt-spritesmith
 ## Background
 In a retina spritesheet project, we have 2 sets of images:
 
-Normal images are typical images showed to any user with a non-retina display.
+Normal images are images that are showed to any user with a non-retina display.
 
 ![Fork sprite][] ![GitHub sprite][] ![Twitter sprite][]
 
@@ -197,7 +197,7 @@ Retina images are duplicate images that are twice as large (scaled 2x) for retin
 [Retina github sprite]: /public/images/articles/retina-sprites-are-here/github-2x.png
 [Retina twitter sprite]: /public/images/articles/retina-sprites-are-here/twitter-2x.png
 
-> When viewed, these are scaled down to the same size as the normal images but as a result provide a higher pixel density.
+> When viewed, retina images are scaled down to the same size as the normal images to provide a higher pixel density.
 
 ## Example
 For you to follow along, we have created a [gist][gulp-gist] with the images and configuration we are working with:
@@ -262,27 +262,27 @@ All images, both normal and retina, are imported via the same `gulp.src` mechani
 var spriteData = gulp.src('*.png')
 ```
 
-The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
+The `retinaSrcFilter` is how we tell apart normal images from retina images. This should be a glob as with `gulp.src`. This filter is intended to match filepaths of retina images only.
 
 ```js
 retinaSrcFilter: '*-2x.png',
 ```
 
-The `imgName` and `retinaimgName` parameters indicate how we should name our normal and retina spritesheets respectfully.
+The `imgName` and `retinaimgName` parameters indicate what we should name our normal and retina spritesheets respectfully.
 
 ```js
 imgName: 'spritesheet.png',
 retinaImgName: 'spritesheet-2x.png',
 ```
 
-The `cssName` paramter indiciates what to name our file containing spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
+The `cssName` paramter indiciates what to name our file containing spritesheet variables/mixins. When being used for a retina task this will include normal sprites, retina sprites, and their groupings.
 
 ```js
 cssName: 'sprites.scss'
 ```
 
 ## Compiled result
-To yield our result, we will compiled the spritesheet once and then generate CSS from that.
+To yield our result, we will compile the spritesheet once and then generate CSS from that.
 
 We prefer to keep these separate since recompiling sprites on every CSS generation is costly in terms of time.
 
