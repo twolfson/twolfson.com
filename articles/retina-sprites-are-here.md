@@ -106,7 +106,7 @@ Additionally, we will set up a SCSS file that relies on the compiled SCSS from `
 ```
 
 ## `sprite` config
-The `src` parameter is the images we will be combining into a spritesheet. When we are generating a retina spritesheet, we include all normal and retina images via `src`. We will separate the retina ones via a filter later on.
+The `src` parameter is an array of globs/filepaths to our images that we will be combining into a spritesheet. When we are generating a retina spritesheet, we include all normal and retina images via `src`. We will separate the retina ones via a filter later on.
 
 > We provide all images via `src` to guarantee support for plugins like [grunt-newer][] which require observing all origin images.
 
@@ -116,20 +116,20 @@ src: ['*.png'],
 
 [grunt-newer]: https://github.com/tschaub/grunt-newer
 
-The `retinaSrcFilter` is how we tell apart normal images from retina images. This filter is intended to match filepaths of retina images only.
+The `retinaSrcFilter` is how we tell apart normal images from retina images. This is an array of globs/filepaths like `src`. It is intended to match filepaths of retina images only.
 
 ```js
 retinaSrcFilter: ['*-2x.png'],
 ```
 
-The `dest` and `retinaDest` parameters indicate where our normal and retina spritesheets should be saved to respectfully.
+The `dest` and `retinaDest` parameters are filepaths to where our normal and retina spritesheets should be saved to respectfully.
 
 ```js
 dest: 'dist/spritesheet.png',
 retinaDest: 'dist/spritesheet-2x.png',
 ```
 
-The `destCss` parameter indiciates where to save our spritesheet variables/mixins. When being used for a retina task, this will include normal sprites, retina sprites, and their groupings.
+The `destCss` parameter is a filepath to where we save our spritesheet variables/mixins. When being used for a retina task this will include normal sprites, retina sprites, and their groupings.
 
 ```js
 destCss: 'sprites.scss'
