@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.54.1 - Accepted latest perceptual diffs
+
 3.54.0 - Updated blog activity
 
 3.53.0 - Added "Retina sprites are here" article
