@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.55.1 - Accepted latest perceptual diffs
+
 3.55.0 - Updated project stats and added/removed projects
 
 3.54.1 - Accepted latest perceptual diffs
