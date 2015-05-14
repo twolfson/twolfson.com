@@ -46,6 +46,13 @@ js1k
 
 contributor
 -----------
-nodemon
-node-sourcemap
+git-extras
+gratipay
 jquip
+jscs
+node-sourcemap
+nodemon
+npm-www
+python-livereload
+slack-for-linux
+source-map

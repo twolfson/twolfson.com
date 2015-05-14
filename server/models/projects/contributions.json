@@ -27,15 +27,6 @@
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
   },
   {
-    "name": "jquip",
-    "description": "jQuery in Parts",
-    "stars": 1386,
-    "forks": 88,
-    "github": "mythz/jquip",
-    "srcUrl": "https://github.com/mythz/jquip",
-    "pageUrl": "https://github.com/mythz/jquip"
-  },
-  {
     "name": "gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
     "stars": 826,
@@ -43,15 +34,6 @@
     "github": "gratipay/gratipay.com",
     "srcUrl": "https://github.com/gratipay/gratipay.com",
     "pageUrl": "https://github.com/gratipay/gratipay.com"
-  },
-  {
-    "name": "npm-www",
-    "description": "<a href=\"http://npmjs.org/\" target=\"_blank\">http://npmjs.org/</a> website",
-    "stars": 618,
-    "forks": 196,
-    "github": "npm/npm-www",
-    "srcUrl": "https://github.com/npm/npm-www",
-    "pageUrl": "https://github.com/npm/npm-www"
   },
   {
     "name": "source-map",
