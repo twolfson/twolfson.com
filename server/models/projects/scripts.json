@@ -2,8 +2,8 @@
   {
     "name": "spritesmith",
     "description": "Join images together into a spritesheet and CSS variables",
-    "stars": 678,
-    "forks": 50,
+    "stars": 922,
+    "forks": 75,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,53 +11,53 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 242,
-    "forks": 36,
+    "stars": 414,
+    "forks": 61,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
   },
   {
-    "name": "jsmin-sourcemap",
-    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
-    "stars": 40,
-    "forks": 5,
-    "github": "twolfson/grunt-jsmin-sourcemap",
-    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
-    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
-  },
-  {
     "name": "image-diff",
     "description": "Create image differential between two images",
-    "stars": 39,
-    "forks": 4,
+    "stars": 60,
+    "forks": 9,
     "github": "uber/image-diff",
     "srcUrl": "https://github.com/uber/image-diff",
     "pageUrl": "https://github.com/uber/image-diff"
   },
   {
-    "name": "Find++",
-    "description": "Find code quickly in Sublime Text",
-    "stars": 38,
-    "forks": 5,
-    "github": "twolfson/FindPlusPlus",
-    "srcUrl": "https://github.com/twolfson/FindPlusPlus",
-    "pageUrl": "https://github.com/twolfson/FindPlusPlus"
-  },
-  {
     "name": "fontsmith",
     "description": "Compose SVGs into fonts and CSS/JS variables",
-    "stars": 34,
-    "forks": 7,
+    "stars": 47,
+    "forks": 6,
     "github": "twolfson/grunt-fontsmith",
     "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
     "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
   },
   {
+    "name": "Find++",
+    "description": "Find code quickly in Sublime Text",
+    "stars": 42,
+    "forks": 6,
+    "github": "twolfson/FindPlusPlus",
+    "srcUrl": "https://github.com/twolfson/FindPlusPlus",
+    "pageUrl": "https://github.com/twolfson/FindPlusPlus"
+  },
+  {
+    "name": "jsmin-sourcemap",
+    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
+    "stars": 39,
+    "forks": 8,
+    "github": "twolfson/grunt-jsmin-sourcemap",
+    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
+    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
+  },
+  {
     "name": "jojo",
     "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 34,
-    "forks": 2,
+    "stars": 36,
+    "forks": 4,
     "github": "twolfson/jojo",
     "srcUrl": "https://github.com/twolfson/jojo",
     "pageUrl": "https://github.com/twolfson/jojo"
@@ -65,8 +65,8 @@
   {
     "name": "foundry",
     "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
-    "stars": 27,
-    "forks": 4,
+    "stars": 35,
+    "forks": 6,
     "github": "twolfson/foundry",
     "srcUrl": "https://github.com/twolfson/foundry",
     "pageUrl": "https://github.com/twolfson/foundry"
@@ -74,8 +74,8 @@
   {
     "name": "eight-track",
     "description": "Record and playback HTTP requests",
-    "stars": 18,
-    "forks": 3,
+    "stars": 31,
+    "forks": 9,
     "github": "uber/eight-track",
     "srcUrl": "https://github.com/uber/eight-track",
     "pageUrl": "https://github.com/uber/eight-track"
@@ -83,7 +83,7 @@
   {
     "name": "gifsockets",
     "description": "Stream never-ending animated GIFs",
-    "stars": 18,
+    "stars": 20,
     "forks": 1,
     "github": "twolfson/gifsockets",
     "srcUrl": "https://github.com/twolfson/gifsockets",
@@ -92,7 +92,7 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 11,
+    "stars": 13,
     "forks": 3,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
@@ -102,7 +102,7 @@
     "name": "What size is my browser?",
     "truncatedName": "What size [&hellip;] browser?",
     "description": "Determine your browser dimensions via media queries",
-    "stars": 6,
+    "stars": 5,
     "forks": 1,
     "github": "twolfson/whatsizeismybrowser",
     "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
@@ -120,7 +120,7 @@
   {
     "name": "winfiles",
     "description": "My Windows files, documentation, and Windows workflow",
-    "stars": 1,
+    "stars": 2,
     "forks": 0,
     "github": "twolfson/winfiles",
     "srcUrl": "https://github.com/twolfson/winfiles",

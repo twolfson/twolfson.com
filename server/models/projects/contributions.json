@@ -2,8 +2,8 @@
   {
     "name": "git-extras",
     "description": "Collection of git utilities",
-    "stars": 4278,
-    "forks": 321,
+    "stars": 6156,
+    "forks": 403,
     "github": "tj/git-extras",
     "srcUrl": "https://github.com/tj/git-extras",
     "pageUrl": "https://github.com/tj/git-extras"
@@ -11,8 +11,8 @@
   {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
-    "stars": 3831,
-    "forks": 262,
+    "stars": 5066,
+    "forks": 370,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
     "pageUrl": "https://github.com/remy/nodemon"
@@ -20,8 +20,8 @@
   {
     "name": "jquip",
     "description": "jQuery in Parts",
-    "stars": 1370,
-    "forks": 80,
+    "stars": 1386,
+    "forks": 88,
     "github": "mythz/jquip",
     "srcUrl": "https://github.com/mythz/jquip",
     "pageUrl": "https://github.com/mythz/jquip"
@@ -29,8 +29,8 @@
   {
     "name": "gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
-    "stars": 821,
-    "forks": 227,
+    "stars": 826,
+    "forks": 260,
     "github": "gratipay/gratipay.com",
     "srcUrl": "https://github.com/gratipay/gratipay.com",
     "pageUrl": "https://github.com/gratipay/gratipay.com"
@@ -38,8 +38,8 @@
   {
     "name": "npm-www",
     "description": "<a href=\"http://npmjs.org/\" target=\"_blank\">http://npmjs.org/</a> website",
-    "stars": 597,
-    "forks": 203,
+    "stars": 618,
+    "forks": 196,
     "github": "npm/npm-www",
     "srcUrl": "https://github.com/npm/npm-www",
     "pageUrl": "https://github.com/npm/npm-www"
@@ -47,8 +47,8 @@
   {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
-    "stars": 444,
-    "forks": 72,
+    "stars": 576,
+    "forks": 90,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
@@ -56,8 +56,8 @@
   {
     "name": "python-livereload",
     "description": "livereload server in python",
-    "stars": 225,
-    "forks": 49,
+    "stars": 312,
+    "forks": 61,
     "github": "lepture/python-livereload",
     "srcUrl": "https://github.com/lepture/python-livereload",
     "pageUrl": "https://github.com/lepture/python-livereload"
