@@ -27,15 +27,6 @@
     "pageUrl": "https://github.com/uber/image-diff"
   },
   {
-    "name": "fontsmith",
-    "description": "Compose SVGs into fonts and CSS/JS variables",
-    "stars": 47,
-    "forks": 6,
-    "github": "twolfson/grunt-fontsmith",
-    "srcUrl": "https://github.com/twolfson/grunt-fontsmith",
-    "pageUrl": "https://github.com/twolfson/grunt-fontsmith"
-  },
-  {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
     "stars": 42,
