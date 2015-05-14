@@ -18,6 +18,15 @@
     "pageUrl": "https://github.com/remy/nodemon"
   },
   {
+    "name": "jscs",
+    "description": "JavaScript code style checker",
+    "stars": 3222,
+    "forks": 311,
+    "github": "jscs-dev/node-jscs",
+    "srcUrl": "https://github.com/jscs-dev/node-jscs",
+    "pageUrl": "https://github.com/jscs-dev/node-jscs"
+  },
+  {
     "name": "jquip",
     "description": "jQuery in Parts",
     "stars": 1386,
@@ -61,5 +70,14 @@
     "github": "lepture/python-livereload",
     "srcUrl": "https://github.com/lepture/python-livereload",
     "pageUrl": "https://github.com/lepture/python-livereload"
+  },
+  {
+    "name": "slack-for-linux",
+    "description": "Slack client for Linux",
+    "stars": 191,
+    "forks": 12,
+    "github": "wlaurance/slack-for-linux",
+    "srcUrl": "https://github.com/wlaurance/slack-for-linux",
+    "pageUrl": "https://github.com/wlaurance/slack-for-linux"
   }
 ]
