@@ -22,7 +22,7 @@ I should state that:
 - While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means it is placed into a deeper, not constantly active part of our memory
 
 # Forgetting when falling asleep
-When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up.
+When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
 
 I deal with this by keeping a paper notepad next to my bed. When I have a thought I want to remember, I:
 
