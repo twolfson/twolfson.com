@@ -8,13 +8,18 @@
 
 // TODO: Add image that is note pad with "Remind me" on it in marker
 
-// TODO: Should subject be "you", "me", or "our"?
+Remembering is a practical skill. It's part of our daily routines; remembering a grocery list, remembering to ship a package, remembering to ask your friend about that recent event.
 
-Remembering is a practical skill. It's how we live our daily routines; brushing our teeth, showering, going to work. On the opposite site, there is forgetting which happens for most people by accident or unintentionally. In my daily life, I have a few techniques to help me forget things to:
+The opposite or remembering is forgetting. For the purpose of our discussion, I want to consider controlled forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
 
-- Allow myself to think about other topics
-- Relieve mental stress
-- Assist with remembering longer term items that are not immediately required
+- Allow thinking about other topics (e.g. reflecting on past events)
+- Relieve mental stress (e.g. juggling thoughts)
+- Allow ourselves to offload a thought until we actually need it (e.g. setting a calendar reminder)
+
+I should state that:
+
+- This is all based off of personal experience with no rigid science
+- While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means it is placed into a deeper, not constantly active part of our memory
 
 # Remembering when falling asleep
 When falling asleep, paper note book
