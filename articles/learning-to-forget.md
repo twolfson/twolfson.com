@@ -69,7 +69,17 @@ Vice versa for personal:
 
 - Push notifications for email are a really bad habit and will cause unnecessary stress
 
-# Juggling mental notes
+# Tip of my tongue moments
+This is a re-application of the "Falling asleep" trick. We have all had "I just had it" moments. We thought of something but then lost it a second later.
+
+I always carry a pen in my pocket for these types of situations. In these situations, I will write down the thought on my phone if available. If not, then I will write it on my arm near my wrist so I will see it later.
+
+Similarly if I need to remember a task when I am walking (e.g. send a letter while commuting), then I will write it on my wrist so I am more likely to remember than forget. I could set a reminder on my phone but not all transit is predictable and it could be annoying.
+
+// TODO: Maybe place before Falling asleep section?
+
+Juggling mental notes
+
 We can only balance about 5 different notes to ourselves at a given time. Anything more and the whole thing falls to shit.
 
 This plays back into when falling asleep, start to think about more on a task and forget where we came from
