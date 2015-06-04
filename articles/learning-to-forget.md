@@ -21,8 +21,35 @@ I should state that:
 - This is all based off of personal experience with no rigid science
 - While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means it is placed into a deeper, not constantly active part of our memory
 
-# Remembering when falling asleep
-When falling asleep, paper note book
+# Forgetting when falling asleep
+When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up.
+
+I deal with this by keeping a paper notepad next to my bed. When I have a thought I want to remember, I:
+
+// TODO: Add photo of blindly written note
+
+- Sweep around the general area where the notepad is until I find it
+- Take out the pen, uncap it, and place it on the back of the pen
+- Blindly write it down in the dark
+- Rip off the sheet of paper
+- Put the pen back together and into the notepad ring
+- Put the notepad back in its area
+
+**Warning: Perform this in the dark and with a notepad because a cellphone or room light will stop melatonin production and prolonge lying in bed falling asleep.**
+
+When I wake up, I read the note and the thought rushes back into memory. Then, I can consider the thought offloaded to paper.
+
+**Advantages:**
+
+Once written down, my mind frees up and starts to think about finer details or other topics. Thus, my fixation is relieved. I have controlled my forgetting, allowing me to remember the thought later.
+
+**Suggestions:**
+
+To reduce the likelihood of illegible notes, I have a few suggestions:
+
+- When writing down a word, remember the actual shape of the letter and draw that
+    - Sometimes when half-awake, my wires get crossed and I write gibberish letters
+- When reading back the note, I rewrite the note in daylight immediately. Otherwise, words that might be on the tip of my tongue later will be harder to remember.
 
 # Splitting mental space for personal and work
 Thinking about work tasks while you are in your personal life can be unnecessarily stressful. I try my best to keep personal things personal and work things work.
