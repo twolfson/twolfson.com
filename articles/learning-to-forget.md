@@ -6,7 +6,7 @@
   "summary": "TODO: Come back to me"
 }
 
-// TODO: Add image that is note pad with "Remind me" on it in marker
+// TODO: Add image that is note pad with "Forget me" or "Remind me" on it in marker
 
 Remembering is a practical skill. It's part of our daily routines; remembering a grocery list, remembering to ship a package, remembering to ask your friend about that recent event.
 
