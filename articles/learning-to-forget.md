@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2015-06-03T03:21:34-0500",
   "keywords": "learn, forget, memory",
-  "summary": "TODO: Come back to me"
+  "summary": "Remembering items is a practical skill but so is controlled forgetting. We walk over some techinques I use to help forget things for now and remember them later."
 }
 
 // TODO: Add image that is note pad with "Forget me" or "Remind me" on it in marker
