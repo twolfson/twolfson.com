@@ -103,32 +103,18 @@ As with the past techniques:
 
 # Personal experiences
 ## Long term context loss
-### Harvest Moon
-[Harvest Moon][] is a video game that is based around farming. The gist of it is:
+### Programming
+Due to being active in open source for a while, occasionally an issue will open on an older repo and I will have to refresh my memory from it. From this experience, I have learned some good practices to embed in repositories:
 
-1. Wake up
-2. Water crops
-3. Do personal tasks (e.g. mining, buying supplies)
-4. Go to sleep
-5. Repeat
-
-[Harvest Moon]: http://en.wikipedia.org/wiki/Harvest_Moon_%28series%29
-
-As a kid, I played some of these games for a bit but eventually get bored and then attempt to resume a few months later.
-
-Every time I tried to resume playing, I would always be at a loss for my context in the game. I forgot what was planted and whether I had fed/watered something that day or not. Out of frustration, I would usually start over or play something else.
-
-Despite multiple efforts (e.g. writing notes for what I was doing last), they would at best partially restore my memory but never fully.
+- Always write practical comments inline
+    - Writing lots of open source that you re-read later helps you get better at this
+- Always write documentation and use it immediately after
+    - Getting familiar with your repo is very painful if you can't remember why decisions were made or what a given API receives
+        - Communicating with your future self is just as practical as communicating with future developers
 
 ### Taking a break in Japan
+When I was taking a break in Japan, I did my best to step away from programming as much as possible. There were a few open source issues that snuck through but when handling them, I noticed a few things.
 
-When in Japan, could read code but:
-
-- couldn't think of names nearly as easily
-- No forward thinking
-- Lack large capacity for foresight
-
-Solutions:
-
-- Write down plenty of inline notes on code (e.g. comments)
-- For Harvest Moon, the closest I got was taking down a page of notes but it was always a partial solution
+- I had very little forward thinking (e.g. I couldn't reason about how an API would expand and handle edge cases)
+- Naming variables normally comes more easily after writing code for a while (read as a little slow but not super slow)
+    - However, when on break, I was super slow with naming due to nothing coding relevant being mentally active
