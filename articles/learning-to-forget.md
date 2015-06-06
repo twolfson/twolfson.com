@@ -78,22 +78,21 @@ Whenever I leave the house, I usually bring a pen. Sometimes I find myself in a 
 - When I am walking and need to remember a task (e.g. commuting and need to ship a package)
 
 ## Splitting mental space for personal and work
-Thinking about work tasks while you are in your personal life can be unnecessarily stressful. I try my best to keep personal things personal and work things work.
+Thinking about work tasks while you are in your personal life can be unnecessarily stressful. Often they are tasks that you are unable to do at the moment and you already know what needs to be done.
+
+As a result, I try my best to keep personal things personal and work things for work.
 
 When working:
 
 - Avoid checking personal email as it will remind you of stressing other tasks that you have in your daily life
 
-Working in an office is a great way to spatially separate work and personal
-
 When working remotely, never directly context switch between work and personal tasks. Always do something between them. For me, I sleep my computer and go get dinner or take a walk.
 
-Vice versa for personal:
+When not working (e.g. personal life):
 - Avoid checking work email as it will remind you of stressing other tasks that you have in your daily life
-
-// TODO: Is this good advice?
-
 - Push notifications for email are a really bad habit and will cause unnecessary stress
+    - Instead, feel free to check work email when you have downtime and can actually facilitate it
+    - If you are an engineer, try to set up something like Pager Duty which will call you about the immediately important things
 
 ## Tip of my tongue moments
 This is a re-application of the "Falling asleep" trick. We have all had "I just had it" moments. We thought of something but then lost it a second later.
