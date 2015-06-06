@@ -103,7 +103,24 @@ As with the past techniques:
 
 # Personal experiences
 ## Long term context loss
-Harvest Moon
+### Harvest Moon
+[Harvest Moon][] is a video game that is based around farming. The gist of it is:
+
+1. Wake up
+2. Water crops
+3. Do personal tasks (e.g. mining, buying supplies)
+4. Go to sleep
+5. Repeat
+
+[Harvest Moon]: http://en.wikipedia.org/wiki/Harvest_Moon_%28series%29
+
+As a kid, I played some of these games for a bit but eventually get bored and then attempt to resume a few months later.
+
+Every time I tried to resume playing, I would always be at a loss for my context in the game. I forgot what was planted and whether I had fed/watered something that day or not. Out of frustration, I would usually start over or play something else.
+
+Despite multiple efforts (e.g. writing notes for what I was doing last), they would at best partially restore my memory but never fully.
+
+### Taking a break in Japan
 
 When in Japan, could read code but:
 
