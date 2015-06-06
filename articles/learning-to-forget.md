@@ -29,7 +29,8 @@ I should state that:
 - Dividing mental space for personal and work
 - Mental foresight
 
-# Remembering an item/set of items for later
+# Common knowledge
+## Remembering an item/set of items for later
 This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but there are so many that it's impractical to keep on thinking about them now. These can be tasks that need to be done (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
 
 Depending on the situation, there are a few different solutions:
@@ -41,8 +42,9 @@ Depending on the situation, there are a few different solutions:
     - Depending on the thought, more/less words will be applicable
     - Both paper and electronic formats work for this scenario
 
-# Forgetting when falling asleep
-When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
+# Personal solutions
+## Forgetting when falling asleep
+When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I almost always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
 
 I deal with this by keeping a paper notepad next to my bed. When I have a thought I want to remember, I:
 
@@ -71,13 +73,13 @@ To reduce the likelihood of illegible notes, I have a few suggestions:
     - Sometimes when half-awake, my wires get crossed and I write gibberish letters
 - When reading back the note, I rewrite the note in daylight immediately. Otherwise, words that might be on the tip of my tongue later will be harder to remember.
 
-# Remembering on the go
+## Remembering on the go
 - On a personal note, I sometimes will write a note via pen on my wrist
     - Useful when I don't have paper or my phone easily accessible
     - Useful when I am walking and need to remember a task (e.g. commuting and need to ship a package)
 
 
-# Splitting mental space for personal and work
+## Splitting mental space for personal and work
 Thinking about work tasks while you are in your personal life can be unnecessarily stressful. I try my best to keep personal things personal and work things work.
 
 When working:
@@ -95,7 +97,7 @@ Vice versa for personal:
 
 - Push notifications for email are a really bad habit and will cause unnecessary stress
 
-# Tip of my tongue moments
+## Tip of my tongue moments
 This is a re-application of the "Falling asleep" trick. We have all had "I just had it" moments. We thought of something but then lost it a second later.
 
 I always carry a pen in my pocket for these types of situations. In these situations, I will write down the thought on my phone if available. If not, then I will write it on my arm near my wrist so I will see it later.
@@ -112,5 +114,5 @@ This plays back into when falling asleep, start to think about more on a task an
 
 Similarly, if we need 10 items when we go grocery shopping and don't write a list, we will probably forget 1 or 2 things because they weren't on our expected route
 
-# Mental foresight
+## Mental foresight
 When in Japan, could read code but couldn't think of names nearly as easily.
