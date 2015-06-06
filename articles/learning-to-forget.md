@@ -34,10 +34,15 @@ This is a canonical example of practical forgetting. We have a list of things we
 
 Depending on the situation, there are a few different solutions:
 
-- To do lists, this is a
-A to do list is the a canonical example of practical forgetting. We want to put down thoughts we have now for something longer term (e.g. remembering to visit the doctor, remembering to write a blog post).
-
-
+- To do lists, this is a check list of items to purchase/tasks to be done
+    - This is most practical for multiple items
+- Notes, a sentence fragment or full-blown prose describing a task or set of tasks at hand
+    - This is practical for single items
+    - Depending on the thought, more/less words will be applicable
+    - Both paper and electronic formats work for this scneario
+        - On a personal note, I sometimes will write a note via pen on my wrist
+            - Useful when I don't have paper or my phone easily accessible
+            - Useful when I am walking and need to remember a task (e.g. commuting and need to ship a package)
 
 # Forgetting when falling asleep
 When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
