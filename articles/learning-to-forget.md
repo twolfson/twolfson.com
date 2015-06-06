@@ -95,21 +95,14 @@ When not working (e.g. personal life):
     - If you are an engineer, try to set up something like Pager Duty which will call you about the immediately important things
 
 ## Tip of my tongue moments
-This is a re-application of the "Falling asleep" trick. We have all had "I just had it" moments. We thought of something but then lost it a second later.
+Whenever I had a fleeting thought that I know I am going to forget shortly due to other larger tasks, I always take time to write it down.
 
-I always carry a pen in my pocket for these types of situations. In these situations, I will write down the thought on my phone if available. If not, then I will write it on my arm near my wrist so I will see it later.
+As with the past techniques:
 
-Similarly if I need to remember a task when I am walking (e.g. send a letter while commuting), then I will write it on my wrist so I am more likely to remember than forget. I could set a reminder on my phone but not all transit is predictable and it could be annoying.
+- Write it down either on paper, electronically, or on your wrist via pen
 
-// TODO: Maybe place before Falling asleep section?
+# Personal experiences
+## Long term context loss
+Harvest Moon
 
-Juggling mental notes
-
-We can only balance about 5 different notes to ourselves at a given time. Anything more and the whole thing falls to shit.
-
-This plays back into when falling asleep, start to think about more on a task and forget where we came from
-
-Similarly, if we need 10 items when we go grocery shopping and don't write a list, we will probably forget 1 or 2 things because they weren't on our expected route
-
-## Mental foresight
 When in Japan, could read code but couldn't think of names nearly as easily.
