@@ -57,13 +57,11 @@ I deal with this by keeping a paper notepad next to my bed. When I have a though
 - Put the pen back together and into the notepad ring
 - Put the notepad back in its area
 
-**Warning: Perform this in the dark and with a notepad because a cellphone or room light will stop melatonin production and prolonge lying in bed falling asleep.**
+Once the thought has been written down, I let my mind drift and it begins to think about other topics. If I think about something else that I want to remember, then I write it down again.
 
-When I wake up, I read the note and the thought rushes back into memory. Then, I can consider the thought offloaded to paper.
+**Note: Perform this in the dark and with a notepad because any light will stop melatonin production and prolong not falling asleep.**
 
-**Advantages:**
-
-Once written down, my mind frees up and starts to think about finer details or other topics. Thus, my fixation is relieved. I have controlled my forgetting, allowing me to remember the thought later.
+In the morning, I read the note and the thought rushes back into memory. Then, I re-transcribe it (usually it has some typos or scribbles), and then consider this note as the same from our "Remembering an item" section.
 
 **Suggestions:**
 
@@ -71,7 +69,7 @@ To reduce the likelihood of illegible notes, I have a few suggestions:
 
 - When writing down a word, remember the actual shape of the letter and draw that
     - Sometimes when half-awake, my wires get crossed and I write gibberish letters
-- When reading back the note, I rewrite the note in daylight immediately. Otherwise, words that might be on the tip of my tongue later will be harder to remember.
+- Rewrite the note in as soon as you wake up. Thoughts that seem fresh now might be lost later (kind of like with remembering dreams).
 
 ## Remembering on the go
 - On a personal note, I sometimes will write a note via pen on my wrist
