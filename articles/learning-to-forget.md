@@ -10,16 +10,34 @@
 
 Remembering is a practical skill. It's part of our daily routines; remembering a grocery list, remembering to ship a package, remembering to ask your friend about that recent event.
 
-The opposite or remembering is forgetting. For the purpose of our discussion, I want to consider controlled forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
+The opposite of remembering is forgetting. For the purpose of our discussion, I want to consider controlled forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
 
-- Allow thinking about other topics (e.g. reflecting on past events)
-- Relieve mental stress (e.g. juggling thoughts)
-- Allow ourselves to offload a thought until we actually need it (e.g. setting a calendar reminder)
+- Allows thinking about other topics (e.g. reflecting on past events)
+- Relieves mental stress (e.g. juggling thoughts)
+- Allows ourselves to offload a thought for later (e.g. setting a calendar reminder)
 
 I should state that:
 
 - This is all based off of personal experience with no rigid science
 - While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means it is placed into a deeper, not constantly active part of our memory
+
+**Table of contents:**
+
+// TODO: Link me
+- Remembering an item/set of items for later
+- Forgetting when falling asleep
+- Dividing mental space for personal and work
+- Mental foresight
+
+# Remembering an item/set of items for later
+This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but there are so many that it's impractical to keep on thinking about them now. These can be tasks that need to be done (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
+
+Depending on the situation, there are a few different solutions:
+
+- To do lists, this is a
+A to do list is the a canonical example of practical forgetting. We want to put down thoughts we have now for something longer term (e.g. remembering to visit the doctor, remembering to write a blog post).
+
+
 
 # Forgetting when falling asleep
 When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
