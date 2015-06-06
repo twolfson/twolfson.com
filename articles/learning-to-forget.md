@@ -39,10 +39,7 @@ Depending on the situation, there are a few different solutions:
 - Notes, a sentence fragment or full-blown prose describing a task or set of tasks at hand
     - This is practical for single items
     - Depending on the thought, more/less words will be applicable
-    - Both paper and electronic formats work for this scneario
-        - On a personal note, I sometimes will write a note via pen on my wrist
-            - Useful when I don't have paper or my phone easily accessible
-            - Useful when I am walking and need to remember a task (e.g. commuting and need to ship a package)
+    - Both paper and electronic formats work for this scenario
 
 # Forgetting when falling asleep
 When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I will always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
@@ -73,6 +70,12 @@ To reduce the likelihood of illegible notes, I have a few suggestions:
 - When writing down a word, remember the actual shape of the letter and draw that
     - Sometimes when half-awake, my wires get crossed and I write gibberish letters
 - When reading back the note, I rewrite the note in daylight immediately. Otherwise, words that might be on the tip of my tongue later will be harder to remember.
+
+# Remembering on the go
+- On a personal note, I sometimes will write a note via pen on my wrist
+    - Useful when I don't have paper or my phone easily accessible
+    - Useful when I am walking and need to remember a task (e.g. commuting and need to ship a package)
+
 
 # Splitting mental space for personal and work
 Thinking about work tasks while you are in your personal life can be unnecessarily stressful. I try my best to keep personal things personal and work things work.
