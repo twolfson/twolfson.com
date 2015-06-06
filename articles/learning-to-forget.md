@@ -72,10 +72,10 @@ To reduce the likelihood of illegible notes, I have a few suggestions:
 - Rewrite the note in as soon as you wake up. Thoughts that seem fresh now might be lost later (kind of like with remembering dreams).
 
 ## Remembering on the go
-- On a personal note, I sometimes will write a note via pen on my wrist
-    - Useful when I don't have paper or my phone easily accessible
-    - Useful when I am walking and need to remember a task (e.g. commuting and need to ship a package)
+Whenever I leave the house, I usually bring a pen. Sometimes I find myself in a situation where writing a note via pen on my wrist is my best option at the time.
 
+- When I don't have paper or my phone isn't easily accessible
+- When I am walking and need to remember a task (e.g. commuting and need to ship a package)
 
 ## Splitting mental space for personal and work
 Thinking about work tasks while you are in your personal life can be unnecessarily stressful. I try my best to keep personal things personal and work things work.
