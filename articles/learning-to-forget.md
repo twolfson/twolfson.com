@@ -105,4 +105,13 @@ As with the past techniques:
 ## Long term context loss
 Harvest Moon
 
-When in Japan, could read code but couldn't think of names nearly as easily.
+When in Japan, could read code but:
+
+- couldn't think of names nearly as easily
+- No forward thinking
+- Lack large capacity for foresight
+
+Solutions:
+
+- Write down plenty of inline notes on code (e.g. comments)
+- For Harvest Moon, the closest I got was taking down a page of notes but it was always a partial solution
