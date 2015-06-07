@@ -35,32 +35,32 @@ The opposite of remembering is forgetting. For the purpose of our discussion, I 
 
 # Background/Common knowledge
 ## Remembering an item/set of items for later
-This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but there are so many that it's impractical to keep on thinking about them now. These can be tasks (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
+This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but it's impractical to keep on thinking about them now. These can be tasks (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
 
 Depending on the situation, there are a few different solutions:
 
-- To do lists, this is a check list of items to purchase/tasks to be done
+- To do lists; a check list of items to purchase/tasks to be done
     - This is most practical for multiple items
-- Notes, a sentence fragment or full-blown prose describing a task or set of tasks at hand
+- Notes; text describing a task or set of tasks at hand
     - This is practical for single items
-    - Depending on the thought, more/less words will be applicable
+    - Depending on the thought, more/less words will be applicable (e.g. a sentence fragment to many paragraphs)
 
-In these solutions, the medium can vary depending on the situation (e.g. electronic is good for reuse, paper is good for attaching to a specific location like a desk).
+In these solutions, the medium can vary depending on the situation (e.g. electronic is good for reuse/sharing, paper is good for attaching to a specific location like a desk).
 
 # Personal solutions
-## Forgetting when falling asleep
+## Forgetting when falling asleep#long-term-context-loss
 When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I almost always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
 
 I deal with this by keeping a paper notepad and attached pen next to my bed. When I have a thought I want to remember, I:
 
-- Sweep around the general area where the notepad is until I find it
-- Take out the pen, uncap it, and place it on the back of the pen
-- Blindly write down the thought on the paper in the dark
-- Rip off the sheet of paper
-- Put the pen back together and reattach to the notebook
-- Put the notepad back in its area
+1. Sweep around the general area where the notepad is until I find it
+2. Take out the pen, uncap it, and place it on the back of the pen
+3. Blindly write down the thought on the paper in the dark
+4. Rip off the sheet of paper
+5. Put the pen back together and reattach to the notebook
+6. Put the notepad back in its area
 
-Once the thought has been written down, I let my mind drift and it begins to think about other topics. If I think about something else that I want to remember, then I write it down again.
+Once the thought has been written down, I let my mind drift and it begins to think about other topics. If I think of something else that I want to remember, then I write it down again.
 
 **Note: Perform this in the dark and with a notepad because any light will stop melatonin production and prolong not falling asleep.**
 
@@ -74,8 +74,8 @@ In the morning, I read the note and the thought rushes back into memory. Then, I
 
 To reduce the likelihood of illegible notes, I have a few suggestions:
 
-- When writing down a word, remember the shape of the letter and draw that
-    - Sometimes when half-awake, my wires get crossed and I write gibberish letters
+- When writing down a word, remember the shape of the letters and draw those
+    - Sometimes when half-awake, my wires get crossed and I write gibberish letters unless I do this
 - Rewrite the note in as soon as you wake up. Thoughts that seem fresh now might be lost later (kind of like with remembering dreams).
 
 ## Remembering on the go
@@ -100,12 +100,15 @@ When working:
 
 - Avoid checking personal email as it will remind you of stressing other tasks that you have in your daily life
 
-When working remotely, never directly context switch between work and personal tasks. Always do something between them. For me, I sleep my computer and go get dinner or take a walk.
+When working remotely:
+
+- Never directly context switch between work and personal tasks
+    - Always do something between them. For me, I sleep my computer and go get dinner or take a walk.
 
 When not working (e.g. personal life):
 - Avoid checking work email as it will remind you of stressing other tasks that you have in your daily life
 - Push notifications for email are a really bad habit and will cause unnecessary stress
-    - Instead, feel free to check work email when you have downtime and can actually facilitate it
+    - Instead, feel free to check work email when you have downtime and can actually facilitate any issues
     - If you are an engineer, try to set up something like Pager Duty which will call you about the immediately important things
 
 # Personal experiences
@@ -125,3 +128,5 @@ When I was taking a break in Japan, I did my best to step away from programming 
 - I had very little forward thinking (e.g. I couldn't reason about how an API would expand and handle edge cases)
 - Naming variables normally comes more easily after writing code for a while (read as a little slow but not super slow)
     - However, when on break, I was super slow with naming due to nothing coding relevant being mentally active
+
+When I got back and resumed programming normally, it took a couple of days to get back into the swing of things.
