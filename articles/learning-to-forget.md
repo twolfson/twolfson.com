@@ -6,7 +6,7 @@
   "summary": "Remembering items is a practical skill but so is controlled forgetting. We walk over some techinques I use to help forget things for now and remember them later."
 }
 
-// TODO: Add image that is note pad with "Forget me" or "Remind me" on it in marker
+![Forget me](/public/images/articles/learning-to-forget/forget-me.png)
 
 Remembering is a practical skill. It's part of our daily routines; remembering a grocery list, remembering to ship a package, remembering to ask your friend about that recent event.
 
@@ -48,8 +48,6 @@ When falling asleep, sometimes I have epiphanies about the past day or upcoming 
 
 I deal with this by keeping a paper notepad next to my bed. When I have a thought I want to remember, I:
 
-// TODO: Add photo of blindly written note
-
 - Sweep around the general area where the notepad is until I find it
 - Take out the pen, uncap it, and place it on the back of the pen
 - Blindly write it down in the dark
@@ -62,6 +60,8 @@ Once the thought has been written down, I let my mind drift and it begins to thi
 **Note: Perform this in the dark and with a notepad because any light will stop melatonin production and prolong not falling asleep.**
 
 In the morning, I read the note and the thought rushes back into memory. Then, I re-transcribe it (usually it has some typos or scribbles), and then consider this note as the same from our "Remembering an item" section.
+
+![Blindly written note](/public/images/articles/learning-to-forget/blind-note.png)
 
 **Suggestions:**
 
