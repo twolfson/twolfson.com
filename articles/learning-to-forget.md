@@ -8,7 +8,7 @@
 
 ![Forget me](/public/images/articles/learning-to-forget/forget-me.png)
 
-Remembering is a practical skill. It's part of our daily routines; remembering a grocery list, remembering to ship a package, remembering to ask your friend about that recent event.
+Remembering is a practical skill. It's part of our daily routines (e.g. remembering a grocery list, remembering to ship a package).
 
 The opposite of remembering is forgetting. For the purpose of our discussion, I want to consider controlled forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
 
@@ -16,22 +16,22 @@ The opposite of remembering is forgetting. For the purpose of our discussion, I 
 - Relieves mental stress (e.g. juggling thoughts)
 - Allows ourselves to offload a thought for later (e.g. setting a calendar reminder)
 
-I should state that:
+**Notices:**
 
 - This is all based off of personal experience with no rigid science
-- While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means it is placed into a deeper, not constantly active part of our memory
+- While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means placing something to a less active part of our memory
 
 **Table of contents:**
 
-// TODO: Link me
+// TODO: Update and link me
 - Remembering an item/set of items for later
 - Forgetting when falling asleep
 - Dividing mental space for personal and work
 - Mental foresight
 
-# Common knowledge
+# Background/Common knowledge
 ## Remembering an item/set of items for later
-This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but there are so many that it's impractical to keep on thinking about them now. These can be tasks that need to be done (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
+This is a canonical example of practical forgetting. We have a list of things we want to remember for a later time but there are so many that it's impractical to keep on thinking about them now. These can be tasks (e.g. visiting the doctor, writing a blog post) or tangible items (e.g. buying specific groceries).
 
 Depending on the situation, there are a few different solutions:
 
@@ -40,26 +40,29 @@ Depending on the situation, there are a few different solutions:
 - Notes, a sentence fragment or full-blown prose describing a task or set of tasks at hand
     - This is practical for single items
     - Depending on the thought, more/less words will be applicable
-    - Both paper and electronic formats work for this scenario
+
+In these solutions, the medium can vary depending on the situation (e.g. electronic is good for reuse, paper is good for attaching to a specific location like a desk).
 
 # Personal solutions
 ## Forgetting when falling asleep
 When falling asleep, sometimes I have epiphanies about the past day or upcoming tasks. No matter how hard I try, I almost always forget these when I wake up. Additionally, if I begin to think about finer details, then I start to lose track of the original thought and lose everything.
 
-I deal with this by keeping a paper notepad next to my bed. When I have a thought I want to remember, I:
+I deal with this by keeping a paper notepad and attached pen next to my bed. When I have a thought I want to remember, I:
 
 - Sweep around the general area where the notepad is until I find it
 - Take out the pen, uncap it, and place it on the back of the pen
-- Blindly write it down in the dark
+- Blindly write down the thought on the paper in the dark
 - Rip off the sheet of paper
-- Put the pen back together and into the notepad ring
+- Put the pen back together and reattach to the notebook
 - Put the notepad back in its area
 
 Once the thought has been written down, I let my mind drift and it begins to think about other topics. If I think about something else that I want to remember, then I write it down again.
 
 **Note: Perform this in the dark and with a notepad because any light will stop melatonin production and prolong not falling asleep.**
 
-In the morning, I read the note and the thought rushes back into memory. Then, I re-transcribe it (usually it has some typos or scribbles), and then consider this note as the same from our "Remembering an item" section.
+In the morning, I read the note and the thought rushes back into memory. Then, I rewrite it (usually it has some typos or scribbles), and then consider this note as the same from our ["Remembering an item" section][remembering-an-item].
+
+[remembering-an-item]: #remembering-an-item-set-of-items-for-later
 
 ![Blindly written note](/public/images/articles/learning-to-forget/blind-note.png)
 
@@ -67,7 +70,7 @@ In the morning, I read the note and the thought rushes back into memory. Then, I
 
 To reduce the likelihood of illegible notes, I have a few suggestions:
 
-- When writing down a word, remember the actual shape of the letter and draw that
+- When writing down a word, remember the shape of the letter and draw that
     - Sometimes when half-awake, my wires get crossed and I write gibberish letters
 - Rewrite the note in as soon as you wake up. Thoughts that seem fresh now might be lost later (kind of like with remembering dreams).
 
@@ -76,6 +79,13 @@ Whenever I leave the house, I usually bring a pen. Sometimes I find myself in a 
 
 - When I don't have paper or my phone isn't easily accessible
 - When I am walking and need to remember a task (e.g. commuting and need to ship a package)
+
+## Tip of my tongue moments
+Whenever I had a fleeting thought that I know I am going to forget shortly due to other larger tasks, I always take time to write it down.
+
+As with the past techniques:
+
+- Write it down either on paper, electronically, or on your wrist via pen
 
 ## Splitting mental space for personal and work
 Thinking about work tasks while you are in your personal life can be unnecessarily stressful. Often they are tasks that you are unable to do at the moment and you already know what needs to be done.
@@ -94,13 +104,6 @@ When not working (e.g. personal life):
     - Instead, feel free to check work email when you have downtime and can actually facilitate it
     - If you are an engineer, try to set up something like Pager Duty which will call you about the immediately important things
 
-## Tip of my tongue moments
-Whenever I had a fleeting thought that I know I am going to forget shortly due to other larger tasks, I always take time to write it down.
-
-As with the past techniques:
-
-- Write it down either on paper, electronically, or on your wrist via pen
-
 # Personal experiences
 ## Long term context loss
 ### Programming
@@ -109,7 +112,7 @@ Due to being active in open source for a while, occasionally an issue will open 
 - Always write practical comments inline
     - Writing lots of open source that you re-read later helps you get better at this
 - Always write documentation and use it immediately after
-    - Getting familiar with your repo is very painful if you can't remember why decisions were made or what a given API receives
+    - Getting familiar with your repo is very painful if you can't remember anything about it (e.g. reasoning, signatures)
         - Communicating with your future self is just as practical as communicating with future developers
 
 ### Taking a break in Japan
