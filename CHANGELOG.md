@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.57.1 - Accepted latest perceptual diffs
+
 3.57.0 - Added "IDEO U" to activity
 
 3.56.0 - Added "Learning to forget" article
