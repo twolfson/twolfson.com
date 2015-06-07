@@ -3,31 +3,35 @@
   "author": "Todd Wolfson",
   "date": "2015-06-03T03:21:34-0500",
   "keywords": "learn, forget, memory",
-  "summary": "Remembering items is a practical skill but so is controlled forgetting. We walk over some techinques I use to help forget things for now and remember them later."
+  "summary": "An introduction to leveraging forgetting as a controlled skill."
 }
 
 ![Forget me](/public/images/articles/learning-to-forget/forget-me.png)
 
 Remembering is a practical skill. It's part of our daily routines (e.g. remembering a grocery list, remembering to ship a package).
 
-The opposite of remembering is forgetting. For the purpose of our discussion, I want to consider controlled forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
+The opposite of remembering is forgetting. For the purpose of our discussion, I want to consider controlling forgetting as a practical skill. When we forget something, it is released from our cognitive load and makes space for something new. For example:
 
 - Allows thinking about other topics (e.g. reflecting on past events)
 - Relieves mental stress (e.g. juggling thoughts)
-- Allows ourselves to offload a thought for later (e.g. setting a calendar reminder)
+- Offload a thought/action for later (e.g. setting a calendar reminder)
 
 **Notices:**
 
 - This is all based off of personal experience with no rigid science
-- While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means placing something to a less active part of our memory
+- While it might sound like we are discussing unlearning, we are not. Unlearning means removing something entirely from your memory. Forgetting means placing something to a less active part of our memory.
 
 **Table of contents:**
 
-// TODO: Update and link me
-- Remembering an item/set of items for later
-- Forgetting when falling asleep
-- Dividing mental space for personal and work
-- Mental foresight
+- [Background/Common knowledge](#background-common-knowledge)
+    - [Remembering an item/set of items for later](#remembering-an-item-set-of-items-for-later)
+- [Personal solutions](#personal-solutions)
+    - [Forgetting when falling asleep](#forgetting-when-falling-asleep)
+    - [Remembering on the go](#remembering-on-the-go)
+    - [Tip of the tongue moments](#tip-of-the-tongue-moments)
+    - [Splitting mental space for personal and work](#splitting-mental-space-for-personal-and-work)
+- [Personal experiences](#personal-experiences)
+    - [Long term context loss](#long-term-context-loss)
 
 # Background/Common knowledge
 ## Remembering an item/set of items for later
@@ -80,7 +84,7 @@ Whenever I leave the house, I usually bring a pen. Sometimes I find myself in a 
 - When I don't have paper or my phone isn't easily accessible
 - When I am walking and need to remember a task (e.g. commuting and need to ship a package)
 
-## Tip of my tongue moments
+## Tip of the tongue moments
 Whenever I had a fleeting thought that I know I am going to forget shortly due to other larger tasks, I always take time to write it down.
 
 As with the past techniques:
