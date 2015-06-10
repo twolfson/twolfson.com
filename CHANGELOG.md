@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.58.0 - Updated project statistics and repo URLs
+
 3.57.1 - Accepted latest perceptual diffs
 
 3.57.0 - Added "IDEO U" to activity
