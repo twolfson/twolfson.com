@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.59.0 - Updated project statistics and repo URLs again
+
 3.58.1 - Accepted latest perceptual diffs
 
 3.58.0 - Updated project statistics and repo URLs
