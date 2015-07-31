@@ -7,16 +7,21 @@ exports.common = function (config) {
   // Generate a router
   var router = new express.Router();
 
+  // Override our article URLs
+  // TODO: Move to slug for `article.url` to remove this need. Then, we can host alternate URLs.
+  var articles = config.articles;
+  articles.forEach(function updateArticleUrl (article) {
+    article.url = article.urlOverride || article.url;
+  });
+
   // Blog
   // TODO: Move these onto config with a required parameter of `articles/article`
   // TODO: Namespce articles with /articles or /blog, set up redirects for all previously existing routes
   // TODO: Should we also redirect / to /articles or /blog?
-  var articles = config.articles;
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     // DEV: Escape '+' as express coerces URL to a regexp
-    // TODO: Use slug for `article.url` to avoid issue altogether
-    var url = article.urlOverride || article.url.replace(/\+/g, '\\+');
+    var url = article.url.replace(/\+/g, '\\+');
     router.get(url, controllers.blog.article({article: article}));
   });
   router.get('/index.xml', controllers.blog.rss({articles: articles}));
