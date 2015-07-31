@@ -22,7 +22,7 @@ TS.ims.unread_highlight_changed_sig.add(TS.ui.growls.updateTotalUnreadDisplays,T
 TS.client.login_sig.add(TS.ui.growls.updateTotalUnreadDisplays,TS.ui.growls);
 ```
 
-.
+Scroll down to see answer...
 
 .
 
@@ -45,7 +45,7 @@ If you guess [Publish/subscribe pattern][], [EventEmitter][], or [Observer patte
 [Observer pattern]: https://en.wikipedia.org/wiki/Observer_pattern
 
 # Explanation
-I started using [plaidchat][] since Slack currently lacks an official GNU/Linux Slack client. Not too far into using it, I wanted to add notification support and so began the dive into Slack's source code. When I started reading the code, I was surprised at how easy it was to read and integrate with, which is atypical from my experience (I used to do this professionally).
+I started using [plaidchat][] since Slack currently has no GNU/Linux Slack client. Not too far into using it, I wanted to add notification support and so began the dive into Slack's source code. When I started reading the code, I was surprised at how easy it was to read and integrate with, which is atypical from my experience (I used to do this professionally).
 
 [plaidchat]: https://github.com/plaidchat/plaidchat
 
@@ -68,10 +68,12 @@ Don't feel intimidated. Most of the time, the source code of websites is awful t
 
 [Ensighten]: https://www.ensighten.com/
 
+# Further reading/tools
+
 If you are interested in more about reading source code, here are some resources:
 
 - [JavaScript: The Definitive Guide][js-definitive-guide] - If you are going to read how something works, be sure to understand its underlying concepts
-- [10 Things I Learned From the jQuery Source by Paul Irish][jquery-source] - Great tutorial on neat things from jQuery but more so gets you in the mindset of reading someone else's complex code
+- [10 Things I Learned From the jQuery Source by Paul Irish][jquery-source] - Great tutorial on neat things from jQuery but also gets you reading someone else's code
 - Lots of practice
 
 [js-definitive-guide]: http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596000480
