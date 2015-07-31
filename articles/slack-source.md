@@ -45,7 +45,9 @@ If you guess [Publish/subscribe pattern][], [EventEmitter][], or [Observer patte
 [Observer pattern]: https://en.wikipedia.org/wiki/Observer_pattern
 
 # Explanation
-Currently Slack lacks an official GNU/Linux Slack client. However since I have GNU/Linux computer and I dislike using my browser as my chat application, I started using [plaidchat][]. Not too far into using it, I wanted to add notification support and so began the dive into Slack's source code.
+I started using [plaidchat][] since Slack currently lacks an official GNU/Linux Slack client. Not too far into using it, I wanted to add notification support and so began the dive into Slack's source code. When I started reading the code, I was surprised at how easy it was to read and integrate with, which is atypical from my experience (I used to do this professionally).
+
+[plaidchat]: https://github.com/plaidchat/plaidchat
 
 # What else do you use from Slack?
 Currently, we integrate with [Slack's notification system][notifications], ["Switch team" links][team-links], ["Quick switcher"][quick-switcher], and [team data][team-data].
