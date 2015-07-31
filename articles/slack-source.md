@@ -1,5 +1,6 @@
 {
   "title": "Slack's source code is beautiful",
+  "urlOverride": "/2015-07-31-slacks-source-code-is-beautiful",
   "author": "Todd Wolfson",
   "date": "2015-07-31T01:18:06-0500",
   "keywords": "slack, source, browser, obfuscated",

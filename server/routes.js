@@ -15,7 +15,8 @@ exports.common = function (config) {
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     // DEV: Escape '+' as express coerces URL to a regexp
-    var url = article.url.replace(/\+/g, '\\+');
+    // TODO: Use slug for `article.url` to avoid issue altogether
+    var url = article.urlOverride || article.url.replace(/\+/g, '\\+');
     router.get(url, controllers.blog.article({article: article}));
   });
   router.get('/index.xml', controllers.blog.rss({articles: articles}));
