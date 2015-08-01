@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.60.0 - Added "Slack's source code is beautiful" article
+
 3.59.1 - Accepted latest perceptual diffs
 
 3.59.0 - Updated project statistics and repo URLs again
