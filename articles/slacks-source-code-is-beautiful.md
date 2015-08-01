@@ -38,7 +38,7 @@ Scroll down to see answer...
 
 .
 
-If you guess [Publish/subscribe pattern][], [EventEmitter][], or [Observer pattern][], then you are correct! These are communication channels for Slack to notify other parts of its application when a notification update occurred (e.g. new message received).
+If you guessed [Publish/subscribe pattern][], [EventEmitter][], or [Observer pattern][], then you are correct! These are communication channels for Slack to notify other parts of its application when a notification update occurred (e.g. new message received).
 
 [Publish/subscribe pattern]: https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 [EventEmitter]: https://nodejs.org/api/events.html#events_class_events_eventemitter
