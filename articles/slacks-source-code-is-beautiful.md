@@ -64,7 +64,11 @@ During a recent dive, we discovered `window.TSSSB` which is the actual bridge wh
 https://github.com/plaidchat/plaidchat/issues/121
 
 # Reading source code intimidates me
-Don't feel intimidated. Most of the time, the source code of websites is awful to read; minified, obfuscated, and with horrible control structures. Additionally, I have been reading source code since I got my hands on Firefox 3.0 and got very well practiced in my time at [Ensighten][] (e.g. try visiting a JavaScript heavy ecommerce site, looking at their source code, and finding out what existing JavaScript hooks exist to track an "Add to cart" click).
+Don't feel intimidated. Most of the time, the source code of websites is awful to read; minified, obfuscated, and with horrible control structures.
+
+As with most things, this takes time and practice. I have been reading source code since I got my hands on Firefox 3.0 and got very well practiced in my time at [Ensighten][].
+
+For example: try visiting a JavaScript heavy ecommerce site, looking at the source code, and finding existing JavaScript hooks exist to track an "Add to cart" click (typical use case for analytics).
 
 [Ensighten]: https://www.ensighten.com/
 
