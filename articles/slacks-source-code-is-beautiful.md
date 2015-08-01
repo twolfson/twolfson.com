@@ -24,19 +24,19 @@ TS.client.login_sig.add(TS.ui.growls.updateTotalUnreadDisplays,TS.ui.growls);
 
 Scroll down to see answer...
 
-.
+&darr;
 
-.
+&darr;
 
-.
+&darr;
 
-.
+&darr;
 
-.
+&darr;
 
-.
+&darr;
 
-.
+&darr;
 
 If you guessed [Publish/subscribe pattern][], [EventEmitter][], or [Observer pattern][], then you are correct! These are communication channels to inform other parts of the application when a notification update occurs (e.g. new message received).
 
