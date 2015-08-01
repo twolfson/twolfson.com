@@ -48,8 +48,6 @@ Want to read more? Take a glance here:
 
 http://viewsource.in/https://slack.global.ssl.fastly.net/31971/js/rollup-client_1420067921.js
 
-http://viewsource.in/https://slack.global.ssl.fastly.net/31913/js/rollup-core_required_1419975817.js
-
 # Explanation
 I started using [plaidchat][] since Slack currently has no GNU/Linux Slack client. Not too far into using it, I wanted to add notification support and so began the dive into Slack's source code. When I started reading the code, I was surprised at how easy it was to read and integrate with, which is atypical from my experience (I used to do this professionally).
 
