@@ -97,12 +97,12 @@ First, let's give a historical/squashed workflow example. We will create and wor
 ```bash
 # Work on and build our feature branch
 git checkout -b feature
-touch file
+echo "hello" > file
 git add file
-git commit -m "Work"
-touch file2
+git commit -m "Added hello file"
+echo "world" > file2
 git add file2
-git commit -m "More work"
+git commit -m "Added world file"
 
 # When we are ready to open our PR
 # DEV: We use -B to overwrite any past squashed branches
@@ -117,7 +117,7 @@ git push origin feature.squashed
 Here's a visualization of our `git` history:
 
 ```
-        o feature.squashed (a22222)
+        +---o feature.squashed (a22222)
        /
       /---o---o feature (aaaaaa)
      /
@@ -127,7 +127,7 @@ o---o- master (ffffff)
 When we land this PR, it will look like:
 
 ```
-      /---o---o feature (aaaaaa)
+      +---o---o feature (aaaaaa)
      /
 o---o---o- master, feature.squashed (a22222)
 ```
@@ -135,9 +135,46 @@ o---o---o- master, feature.squashed (a22222)
 If we have to update our PR, we don't update the squashed branch, but instead update the historical branch:
 
 ```bash
-# Make an edit on our
-git checkout
+# Make an edit on our historical branch
+git checkout feature
+echo "hello world" > file
+git add file
+git commit -m "Corrected file's content"
+
+# Update our squashed branch (still using -B to override the branch)
+git checkout -B feature.squashed
+git rebase -i master
+# Squash all our commits
+
+# Force push our squashed branch which automatically updates the PR
+git push origin feature.squashed --force
 ```
+
+Now that we are established with the historical/squashed workflow, let's apply it to the first example:
+
+```
+        o feature-1b (bbbbbb)
+       /
+      o feature-1a (aaaaaa)
+     /
+o---o- master (ffffff)
+```
+
+With historical/squashed branches, our goal is to look more like this:
+
+```
+                +---o feature-1b.squashed (b22222)
+               /
+              /---o---o feature-1b (bbbbbb)
+             /
+        +---o feature-1a.squashed (a22222)
+       /
+      /---o---o feature-1a (aaaaaa)
+     /
+o---o- master (ffffff)
+```
+
+To reiterate, the contents of `aaaaaa` and `a22222` are the same (similarly with `bbbbbb` and `b22222`).
 
 // TODO: Document cleaning up sqwished and base branches
 
