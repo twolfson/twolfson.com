@@ -160,14 +160,14 @@ Now that we are established with the historical/squashed workflow, let's apply i
 o---o- master (ffffff)
 ```
 
-With historical/squashed branches, our goal is to look more like this:
+For the purpose of dependent PRs, we are going to add one more notion known as a `base` branch. This is where the historical branch forked from it's dependent branch. For the example above, our structure will look like
 
 ```
                 +---o feature-1b.squashed (b22222)
                /
               /---o---o feature-1b (bbbbbb)
              /
-        +---o feature-1a.squashed (a22222)
+        +---o feature-1a.squashed, feature-1b.base (a22222)
        /
       /---o---o feature-1a (aaaaaa)
      /
@@ -176,10 +176,63 @@ o---o- master (ffffff)
 
 To reiterate, the contents of `aaaaaa` and `a22222` are the same (similarly with `bbbbbb` and `b22222`).
 
+// TODO: Add some commands to play with this example at home, maybe in a gist
+// TODO: Do the same example thing for the very first example
+
+Building the current `git` structure would look like:
+
+```bash
+# Build our feature-1a on a historical branch
+git checkout -b feature-1a
+echo "hello" > file
+git add file
+git commit -m "Added hello file"
+
+# Squash into our feature-1a squashed branch
+git checkout -B feature-1a.squashed
+git rebase -i master
+
+# Open our first PR
+git push origin feature-1a.squashed
+
+# Mark our origin for feature-1b
+git checkout -b feature-1b.base
+
+# Build our feature-1b on a historical branch
+git checkout -b feature-1b
+echo "world" > file2
+git add file2
+git commit -m "Added world file"
+
+# Squash into our feature-1b squashed branch
+#   but for this one, we base off of our feature-1b base
+git checkout -B feature-1b.squashed
+git rebase -i feature-1b.base
+
+# Open our second PR
+git push origin feature-1b.squashed
+```
+
+When we land our stack of PR's, it happens the same as a normal PR:
+
+```bash
+# Land our first PR
+git checkout master
+git merge feature-1a.squashed
+git push origin master
+
+# Land our second PR
+git merge feature-1b.squashed
+git push origin master
+```
+
+**Pro-tip:** We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the very first PR.
+
+Now, let's handle the scenario of us needing to update our first PR.
+
+// TODO: Standardize on first vs 1st
+
 // TODO: Document cleaning up sqwished and base branches
-
-
-
 
 
 
