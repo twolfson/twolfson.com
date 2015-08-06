@@ -90,11 +90,13 @@ git push origin feature-1b --force
 Alright, now that was 2 PR's. Imagine doing that workflow for a stack of 5 PR's. We are going to make some mistakes...
 
 # Solution
+// TODO: Maybe document `git-sqwish` at the very end
+
 After using `git-rebase` a handful of times, I got fed up with it due to repeating merge conflicts and wrote [git-sqwish][].
 
 [git-sqwish]: https://github.com/twolfson/git-sqwish
 
-For the purposes of this discussion, you can think of it as 2 commands combined in 1:
+For the purposes of this discussion, you can think of `git-sqwish` as 2 commands combined in 1:
 
 ```bash
 # Checkout current branch with `.sqwished` suffix (e.g. `feature-1a` -> `feature-1a.sqwished`)
@@ -104,11 +106,15 @@ git checkout -B "$(git symbolic-ref --short HEAD).sqwished"
 git rebase -i
 ```
 
- and historical branches
+When we combine
+
+// TODO: Don't forget to explain how git history works when combining base and normal
 
 // TODO: Don't forget to mention how we can sanely perform diffs on 2nd `.base` and 1st `.sqwished`
 
 // TODO: Don't forget to mention how to handle replacing `.base` branches
+
+// TODO: Don't forget to explain how git history works when collapsing base/sqwished
 
 Things not to do:
 
