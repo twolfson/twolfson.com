@@ -301,13 +301,15 @@ git diff feature-1b.base
 #   diff new-diff old-diff
 #      I personally prefer copying to clipboard via `| pbcopy`  or `| xclip` (over `> new-diff`)
 #      and using a diff tool in Sublime Text (e.g. FileDiffs)
+
+# Squash our branch for the second PR
+git checkout -B feature-1b.squashed
+git rebase -i feature-1b.base
+
+# Force push our squashed branch which automatically updates the PR
+git push origin feature-1b.squashed --force
 ```
 
- made sure that all changes between the former `feature-1a.squashed` and the current one were now existing
-
-# Merge conflicts from `feature-1a` should automatically be resolved as they were resolved in `feature-1b.base`
-# This is a very important poi
-```
 
 // TODO: Standardize on first vs 1st
 
