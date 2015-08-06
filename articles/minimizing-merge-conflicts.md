@@ -188,6 +188,8 @@ echo "hello" > file
 git add file
 git commit -m "Added hello file"
 
+// TODO: We should have 2 commits to make it a realistic squash
+
 # Squash into our feature-1a squashed branch
 git checkout -B feature-1a.squashed
 git rebase -i master
@@ -203,6 +205,8 @@ git checkout -b feature-1b
 echo "world" > file2
 git add file2
 git commit -m "Added world file"
+
+// TODO: We should have 2 commits to make it a realistic squash
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
@@ -228,7 +232,82 @@ git push origin master
 
 **Pro-tip:** We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the very first PR.
 
-Now, let's handle the scenario of us needing to update our first PR.
+Now, let's handle the scenario of us needing to update our first PR. Our updated history should look like:
+
+```
+                +---o feature-1b.squashed (b44444)
+               /
+              /---o---o feature-1b (b33333)
+             /
+        +---o feature-1a.squashed, feature-1b.base (a44444)
+       /
+      /---o---o---o feature-1a (a33333)
+     /
+o---o- master (ffffff)
+```
+
+```bash
+# Checkout our first historical branch
+git checkout feature-1a
+echo "hello world" > file
+git add file
+git commit -m "Corrected file's content"
+
+# Update our squashed branch (still using -B to override the branch)
+git checkout -B feature-1a.squashed
+git rebase -i master
+
+# Force push our squashed branch which automatically updates the PR
+git push origin feature-1a.squashed --force
+
+# Navigate to our base for the second historical branch and merge in our changes
+git checkout feature-1b.base
+git merge feature-1a.squashed
+# Pro-tip: Use `git merge -` to merge past branch
+
+# Verify there are no differences between our base commit and the squashed revision
+# DEV: This is a nice step to debug between branches to verify there are no gotchas
+git diff feature-1a.squashed
+
+# Navigate to our second historical branch and merge in the changes to our second base
+git checkout feature-1b
+git merge feature-1b.base
+# Pro-tip: Use `git merge -` to merge past branch
+```
+
+This is a very important point in the workflow so let's explain in more detail what is happening. Both `feature-1b.base` and `feature-1b` share a common commit outside of `master`. As a result, this is a known state where the 2 agree upon.
+
+When we merged in the new `feature-1a.squashed` to `feature-1b.base`, we built a new `merge` commit that makes sure `feature-1a` changes take priority as they are **newest**.
+
+When we merge this new `merge` commit into `feature-1b`, we respect all past changes between `feature-1b` and `feature-1b.base`. However, any changes in the new `merge` commit that conflict with the set of `feature-1b.base` changes will be brought up as conflicts. The reason for this is that these commits diverged and occurred after (both time and in `git` history) since the common base (i.e. `feature-1b.base`).
+
+This will be a substantially smaller set (and possibly empty set) than we get with a `rebase` workflow.
+
+Anyway, back to the code:
+
+```bash
+# If there are any merge conflicts, sort them out
+git mergetool -y
+
+# Diff our base to make sure all the changes we expected exist
+git diff feature-1b.base
+# Pro-tip: We can open a GitHub window to skip over the diff and verify it looks consistent
+# Pro-tip: If we feel something changed, then
+#   we can take a diff of our squashed branch to its past commit
+#   and compare that diff to the diff in `git diff feature-1b.base`
+#   We are diffing our diffs to see any lines missed/added during merging
+#   git diff feature-1b.base > new-diff
+#   git diff feature-1b.squashed~1..feature-1b.squashed > old-diff
+#   diff new-diff old-diff
+#      I personally prefer copying to clipboard via `| pbcopy`  or `| xclip` (over `> new-diff`)
+#      and using a diff tool in Sublime Text (e.g. FileDiffs)
+```
+
+ made sure that all changes between the former `feature-1a.squashed` and the current one were now existing
+
+# Merge conflicts from `feature-1a` should automatically be resolved as they were resolved in `feature-1b.base`
+# This is a very important poi
+```
 
 // TODO: Standardize on first vs 1st
 
