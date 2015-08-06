@@ -89,4 +89,19 @@ git push origin feature-1b --force
 
 Alright, now that was 2 PR's. Imagine doing that workflow for a stack of 5 PR's. We are going to make some mistakes...
 
+# Solution
+After using `git-rebase` a handful of times, I got fed up with it and wrote [git-sqwish][].
 
+[git-sqwish]: https://github.com/twolfson/git-sqwish
+
+ and historical branches
+
+// TODO: Don't forget to mention how we can sanely perform diffs on 2nd `.base` and 1st `.sqwished`
+
+// TODO: Don't forget to mention how to handle replacing `.base` branches
+
+Things not to do:
+
+- Merge in `master` on the non-first PR. This will lead `git` to claim that we are introducing all of `master` changes on our new PR
+    - Why: When we sqwish in a non-first PR, we are sqwishing against a `.base` branch. This branch has no information about the changes in `master`. As a result, the diff between our `master`-merged branch and the `master`-unmerged commit, will include all of `master` changes in our sqwish commit.
+-
