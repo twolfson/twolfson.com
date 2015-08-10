@@ -233,7 +233,7 @@ Now, let's handle the scenario of us needing to update our first PR. Our updated
        /
       /---o---o---o feature-1a (a33333)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
 ```bash
