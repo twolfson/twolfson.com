@@ -29,29 +29,24 @@ We are on a project which:
        /
       o feature-1a (aaaaaa)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
 which ultimately winds up as:
 
 ```
-              feature-1a (aaaaaa)
-             /
-o---o---o---o---o master, feature-1b (bbbbbb)
+o---o---o---o master, feature-1b (bbbbbb)
 ```
 
 # Problem
-Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart quite quickly whenever one of the lower PRs needs to change.
-
-
-But during code review, we receive a request for adding a comment for clarity. The new goal for our PRs
+Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart quickly whenever one of the earlier PRs needs to change. For example, we receive a request to add a comment for clarity on `feature-1a`. The new goal is:
 
 ```
-        o feature-1b (b22222) -- SHA changes because the previous commit SHA changed
+        o feature-1b (b22222)
        /
       o feature-1a (a22222)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
 // TODO: Maybe create example gist
