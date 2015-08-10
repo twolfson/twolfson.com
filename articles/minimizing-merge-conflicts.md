@@ -84,7 +84,8 @@ git mergetool -y
 git commit --no-edit
 
 # Squash our commits
-git rebase master -i
+git rebase feature-1a -i
+# New commit is now b22222
 
 # Push our updated PR
 git push origin feature-1b --force
@@ -133,29 +134,10 @@ o---o master (ffffff)
 When we land this PR, it will look like:
 
 ```
-      +---o---o feature (aaaaaa)
-     /
-o---o---o- master, feature.squashed (a22222)
+o---o---o master, feature.squashed (a22222)
 ```
 
-If we have to update our PR, we don't update the squashed branch, but instead update the historical branch:
-
-```bash
-# Make an edit on our historical branch
-git checkout feature
-echo "hello world" > file
-git add file
-git commit -m "Corrected file's content"
-
-# Update our squashed branch (still using -B to override the branch)
-git checkout -B feature.squashed
-git rebase -i master
-# Squash all our commits
-
-# Force push our squashed branch which automatically updates the PR
-git push origin feature.squashed --force
-```
-
+## Application
 Now that we are established with the historical/squashed workflow, let's apply it to the first example:
 
 ```
@@ -163,10 +145,12 @@ Now that we are established with the historical/squashed workflow, let's apply i
        /
       o feature-1a (aaaaaa)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
-For the purpose of dependent PRs, we are going to add one more notion known as a `base` branch. This is where the historical branch forked from it's dependent branch. For the example above, our structure will look like
+For the purpose of dependent PRs, we are going to add one more concept known as a `base` branch. This is where the historical branch forked from it's dependent branch. For our example, this will look like:
+
+// TODO: Resume from here... but we need to standardize on numbers or whatever
 
 ```
                 +---o feature-1b.squashed (b22222)
@@ -177,7 +161,7 @@ For the purpose of dependent PRs, we are going to add one more notion known as a
        /
       /---o---o feature-1a (aaaaaa)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
 To reiterate, the contents of `aaaaaa` and `a22222` are the same (similarly with `bbbbbb` and `b22222`).
