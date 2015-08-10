@@ -39,7 +39,7 @@ o---o---o---o master, feature-1b (bbbbbb)
 ```
 
 # Problem
-Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart quickly whenever one of the earlier PRs needs to change. For example, we receive a request to add a comment for clarity on `feature-1a`. The new goal is:
+Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart when an earlier PRs needs a change. For example, adding a comment for clarity on `feature-1a` leading to:
 
 ```
         o feature-1b (b22222)
