@@ -151,6 +151,7 @@ o---o master (ffffff)
 For the purpose of dependent PRs, we are going to add one more concept known as a `base` branch. This is where the historical branch forked from it's dependent branch. For our example, this will look like:
 
 // TODO: Resume from here... but we need to standardize on numbers or whatever
+//   Maybe `111111` or `aaba5e` for base branches?
 
 ```
                 +---o feature-1b.squashed (b22222)
