@@ -51,7 +51,7 @@ o---o master (ffffff)
 
 // TODO: Maybe create example gist
 
-Most ways of doing this lead to hard to debug merge conflicts. Here is one amateur example:
+Most ways of doing this lead to hard to debug merge conflicts. Here is an amateur example:
 
 ```bash
 # Navigate to our 1st PR's branch
@@ -75,10 +75,10 @@ git checkout feature-1b
 git merge feature-1a
 # Pro-tip: Use `git merge -` to merge past branch
 
-# Sort out our merge conflict
+# Sort out our merge conflicts
 git mergetool -y
 # Need to update every file that was edited in `bbbbbb`
-# Additionally, hard to know whether we kept all of our intended changes
+# Additionally, hard to know if we kept all of our intended changes
 
 # Commit our edits
 git commit --no-edit
@@ -90,15 +90,19 @@ git rebase master -i
 git push origin feature-1b --force
 ```
 
-Alright, now that was 2 PR's. Imagine doing that workflow for a stack of 5 PR's. We are going to make some mistakes...
-
 # Solution
-To solve this problem, we are going to introduce the concept of historical branches and squashed branches. While walking through this, keep in mind that `git` is already good at dealing with merge conflicts in non-squashing workflows. This workflow is meant to embrace that.
+To solve this problem, we are going to lean on git's ability to handle non-squashed merges well.
 
-First, let's give a historical/squashed workflow example. We will create and work on the `feature` branch (historical branch). Then, squash our work into the `feature.squashed` branch (squashed branch) for our PR:
+## Historical and squashed branches
+As foundation for our solution, we have 2 branches per new feature:
+
+- `feature` branch, operates like its own `master` branch for the feature (historical branch)
+- `feature.squashed` branch, all work from `feature` branch in 1 commit (squashed branch)
+
+Here is an example workflow:
 
 ```bash
-# Work on and build our feature branch
+# Work on and build our historical branch
 git checkout -b feature
 echo "hello" > file
 git add file
@@ -107,11 +111,10 @@ echo "world" > file2
 git add file2
 git commit -m "Added world file"
 
-# When we are ready to open our PR
+# Generate squashed branch for our PR
 # DEV: We use -B to overwrite any past squashed branches
 git checkout -B feature.squashed
-git rebase -i master
-# Squash all our commits
+git rebase -i master # Squash all commits
 
 # Push our squashed branch and open PR for `feature.squashed` to `master`
 git push origin feature.squashed
@@ -124,7 +127,7 @@ Here's a visualization of our `git` history:
        /
       /---o---o feature (aaaaaa)
      /
-o---o- master (ffffff)
+o---o master (ffffff)
 ```
 
 When we land this PR, it will look like:
