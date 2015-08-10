@@ -6,8 +6,6 @@
   "summary": "An guide to a `git` workflow which minimizes merge conflicts."
 }
 
-// TODO: We might want to promote second paragraph to be first line hook
-
 Pull requests should always be:
 
 - Focused on a single feature (e.g. any lint corrections should be separate)
@@ -18,16 +16,13 @@ The reasoning for these requisites are:
 - Allows us to identify/create better abstractions
 - Makes it easier for reviewing and re-reviewing changes in a timely manner
 
-This article is a guide to managing branches on a complex/high velocity project (e.g. a lot of changes occur frequently). Additionally, while this works for most scenarios, it's overkill in some scenarios (e.g. a documentation fix will need `git commit --amend` at most to revise PRs).
+This article is a guide to managing branches on a complex/high velocity project (e.g. a lot of changes/PRs occur frequently). While it works for other scenarios, it might be overkill (e.g. documentation fixes).
 
-# Problem
+# Setup
+We are on a project which:
 
-
-But what happens when we have the common practice of squashing our PRs and need to implement dependant features (e.g. abstract a utility function, use utility function in new location). In my experience, we get into a merge conflict nightmare (especially when there is a stack of 5 dependant PRs and the 1st PR requires a change).
-
-Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart quite quickly whenever one of the lower PRs needs to change.
-
-For the purpose of our examples, let's use an example where `feature-1` is being implemented across multiple PRs
+- Requires squashed PRs
+- We are implementing dependent features (e.g. abstract a utility function, use utility in new feature)
 
 ```
         o feature-1b (bbbbbb)
@@ -37,13 +32,17 @@ For the purpose of our examples, let's use an example where `feature-1` is being
 o---o- master (ffffff)
 ```
 
-and in the end, we want:
+which ultimately winds up as:
 
 ```
               feature-1a (aaaaaa)
              /
 o---o---o---o---o master, feature-1b (bbbbbb)
 ```
+
+# Problem
+Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart quite quickly whenever one of the lower PRs needs to change.
+
 
 But during code review, we receive a request for adding a comment for clarity. The new goal for our PRs
 
