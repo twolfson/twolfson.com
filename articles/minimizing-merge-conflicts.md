@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2015-08-06T01:31:17-0500",
   "keywords": "merge, conflict, git, rebase, historical",
-  "summary": "A `git` workflow that minimizes merge conflicts"
+  "summary": "An guide to my `git` workflow which minimizes merge conflicts."
 }
 
 // TODO: We might want to promote second paragraph to be first line hook
