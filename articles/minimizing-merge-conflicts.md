@@ -352,3 +352,5 @@ Things not to do:
 - Merge in `master` on the non-first PR. This will lead `git` to claim that we are introducing all of `master` changes on our new PR
     - Why: When we sqwish in a non-first PR, we are sqwishing against a `.base` branch. This branch has no information about the changes in `master`. As a result, the diff between our `master`-merged branch and the `master`-unmerged commit, will include all of `master` changes in our sqwish commit.
 -
+
+// TODO: We forgot to overwrite base branch after merge in our example
