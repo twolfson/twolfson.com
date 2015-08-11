@@ -49,8 +49,6 @@ Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squa
 o---o master (ffffff)
 ```
 
-// TODO: Maybe create example gist
-
 Most ways of doing this lead to hard to debug merge conflicts. Here is an amateur example:
 
 ```bash
@@ -58,7 +56,7 @@ Most ways of doing this lead to hard to debug merge conflicts. Here is an amateu
 git checkout feature-1a
 
 # Edit our file
-pico file.txt
+echo "# This is a clarifying comment" >> file.txt
 
 # Update our PR commit
 git add file.txt
