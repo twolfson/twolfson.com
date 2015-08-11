@@ -260,11 +260,17 @@ git merge feature-1a.squashed
 # Verify there are no differences between our base commit and the squashed revision
 # DEV: This is a nice step to debug between branches to verify there are no gotchas
 git diff feature-1a.squashed
+# Pro-tip: Use `git merge -` to merge past branch
+
+# Handle any merge conflicts in a resolution `merge` commit
+git mergetool -y
+git commit
 
 # Navigate to our second historical branch and merge in the changes to our second base
 git checkout feature-1b
 git merge feature-1b.base
 # Pro-tip: Use `git merge -` to merge past branch
+# This is commit `b23456`
 ```
 
 This is a very important point in the workflow so let's explain in more detail what is happening.
@@ -302,10 +308,6 @@ git diff feature-1b.base
 #   git reset -p # Uses patch mode to unstage specific parts of our staged changes
 #   git stash -p # Uses patch mode to stash specific parts of our working directory
 #   git add -p # Uses patch mode to stage specific parts of our working directory
-
-# Save our changes
-git commit --no-edit
-# This is commit `b23456`
 
 # Overwrite the `.base` branch with the only squash commit
 # DEV: This removes a `merge` commit from our PR
