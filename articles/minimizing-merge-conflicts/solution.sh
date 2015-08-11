@@ -63,6 +63,10 @@ git checkout feature-1b.base
 git merge feature-1a.squashed
 # Pro-tip: Use `git merge -` to merge past branch
 
+# Handle any merge conflicts in a resolution `merge` commit
+git mergetool -y
+git commit
+
 # Verify there are no differences between our base commit and the squashed revision
 # DEV: This is a nice step to debug between branches to verify there are no gotchas
 git diff feature-1a.squashed
@@ -71,9 +75,7 @@ git diff feature-1a.squashed
 git checkout feature-1b
 git merge feature-1b.base
 # Pro-tip: Use `git merge -` to merge past branch
-
-# If there are any merge conflicts, sort them out
-git mergetool -y
+# This is commit `b23456`
 
 # Diff our base to make sure all the changes we expected exist
 git diff feature-1b.base
@@ -95,10 +97,6 @@ git diff feature-1b.base
 #   git stash -p # Uses patch mode to stash specific parts of our working directory
 #   git add -p # Uses patch mode to stage specific parts of our working directory
 
-# Save our changes
-git commit
-# This is commit `b23456`
-
 # Overwrite the `.base` branch with the only squash commit
 # DEV: This removes a `merge` commit from our PR
 git checkout -B feature-1b.base feature-1a.squashed
@@ -106,8 +104,8 @@ git checkout -B feature-1b.base feature-1a.squashed
 # Squash our branch for the second PR
 git checkout -B feature-1b.squashed feature-1b
 git rebase -i feature-1b.base
-git rebase --continue
+# git rebase --continue
 
-# Force push our squashed branch which automatically updates the PR
-git push origin feature-1b.squashed --force
-# This is commit `bbbbbb`
+# # Force push our squashed branch which automatically updates the PR
+# git push origin feature-1b.squashed --force
+# # This is commit `bbbbbb`
