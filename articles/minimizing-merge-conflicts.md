@@ -316,49 +316,44 @@ git push origin feature-1b.squashed --force
 # This is commit `bbbbbb`
 ```
 
+## Aftermath
+Once our PR is landed and deployed, we can clean up our branches via `git-delete-branch` from [git-extras][].
 
-// TODO: Document cleaning up sqwished and base branches
-    https://gist.github.com/twolfson/64d592837d38b1e7755b
+My preferred cautious course is to do this over a few commands:
 
+```
+# Find which branches have recently been merged in
+git checkout master
+git branch --merged
+#   feature-1a.squashed
+#   feature-1b.squashed
+# * master
 
--------------
+# Generate a grep to find all relevant branches
+git branch | grep -E 'feature-1a|feature-1b'
+#   feature-1a
+#   feature-1a.squashed
+#   feature-1b
+#   feature-1b.base
+#   feature-1b.squashed
+
+# Run each of our branches against `git-delete-branch`
+git branch | grep -E 'feature-1a|feature-1b' | xargs git-delete-branch
+```
+
+[git-extras]: https://github.com/tj/git-extras
+
+# Additional tooling
+In order to make my life easier, I have written 2 tools that I use with this workflow:
+
+- `git-sqwish`, a `git` utility that always squashes commits and yields a commit message
+    - This is preferable to always needing to select `squash` from `git rebase -i`
+    - https://github.com/twolfson/git-sqwish
+- `git shortref`, a `git` utility that returns name of current branch
+    - I actually use an alias from `sexy-bash-prompt`
+    - But you can use the following in your global `.gitconfig` under `[alias]`
+        - `shortref = symbolic-ref --short HEAD`
+    - This can be used like `git checkout -B "$(git shortref).squashed"`
 
 // TODO: Add some commands to play with this example at home, maybe in a gist
 // TODO: Do the same example thing for the very first example
-
-
-// TODO: Maybe document `git-sqwish` at the very end
-
-After using `git-rebase` a handful of times, I got fed up with it due to repeating merge conflicts and wrote [git-sqwish][].
-
-[git-sqwish]: https://github.com/twolfson/git-sqwish
-
-For the purposes of this discussion, you can think of `git-sqwish` as 2 commands combined in 1:
-
-```bash
-# Checkout current branch with `.sqwished` suffix (e.g. `feature-1a` -> `feature-1a.sqwished`)
-git checkout -B "$(git symbolic-ref --short HEAD).sqwished"
-
-# Squash our commits (replaces interactive selection part with a `git commit` prompt)
-git rebase -i master  # Or whatever base branch we had
-```
-
-When we combine this into a
-
-// TODO: Don't forget to explain how git history works when combining base and normal
-
-// TODO: Don't forget to mention how we can sanely perform diffs on second `.base` and first `.sqwished`
-
-// TODO: Don't forget to mention how to handle replacing `.base` branches
-
-// TODO: Don't forget to explain how git history works when collapsing base/sqwished
-
-// TODO: Define `git-branch2` or something. Maybe `head-branch` or `this-branch` or `current-branch`
-
-Things not to do:
-
-- Merge in `master` on the non-first PR. This will lead `git` to claim that we are introducing all of `master` changes on our new PR
-    - Why: When we sqwish in a non-first PR, we are sqwishing against a `.base` branch. This branch has no information about the changes in `master`. As a result, the diff between our `master`-merged branch and the `master`-unmerged commit, will include all of `master` changes in our sqwish commit.
--
-
-// TODO: We forgot to overwrite base branch after merge in our example
