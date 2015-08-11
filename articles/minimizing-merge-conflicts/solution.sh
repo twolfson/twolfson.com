@@ -109,7 +109,7 @@ git diff feature-1b.base
 git checkout -B feature-1b.base feature-1a.squashed
 
 # Squash our branch for the second PR
-git checkout -B feature-1b.squashed master
+git checkout -B feature-1b.squashed feature-1b.base
 git merge --squash feature-1b
 git commit -m "Added world file"
 
