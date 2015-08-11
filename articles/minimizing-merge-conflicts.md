@@ -3,12 +3,12 @@
   "author": "Todd Wolfson",
   "date": "2015-08-06T01:31:17-0500",
   "keywords": "merge, conflict, git, rebase, historical",
-  "summary": "An guide to a `git` workflow which minimizes merge conflicts."
+  "summary": "A guide to a `git` workflow which minimizes merge conflicts."
 }
 
-Pull requests should always be:
+Pull requests (PRs) should always be:
 
-- Focused on a single feature (e.g. any lint corrections should be separate)
+- Focused on a single feature
 - Digestible (e.g. maximum of 150 lines changed)
 
 The reasoning for these requisites are:
@@ -16,7 +16,7 @@ The reasoning for these requisites are:
 - Allows us to identify/create better abstractions
 - Makes it easier for reviewing and re-reviewing changes in a timely manner
 
-This article is a guide to managing branches on a complex/high velocity project (e.g. a lot of changes/PRs occur frequently). While it works for other scenarios, it might be overkill (e.g. documentation fixes).
+This article is a guide to managing branches on a complex/high velocity project (e.g. a lot of changes/PRs occur frequently).
 
 # Setup
 We are on a project which:
@@ -81,7 +81,7 @@ git mergetool -y
 # Commit our edits
 git commit --no-edit
 
-# Squash our commits
+# Squash our commits via `git rebase`
 git rebase feature-1a -i
 git rebase --continue
 # New commit is now b22222
@@ -96,8 +96,10 @@ To solve this problem, we are going to lean on git's ability to handle non-squas
 ## Historical and squashed branches
 As foundation for our solution, we have 2 branches per new feature:
 
-- `feature` branch, operates like its own `master` branch for the feature (historical branch)
-- `feature.squashed` branch, all work from `feature` branch in 1 commit (squashed branch)
+- A historical branch which operates like its own `master` branch for the feature
+    - Typically named `{{feature}}` (e.g. `add-homepage`)
+- A squashed branch which has all work from our historical branch in 1 commit
+    - Typically named `{{feature}}.squashed` (e.g. `add-homepage.squashed`)
 
 Here is an example workflow:
 
@@ -139,7 +141,7 @@ o---o---o master, feature.squashed (aaaaaa)
 ```
 
 ## Application
-Now that we are established with the historical/squashed workflow, let's apply it to the first example:
+Now that we are established with the historical/squashed workflow, let's apply it to our first example:
 
 ```
         o feature-1b (bbbbbb)
@@ -218,7 +220,7 @@ git merge feature-1b.squashed
 git push origin master
 ```
 
-We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the first PR.
+We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at each PR.
 
 ## Solution in action
 As with the initial problem, we will now update our first PR. The result will look like:
@@ -252,7 +254,7 @@ git commit -m "Added hello file"
 # Force push our squashed branch which automatically updates the PR
 git push origin feature-1a.squashed --force
 
-# Navigate to our base for the second historical branch and merge in our changes
+# Navigate to our base for the second feature and merge in our changes
 git checkout feature-1b.base
 git merge feature-1a.squashed
 # Pro-tip: Use `git merge -` to merge past branch
@@ -261,11 +263,11 @@ git merge feature-1a.squashed
 git mergetool -y
 git commit
 
-# Verify there are no differences between our base commit and the squashed revision
-# DEV: This is a nice step to debug between branches to verify there are no gotchas
+# Verify there are no differences between our base and its origin
+# DEV: This is a nice step between branches to verify there are no gotchas
 git diff feature-1a.squashed
 
-# Navigate to our second historical branch and merge in the changes to our second base
+# Navigate to our second historical branch and merge its base changes
 git checkout feature-1b
 git merge feature-1b.base
 # Pro-tip: Use `git merge -` to merge past branch
@@ -274,11 +276,11 @@ git merge feature-1b.base
 
 This is a very important point in the workflow so let's explain in more detail what is happening.
 
-Both `feature-1b.base` and `feature-1b` share a common commit outside of `master`. As a result, this is a known state where the 2 agree upon.
+Both `feature-1b.base` and `feature-1b` share a common commit (`aaaaaa`) outside of `master`. As a result, this is a known state where the 2 agree upon.
 
-When we merged in the new `feature-1a.squashed` to `feature-1b.base`, we built a new `merge` commit that makes sure `feature-1a` changes take priority as they are **newest**.
+When we merged in the new `feature-1a.squashed` to `feature-1b.base`, we built a new `merge` commit (`a22222*`) that makes sure `feature-1a` changes take priority as they are **newest** .
 
-When we merge this new `merge` commit into `feature-1b`, `git` respects all past changes between `feature-1b` and `feature-1b.base`. However, any changes in the new `merge` commit that conflict with the set of changes since `feature-1b.base` will be brought up as conflicts.
+When we merge this new `merge` commit (`a22222*`) into `feature-1b` (`b12345`), `git` respects all past changes between `feature-1b` and `feature-1b.base`. However, any changes in the new `merge` commit that conflict with the set of changes since `feature-1b.base` will be brought up as conflicts.
 
 These conflicts will be a smaller (possibly empty) set than a typical `rebase` workflow.
 
@@ -295,7 +297,7 @@ git diff feature-1b.base
 #   git diff feature-1b.base > new-diff
 #   git diff feature-1b.squashed~1..feature-1b.squashed > old-diff
 #   diff new-diff old-diff
-#      I personally prefer copying to clipboard via `| pbcopy`  or `| xclip` (over `> new-diff`)
+#      I prefer copying to clipboard over writing to files (e.g. `| xclip -selection c`)
 #      and using a diff tool in Sublime Text (e.g. FileDiffs)
 
 # If there are any changes that we didn't want, then we can use
@@ -306,7 +308,7 @@ git diff feature-1b.base
 #   git add -p # Uses patch mode to stage specific parts of our working directory
 
 # Overwrite the `.base` branch with the only squash commit
-# DEV: This removes a `merge` commit from our PR
+# DEV: This removes a `merge` commit from our PR (`a22222*` -> `a22222`)
 git checkout -B feature-1b.base feature-1a.squashed
 
 # Squash our branch for the second PR
@@ -322,7 +324,7 @@ git push origin feature-1b.squashed --force
 ## Cleanup
 Once our PR is landed and deployed, we can clean up our branches via `git-delete-branch` from [git-extras][].
 
-My preferred cautious course is to do this over a few commands:
+I prefer to be cautious and perform this over a few commands:
 
 ```
 # Find which branches have recently been merged in
@@ -350,7 +352,7 @@ git branch | grep -E 'feature-1a|feature-1b' | xargs git-delete-branch
 In order to make my life easier, I have written 2 tools that I use with this workflow:
 
 - `git-sqwish`, a `git` utility to automate `.squashed` branch generation
-    - It verifies the branch is clean, generates our squashed branch, has a commit prompt (a la rebase), and rolls back upon commit failure
+    - Verifies the branch is clean, generates our squashed branch, has a commit prompt (a la rebase), and rolls back upon failure
     - https://github.com/twolfson/git-sqwish
 - `git shortref`, a `git` utility that returns name of current branch
     - Define the following in your global `.gitconfig` under `[alias]`
