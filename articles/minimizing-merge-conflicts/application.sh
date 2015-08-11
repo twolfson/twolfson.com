@@ -17,8 +17,9 @@ git commit -m "Added hello file"
 # This is commit `a12345`
 
 # Squash into our feature-1a squashed branch
-git checkout -B feature-1a.squashed
-git rebase -i master
+git checkout -B feature-1a.squashed master
+git merge --squash feature-1a
+git commit -m "Added hello file"
 # This is commit `aaaaaa`
 
 # Open our first PR
@@ -36,8 +37,9 @@ git commit -m "Added world file"
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
-git checkout -B feature-1b.squashed
-git rebase -i feature-1b.base
+git checkout -B feature-1b.squashed feature-1b.base
+git merge --squash feature-1b
+git commit -m "Added world file"
 # This is commit `bbbbbb`
 
 # Open our second PR
