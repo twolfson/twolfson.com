@@ -319,7 +319,7 @@ git push origin feature-1b.squashed --force
 # This is commit `bbbbbb`
 ```
 
-## Aftermath
+## Cleanup
 Once our PR is landed and deployed, we can clean up our branches via `git-delete-branch` from [git-extras][].
 
 My preferred cautious course is to do this over a few commands:
