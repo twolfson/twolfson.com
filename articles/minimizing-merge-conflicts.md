@@ -354,6 +354,3 @@ In order to make my life easier, I have written 2 tools that I use with this wor
     - But you can use the following in your global `.gitconfig` under `[alias]`
         - `shortref = symbolic-ref --short HEAD`
     - This can be used like `git checkout -B "$(git shortref).squashed"`
-
-// TODO: Add some commands to play with this example at home, maybe in a gist
-// TODO: Do the same example thing for the very first example
