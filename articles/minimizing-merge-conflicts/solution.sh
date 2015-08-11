@@ -1,9 +1,9 @@
 # Create a temporary git directory
-if test -d tmp/application/; then
-  rm -rf tmp/application/
+if test -d tmp/solution/; then
+  rm -rf tmp/solution/
 fi
-mkdir -p tmp/application/
-cd tmp/application/
+mkdir -p tmp/solution/
+cd tmp/solution/
 git init
 echo "hi" > file
 git add file
@@ -106,6 +106,7 @@ git checkout -B feature-1b.base feature-1a.squashed
 # Squash our branch for the second PR
 git checkout -B feature-1b.squashed feature-1b
 git rebase -i feature-1b.base
+git rebase --continue
 
 # Force push our squashed branch which automatically updates the PR
 git push origin feature-1b.squashed --force
