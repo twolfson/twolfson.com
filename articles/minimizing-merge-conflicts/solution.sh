@@ -17,8 +17,9 @@ git commit -m "Added hello file"
 # This is commit `a12345`
 
 # Squash into our feature-1a squashed branch
-git checkout -B feature-1a.squashed
-git rebase -i master
+git checkout -B feature-1a.squashed master
+git merge --squash feature-1a
+git commit -m "Added hello file"
 # This is commit `aaaaaa`
 
 # Open our first PR
@@ -36,12 +37,15 @@ git commit -m "Added world file"
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
-git checkout -B feature-1b.squashed
-git rebase -i feature-1b.base
+git checkout -B feature-1b.squashed feature-1b.base
+git merge --squash feature-1b
+git commit -m "Added world file"
 # This is commit `bbbbbb`
 
 # Open our second PR
 git push origin feature-1b.squashed
+
+# SOLUTION IN ACTION
 
 # Checkout our first historical branch
 git checkout feature-1a
@@ -51,8 +55,9 @@ git commit -m "Corrected file's content"
 # This is commit `a23456`
 
 # Update our squashed branch (still using -B to override the branch)
-git checkout -B feature-1a.squashed
-git rebase -i master
+git checkout -B feature-1a.squashed master
+git merge --squash feature-1a
+git commit -m "Added hello file"
 # This is commit `a22222`
 
 # Force push our squashed branch which automatically updates the PR
@@ -76,6 +81,8 @@ git checkout feature-1b
 git merge feature-1b.base
 # Pro-tip: Use `git merge -` to merge past branch
 # This is commit `b23456`
+
+# SPACER
 
 # Diff our base to make sure all the changes we expected exist
 git diff feature-1b.base
@@ -102,11 +109,10 @@ git diff feature-1b.base
 git checkout -B feature-1b.base feature-1a.squashed
 
 # Squash our branch for the second PR
-git checkout -B feature-1b.squashed feature-1b
-git rebase -i feature-1b.base
+git checkout -B feature-1b.squashed master
+git merge --squash feature-1b
+git commit -m "Added world file"
 
-# git rebase --continue
-
-# # Force push our squashed branch which automatically updates the PR
-# git push origin feature-1b.squashed --force
-# # This is commit `bbbbbb`
+# Force push our squashed branch which automatically updates the PR
+git push origin feature-1b.squashed --force
+# This is commit `bbbbbb`
