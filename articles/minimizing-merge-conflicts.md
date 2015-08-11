@@ -351,6 +351,7 @@ In order to make my life easier, I have written 2 tools that I use with this wor
     - https://github.com/twolfson/git-sqwish
 - `git shortref`, a `git` utility that returns name of current branch
     - I actually use an alias from `sexy-bash-prompt`
+        - https://github.com/twolfson/sexy-bash-prompt/blob/0.26.1/.bash_prompt#L100-L109
     - But you can use the following in your global `.gitconfig` under `[alias]`
         - `shortref = symbolic-ref --short HEAD`
     - This can be used like `git checkout -B "$(git shortref).squashed"`
