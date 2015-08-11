@@ -1,5 +1,5 @@
 # Create a temporary git directory
-if test -d tmp/problem; then
+if test -d tmp/problem/; then
   rm -rf tmp/problem/
 fi
 mkdir -p tmp/problem/

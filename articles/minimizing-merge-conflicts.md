@@ -70,7 +70,7 @@ git push origin feature-1a --force
 git checkout feature-1b
 
 # Merge in our past work
-git merge feature-1a
+git merge feature-1a --no-edit
 # Pro-tip: Use `git merge -` to merge past branch
 
 # Sort out our merge conflicts
