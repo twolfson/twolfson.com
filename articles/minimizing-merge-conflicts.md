@@ -126,7 +126,7 @@ Here's a visualization of our `git` history:
 ```
         +---o feature.squashed (aaaaaa)
        /
-      /---o---o feature (a00000)
+      /---o---o feature (a12345)
      /
 o---o master (ffffff)
 ```
@@ -134,7 +134,7 @@ o---o master (ffffff)
 When we land this PR, it will look like:
 
 ```
-o---o---o master, feature.squashed (a22222)
+o---o---o master, feature.squashed (aaaaaa)
 ```
 
 ## Application
@@ -153,16 +153,16 @@ For the purpose of dependent PRs, we are going to add one more concept known as 
 ```
                 +---o feature-1b.squashed (bbbbbb)
                /
-              /---o---o feature-1b (b00000)
+              /---o---o feature-1b (b12345)
              /
         +---o feature-1a.squashed, feature-1b.base (aaaaaa)
        /
-      /---o---o feature-1a (a00000)
+      /---o---o feature-1a (a12345)
      /
 o---o master (ffffff)
 ```
 
-To reiterate, the contents of `a00000` and `aaaaaa` are the same (similarly with `b00000` and `bbbbbb`).
+To reiterate, the contents of `a12345` and `aaaaaa` are the same (similarly with `b12345` and `bbbbbb`).
 
 Building the current `git` structure would look like:
 
@@ -172,10 +172,12 @@ git checkout -b feature-1a
 echo "hello" > file
 git add file
 git commit -m "Added hello file"
+# This is commit `a12345`
 
 # Squash into our feature-1a squashed branch
 git checkout -B feature-1a.squashed
 git rebase -i master
+# This is commit `aaaaaa`
 
 # Open our first PR
 git push origin feature-1a.squashed
@@ -188,11 +190,13 @@ git checkout -b feature-1b
 echo "world" > file2
 git add file2
 git commit -m "Added world file"
+# This is commit `b12345`
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
 git checkout -B feature-1b.squashed
 git rebase -i feature-1b.base
+# This is commit `bbbbbb`
 
 # Open our second PR
 git push origin feature-1b.squashed
@@ -211,18 +215,19 @@ git merge feature-1b.squashed
 git push origin master
 ```
 
-**We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the first PR.**
+We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the first PR.
 
-Now, let's handle the scenario of us needing to update our first PR. Our updated history should look like:
+## Solution in action
+As with the initial problem, we will now update our first PR. The result will look like:
 
 ```
-                +---o feature-1b.squashed (b44444)
+                +---o feature-1b.squashed (b22222)
                /
-              /---o---o feature-1b (b33333)
+              /---o---o feature-1b (b23456)
              /
-        +---o feature-1a.squashed, feature-1b.base (a44444)
+        +---o feature-1a.squashed, feature-1b.base (a22222)
        /
-      /---o---o---o feature-1a (a33333)
+      /---o---o---o feature-1a (a23456)
      /
 o---o master (ffffff)
 ```
@@ -233,10 +238,12 @@ git checkout feature-1a
 echo "hello world" > file
 git add file
 git commit -m "Corrected file's content"
+# This is commit `a23456`
 
 # Update our squashed branch (still using -B to override the branch)
 git checkout -B feature-1a.squashed
 git rebase -i master
+# This is commit `a22222`
 
 # Force push our squashed branch which automatically updates the PR
 git push origin feature-1a.squashed --force
@@ -256,13 +263,15 @@ git merge feature-1b.base
 # Pro-tip: Use `git merge -` to merge past branch
 ```
 
-This is a very important point in the workflow so let's explain in more detail what is happening. Both `feature-1b.base` and `feature-1b` share a common commit outside of `master`. As a result, this is a known state where the 2 agree upon.
+This is a very important point in the workflow so let's explain in more detail what is happening.
+
+Both `feature-1b.base` and `feature-1b` share a common commit outside of `master`. As a result, this is a known state where the 2 agree upon.
 
 When we merged in the new `feature-1a.squashed` to `feature-1b.base`, we built a new `merge` commit that makes sure `feature-1a` changes take priority as they are **newest**.
 
-When we merge this new `merge` commit into `feature-1b`, we respect all past changes between `feature-1b` and `feature-1b.base`. However, any changes in the new `merge` commit that conflict with the set of `feature-1b.base` changes will be brought up as conflicts. The reason for this is that these commits diverged and occurred after (both time and in `git` history) since the common base (i.e. `feature-1b.base`).
+When we merge this new `merge` commit into `feature-1b`, `git` respects all past changes between `feature-1b` and `feature-1b.base`. However, any changes in the new `merge` commit that conflict with the set of changes since `feature-1b.base` will be brought up as conflicts.
 
-This will be a substantially smaller set (and possibly empty set) than we get with a `rebase` workflow.
+These conflicts will be a smaller (possibly empty) set than a typical `rebase` workflow.
 
 Anyway, back to the code:
 
@@ -283,12 +292,27 @@ git diff feature-1b.base
 #      I personally prefer copying to clipboard via `| pbcopy`  or `| xclip` (over `> new-diff`)
 #      and using a diff tool in Sublime Text (e.g. FileDiffs)
 
+# If there are any changes that we didn't want, then we can use
+#   git checkout -p {branch} # Uses patch mode to select bits from {branch}
+#   git reset -p # Uses patch mode to unstage specific parts of our staged changes
+#   git stash -p # Uses patch mode to stash specific parts of our working directory
+#   git add -p # Uses patch mode to stage specific parts of our working directory
+
+# Save our changes
+git commit
+# This is commit `b23456`
+
+# Overwrite the `.base` branch with the only squash commit
+# DEV: This removes a `merge` commit from our PR
+git checkout -B feature-1b.base feature-1a.squashed
+
 # Squash our branch for the second PR
-git checkout -B feature-1b.squashed
+git checkout -B feature-1b.squashed feature-1b
 git rebase -i feature-1b.base
 
 # Force push our squashed branch which automatically updates the PR
 git push origin feature-1b.squashed --force
+# This is commit `bbbbbb`
 ```
 
 
