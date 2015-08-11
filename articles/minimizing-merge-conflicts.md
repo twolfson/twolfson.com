@@ -176,8 +176,9 @@ git commit -m "Added hello file"
 # This is commit `a12345`
 
 # Squash into our feature-1a squashed branch
-git checkout -B feature-1a.squashed
-git rebase -i master
+git checkout -B feature-1a.squashed master
+git merge --squash feature-1a
+git commit -m "Added hello file"
 # This is commit `aaaaaa`
 
 # Open our first PR
@@ -195,8 +196,9 @@ git commit -m "Added world file"
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
-git checkout -B feature-1b.squashed
-git rebase -i feature-1b.base
+git checkout -B feature-1b.squashed feature-1b.base
+git merge --squash feature-1b
+git commit -m "Added world file"
 # This is commit `bbbbbb`
 
 # Open our second PR
@@ -242,8 +244,9 @@ git commit -m "Corrected file's content"
 # This is commit `a23456`
 
 # Update our squashed branch (still using -B to override the branch)
-git checkout -B feature-1a.squashed
-git rebase -i master
+git checkout -B feature-1a.squashed master
+git merge --squash feature-1a
+git commit -m "Added hello file"
 # This is commit `a22222`
 
 # Force push our squashed branch which automatically updates the PR
@@ -301,7 +304,7 @@ git diff feature-1b.base
 #   git add -p # Uses patch mode to stage specific parts of our working directory
 
 # Save our changes
-git commit
+git commit --no-edit
 # This is commit `b23456`
 
 # Overwrite the `.base` branch with the only squash commit
@@ -309,8 +312,9 @@ git commit
 git checkout -B feature-1b.base feature-1a.squashed
 
 # Squash our branch for the second PR
-git checkout -B feature-1b.squashed feature-1b
-git rebase -i feature-1b.base
+git checkout -B feature-1b.squashed master
+git merge --squash feature-1b
+git commit -m "Added world file"
 
 # Force push our squashed branch which automatically updates the PR
 git push origin feature-1b.squashed --force
@@ -347,12 +351,10 @@ git branch | grep -E 'feature-1a|feature-1b' | xargs git-delete-branch
 # Additional tooling
 In order to make my life easier, I have written 2 tools that I use with this workflow:
 
-- `git-sqwish`, a `git` utility that always squashes commits and yields a commit message
-    - This is preferable to always needing to select `squash` from `git rebase -i`
+- `git-sqwish`, a `git` utility to automate `.squashed` branch generation
+    - It verifies the branch is clean, generates our squashed branch, has a commit prompt (a la rebase), and rolls back upon commit failure
     - https://github.com/twolfson/git-sqwish
 - `git shortref`, a `git` utility that returns name of current branch
-    - I actually use an alias from `sexy-bash-prompt`
-        - https://github.com/twolfson/sexy-bash-prompt/blob/0.26.1/.bash_prompt#L100-L109
-    - But you can use the following in your global `.gitconfig` under `[alias]`
+    - Define the following in your global `.gitconfig` under `[alias]`
         - `shortref = symbolic-ref --short HEAD`
     - This can be used like `git checkout -B "$(git shortref).squashed"`
