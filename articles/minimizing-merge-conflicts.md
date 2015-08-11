@@ -124,9 +124,9 @@ git push origin feature.squashed
 Here's a visualization of our `git` history:
 
 ```
-        +---o feature.squashed (a22222)
+        +---o feature.squashed (aaaaaa)
        /
-      /---o---o feature (aaaaaa)
+      /---o---o feature (a00000)
      /
 o---o master (ffffff)
 ```
@@ -150,25 +150,19 @@ o---o master (ffffff)
 
 For the purpose of dependent PRs, we are going to add one more concept known as a `base` branch. This is where the historical branch forked from it's dependent branch. For our example, this will look like:
 
-// TODO: Resume from here... but we need to standardize on numbers or whatever
-//   Maybe `111111` or `aaba5e` for base branches?
-
 ```
-                +---o feature-1b.squashed (b22222)
+                +---o feature-1b.squashed (bbbbbb)
                /
-              /---o---o feature-1b (bbbbbb)
+              /---o---o feature-1b (b00000)
              /
-        +---o feature-1a.squashed, feature-1b.base (a22222)
+        +---o feature-1a.squashed, feature-1b.base (aaaaaa)
        /
-      /---o---o feature-1a (aaaaaa)
+      /---o---o feature-1a (a00000)
      /
 o---o master (ffffff)
 ```
 
-To reiterate, the contents of `aaaaaa` and `a22222` are the same (similarly with `bbbbbb` and `b22222`).
-
-// TODO: Add some commands to play with this example at home, maybe in a gist
-// TODO: Do the same example thing for the very first example
+To reiterate, the contents of `a00000` and `aaaaaa` are the same (similarly with `b00000` and `bbbbbb`).
 
 Building the current `git` structure would look like:
 
@@ -178,8 +172,6 @@ git checkout -b feature-1a
 echo "hello" > file
 git add file
 git commit -m "Added hello file"
-
-// TODO: We should have 2 commits to make it a realistic squash
 
 # Squash into our feature-1a squashed branch
 git checkout -B feature-1a.squashed
@@ -196,8 +188,6 @@ git checkout -b feature-1b
 echo "world" > file2
 git add file2
 git commit -m "Added world file"
-
-// TODO: We should have 2 commits to make it a realistic squash
 
 # Squash into our feature-1b squashed branch
 #   but for this one, we base off of our feature-1b base
@@ -221,7 +211,7 @@ git merge feature-1b.squashed
 git push origin master
 ```
 
-**Pro-tip:** We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the very first PR.
+**We don't land `feature-1b.squashed` directly, as we should detect conflicting merges at the first PR.**
 
 Now, let's handle the scenario of us needing to update our first PR. Our updated history should look like:
 
@@ -309,6 +299,10 @@ git push origin feature-1b.squashed --force
 
 
 -------------
+
+// TODO: Add some commands to play with this example at home, maybe in a gist
+// TODO: Do the same example thing for the very first example
+
 
 // TODO: Maybe document `git-sqwish` at the very end
 
