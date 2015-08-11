@@ -45,6 +45,7 @@ git commit --no-edit
 
 # Squash our commits
 git rebase feature-1a -i
+git rebase --continue
 # New commit is now b22222
 
 # Push our updated PR
