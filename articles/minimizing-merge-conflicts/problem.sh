@@ -1,7 +1,18 @@
 # Create a temporary git directory
+if test -d tmp/problem; then
+  rm -rf tmp/problem/
+fi
 mkdir -p tmp/problem/
 cd tmp/problem/
 git init
+git checkout -b feature-1a
+echo "hello" > file
+git add file
+git commit -m "Added hello file"
+git checkout -b feature-1b
+echo "world" > file2
+git add file2
+git commit -m "Added world file"
 
 # Navigate to our first PR's branch
 git checkout feature-1a
@@ -21,7 +32,7 @@ git push origin feature-1a --force
 git checkout feature-1b
 
 # Merge in our past work
-git merge feature-1a
+git merge feature-1a --no-edit
 # Pro-tip: Use `git merge -` to merge past branch
 
 # Sort out our merge conflicts
