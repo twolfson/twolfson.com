@@ -257,14 +257,13 @@ git checkout feature-1b.base
 git merge feature-1a.squashed
 # Pro-tip: Use `git merge -` to merge past branch
 
-# Verify there are no differences between our base commit and the squashed revision
-# DEV: This is a nice step to debug between branches to verify there are no gotchas
-git diff feature-1a.squashed
-# Pro-tip: Use `git merge -` to merge past branch
-
 # Handle any merge conflicts in a resolution `merge` commit
 git mergetool -y
 git commit
+
+# Verify there are no differences between our base commit and the squashed revision
+# DEV: This is a nice step to debug between branches to verify there are no gotchas
+git diff feature-1a.squashed
 
 # Navigate to our second historical branch and merge in the changes to our second base
 git checkout feature-1b
@@ -286,9 +285,6 @@ These conflicts will be a smaller (possibly empty) set than a typical `rebase` w
 Anyway, back to the code:
 
 ```bash
-# If there are any merge conflicts, sort them out
-git mergetool -y
-
 # Diff our base to make sure all the changes we expected exist
 git diff feature-1b.base
 # Pro-tip: We can open a GitHub window to skip over the diff and verify it looks consistent
