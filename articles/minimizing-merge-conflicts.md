@@ -54,7 +54,7 @@ o---o master (ffffff)
 Most ways of doing this lead to hard to debug merge conflicts. Here is an amateur example:
 
 ```bash
-# Navigate to our 1st PR's branch
+# Navigate to our first PR's branch
 git checkout feature-1a
 
 # Edit our file
@@ -68,7 +68,7 @@ git commit --amend --no-edit
 # Push our updated PR
 git push origin feature-1a --force
 
-# Navigate to our 2nd PR's branch
+# Navigate to our second PR's branch
 git checkout feature-1b
 
 # Merge in our past work
@@ -294,6 +294,7 @@ git diff feature-1b.base
 
 # If there are any changes that we didn't want, then we can use
 #   git checkout -p {branch} # Uses patch mode to select bits from {branch}
+#   git checkout -p {branch} -- {filepath} # Same as last command, specific to 1 file
 #   git reset -p # Uses patch mode to unstage specific parts of our staged changes
 #   git stash -p # Uses patch mode to stash specific parts of our working directory
 #   git add -p # Uses patch mode to stage specific parts of our working directory
@@ -315,8 +316,6 @@ git push origin feature-1b.squashed --force
 # This is commit `bbbbbb`
 ```
 
-
-// TODO: Standardize on first vs 1st
 
 // TODO: Document cleaning up sqwished and base branches
     https://gist.github.com/twolfson/64d592837d38b1e7755b
@@ -348,7 +347,7 @@ When we combine this into a
 
 // TODO: Don't forget to explain how git history works when combining base and normal
 
-// TODO: Don't forget to mention how we can sanely perform diffs on 2nd `.base` and 1st `.sqwished`
+// TODO: Don't forget to mention how we can sanely perform diffs on second `.base` and first `.sqwished`
 
 // TODO: Don't forget to mention how to handle replacing `.base` branches
 
