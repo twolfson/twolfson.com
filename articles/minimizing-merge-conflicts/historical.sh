@@ -20,8 +20,9 @@ git commit -m "Added world file"
 
 # Generate squashed branch for our PR
 # DEV: We use -B to overwrite any past squashed branches
-git checkout -B feature.squashed
-git rebase -i master # Squash all commits
+git checkout -B feature.squashed master
+git merge --squash feature
+git commit -m "Added hello and world files"
 
 # Push our squashed branch and open PR for `feature.squashed` to `master`
 git push origin feature.squashed

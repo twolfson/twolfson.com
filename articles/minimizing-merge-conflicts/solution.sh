@@ -104,6 +104,7 @@ git checkout -B feature-1b.base feature-1a.squashed
 # Squash our branch for the second PR
 git checkout -B feature-1b.squashed feature-1b
 git rebase -i feature-1b.base
+
 # git rebase --continue
 
 # # Force push our squashed branch which automatically updates the PR
