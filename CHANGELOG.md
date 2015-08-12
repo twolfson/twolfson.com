@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.62.1 - Accepted latest perceptual diffs
+
 3.62.0 - Added "Minimizing merge conflicts" article
 
 3.61.1 - Accepted latest perceptual diffs
