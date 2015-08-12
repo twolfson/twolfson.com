@@ -66,20 +66,17 @@ git push origin feature-1a --force
 # Navigate to our second PR's branch
 git checkout feature-1b
 
-# Merge in our past work
-git merge feature-1a --no-edit
-# Pro-tip: Use `git merge -` to merge past branch
-
-# Sort out our merge conflicts
+# Merge in our past work and sort out our merge conflicts
+git merge feature-1a
 git mergetool -y
 # Need to update every file that was edited in `bbbbbb`
 # Additionally, hard to know if we kept all of our intended changes
 
-# Commit our edits
+# Commit our merge resolution
 git commit --no-edit
 
 # Squash our commits via `git rebase`
-git rebase feature-1a -i
+git rebase -i feature-1a
 git rebase --continue
 # New commit is now b22222
 
