@@ -71,6 +71,9 @@ git merge feature-1a
 git mergetool -y
 # Need to update every file that was edited in `bbbbbb`
 # Additionally, hard to know if we kept all of our intended changes
+# For example, what if all files were indented?
+#   How would we verify all 150 lines of our changes were retained?
+#   What if we are 3 PR's deep and reviewing 450 lines of code?
 
 # Commit our merge resolution
 git commit --no-edit
