@@ -91,11 +91,11 @@ git push origin feature-1b --force
 To solve this problem, we are going to lean on git's ability to handle non-squashed merges well.
 
 ## Historical and squashed branches
-As foundation for our solution, we have 2 branches per new feature:
+As foundation for our solution, we will use 2 branches per new feature:
 
-- A historical branch which operates like its own `master` branch for the feature
+- A historical branch operates as its own `master` branch for the feature
     - Typically named `{{feature}}` (e.g. `add-homepage`)
-- A squashed branch which has all work from our historical branch in 1 commit
+- A squashed branch has all work from our historical branch in 1 commit
     - Typically named `{{feature}}.squashed` (e.g. `add-homepage.squashed`)
 
 Here is an example workflow:
@@ -273,7 +273,7 @@ git merge feature-1b.base
 
 This is a very important point in the workflow so let's explain in more detail what is happening.
 
-Both `feature-1b.base` and `feature-1b` share a common commit (`aaaaaa`) outside of `master`. As a result, this is a known state where the 2 agree upon.
+Both `feature-1b.base` and `feature-1b` share a common commit (`aaaaaa`) outside of `master`. This is a known state where the 2 branches agree.
 
 When we merged in the new `feature-1a.squashed` to `feature-1b.base`, we built a new `merge` commit (`a22222*`) that makes sure `feature-1a` changes take priority as they are **newest** .
 
