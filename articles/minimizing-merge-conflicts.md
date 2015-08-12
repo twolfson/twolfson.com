@@ -16,13 +16,10 @@ The reasoning for these requisites are:
 - Allows us to identify/create better abstractions
 - Makes it easier for reviewing and re-reviewing changes in a timely manner
 
-This article is a guide to managing branches on a complex/high velocity project (e.g. a lot of changes/PRs occur frequently).
+This article is a guide to managing branches on a non-trivial/high velocity project (e.g. a lot of changes/PRs occur frequently) which requires squashed commits.
 
 # Setup
-We are on a project which:
-
-- Requires squashed PRs
-- We are implementing dependent features (e.g. abstract a utility function, use utility in new feature)
+As a consequence of "single feature" PRs, we sometimes need to write dependent features/PRs (e.g. abstract a utility function, use utility in new feature). For example, our `git` structure would look like:
 
 ```
         o feature-1b (bbbbbb)
@@ -32,14 +29,14 @@ We are on a project which:
 o---o master (ffffff)
 ```
 
-which ultimately winds up as:
+which when landed looks like:
 
 ```
 o---o---o---o master, feature-1b (bbbbbb)
 ```
 
 # Problem
-Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart when an earlier PRs needs a change. For example, adding a comment for clarity on `feature-1a` leading to:
+Typical workflows like `git rebase`, `git commit --amend`, and `git merge --squash` fall apart when an earlier PRs needs a change. For example, adding a comment for clarity on `feature-1a` bumps all commits:
 
 ```
         o feature-1b (b22222)
