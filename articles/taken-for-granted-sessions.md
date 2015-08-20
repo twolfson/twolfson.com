@@ -14,8 +14,22 @@ At a high level, there are 2 types of sessions:
 - User sessions, which identifies a user so we can take actions on their behalf (e.g. only User A can update User A's password)
 
 # Browser sessions
-To keep the discussion focused on concepts rather than implementation, we will be discussing examples with respect to a server side application (e.g. PHP, node.js, Ruby, Python). The concepts are similar for browser side applications but we will discuss those afterwards.
+To keep the discussion focused on concepts, we will be discussing only 1 implementation with respect to server side applications (e.g. PHP, node.js, Ruby, Python). The concepts are similar for browser side and other server side applications but we will discuss those afterwards.
 
+A common secure implementation uses the following steps:
+
+- A user requests a page from our site (may be first page they are opening, may be second/third/etc)
+    - If this is their first request
+        - Generate a unique identifier for them
+    - Otherwise (this is not their first request)
+        - Verify that their identifier is legitimate
+        - Fetch relevant information for their identifier
+    - During the lifetime of the request (i.e. from when we receive it to when we send HTML content back)
+        - Allow any modifications to information about the visitor (e.g. save the last time the loaded a page)
+    - Depending on the implementation, these might save all changes at the end of the request or as the changes occur
+
+Let's break down these steps 1 by 1:
 TODO: Cookie JSON sessions
 TODO: CSRF
+TODO: HMAC
 TODO: Browser side application parallels (e.g. JWT)
