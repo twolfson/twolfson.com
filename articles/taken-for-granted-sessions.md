@@ -8,6 +8,11 @@
 
 When I first started needing to maintain user state (e.g. user is logged in), I had trouble figuring out sessions. This article explains the best way to think about sessions.
 
-In a typical server-side application (e.g. PHP, node.js, Ruby, Python), we manage sessions via cookies. A common secure variety is a cookie that is uniquely attached to a browser session
+At a high level, there are 2 types of sessions:
 
-Bonus: CSRF
+- Browser sessions, which attach visitor both when they are anonymous and logged in to our product
+- User sessions, which identifies the user so we can take actions on their behalf (e.g. only User A can User A's password)
+
+Typically when people are say "session" in the context of an application/server, they are talking about browser sessions. If they are speaking in the context of an API or Service Oriented Architecture, then this is likely about user sessions.
+
+When I was first learning about this, I was thinking about it from browser sessions.
