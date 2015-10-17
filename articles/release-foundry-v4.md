@@ -54,12 +54,12 @@ All of the proposed changes are now live in `foundry`.
 
 https://github.com/twolfson/foundry/tree/4.3.2
 
-We revamped `foundry-release-spec` to document CLI specifications:
+We revamped `foundry-release-spec` to be a CLI specification:
 
 - Before: https://github.com/twolfson/foundry-release-spec/tree/1.1.0
 - After: https://github.com/twolfson/foundry-release-spec/tree/2.0.0
 
-We wrote `foundry-release-base` to easily migrate our plugins to command integrations:
+We wrote `foundry-release-base` to migrate our plugins to command integrations:
 
 https://github.com/twolfson/foundry-release-base/tree/1.0.2
 
@@ -70,3 +70,7 @@ We added support for `customCommand` as part of our `releaseCommands`. This allo
 Lastly, we added more transparent output so we always know exactly where we are in our release:
 
 ![foundry release screenshot](public/images/articles/release-foundry-v4/foundry-release.png)
+
+The full list of our thoughts and changes can be found here:
+
+https://gist.github.com/twolfson/038392cb5f5526f68c62
