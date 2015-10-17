@@ -78,4 +78,4 @@ We added support for `customCommand` as part of our `releaseCommands`. This allo
 
 Lastly, we added more transparent output so we always know exactly where we are in our release:
 
-TODO: Add screenshot.
+![foundry release screenshot](public/images/articles/release-foundry-v4/foundry-release.png)
