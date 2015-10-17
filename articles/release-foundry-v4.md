@@ -61,8 +61,7 @@ To resolve this, we took the following approach:
     - Allows for customization of things like `registerVersion` (semver to run "register" steps at)
 
 # Results
-These changes are all now live in `foundry`
-
+These changes are all now live in `foundry`.
 
 We revamped `foundry-release-spec` to integration with CLIs:
 
@@ -73,4 +72,10 @@ We wrote a `foundry-release-base` to easily migrate our plugins to command integ
 
 https://github.com/twolfson/foundry-release-base/tree/1.0.2
 
- `foundry re
+Upon failure, `foundry release` will generate a `foundry-resume.json`. This allows for usage of `foundry resume` which picks up the release from where it last failed. As a result, we can retry publishing to a flaky repository (e.g. occasional 500's).
+
+We added support for `customCommand` as part of our `releaseCommands`. This allows for custom one-off commands (e.g. `update-files: 'npm run build'`).
+
+Lastly, we added more transparent output so we always know exactly where we are in our release:
+
+TODO: Add screenshot.
