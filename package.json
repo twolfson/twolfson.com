@@ -26,7 +26,7 @@
   },
   "main": "server/index.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
