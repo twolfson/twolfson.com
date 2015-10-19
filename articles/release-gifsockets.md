@@ -1,5 +1,6 @@
 {
   "title": "Release: gifsockets",
+  "alternateUrls": ["/2013-11-21-release:-gifsockets"],
   "author": "Todd Wolfson",
   "date": "2013/11/21",
   "keywords": "gif, socket, gifsocket, never-ending, animated",

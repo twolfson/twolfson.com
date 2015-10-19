@@ -1,5 +1,6 @@
 {
   "title": "Retina sprites are here!",
+  "alternateUrls": ["/2015-04-21-retina-sprites-are-here!"],
   "author": "Todd Wolfson",
   "date": "2015-04-21T00:00:00-0500",
   "keywords": "retina, sprite, spritesheet, spritesmith",

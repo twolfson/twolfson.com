@@ -1,5 +1,6 @@
 {
   "title": "Release: foundry",
+  "alternateUrls": ["/2014-03-19-release:-foundry"],
   "author": "Todd Wolfson",
   "date": "2014-03-19T02:11:46.684680-07:00",
   "keywords": "release, publish, foundry, npm, bower, component, pypi, git tag",
