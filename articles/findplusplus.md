@@ -1,5 +1,6 @@
 {
   "title": "Introducing Find++",
+  "urlOverride": "/2013-04-22-introducing-find-plus-plus",
   "alternateUrls": ["/2013-04-22-introducing-find\\+\\+"],
   "author": "Todd Wolfson",
   "date": "Mon Apr 22 2013 00:00:00",
