@@ -14,7 +14,7 @@ var urlInfos = [
   '/2014-11-22-moving-from-phantomjs-to-node-webkit',
   '/2014-11-05-welcome-back',
   '/2014-07-10-taking-a-break',
-  '/2014-05-29-taken-for-granted:-regression-tests',
+  {src: '/2014-05-29-taken-for-granted:-regression-tests', target: '/2014-05-29-taken-for-granted-regression-tests'},
   {src: '/2014-03-19-release:-foundry', target: '/2014-03-19-release-foundry'},
   '/2014-02-25-visual-regression-testing-in-travis-ci',
   '/2014-02-17-suggested-reading-for-writing-a-gulp-plugin',
