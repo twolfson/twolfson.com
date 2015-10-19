@@ -3,9 +3,8 @@ var async = require('async');
 var request = require('request');
 
 // Define all URLs we expected
-var urlPathnames = [
-  // Verify `release-foundry-v4`
-  '/2015-10-17-release:-foundry-v4',
+var urlInfos = [
+  {src: '/2015-10-17-release:-foundry-v4', target: '/2015-10-17-release-foundry-v4'},
   '/2015-08-06-minimizing-merge-conflicts',
   '/2015-07-31-slacks-source-code-is-beautiful',
   '/2015-06-03-learning-to-forget',
@@ -77,8 +76,8 @@ var urlPathnames = [
 ];
 
 // For each of our URLs, verify it's a valid target
-async.map(urlPathnames, function requestUrl (urlPathname, cb) {
-  // TODO: Use `url` library if we need proper escaping
+async.map(urlInfos, function requestUrl (urlInfo, cb) {
+  var urlPathname = typeof urlInfo === 'object' ? urlInfo.src : urlInfo;
   var url = 'http://localhost:8080' + urlPathname;
   request({
     url: url,
@@ -96,10 +95,28 @@ async.map(urlPathnames, function requestUrl (urlPathname, cb) {
 
   // For each of our responses
   resArr.forEach(function processRes (res, i) {
-    // If we received a bad status code, complain about it
-    if (res.statusCode !== 200) {
-      var pathname = urlPathnames[i];
-      console.error('Bad status code "' + res.statusCode + '" for URL "' + pathname + '"');
+    // If the info is a string, verify it was a direct hit
+    var urlInfo = urlInfos[i];
+    var urlPathname;
+    if (typeof urlInfo === 'string') {
+      urlPathname = urlInfo;
+      if (res.statusCode !== 200) {
+        console.error('Expected 200 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
+      }
+    // Otherwise, verify it was a 301 to the expected location
+    } else {
+      urlPathname = urlInfo.src;
+      if (res.statusCode !== 301) {
+        console.error('Expected 301 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
+        return;
+      }
+
+      var actualLocation = res.headers.location;
+      if (actualLocation !== urlInfo.target) {
+        console.error('Expected "' + urlPathname + '" to redirect to "' + urlInfo.target +
+          ' but it redirected to ' + actualLocation + '"');
+        return;
+      }
     }
   });
 });
