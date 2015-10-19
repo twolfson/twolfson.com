@@ -1,5 +1,6 @@
 {
   "title": "Release: foundry v4",
+  "alternateUrls": ["/2015-10-17-release:-foundry-v4"],
   "author": "Todd Wolfson",
   "date": "2015-10-17T17:58:41-0500",
   "keywords": "foundry, release",

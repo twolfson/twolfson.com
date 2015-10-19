@@ -21,6 +21,15 @@ exports.common = function (config) {
   articles.forEach(function (article) {
     var url = article.url;
     router.get(url, controllers.blog.article({article: article}));
+
+    // If there are any alternate URLs, redirect them
+    if (article.alternateUrls) {
+      article.alternateUrls.forEach(function handleAlternateUrl (alternateUrl) {
+        router.get(alternateUrl, function redirectToArticle (req, res, next) {
+          res.redirect(301, alternateUrl);
+        });
+      });
+    }
   });
   router.get('/index.xml', controllers.blog.rss({articles: articles}));
 
