@@ -20,8 +20,7 @@ exports.common = function (config) {
   // TODO: Should we also redirect / to /articles or /blog?
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
-    // DEV: Escape '+' as express coerces URL to a regexp
-    var url = article.url.replace(/\+/g, '\\+');
+    var url = article.url;
     router.get(url, controllers.blog.article({article: article}));
   });
   router.get('/index.xml', controllers.blog.rss({articles: articles}));
