@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.64.0 - Added "Release: foundry v4" article
+
 3.63.1 - Added local `foundry` for releases (previously global)
 
 3.63.0 - Added "victorious-git" to activity
