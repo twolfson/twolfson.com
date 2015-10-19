@@ -71,6 +71,10 @@ var urlInfos = [
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
 describe('When requesting each of our legacy URLs', function () {
   serverUtils.run();
+  // DEV: Add a delay to make sure all URLs are registered
+  before(function addDelay (done) {
+    setTimeout(done, 1000);
+  });
   before(function requestUrls (done) {
     var that = this;
     // DEV: Increase timeout to 10s for slow servers
