@@ -97,6 +97,7 @@ describe('When requesting each of our legacy URLs', function () {
 
   it('renders/redirects to the expected location', function () {
     // For each of our responses
+    var errs = [];
     this.resArr.forEach(function processRes (res, i) {
       // If the info is a string, verify it was a direct hit
       var urlInfo = urlInfos[i];
@@ -104,21 +105,26 @@ describe('When requesting each of our legacy URLs', function () {
       if (typeof urlInfo === 'string') {
         urlPathname = urlInfo;
         if (res.statusCode !== 200) {
-          throw new Error('Expected 200 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
+          errs.push('Expected 200 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
         }
       // Otherwise, verify it was a 301 to the expected location
       } else {
         urlPathname = urlInfo.src;
         if (res.statusCode !== 301) {
-          throw new Error('Expected 301 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
+          errs.push('Expected 301 status code for "' + urlPathname + '" but received "' + res.statusCode + '"');
         }
 
         var actualLocation = res.headers.location;
         if (actualLocation !== urlInfo.target) {
-          throw new Error('Expected "' + urlPathname + '" to redirect to "' + urlInfo.target + '" ' +
+          errs.push('Expected "' + urlPathname + '" to redirect to "' + urlInfo.target + '" ' +
             'but it redirected to "' + actualLocation + '"');
         }
       }
     });
+
+    // If we have errors, concatenate them
+    if (errs.length) {
+      throw new Error(errs.join('\n'));
+    }
   });
 });
