@@ -69,10 +69,12 @@ var urlInfos = [
 
 // For each of our URLs, verify it's a valid target
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
-describe('When requesting cach of our legacy URLs', function () {
+describe('When requesting each of our legacy URLs', function () {
   serverUtils.run();
   before(function requestUrls (done) {
     var that = this;
+    // DEV: Increase timeout to 10s for slow servers
+    this.timeout(10000);
     async.map(urlInfos, function requestUrl (urlInfo, cb) {
       var urlPathname = typeof urlInfo === 'object' ? urlInfo.src : urlInfo;
       var url = serverUtils.getUrl(urlPathname);
