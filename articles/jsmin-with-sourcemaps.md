@@ -1,7 +1,7 @@
 {
   "title": "JSMin with sourcemaps",
   "author": "Todd Wolfson",
-  "date": "2012/10/07",
+  "date": "2012-10-07",
   "keywords": "jsmin, sourcemap, compression, minification",
   "summary": "Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap).",
   "relatedProjects": ["jsmin-sourcemap"]

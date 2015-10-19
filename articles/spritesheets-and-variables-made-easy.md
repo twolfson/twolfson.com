@@ -1,7 +1,7 @@
 {
   "title": "Spritesheets and variables made easy",
   "author": "Todd Wolfson",
-  "date": "2013/03/11",
+  "date": "2013-03-11",
   "keywords": "spritesheets, spritesmith, variables, scss, sass, stylus, less, css, json",
   "summary": "A long overdue introduction to [Spritesmith](https://github.com/Ensighten/grunt-spritesmith) and its [components](https://github.com/Ensighten/grunt-spritesmith#contributing).",
   "relatedProjects": ["spritesmith"]

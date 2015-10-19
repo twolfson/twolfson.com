@@ -2,7 +2,7 @@
   "title": "Release: sublime-plugin-tests",
   "alternateUrls": ["/2013-12-26-release:-sublime-plugin-tests"],
   "author": "Todd Wolfson",
-  "date": "2013/12/26",
+  "date": "2013-12-26",
   "keywords": "sublime, sublime text, plugin, test",
   "summary": "[Sublime Text](http://sublimetext.com/) plugin testing framework"
 }

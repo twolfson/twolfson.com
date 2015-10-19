@@ -1,7 +1,7 @@
 {
   "title": "Catching up to date",
   "author": "Todd Wolfson",
-  "date": "2012/03/16",
+  "date": "2012-03-16",
   "keywords": "css query, resource collector, mdn dev derby, css off, js1k",
   "summary": "A summary of all the contests, scripts I have written, and everything else I meant to write about since my arrival in California.",
   "_relProjects": ["File Watcher", "CSS Query"],
