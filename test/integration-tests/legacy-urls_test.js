@@ -69,7 +69,7 @@ var urlInfos = [
 
 // For each of our URLs, verify it's a valid target
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
-describe('When requesting each of our legacy URLs', function () {
+describe.only('When requesting each of our legacy URLs', function () {
   serverUtils.run();
   before(function requestUrls (done) {
     var that = this;
