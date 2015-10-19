@@ -8,7 +8,6 @@ exports.common = function (config) {
   var router = new express.Router();
 
   // Override our article URLs
-  // TODO: Move to slug for `article.url` to remove this need. Then, we can host alternate URLs.
   var articles = config.articles;
   articles.forEach(function updateArticleUrl (article) {
     article.url = article.urlOverride || article.url;
