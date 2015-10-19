@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.65.1 - Accepted latest perceptual diffs and adjusted Travis CI settings
+
 3.65.0 - Updated activity to include "foundry v4"
 
 3.64.0 - Added "Release: foundry v4" article
