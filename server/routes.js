@@ -20,7 +20,6 @@ exports.common = function (config) {
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     var url = article.url;
-    console.log(url);
     router.get(url, controllers.blog.article({article: article}));
 
     // If there are any alternate URLs, redirect them

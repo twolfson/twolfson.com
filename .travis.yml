@@ -14,6 +14,11 @@ before_install:
   # Upgrade npm to avoid semver issues
   - curl --location http://rawgit.com/twolfson/fix-travis-ci/master/lib/install.sh | bash -s
 
+  # Update timezone to match production version
+  # http://stackoverflow.com/a/23374438
+  # TODO: Stop using non-UTC timezone in production
+  - echo "America/New_York" | sudo tee /etc/timezone
+
   # Install node-webkit
   - ./test/utils/install-node-webkit.sh "$USER"
 
