@@ -26,7 +26,7 @@ exports.common = function (config) {
     if (article.alternateUrls) {
       article.alternateUrls.forEach(function handleAlternateUrl (alternateUrl) {
         router.get(alternateUrl, function redirectToArticle (req, res, next) {
-          res.redirect(301, alternateUrl);
+          res.redirect(301, url);
         });
       });
     }

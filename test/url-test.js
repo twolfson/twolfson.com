@@ -113,8 +113,8 @@ async.map(urlInfos, function requestUrl (urlInfo, cb) {
 
       var actualLocation = res.headers.location;
       if (actualLocation !== urlInfo.target) {
-        console.error('Expected "' + urlPathname + '" to redirect to "' + urlInfo.target +
-          ' but it redirected to ' + actualLocation + '"');
+        console.error('Expected "' + urlPathname + '" to redirect to "' + urlInfo.target + '" ' +
+          'but it redirected to "' + actualLocation + '"');
         return;
       }
     }
