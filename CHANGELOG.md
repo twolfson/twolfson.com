@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.65.0 - Updated activity to include "foundry v4"
+
 3.64.0 - Added "Release: foundry v4" article
 
 3.63.1 - Added local `foundry` for releases (previously global)
