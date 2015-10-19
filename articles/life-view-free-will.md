@@ -2,7 +2,7 @@
   "title": "Life view: Free Will",
   "alternateUrls": ["/2013-10-16-life-view:-free-will"],
   "author": "Todd Wolfson",
-  "date": "Wed Oct 16 2013 01:00:00",
+  "date": "2013-10-16T01:00:00",
   "keywords": "life view, free will, philosophy",
   "summary": "Personal viewpoint on [Free Will](http://en.wikipedia.org/wiki/Free_will).",
   "relatedArticles": ["Why I open source", "Life view: What shapes the self"]

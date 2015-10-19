@@ -2,7 +2,7 @@
   "title": "Release: git sqwish",
   "alternateUrls": ["/2013-10-16-release:-git-sqwish"],
   "author": "Todd Wolfson",
-  "date": "Wed Oct 16 2013 00:00:00",
+  "date": "2013-10-16T00:00:00",
   "keywords": "git squash, git sqwish, rebase, merge conflict, rerere",
   "summary": "git squash without repetitive conflicts.",
   "relatedArticles": ["Develop faster"]

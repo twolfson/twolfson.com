@@ -2,7 +2,7 @@
   "title": "Life view: What shapes the self",
   "alternateUrls": ["/2013-10-16-life-view:-what-shapes-the-self"],
   "author": "Todd Wolfson",
-  "date": "Wed Oct 16 2013 02:00:00",
+  "date": "2013-10-16T02:00:00",
   "keywords": "life view, self, perception, philosophy",
   "summary": "Personal viewpoint on how the self is shaped.",
   "relatedArticles": ["Why I open source", "Life view: Free Will"]

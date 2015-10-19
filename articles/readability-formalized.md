@@ -2,7 +2,7 @@
   "title": "Readability: Formalized",
   "alternateUrls": ["/2013-08-15-readability:-formalized"],
   "author": "Todd Wolfson",
-  "date": "Aug 15 2013 01:00:00",
+  "date": "2013-08-15T01:00:00",
   "keywords": "readability, formalized, objective, axiom",
   "summary": "Defining readability through [propositions](http://en.wikipedia.org/wiki/Proposition), [theorems](http://en.wikipedia.org/wiki/Theorem), and [lemmas](http://en.wikipedia.org/wiki/Lemma_%28mathematics%29).",
   "relatedArticles": ["Axioms of maintainability", "Optimal line length theory"]
