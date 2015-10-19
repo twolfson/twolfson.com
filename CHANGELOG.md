@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.63.1 - Added local `foundry` for releases (previously global)
+
 3.63.0 - Added "victorious-git" to activity
 
 3.62.1 - Accepted latest perceptual diffs
