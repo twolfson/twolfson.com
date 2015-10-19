@@ -1,5 +1,6 @@
 {
   "title": "Readability: Formalized",
+  "alternateUrls": ["/2013-08-15-readability:-formalized"],
   "author": "Todd Wolfson",
   "date": "Aug 15 2013 01:00:00",
   "keywords": "readability, formalized, objective, axiom",

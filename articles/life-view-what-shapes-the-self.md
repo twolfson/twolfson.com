@@ -1,5 +1,6 @@
 {
   "title": "Life view: What shapes the self",
+  "alternateUrls": ["/2013-10-16-life-view:-what-shapes-the-self"],
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 02:00:00",
   "keywords": "life view, self, perception, philosophy",

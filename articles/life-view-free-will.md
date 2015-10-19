@@ -1,5 +1,6 @@
 {
   "title": "Life view: Free Will",
+  "alternateUrls": ["/2013-10-16-life-view:-free-will"],
   "author": "Todd Wolfson",
   "date": "Wed Oct 16 2013 01:00:00",
   "keywords": "life view, free will, philosophy",
