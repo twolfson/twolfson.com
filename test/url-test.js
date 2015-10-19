@@ -63,7 +63,7 @@ var urlPathnames = [
 // For each of our URLs, verify it's a valid target
 async.map(urlPathnames, function requestUrl (urlPathname, cb) {
   // TODO: Use `url` library if we need proper escaping
-  var url = 'http://localhost:8080/' + urlPathname;
+  var url = 'http://localhost:8080' + urlPathname;
   request({
     url: url,
     // TODO: When we finish this, we might need redirect: true
@@ -71,5 +71,19 @@ async.map(urlPathnames, function requestUrl (urlPathname, cb) {
   }, function handleResponse (err, res, body) {
     // Callback with the error and response
     return cb(err, res);
+  });
+}, function handleResponses (err, resArr) {
+  // If there was an error, throw it
+  if (err) {
+    throw err;
+  }
+
+  // For each of our responses
+  resArr.forEach(function processRes (res, i) {
+    // If we received a bad status code, complain about it
+    if (res.statusCode !== 200) {
+      var pathname = urlPathnames[i];
+      console.error('Bad status code "' + res.statusCode + '" for URL "' + pathname + '"');
+    }
   });
 });
