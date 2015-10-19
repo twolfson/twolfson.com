@@ -1,5 +1,6 @@
 {
   "title": "Abandoned project: Kaleidoscope",
+  "alternateUrls": ["/2013-07-24-abandoned-project:-kaleidoscope"],
   "author": "Todd Wolfson",
   "date": "2013/07/24",
   "keywords": "kaleidoscope, perceptual diff, in browser",

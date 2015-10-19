@@ -1,5 +1,6 @@
 {
   "title": "Blog Launch!",
+  "alternateUrls": ["/2012-02-21-blog-launch!"],
   "author": "Todd Wolfson",
   "date": "2012/02/21",
   "keywords": "first, blog post",

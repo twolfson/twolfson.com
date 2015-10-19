@@ -1,5 +1,6 @@
 {
   "title": "Halo - A modular MVC",
+  "alternateUrls": ["/2013-03-17-halo---a-modular-mvc"],
   "author": "Todd Wolfson",
   "date": "2013/03/17",
   "keywords": "halo, mvc, front end",

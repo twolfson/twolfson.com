@@ -1,5 +1,6 @@
 {
   "title": "Builder - Build chain for your client side",
+  "alternateUrls": ["/2013-03-11-builder---build-chain-for-your-client-side"],
   "author": "Todd Wolfson",
   "date": "Mon Mar 11 2013 02:00:00",
   "keywords": " builder, front end, client side, build chain",

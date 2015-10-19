@@ -1,5 +1,6 @@
 {
   "title": "Hands-Free Refresh Anywhere - File Watcher et al.",
+  "alternateUrls": ["/2012-03-25-hands-free-refresh-anywhere---file-watcher-et-al."],
   "author": "Todd Wolfson",
   "date": "2012/03/25",
   "keywords": "file watcher, live coding, hands free refresh",
