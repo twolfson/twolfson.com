@@ -1,6 +1,6 @@
 {
   "title": "Taken for granted: Regression tests",
-  "alternateUrls": ["/2014-05-29-taken-for-granted:-regression-tests"],
+  "alternateUrls": ["/2014-05-29-taken-for-granted-regression-tests", "/2014-05-29-taken-for-granted:-regression-tests"],
   "author": "Todd Wolfson",
   "date": "2014-05-28T23:42:55-07:00",
   "keywords": "taken for granted, regression tests, protip",

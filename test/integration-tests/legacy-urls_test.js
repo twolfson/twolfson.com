@@ -20,8 +20,9 @@ var urlInfos = [
   '/2014-11-22-moving-from-phantomjs-to-node-webkit',
   '/2014-11-05-welcome-back',
   '/2014-07-10-taking-a-break',
-  '/2014-05-29-taken-for-granted-regression-tests',
-    {src: '/2014-05-29-taken-for-granted:-regression-tests', target: '/2014-05-29-taken-for-granted-regression-tests'},
+  '/2014-05-28-taken-for-granted-regression-tests',
+    {src: '/2014-05-29-taken-for-granted-regression-tests', target: '/2014-05-28-taken-for-granted-regression-tests'},
+    {src: '/2014-05-29-taken-for-granted:-regression-tests', target: '/2014-05-28-taken-for-granted-regression-tests'},
   '/2014-03-19-release-foundry',
     {src: '/2014-03-19-release:-foundry', target: '/2014-03-19-release-foundry'},
   '/2014-02-25-visual-regression-testing-in-travis-ci',
@@ -61,10 +62,10 @@ var urlInfos = [
     {src: '/2013-04-22-introducing-find\+\+', target: '/2013-04-22-introducing-find-plus-plus'},
   '/2013-03-17-halo-a-modular-mvc',
     {src: '/2013-03-17-halo---a-modular-mvc', target: '/2013-03-17-halo-a-modular-mvc'},
-  '/2013-03-11-builder-build-chain-for-your-client-side',
+  '/2013-04-11-builder-build-chain-for-your-client-side',
     {
-      src: '/2013-03-11-builder---build-chain-for-your-client-side',
-      target: '/2013-03-11-builder-build-chain-for-your-client-side'
+      src: '/2013-04-11-builder---build-chain-for-your-client-side',
+      target: '/2013-04-11-builder-build-chain-for-your-client-side'
     },
   '/2013-03-11-spritesheets-and-variables-made-easy',
   '/2013-02-15-open-letter-to-gruntjs',
