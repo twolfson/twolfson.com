@@ -1,7 +1,7 @@
 {
   "title": "How to linkify Markdown headers",
   "author": "Todd Wolfson",
-  "date": "2013-11-02T23:50:00",
+  "date": "2013-11-02T23:50:00-0700",
   "keywords": "markdown, link, header, marked",
   "summary": "Add links to your Markdown headers"
 }

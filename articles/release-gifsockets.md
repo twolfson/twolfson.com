@@ -2,7 +2,7 @@
   "title": "Release: gifsockets",
   "alternateUrls": ["/2013-11-21-release:-gifsockets"],
   "author": "Todd Wolfson",
-  "date": "2013-11-21",
+  "date": "2013-11-21T00:00:00-0800",
   "keywords": "gif, socket, gifsocket, never-ending, animated",
   "summary": "Stream never-ending animated [GIFs](http://en.wikipedia.org/wiki/Graphics_Interchange_Format)"
 }

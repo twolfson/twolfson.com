@@ -37,7 +37,7 @@ var articles = jojo({
 
 // For each of our articles, verify there is a timezone (so we can properly parseZone)
 articles.forEach(function verifyArticleTimezone (article) {
-  assert(article._tzm, 'Timezone was not specified for article "' + article.name + '"');
+  assert(article.moment._tzm, 'Timezone was not specified for article "' + article.title + '"');
 });
 
 // Add a formatted date for each article

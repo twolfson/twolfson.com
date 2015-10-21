@@ -1,7 +1,7 @@
 {
   "title": "Low tech dependency management via grunt tasks",
   "author": "Todd Wolfson",
-  "date": "2014-01-19",
+  "date": "2014-01-19T00:00:00-0800",
   "keywords": "low tech, dependency, bower, volo, jam, curl",
   "summary": "An explanation and walkthrough of managing browser dependencies via [`grunt-zip`](https://github.com/twolfson/grunt-zip) and [`grunt-curl`](https://github.com/twolfson/grunt-curl)."
 }

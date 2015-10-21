@@ -1,7 +1,7 @@
 {
   "title": "UNLICENSE all the things",
   "author": "Todd Wolfson",
-  "date": "2013-11-25",
+  "date": "2013-11-25T00:00:00-0800",
   "keywords": "unlicense, license, legal, copyright, copyleft",
   "summary": "Choosing [UNLICENSE](http://unlicense.org/) over other licenses",
   "relatedArticles": ["Why I open source"]

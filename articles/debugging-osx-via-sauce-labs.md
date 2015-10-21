@@ -1,7 +1,7 @@
 {
   "title": "Debugging OSX via Sauce Labs",
   "author": "Todd Wolfson",
-  "date": "2013-09-24",
+  "date": "2013-09-24T00:00:00-0700",
   "keywords": "debugging, osx, sauce labs, remote, free",
   "summary": "Using [Sauce Labs](https://saucelabs.com/) to debug software on OSX."
 }

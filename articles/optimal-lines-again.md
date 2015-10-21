@@ -1,7 +1,7 @@
 {
   "title": "Optimal lines again",
   "author": "Todd Wolfson",
-  "date": "2013-11-26",
+  "date": "2013-11-26T00:00:00-0800",
   "keywords": "optimal, relative, line, length, typography, code",
   "summary": "Making [relative line length limits](/2013-09-08-optimal-line-length-theory) usable",
   "relatedArticles": ["Optimal line length theory"]
