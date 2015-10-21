@@ -1,7 +1,7 @@
 {
   "title": "Finding the perfect mix of code coverage",
   "author": "Todd Wolfson",
-  "date": "2013-07-04",
+  "date": "2013-07-04T00:00:00-0700",
   "keywords": "code coverage, perfect mix, perfect balance",
   "summary": "[Code coverage](https://en.wikipedia.org/wiki/Code_coverage) is the percentage of lines of code touched by a test suite. It is a good metric but API coverage is a new step forward."
 }

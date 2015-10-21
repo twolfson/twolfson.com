@@ -1,7 +1,7 @@
 {
   "title": "Bringing vertical rhythm to code",
   "author": "Todd Wolfson",
-  "date": "2013-05-27T01:00:00",
+  "date": "2013-05-27T01:00:00-0700",
   "keywords": "vertical rhythm, code, design code, typography",
   "summary": "An experiment and attempt at understanding my code patterns.",
   "relatedArticles": ["Optimal line length theory", "Readability: Formalized"]

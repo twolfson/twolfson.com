@@ -1,7 +1,7 @@
 {
   "title": "Axioms of maintainability",
   "author": "Todd Wolfson",
-  "date": "2013-07-11",
+  "date": "2013-07-11T00:00:00-0700",
   "keywords": "maintainable code, maintainability, axiom, objective",
   "summary": "Mathematical definitions and reasoning behind why abstracted code is maintainable code.",
   "relatedArticles": ["Readability: Formalized"]

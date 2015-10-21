@@ -1,7 +1,7 @@
 {
   "title": "Node Knockout 2012",
   "author": "Todd Wolfson",
-  "date": "2012-11-14",
+  "date": "2012-11-14T00:00:00-0800",
   "keywords": "node knockout, nko, mapper maker",
   "summary": "This weekend, [3 coworkers and I](http://nodeknockout.com/teams/jazzycat-emit-meow), participated in [Node Knockout](http://nodeknockout.com/), a 48 hour [node.js](http://nodejs.org/) based [hackathon](http://en.wikipedia.org/wiki/Hackathon).",
   "_relProjects": ["Mapper Maker"]

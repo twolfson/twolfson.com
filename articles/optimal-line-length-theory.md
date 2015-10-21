@@ -1,7 +1,7 @@
 {
   "title": "Optimal line length theory",
   "author": "Todd Wolfson",
-  "date": "2013-09-08",
+  "date": "2013-09-08T00:00:00-0700",
   "keywords": "line length, typography, code, editor",
   "summary": "Experimenting with relative typographic line length limits applied to code.",
   "relatedArticles": ["Bringing vertical rhythm to code"]

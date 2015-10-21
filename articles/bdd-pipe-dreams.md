@@ -1,7 +1,7 @@
 {
   "title": "BDD pipe dreams",
   "author": "Todd Wolfson",
-  "date": "2012-09-09",
+  "date": "2012-09-09T00:00:00-0700",
   "keywords": "bdd, pipe dreams, imagination",
   "summary": "Below are my most recent pipe dreams for BDD. While the example is based on testing a UI, it is applicable to anything as does BDD.",
   "relatedArticles": ["BDD and the Future"],

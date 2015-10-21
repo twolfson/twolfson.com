@@ -1,7 +1,7 @@
 {
   "title": "Sexy bash prompt",
   "author": "Todd Wolfson",
-  "date": "2013-08-15",
+  "date": "2013-08-15T00:00:00-0700",
   "keywords": "sexy bash prompt, git status, color bash prompt, 2 line prompt, two line prompt",
   "summary": "A [bash prompt](https://github.com/twolfson/sexy-bash-prompt) with colors, git statuses, and git branches."
 }

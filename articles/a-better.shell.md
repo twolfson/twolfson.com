@@ -1,7 +1,7 @@
 {
   "title": "A better shell",
   "author": "Todd Wolfson",
-  "date": "2013-07-06",
+  "date": "2013-07-06T00:00:00-0700",
   "keywords": "bash, zsh, shell",
   "summary": "Thoughts on taking steps to make a better shell.",
   "relatedArticles": ["Sexy bash prompt"]

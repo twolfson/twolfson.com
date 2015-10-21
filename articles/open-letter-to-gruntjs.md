@@ -1,7 +1,7 @@
 {
   "title": "Open letter to gruntjs",
   "author": "Todd Wolfson",
-  "date": "2013-02-15",
+  "date": "2013-02-15T00:00:00-0800",
   "keywords": "gruntjs, open letter",
   "summary": "The following letter is about my thoughts and complaints of the recent [gruntjs](http://gruntjs.com/) upgrade from `0.3` to `0.4`."
 }

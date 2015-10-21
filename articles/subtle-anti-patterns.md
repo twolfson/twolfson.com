@@ -1,7 +1,7 @@
 {
   "title": "Subtle anti-patterns",
   "author": "Todd Wolfson",
-  "date": "2012-11-17",
+  "date": "2012-11-17T00:00:00-0800",
   "keywords": "anti-patterns, subtle",
   "summary": "**Warning: This article is more opinionated than other ones.**"
 }

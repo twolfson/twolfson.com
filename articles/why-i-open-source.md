@@ -1,7 +1,7 @@
 {
   "title": "Why I open source",
   "author": "Todd Wolfson",
-  "date": "2013-04-22T02:00:00",
+  "date": "2013-04-22T02:00:00-0700",
   "keywords": "open source, morals, philosophy",
   "summary": "An explanation of my morals/ethics and why I devote my free time to open source.",
   "relatedArticles": ["Life view: Free Will", "Life view: What shapes the self"]

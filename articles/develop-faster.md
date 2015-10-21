@@ -1,7 +1,7 @@
 {
   "title": "Develop faster",
   "author": "Todd Wolfson",
-  "date": "2013-07-27",
+  "date": "2013-07-27T00:00:00-0700",
   "keywords": "develop faster, dev tools, efficiency, grunt, hub, nodemon, live-reload, git-extras",
   "summary": "Removing the tedium from creating, developing, and publishing repos.",
   "scripts": ["public/js/articles/develop-faster.js"],

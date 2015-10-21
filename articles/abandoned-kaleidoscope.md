@@ -2,7 +2,7 @@
   "title": "Abandoned project: Kaleidoscope",
   "alternateUrls": ["/2013-07-24-abandoned-project:-kaleidoscope"],
   "author": "Todd Wolfson",
-  "date": "2013-07-24",
+  "date": "2013-07-24T00:00:00-0700",
   "keywords": "kaleidoscope, perceptual diff, in browser",
   "summary": "Abandonment of an in-browser solution for a website-at-a-glance webpage and looking forward to perceptual diffs."
 }

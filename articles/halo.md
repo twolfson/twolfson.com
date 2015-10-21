@@ -2,7 +2,7 @@
   "title": "Halo - A modular MVC",
   "alternateUrls": ["/2013-03-17-halo---a-modular-mvc"],
   "author": "Todd Wolfson",
-  "date": "2013-03-17",
+  "date": "2013-03-17T00:00:00-0700",
   "keywords": "halo, mvc, front end",
   "summary": "An introduction to [Halo](https://github.com/Ensighten/Halo): its good, bad, and ugly parts.",
   "relatedArticles": ["Builder - Build chain for your client side", "Why your client-side framework deserves a build chain"]
