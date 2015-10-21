@@ -3,9 +3,6 @@ var async = require('async');
 var request = require('request');
 var serverUtils = require('../utils/server');
 
-// TODO: Generate all our blog URLs on EST time zone
-// TODO: Add any missing URLs to this list so we can permanently fix them
-
 // Define all URLs we expected
 var urlInfos = [
   '/2015-10-17-release-foundry-v4',
@@ -90,7 +87,7 @@ var urlInfos = [
 
 // For each of our URLs, verify it's a valid target
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
-describe.only('When requesting each of our legacy URLs', function () {
+describe('When requesting each of our legacy URLs', function () {
   serverUtils.run();
   before(function requestUrls (done) {
     var that = this;
