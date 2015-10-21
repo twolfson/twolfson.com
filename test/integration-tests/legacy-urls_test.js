@@ -59,10 +59,10 @@ var urlInfos = [
     {src: '/2013-04-22-introducing-find\+\+', target: '/2013-04-22-introducing-find-plus-plus'},
   '/2013-03-17-halo-a-modular-mvc',
     {src: '/2013-03-17-halo---a-modular-mvc', target: '/2013-03-17-halo-a-modular-mvc'},
-  '/2013-04-11-builder-build-chain-for-your-client-side',
+  '/2013-03-11-builder-build-chain-for-your-client-side',
     {
-      src: '/2013-04-11-builder---build-chain-for-your-client-side',
-      target: '/2013-04-11-builder-build-chain-for-your-client-side'
+      src: '/2013-03-11-builder---build-chain-for-your-client-side',
+      target: '/2013-03-11-builder-build-chain-for-your-client-side'
     },
   '/2013-03-11-spritesheets-and-variables-made-easy',
   '/2013-02-15-open-letter-to-gruntjs',

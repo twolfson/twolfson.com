@@ -1,8 +1,8 @@
 {
   "title": "Builder - Build chain for your client side",
-  "alternateUrls": ["/2013-04-11-builder---build-chain-for-your-client-side"],
+  "alternateUrls": ["/2013-03-11-builder---build-chain-for-your-client-side"],
   "author": "Todd Wolfson",
-  "date": "2013-04-11T02:00:00-0700",
+  "date": "2013-03-11T02:00:00-0700",
   "keywords": " builder, front end, client side, build chain",
   "summary": "Another overdue introduction -- This time to [Builder](https://github.com/Ensighten/Builder), a framework for automating common client-side steps.",
   "relatedArticles": ["Halo - A modular MVC"]
