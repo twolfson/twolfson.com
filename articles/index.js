@@ -1,6 +1,5 @@
 // Load in dependencies
 var assert = require('assert');
-var moment = require('moment');
 var jojo = require('jojo');
 var marked = require('marked');
 
@@ -36,10 +35,14 @@ var articles = jojo({
   render: false
 }).articles;
 
+// For each of our articles, verify there is a timezone (so we can properly parseZone)
+articles.forEach(function verifyArticleTimezone (article) {
+  assert(article._tzm, 'Timezone was not specified for article "' + article.name + '"');
+});
+
 // Add a formatted date for each article
 articles.forEach(function (article) {
-  var date = article.date,
-      dateStr = moment(date).format('MMMM DD, YYYY');
+  var dateStr = article.moment.format('MMMM DD, YYYY');
   article.dateStr = dateStr;
 });
 
