@@ -63,3 +63,5 @@ On a similar note, issues should always be handled in an empathetic way. I try t
 
 # Don't overwork yourself
 If you feel like you are doing too much, then you probably are. Always give yourself time to relax and de-stress from other parts of your life. This is typically why I will give padded time estimates (e.g. "next weekend" for a Friday, "by the end of the weekend" for Monday).
+
+Also, don't forget that you aren't an island. Feel free to invite people who submit good PRs as collaborators and mark issues with "help-wanted" if they are too much work for now.
