@@ -33,17 +33,33 @@ https://github.com/twolfson/spritesheet-templates/issues/11
 
 https://github.com/twolfson/spritesheet-templates/pull/43
 
-# Be prepared for bugs/new features
-Don't lie to yourself, open source will take time. People will report bugs, people will request features (some that belong, some that don't).
+# Be prepared for bugs/features
+Don't lie to yourself, open source will take time. People will report bugs and request features so make sure that you will have time for it.
 
-that do belong in your project, so make sure that you will have time for it. @indexzero once said that open source something to the extent to that open source is similar to taking care of a child. My interpretation of that would be, it's not nearly as bad since it's not a 100% time job. However, bug reports will pop up at your least convenient moment and feature requests will pop up right before you were going to work on that brand new project. Learn to handle these issues quickly and efficiently via tools like tests, friendly debugging errors, and developer friendly documentation (e.g. lots of examples).
-- Mention about taking on collaborators
-- Never force yourself to do anything you don't want to do. Instead, communicate how you feel (e.g. overwhelmed with other tasks at the moment, won't be able to take a look for 2 weeks [this is usually buffered by 1.5x]. Maybe the user will empathize.
-- Set expectations quickly and always reply within a timely manner
-    - You are the front line of support for your project
-    - You know when you will be fre
-- Empathy is frustrating but necessary
-    - Is someone asking for a "stupid" feature? Before immediately closing that issue and making them feel like shit. Take a moment to continue to the thread asking them "Why do you want that feature?"
-    - Don't insult them or demean them by saying "Why do you want that feature when feature X exists?" You are making assumptions about their setup. Sometimes you get surprised by their setup. One example from personal experience:
-        -  I maintain [spritesmith][TODO: link] which was built as a tool for automatically building CSS sprites. One day, I got an issue about disabling sorting. My initial reaction was "Why would you want that?" but as it turned out, the user was using it for animation sprites. As a result, we built a feature to disable sorting of sprites.
+Maintaining open source isn't exactly a part time job but it's definitely not a vacation either. Bug reports will pop up at your least convenient moment and feature requests will pop up right before you were going to work on that brand new project.
+
+Learn to handle these issues quickly and efficiently via tools like tests, friendly debugging errors, and developer friendly documentation (e.g. lots of examples).
+
+# Empathize with users
+On a similar note, issues should always be handled in an empathetic way. I try to always put myself in the end users shoes to deliver the best support experience.
+
+- Reply within 24 hours with an ETA of when I can look into the issue
+    - I typically give myself 5 days padding. For example, on a Friday I will say "Thanks for the report! I will take a look at this the end of next weekend". On a Monday, I will say "by the end of this weekend".
+    - If I am unable to handle the issue in a prompt fashion, then I communicate that. For example, "I am on vacation for the next 2 weeks. I will give you an ETA on when I can triage this when I get back."
+        - We don't give a full ETA since something else even more important could pop up within the next 2 weeks
+- Frequently communicate
+    - If you are about to look into an issue, let the user know. For example, "I am taking a look at this issue now"
+    - If you resolve the issue relies on something else, let the user know. For example, "We have found the source of the issue and reported it to <Link to repository>. <Link to issue>"
+    - If you are unable to fully resolve the issue now, leave notes for your future self and the user. For example "I have successfully reproduced the issue. I'm currently out of time for now though. I will take a look at implementing a patch by the end of this weekend. Here are notes for my future self: Bullets outlining how to reproduce"
+- Don't close issues on impulse
+    - If someone is asking for a feature you consider "stupid"
+        - Don't immediately close the issue with an unhelpful response, this will make them feel horrible
+        - Take the time to continue the thread ans ask them "Can you explain your use case further?"
+        - Don't imply that their feature is unnecessary by saying "Why do you want that feature when feature X exists?" You will be making assumptions about their setup. Sometimes you will be surprised and be able to relate
+        - For example, in [spritesmith][] one day I got an issue about disabling sorting. My initial reaction was "Why would you want that?" but as it turned out, the user was using it for animation sprites. As a result, we built a feature to disable sorting of sprites.
             - TODO: Find issue and link to it
+    - If someone is asking about a duplicate issue, take the time to write out an example for their use case and link them to the existing issue.
+        - They will be grateful, you might catch an edge case in their setup, and you have yet another example to point to when someone is having trouble
+
+# Don't overwork yourself
+If you feel like you are doing too much, then you probably are. Always give yourself time to relax and de-stress from other parts of your life. This is typically why I will give padded time estimates (e.g. "next weekend" for a Friday, "by the end of the weekend" for Monday).
