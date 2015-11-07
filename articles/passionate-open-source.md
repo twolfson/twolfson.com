@@ -43,6 +43,8 @@ Learn to handle these issues quickly and efficiently via tools like tests, frien
 # Empathize with users
 On a similar note, issues should always be handled in an empathetic way. I try to always put myself in the end users shoes to deliver the best support experience.
 
+// TODO: Maybe break down into 2 sections "Communication" and "Empathy"?
+
 - Reply within 24 hours with an ETA of when I can look into the issue
     - I typically give myself 5 days padding. For example, on a Friday I will say "Thanks for the report! I will take a look at this the end of next weekend". On a Monday, I will say "by the end of this weekend".
     - If I am unable to handle the issue in a prompt fashion, then I communicate that. For example, "I am on vacation for the next 2 weeks. I will give you an ETA on when I can triage this when I get back."
