@@ -74,3 +74,14 @@ Sometimes when you are in the thick of everything, it's hard to remember why you
 Every now and then, I need to remind myself of why I do open source in the first place.
 
 TODO: Link to "Why I do open source" article
+
+TODO: Maybe make this a "Related article" instead
+
+**Sources:**
+
+TODO: Linkify these
+
+- indexzero Open source like a boss
+- stubbornella Don't feed the trolls
+- isz Something somewhere about empathy
+- 3 years personal experience
