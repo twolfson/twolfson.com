@@ -1,9 +1,9 @@
 {
   "title": "How to stay passionate about open source",
   "author": "Todd Wolfson",
-  "date": "2015-10-17T17:58:41-0500",
+  "date": "2015-11-07T14:35:58-0600",
   "keywords": "passion, open, source",
-  "summary": "As with any TODO"
+  "summary": "An overview of how I prevent burnout on open source."
 }
 
 Staying active in open source is a problem I see every now and then. It's a problem that I have experienced in the form of burn out.
@@ -11,9 +11,9 @@ Staying active in open source is a problem I see every now and then. It's a prob
 This article is to serve as a brain dump for what I have learned over time.
 
 # If you aren't passionate now, then you won't be passionate later
-If you are thinking about building a project because you feel obligated (not because you want to), then it will likely sink. When you get an issue about a new feature, then you will be aggravated about implementing it.
+If you are thinking about building a project because you feel obligated (not because you want to), then it will likely become a nuisance rather than something enjoyable.
 
-For example, I maintain a project called [spritesmith][] which helps easily create CSS sprites. Then, one day I decided to build a sibling project named [fontsmith][] for web fonts. Unfortunately, it was never something I wound up using and eventually, after enough issues, I decided to deprecate it.
+For example, I maintain a project called [spritesmith][] which helps easily create CSS sprites. Then, one day I decided to build a sibling project named [fontsmith][] for web fonts. Unfortunately, it was never something I wound up using and eventually, after enough issues and frustration, I decided to deprecate it.
 
 https://github.com/Ensighten/grunt-spritesmith
 
@@ -25,9 +25,9 @@ https://github.com/twolfson/grunt-fontsmith
 # Keep things focused
 The Unix Philosophy of "Do one thing and do it well" has helped an enormous amount with keeping feature size down and projects focused.
 
-Something that a programmer should understand is that anything you build now, you will need to maintain later. As a result, adding in unnecessary one-off features will lead to a feeling of constantly being overwhelmed later on.
+Anything that you build, you will need to maintain later. As a result, adding in unnecessary one-off features will lead to a feeling of constantly being overwhelmed later on.
 
-For example, a common request in [spritesmith][] is to add in using `0` over `0px` for sprite positions, combine rules which use the same `background-image` or `width`/`height`. However, as I explain in the issues, this is starting down the road of CSS minification. As a result, we should leave that complexity out of [spritesmith][] and request people use a CSS minification tool after [spritesmith][].
+For example, a common request in [spritesmith][] is to add in using `0` over `0px` and combine common CSS properties (e.g. `background-image`/`width`/`height`).However, as I explain in the issues, this is starting down the road of CSS minification. As a result, we left that complexity out of [spritesmith][] and requested people use a CSS minification tool after [spritesmith][].
 
 https://github.com/twolfson/spritesheet-templates/issues/11
 
