@@ -38,30 +38,38 @@ Don't lie to yourself, open source will take time. People will report bugs and r
 
 Maintaining open source isn't exactly a part time job but it's definitely not a vacation either. Bug reports will pop up at your least convenient moment and feature requests will pop up right before you were going to work on that brand new project.
 
-Learn to handle these issues quickly and efficiently via tools like tests, friendly debugging errors, and developer friendly documentation (e.g. lots of examples).
+Learn to handle these issues quickly and efficiently via tools like tests, friendly debugging errors, and expansive yet concise documentation (e.g. lots of examples).
 
-# Empathize with users
-On a similar note, issues should always be handled in an empathetic way. I try to always put myself in the end users shoes to deliver the best support experience.
+# Provide great customer support
+By open sourcing a project, you are implicitly agreeing to become its customer support and project manager. As a result, try to obey the golden rule and provide the best customer support experience.
 
-// TODO: Maybe break down into 2 sections "Communication" and "Empathy"?
+Here are some rules of thumb I follow:
 
-- Reply within 24 hours with an ETA of when I can look into the issue
-    - I typically give myself 5 days padding. For example, on a Friday I will say "Thanks for the report! I will take a look at this the end of next weekend". On a Monday, I will say "by the end of this weekend".
-    - If I am unable to handle the issue in a prompt fashion, then I communicate that. For example, "I am on vacation for the next 2 weeks. I will give you an ETA on when I can triage this when I get back."
-        - We don't give a full ETA since something else even more important could pop up within the next 2 weeks
+- Reply within 48 hours with an ETA of when I can look into the issue
+    - I typically give myself 5 days padding
+        - For example, on a Friday I will say "Thanks for the report! I will take a look at this the end of next weekend"
+        - On a Monday, I will say "by the end of this weekend".
+    - If I am unable to handle the issue in a timely fashion, then I communicate that.
+        - For example, "I am on vacation for the next 2 weeks. I will give you an ETA on when I can triage this when I get back."
+        - We don't give a full ETA since something more important could pop up within the next 2 weeks
 - Frequently communicate
     - If you are about to look into an issue, let the user know. For example, "I am taking a look at this issue now"
-    - If you resolve the issue relies on something else, let the user know. For example, "We have found the source of the issue and reported it to <Link to repository>. <Link to issue>"
-    - If you are unable to fully resolve the issue now, leave notes for your future self and the user. For example "I have successfully reproduced the issue. I'm currently out of time for now though. I will take a look at implementing a patch by the end of this weekend. Here are notes for my future self: Bullets outlining how to reproduce"
-- Don't close issues on impulse
-    - If someone is asking for a feature you consider "stupid"
-        - Don't immediately close the issue with an unhelpful response, this will make them feel horrible
-        - Take the time to continue the thread ans ask them "Can you explain your use case further?"
-        - Don't imply that their feature is unnecessary by saying "Why do you want that feature when feature X exists?" You will be making assumptions about their setup. Sometimes you will be surprised and be able to relate
-        - For example, in [spritesmith][] one day I got an issue about disabling sorting. My initial reaction was "Why would you want that?" but as it turned out, the user was using it for animation sprites. As a result, we built a feature to disable sorting of sprites.
-            - TODO: Find issue and link to it
-    - If someone is asking about a duplicate issue, take the time to write out an example for their use case and link them to the existing issue.
-        - They will be grateful, you might catch an edge case in their setup, and you have yet another example to point to when someone is having trouble
+    - If you resolve the issue relies on something else, let the user know. For example, "We have found the source of the issue and reported it to &lt;Link to repository&gt;. &lt;Link to issue&gt;"
+    - If you are unable to fully resolve the issue now, leave notes for your future self and the user.
+        - For example "I have successfully reproduced the issue. I'm currently out of time for now though. I will take a look at implementing a patch by the end of this weekend. Here are notes for my future self: &lt;Bullets outlining how to reproduce&gt;"
+
+# Empathize with users
+Unfortunately, being quick to reply and resolve issues is only half of the battle. We also want to make sure both parties are happy about the experience. As a result, be sure to empathize with end users.
+
+Never close issues on impulse. If someone is asking for a feature you consider "stupid", don't immediately close the issue with an unhelpful response. This will make them feel horrible and you will lose a potential collaborator. Instead, take the time continue the thread ans ask them "Can you explain your use case further?"
+
+Don't imply that their feature is unnecessary by saying "Why do you want that feature when feature X exists?" You will be making assumptions about their setup. Sometimes you will be surprised and be able to relate.
+
+For example, in [spritesmith][] one day I got an issue about disabling sorting. My initial reaction was "Why would you want that?" but as it turned out, the user was using it for animation sprites. As a result, we built a feature to disable sorting of sprites.
+
+https://github.com/twolfson/layout/issues/5
+
+If someone is asking about a duplicate issue, take the time to write out an example for their use case and link them to the existing issue. They will be grateful, you might catch an edge case in their setup, and you have yet another example to point to when someone is having trouble.
 
 # Don't overwork yourself
 If you feel like you are doing too much, then you probably are. Always give yourself time to relax and de-stress from other parts of your life. This is typically why I will give padded time estimates (e.g. "next weekend" for a Friday, "by the end of the weekend" for Monday).
