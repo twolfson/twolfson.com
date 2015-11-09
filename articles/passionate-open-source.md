@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2015-11-07T14:35:58-0600",
   "keywords": "passion, open, source",
-  "summary": "An overview of how I prevent burnout on open source."
+  "summary": "An overview of how I prevent burnout on open source.",
+  "relatedArticles": ["Why I open source"]
 }
 
 Staying active in open source is a problem I see every now and then. It's a problem that I have experienced in the form of burn out.
@@ -61,9 +62,7 @@ Here are some rules of thumb I follow:
 # Empathize with users
 Unfortunately, being quick to reply and resolve issues is only half of the battle. We also want to make sure both parties are happy about the experience. As a result, be sure to empathize with end users.
 
-Never close issues on impulse. If someone is asking for a feature you consider "stupid", don't immediately close the issue with an unhelpful response. This will make them feel horrible and you will lose a potential collaborator. Instead, take the time continue the thread ans ask them "Can you explain your use case further?"
-
-Don't imply that their feature is unnecessary by saying "Why do you want that feature when feature X exists?" You will be making assumptions about their setup. Sometimes you will be surprised and be able to relate.
+Never close issues on impulse. If someone is asking for a feature you consider unncessary, don't immediately close the issue with an unhelpful response. This helps nobody. Instead, take the time continue the thread and ask them "Can you explain your use case further?" Sometimes you will be surprised and be able to relate.
 
 For example, in [spritesmith][] one day I got an issue about disabling sorting. My initial reaction was "Why would you want that?" but as it turned out, the user was using it for animation sprites. As a result, we built a feature to disable sorting of sprites.
 
@@ -72,24 +71,24 @@ https://github.com/twolfson/layout/issues/5
 If someone is asking about a duplicate issue, take the time to write out an example for their use case and link them to the existing issue. They will be grateful, you might catch an edge case in their setup, and you have yet another example to point to when someone is having trouble.
 
 # Don't overwork yourself
-If you feel like you are doing too much, then you probably are. Always give yourself time to relax and de-stress from other parts of your life. This is typically why I will give padded time estimates (e.g. "next weekend" for a Friday, "by the end of the weekend" for Monday).
+If you feel like you are doing too much, then you probably are. Always give yourself time to relax and de-stress from other parts of your life. This is typically why I will give padded time estimates.
 
-Also, don't forget that you aren't an island. Feel free to invite people who submit good PRs as collaborators and mark issues with "help-wanted" if they are too much work for now.
+Also, don't forget that you aren't an island. Feel free to invite people who submit good PRs as collaborators and mark issues with "help-wanted".
 
 # Don't forget why you started
 Sometimes when you are in the thick of everything, it's hard to remember why you started doing something.
 
 Every now and then, I need to remind myself of why I do open source in the first place.
 
-TODO: Link to "Why I do open source" article
-
-TODO: Maybe make this a "Related article" instead
+http://twolfson.com/2013-04-22-why-i-open-source
 
 **Sources:**
 
-TODO: Linkify these
+- [@indexzero][] [Open Source like a Boss](https://www.youtube.com/watch?v=9PK68ZKcSEk)
+- [@stubbornella][] [Don't feed the trolls](http://www.stubbornella.org/content/2012/05/31/dont-feed-the-trolls/)
+- [@izs][] Various tweets and presentations on empathy
+- Personal experience
 
-- indexzero Open source like a boss
-- stubbornella Don't feed the trolls
-- isz Something somewhere about empathy
-- 3 years personal experience
+[@indexzero]: https://twitter.com/indexzero
+[@stubbornella]: https://twitter.com/stubbornella
+[@izs]: https://twitter.com/izs
