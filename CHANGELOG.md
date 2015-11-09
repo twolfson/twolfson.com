@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.68.0 - Added "How to stay passionate about open source" article
+
 3.67.0 - Upgraded jojo and moved to timezone aware dates
 
 3.66.0 - Moved to slug URLs with 301 redirects at old locations
