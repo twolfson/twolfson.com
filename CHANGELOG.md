@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.69.0 - Added "Major releases in spritesmith" article
+
 3.68.1 - Accepted latest perceptual diffs
 
 3.68.0 - Added "How to stay passionate about open source" article
