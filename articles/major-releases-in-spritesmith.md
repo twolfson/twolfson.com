@@ -6,22 +6,22 @@
   "summary": "We have "
 }
 
-Over the past month, we have been taking steps to update and formalize `spritesmith's` API. It's fallen behind a bit and we wanted to fix it up.
+Over the past month, we have been taking steps to update and formalize `spritesmith's` API. It's fallen behind on the times and we wanted to fix it up.
 
 Here's a short list of the things that we have changed:
 
-- Broke up the test suite/spec hybrid into a specification repo and test repo
+- Broke up the test suite/spec hybrid into separate repos
     - https://github.com/twolfson/spritesmith-engine-spec
     - https://github.com/twolfson/spritesmith-engine-test
 - Updated engine specification
     - Moved to constructor for `Engine`
-        - Allows for setting options for engines instead of a singleton hack
+        - Allows for setting options for engines on a per-task basis instead of a global singleton
     - Moved to streaming output over binary string/buffer
         - Allows for more efficient memory usage and faster writes to disk
     - Updated API to use async only for image initialization
         - Removes unnecessary async logic handling for sync actions
     - Added support for [Vinyl][] as input
-        - Allows in-memory engines like [pixelsmith][] and [canvassmith][] to integrate more cleanly with [gulp.spritesmith][]
+        - Allows in-memory engines like [pixelsmith][] and [canvassmith][] to better support [gulp.spritesmith][]
 - Updated [spritesmith][] API to emulate underlying engine API
     - Broke down into constructor with 2 methods (i.e. `createImages`, `processImages`)
     - Moved to async only for image creation
