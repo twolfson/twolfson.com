@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2015-11-22T16:48:13-0600",
   "keywords": "spritesmith, release",
-  "summary": "We have "
+  "summary": "We have updated [spritesmith's](https://github.com/Ensighten/spritesmith) API and ecosystem. Here's a list of what has changed."
 }
 
 Over the past month, we have been taking steps to update and formalize `spritesmith's` API. It's fallen behind on the times and we wanted to fix it up.
