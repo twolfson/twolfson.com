@@ -6,16 +6,53 @@
   "summary": "We have "
 }
 
-`spritesmith's` initial creation was about 3 years ago. GitHub's first commit is August 18, 2012 and `npm's` first verison (`0.3.4`) is November 21, 2012.
+Over the past month, we have been taking steps to update and formalize `spritesmith's` API. It's fallen behind a bit and we wanted to fix it up.
 
-https://github.com/Ensighten/spritesmith/commit/83d016653be4e2b1f90531437c91fe5332274426
+Here's a quick list of the things that we have changed:
 
-```
-$ npm info spritesmith | underscore extract time.created
-"2012-11-21T02:21:20.481Z"
-```
+- Broke up the test suite/spec hybrid into a specification repo and test repo
+    - https://github.com/twolfson/spritesmith-engine-spec
+    - https://github.com/twolfson/spritesmith-engine-test
+- Updated engine specification
+    - Moved to constructor for `Engine`
+        - Allows for setting options for engines instead of a singleton hack
+    - Moved to streaming output over binary string/buffer
+        - Allows for more efficient memory usage and faster writes to disk
+    - Updated API to use async only for image initialization
+        - Removes unnecessary async logic handling for sync actions
+    - Added support for [Vinyl][] as input
+        - Allows in-memory engines like [pixelsmith][] and [canvassmith][] to integrate more cleanly with [gulp.spritesmith][]
+- Updated [spritesmith][] API to emulate underlying engine API
+    - Broke down into constructor with 2 methods (i.e. `createImages`, `processImages`)
+    - Moved to async only for image creation
+    - Moved to streaming output for `processImages`
 
-There have been improvements over the years:
+[Vinyl]: https://github.com/gulpjs/vinyl
 
-- Breaking out engines from internal to external modules
--
+A full list of changes can be found here:
+
+https://gist.github.com/twolfson/d303342301cd7a1c0b4b
+
+# Links
+Here's a full list of all the repos we worked on:
+
+- [grunt-spritesmith][]
+- [gulp.spritesmith][]
+- [spritesmith][]
+- [spritesmith-engine-spec][]
+- [spritesmith-engine-test][]
+- Engines
+    - [canvassmith][]
+    - [gmsmith][]
+    - [phantomjssmith][]
+    - [pixelsmith][]
+
+[grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
+[gulp.spritesmith]: https://github.com/twolfson/gulp.spritesmith
+[spritesmith]: https://github.com/Ensighten/spritesmith
+[spritesmith-engine-spec]: https://github.com/twolfson/spritesmith-engine-spec
+[spritesmith-engine-test]: https://github.com/twolfson/spritesmith-engine-test
+[canvassmith]: https://github.com/twolfson/canvassmith
+[gmsmith]: https://github.com/twolfson/gmsmith
+[phantomjssmith]: https://github.com/twolfson/phantomjssmith
+[pixelsmith]: https://github.com/twolfson/pixelsmith
