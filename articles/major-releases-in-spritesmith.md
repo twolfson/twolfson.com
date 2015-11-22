@@ -8,7 +8,7 @@
 
 Over the past month, we have been taking steps to update and formalize `spritesmith's` API. It's fallen behind a bit and we wanted to fix it up.
 
-Here's a quick list of the things that we have changed:
+Here's a short list of the things that we have changed:
 
 - Broke up the test suite/spec hybrid into a specification repo and test repo
     - https://github.com/twolfson/spritesmith-engine-spec
@@ -26,6 +26,10 @@ Here's a quick list of the things that we have changed:
     - Broke down into constructor with 2 methods (i.e. `createImages`, `processImages`)
     - Moved to async only for image creation
     - Moved to streaming output for `processImages`
+- Updated [grunt-spritesmith][] to leverage streaming output
+- Updated [gulp.spritesmith][] to leverage [Vinyl][] input support and streaming output
+- Started a newsletter to make it easier to receive updates about [spritesmith][]
+    - http://eepurl.com/bD4qkf
 
 [Vinyl]: https://github.com/gulpjs/vinyl
 
