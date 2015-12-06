@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.69.2 - Documented writing an article
+
 3.69.1 - Accepted latest perceptual diffs
 
 3.69.0 - Added "Major releases in spritesmith" article
