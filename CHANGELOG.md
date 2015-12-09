@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.70.0 - Wrote "3 stages of learning" article
+
 3.69.3 - Removed running perceptual diffs on test
 
 3.69.2 - Documented writing an article
