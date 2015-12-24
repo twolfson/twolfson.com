@@ -52,7 +52,7 @@ Server.prototype = {
     app.use(controllers['error-handlers'].errorEncountered(config));
   },
   listen: function () {
-    this._app = this.app.listen(this.config.url.internal.port);
+    this._app = this.app.listen(this.config.url.internal.port, this.config.url.listeningHostname);
   },
   destroy: function (cb) {
     this._app.close(cb || function noop () {});

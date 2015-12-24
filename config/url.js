@@ -3,6 +3,7 @@ module.exports = {
     addDevelopmentRoutes: true,
     addTestRoutes: true,
     url: {
+      listeningHostname: '127.0.0.1',
       internal: {
         protocol: 'http',
         hostname: 'localhost',
@@ -22,6 +23,7 @@ module.exports = {
     addDevelopmentRoutes: false,
     addTestRoutes: true,
     url: {
+      listeningHostname: '127.0.0.1',
       internal: {
         protocol: 'http',
         hostname: 'localhost',
@@ -38,6 +40,7 @@ module.exports = {
     addDevelopmentRoutes: false,
     addTestRoutes: false,
     url: {
+      listeningHostname: '127.0.0.1',
       internal: {
         protocol: 'http',
         hostname: 'localhost',
