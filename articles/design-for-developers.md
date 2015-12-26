@@ -6,6 +6,8 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
+TODO: Revisit Evernote and paper notes
+
 When I joined my first full time job and saw a redesign first hand, I became super curious about what this magic process of making a site better was.
 
 Prior to that point, I always thought of design as something that "artsy people were good at". But the answers are more subtle than that. Design breaks down a lot more -- visual design, UI/UX design, industrial design.
