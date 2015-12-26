@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.72.0 - Wrote "Why I am still a software engineer" article
+
 3.71.0 - Restricted listening hostname from 0.0.0.0 to 127.0.0.1
 
 3.70.0 - Wrote "3 stages of learning" article
