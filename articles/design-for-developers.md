@@ -6,7 +6,27 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
-TODO: Revisit Evernote and paper notes
+As a developer, knowing design basics has some benefits:
+
+- Better communication with designers due to having shared knowledge
+- Better architecture for HTML/CSS
+    - It's hard to build a system without knowing its root principles
+- Can provide targeted feedback about designs and propose other ideas
+
+# What is design?
+Design is a broad categorization of many topics, similar to how the layperson's concept of "programming" encompasses writing Assembly to writing CSS to managing networks.
+
+Here are some instances of design:
+
+- Visual/graphic design, to create visual assets such as logos, posters, and advertisements
+    - Examples:
+- User Interaction/User Experience (UI/UX) design, to plan out an application's pages and workflows
+    - Examples: [Uber][]
+- Industrial design, to create physical objects
+    - Examples: [Herman Miller][], [MUJI][]
+
+[Herman Miller]: http://www.hermanmiller.com/
+[MUJI]: http://www.muji.com/
 
 When I joined my first full time job and saw a redesign first hand, I became super curious about what this magic process of making a site better was.
 
