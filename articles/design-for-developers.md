@@ -31,11 +31,15 @@ Typography
 Content weight
 - What we percieve as visual center might not be right
 
+Design patterns
+- Visual components (e.g. jQuery plugin, React view, Angular view, web component, Backbone view)
+
 For developers:
 - CSS framework vs UI toolkit
     - Elaborate on Bootstrap/Foundation vs Inuit.css
     - Talk about others like Suit
     - Talk about Bourbon, Bitters, and Compass
+- OOCSS
 
 Links:
 - Designing the invisible by 5 Simple Steps
