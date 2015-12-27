@@ -118,10 +118,26 @@ Beyond this, there are lots of shapes for fonts. They can:
 
 I should note that brands sometimes might take a font and then adjust it by hand to fully customize it to their identity.
 
-# Visual compoennts
-Also known as design patterns (although not the development kind)
+# Visual components
+Visual components (also known as design patterns, although not the development kind) are elements created and reused within an application. Some basic examples of this are:
 
-- Visual components (e.g. jQuery plugin, React view, Angular view, web component, Backbone view)
+**A dropdown**
+
+**TODO: Add screenshot**
+
+**A modal**
+
+**TODO: Add screenshot**
+
+**Tabs**
+
+**TODO: Add screenshot**
+
+Beyond that, there are unnamed components that designers might employ. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
+
+**TODO: Add screenshot**
+
+> Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
 # Content weight
 - What we percieve as visual center might not be right
