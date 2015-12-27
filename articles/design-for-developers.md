@@ -158,12 +158,38 @@ Further reading:
 # Amendment
 These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using content weight centering instead of programmatically defined centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
 
-# For developers
-- CSS framework vs UI toolkit
-    - Elaborate on Bootstrap/Foundation vs Inuit.css
-    - Talk about others like Suit
-    - Talk about Bourbon, Bitters, and Compass
-- OOCSS
+# Applying our knowledge
+To take this knowledge further, we can apply it to our existing sites with the following tools/philosophies.
+
+## OOCSS
+A methodology to architect HTML/CSS around building visual components
+
+- Introductory article: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+- Site: http://oocss.org/
+
+This will be counter-intuitive to conceptions about "semantic" HTML but it will be fine as it scales across multiple pages and products (this is like [Bootstrap][]).
+
+## CSS framework vs UI toolkit
+Tools like [Bootstrap][] and [Foundation][] are only practical if our design was initially based off of them. Otherwise, we will fight them at every turn. For example:
+
+- Our baseline might be 1.5x our gutter width
+- We might not want all baseline padding to be at the bottom
+- We might want a dropdown in our navbar
+
+[Bootstrap]: http://getbootstrap.com/
+[Foundation]: http://foundation.zurb.com/
+
+On top of that, calling them a "CSS framework" is a misnomer. They are meant to be used as a package not be built on top of. They should be referred to as "UI toolkits".
+
+A "CSS framework" gives us all the variables and 80% of the work completed so we can fill in the remainder without any fights. For example:
+
+- https://github.com/csswizardry/inuit.css
+    - Example of everything it provides: https://terabytenz.github.io/inuit.css-kitchensink/
+
+## CSS utility libraries
+Aside from CSS frameworks and UI toolkits, there are libraries that offer some helper CSS. For example:
+
+- https://suitcss.github.io/
 
 # Links
 - Designing the invisible by 5 Simple Steps
