@@ -139,12 +139,21 @@ Beyond that, there are unnamed components that designers might employ. For examp
 
 > Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
-# Content weight
-- What we percieve as visual center might not be right
+# Area alignment
+As programmers, we like to automatically center things via the computer. However, this isn't always visually "right".
 
-Some article with a dancer/ballerina in it =_=
+Sometimes there is a optical center/visual center/content center which isn't the actual left/right center (average). For example:
 
-And a play button one Medium too
+**TODO: Add visual center from play button**
+
+In these scenarios, we need to either pad the image with transparent pixels or adjust positioning via CSS/HTML.
+
+Further reading:
+
+- "Area alignment" in [Universal Principles of Design][]
+- https://medium.com/@erqiudao/the-play-button-is-not-optical-alignment-4cea11bda175
+
+[Universal Principles of Design]: http://www.amazon.com/gp/product/1592535879
 
 # Amendment
 These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using content weight centering instead of programmatically defined centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
