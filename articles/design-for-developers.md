@@ -44,9 +44,11 @@ Before we get started, I want to give you the proper mindset. There is a common 
 This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need tour guides -- the interactions are obvious.
 
 # Grids
-A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths. It's based on columns and gutters.
+A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths and spacing. It's based on columns and gutters.
 
 A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
+
+**TODO: Add image here**
 
 Here are some examples of a grid:
 
