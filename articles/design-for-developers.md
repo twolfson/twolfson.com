@@ -58,7 +58,8 @@ Here are some examples of a grid:
 
 Typically grids have 12 columns but they can be 16 or 24. The goal is to a nice amount of subdivisions.
 
-# Baselines and vertical rhythm
+# Vertical rhythm and baselines
+Vertical rhythm is how we guarantee consistent vertical placement and spacing. It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we adjust and tweak
 - Would be nice to allow `?grid` access
 
 # Typography
