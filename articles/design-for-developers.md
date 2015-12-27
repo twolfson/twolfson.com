@@ -6,8 +6,9 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
-TODO: Consider images for "What is design?" section
-TODO: Consider image for "Grid" section
+**TODO: Consider images for "What is design?" section**
+**TODO: Consider image for "Grid" section**
+**TODO: Consider adding more Further reading items**
 
 As a developer, knowing design basics has some benefits:
 
@@ -74,7 +75,20 @@ Further reading:
 - http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
 
 # Type hierarchy
-Allude to type scales (e.g. three-fifths, major octave)
+Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**) to indicate the remaining content under it is related.
+
+For example, "Getting Started" indicates the section is related to getting started with a repo:
+
+**TODO: Add screenshot of Getting Started from a repo**
+
+Beyond this, there is type scales which are ways to define how big/small each of the `h1`, `h2`, etc should be. These are usually done by ratios (e.g. major third, golden ratio).
+
+Links:
+
+- http://type-scale.com/
+- http://www.modularscale.com/
+
+Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale usually have a relationship.
 
 # Typeface
 Or as we call them, font face
