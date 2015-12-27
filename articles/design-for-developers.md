@@ -72,6 +72,9 @@ Typically grids have 12 columns but they can be 16 or 24. The goal is to a nice 
 # Content weight
 - What we percieve as visual center might not be right
 
+# Amendment
+These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using content weight centering instead of programmatically defined centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
+
 # For developers
 - CSS framework vs UI toolkit
     - Elaborate on Bootstrap/Foundation vs Inuit.css
