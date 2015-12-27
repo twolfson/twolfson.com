@@ -6,6 +6,9 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
+TODO: Consider images for "What is design?" section
+TODO: Consider image for "Grid" section
+
 As a developer, knowing design basics has some benefits:
 
 - Better communication with designers due to having shared knowledge
@@ -41,12 +44,17 @@ Before we get started, I want to give you the proper mindset. There is a common 
 This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need tour guides -- the interactions are obvious.
 
 # Grids
-A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths. It's based on columns and gutters. A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
+A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths. It's based on columns and gutters.
 
+A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
 
+Here are some examples of a grid:
 
-- Sometimes known as typographic grids
-- Widths and gutters
+- http://foundation.zurb.com/grid.html
+- http://960.gs/demo.html
+- http://twolfson.com/?grid
+
+Typically grids have 12 columns but they can be 16 or 24. The goal is to a nice amount of subdivisions.
 
 # Baselines and vertical rhythm
 - Would be nice to allow `?grid` access
