@@ -140,7 +140,7 @@ Beyond that, there are unnamed components that designers might employ. For examp
 > Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
 # Area alignment
-As programmers, we like to automatically center things via the computer. However, this isn't always visually "right".
+As programmers, we like to automatically center things via the computer. However, this isn't always visually "correct".
 
 Sometimes there is a optical center/visual center/content center which isn't the actual left/right center (average). For example:
 
