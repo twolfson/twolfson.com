@@ -91,11 +91,19 @@ Links:
 Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale usually have a relationship.
 
 # Typeface
-Or as we call them, font face
-- Serif vs sans serif
-- Why a type face matter (branding, communication)
+Typefaces (or `font-face` in CSS) is the font being used for a given piece of text. There are a lot of factors in choosing a font but here are the high level details:
 
-Erik Spiekermann
+- Serif fonts (fonts with those little leaf things on letters)
+    - Example: https://en.wikipedia.org/wiki/Times_New_Roman
+- Sans-serif fonts ("sans" means without, thus without those little leaf things)
+    - Example: https://en.wikipedia.org/wiki/Helvetica
+- Serif typically is good for being formal and also helps with reading letters (e.g. can distinguish shape easier)
+- Sans-serif is less formal and a little harder to read due to lack of serifs
+- Beyond this, there are lots of shapes and sizes
+    - A font establish a mood
+        - Example: http://www.fontsquirrel.com/fonts/lobster
+    - A font can identify a brand
+        - Example: http://www.dafont.com/loki-cola.font
 
 # Visual compoennts
 Also known as design patterns (although not the development kind)
