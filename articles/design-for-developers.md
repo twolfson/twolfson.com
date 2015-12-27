@@ -186,13 +186,25 @@ A "CSS framework" gives us all the variables and 80% of the work completed so we
 - https://github.com/csswizardry/inuit.css
     - Example of everything it provides: https://terabytenz.github.io/inuit.css-kitchensink/
 
+This comparison should feel like using [Django][]/[Rails][] vs [Flask][]/[Sinatra][]/[Express][].
+
+[Django]: https://www.djangoproject.com/
+[Rails]: http://rubyonrails.org/
+[Express]: http://expressjs.com/
+[Flask]: http://flask.pocoo.org/
+[Sinatra]: http://www.sinatrarb.com/
+
 ## CSS utility libraries
 Aside from CSS frameworks and UI toolkits, there are libraries that offer some helper CSS. For example:
 
 - https://suitcss.github.io/
 
 # Links
-- Designing the invisible by 5 Simple Steps
-- Donald Norman's TED talk
-- Good UI
-- 101 Design Principles
+Here are some top picks of content that has helped me along:
+
+- [A Practical Guide to Designing the Invisible][]
+- [Don Norman on 3 ways good design makes you happy][don-norman] (TED talk)
+- [Universal Principles of Design][]
+
+[A Practical Guide to Designing the Invisible]: http://www.fivesimplesteps.com/products/a-practical-guide-to-designing-the-invisible
+[don-norman]: http://www.ted.com/talks/don_norman_on_design_and_emotion?
