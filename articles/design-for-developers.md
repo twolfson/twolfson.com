@@ -49,7 +49,7 @@ A grid (sometimes known as a typographic grid) is a way to layout elements horiz
 
 A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
 
-**TODO: Add image here**
+**TODO: Add image here (screenshot of twolfson.com/grid or 960 demo)**
 
 Examples:
 
@@ -64,7 +64,7 @@ Vertical rhythm is how we guarantee consistent vertical placement and spacing.
 
 It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we make sure paragraphs line up with that on every line break. For larger elements (e.g. headings, images), then they will likely take up multiple lines (e.g. `n * 16px`) and possibly have multiple lines as padding on the bottom.
 
-**TODO: Add image here**
+**TODO: Add image here (screenshot of twolfson.com/grid or 960 demo)**
 
 Examples:
 
@@ -79,7 +79,7 @@ Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**
 
 For example, "Getting Started" indicates the section is related to getting started with a repo:
 
-**TODO: Add screenshot of Getting Started from a repo**
+**TODO: Add screenshot of Getting Started from a repo (e.g. twolfson.com)**
 
 Beyond this, there is type scales which are ways to define how big/small each of the `h1`, `h2`, etc should be. These are usually done by ratios (e.g. major third, golden ratio).
 
@@ -95,13 +95,13 @@ Typefaces (or `font-face` in CSS) is the font being used for a given piece of te
 
 Serif fonts are fonts with those "little leaf things" on letters. For example:
 
-**TODO: Screenshot instead of link**
+**TODO: Screenshot instead of link (use image from wiki)**
 
 - https://en.wikipedia.org/wiki/Times_New_Roman
 
 Sans-serif fonts are fonts without those "little leaf things" ("sans" means without). For example:
 
-**TODO: Screenshot instead of link**
+**TODO: Screenshot instead of link (use image from wiki)**
 
 - https://en.wikipedia.org/wiki/Helvetica
 
@@ -110,10 +110,10 @@ Serif typically is good for being formal and also helps with reading letters (e.
 Beyond this, there are lots of shapes for fonts. They can:
 
 - Establish a mood
-    - **TODO: Screenshot instead of link**
+    - **TODO: Screenshot instead of link (if allowed -- but preferably from site)**
     - Example: http://www.fontsquirrel.com/fonts/lobster
 - Identify a brand
-    - **TODO: Screenshot instead of link**
+    - **TODO: Screenshot instead of link (if allowed -- but preferably from site)**
     - Example: http://www.dafont.com/loki-cola.font
 
 I should note that brands sometimes might take a font and then adjust it by hand to fully customize it to their identity.
@@ -123,19 +123,19 @@ Visual components (also known as design patterns, although not the development k
 
 **A dropdown**
 
-**TODO: Add screenshot**
+**TODO: Add screenshot from Bootstrap**
 
 **A modal**
 
-**TODO: Add screenshot**
+**TODO: Add screenshot from Bootstrap**
 
 **Tabs**
 
-**TODO: Add screenshot**
+**TODO: Add screenshot from Bootstrap**
 
 Beyond that, there are unnamed components that designers might employ. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
 
-**TODO: Add screenshot**
+**TODO: Add screenshot of Twitter's home page upper left side**
 
 > Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
@@ -144,7 +144,7 @@ As programmers, we like to automatically center things via the computer. However
 
 Sometimes there is a optical center/visual center/content center which isn't the actual left/right center (average). For example:
 
-**TODO: Add visual center from play button**
+**TODO: Add visual center from play button from Medium**
 
 In these scenarios, we need to either pad the image with transparent pixels or adjust positioning via CSS/HTML.
 
