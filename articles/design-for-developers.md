@@ -73,16 +73,27 @@ Further reading:
 
 - http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
 
-# Typography
-- Hierarchy
+# Type hierarchy
+Allude to type scales (e.g. three-fifths, major octave)
+
+# Typeface
+Or as we call them, font face
 - Serif vs sans serif
 - Why a type face matter (branding, communication)
 
-# Design patterns
+Erik Spiekermann
+
+# Visual compoennts
+Also known as design patterns (although not the development kind)
+
 - Visual components (e.g. jQuery plugin, React view, Angular view, web component, Backbone view)
 
 # Content weight
 - What we percieve as visual center might not be right
+
+Some article with a dancer/ballerina in it =_=
+
+And a play button one Medium too
 
 # Amendment
 These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using content weight centering instead of programmatically defined centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
