@@ -10,6 +10,13 @@
 **TODO: Consider image for "Grid" section**
 **TODO: Consider adding more Further reading items**
 
+**TODO: Add sections like "Not covered in this article"**
+**Kerning**
+
+**TODO: Prob note that area alignment is more visual design than UI/UX**
+
+**Similar to rails except someone else architected the backends and rails only supported one flavor that wasn't yours**
+
 As a developer, knowing design basics has some benefits:
 
 - Better communication with designers due to having shared knowledge
