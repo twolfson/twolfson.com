@@ -19,49 +19,53 @@ Design is a broad categorization of many topics, similar to how the layperson's 
 Here are some instances of design:
 
 - Visual/graphic design, to create visual assets such as logos, posters, and advertisements
-    - Examples:
+    - Examples: [Behance][], [Dribbble][]
 - User Interaction/User Experience (UI/UX) design, to plan out an application's pages and workflows
-    - Examples: [Uber][]
-- Industrial design, to create physical objects
+    - Examples: [Google][], [Uber][]
+- Industrial design, to create, plan, and prototype physical objects
     - Examples: [Herman Miller][], [MUJI][]
 
+[Behance]: https://www.behance.net/
+[Dribbble]: http://dribbble.com/
+[Google]: https://www.google.com/
+[Uber]: https://www.uber.com/
 [Herman Miller]: http://www.hermanmiller.com/
 [MUJI]: http://www.muji.com/
 
-When I joined my first full time job and saw a redesign first hand, I became super curious about what this magic process of making a site better was.
+We will be focusing on UI/UX design as this has the most crossover with developer work.
 
-Prior to that point, I always thought of design as something that "artsy people were good at". But the answers are more subtle than that. Design breaks down a lot more -- visual design, UI/UX design, industrial design.
+Before we get started, I want to give you the proper mindset. There is a common phrase in design:
 
-I am going to be focusing on UI/UX design since it (1) requires no artistic abilities to employ and (2) by building up knowledge here, it will yield the greatest impact and (3) I have no knowledge of visual design and industrial design.
+> When there is good design, you will never notice it.
 
-Topics to cover:
+This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need tour guides -- the interactions are obvious.
 
-Grids
+# Grids
 - Sometimes known as typographic grids
 - Widths and gutters
 
-Baselines and vertical rhythm
+# Baselines and vertical rhythm
 - Would be nice to allow `?grid` access
 
-Typography
+# Typography
 - Hierarchy
 - Serif vs sans serif
 - Why a type face matter (branding, communication)
 
-Content weight
-- What we percieve as visual center might not be right
-
-Design patterns
+# Design patterns
 - Visual components (e.g. jQuery plugin, React view, Angular view, web component, Backbone view)
 
-For developers:
+# Content weight
+- What we percieve as visual center might not be right
+
+# For developers
 - CSS framework vs UI toolkit
     - Elaborate on Bootstrap/Foundation vs Inuit.css
     - Talk about others like Suit
     - Talk about Bourbon, Bitters, and Compass
 - OOCSS
 
-Links:
+# Links
 - Designing the invisible by 5 Simple Steps
 - Donald Norman's TED talk
 - Good UI
