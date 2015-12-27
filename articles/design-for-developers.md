@@ -91,19 +91,32 @@ Links:
 Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale usually have a relationship.
 
 # Typeface
-Typefaces (or `font-face` in CSS) is the font being used for a given piece of text. There are a lot of factors in choosing a font but here are the high level details:
+Typefaces (or `font-face` in CSS) is the font being used for a given piece of text.
 
-- Serif fonts (fonts with those little leaf things on letters)
-    - Example: https://en.wikipedia.org/wiki/Times_New_Roman
-- Sans-serif fonts ("sans" means without, thus without those little leaf things)
-    - Example: https://en.wikipedia.org/wiki/Helvetica
-- Serif typically is good for being formal and also helps with reading letters (e.g. can distinguish shape easier)
-- Sans-serif is less formal and a little harder to read due to lack of serifs
-- Beyond this, there are lots of shapes and sizes
-    - A font establish a mood
-        - Example: http://www.fontsquirrel.com/fonts/lobster
-    - A font can identify a brand
-        - Example: http://www.dafont.com/loki-cola.font
+Serif fonts are fonts with those "little leaf things" on letters. For example:
+
+**TODO: Screenshot instead of link**
+
+- https://en.wikipedia.org/wiki/Times_New_Roman
+
+Sans-serif fonts are fonts without those "little leaf things" ("sans" means without). For example:
+
+**TODO: Screenshot instead of link**
+
+- https://en.wikipedia.org/wiki/Helvetica
+
+Serif typically is good for being formal and also helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is less formal and a little harder to read.
+
+Beyond this, there are lots of shapes for fonts. They can:
+
+- Establish a mood
+    - **TODO: Screenshot instead of link**
+    - Example: http://www.fontsquirrel.com/fonts/lobster
+- Identify a brand
+    - **TODO: Screenshot instead of link**
+    - Example: http://www.dafont.com/loki-cola.font
+
+I should note that brands sometimes might take a font and then adjust it by hand to fully customize it to their identity.
 
 # Visual compoennts
 Also known as design patterns (although not the development kind)
