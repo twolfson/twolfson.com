@@ -50,7 +50,7 @@ A column is space for content and a gutter is whitespace between columns. For el
 
 **TODO: Add image here**
 
-Here are some examples of a grid:
+Examples:
 
 - http://foundation.zurb.com/grid.html
 - http://960.gs/demo.html
@@ -59,8 +59,19 @@ Here are some examples of a grid:
 Typically grids have 12 columns but they can be 16 or 24. The goal is to a nice amount of subdivisions.
 
 # Vertical rhythm and baselines
-Vertical rhythm is how we guarantee consistent vertical placement and spacing. It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we adjust and tweak
-- Would be nice to allow `?grid` access
+Vertical rhythm is how we guarantee consistent vertical placement and spacing.
+
+It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we make sure paragraphs line up with that on every line break. For larger elements (e.g. headings, images), then they will likely take up multiple lines (e.g. `n * 16px`) and possibly have multiple lines as padding on the bottom.
+
+**TODO: Add image here**
+
+Examples:
+
+- http://twolfson.com/?grid
+
+Further reading:
+
+- http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
 
 # Typography
 - Hierarchy
