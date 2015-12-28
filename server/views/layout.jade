@@ -63,7 +63,10 @@ html
                 - var isSelected = page === navName ? 'link--active' : '';
                 li.nav--item
                   a(href!=navLink.href, class=isSelected)= navName
-              li.nav--item.float--right
+            ul.nav.float--right
+              li.nav--item
+                a(href="https://github.com/twolfson/ama", title="Ask me anything") ama
+              li.nav--item
                 - var isSelected = page === 'support-me' ? 'link--active' : '';
                 a(href="/support-me", class=isSelected) support me
         != body
