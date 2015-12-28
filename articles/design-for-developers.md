@@ -12,6 +12,7 @@
 
 **TODO: Add sections like "Not covered in this article"**
 **Kerning**
+**Optimal characters per line**
 
 **TODO: Prob note that area alignment is more visual design than UI/UX**
 
