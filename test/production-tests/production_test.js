@@ -13,6 +13,10 @@ describe('A request to twolfson.com', function () {
     expect(this.err).to.equal(null);
     expect(this.body).to.not.contain('/health');
   });
+
+  it('replies with gzip\'d content', function () {
+    expect(this.res.headers).to.have.property('Content-Encoding', 'gzip');
+  });
 });
 
 describe('A request to the twolfson.com/index.js', function () {
