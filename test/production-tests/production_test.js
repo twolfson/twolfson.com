@@ -15,14 +15,14 @@ describe('A request to twolfson.com', function () {
 });
 
 describe('A gzip tolerant request to twolfson.com', function () {
-  httpUtils.save('http://twolfson.com/', {
+  httpUtils.save({
+    url: 'http://twolfson.com/',
     headers: {
       'Accept-Encoding': 'gzip, deflate'
     }
   });
 
   it('receives gzipped content', function () {
-    console.log(this.res.headers);
     expect(this.res.headers).to.have.property('content-encoding', 'gzip');
   });
 });
