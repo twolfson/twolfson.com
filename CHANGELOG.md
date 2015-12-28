@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.73.0 - Added AMA article
+
 3.72.0 - Wrote "Why I am still a software engineer" article
 
 3.71.0 - Restricted listening hostname from 0.0.0.0 to 127.0.0.1
