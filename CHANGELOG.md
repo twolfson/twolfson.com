@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.73.1 - Added missing gzip test to production tests
+
 3.73.0 - Added AMA article
 
 3.72.0 - Wrote "Why I am still a software engineer" article
