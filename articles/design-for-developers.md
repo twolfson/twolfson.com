@@ -173,7 +173,9 @@ As programmers, we like to automatically center things via the computer. However
 
 Sometimes there is a optical center/visual center/content center which isn't the actual left/right center (average). For example:
 
-**TODO: Add visual center from play button from Medium**
+[![Image of area alignment](/public/images/articles/design-for-developers/area-alignment.png)](https://medium.com/@erqiudao/the-play-button-is-not-optical-alignment-4cea11bda175)
+
+*Image from https://medium.com/@erqiudao/the-play-button-is-not-optical-alignment-4cea11bda175*
 
 In these scenarios, we need to either pad the image with transparent pixels or adjust positioning via CSS/HTML.
 
