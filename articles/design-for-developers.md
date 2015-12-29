@@ -146,7 +146,7 @@ If you are interested in learning more about structuring HTML/CSS after this mod
 # Area alignment
 As programmers, we like to automatically center things via the computer. However, this isn't always visually "correct".
 
-Sometimes there is a optical center/visual center/content center which isn't the actual left/right center (average). For example:
+Sometimes there is a optical/visual center which isn't the actual left/right center (average). For example, in the image below the left button has an average center whereas the right image is optically centered:
 
 [![Image of area alignment](/public/images/articles/design-for-developers/area-alignment.png)](https://medium.com/@erqiudao/the-play-button-is-not-optical-alignment-4cea11bda175)
 
@@ -162,7 +162,7 @@ Further reading:
 [Universal Principles of Design]: http://www.amazon.com/gp/product/1592535879
 
 # Amendment
-These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using content weight centering instead of programmatically defined centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
+These rules are not hard and fast as in programming. Sometimes, the rules can be bent (e.g. using optical centering instead of average centering) and broken (e.g. give an element 20px of padding instead of 16px). The end goal is to get something that visually "looks right".
 
 # Applying our knowledge
 To take this knowledge further, we can apply it to our existing sites with the following tools/philosophies.
@@ -186,23 +186,23 @@ Some more opinionated OOCSS philosophies can be found here:
 Tools like [Bootstrap][] and [Foundation][] are only practical if our design was initially based off of them. Otherwise, we will fight them at every turn. For example:
 
 - Our baseline might be 1.5x our gutter width
-- We might not want all baseline padding to be at the bottom
+- We might want all our baseline padding to be at the bottom
 - We might want a dropdown in our navbar
 
 [Bootstrap]: http://getbootstrap.com/
 [Foundation]: http://foundation.zurb.com/
 
-On top of that, calling them a "CSS framework" is a misnomer. They are meant to be used as a package not be built on top of. They should be referred to as "UI toolkits".
+On top of that, calling them a "CSS framework" is a misnomer. Assumptions were made for each component (e.g. padding, visual style, use cases) and they were completed. We should be referring to them as "UI toolkits".
 
 A "CSS framework" gives us all the variables and 80% of the work completed so we can fill in the remainder without any fights. For example:
 
 - https://github.com/csswizardry/inuit.css
     - Example of everything it provides: https://terabytenz.github.io/inuit.css-kitchensink/
 
-This comparison should feel like using [Django][]/[Rails][] vs [Flask][]/[Sinatra][]/[Express][].
+This comparison should feel like using [Wordpress][]/[Drupal][] vs [Flask][]/[Sinatra][]/[Express][].
 
-[Django]: https://www.djangoproject.com/
-[Rails]: http://rubyonrails.org/
+[Wordpress]: https://wordpress.com/
+[Drupal]: https://www.drupal.org/
 [Express]: http://expressjs.com/
 [Flask]: http://flask.pocoo.org/
 [Sinatra]: http://www.sinatrarb.com/
@@ -214,13 +214,13 @@ Aside from CSS frameworks and UI toolkits, there are libraries that offer some h
 
 # Topics not covered
 - Color theory, meaning behind colors and how they complement/constrast each other
+- Personas, creating characters to explore different use cases
+- Wireframes/mockups, visual documentation for an application
 - Kerning, to adjust the spacing between characters in text
 - Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
-- Design is best done in full context, be sure to include the surrounding environment for screenshots
-- Iconography, usage of attaching meaning to icons for saving visual space later on
-- Personas, creating characters to explore different use cases
-- Wireframes and high fidelity mockups, visual documentation for parts of an application
 - Typography, field of design that focuses on building typefaces
+- Iconography, attachment of meaning to icons to save visual space
+- Context, design is best done in full context; be sure to include the surrounding environment in considerations/screenshots/mockups
 
 # Bonus: Communication
 If you feel like you are being left out and forced into unconsented decisions, then speak up.
@@ -230,17 +230,19 @@ The best design experience I had was working at Uber:
 1. We (engineers, product, designers) would start with a blue sky brainstorming session and throw out any ideas we had onto a board
 2. We voted on what ideas we thought were important
 3. Designers explored a few directions with a few wireframes
-4. We (engineers and product) gave feedback and all of us (engineers, product, designers) decided on which direction to go with
-5. When wireframes were done and high fidelty mocks were in the works, the same engineers that brainstormed started building the product
+4. Designers presented ideas, everyone gave feedback and we decided on which direction to go with
+5. When wireframes were done and high fidelty mocks were in the works, the same engineers started building the product
 
-Since the engineers were involved at the early stage, we felt much more invested and were much happier with the end result.
+Since the engineers were involved in the early stages, we felt much more invested and were much happier with the end result.
 
 # Links
-Here are some top picks of content that has helped me along:
+Here are my top picks for content that has helped me learn design:
 
 - [A Practical Guide to Designing the Invisible][]
 - [Don Norman on 3 ways good design makes you happy][don-norman] (TED talk)
 - [Universal Principles of Design][]
+- [A List Apart][]
 
 [A Practical Guide to Designing the Invisible]: http://www.fivesimplesteps.com/products/a-practical-guide-to-designing-the-invisible
 [don-norman]: http://www.ted.com/talks/don_norman_on_design_and_emotion?
+[A List Apart]: http://alistapart.com/
