@@ -1,4 +1,3 @@
-// TODO: Relocate into production test
 var expect = require('chai').expect;
 var httpUtils = require('../utils/http');
 
@@ -12,6 +11,19 @@ describe('A request to twolfson.com', function () {
   it('does not have the /health endpoint', function () {
     expect(this.err).to.equal(null);
     expect(this.body).to.not.contain('/health');
+  });
+});
+
+describe('A gzip tolerant request to twolfson.com', function () {
+  httpUtils.save({
+    url: 'http://twolfson.com/',
+    headers: {
+      'Accept-Encoding': 'gzip, deflate'
+    }
+  });
+
+  it('receives gzipped content', function () {
+    expect(this.res.headers).to.have.property('content-encoding', 'gzip');
   });
 });
 

@@ -1,5 +1,4 @@
 // DEV: This is actually testing our DNS and not a server but meh.
-// TODO: Relocate into production-tests
 var expect = require('chai').expect;
 var httpUtils = require('../utils/http');
 
