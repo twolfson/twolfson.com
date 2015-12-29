@@ -29,9 +29,9 @@ As a developer, knowing design basics has some benefits:
     - It's hard to build a system without knowing its core principles
 
 # What is design?
-Design is a broad categorization of many topics, similar to how the layperson's concept of "programming" encompasses writing Assembly to writing CSS to managing networks.
+Design is a broad categorization of many topics, similar to how the layperson's definition of "programming" is a sweeping statement (e.g. it can go from writing Assembly to writing CSS to managing networks).
 
-Here are some instances of design:
+Here are some common design categories:
 
 - Visual/graphic design, to create visual assets such as logos, posters, and advertisements
     - Examples: [Behance][], [Dribbble][]
@@ -53,22 +53,25 @@ Before we get started, I want to give you the proper mindset. There is a common 
 
 > When there is good design, you will never notice it.
 
-This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need tour guides -- the interactions are obvious.
+This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need a tour guide -- the information and interactions are obvious.
 
 # Grids
 A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths and spacing. It's based on columns and gutters.
 
 A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
 
-**TODO: Add image here (screenshot of twolfson.com/grid or 960 demo)**
+[![Screenshot from 960 grid demo](/public/images/articles/design-for-developers/960-grid.png)](/public/images/articles/design-for-developers/960-grid.png)
 
 Examples:
 
-- http://foundation.zurb.com/grid.html
 - http://960.gs/demo.html
+- http://foundation.zurb.com/grid.html
 - http://twolfson.com/?grid
 
-Typically grids have 12 columns but they can be 16 or 24. The goal is to a nice amount of subdivisions.
+The most common breakdown is 960px width overall with 12 columns and 12 gutters. Gutters can be placed to the left, right or evenly split around the column. In [Bootstrap][bootstrap-grid] and [Foundation][foundation-grid], they use left/right `padding` for an even split.
+
+[bootstrap-grid]: http://getbootstrap.com/css/#grid
+[foundation-grid]: http://foundation.zurb.com/grid-1.html
 
 # Vertical rhythm and baselines
 Vertical rhythm is how we guarantee consistent vertical placement and spacing.
