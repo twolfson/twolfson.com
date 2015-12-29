@@ -20,14 +20,13 @@
 
 **TODO: Prob note that area alignment is more visual design than UI/UX**
 
-**Similar to rails except someone else architected the backends and rails only supported one flavor that wasn't yours**
+**TODO: Similar to rails except someone else architected the backends and rails only supported one flavor that wasn't yours**
 
 As a developer, knowing design basics has some benefits:
 
-- Better communication with designers due to having shared knowledge
+- Better communication with designers due to shared knowledge/vocabulary
 - Better architecture for HTML/CSS
-    - It's hard to build a system without knowing its root principles
-- Can provide targeted feedback about designs and propose other ideas
+    - It's hard to build a system without knowing its core principles
 
 # What is design?
 Design is a broad categorization of many topics, similar to how the layperson's concept of "programming" encompasses writing Assembly to writing CSS to managing networks.
