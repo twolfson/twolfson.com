@@ -6,8 +6,6 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
-**TODO: Consider images for "What is design?" section**
-**TODO: Consider image for "Grid" section**
 **TODO: Consider adding more Further reading items**
 
 **TODO: Add sections like "Not covered in this article"**
@@ -20,10 +18,7 @@
 **Muted text, underline indicating action**
 **Accessibility**
 **Iconography (or not having it at all)**
-
-**TODO: Prob note that area alignment is more visual design than UI/UX**
-
-**TODO: Similar to rails except someone else architected the backends and rails only supported one flavor that wasn't yours**
+**Better communication with designers: If you feel unsatisfied with the designer on your team (e.g. like you are left out and being forced into decisions that were made without your consent), then speak up. The best design experience I had was working at Uber; we would start with a blue sky brainstorming session and throw out any ideas we had onto a board. Then, we would vote on what ideas were the best. Then, the designer would explore a few directions with wireframes. Then, we (engineers and product) would give feedback and we would make a decision on which direction to go with. Eventually, the same engineers that brainstormed would build the product but because they were involved at the first stage, they felt much more invested (I know this because I was one of those engineers).**
 
 As a developer, knowing design basics has some benefits:
 
