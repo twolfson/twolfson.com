@@ -6,20 +6,6 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
-**TODO: Consider adding more Further reading items**
-
-**TODO: Add sections like "Not covered in this article"**
-**Kerning**
-**Optimal characters per line**
-**Screenshot with context**
-**Style guide**
-**Mood board**
-**Style tiles**
-**Muted text, underline indicating action**
-**Accessibility**
-**Iconography (or not having it at all)**
-**Better communication with designers: If you feel unsatisfied with the designer on your team (e.g. like you are left out and being forced into decisions that were made without your consent), then speak up. The best design experience I had was working at Uber; we would start with a blue sky brainstorming session and throw out any ideas we had onto a board. Then, we would vote on what ideas were the best. Then, the designer would explore a few directions with wireframes. Then, we (engineers and product) would give feedback and we would make a decision on which direction to go with. Eventually, the same engineers that brainstormed would build the product but because they were involved at the first stage, they felt much more invested (I know this because I was one of those engineers).**
-
 As a developer, knowing design basics has some benefits:
 
 - Better communication with designers due to shared knowledge/vocabulary
@@ -231,6 +217,25 @@ This comparison should feel like using [Django][]/[Rails][] vs [Flask][]/[Sinatr
 Aside from CSS frameworks and UI toolkits, there are libraries that offer some helper CSS. For example:
 
 - https://suitcss.github.io/
+
+# Topics not covered
+- Kerning, to adjust the spacing between characters in text
+- Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
+- Design is best done in full context, be sure to include the surrounding environment for screenshots
+- Iconography, usage of attaching meaning to icons for saving visual space later on
+
+# Bonus: Communication
+If you feel like you are being left out and forced into unconsented decisions, then speak up.
+
+The best design experience I had was working at Uber:
+
+1. We (engineers, product, designers) would start with a blue sky brainstorming session and throw out any ideas we had onto a board
+2. We voted on what ideas we thought were important
+3. Designers explored a few directions with a few wireframes
+4. We (engineers and product) gave feedback and all of us (engineers, product, designers) decided on which direction to go with
+5. When wireframes were done and high fidelty mocks were in the works, the same engineers that brainstormed started building the product
+
+Since the engineers were involved at the early stage, we felt much more invested and were much happier with the end result.
 
 # Links
 Here are some top picks of content that has helped me along:
