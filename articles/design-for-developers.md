@@ -62,9 +62,9 @@ The most common breakdown is 960px width overall with 12 columns and 12 gutters.
 # Vertical rhythm and baselines
 Vertical rhythm is how we guarantee consistent vertical placement and spacing.
 
-It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we make sure paragraphs line up with that on every line break.
+We start with the concept of a baseline, a repeating vertical line throughout the page (e.g. a line every 16px). Then, we make sure paragraphs line up with that on every line break.
 
-For larger elements (e.g. headings, images), then they will likely take up multiple lines (e.g. `n * 16px`) and possibly have multiple lines as padding on the bottom.
+Larger elements (e.g. headings, images) can take up multiple lines (e.g. `n * 16px`) and should have paddding to match a baseline.
 
 [![CSS baseline from Smashing Magazine article](/public/images/articles/design-for-developers/baseline.jpg)](http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/)
 
@@ -79,20 +79,20 @@ Further reading:
 - http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
 
 # Type hierarchy
-Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**) to indicate the remaining content under it is related.
+Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**) to indicate a relationship with nearby content (e.g. content under a heading).
 
-For example, "Getting Started" indicates the section is related to getting started with a repo:
+In the example below, "Getting started" indicates the code block is related to instructions on a repo:
 
 [![Screenshot of twolfson.com README](/public/images/articles/design-for-developers/type-hierarchy.png)](/public/images/articles/design-for-developers/type-hierarchy.png)
 
-Beyond this, there is type scales which are ways to define how big/small each of the `h1`, `h2`, etc should be. These are usually done by ratios (e.g. major third, golden ratio).
+Beyond this, there are type scales which define how big/small each of the `h1`, `h2`, etc should be. These usually leverage ratios (e.g. major third, golden ratio).
 
 Links:
 
 - http://type-scale.com/
 - http://www.modularscale.com/
 
-Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale usually have a relationship.
+Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale are usually related.
 
 # Typeface
 Typefaces (or `font-face` in CSS) is the font being used for a given piece of text.
