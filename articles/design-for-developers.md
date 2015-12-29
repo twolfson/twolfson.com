@@ -97,19 +97,19 @@ Type scale is one of those things that "looks right" (e.g. play around with it u
 # Typeface
 Typefaces (or `font-face` in CSS) is the font being used for a given piece of text.
 
-Serif fonts are fonts with those "little leaf things" on letters. For example:
+Serif fonts are fonts with those "little lines" on letters. For example:
 
 [![Sample of Courier New](/public/images/articles/design-for-developers/typeface-serif.svg)](/public/images/articles/design-for-developers/typeface-serif.svg)
 
 **Image of Courier New by Inductiveload via Wikipedia, https://en.wikipedia.org/wiki/Courier_%28typeface%29**
 
-Sans-serif fonts are fonts without those "little leaf things" ("sans" means without). For example:
+Sans-serif fonts are fonts without those "little lines" ("sans" means without). For example:
 
 [![Sample of Arial](/public/images/articles/design-for-developers/typeface-sans-serif.svg)](/public/images/articles/design-for-developers/typeface-sans-serif.svg)
 
 **Image of Arial by GearedBull via Wikipedia, https://en.wikipedia.org/wiki/Arial**
 
-Serif typically is good for being formal and also helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is less formal and a little harder to read.
+Serif typically is good for being formal and helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is more informal.
 
 Beyond this, there are lots of shapes for fonts. They can:
 
@@ -118,12 +118,8 @@ Beyond this, there are lots of shapes for fonts. They can:
 - Identify a brand
     - Example: http://www.dafont.com/loki-cola.font
 
-I should note that brands sometimes might take a font and then adjust it by hand to fully customize it to their identity.
-
-I should also mention that there's a lot more of inner workings to fonts, so much that there are font designers. For example, there are different variables such as the height of each letter (x-height), spacing between letters, and angle that a letter's curves stop at (terminals).
-
 # Visual components
-Visual components (also known as design patterns, although not the development kind) are visual elements that are created and reused within an application. Some basic examples of this are:
+Visual components (also known as design patterns, although not the development kind) are visual elements that are created and reused within an application. Some common examples are:
 
 **A dropdown**
 
@@ -139,15 +135,13 @@ Visual components (also known as design patterns, although not the development k
 
 *Screenshots from http://getbootstrap.com/*
 
-Beyond that, there are custom components that designers might create. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
+Beyond that, there are custom components that designers might create. For example, on Twitter we have pairs of "heading" and "number". In their CSS, it is named a `stat`:
 
 [![Screenshot of Twitter profile stats](/public/images/articles/design-for-developers/component-stat.png)](https://twitter.com/)
 
-*Screenshots from https://twitter.com/*
+*Screenshot from https://twitter.com/*
 
 If you are interested in learning more about structuring HTML/CSS after this model, please see the [OOCSS section below](#oocss).
-
-> Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
 # Area alignment
 As programmers, we like to automatically center things via the computer. However, this isn't always visually "correct".
@@ -226,6 +220,7 @@ Aside from CSS frameworks and UI toolkits, there are libraries that offer some h
 - Iconography, usage of attaching meaning to icons for saving visual space later on
 - Personas, creating characters to explore different use cases
 - Wireframes and high fidelity mockups, visual documentation for parts of an application
+- Typography, field of design that focuses on building typefaces
 
 # Bonus: Communication
 If you feel like you are being left out and forced into unconsented decisions, then speak up.
