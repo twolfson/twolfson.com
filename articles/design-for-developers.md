@@ -13,7 +13,7 @@ As a developer, knowing design basics has some benefits:
     - It's hard to build a system without knowing its core principles
 
 # What is design?
-Design is a broad categorization of many topics, similar to how the layperson's definition of "programming" is a sweeping statement (e.g. it can go from writing Assembly to writing CSS to managing networks).
+Design is a broad categorization of many topics, similar to the layperson's definition of "programming" (e.g. it can vary from writing Assembly to writing CSS to managing networks).
 
 Here are some common design categories:
 
@@ -31,16 +31,16 @@ Here are some common design categories:
 [Herman Miller]: http://www.hermanmiller.com/
 [MUJI]: http://www.muji.com/
 
-We will be focusing on UI/UX design as this has the most crossover with developer work.
+We will be focusing on UI/UX design and visual design as these have the most crossover with developer work.
 
 Before we get started, I want to give you the proper mindset. There is a common phrase in design:
 
 > When there is good design, you will never notice it.
 
-This means good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need a tour guide -- the information and interactions are obvious.
+To reiterate, good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need a tour guide -- the information and interactions are obvious.
 
 # Grids
-A grid (sometimes known as a typographic grid) is a way to layout elements horizontally for consistent widths and spacing. It's based on columns and gutters.
+A grid (also known as a typographic grid) is a way to layout elements horizontally for consistent widths and spacing. It's based on columns and gutters.
 
 A column is space for content and a gutter is whitespace between columns. For elements that span multiple columns, then they will include their gutter in the width.
 
