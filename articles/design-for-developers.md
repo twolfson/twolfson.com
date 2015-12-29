@@ -17,6 +17,9 @@
 **Style guide**
 **Mood board**
 **Style tiles**
+**Muted text, underline indicating action**
+**Accessibility**
+**Iconography (or not having it at all)**
 
 **TODO: Prob note that area alignment is more visual design than UI/UX**
 
@@ -62,6 +65,8 @@ A column is space for content and a gutter is whitespace between columns. For el
 
 [![Screenshot from 960 grid demo](/public/images/articles/design-for-developers/960-grid.png)](/public/images/articles/design-for-developers/960-grid.png)
 
+*Screenshot from http://960.gs/demo.html*
+
 Examples:
 
 - http://960.gs/demo.html
@@ -82,6 +87,8 @@ For larger elements (e.g. headings, images), then they will likely take up multi
 
 [![CSS baseline from Smashing Magazine article](/public/images/articles/design-for-developers/baseline.jpg)](http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/)
 
+*Image from http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/*
+
 Examples:
 
 - http://twolfson.com/?grid
@@ -95,7 +102,7 @@ Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**
 
 For example, "Getting Started" indicates the section is related to getting started with a repo:
 
-**TODO: Add screenshot of Getting Started from a repo (e.g. twolfson.com)**
+[![Screenshot of twolfson.com README](/public/images/articles/design-for-developers/type-hierarchy.png)](/public/images/articles/design-for-developers/type-hierarchy.png)
 
 Beyond this, there is type scales which are ways to define how big/small each of the `h1`, `h2`, etc should be. These are usually done by ratios (e.g. major third, golden ratio).
 
