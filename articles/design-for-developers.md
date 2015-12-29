@@ -164,7 +164,7 @@ Beyond that, there are custom components that designers might create. For exampl
 
 *Screenshots from https://twitter.com/*
 
-If you are interested in learning more about structuring HTML/CSS after this model, please see the [OOCSS section below](#oocss)
+If you are interested in learning more about structuring HTML/CSS after this model, please see the [OOCSS section below](#oocss).
 
 > Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
@@ -197,6 +197,13 @@ A methodology to architect HTML/CSS around building visual components
 - Site: http://oocss.org/
 
 This will be counter-intuitive to conceptions about "semantic" HTML but it will be fine as it scales across multiple pages and products (this is like [Bootstrap][]).
+
+### Variations on OOCSS
+Some more opinionated OOCSS philosophies can be found here:
+
+- SMACSS, https://smacss.com/book/
+- BEM, https://en.bem.info/method/key-concepts/
+    - Alternative naming convention (my preference), http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
 ## CSS framework vs UI toolkit
 Tools like [Bootstrap][] and [Foundation][] are only practical if our design was initially based off of them. Otherwise, we will fight them at every turn. For example:
