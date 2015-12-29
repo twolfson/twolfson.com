@@ -142,21 +142,23 @@ I should note that brands sometimes might take a font and then adjust it by hand
 I should also mention that there's a lot more of inner workings to fonts, so much that there are font designers. For example, there are different variables such as the height of each letter (x-height), spacing between letters, and angle that a letter's curves stop at (terminals).
 
 # Visual components
-Visual components (also known as design patterns, although not the development kind) are elements created and reused within an application. Some basic examples of this are:
+Visual components (also known as design patterns, although not the development kind) are visual elements that are created and reused within an application. Some basic examples of this are:
 
 **A dropdown**
 
-**TODO: Add screenshot from Bootstrap**
+[![Screenshot of a dropdown](/public/images/articles/design-for-developers/component-dropdown.png)](http://getbootstrap.com/components/#dropdowns)
 
 **A modal**
 
-**TODO: Add screenshot from Bootstrap**
+[![Screenshot of a modal](/public/images/articles/design-for-developers/component-modal.png)](http://getbootstrap.com/javascript/#modals-related-target)
 
 **Tabs**
 
-**TODO: Add screenshot from Bootstrap**
+[![Screenshot of tabs](/public/images/articles/design-for-developers/component-tabs.png)](http://getbootstrap.com/javascript/#tabs)
 
-Beyond that, there are unnamed components that designers might employ. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
+*Screenshots from http://getbootstrap.com/*
+
+Beyond that, there are custom components that designers might create. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
 
 **TODO: Add screenshot of Twitter's home page upper left side**
 
