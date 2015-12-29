@@ -224,6 +224,8 @@ Aside from CSS frameworks and UI toolkits, there are libraries that offer some h
 - Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
 - Design is best done in full context, be sure to include the surrounding environment for screenshots
 - Iconography, usage of attaching meaning to icons for saving visual space later on
+- Personas, creating characters to explore different use cases
+- Wireframes and high fidelity mockups, visual documentation for parts of an application
 
 # Bonus: Communication
 If you feel like you are being left out and forced into unconsented decisions, then speak up.
