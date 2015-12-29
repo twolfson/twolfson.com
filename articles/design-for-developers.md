@@ -118,28 +118,28 @@ Typefaces (or `font-face` in CSS) is the font being used for a given piece of te
 
 Serif fonts are fonts with those "little leaf things" on letters. For example:
 
-**TODO: Screenshot instead of link (use image from wiki)**
+[![Sample of Courier New](/public/images/articles/design-for-developers/typeface-serif.svg)](/public/images/articles/design-for-developers/typeface-serif.svg)
 
-- https://en.wikipedia.org/wiki/Times_New_Roman
+**Image of Courier New by Inductiveload via Wikipedia, https://en.wikipedia.org/wiki/Courier_%28typeface%29**
 
 Sans-serif fonts are fonts without those "little leaf things" ("sans" means without). For example:
 
-**TODO: Screenshot instead of link (use image from wiki)**
+[![Sample of Arial](/public/images/articles/design-for-developers/typeface-sans-serif.svg)](/public/images/articles/design-for-developers/typeface-sans-serif.svg)
 
-- https://en.wikipedia.org/wiki/Helvetica
+**Image of Arial by GearedBull via Wikipedia, https://en.wikipedia.org/wiki/Arial**
 
 Serif typically is good for being formal and also helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is less formal and a little harder to read.
 
 Beyond this, there are lots of shapes for fonts. They can:
 
 - Establish a mood
-    - **TODO: Screenshot instead of link (if allowed -- but preferably from site)**
     - Example: http://www.fontsquirrel.com/fonts/lobster
 - Identify a brand
-    - **TODO: Screenshot instead of link (if allowed -- but preferably from site)**
     - Example: http://www.dafont.com/loki-cola.font
 
 I should note that brands sometimes might take a font and then adjust it by hand to fully customize it to their identity.
+
+I should also mention that there's a lot more of inner workings to fonts, so much that there are font designers. For example, there are different variables such as the height of each letter (x-height), spacing between letters, and angle that a letter's curves stop at (terminals).
 
 # Visual components
 Visual components (also known as design patterns, although not the development kind) are elements created and reused within an application. Some basic examples of this are:
