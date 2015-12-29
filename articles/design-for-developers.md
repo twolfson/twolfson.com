@@ -1,7 +1,7 @@
 {
   "title": "Design for developers",
   "author": "Todd Wolfson",
-  "date": "2015-12-26T16:40:30-0600",
+  "date": "2015-12-28T21:08:10-0600",
   "keywords": "design, developers, engineers",
   "summary": "An introduction to design, targeted at developers."
 }
