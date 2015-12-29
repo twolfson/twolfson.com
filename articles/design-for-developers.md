@@ -68,7 +68,7 @@ Examples:
 - http://foundation.zurb.com/grid.html
 - http://twolfson.com/?grid
 
-The most common breakdown is 960px width overall with 12 columns and 12 gutters. Gutters can be placed to the left, right or evenly split around the column. In [Bootstrap][bootstrap-grid] and [Foundation][foundation-grid], they use left/right `padding` for an even split.
+The most common breakdown is 960px width overall with 12 columns and 12 gutters. Gutters can be placed to the left, right, or evenly split around the column. In [Bootstrap][bootstrap-grid] and [Foundation][foundation-grid], they use left/right `padding` for an even split.
 
 [bootstrap-grid]: http://getbootstrap.com/css/#grid
 [foundation-grid]: http://foundation.zurb.com/grid-1.html
@@ -76,9 +76,11 @@ The most common breakdown is 960px width overall with 12 columns and 12 gutters.
 # Vertical rhythm and baselines
 Vertical rhythm is how we guarantee consistent vertical placement and spacing.
 
-It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we make sure paragraphs line up with that on every line break. For larger elements (e.g. headings, images), then they will likely take up multiple lines (e.g. `n * 16px`) and possibly have multiple lines as padding on the bottom.
+It starts with the concept of a baseline, a repeating vertical spacing throughout the page (e.g. imagine a line every 16px). Then, we make sure paragraphs line up with that on every line break.
 
-**TODO: Add image here (screenshot of twolfson.com/grid or 960 demo)**
+For larger elements (e.g. headings, images), then they will likely take up multiple lines (e.g. `n * 16px`) and possibly have multiple lines as padding on the bottom.
+
+[![CSS baseline from Smashing Magazine article](/public/images/articles/design-for-developers/baseline.jpg)](http://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/)
 
 Examples:
 
