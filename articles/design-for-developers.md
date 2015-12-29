@@ -219,6 +219,7 @@ Aside from CSS frameworks and UI toolkits, there are libraries that offer some h
 - https://suitcss.github.io/
 
 # Topics not covered
+- Color theory, meaning behind colors and how they complement/constrast each other
 - Kerning, to adjust the spacing between characters in text
 - Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
 - Design is best done in full context, be sure to include the surrounding environment for screenshots
