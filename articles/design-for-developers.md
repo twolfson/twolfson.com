@@ -160,7 +160,11 @@ Visual components (also known as design patterns, although not the development k
 
 Beyond that, there are custom components that designers might create. For example, on Twitter we have these pairs of "heading" and "number". In their CSS, it seems to be named a `stat`:
 
-**TODO: Add screenshot of Twitter's home page upper left side**
+[![Screenshot of Twitter profile stats](/public/images/articles/design-for-developers/component-stat.png)](https://twitter.com/)
+
+*Screenshots from https://twitter.com/*
+
+If you are interested in learning more about structuring HTML/CSS after this model, please see the [OOCSS section below](#oocss)
 
 > Programmer rant: Also known as a jQuery plugin, React view, Angular view, web component, Backbone view, etc but never identified as a visual component =(
 
