@@ -135,7 +135,7 @@ Visual components (also known as design patterns, although not the development k
 
 *Screenshots from http://getbootstrap.com/*
 
-Beyond that, there are custom components that designers might create. For example, on Twitter we have pairs of "heading" and "number". In their CSS, it is named a `stat`:
+Beyond that, there are custom components that designers might create. For example, on Twitter we have pairs of "heading" and "number". In their CSS, it is named `stat`:
 
 [![Screenshot of Twitter profile stats](/public/images/articles/design-for-developers/component-stat.png)](https://twitter.com/)
 
