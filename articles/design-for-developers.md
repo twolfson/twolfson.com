@@ -83,7 +83,7 @@ Further reading:
 # Type hierarchy
 Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**) to indicate a relationship with nearby content (e.g. content under a heading).
 
-In the example below, "Getting started" indicates the code block is related to instructions on a repo:
+In the screenshot below, "Getting started" indicates the code block is related to instructions on a repo:
 
 [![Screenshot of twolfson.com README](/public/images/articles/design-for-developers/type-hierarchy.png)](/public/images/articles/design-for-developers/type-hierarchy.png)
 
@@ -94,31 +94,29 @@ Links:
 - http://type-scale.com/
 - http://www.modularscale.com/
 
-Type scale is one of those things that "looks right" (e.g. play around with it until comfortable). Although, baseline and type scale are usually related.
+Type scale is something that needs to be played with until it "looks right". Although, there is usually a relationship between baseline and type scale.
 
 # Typeface
-Typefaces (or `font-face` in CSS) is the font being used for a given piece of text.
+Typefaces (also known as `font-face` in CSS) is the font being used for a given piece of text.
 
-Serif fonts are fonts with those "little lines" on letters. For example:
+Serif fonts are fonts with "little lines" on letters. For example:
 
 [![Sample of Courier New](/public/images/articles/design-for-developers/typeface-serif.svg)](/public/images/articles/design-for-developers/typeface-serif.svg)
 
-**Image of Courier New by Inductiveload via Wikipedia, https://en.wikipedia.org/wiki/Courier_%28typeface%29**
+*Image of Courier New by Inductiveload via Wikipedia, https://en.wikipedia.org/wiki/Courier_%28typeface%29*
 
-Sans-serif fonts are fonts without those "little lines" ("sans" means without). For example:
+Sans-serif fonts are fonts without "little lines" ("sans" means without). For example:
 
 [![Sample of Arial](/public/images/articles/design-for-developers/typeface-sans-serif.svg)](/public/images/articles/design-for-developers/typeface-sans-serif.svg)
 
-**Image of Arial by GearedBull via Wikipedia, https://en.wikipedia.org/wiki/Arial**
+*Image of Arial by GearedBull via Wikipedia, https://en.wikipedia.org/wiki/Arial*
 
-Serif typically is good for being formal and helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is more informal.
+Serif is typically good for being formal and helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is more informal.
 
-Beyond this, there are lots of shapes for fonts. They can:
+A different font shape can have its own utility. For example, they can:
 
-- Establish a mood
-    - Example: http://www.fontsquirrel.com/fonts/lobster
-- Identify a brand
-    - Example: http://www.dafont.com/loki-cola.font
+- Establish a mood, http://www.fontsquirrel.com/fonts/lobster
+- Identify a brand, http://www.dafont.com/loki-cola.font
 
 # Visual components
 Visual components (also known as design patterns, although not the development kind) are visual elements that are created and reused within an application. Some common examples are:
