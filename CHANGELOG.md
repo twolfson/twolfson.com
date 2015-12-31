@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.74.0 - Added `bin/deploy-install.sh` for consistent deployment scripts in `twolfson.com-scripts`
+
 3.73.1 - Added missing gzip test to production tests
 
 3.73.0 - Added AMA article
