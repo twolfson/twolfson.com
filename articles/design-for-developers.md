@@ -33,21 +33,13 @@ Here are some common design categories:
 
 We will be focusing on UI/UX design and visual design as these have the most crossover with developer work.
 
-# Mindset
-There is a common phrase in design:
+We won't be covering the design process as there are a ton of ways to do it. For the high level notes, please see the [Topics not covered section](#topics-not-covered).
+
+Before we get started, I want to share a common phrase in design:
 
 > When there is good design, you will never notice it.
 
 To reiterate, good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need a tour guide -- the information and interactions are obvious.
-
-# Process
-Every designer and design team has their own preferences and metholodgy (similar to a programmer with their text editor/IDE, writing tests, CI, and deployments). Here are some stages stages a designer might use:
-
-- Brainstorming, getting ideas out of people's heads and onto paper
-- Sketching, trying out ideas in concepts on paper
-- Wireframing, taking ideas further but not adding visual styles (e.g. usually black and white, wiry)
-- High fidelity mockups, adding visual styles to wireframes
-- Prototyping, making mockups interactive and seeing how components look/feel
 
 # Grids
 A grid (also known as a typographic grid) is a way to layout elements horizontally for consistent widths, spacing, and alignment. It's based on columns and gutters.
@@ -227,6 +219,8 @@ Aside from CSS frameworks and UI toolkits, there are libraries that offer some h
 # Topics not covered
 - Color theory, meaning behind colors and how they complement/constrast each other
 - Personas, creating characters to explore different use cases
+- Design process, multiple stages a designer may take while designing
+    - For example: Brainstorming, sketching, wireframing, mockups, prototyping, user testing
 - Wireframes/mockups, visual documentation for an application
 - Kerning, to adjust the spacing between characters in text
 - Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
