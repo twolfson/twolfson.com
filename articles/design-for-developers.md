@@ -210,17 +210,17 @@ This comparison should feel like comparing [Wordpress][]/[Drupal][] to [Flask][]
 # Topics not covered
 - Color theory, meaning behind colors and how they complement/constrast each other
 - Personas, creating characters to explore different use cases
-- Design process, multiple stages a designer may take while designing
+- Design process, multiple stages a designer may use while designing
     - For example: Brainstorming, sketching, wireframing, mockups, prototyping, user testing
 - Wireframes/mockups, visual documentation for an application
-- Kerning, to adjust the spacing between characters in text
+- Kerning, adjustment of spacing between text characters
 - Optimal characters per line, http://practicaltypography.com/typography-in-ten-minutes.html
 - Typography, field of design that focuses on building typefaces
 - Iconography, attachment of meaning to icons to save visual space
 - Context, design is best done in full context; be sure to include the surrounding environment in considerations/screenshots/mockups
 
 # Bonus: Communication
-If you feel like you are being left out and forced into unconsented decisions, then speak up.
+If you feel like you are being left out and forced into nonconsensual decisions, then speak up.
 
 The best design experience I had was working at Uber:
 
@@ -228,12 +228,12 @@ The best design experience I had was working at Uber:
 2. We voted on what ideas we thought were important
 3. Designers explored a few directions with a few wireframes
 4. Designers presented ideas, everyone gave feedback and we decided on which direction to go with
-5. When wireframes were done and high fidelty mocks were in the works, the same engineers started building the product
+5. When wireframes were done and high fidelty mockups were getting started, the same engineers started building the product
 
-Since the engineers were involved in the early stages, we felt much more invested and were much happier with the end result.
+Since the engineers were involved in the early stages, we felt much more included and were much happier with the end result.
 
 # Links
-Here are my top picks for content that has helped me learn design:
+Here are my top picks for content that have helped me learn about design:
 
 - [A Practical Guide to Designing the Invisible][]
 - [Don Norman on 3 ways good design makes you happy][don-norman] (TED talk)
