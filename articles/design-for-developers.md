@@ -13,7 +13,7 @@ As a developer, knowing design basics has some benefits:
     - It's hard to build a system without knowing its core principles
 
 # What is design?
-Design is a broad categorization of many topics, similar to the layperson's definition of "programming" (e.g. it can vary from writing Assembly to writing CSS to managing networks).
+Design is a broad categorization of many topics, similar to the layperson's definition of "programming" (e.g. varying from Assembly to CSS to networking).
 
 Here are some common design categories:
 
