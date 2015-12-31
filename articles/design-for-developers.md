@@ -173,7 +173,7 @@ A methodology to architect HTML/CSS around building visual components
 - Introductory article: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 - Site: http://oocss.org/
 
-This will be counter-intuitive to conceptions about "semantic" HTML but it will be fine as it scales across multiple pages and products (this is like [Bootstrap][]).
+This will be counter-intuitive to conceptions about "semantic" HTML but it will be fine as it scales across multiple pages and products whereas "semantic" HTML does not (similar to [Bootstrap][]).
 
 ### Variations on OOCSS
 Some more opinionated OOCSS philosophies can be found here:
@@ -192,14 +192,14 @@ Tools like [Bootstrap][] and [Foundation][] are only practical if our design was
 [Bootstrap]: http://getbootstrap.com/
 [Foundation]: http://foundation.zurb.com/
 
-On top of that, calling them a "CSS framework" is a misnomer. Assumptions were made for each component (e.g. padding, visual style, use cases) and they were completed. We should be referring to them as "UI toolkits".
+On top of that, calling them "CSS frameworks" is a misnomer. During their construction, assumptions were made for each component (e.g. padding, visual style, use cases). As a result, they are complete products and we should refer to them as "UI toolkits".
 
-A "CSS framework" gives us all the variables and 80% of the work completed so we can fill in the remainder without any fights. For example:
+A "CSS framework" gives us all the variables and 80% of the work completed so we can fill in the remainder without any fights. My favorite framework is:
 
 - https://github.com/csswizardry/inuit.css
     - Example of everything it provides: https://terabytenz.github.io/inuit.css-kitchensink/
 
-This comparison should feel like using [Wordpress][]/[Drupal][] vs [Flask][]/[Sinatra][]/[Express][].
+This comparison should feel like comparing [Wordpress][]/[Drupal][] to [Flask][]/[Sinatra][]/[Express][].
 
 [Wordpress]: https://wordpress.com/
 [Drupal]: https://www.drupal.org/
@@ -207,10 +207,9 @@ This comparison should feel like using [Wordpress][]/[Drupal][] vs [Flask][]/[Si
 [Flask]: http://flask.pocoo.org/
 [Sinatra]: http://www.sinatrarb.com/
 
-## CSS utility libraries
-Aside from CSS frameworks and UI toolkits, there are libraries that offer some helper CSS. For example:
+**CSS utility libraries:** Aside from CSS frameworks and UI toolkits, there are libraries that offer CSS utility classes (e.g. [SUIT CSS][]).
 
-- https://suitcss.github.io/
+[SUIT CSS]: https://suitcss.github.io/
 
 # Topics not covered
 - Color theory, meaning behind colors and how they complement/constrast each other
