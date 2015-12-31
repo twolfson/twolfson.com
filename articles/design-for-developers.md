@@ -207,10 +207,6 @@ This comparison should feel like comparing [Wordpress][]/[Drupal][] to [Flask][]
 [Flask]: http://flask.pocoo.org/
 [Sinatra]: http://www.sinatrarb.com/
 
-**CSS utility libraries:** Aside from CSS frameworks and UI toolkits, there are libraries that offer CSS utility classes (e.g. [SUIT CSS][]).
-
-[SUIT CSS]: https://suitcss.github.io/
-
 # Topics not covered
 - Color theory, meaning behind colors and how they complement/constrast each other
 - Personas, creating characters to explore different use cases
