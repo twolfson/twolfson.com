@@ -33,13 +33,11 @@ Here are some common design categories:
 
 We will be focusing on UI/UX design and visual design as these have the most crossover with developer work.
 
-We won't be covering the design process as there are a ton of ways to do it. For the high level notes, please see the [Topics not covered section](#topics-not-covered).
+We won't be covering the design process as there are a ton of approaches. For the high level notes, please see the [Topics not covered section](#topics-not-covered).
 
-Before we get started, I want to share a common phrase in design:
+**Mindset:** Good design helps users achieve their goals via intuitive interactions and contextual information. A common phrase in design is:
 
 > When there is good design, you will never notice it.
-
-To reiterate, good design helps the user achieve their goals with as little friction as possible and in an intuitive manner. Good design doesn't need a tour guide -- the information and interactions are obvious.
 
 # Grids
 A grid (also known as a typographic grid) is a way to layout elements horizontally for consistent widths, spacing, and alignment. It's based on columns and gutters.
