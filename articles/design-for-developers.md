@@ -6,7 +6,7 @@
   "summary": "An introduction to design, targeted at developers."
 }
 
-As a developer, knowing design basics has some benefits:
+As a developer knowing design basics has some benefits:
 
 - Better communication with designers due to shared knowledge/vocabulary
 - Better architecture for HTML/CSS
