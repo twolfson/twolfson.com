@@ -7,6 +7,13 @@ exports.common = function (config) {
   // Generate a router
   var router = new express.Router();
 
+  // Check for a grid flag
+  router.all('*', function (req, res, next) {
+    // If there is a grid param, save it
+    res.locals.enableGrid = req.query.grid !== undefined;
+    next();
+  });
+
   // Override our article URLs
   var articles = config.articles;
   articles.forEach(function updateArticleUrl (article) {
@@ -60,13 +67,6 @@ exports.common = function (config) {
 
 exports.development = function (config) {
   var router = new express.Router();
-
-  // Check for a grid flag
-  router.all('*', function (req, res, next) {
-    // If there is a grid param, save it
-    res.locals.enableGrid = req.query.grid !== undefined;
-    next();
-  });
 
   // Add a kaleidoscope test page
   router.get('/kaleido', controllers.kaleido(config));
