@@ -13,7 +13,7 @@ As a developer knowing design basics has some benefits:
     - It's hard to build a system without knowing its core principles
 
 # What is design?
-Design is a broad categorization of many topics, similar to the layperson's definition of "programming" (e.g. varying from Assembly to CSS to networking).
+Design is a broad categorization of many topics, similar to a layperson's definition of "programming" (e.g. varying from Assembly to CSS to networking).
 
 Here are some common design categories:
 
@@ -33,7 +33,7 @@ Here are some common design categories:
 
 We will be focusing on UI/UX design and visual design as these have the most crossover with developer work.
 
-We won't be covering the design process as there are a ton of approaches. For the high level notes, please see the [Topics not covered section](#topics-not-covered).
+We won't be covering the design process as there are a ton of approaches. For high level notes, please see the [Topics not covered section](#topics-not-covered).
 
 **Mindset:** Good design helps users achieve their goals via intuitive interactions and contextual information. A common phrase in design is:
 
@@ -56,7 +56,7 @@ Examples:
 - http://foundation.zurb.com/grid.html
 - http://twolfson.com/?grid
 
-The most common breakdown is 960px width overall with 12 columns and 12 gutters. Gutters can be placed to the left, right, or evenly split around the column. In [Bootstrap][bootstrap-grid] and [Foundation][foundation-grid], they use left/right `padding` for an even split.
+The most common breakdown is 960px width overall with 12 columns and 12 gutters. Gutters can be placed to the left, right, or evenly split around columns. In [Bootstrap][bootstrap-grid] and [Foundation][foundation-grid], they use left/right `padding` for an even split.
 
 [bootstrap-grid]: http://getbootstrap.com/css/#grid
 [foundation-grid]: http://foundation.zurb.com/grid-1.html
@@ -83,7 +83,7 @@ Further reading:
 # Type hierarchy
 Type hiearchy is the usage of different sizes of type (e.g. `h1`, `h2`, **bold**) to indicate a relationship with nearby content (e.g. content under a heading).
 
-In the screenshot below, "Getting started" indicates the code block is related to instructions on a repo:
+In the screenshot below, "Getting started" indicates the code block is part of its instructions:
 
 [![Screenshot of twolfson.com README](/public/images/articles/design-for-developers/type-hierarchy.png)](/public/images/articles/design-for-developers/type-hierarchy.png)
 
@@ -99,13 +99,13 @@ Type scale is something that needs to be played with until it "looks right". Alt
 # Typeface
 Typefaces (also known as `font-face` in CSS) is the font being used for a given piece of text.
 
-Serif fonts are fonts with "little lines" on letters. For example:
+Serif typefaces are typefaces with "little lines" on characters. For example:
 
 [![Sample of Courier New](/public/images/articles/design-for-developers/typeface-serif.svg)](/public/images/articles/design-for-developers/typeface-serif.svg)
 
 *Image of Courier New by Inductiveload via Wikipedia, https://en.wikipedia.org/wiki/Courier_%28typeface%29*
 
-Sans-serif fonts are fonts without "little lines" ("sans" means without). For example:
+Sans-serif typefaces are typefaces without "little lines" ("sans" means without). For example:
 
 [![Sample of Arial](/public/images/articles/design-for-developers/typeface-sans-serif.svg)](/public/images/articles/design-for-developers/typeface-sans-serif.svg)
 
@@ -113,7 +113,7 @@ Sans-serif fonts are fonts without "little lines" ("sans" means without). For ex
 
 Serif is typically good for being formal and helps with reading letters (e.g. can distinguish shape easier). On the other hand, sans-serif is more informal.
 
-A different font shape can have its own utility. For example, they can:
+A different typeface shape can have its own utility. For example, they can:
 
 - Establish a mood, http://www.fontsquirrel.com/fonts/lobster
 - Identify a brand, http://www.dafont.com/loki-cola.font
@@ -146,7 +146,7 @@ If you are interested in learning more about structuring HTML/CSS after this mod
 # Area alignment
 As programmers, we like to automatically center things via the computer. However, this isn't always visually "correct".
 
-Sometimes there is a optical/visual center which isn't the actual left/right center (average). For example, in the image below the left button has an average center whereas the right image is optically centered:
+Sometimes there is an optical/visual center which isn't the actual left/right center (average). For example, in the image below the left button has an average center whereas the right button is optically centered:
 
 [![Image of area alignment](/public/images/articles/design-for-developers/area-alignment.png)](https://medium.com/@erqiudao/the-play-button-is-not-optical-alignment-4cea11bda175)
 
@@ -208,6 +208,8 @@ This comparison should feel like comparing [Wordpress][]/[Drupal][] to [Flask][]
 [Sinatra]: http://www.sinatrarb.com/
 
 # Topics not covered
+There were a bunch of design topics that we didn't cover in this article. Here are some high level interesting ones:
+
 - Color theory, meaning behind colors and how they complement/constrast each other
 - Personas, creating characters to explore different use cases
 - Design process, multiple stages a designer may use while designing
@@ -220,7 +222,7 @@ This comparison should feel like comparing [Wordpress][]/[Drupal][] to [Flask][]
 - Context, design is best done in full context; be sure to include the surrounding environment in considerations/screenshots/mockups
 
 # Bonus: Communication
-If you feel like you are being left out and forced into nonconsensual decisions, then speak up.
+When working with designers if you feel like you are being left out and forced into nonconsensual decisions, then speak up.
 
 The best design experience I had was working at Uber:
 
@@ -230,7 +232,7 @@ The best design experience I had was working at Uber:
 4. Designers presented ideas, everyone gave feedback and we decided on which direction to go with
 5. When wireframes were done and high fidelty mockups were getting started, the same engineers started building the product
 
-Since the engineers were involved in the early stages, we felt much more included and were much happier with the end result.
+Since the engineers were involved in the early stages, we felt much more engaged and were much happier with the end result.
 
 # Links
 Here are my top picks for content that have helped me learn about design:
