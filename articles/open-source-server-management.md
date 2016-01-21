@@ -63,6 +63,10 @@ Some testing tools are:
 
 I went with [Serverspec][] due to its age and I knew I was likely going to choose a [Ruby][] tool for higher level provisioning. As a result, I wanted to keep with as few languages as possible (i.e. `bash` and [Ruby][]).
 
+Here is my current test suite:
+
+https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/test
+
 > As a developer, I prefer to err on the side of stupidity and write tests -- even for trivial changes that I manually verified. There's a common gotcha in the land of provisioning tools where people delete code to clean up legacy provisioning for files. However, they miss needing to write a provision command to delete those files (i.e. delete code, not telling provisioner to delete files then deleting code). This would be easily caught by CI and tests.
 
 [Ruby]: https://www.ruby-lang.org/en/
@@ -71,3 +75,6 @@ I went with [Serverspec][] due to its age and I knew I was likely going to choos
 - Puppet
 - Chef
 - Ansible
+
+# Security
+Learning about both GNU/Linux environment and security by reading security books.
