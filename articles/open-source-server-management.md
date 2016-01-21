@@ -72,9 +72,29 @@ https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/test
 [Ruby]: https://www.ruby-lang.org/en/
 
 # Higher level provisioning
-- Puppet
-- Chef
-- Ansible
+Eventually, we will grow from 1 server type to multiple server types (e.g. websites node, Jenkins node). When this happens, we can continue to push `bash` but at some point, it isn't the ideal tool.
 
-# Security
-Learning about both GNU/Linux environment and security by reading security books.
+In its place, we can use higher level provisioning tools. Instead of being imperative like `bash`, these are declarative and deterministic (i.e. evaluate server state, determine what needs to change, apply changes).
+
+Here are some common tools:
+
+- [Puppet][] - Written in Ruby, has a custom DSL
+- [Chef][] - Written in Ruby, our code is actual Ruby
+- [Ansible][] - Written in Python
+
+[Puppet]: https://puppetlabs.com/
+[Ansible]: http://www.ansible.com/
+
+I chose [Chef][] due to:
+
+- It's Ruby and I want to learn more Ruby
+- It's Ruby which helps me stay consistent with [Serverspec][]
+    - Keeping the repository down to 2 languages (i.e. `bash`, Ruby)
+- It's used by operations engineers that I respect (i.e. [Katherine Daniels][@beerops], [Charity Majors][@mipsytipsy])
+
+[@beerops]: https://twitter.com/beerops
+[@mipsytipsy]: https://twitter.com/mipsytipsy
+
+I disliked how opinionated and nested [Chef][] was (e.g. would prefer `require` instead of dependency declarations, would prefer dependency declaration in resources) but I got something which I am comfortable with:
+
+https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/src
