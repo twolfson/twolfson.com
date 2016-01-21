@@ -6,9 +6,9 @@
   "summary": "Announcement about formalizing and open sourcing my server scripts."
 }
 
-For a long while, I have naively managed my server; installing and running processes by hand with a script or 2 to manage rebooting.
+For a long while, I have naively managed my server; installing and running processes by hand with a script or 2 to manage restarting.
 
-Finally, I have decided to formalize my provisioning, write tests, and script everything else.
+Finally, I have decided to write/formalize my scripts, add tests, and document everything.
 
 https://github.com/twolfson/twolfson.com-scripts
 
