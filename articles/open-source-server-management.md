@@ -12,20 +12,32 @@ Finally, I have decided to formalize my provisioning, write tests, and script ev
 
 https://github.com/twolfson/twolfson.com-scripts
 
-# Starting with bash
-If you are new to provisioning/bootstrapping servers, I strongly recommend doing everything in `bash` or something similar (e.g. [Fabric][]).
+# Starting with Vagrant and bash
+If you are new to provisioning/bootstrapping servers, I strongly recommend starting with [Vagrant][] and `bash`.
 
-[Fabric]: http://www.fabfile.org/
+- [Vagrant][] because it's familar for someone to `ssh` into a machine
+    - This is identical to logging into a staging or production machine
+    - Additionally if something goes wrong, then we can create a new server easily
+    - [Docker][] is a viable alternative as well
+- `bash` because it's approachable for our coworkers since they use a shell daily
+    - It's 1 less tool to learn (as opposed to [Chef][] or [Puppet][])
+    - Additionally if something goes wrong, we can use the same commands to debug
 
-It will be approachable for your coworkers as they use a shell daily and 1 less tool to learn.
+[Vagrant]: https://www.vagrantup.com/
 
-Additionally, if things ever go bad, then you will be able to use the same commands to debug.
+Here are iterations of my scripts in [Vagrant][] and `bash`:
 
-Here's some quick protips:
+https://github.com/twolfson/twolfson.com-scripts/blob/1.14.1/Vagrantfile
+
+https://github.com/twolfson/twolfson.com-scripts/tree/1.14.1/src
+
+https://github.com/twolfson/twolfson.com-scripts/blob/1.12.0/bin/_bootstrap.sh
+
+Here are some protips:
 
 - Always use `set -e` (exits upon first error, by default `bash` doesn't do this)
 - Use `set -x` to help with feedback to developer running script
-- Learn these tools `which`, `test`, `man`, `grep`, `apt-get`/`apt-cache`, `dpkg`)
+- Learn these tools `which`, `test`, `man`, `grep`, `apt-get`/`apt-cache`, `dpkg`
     - Use `apt-get install` to install/upgrade specific packages
     - Use `apt-cache search/showpkg` to search for packages/list info
     - Use `dpkg --list` to list installed packages (useful with `grep` for scripts)
