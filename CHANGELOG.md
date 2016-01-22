@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.76.0 - Removed competitions section from projects due to MDN Dev Derby deprecation and lack of content
+
 3.75.1 - Accepted latest perceptual diffs
 
 3.75.0 - Wrote "Design for developers" article
