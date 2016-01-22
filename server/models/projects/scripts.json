@@ -2,8 +2,8 @@
   {
     "name": "spritesmith",
     "description": "Join images together into a spritesheet and CSS variables",
-    "stars": 936,
-    "forks": 76,
+    "stars": 1050,
+    "forks": 90,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,8 +11,8 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 432,
-    "forks": 62,
+    "stars": 534,
+    "forks": 72,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
@@ -20,8 +20,8 @@
   {
     "name": "image-diff",
     "description": "Create image differential between two images",
-    "stars": 73,
-    "forks": 9,
+    "stars": 128,
+    "forks": 16,
     "github": "uber/image-diff",
     "srcUrl": "https://github.com/uber/image-diff",
     "pageUrl": "https://github.com/uber/image-diff"
@@ -29,7 +29,7 @@
   {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
-    "stars": 42,
+    "stars": 51,
     "forks": 6,
     "github": "twolfson/FindPlusPlus",
     "srcUrl": "https://github.com/twolfson/FindPlusPlus",
@@ -38,35 +38,35 @@
   {
     "name": "jsmin-sourcemap",
     "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
-    "stars": 40,
+    "stars": 44,
     "forks": 8,
     "github": "twolfson/grunt-jsmin-sourcemap",
     "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
     "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
   },
   {
-    "name": "jojo",
-    "description": "the 10 second blog engine for hackers (in javascript)",
-    "stars": 36,
-    "forks": 4,
-    "github": "twolfson/jojo",
-    "srcUrl": "https://github.com/twolfson/jojo",
-    "pageUrl": "https://github.com/twolfson/jojo"
-  },
-  {
     "name": "foundry",
     "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
-    "stars": 35,
+    "stars": 39,
     "forks": 6,
     "github": "twolfson/foundry",
     "srcUrl": "https://github.com/twolfson/foundry",
     "pageUrl": "https://github.com/twolfson/foundry"
   },
   {
+    "name": "jojo",
+    "description": "the 10 second blog engine for hackers (in javascript)",
+    "stars": 38,
+    "forks": 4,
+    "github": "twolfson/jojo",
+    "srcUrl": "https://github.com/twolfson/jojo",
+    "pageUrl": "https://github.com/twolfson/jojo"
+  },
+  {
     "name": "eight-track",
     "description": "Record and playback HTTP requests",
-    "stars": 33,
-    "forks": 8,
+    "stars": 35,
+    "forks": 9,
     "github": "uber/eight-track",
     "srcUrl": "https://github.com/uber/eight-track",
     "pageUrl": "https://github.com/uber/eight-track"
@@ -74,7 +74,7 @@
   {
     "name": "gifsockets",
     "description": "Stream never-ending animated GIFs",
-    "stars": 20,
+    "stars": 23,
     "forks": 1,
     "github": "twolfson/gifsockets",
     "srcUrl": "https://github.com/twolfson/gifsockets",
@@ -83,11 +83,20 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 13,
-    "forks": 2,
+    "stars": 15,
+    "forks": 3,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
+  },
+  {
+    "name": "dotfiles",
+    "description": "My dotfiles, documentation, and Linux workflow",
+    "stars": 6,
+    "forks": 0,
+    "github": "twolfson/dotfiles",
+    "srcUrl": "https://github.com/twolfson/dotfiles",
+    "pageUrl": "https://github.com/twolfson/dotfiles"
   },
   {
     "name": "What size is my browser?",
@@ -100,18 +109,9 @@
     "pageUrl": "http://whatsizeismybrowser.com/"
   },
   {
-    "name": "dotfiles",
-    "description": "My dotfiles, documentation, and Linux workflow",
-    "stars": 3,
-    "forks": 0,
-    "github": "twolfson/dotfiles",
-    "srcUrl": "https://github.com/twolfson/dotfiles",
-    "pageUrl": "https://github.com/twolfson/dotfiles"
-  },
-  {
     "name": "winfiles",
     "description": "My Windows files, documentation, and Windows workflow",
-    "stars": 2,
+    "stars": 3,
     "forks": 0,
     "github": "twolfson/winfiles",
     "srcUrl": "https://github.com/twolfson/winfiles",

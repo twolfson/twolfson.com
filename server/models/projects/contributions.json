@@ -2,8 +2,8 @@
   {
     "name": "git-extras",
     "description": "Collection of git utilities",
-    "stars": 6311,
-    "forks": 409,
+    "stars": 7496,
+    "forks": 511,
     "github": "tj/git-extras",
     "srcUrl": "https://github.com/tj/git-extras",
     "pageUrl": "https://github.com/tj/git-extras"
@@ -11,8 +11,8 @@
   {
     "name": "nodemon",
     "description": "Monitor changes &hellip; and automatically restart the server",
-    "stars": 5226,
-    "forks": 386,
+    "stars": 6692,
+    "forks": 491,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
     "pageUrl": "https://github.com/remy/nodemon"
@@ -20,8 +20,8 @@
   {
     "name": "jscs",
     "description": "JavaScript code style checker",
-    "stars": 3421,
-    "forks": 342,
+    "stars": 4667,
+    "forks": 506,
     "github": "jscs-dev/node-jscs",
     "srcUrl": "https://github.com/jscs-dev/node-jscs",
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
@@ -29,8 +29,8 @@
   {
     "name": "gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
-    "stars": 845,
-    "forks": 261,
+    "stars": 910,
+    "forks": 280,
     "github": "gratipay/gratipay.com",
     "srcUrl": "https://github.com/gratipay/gratipay.com",
     "pageUrl": "https://github.com/gratipay/gratipay.com"
@@ -38,28 +38,28 @@
   {
     "name": "source-map",
     "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
-    "stars": 594,
-    "forks": 92,
+    "stars": 710,
+    "forks": 111,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
   },
   {
-    "name": "python-livereload",
-    "description": "livereload server in python",
-    "stars": 323,
-    "forks": 63,
-    "github": "lepture/python-livereload",
-    "srcUrl": "https://github.com/lepture/python-livereload",
-    "pageUrl": "https://github.com/lepture/python-livereload"
-  },
-  {
     "name": "plaidchat",
     "description": "A Slack client for Linux",
-    "stars": 234,
-    "forks": 18,
+    "stars": 451,
+    "forks": 31,
     "github": "plaidchat/plaidchat",
     "srcUrl": "https://github.com/plaidchat/plaidchat",
     "pageUrl": "https://github.com/plaidchat/plaidchat"
+  },
+  {
+    "name": "python-livereload",
+    "description": "livereload server in python",
+    "stars": 430,
+    "forks": 78,
+    "github": "lepture/python-livereload",
+    "srcUrl": "https://github.com/lepture/python-livereload",
+    "pageUrl": "https://github.com/lepture/python-livereload"
   }
 ]
