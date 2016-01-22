@@ -1,7 +1,7 @@
 [
   {
     "name": "spritesmith",
-    "description": "Join images together into a spritesheet and CSS variables",
+    "description": "Combine images into a spritesheet and CSS variables",
     "stars": 1050,
     "forks": 90,
     "github": "Ensighten/grunt-spritesmith",
@@ -55,7 +55,7 @@
   },
   {
     "name": "foundry",
-    "description": "Release manager for npm, bower, component, PyPI, git tags, etc",
+    "description": "Release manager for npm, bower, git tags, and more",
     "stars": 39,
     "forks": 6,
     "github": "twolfson/foundry",

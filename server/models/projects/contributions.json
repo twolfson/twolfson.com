@@ -10,7 +10,7 @@
   },
   {
     "name": "nodemon",
-    "description": "Monitor changes &hellip; and automatically restart the server",
+    "description": "Watch files and automatically restart your server",
     "stars": 6693,
     "forks": 491,
     "github": "remy/nodemon",
@@ -46,7 +46,7 @@
   },
   {
     "name": "source-map",
-    "description": "<a href=\"https://wiki.mozilla.org/DevTools/Features/SourceMap\" target=\"_blank\">https://wiki.mozilla.org/DevTools/Features/SourceMap</a>",
+    "description": "Utility library for creating and parsing source maps",
     "stars": 710,
     "forks": 111,
     "github": "mozilla/source-map",
