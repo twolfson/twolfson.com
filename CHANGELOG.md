@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.77.1 - Fixed up broken tests
+
 3.77.0 - Updated projects to current preferences and latest stats
 
 3.76.0 - Removed competitions section from projects due to MDN Dev Derby deprecation and lack of content
