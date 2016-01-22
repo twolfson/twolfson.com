@@ -45,15 +45,6 @@
     "pageUrl": "https://github.com/twolfson/FindPlusPlus"
   },
   {
-    "name": "jsmin-sourcemap",
-    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">source map</a>",
-    "stars": 44,
-    "forks": 8,
-    "github": "twolfson/grunt-jsmin-sourcemap",
-    "srcUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap",
-    "pageUrl": "https://github.com/twolfson/grunt-jsmin-sourcemap"
-  },
-  {
     "name": "foundry",
     "description": "Release manager for npm, bower, git tags, and more",
     "stars": 39,
@@ -97,6 +88,15 @@
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
+  },
+  {
+    "name": "victorious-git",
+    "description": "Play fanfare after triumphing over git conflicts",
+    "stars": 7,
+    "forks": 0,
+    "github": "twolfson/victorious-git",
+    "srcUrl": "https://github.com/twolfson/victorious-git",
+    "pageUrl": "https://github.com/twolfson/victorious-git"
   },
   {
     "name": "dotfiles",

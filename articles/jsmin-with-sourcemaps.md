@@ -4,7 +4,7 @@
   "date": "2012-10-07T00:00:00-0700",
   "keywords": "jsmin, sourcemap, compression, minification",
   "summary": "Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap).",
-  "relatedProjects": ["jsmin-sourcemap"]
+  "_relProjects": ["jsmin-sourcemap"]
 }
 
 Introducing JSMin with sourcemaps -- available as a [node module](https://github.com/twolfson/node-jsmin-sourcemap) and as a [grunt plugin](https://github.com/twolfson/grunt-jsmin-sourcemap).
