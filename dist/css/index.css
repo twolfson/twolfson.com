@@ -2846,103 +2846,59 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   height: 32px;
 }
 */
-.icon-bar-lines {
-  background-image: url(../images/sprites.png);
-  background-position: -256px 0px;
-  width: 32px;
-  height: 32px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .icon-bar-lines {
-      background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
-
-.icon-eye {
-  background-image: url(../images/sprites.png);
-  background-position: -224px -32px;
-  width: 32px;
-  height: 32px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .icon-eye {
-      background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
-
 .icon-github {
   background-image: url(../images/sprites.png);
-  background-position: -192px -64px;
+  background-position: -128px 0px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .icon-github {
       background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
-
-.icon-heart {
-  background-image: url(../images/sprites.png);
-  background-position: -160px -96px;
-  width: 32px;
-  height: 32px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .icon-heart {
-      background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
+      background-size: 160px 160px; } }
 
 .icon-purple-fork {
   background-image: url(../images/sprites.png);
-  background-position: -128px -128px;
+  background-position: -96px -32px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .icon-purple-fork {
       background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
+      background-size: 160px 160px; } }
 
 .icon-purple-star {
   background-image: url(../images/sprites.png);
-  background-position: -96px -160px;
+  background-position: -64px -64px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .icon-purple-star {
       background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
-
-.icon-ribbon {
-  background-image: url(../images/sprites.png);
-  background-position: -64px -192px;
-  width: 32px;
-  height: 32px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .icon-ribbon {
-      background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
+      background-size: 160px 160px; } }
 
 .icon-rss {
   background-image: url(../images/sprites.png);
-  background-position: -32px -224px;
+  background-position: -32px -96px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .icon-rss {
       background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
+      background-size: 160px 160px; } }
 
 .icon-twitter {
   background-image: url(../images/sprites.png);
-  background-position: 0px -256px;
+  background-position: 0px -128px;
   width: 32px;
   height: 32px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .icon-twitter {
       background-image: url(../images/sprites-2x.png);
-      background-size: 288px 288px; } }
+      background-size: 160px 160px; } }
 
-.icon-bar-lines,
-.icon-eye,
 .icon-github,
-.icon-heart,
 .icon-purple-fork,
 .icon-purple-star,
-.icon-ribbon,
 .icon-rss,
 .icon-twitter {
   font-size: 32px;
