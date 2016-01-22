@@ -2,7 +2,6 @@
 var fs = require('fs');
 var async = require('async');
 var Backbone = require('backbone');
-var CompetitionProject = require('./competition-project');
 var ScriptProject = require('./script-project');
 
 // Define common collections
@@ -20,18 +19,11 @@ var ProjectCollection = Backbone.Collection.extend({
     }, done);
   }
 });
-var CompetitionCollection = ProjectCollection.extend({
-  model: CompetitionProject
-});
 var ScriptCollection = ProjectCollection.extend({
   model: ScriptProject
 });
 
 // Create models for each type
-var competitionsJson = require('./competitions');
-var competitionModels = competitionsJson.map(function (competitionJson) {
-  return new CompetitionProject(competitionJson);
-});
 var contributionsJson = require('./contributions');
 var contributionModels = contributionsJson.map(function (contributionJson) {
   return new ScriptProject(contributionJson);
@@ -42,9 +34,6 @@ var scriptModels = scriptsJson.map(function (scriptJson) {
 });
 
 // Generate and return collections for each project type
-exports.competitions = new CompetitionCollection(competitionModels, {
-  filepath: __dirname + '/competitions.json'
-});
 exports.contributions = new ScriptCollection(contributionModels, {
   filepath: __dirname + '/contributions.json'
 });
@@ -54,9 +43,6 @@ exports.scripts = new ScriptCollection(scriptModels, {
 
 exports.update = function (done) {
   async.parallel([
-    function updateCompetitions (cb) {
-      exports.competitions.update(cb);
-    },
     function updateContributions (cb) {
       exports.contributions.update(cb);
     },
@@ -67,9 +53,6 @@ exports.update = function (done) {
 };
 exports.save = function (done) {
   async.parallel([
-    function saveCompetitions (cb) {
-      exports.competitions.save(cb);
-    },
     function saveContributions (cb) {
       exports.contributions.save(cb);
     },
@@ -81,7 +64,6 @@ exports.save = function (done) {
 
 exports.toJSON = function () {
   return {
-    competitions: this.competitions.toJSON(),
     contributions: this.contributions.toJSON(),
     scripts: this.scripts.toJSON()
   };
