@@ -46,7 +46,7 @@
   },
   {
     "name": "jsmin-sourcemap",
-    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">sourcemap</a>",
+    "description": "Minify and map your JS via <a target=\"_blank\" href=\"https://github.com/twolfson/node-jsmin2/\">JSMin</a> and <a target=\"_blank\" href=\"https://github.com/mozilla/source-map\">source map</a>",
     "stars": 44,
     "forks": 8,
     "github": "twolfson/grunt-jsmin-sourcemap",
@@ -64,7 +64,7 @@
   },
   {
     "name": "restructuredtext- lint",
-    "description": "reStructuredText linter",
+    "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
     "stars": 38,
     "forks": 4,
     "github": "twolfson/restructuredtext-lint",
