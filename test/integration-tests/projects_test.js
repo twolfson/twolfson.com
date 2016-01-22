@@ -33,11 +33,12 @@ describe('A request to /projects', function () {
     // Grab starCount
     var $ = this.window.$;
     var $starCount = $('.project-stars__count');
-    expect($starCount.length).to.not.equal(0);
+    expect($starCount.length).to.be.at.least(2);
 
     // Assert there are stars
     // DEV: text seems to be returning a weird number
-    var starCountStr = $starCount.html().trim();
+    // DEV: Skip over `spritesmith` due to `1.1k` syntax
+    var starCountStr = $starCount.eq(1).html().trim();
     var starCount = +starCountStr;
     expect(starCountStr).to.not.equal('');
     expect(starCount).to.not.equal(0);
