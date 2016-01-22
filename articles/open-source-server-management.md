@@ -98,3 +98,8 @@ I chose [Chef][] due to:
 I disliked how opinionated and nested [Chef][] was (e.g. would prefer `require` instead of dependency declarations, would prefer dependency declaration in resources) but I got something which I am comfortable with:
 
 https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/src
+
+# Links
+Here are links to some resources I have found practical:
+
+- [Hiring a Tech Ops Team by Charity Majors](http://www.heavybit.com/library/video/2015-02-24-charity-majors)
