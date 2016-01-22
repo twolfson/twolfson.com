@@ -27,6 +27,15 @@
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
   },
   {
+    "name": "serverspec",
+    "description": "Testing tool for server configurations",
+    "stars": 1401,
+    "forks": 267,
+    "github": "mizzy/serverspec",
+    "srcUrl": "https://github.com/mizzy/serverspec",
+    "pageUrl": "https://github.com/mizzy/serverspec"
+  },
+  {
     "name": "gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
     "stars": 910,

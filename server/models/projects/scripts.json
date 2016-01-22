@@ -27,6 +27,15 @@
     "pageUrl": "https://github.com/uber/image-diff"
   },
   {
+    "name": "google-music-electron",
+    "description": "Desktop app for Google Music on top of Electron",
+    "stars": 118,
+    "forks": 18,
+    "github": "twolfson/google-music-electron",
+    "srcUrl": "https://github.com/twolfson/google-music-electron",
+    "pageUrl": "https://github.com/twolfson/google-music-electron"
+  },
+  {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
     "stars": 51,
@@ -54,13 +63,13 @@
     "pageUrl": "https://github.com/twolfson/foundry"
   },
   {
-    "name": "jojo",
-    "description": "the 10 second blog engine for hackers (in javascript)",
+    "name": "restructuredtext- lint",
+    "description": "reStructuredText linter",
     "stars": 38,
     "forks": 4,
-    "github": "twolfson/jojo",
-    "srcUrl": "https://github.com/twolfson/jojo",
-    "pageUrl": "https://github.com/twolfson/jojo"
+    "github": "twolfson/restructuredtext-lint",
+    "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
+    "pageUrl": "https://github.com/twolfson/restructuredtext-lint"
   },
   {
     "name": "eight-track",
@@ -99,22 +108,21 @@
     "pageUrl": "https://github.com/twolfson/dotfiles"
   },
   {
-    "name": "What size is my browser?",
-    "truncatedName": "What size [&hellip;] browser?",
-    "description": "Determine your browser dimensions via media queries",
-    "stars": 5,
-    "forks": 1,
-    "github": "twolfson/whatsizeismybrowser",
-    "srcUrl": "https://github.com/twolfson/whatsizeismybrowser",
-    "pageUrl": "http://whatsizeismybrowser.com/"
-  },
-  {
     "name": "winfiles",
-    "description": "My Windows files, documentation, and Windows workflow",
+    "description": "My Windows files, documentation, and workflow",
     "stars": 3,
     "forks": 0,
     "github": "twolfson/winfiles",
     "srcUrl": "https://github.com/twolfson/winfiles",
     "pageUrl": "https://github.com/twolfson/winfiles"
+  },
+  {
+    "name": "twolfson.com-scripts",
+    "description": "Scripts used to manage my server infrastructure",
+    "stars": 1,
+    "forks": 0,
+    "github": "twolfson/twolfson.com-scripts",
+    "srcUrl": "https://github.com/twolfson/twolfson.com-scripts",
+    "pageUrl": "https://github.com/twolfson/twolfson.com-scripts"
   }
 ]
