@@ -54,15 +54,6 @@
     "pageUrl": "https://github.com/twolfson/foundry"
   },
   {
-    "name": "restructuredtext- lint",
-    "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
-    "stars": 38,
-    "forks": 4,
-    "github": "twolfson/restructuredtext-lint",
-    "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
-    "pageUrl": "https://github.com/twolfson/restructuredtext-lint"
-  },
-  {
     "name": "eight-track",
     "description": "Record and playback HTTP requests",
     "stars": 35,
@@ -70,6 +61,15 @@
     "github": "uber/eight-track",
     "srcUrl": "https://github.com/uber/eight-track",
     "pageUrl": "https://github.com/uber/eight-track"
+  },
+  {
+    "name": "restructuredtext-lint",
+    "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
+    "stars": 30,
+    "forks": 4,
+    "github": "twolfson/restructuredtext-lint",
+    "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
+    "pageUrl": "https://github.com/twolfson/restructuredtext-lint"
   },
   {
     "name": "gifsockets",
