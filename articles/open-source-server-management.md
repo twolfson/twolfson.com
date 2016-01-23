@@ -72,7 +72,9 @@ I went with [Serverspec][] because:
 
 Here is my current test suite:
 
-https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/test
+https://github.com/twolfson/twolfson.com-scripts/tree/2.4.1/test
+
+https://github.com/twolfson/twolfson.com-scripts/blob/2.4.1/.travis.yml
 
 > As a forewarning, there's a common gotcha with respect to provisioning tools. When deleting files, be sure to add a command to remove (e.g. `rm`, `action(:remove)`) and provision before removing the code. Otherwise, legacy files will not get deleted if their "add" code is removed. When we have tests, these trivial issues are more likely to be caught.
 
@@ -86,7 +88,7 @@ In its place, we can use higher level provisioning tools. Instead of being imper
 Some common tools are:
 
 - [Puppet][] - Written in Ruby, has a custom DSL
-- [Chef][] - Written in Ruby, our code is actual Ruby
+- [Chef][] - Written in Ruby, defines classes and methods
 - [Ansible][] - Written in Python
 
 [Puppet]: https://puppetlabs.com/
@@ -94,7 +96,6 @@ Some common tools are:
 
 I chose [Chef][] due to:
 
-- It's Ruby and I want to learn more Ruby
 - It's Ruby which helps me stay consistent with [Serverspec][]
     - Keeping the repository down to 2 languages (i.e. `bash`, Ruby)
 - It's used by operations engineers that I respect (i.e. [Katherine Daniels][@beerops], [Charity Majors][@mipsytipsy])
@@ -102,12 +103,12 @@ I chose [Chef][] due to:
 [@beerops]: https://twitter.com/beerops
 [@mipsytipsy]: https://twitter.com/mipsytipsy
 
-I disliked how opinionated and nested [Chef][] was (e.g. would prefer `require` instead of dependency declarations, would prefer dependency declaration in resources) but I got something which I am comfortable with:
+I should mention that I disliked how opinionated and nested [Chef][] was but I got something which I am comfortable with:
 
-https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/src
+https://github.com/twolfson/twolfson.com-scripts/tree/2.4.1/src
 
 # Links
-Here are links to some resources I have found practical:
+Here are links to some resources I have found useful:
 
 - [Hiring a Tech Ops Team by Charity Majors](http://www.heavybit.com/library/video/2015-02-24-charity-majors)
 - [@twolfson's early iterations with Vagrant and bash](https://github.com/twolfson/vagrant-npm-www/blob/0.1.0/Vagrantfile)
