@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.78.0 - Added "Open source server management" article
+
 3.77.1 - Fixed up broken tests
 
 3.77.0 - Updated projects to current preferences and latest stats
