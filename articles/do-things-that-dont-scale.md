@@ -25,4 +25,20 @@ Instead of this, I opted to script everything in `bash`. Most developers are fri
 
 This can be used for a while via copy/paste and dependencies managed by `. script.sh` but at some point it becomes unweildy and we want templating and shared setup commands.
 
-#
+# Scripting
+On occasion something will need to be scripted for a production environment (e.g. lowercasing user emails, backfilling legacy data).
+
+The main consideration is: Will it take more time to write a one-off script or make the edits by hand via our internal tool?
+
+After a bit of research, I usually reason that 20 edits by hand is fine but 100 will be faster by script.
+
+**Warning:** Please never use a production REPL or directly touch your production database without serious consideration. Usually you will miss an important hook or edge case that will cost more time to reverse. We prefer scripts or edits via tools since these have gone through code review.
+
+# Overengineered scripts
+In the event that we write a script, try to keep it more targeted than generalized.
+
+We can spend all the time we want to generalize a script for future use cases. However code bases change and trying to predict future use cases without having them defined for immediately upcoming business cases (e.g. within next 1/2 weeks) is a no-win scenario.
+
+When we need to cover the other similar use case, we can copy/paste the existing script and edit what we need. If it helps, we can leave a comment in the original script about how to edit the script for future use cases.
+
+
