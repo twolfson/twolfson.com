@@ -12,6 +12,8 @@ http://paulgraham.com/ds.html
 
 It described considering the more manual option to get things done faster for now. While the article was with respect to startups and their business, I have adopted a similar philosophy to development and loved the results.
 
+TODO: Point about how this is also known as YAGNI
+
 # Server management
 Provisioning and manging servers is typically done via a tool like [Puppet][] or [Chef][]. However during the early stages of a startup, there are drawbacks to this:
 
@@ -41,4 +43,29 @@ We can spend all the time we want to generalize a script for future use cases. H
 
 When we need to cover the other similar use case, we can copy/paste the existing script and edit what we need. If it helps, we can leave a comment in the original script about how to edit the script for future use cases.
 
+# Building a feature vs workflow
+Sometimes we will want to add a new feature to our internal tool. However, there are a few negatives to that:
 
+- Requires building new UI
+- Requires updating server code
+- Potential engineering issues
+
+In some cases, we can get lucky and adjust our workflow to solve the problem instead. For example, if someone requests a messaging system inside of an app, then maybe propose a workflow with Slack instead.
+
+# Database architecture
+Sometimes we are adding a new feature and need to build some new tables in our database. There are scenarios when we want to predict 3 more features ahead.
+
+However, unless we know those are guaranteed and not 3 months out. Then it's almost always better to choose the simpler architecture for now.
+
+As a bonus, we get:
+
+- Simpler code in server to integrate with
+- Less mental overhead for developers for now
+
+If we write our tests properly, then there shouldn't be a lot of maintenance noise when we eventually perform said migrations.
+
+The downside would be that:
+
+- If migrations will take more time than writing the complex architecture then:
+    - Improve migration system so it doesn't take developers so long to use it
+    - Use more complex architecture
