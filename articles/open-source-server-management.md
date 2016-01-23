@@ -6,7 +6,7 @@
   "summary": "Announcement about formalizing and open sourcing my server scripts."
 }
 
-For a while I have naively managed my server; installing and running processes by hand with a script or 2 to manage restarting.
+For a while I naively managed my server; installing and running processes by hand with a script to manage restarting.
 
 Finally, I have decided to formalize my scripts, add tests, and document everything.
 
@@ -30,11 +30,11 @@ If you are new to provisioning/bootstrapping servers, I strongly recommend start
 
 Here are iterations of my scripts in [Vagrant][] and `bash`:
 
+https://github.com/twolfson/twolfson.com-scripts/blob/1.12.0/bin/_bootstrap.sh
+
 https://github.com/twolfson/twolfson.com-scripts/blob/1.14.1/Vagrantfile
 
 https://github.com/twolfson/twolfson.com-scripts/tree/1.14.1/src
-
-https://github.com/twolfson/twolfson.com-scripts/blob/1.12.0/bin/_bootstrap.sh
 
 Here are some protips:
 
@@ -50,7 +50,7 @@ Here are some protips:
 [ShortcutFoo]: https://www.shortcutfoo.com/
 
 # Testing
-After getting provisioning scripts set up, we should integrate tests. This lets us confirm everything is setup as expected without manually checking everything every time.
+After getting provisioning scripts set up, we should integrate tests. This lets us confirm everything is configured as expected without manually checking everything every time.
 
 Some testing tools are:
 
@@ -72,9 +72,9 @@ I went with [Serverspec][] because:
 
 Here is my current test suite:
 
-https://github.com/twolfson/twolfson.com-scripts/tree/2.4.1/test
-
 https://github.com/twolfson/twolfson.com-scripts/blob/2.4.1/.travis.yml
+
+https://github.com/twolfson/twolfson.com-scripts/tree/2.4.1/test
 
 > As a forewarning, there's a common gotcha with respect to provisioning tools. When deleting files, be sure to add a command to remove (e.g. `rm`, `action(:remove)`) and provision before removing the code. Otherwise, legacy files will not get deleted if their "add" code is removed. When we have tests, these trivial issues are more likely to be caught.
 
@@ -96,8 +96,7 @@ Some common tools are:
 
 I chose [Chef][] due to:
 
-- It's Ruby which helps me stay consistent with [Serverspec][]
-    - Keeping the repository down to 2 languages (i.e. `bash`, Ruby)
+- It's [Ruby][] which helps me stay consistent with [Serverspec][]
 - It's used by operations engineers that I respect (i.e. [Katherine Daniels][@beerops], [Charity Majors][@mipsytipsy])
 
 [@beerops]: https://twitter.com/beerops
