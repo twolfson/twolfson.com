@@ -111,4 +111,5 @@ https://github.com/twolfson/twolfson.com-scripts/tree/2.4.1/src
 Here are links to some resources I have found useful:
 
 - [Hiring a Tech Ops Team by Charity Majors](http://www.heavybit.com/library/video/2015-02-24-charity-majors)
+- [Weekly DevOps newsletter](http://www.devopsweekly.com/)
 - [@twolfson's early iterations with Vagrant and bash](https://github.com/twolfson/vagrant-npm-www/blob/0.1.0/Vagrantfile)
