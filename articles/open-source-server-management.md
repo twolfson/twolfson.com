@@ -6,24 +6,27 @@
   "summary": "Announcement about formalizing and open sourcing my server scripts."
 }
 
-For a long while, I have naively managed my server; installing and running processes by hand with a script or 2 to manage restarting.
+For a while I have naively managed my server; installing and running processes by hand with a script or 2 to manage restarting.
 
-Finally, I have decided to write/formalize my scripts, add tests, and document everything.
+Finally, I have decided to formalize my scripts, add tests, and document everything.
 
 https://github.com/twolfson/twolfson.com-scripts
+
+The remainder of this article documents the path I took and why you should follow a similar trajectory.
 
 # Starting with Vagrant and bash
 If you are new to provisioning/bootstrapping servers, I strongly recommend starting with [Vagrant][] and `bash`.
 
-- [Vagrant][] because it's familar for someone to `ssh` into a machine
-    - This is identical to logging into a staging or production machine
-    - Additionally if something goes wrong, then we can create a new server easily
+- [Vagrant][] because `ssh`-ing into a machine is a familiar action
+    - Identical to logging into a staging or production machine
+    - If something goes wrong, then we can create a new server easily
     - [Docker][] is a viable alternative as well
-- `bash` because it's approachable for our coworkers since they use a shell daily
-    - It's 1 less tool to learn (as opposed to [Chef][] or [Puppet][])
-    - Additionally if something goes wrong, we can use the same commands to debug
+- `bash` because it's approachable since we use a shell daily
+    - If we are doing this for work, then it's 1 less tool for everyone to learn (as opposed to [Chef][] or [Puppet][])
+    - If something goes wrong, then we can use the same commands to debug
 
 [Vagrant]: https://www.vagrantup.com/
+[Docker]: https://www.docker.com/
 
 Here are iterations of my scripts in [Vagrant][] and `bash`:
 
@@ -47,7 +50,7 @@ Here are some protips:
 [ShortcutFoo]: https://www.shortcutfoo.com/
 
 # Testing
-After getting provisioning scripts set up, we should integrate tests. This lets us confirm everything is setup as expected and our provisioning script won't break the next time it runs.
+After getting provisioning scripts set up, we should integrate tests. This lets us confirm everything is setup as expected without manually checking everything every time.
 
 Some testing tools are:
 
@@ -103,3 +106,4 @@ https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/src
 Here are links to some resources I have found practical:
 
 - [Hiring a Tech Ops Team by Charity Majors](http://www.heavybit.com/library/video/2015-02-24-charity-majors)
+- [@twolfson's early iterations with Vagrant and bash](https://github.com/twolfson/vagrant-npm-www/blob/0.1.0/Vagrantfile)
