@@ -54,8 +54,8 @@ After getting provisioning scripts set up, we should integrate tests. This lets 
 
 Some testing tools are:
 
-- [Serverspec][] - Written in Ruby, very mature with lots of platform support
-    - Repository also doubles as a great reference for commands/info
+- [Serverspec][] - Written in Ruby, mature with support for many platforms
+    - Repository also doubles as a great reference for commands
 - [Inspec][] - Written in Ruby, newly released but written by [Chef][] and based on [Serverspec][]
 - [Testinfra][] - Written in Python, relatively new but has good coverage
 
@@ -64,22 +64,26 @@ Some testing tools are:
 [Inspec]: https://github.com/chef/inspec
 [Testinfra]: https://github.com/philpep/testinfra
 
-I went with [Serverspec][] due to its age and I knew I was likely going to choose a [Ruby][] tool for higher level provisioning. As a result, I wanted to keep with as few languages as possible (i.e. `bash` and [Ruby][]).
+I went with [Serverspec][] because:
+
+- It's mature and well used
+- I knew I was going to choose [Ruby][] for higher level provisioning
+    - To keep repo approachable, I wanted at most 2 languages (i.e. `bash` and [Ruby][])
 
 Here is my current test suite:
 
 https://github.com/twolfson/twolfson.com-scripts/tree/2.2.0/test
 
-> As a developer, I prefer to err on the side of stupidity and write tests -- even for trivial changes that I manually verified. There's a common gotcha in the land of provisioning tools where people delete code to clean up legacy provisioning for files. However, they miss needing to write a provision command to delete those files (i.e. delete code, not telling provisioner to delete files then deleting code). This would be easily caught by CI and tests.
+> As a forewarning, there's a common gotcha with respect to provisioning tools. When deleting files, be sure to add a command to remove (e.g. `rm`, `action(:remove)`) and provision before removing the code. Otherwise, legacy files will not get deleted if their "add" code is removed. When we have tests, these trivial issues are more likely to be caught.
 
 [Ruby]: https://www.ruby-lang.org/en/
 
 # Higher level provisioning
-Eventually, we will grow from 1 server type to multiple server types (e.g. websites node, Jenkins node). When this happens, we can continue to push `bash` but at some point, it isn't the ideal tool.
+Eventually we will grow from 1 server type to multiple server types (e.g. web apps node, Jenkins node). When this happens, we can continue to use `bash` but at some point, it isn't the ideal tool.
 
 In its place, we can use higher level provisioning tools. Instead of being imperative like `bash`, these are declarative and deterministic (i.e. evaluate server state, determine what needs to change, apply changes).
 
-Here are some common tools:
+Some common tools are:
 
 - [Puppet][] - Written in Ruby, has a custom DSL
 - [Chef][] - Written in Ruby, our code is actual Ruby
