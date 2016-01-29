@@ -1,11 +1,12 @@
 // Load in our dependencies
 var _ = require('underscore');
+var secret = require('./secret');
 
 // Define generic unrelated settings
 exports.common = {
   // Resolve mail server based off of secret info
   // {user: 'email@emai.com', password: 'password', host: 'smtp.server', ssl: true}
-  mail: 'secret',
+  mail: secret.mail,
   // In development/testing, do not fetch new project info
   projectOptions: {
     updateImmediately: false,
@@ -30,7 +31,8 @@ exports.production = {
   projectOptions: {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
-  }
+  },
+  rollbar: secret.rollbar
 };
 
 // Merge in grouped settings

@@ -1,5 +1,8 @@
 exports.common = {
-  // TODO: Relocate all of this into `development`
+  // Nothing shared across URLs
+};
+
+exports.development = {
   addDevelopmentRoutes: true,
   addTestRoutes: true,
   url: {
@@ -15,10 +18,6 @@ exports.common = {
       port: 8080
     }
   }
-};
-
-exports.development = {
-  // Inherits from common
 };
 
 exports.test = {

@@ -1,5 +1,5 @@
 exports.common = {
-  errorLogger: 'console',
+  errorHandler: 'console',
   // By default, log all caught errors
   throwCaughtErrors: false
 };
@@ -14,5 +14,5 @@ exports.test = {
 };
 
 exports.production = {
-  errorLogger: 'rollbar'
+  errorHandler: 'rollbar'
 };

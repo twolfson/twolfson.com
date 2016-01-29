@@ -2,10 +2,9 @@
 var Settings = require('shallow-settings');
 var numscale = require('numscale');
 var articles = require('../articles');
-var errorLoggers = require('./error-loggers');
+var errorHandlers = require('./error-handler');
 // TODO: Relocate `secret` to be in `static`
 // TODO: Verify using `articles` here doesn't break things...
-var secret = require('./secret');
 var staticConfig = require('./static');
 var pkg = require('../package.json');
 
@@ -28,25 +27,20 @@ exports.getSettings = function (options) {
   };
 
   // Set up our error logger
-  var errorLogger = settings.errorLogger;
-  switch (errorLogger) {
+  var errorHandler = settings.errorHandler;
+  switch (errorHandler) {
     case 'console':
-      settings.errorLogger = errorLoggers.console();
+      settings.errorHandler = errorHandlers.console();
       break;
     case 'rollbar':
-      var rollbarConfig = secret.rollbar;
-      settings.errorLogger = errorLoggers.rollbar(rollbarConfig.serverToken, {
+      var rollbarConfig = settings.rollbar;
+      settings.errorHandler = errorHandlers.rollbar(rollbarConfig.serverToken, {
         environment: settings.ENV,
         revision: pkg.version
       });
       break;
     default:
-      throw new Error('Expected `errorLogger` to be "console" or "production" but was "' + errorLogger);
-  }
-
-  // If mail depends on secret info, load it
-  if (settings.mail === 'secret') {
-    settings.mail = secret.mail;
+      throw new Error('Expected `errorHandler` to be "console" or "production" but was "' + errorHandler);
   }
 
   // Complete and return our settings
