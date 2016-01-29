@@ -1,12 +1,11 @@
 // Load in dependencies
 var Settings = require('shallow-settings');
 var numscale = require('numscale');
-var articles = require('../articles');
-var errorHandlers = require('./error-handler');
-// TODO: Relocate `secret` to be in `static`
 // TODO: Verify using `articles` here doesn't break things...
-var staticConfig = require('./static');
+var articles = require('../articles');
+var errorHandlers = require('./error-handlers');
 var pkg = require('../package.json');
+var staticConfig = require('./static');
 
 // Define our settings
 exports.getSettings = function (options) {
