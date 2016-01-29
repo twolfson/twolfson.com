@@ -16,11 +16,7 @@ exports.getSettings = function (options) {
   // Set up dynamic config
   settings.articles = articles;
   settings['app.locals'] = {
-    config: {
-      author: 'Todd Wolfson',
-      title: 'Todd Wolfson - Software Engineer',
-      url: 'http://twolfson.com/'
-    },
+    config: settings.jojo,
     env: settings.ENV,
     numscale: numscale.scale
   };
@@ -44,15 +40,5 @@ exports.getSettings = function (options) {
 
   // Complete and return our settings
   settings['package'] = pkg;
-  settings['support-me'] = {
-    bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
-    dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
-    flattr: 'twolfsn',
-    gratipay: 'twolfson',
-    paypal: {
-      name: 'Todd Wolfson',
-      email: 'todd@twolfson.com'
-    }
-  };
   return settings;
 };

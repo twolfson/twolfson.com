@@ -4,6 +4,11 @@ var secret = require('./secret');
 
 // Define generic unrelated settings
 exports.common = {
+  jojo: {
+    author: 'Todd Wolfson',
+    title: 'Todd Wolfson - Software Engineer',
+    url: 'http://twolfson.com/'
+  },
   // Resolve mail server based off of secret info
   // {user: 'email@emai.com', password: 'password', host: 'smtp.server', ssl: true}
   mail: secret.mail,
