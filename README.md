@@ -34,6 +34,24 @@ The server should be accessible via your browser at [http://localhost:8080/](htt
 
 ## Documentation
 ### Development
+#### Configuration
+Our secrets are stored in version control and managed via [SOPS][]. To update a secret, run:
+
+```bash
+# Opens file in `$EDITOR` and syncs config.enc to config
+bin/edit-config-file.sh {{file}}
+# Example: bin/edit-config-file.sh config.enc/secret.json`
+```
+
+To decrypt the current secrets in `config.enc` to `config`, run:
+
+```bash
+# Moves `config` to `config.bak` and decrypts `config.enc` to `config`
+bin/decrypt-config.sh
+```
+
+[SOPS]: https://github.com/mozilla/sops
+
 #### CSS
 CSS is compiled via [SASS][]. We depend on `ruby-sass@3.3.4` (requires [`gem`][] to be installed).
 
@@ -79,7 +97,8 @@ grunt js # Compile JS once
 #### Folders
 - `articles/` - [GitHub Flavored Markdown][] files for blog posts
 - `bin/twolfson.com` - Executable to start `twolfson.com` locally
-- `config/` - Per-environment configuations
+- `config/` - Decrypted files from `config.env/`
+- `config.enc/` - Static configuration files and resource initialization
 - `dist/` - Minified public files
 - `server/` - Container for majority of app
     - `index.js` - Constructor for server that binds view and routing middlewares
