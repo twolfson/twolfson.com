@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Exit on first error and echo commands
+# Exit on first error
 set -e
 
 # If there is a config directory, then move it to a backup
