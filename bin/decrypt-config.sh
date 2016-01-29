@@ -15,10 +15,13 @@ mkdir config
 
 # For each of our files in our encrypted config
 for file in $(ls config.enc); do
-  # If the file is our secret, then decrypt it
+  # Determine src and target for our file
   src_file="config.enc/$file"
   target_file="config/$file"
-  if test "$file" = "secret.json"; then
+
+  # If the file is our secret, then decrypt it
+  # DEV: We allow `CONFIG_COPY_ONLY` to handle tests in Travis CI
+  if test "$file" = "secret.json" && test "$CONFIG_COPY_ONLY" != "TRUE"; then
     sops --decrypt "$src_file" > "$target_file"
   # Otherwise, copy it
   else

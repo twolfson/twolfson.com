@@ -21,8 +21,8 @@ The following steps will get a server running locally:
 git clone https://github.com/twolfson/twolfson.com
 cd twolfson.com
 
-# Install dependencies
-npm install
+# Install dependencies and copy non-decrypted config
+CONFIG_COPY_ONLY=TRUE npm install
 
 # Run the server
 npm start # should say 'Server running at http://localhost:8080/'

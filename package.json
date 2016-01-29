@@ -32,6 +32,7 @@
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
     "lint": "jshint bin/ config/ docs/ grunt/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js && grunt jshint:client && jscs bin/ config/ docs/ grunt/ public/js/main.js server/  test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
     "pretest": "twolfson-style install",
+    "postinstall": "bin/decrypt-config.sh",
     "start": "bin/twolfson.com",
     "test": "npm run lint && npm run test-integration",
     "test-travis": "npm run lint && npm run test-integration",
