@@ -10,7 +10,7 @@ exports.errorEncountered = function (config) {
     }
 
     // Log the error and render a 500
-    config.errorLogger(err, req);
+    config.errorHandler(err, req);
     exports[500](req, res);
   };
 };

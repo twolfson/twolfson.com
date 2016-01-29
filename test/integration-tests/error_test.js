@@ -1,13 +1,13 @@
 var expect = require('chai').expect;
-var errorLoggers = require('../../config/error-loggers');
+var errorHandlers = require('../../config/error-handlers');
 var httpUtils = require('../utils/http');
 var serverUtils = require('../utils/server');
 
 describe('An error generating request', function () {
   var errors = [];
-  var logger = errorLoggers.cache({errors: errors});
+  var logger = errorHandlers.cache({errors: errors});
   serverUtils.run({
-    errorLogger: logger,
+    errorHandler: logger,
     throwCaughtErrors: false
   });
   httpUtils.save(serverUtils.getUrl('/errors/assertion'));
@@ -18,7 +18,7 @@ describe('An error generating request', function () {
     expect(this.body).to.contain('Todd Wolfson');
   });
 
-  it('logs an error to `errorLogger`', function () {
+  it('logs an error to `errorHandler`', function () {
     expect(errors).to.have.property('length', 1);
     expect(errors[0].err.name).to.equal('AssertionError');
     expect(errors[0].req.url).to.equal('/errors/assertion');

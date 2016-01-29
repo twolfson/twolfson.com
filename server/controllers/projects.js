@@ -9,7 +9,7 @@ module.exports = function (config) {
     projects.update(function handleUpdate (err) {
       // If there was an error, log it
       if (err) {
-        return config.errorLogger(err);
+        return config.errorHandler(err);
       }
 
       // Otherwise, update stringified projects
@@ -24,7 +24,7 @@ module.exports = function (config) {
       projects.update(function handleUpdate (err) {
         // If there was an error, log it
         if (err) {
-          return config.errorLogger(err);
+          return config.errorHandler(err);
         }
 
         // Otherwise, update stringified projects
