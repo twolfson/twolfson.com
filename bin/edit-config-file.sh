@@ -11,7 +11,7 @@ if test "$filepath" = ""; then
 fi
 
 # If our file is a secret, then load it into SOPS
-filename="$(basename "$file")"
+filename="$(basename "$filepath")"
 if test "$filename" = "secret.json"; then
   sops "$filepath"
 # Otherwise, edit it normally
