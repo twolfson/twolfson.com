@@ -7,4 +7,5 @@ tmp/
 .sass-cache/
 updateProduction.sh
 config/
+config.bak/
 .vagrant/

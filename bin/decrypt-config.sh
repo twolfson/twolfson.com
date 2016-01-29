@@ -2,10 +2,16 @@
 # Exit on first error and echo commands
 set -e
 
-# If there is no config directory, then create one
-if ! test -d config; then
-  mkdir config
+# If there is a config directory, then move it to a backup
+if test -d config; then
+  if test -d config.bak; then
+    rm -r config.bak
+  fi
+  mv config/ config.bak/
 fi
+
+# Create our new config directory
+mkdir config
 
 # For each of our files in our encrypted config
 for file in $(ls config.enc); do
@@ -13,9 +19,9 @@ for file in $(ls config.enc); do
   src_file="config.enc/$file"
   target_file="config/$file"
   if test "$file" = "secret.json"; then
-    sops --decrypt "$file" > "$target_file"
-  # Otherwise, copy it with a backup
+    sops --decrypt "$src_file" > "$target_file"
+  # Otherwise, copy it
   else
-    cp --backup --suffix "bak" "$src_file" "$target_file"
+    cp "$src_file" "$target_file"
   fi
 done
