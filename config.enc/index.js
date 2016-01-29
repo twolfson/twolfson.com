@@ -1,7 +1,6 @@
 // Load in dependencies
 var Settings = require('shallow-settings');
 var numscale = require('numscale');
-// TODO: Verify using `articles` here doesn't break things...
 var articles = require('../articles');
 var errorHandlers = require('./error-handlers');
 var pkg = require('../package.json');
