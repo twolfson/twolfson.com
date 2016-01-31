@@ -10,14 +10,17 @@ if test "$filepath" = ""; then
   exit 1
 fi
 
-# If our file is a secret, then load it into SOPS
+# Define our secret files
+secret_files="secret.enc.json"
+
+# If our file is a secret
 filename="$(basename "$filepath")"
-if test "$filename" = "secret.json"; then
+if echo "$secret_files" | grep "$filename"; then
+  # Load it into SOPS and run our sync script
   sops "$filepath"
-# Otherwise, edit it normally
+  bin/decrypt-config.sh
+# Otherwise (it's a normal file)
 else
+  # Edit it normally
   "$EDITOR" "$filepath"
 fi
-
-# Run our sync scripts
-bin/decrypt-config.sh
