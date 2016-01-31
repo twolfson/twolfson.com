@@ -2,29 +2,21 @@
 # Exit on first error
 set -e
 
-# If there is a config directory, then move it to a backup
-if test -d config; then
-  if test -d config.bak; then
-    rm -r config.bak
-  fi
-  mv config/ config.bak/
-fi
-
-# Create our new config directory
-mkdir config
+# Define our secret files
+secret_files="secret.enc.json"
 
 # For each of our files in our encrypted config
-for file in $(ls config.enc); do
+for file in $secret_files; do
   # Determine src and target for our file
-  src_file="config.enc/$file"
-  target_file="config/$file"
+  src_file="config/$file"
+  target_file="$(echo "config/$file" | sed -E "s/.enc.json/.json/")"
 
-  # If the file is our secret, then decrypt it
+  # If we only want to copy, then perform a copy
   # DEV: We allow `CONFIG_COPY_ONLY` to handle tests in Travis CI
-  if test "$file" = "secret.json" && test "$CONFIG_COPY_ONLY" != "TRUE"; then
-    sops --decrypt "$src_file" > "$target_file"
-  # Otherwise, copy it
-  else
+  if test "$CONFIG_COPY_ONLY" = "TRUE"; then
     cp "$src_file" "$target_file"
+  # Otherwise, decrypt it
+  else
+    sops --decrypt "$src_file" > "$target_file"
   fi
 done
