@@ -6,6 +6,5 @@ npm-debug.log
 tmp/
 .sass-cache/
 updateProduction.sh
-config/
-config.bak/
+config/secret.json
 .vagrant/
