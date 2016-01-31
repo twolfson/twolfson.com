@@ -38,15 +38,15 @@ The server should be accessible via your browser at [http://localhost:8080/](htt
 Our secrets are stored in version control and managed via [SOPS][]. To update a secret, run:
 
 ```bash
-# Opens file in `$EDITOR` and syncs config.enc to config
+# Opens file in `$EDITOR` and syncs secret to decrypted fiile
 bin/edit-config-file.sh {{file}}
-# Example: bin/edit-config-file.sh config.enc/secret.json`
+# Example: bin/edit-config-file.sh config/secret.enc.json`
 ```
 
-To decrypt the current secrets in `config.enc` to `config`, run:
+To decrypt the current secrets in `config`, run:
 
 ```bash
-# Moves `config` to `config.bak` and decrypts `config.enc` to `config`
+# Decrypts all secret files in `config` (e.g. `secret.enc.json`)
 bin/decrypt-config.sh
 ```
 
