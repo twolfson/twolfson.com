@@ -16,6 +16,16 @@ exports.common = {
   projectOptions: {
     updateImmediately: false,
     updateInterval: null
+  },
+  supportMe: {
+    bitcoin: '1LVT8UpsgyKhGzN3TZxSKqqqd466NtZ99p',
+    dogecoin: 'DGJQbYtSH8jau967XKUR7cpZ7jJEe9SPSQ',
+    flattr: 'twolfsn',
+    gratipay: 'twolfson',
+    paypal: {
+      name: 'Todd Wolfson',
+      email: 'todd@twolfson.com'
+    }
   }
 };
 
