@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.79.1 - Added missing smoke tests for `/license` and `/support-me` and added back missing supportMe config
+
 3.79.0 - Moved to SOPS for secret management
 
 3.78.0 - Added "Open source server management" article
