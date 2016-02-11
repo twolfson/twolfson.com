@@ -32,23 +32,24 @@ $base-border-width: 2px;
 
 // Scale up all fonts such that a blog post is ~75 characters per line
 $font-scale: 18 / 16;
-// $font-scale: 1;
+// https://github.com/csswizardry/inuit.css/blob/v5.0.1/_defaults.scss#L45-L46
 $base-font-size: 16px * $font-scale;
 $base-line-height: 24px * $font-scale;
 
-$giga-size:         96px * $font-scale;
-$mega-size:         72px * $font-scale;
-$kilo-size:         48px * $font-scale;
+// https://github.com/csswizardry/inuit.css/blob/v5.0.1/_defaults.scss#L111-L129
+$giga-size: 96px * $font-scale;
+$mega-size: 72px * $font-scale;
+$kilo-size: 48px * $font-scale;
 
-$h1-size:           36px * $font-scale; // .alpha
-$h2-size:           30px * $font-scale; // .beta
-$h3-size:           24px * $font-scale; // .gamma
-$h4-size:           20px * $font-scale; // .delta
-$h5-size:           16px * $font-scale; // .epsilon
-$h6-size:           14px * $font-scale; // .zeta
+$h1-size: 36px * $font-scale; // .alpha
+$h2-size: 30px * $font-scale; // .beta
+$h3-size: 24px * $font-scale; // .gamma
+$h4-size: 20px * $font-scale; // .delta
+$h5-size: 16px * $font-scale; // .epsilon
+$h6-size: 14px * $font-scale; // .zeta
 
-$milli-size:        12px * $font-scale;
-$micro-size:        10px * $font-scale;
+$milli-size: 12px * $font-scale;
+$micro-size: 10px * $font-scale;
 
 $base-ui-color: $off-black;
 $base-font-family: $sans-font-family;
