@@ -1,13 +1,11 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    VARS.SCSS
+/*------------------------------------*    VARS.SCSS
 \*------------------------------------*/
 /** Colors **/
 /** Padding/margins **/
 /** Fonts **/
 /** Borders **/
-/*------------------------------------*\
-    $OBJECTS-AND-ABSTRACTIONS
+/*------------------------------------*    $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
 /**
  * All of inuit.css’ objects and abstractions are initially turned off by
@@ -15,8 +13,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-/*------------------------------------*\
-    INUIT.CSS
+/*------------------------------------*    INUIT.CSS
 \*------------------------------------*/
 /*!*
  *
@@ -65,8 +62,7 @@
  *
  * Thank you for choosing inuit.css. May your web fonts render perfectly.
  */
-/*------------------------------------*\
-    $CONTENTS
+/*------------------------------------*    $CONTENTS
 \*------------------------------------*/
 /**
  * CONTENTS............You’re reading it!
@@ -122,8 +118,7 @@
  * HELPER..............A series of helper classes to use arbitrarily
  * DEBUG...............Enable to add visual flags for debugging purposes
  */
-/*------------------------------------*\
-    $WARNING
+/*------------------------------------*    $WARNING
 \*------------------------------------*/
 /*
  * inuit.css, being an OO framework, works in keeping with the open/closed
@@ -137,35 +132,30 @@
  * Try not to edit any CSS beyond this point; if you find you need to do so
  * it is a failing of the framework so please tweet at @inuitcss.
  */
-/*------------------------------------*\
-    $IMPORTS
+/*------------------------------------*    $IMPORTS
 \*------------------------------------*/
 /**
  * Generic utility styles etc.
  */
-/*------------------------------------*\
-    $DEFAULTS
+/*------------------------------------*    $DEFAULTS
 \*------------------------------------*/
 /**
  * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
  * in the inuit.css-web-template) to override them.
  */
-/*------------------------------------*\
-    $DEBUG
+/*------------------------------------*    $DEBUG
 \*------------------------------------*/
 /**
  * Debug mode will visually highlight any potential markup/accessibility quirks
  * in the browser. Set to `true` or `false`.
  */
-/*------------------------------------*\
-    $BORDER-BOX
+/*------------------------------------*    $BORDER-BOX
 \*------------------------------------*/
 /**
  * Do you want all elements to adopt `box-sizing:border-box;` as per
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
-/*------------------------------------*\
-    $BASE
+/*------------------------------------*    $BASE
 \*------------------------------------*/
 /**
  * Base stuff
@@ -176,8 +166,7 @@
 /**
  * Default colour for objects’ borders etc.
  */
-/*------------------------------------*\
-    $RESPONSIVE
+/*------------------------------------*    $RESPONSIVE
 \*------------------------------------*/
 /**
  * Responsiveness?
@@ -199,14 +188,12 @@
 /**
  * Tell inuit.css when breakpoints start.
  */
-/*------------------------------------*\
-    $FONT-SIZES
+/*------------------------------------*    $FONT-SIZES
 \*------------------------------------*/
 /**
  * Font-sizes (in pixels). Refer to relevant sections for their implementations.
  */
-/*------------------------------------*\
-    $QUOTES
+/*------------------------------------*    $QUOTES
 \*------------------------------------*/
 /**
  * English quote marks?
@@ -218,8 +205,7 @@
 /**
  * If you need non-English quotes, please alter the following values accordingly:
  */
-/*------------------------------------*\
-    $BRAND
+/*------------------------------------*    $BRAND
 \*------------------------------------*/
 /**
  * Brand stuff
@@ -227,22 +213,19 @@
 /**
  * How big would you like round corners to be by default?
  */
-/*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
+/*------------------------------------*    $OBJECTS AND ABSTRACTIONS
 \*------------------------------------*/
 /**
  * Which objects and abstractions would you like to use?
  */
-/*------------------------------------*\
-    $FRAMEWORK
+/*------------------------------------*    $FRAMEWORK
 \*------------------------------------*/
 /**
  * inuit.css will work these next ones out for use within the framework.
  *
  * Assign our `$base-line-height` to a new spacing var for more transparency.
  */
-/*------------------------------------*\
-    $MIXINS
+/*------------------------------------*    $MIXINS
 \*------------------------------------*/
 /**
  * Create a fully formed type style (sizing and vertical rhythm) by passing in a
@@ -686,16 +669,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*------------------------------------*\
-    $RESET
+/*------------------------------------*    $RESET
 \*------------------------------------*/
 /**
  * A more considered reset; more of a restart...
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 /**
-* Let’s make the box model all nice, shall we...?
-*/
+    * Let’s make the box model all nice, shall we...?
+    */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -757,8 +739,7 @@ textarea:focus {
   cursor: text;
   outline: none; }
 
-/*------------------------------------*\
-    $CLEARFIX
+/*------------------------------------*    $CLEARFIX
 \*------------------------------------*/
 /**
  * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
@@ -770,8 +751,7 @@ textarea:focus {
   display: table;
   clear: both; }
 
-/*------------------------------------*\
-    $SHARED
+/*------------------------------------*    $SHARED
 \*------------------------------------*/
 /**
  * Where `margin-bottom` is concerned, this value will be the same as the
@@ -798,7 +778,8 @@ pre,
   blockquote, .islet p, .islet address, .islet
   table, .islet
   fieldset, .islet figure, .islet
-  pre, .islet .form-fields > li, .islet
+  pre,
+  .islet .form-fields > li, .islet
   .media, .islet
   .island, .islet
   .islet {
@@ -831,16 +812,14 @@ ul, ol, dd {
 /**
  * Base styles; unclassed HTML elements etc.
  */
-/*------------------------------------*\
-    $MAIN
+/*------------------------------------*    $MAIN
 \*------------------------------------*/
 html {
-  font: 1.125em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.125em / 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-y: scroll;
   min-height: 100%; }
 
-/*------------------------------------*\
-    $HEADINGS
+/*------------------------------------*    $HEADINGS
 \*------------------------------------*/
 /**
  * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
@@ -911,8 +890,7 @@ hgroup .hN {
   font-size: 3rem;
   line-height: 1; }
 
-/*------------------------------------*\
-    $PARAGRAPHS
+/*------------------------------------*    $PARAGRAPHS
 \*------------------------------------*/
 /**
  * The `.lede` class is used to make the introductory text (usually a paragraph)
@@ -924,8 +902,7 @@ hgroup .hN {
   font-size: 1.125rem;
   line-height: 1.33333; }
 
-/*------------------------------------*\
-    $SMALLPRINT
+/*------------------------------------*    $SMALLPRINT
 \*------------------------------------*/
 /**
  * A series of classes for setting tiny type; for use in smallprint etc.
@@ -941,8 +918,7 @@ hgroup .hN {
   font-size: 0.625rem;
   line-height: 2.4; }
 
-/*------------------------------------*\
-    $QUOTES
+/*------------------------------------*    $QUOTES
 \*------------------------------------*/
 /**
  * If English quotes are set in `_vars.scss`, define them here.
@@ -997,8 +973,8 @@ blockquote {
  */
 blockquote {
   /**
-   * .4em is roughly equal to the width of the opening “ that we wish to hang.
-   */
+     * .4em is roughly equal to the width of the opening “ that we wish to hang.
+     */
   text-indent: -0.41em; }
   blockquote p:last-of-type {
     margin-bottom: 0; }
@@ -1009,8 +985,7 @@ blockquote {
   .source:before {
     content: "—"; }
 
-/*------------------------------------*\
-    $CODE
+/*------------------------------------*    $CODE
 \*------------------------------------*/
 /**
  * Use an explicit font stack to ensure browsers render correct `line-height`.
@@ -1031,8 +1006,8 @@ pre mark {
  */
 .code-comment {
   /**
-   * Override this setting in your theme stylesheet
-   */
+     * Override this setting in your theme stylesheet
+     */
   opacity: 0.75;
   filter: alpha(opacity=75); }
 
@@ -1073,8 +1048,7 @@ pre mark {
   white-space: pre;
   /* [4] */ }
 
-/*------------------------------------*\
-    $IMAGES
+/*------------------------------------*    $IMAGES
 \*------------------------------------*/
 /**
  * Demo: jsfiddle.net/inuitcss/yMtur
@@ -1138,8 +1112,7 @@ img[height] {
 figure > img {
   display: block; }
 
-/*------------------------------------*\
-    $LISTS
+/*------------------------------------*    $LISTS
 \*------------------------------------*/
 /**
  * Remove vertical spacing from nested lists.
@@ -1155,8 +1128,7 @@ li > ol {
 .numbered-list {
   list-style-type: decimal; }
 
-/*------------------------------------*\
-    $TABLES
+/*------------------------------------*    $TABLES
 \*------------------------------------*/
 /**
  * We have a lot at our disposal for making very complex table constructs, e.g.:
@@ -1341,8 +1313,10 @@ td {
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
+
 .table--bordered thead tr:last-child th {
   border-bottom-width: 2px; }
+
 .table--bordered tbody tr th:last-of-type {
   border-right-width: 2px; }
 
@@ -1359,8 +1333,7 @@ td {
 .table--data {
   font: 12px/1.5 sans-serif; }
 
-/*------------------------------------*\
-    $FORMS
+/*------------------------------------*    $FORMS
 \*------------------------------------*/
 /**
  *
@@ -1383,8 +1356,8 @@ fieldset {
 .text-input,
 textarea {
   /**
-   * Style these via your theme stylesheet.
-   */ }
+     * Style these via your theme stylesheet.
+     */ }
 
 /**
  * Group sets of form fields in a list, e.g.:
@@ -1443,11 +1416,11 @@ label,
   display: block; }
 
 /**
- * Extra help text in `label`s, e.g.:
- *
-   <label>Card number <small class=additional>No spaces</small></label>
- *
- */
+     * Extra help text in `label`s, e.g.:
+     *
+       <label>Card number <small class=additional>No spaces</small></label>
+     *
+     */
 .additional {
   display: block;
   font-weight: normal; }
@@ -1472,8 +1445,8 @@ label,
   margin: 0; }
 
 /*
- * Labels in check-lists
- */
+     * Labels in check-lists
+     */
 .check-label,
 .check-list label,
 .check-list .label {
@@ -1522,8 +1495,7 @@ label,
 /**
  * Objects and abstractions
  */
-/*------------------------------------*\
-    $FLEXBOX
+/*------------------------------------*    $FLEXBOX
 \*------------------------------------*/
 /**
  * Until we can utilise flexbox natively we can kinda, sorta, attempt to emulate
@@ -1574,8 +1546,7 @@ html.flexbox {
 /**
  * Style trumps; helper and brand classes
  */
-/*------------------------------------*\
-    $WIDTHS
+/*------------------------------------*    $WIDTHS
 \*------------------------------------*/
 /**
  * Sizes in human readable format. These are used in conjunction with other
@@ -1586,20 +1557,20 @@ html.flexbox {
  * variations.
  */
 /**
-* Whole
-*/
+    * Whole
+    */
 .one-whole {
   width: 100%; }
 
 /**
-* Halves
-*/
+    * Halves
+    */
 .one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
   width: 50%; }
 
 /**
-* Thirds
-*/
+    * Thirds
+    */
 .one-third, .two-sixths, .four-twelfths {
   width: 33.333%; }
 
@@ -1607,8 +1578,8 @@ html.flexbox {
   width: 66.666%; }
 
 /**
-* Quarters
-*/
+    * Quarters
+    */
 .one-quarter, .two-eighths, .three-twelfths {
   width: 25%; }
 
@@ -1616,8 +1587,8 @@ html.flexbox {
   width: 75%; }
 
 /**
-* Fifths
-*/
+    * Fifths
+    */
 .one-fifth, .two-tenths {
   width: 20%; }
 
@@ -1631,8 +1602,8 @@ html.flexbox {
   width: 80%; }
 
 /**
-* Sixths
-*/
+    * Sixths
+    */
 .one-sixth, .two-twelfths {
   width: 16.666%; }
 
@@ -1640,8 +1611,8 @@ html.flexbox {
   width: 83.333%; }
 
 /**
-* Eighths
-*/
+    * Eighths
+    */
 .one-eighth {
   width: 12.5%; }
 
@@ -1655,8 +1626,8 @@ html.flexbox {
   width: 87.5%; }
 
 /**
-* Tenths
-*/
+    * Tenths
+    */
 .one-tenth {
   width: 10%; }
 
@@ -1670,8 +1641,8 @@ html.flexbox {
   width: 90%; }
 
 /**
-* Twelfths
-*/
+    * Twelfths
+    */
 .one-twelfth {
   width: 8.333%; }
 
@@ -1700,537 +1671,423 @@ html.flexbox {
  */
 @media only screen and (max-width: 480px) {
   /**
-  * Whole
-  */
+    * Whole
+    */
   .palm-one-whole {
     width: 100%; }
-
   /**
-  * Halves
-  */
+    * Halves
+    */
   .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
     width: 50%; }
-
   /**
-  * Thirds
-  */
+    * Thirds
+    */
   .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
     width: 33.333%; }
-
   .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
     width: 66.666%; }
-
   /**
-  * Quarters
-  */
+    * Quarters
+    */
   .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
     width: 25%; }
-
   .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
     width: 75%; }
-
   /**
-  * Fifths
-  */
+    * Fifths
+    */
   .palm-one-fifth, .palm-two-tenths {
     width: 20%; }
-
   .palm-two-fifths, .palm-four-tenths {
     width: 40%; }
-
   .palm-three-fifths, .palm-six-tenths {
     width: 60%; }
-
   .palm-four-fifths, .palm-eight-tenths {
     width: 80%; }
-
   /**
-  * Sixths
-  */
+    * Sixths
+    */
   .palm-one-sixth, .palm-two-twelfths {
     width: 16.666%; }
-
   .palm-five-sixths, .palm-ten-twelfths {
     width: 83.333%; }
-
   /**
-  * Eighths
-  */
+    * Eighths
+    */
   .palm-one-eighth {
     width: 12.5%; }
-
   .palm-three-eighths {
     width: 37.5%; }
-
   .palm-five-eighths {
     width: 62.5%; }
-
   .palm-seven-eighths {
     width: 87.5%; }
-
   /**
-  * Tenths
-  */
+    * Tenths
+    */
   .palm-one-tenth {
     width: 10%; }
-
   .palm-three-tenths {
     width: 30%; }
-
   .palm-seven-tenths {
     width: 70%; }
-
   .palm-nine-tenths {
     width: 90%; }
-
   /**
-  * Twelfths
-  */
+    * Twelfths
+    */
   .palm-one-twelfth {
     width: 8.333%; }
-
   .palm-five-twelfths {
     width: 41.666%; }
-
   .palm-seven-twelfths {
     width: 58.333%; }
-
   .palm-eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /**
-  * Whole
-  */
+    * Whole
+    */
   .lap-one-whole {
     width: 100%; }
-
   /**
-  * Halves
-  */
+    * Halves
+    */
   .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
     width: 50%; }
-
   /**
-  * Thirds
-  */
+    * Thirds
+    */
   .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
     width: 33.333%; }
-
   .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
     width: 66.666%; }
-
   /**
-  * Quarters
-  */
+    * Quarters
+    */
   .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
     width: 25%; }
-
   .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
     width: 75%; }
-
   /**
-  * Fifths
-  */
+    * Fifths
+    */
   .lap-one-fifth, .lap-two-tenths {
     width: 20%; }
-
   .lap-two-fifths, .lap-four-tenths {
     width: 40%; }
-
   .lap-three-fifths, .lap-six-tenths {
     width: 60%; }
-
   .lap-four-fifths, .lap-eight-tenths {
     width: 80%; }
-
   /**
-  * Sixths
-  */
+    * Sixths
+    */
   .lap-one-sixth, .lap-two-twelfths {
     width: 16.666%; }
-
   .lap-five-sixths, .lap-ten-twelfths {
     width: 83.333%; }
-
   /**
-  * Eighths
-  */
+    * Eighths
+    */
   .lap-one-eighth {
     width: 12.5%; }
-
   .lap-three-eighths {
     width: 37.5%; }
-
   .lap-five-eighths {
     width: 62.5%; }
-
   .lap-seven-eighths {
     width: 87.5%; }
-
   /**
-  * Tenths
-  */
+    * Tenths
+    */
   .lap-one-tenth {
     width: 10%; }
-
   .lap-three-tenths {
     width: 30%; }
-
   .lap-seven-tenths {
     width: 70%; }
-
   .lap-nine-tenths {
     width: 90%; }
-
   /**
-  * Twelfths
-  */
+    * Twelfths
+    */
   .lap-one-twelfth {
     width: 8.333%; }
-
   .lap-five-twelfths {
     width: 41.666%; }
-
   .lap-seven-twelfths {
     width: 58.333%; }
-
   .lap-eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (min-width: 481px) {
   /**
-  * Whole
-  */
+    * Whole
+    */
   .lap-and-up-one-whole {
     width: 100%; }
-
   /**
-  * Halves
-  */
+    * Halves
+    */
   .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
     width: 50%; }
-
   /**
-  * Thirds
-  */
+    * Thirds
+    */
   .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
     width: 33.333%; }
-
   .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
     width: 66.666%; }
-
   /**
-  * Quarters
-  */
+    * Quarters
+    */
   .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
     width: 25%; }
-
   .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
     width: 75%; }
-
   /**
-  * Fifths
-  */
+    * Fifths
+    */
   .lap-and-up-one-fifth, .lap-and-up-two-tenths {
     width: 20%; }
-
   .lap-and-up-two-fifths, .lap-and-up-four-tenths {
     width: 40%; }
-
   .lap-and-up-three-fifths, .lap-and-up-six-tenths {
     width: 60%; }
-
   .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
     width: 80%; }
-
   /**
-  * Sixths
-  */
+    * Sixths
+    */
   .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
     width: 16.666%; }
-
   .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
     width: 83.333%; }
-
   /**
-  * Eighths
-  */
+    * Eighths
+    */
   .lap-and-up-one-eighth {
     width: 12.5%; }
-
   .lap-and-up-three-eighths {
     width: 37.5%; }
-
   .lap-and-up-five-eighths {
     width: 62.5%; }
-
   .lap-and-up-seven-eighths {
     width: 87.5%; }
-
   /**
-  * Tenths
-  */
+    * Tenths
+    */
   .lap-and-up-one-tenth {
     width: 10%; }
-
   .lap-and-up-three-tenths {
     width: 30%; }
-
   .lap-and-up-seven-tenths {
     width: 70%; }
-
   .lap-and-up-nine-tenths {
     width: 90%; }
-
   /**
-  * Twelfths
-  */
+    * Twelfths
+    */
   .lap-and-up-one-twelfth {
     width: 8.333%; }
-
   .lap-and-up-five-twelfths {
     width: 41.666%; }
-
   .lap-and-up-seven-twelfths {
     width: 58.333%; }
-
   .lap-and-up-eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (max-width: 1023px) {
   /**
-  * Whole
-  */
+    * Whole
+    */
   .portable-one-whole {
     width: 100%; }
-
   /**
-  * Halves
-  */
+    * Halves
+    */
   .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
     width: 50%; }
-
   /**
-  * Thirds
-  */
+    * Thirds
+    */
   .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
     width: 33.333%; }
-
   .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
     width: 66.666%; }
-
   /**
-  * Quarters
-  */
+    * Quarters
+    */
   .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
     width: 25%; }
-
   .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
     width: 75%; }
-
   /**
-  * Fifths
-  */
+    * Fifths
+    */
   .portable-one-fifth, .portable-two-tenths {
     width: 20%; }
-
   .portable-two-fifths, .portable-four-tenths {
     width: 40%; }
-
   .portable-three-fifths, .portable-six-tenths {
     width: 60%; }
-
   .portable-four-fifths, .portable-eight-tenths {
     width: 80%; }
-
   /**
-  * Sixths
-  */
+    * Sixths
+    */
   .portable-one-sixth, .portable-two-twelfths {
     width: 16.666%; }
-
   .portable-five-sixths, .portable-ten-twelfths {
     width: 83.333%; }
-
   /**
-  * Eighths
-  */
+    * Eighths
+    */
   .portable-one-eighth {
     width: 12.5%; }
-
   .portable-three-eighths {
     width: 37.5%; }
-
   .portable-five-eighths {
     width: 62.5%; }
-
   .portable-seven-eighths {
     width: 87.5%; }
-
   /**
-  * Tenths
-  */
+    * Tenths
+    */
   .portable-one-tenth {
     width: 10%; }
-
   .portable-three-tenths {
     width: 30%; }
-
   .portable-seven-tenths {
     width: 70%; }
-
   .portable-nine-tenths {
     width: 90%; }
-
   /**
-  * Twelfths
-  */
+    * Twelfths
+    */
   .portable-one-twelfth {
     width: 8.333%; }
-
   .portable-five-twelfths {
     width: 41.666%; }
-
   .portable-seven-twelfths {
     width: 58.333%; }
-
   .portable-eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (min-width: 1024px) {
   /**
-  * Whole
-  */
+    * Whole
+    */
   .desk-one-whole {
     width: 100%; }
-
   /**
-  * Halves
-  */
+    * Halves
+    */
   .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
     width: 50%; }
-
   /**
-  * Thirds
-  */
+    * Thirds
+    */
   .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
     width: 33.333%; }
-
   .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
     width: 66.666%; }
-
   /**
-  * Quarters
-  */
+    * Quarters
+    */
   .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
     width: 25%; }
-
   .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
     width: 75%; }
-
   /**
-  * Fifths
-  */
+    * Fifths
+    */
   .desk-one-fifth, .desk-two-tenths {
     width: 20%; }
-
   .desk-two-fifths, .desk-four-tenths {
     width: 40%; }
-
   .desk-three-fifths, .desk-six-tenths {
     width: 60%; }
-
   .desk-four-fifths, .desk-eight-tenths {
     width: 80%; }
-
   /**
-  * Sixths
-  */
+    * Sixths
+    */
   .desk-one-sixth, .desk-two-twelfths {
     width: 16.666%; }
-
   .desk-five-sixths, .desk-ten-twelfths {
     width: 83.333%; }
-
   /**
-  * Eighths
-  */
+    * Eighths
+    */
   .desk-one-eighth {
     width: 12.5%; }
-
   .desk-three-eighths {
     width: 37.5%; }
-
   .desk-five-eighths {
     width: 62.5%; }
-
   .desk-seven-eighths {
     width: 87.5%; }
-
   /**
-  * Tenths
-  */
+    * Tenths
+    */
   .desk-one-tenth {
     width: 10%; }
-
   .desk-three-tenths {
     width: 30%; }
-
   .desk-seven-tenths {
     width: 70%; }
-
   .desk-nine-tenths {
     width: 90%; }
-
   /**
-  * Twelfths
-  */
+    * Twelfths
+    */
   .desk-one-twelfth {
     width: 8.333%; }
-
   .desk-five-twelfths {
     width: 41.666%; }
-
   .desk-seven-twelfths {
     width: 58.333%; }
-
   .desk-eleven-twelfths {
     width: 91.666%; } }
+
 /**
  * If you have set the additional `$responsive-extra` variable to ‘true’ in
  * `_vars.scss` then you now have access to the following class available to
  * accomodate much larger screen resolutions.
  */
 /* endif */
-/*------------------------------------*\
-    $PUSH
+/*------------------------------------*    $PUSH
 \*------------------------------------*/
 /**
  * Push classes, to move grid items over to the right by certain amounts.
  */
-/*------------------------------------*\
-    $PULL
+/*------------------------------------*    $PULL
 \*------------------------------------*/
 /**
  * Pull classes, to move grid items over to the right by certain amounts.
  */
-/*------------------------------------*\
-    $BRAND
+/*------------------------------------*    $BRAND
 \*------------------------------------*/
 /**
  * `.brand` is a quick and simple way to apply your brand face and/or color to
  * any element using a handy helper class.
  */
 .brand {
-  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif!important;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
   color: inherit!important; }
 
 .brand-face {
-  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif!important; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
   color: inherit!important; }
 
-/*------------------------------------*\
-    $HELPER
+/*------------------------------------*    $HELPER
 \*------------------------------------*/
 /**
  * A series of helper classes to use arbitrarily. Only use a helper class if an
@@ -2495,6 +2352,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   .accessibility--lap,
   .visuallyhidden--lap {
@@ -2506,6 +2364,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 @media only screen and (min-width: 481px) {
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
@@ -2517,6 +2376,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 @media only screen and (max-width: 1023px) {
   .accessibility--portable,
   .visuallyhidden--portable {
@@ -2528,6 +2388,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 @media only screen and (min-width: 1024px) {
   .accessibility--desk,
   .visuallyhidden--desk {
@@ -2539,6 +2400,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 @media only screen and (min-width: 1200px) {
   .accessibility--desk-wide,
   .visuallyhidden--desk-wide {
@@ -2550,6 +2412,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
+
 /* endif */
 body {
   background: #FDFDFD;
@@ -3138,5 +3001,3 @@ legend {
 
 .ignore-flow {
   position: absolute; }
-
-/*# sourceMappingURL=index.css.map */
