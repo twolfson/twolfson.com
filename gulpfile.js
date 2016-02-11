@@ -1,5 +1,6 @@
 // Load in our dependencies
 var gulp = require('gulp');
+var gulpCsso = require('gulp-csso');
 var gulpSass = require('gulp-sass');
 
 // Define our tasks
@@ -10,6 +11,7 @@ gulp.task('build-css', function buildCss () {
     .pipe(gulpSass({
       style: 'nested'
     }))
+    .pipe(gulpCsso())
     .pipe(gulp.dest('dist/css'));
 });
 
