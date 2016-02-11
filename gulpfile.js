@@ -40,9 +40,10 @@ gulp.task('build-css', function buildCss () {
       .pipe(gulpSizereport({gzip: true}));
   }
 
-  // Output our CSS
+  // Output our CSS and notify LiveReload
   return cssStream
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gulpLivereload());
 });
 
 gulp.task('build', ['build-css']);
