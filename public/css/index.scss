@@ -3,7 +3,24 @@
 // Include vars and inuit.css
 @import "vars";
 @import "inuit/inuit";
-@import "mixins/mixins";
-@import "base/base";
-@import "objects/objects";
-@import "generic/generic";
+
+// Mixin imports
+@import "mixins/compact";
+@import "mixins/prefixer";
+@import "mixins/box-shadow";
+@import "mixins/linear-gradient";
+@import "mixins/transition";
+
+// Base imports
+@import "base/global";
+@import "base/sticky";
+@import "base/sprites";
+@import "base/highlight";
+@import "base/highlight-extensions";
+
+// Object imports
+@import "objects/grid";
+@import "objects/form";
+
+// Generic imports
+@import "generic/helper";
