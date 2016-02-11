@@ -82,21 +82,21 @@ $h6-size: 14px * $font-scale; // .zeta
 $milli-size: 12px * $font-scale;
 $micro-size: 10px * $font-scale;
 
-// TODO: Ditch `base-ui-color`, it's a very vague name...
-$base-ui-color: $gray-x1A;
-$base-border-width: 2px;
+// Use a sans-senrif font for our body text
 $base-font-family: $sans-font-family;
 
 // Use Lato for 'Todd Wolfson' header text
 $brand-face: "Lato", $sans-font-family;
 $brand-color: inherit;
 
+/** Borders **/
 // TODO: Verify <aside> is properly sized and maybe a little muted
 // TODO: It should definitely have a white bg with the | on the left
 
 // TODO: Manually check hover colors
 
 // TODO: Hard or rounded corners for code fences
+$base-border-width: 2px;
 $base-border-radius: 3px;
 
 /*------------------------------------*\
