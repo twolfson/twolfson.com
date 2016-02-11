@@ -53,22 +53,16 @@ bin/decrypt-config.sh
 [SOPS]: https://github.com/mozilla/sops
 
 #### CSS
-CSS is compiled via [SASS][]. We depend on `ruby-sass@3.3.4` (requires [`gem`][] to be installed).
+Our CSS is written in [SASS][] and compiled via [`libsass`][].
+
+CSS compilation is run by default as part of the main `gulp build` task but can be run standalone:
 
 ```bash
-gem install sass -v 3.3.4
-```
-
-CSS compilation is run by default as part of the main `grunt` task but can be run standalone:
-
-```bash
-grunt # Compiles and watches CSS for changes
-grunt css # Compile CSS once
+gulp build-css
 ```
 
 [SASS]: http://sass-lang.com/
-[`gem`]: https://rubygems.org/
-[`grunt`]: http://gruntjs.com/
+[`libsass`]: https://github.com/sass/libsass
 
 #### Images
 Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run via a standalone [`grunt`][] task:
