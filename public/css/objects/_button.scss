@@ -1,0 +1,21 @@
+// Custom beautons
+.btn {
+  @include transition(background 0.3s ease-in-out);
+  border-color: $base-border-color;
+  border-style: solid;
+  border-width: $base-border-width;
+  background: $btn-bg;
+}
+
+.btn:hover,
+.btn:active {
+  background: $btn-bg--hover;
+}
+
+.btn--medium {
+  padding: 8px 18px;
+}
+
+.btn--huge {
+  padding: 13px 18px;
+}
