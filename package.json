@@ -30,6 +30,7 @@
   },
   "scripts": {
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
+    "build": "grunt build",
     "lint": "jshint bin/ config/ docs/ grunt/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js && grunt jshint:client && jscs bin/ config/ docs/ grunt/ public/js/main.js server/  test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
     "pretest": "twolfson-style install",
     "postinstall": "bin/decrypt-config.sh",
