@@ -4,21 +4,6 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
-    sass: {
-      all: {
-        files: {
-          'dist/css/index.min.css': 'public/css/index.scss'
-        },
-        options: {
-          style: 'compressed'
-        }
-      },
-      unmin: {
-        files: {
-          'dist/css/index.css': 'public/css/index.scss'
-        }
-      }
-    },
     'jsmin-sourcemap': {
       client: {
         cwd: 'public/js',
@@ -144,10 +129,6 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      css: {
-        files: 'public/css/**/*.scss',
-        tasks: 'css'
-      },
       js: {
         files: 'public/js/**/*.js',
         tasks: 'js'
@@ -157,7 +138,6 @@ module.exports = function (grunt) {
 
   // Load in grunt dependencies
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-image-resize');
@@ -169,11 +149,10 @@ module.exports = function (grunt) {
   // Register dependency tasks
   grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
 
-  // Register css and js tasks
+  // Register our js task
   grunt.registerTask('js', ['jsmin-sourcemap']);
-  grunt.registerTask('css', ['sass']);
 
   // Set up default action
-  grunt.registerTask('build', ['css', 'js']);
+  grunt.registerTask('build', ['js']);
   grunt.registerTask('default', ['build', 'watch']);
 };
