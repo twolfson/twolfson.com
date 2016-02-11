@@ -2,15 +2,9 @@
 /*------------------------------------*\
     VARS.SCSS
 \*------------------------------------*/
-/**
- * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
- * keep, simply redefine here. This means that if inuit.css, for example, sets
- * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
- * that variable in this file. inuit.css ignores its own variables in favour of
- * using your own, so you can completely modify how inuit.css works without ever
- * having to alter the framework itself.
- */
-/* Background variants */
+/** Colors **/
+/** Padding/margins **/
+/** Fonts **/
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -19,18 +13,6 @@
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
- */
-/*------------------------------------*\
-    $OVERRIDES
-\*------------------------------------*/
-/**
- * Place any variables that should override inuit.css’ defaults here.
- */
-/*------------------------------------*\
-    $CUSTOM
-\*------------------------------------*/
-/**
- * Place any of your own variables that sit on top of inuit.css here.
  */
 /*------------------------------------*\
     INUIT.CSS
@@ -2663,7 +2645,7 @@ button {
   margin: 0 auto; }
 
 .row--bordered, .row--bordered--ends {
-  border-color: #666;
+  border-color: #666666;
   border-style: solid;
   border-width: 2px; }
 
@@ -2708,7 +2690,7 @@ button {
   -ms-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  border-color: #666;
+  border-color: #666666;
   border-style: solid;
   border-width: 2px;
   background: #F2F2F2; }
@@ -2733,7 +2715,7 @@ textarea {
   transition: border-color 0.3s ease-in-out; }
   input:focus,
   textarea:focus {
-    border-color: #444; }
+    border-color: #444444; }
 
 hr {
   color: #1A1A1A;
