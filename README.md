@@ -87,6 +87,20 @@ grunt js # Compile JS once
 [`grunt-zip`]: https://github.com/twolfson/grunt-zip
 [lo-fi-grunt]: /2014-01-19-low-tech-dependency-management-via-grunt-tasks
 
+#### Automated recompiled and refreshes
+We leverage [`gulp`][] to automatically re-run JS and CSS tasks when their files change.
+
+Additionally, they are integrated with [LiveReload][]. When the complementary browser extension is installed, your browser will automatically reload CSS or refresh the page upon changes.
+
+```bash
+npm run develop
+```
+
+LiveReload extension: http://livereload.com/extensions/
+
+[`gulp`]: http://gulpjs.com/
+[LiveReload]: http://livereload.com/
+
 ### Code organization
 #### Folders
 - `articles/` - [GitHub Flavored Markdown][] files for blog posts
