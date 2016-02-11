@@ -1,6 +1,11 @@
+// Body declarations
 body {
   background: $base-background;
   color: $body-color;
+}
+
+#global-wrapper {
+  margin: 0 auto;
 }
 
 // Style all `pre` blocks to act as code blocks
@@ -57,10 +62,7 @@ textarea, // Contact
   border-radius: $base-border-radius;
 }
 
-.text--normal {
-  color: inherit;
-}
-
+// Links
 a,
 .link,
 .link--underline {
@@ -95,7 +97,7 @@ a,
   &:visited,
   &:hover {
     text-decoration: none;
-    @extend .text--normal;
+    color: inherit;
   }
 }
 
@@ -103,7 +105,7 @@ a,
   &,
   &:visited {
     text-decoration: none;
-    @extend .text--normal;
+    color: inherit;
   }
 
   &:hover {
@@ -111,79 +113,11 @@ a,
   }
 }
 
+// Buttons
 button {
   cursor: pointer;
 }
 
-#global-wrapper {
-  margin: 0 auto;
-}
-
-.row--bordered {
-  border-color: $base-border-color;
-  border-style: solid;
-  border-width: $base-border-width;
-}
-
-.row--bordered--ends {
-  @extend .row--bordered;
-  border-width: 0;
-  border-top-width: $base-border-width;
-  border-bottom-width: $base-border-width;
-}
-
-/* Navbar styling */
-/* TODO: Relocate these */
-.nav {
-  margin: 0;
-  list-style: none;
-  // TODO: This is definitely *not* scalable
-  line-height: 1.5 * $base-spacing-unit - 2 * $base-border-width;
-}
-
-.nav--item {
-  float: left;
-  margin-left: $base-spacing-unit;
-}
-
-/* Helper for centering */
-.center--center {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.align--baseline {
-  vertical-align: baseline;
-}
-
-// TODO: Add back code highlighting
-// TODO: Verify <aside> is proper size
-// TODO: Allow wide format for articles like Develop Faster
-
-.cluster {
-  // Provide double margin on the bottom of the cluster
-  margin-bottom: $base-spacing-unit * 1.5;
-
-  // Imply the content is well-packed by making header and first paragraph close
-  h1,h2,h3,h4,h5,h6 {
-    margin-bottom: $half-spacing-unit;
-  }
-}
-
-.cluster--aggressive {
-  @extend .cluster;
-  p {
-    margin-bottom: $half-spacing-unit;
-  }
-}
-
-// Ignore content flow by breaking it out of the static layer
-// Used on projects page for numbers that leak into the gutter
-.ignore-flow {
-  position: absolute;
-}
-
-// Personal beautons
 .btn {
   @include transition(background 0.3s ease-in-out);
   border-color: $base-border-color;

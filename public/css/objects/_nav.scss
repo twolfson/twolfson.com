@@ -1,0 +1,11 @@
+.nav {
+  margin: 0;
+  list-style: none;
+  // TODO: This is definitely *not* scalable
+  line-height: 1.5 * $base-spacing-unit - 2 * $base-border-width;
+}
+
+.nav--item {
+  float: left;
+  margin-left: $base-spacing-unit;
+}

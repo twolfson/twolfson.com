@@ -19,8 +19,11 @@
 @import "base/highlight-extensions";
 
 // Object imports
-@import "objects/grid";
+@import "objects/border";
+@import "objects/cluster";
 @import "objects/form";
+@import "objects/grid";
+@import "objects/nav";
 
 // Generic imports
 @import "generic/helper";

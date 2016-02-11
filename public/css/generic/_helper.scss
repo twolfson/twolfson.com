@@ -1,3 +1,20 @@
+// Horizontal align helpers
+.block--center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Vertical align helpers
+.align--baseline {
+  vertical-align: baseline;
+}
+
 .valign--text-bottom {
   vertical-align: text-bottom;
+}
+
+// Ignore content flow by breaking it out of the static layer
+// Used on projects page for numbers that leak into the gutter
+.ignore-flow {
+  position: absolute;
 }

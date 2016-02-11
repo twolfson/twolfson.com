@@ -1,0 +1,16 @@
+.cluster {
+  // Provide double margin on the bottom of the cluster
+  margin-bottom: $base-spacing-unit * 1.5;
+
+  // Imply the content is well-packed by making header and first paragraph close
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: $half-spacing-unit;
+  }
+}
+
+.cluster--aggressive {
+  @extend .cluster;
+  p {
+    margin-bottom: $half-spacing-unit;
+  }
+}
