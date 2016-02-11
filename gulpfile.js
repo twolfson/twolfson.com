@@ -5,6 +5,8 @@ var gulpSass = require('gulp-sass');
 var gulpSizereport = require('gulp-sizereport');
 var rimraf = require('rimraf');
 
+// TODO: Make sure that all `/public/*` URLs work (e.g. `960.gridder`)
+
 // Define our tasks
 gulp.task('build-clean', function clean (done) {
   // Remove all compiled files in `dist/`
