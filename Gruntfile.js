@@ -4,9 +4,6 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
-    jshint: {
-      client: ['public/js/main.js']
-    },
     sass: {
       all: {
         files: {
@@ -160,7 +157,6 @@ module.exports = function (grunt) {
 
   // Load in grunt dependencies
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
@@ -174,11 +170,10 @@ module.exports = function (grunt) {
   grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
 
   // Register css and js tasks
-  grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('js', ['jsmin-sourcemap']);
   grunt.registerTask('css', ['sass']);
 
   // Set up default action
-  grunt.registerTask('build', ['lint', 'css', 'js']);
+  grunt.registerTask('build', ['css', 'js']);
   grunt.registerTask('default', ['build', 'watch']);
 };
