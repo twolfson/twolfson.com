@@ -32,7 +32,6 @@ $body-color: $gray-x1A;
 
 // Background variants
 $base-background: $blackish-white;
-$base-border-color: $gray-x66;
 
 // Form elements
 $input-border-color--focus: $gray-x44;
@@ -56,9 +55,13 @@ $aside-bg: $gray-xF2;
 // DEV: A little darker than $code-bg
 $aside-gutter-bg: $bluish-gray;
 
+// Borders
+$default-border-color: $gray-x66;
+
 // Buttons
 $btn-bg: $gray-xF2;
 $btn-bg--hover: $gray-xE7;
+$btn-border-color: $gray-x66;
 
 /** Padding/margins **/
 $code-inline-spacing: 9px;
@@ -111,8 +114,10 @@ $brand-color: inherit;
 // TODO: Verify <aside> is proper size
 // TODO: Allow wide format for articles like Develop Faster
 
-$base-border-width: 2px;
 $base-border-radius: 3px;
+
+$default-border-width: 2px;
+$btn-border-width: 2px;
 
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS

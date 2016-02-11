@@ -1,12 +1,12 @@
 .row--bordered {
-  border-color: $base-border-color;
+  border-color: $default-border-color;
   border-style: solid;
-  border-width: $base-border-width;
+  border-width: $default-border-width;
 }
 
 .row--bordered--ends {
   @extend .row--bordered;
   border-width: 0;
-  border-top-width: $base-border-width;
-  border-bottom-width: $base-border-width;
+  border-top-width: $default-border-width;
+  border-bottom-width: $default-border-width;
 }

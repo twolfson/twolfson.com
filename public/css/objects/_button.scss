@@ -1,9 +1,9 @@
 // Custom beautons
 .btn {
   @include transition(background 0.3s ease-in-out);
-  border-color: $base-border-color;
+  border-color: $btn-border-color;
   border-style: solid;
-  border-width: $base-border-width;
+  border-width: $btn-border-width;
   background: $btn-bg;
 }
 
