@@ -1,53 +1,62 @@
 /*------------------------------------*\
     VARS.SCSS
 \*------------------------------------*/
+/** Colors **/
 // Define colors in 2 phases
 // First phase: Colors to human friendly name
 // Second phase: Human friendly name to element property value
 // DEV: This is to consolidate similar colors and keep a reusable palette
 //   while preventing a single element color change from affecting other elements
 
-// Colors
+// Phase 1: Colors
 // Please base names off of https://en.wikipedia.org/wiki/Color_Naming_System
 // Grayscale from black to white
 $gray-x1A: #1A1A1A;
+$gray-x44: #444444;
+$gray-x52: #525252;
+$gray-x66: #666666;
+$bluish-gray: #A4A0A2;
+$gray-xDD: #DDDDDD;
+$gray-xE7: #E7E7E7;
+$gray-xF2: #F2F2F2;
+$gray-xF7: #F7F7F7;
+$blackish-white: #FDFDFD;
 
 // Rainbow (red, orange, yellow, green, blue, indigo, violet)
+$blue: #1C79C4;
+$light-blue: #3972ED;
 
+// Phase 2: Color mappings
+$link-color: $blue;
+$link-hover-color: $light-blue;
+$text-color: $gray-x1A;
 
-// Color mappings
-$link-color: #1C79C4;
-$link-hover-color: #3972ED;
-$text-color: $off-black;
-
-/* Background variants */
-$base-background: #FDFDFD;
-$base-border-color: #666;
-$dark-border-color: #444;
-
-$feature-bg: #B4E8FF;
-$feature-bg-selected: #E2F6FF;
+// Background variants
+$base-background: $blackish-white;
+$base-border-color: $gray-x66;
+$dark-border-color: $gray-x44;
 
 // Setup for highlight-extensions
-// TODO: Relocate spacing definitions
-$code-inline-spacing: 9px;
-$code-bg: #F7F7F7;
-$code-border: #DDDDDD;
+$code-bg: $gray-xF7;
+$code-border: $gray-xDD;
 
 // A little muted to reduce emphasis
-$aside-color: #525252;
+$aside-color: $gray-x52;
 // A little lighter than code (so inner blocks can be distinguished)
-$aside-bg: #F2F2F2;
+$aside-bg: $gray-xF2;
 // A little darker than $code-bg
-$aside-margin-bg: #A4A0A2;
-// TODO: Relocate spacing definitions
+$aside-margin-bg: $bluish-gray;
+
+$btn-bg: $gray-xF2;
+$btn-bg--hover: $gray-xE7;
+
+/** Padding/margins **/
+$code-inline-spacing: 9px;
+
 $aside-inline-spacing: 9px;
 $aside-margin-width: 5px;
 
-$btn-bg: #F2F2F2;
-$btn-bg--hover: #E7E7E7;
-
-// Fonts
+/** Fonts **/
 $sans-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -74,7 +83,7 @@ $milli-size: 12px * $font-scale;
 $micro-size: 10px * $font-scale;
 
 // TODO: Ditch `base-ui-color`, it's a very vague name...
-$base-ui-color: $off-black;
+$base-ui-color: $gray-x1A;
 $base-border-width: 2px;
 $base-font-family: $sans-font-family;
 
