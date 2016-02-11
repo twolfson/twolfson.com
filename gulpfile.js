@@ -52,6 +52,8 @@ gulp.task('build', ['build-css']);
 // Handle a generic forced live reload
 gulp.task('livereload-update', function handleLivereloadUpdate (done) {
   // DEV: Give ourselves a delay to wait for the server to restart
+  // TODO: Reduce load time (likely caused by marked and no caching)
+  //   Maybe we can figure out a way to not restart upon article change...
   setTimeout(function handleSetTimeout () {
     gulpLivereload.reload();
     done();
