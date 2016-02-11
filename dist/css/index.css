@@ -5,6 +5,7 @@
 /** Colors **/
 /** Padding/margins **/
 /** Fonts **/
+/** Borders **/
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -1336,7 +1337,7 @@ td {
  */
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid #1A1A1A; }
+  border: 1px solid #ccc; }
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
@@ -2554,6 +2555,9 @@ body {
   background: #FDFDFD;
   color: #1A1A1A; }
 
+#global-wrapper {
+  margin: 0 auto; }
+
 pre {
   white-space: pre;
   background: #F7F7F7;
@@ -2602,9 +2606,6 @@ textarea,
 .rounded {
   border-radius: 3px; }
 
-.text--normal, .link--hidden, .link--hidden:visited, .link--hidden:hover, .link--hover-only, .link--hover-only:visited {
-  color: #1A1A1A; }
-
 a,
 .link,
 .link--underline {
@@ -2633,77 +2634,15 @@ a,
   border-bottom: 1px solid #3972ED; }
 
 .link--hidden, .link--hidden:visited, .link--hidden:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 .link--hover-only, .link--hover-only:visited {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 button {
   cursor: pointer; }
-
-#global-wrapper {
-  margin: 0 auto; }
-
-.row--bordered, .row--bordered--ends {
-  border-color: #666666;
-  border-style: solid;
-  border-width: 2px; }
-
-.row--bordered--ends {
-  border-width: 0;
-  border-top-width: 2px;
-  border-bottom-width: 2px; }
-
-/* Navbar styling */
-/* TODO: Relocate these */
-.nav {
-  margin: 0;
-  list-style: none;
-  line-height: 36.5px; }
-
-.nav--item {
-  float: left;
-  margin-left: 27px; }
-
-/* Helper for centering */
-.center--center {
-  margin-left: auto !important;
-  margin-right: auto !important; }
-
-.align--baseline {
-  vertical-align: baseline; }
-
-.cluster, .cluster--aggressive {
-  margin-bottom: 40.5px; }
-  .cluster h1, .cluster--aggressive h1, .cluster h2, .cluster--aggressive h2, .cluster h3, .cluster--aggressive h3, .cluster h4, .cluster--aggressive h4, .cluster h5, .cluster--aggressive h5, .cluster h6, .cluster--aggressive h6 {
-    margin-bottom: 13.5px; }
-
-.cluster--aggressive p {
-  margin-bottom: 13.5px; }
-
-.ignore-flow {
-  position: absolute; }
-
-.btn {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  border-color: #666666;
-  border-style: solid;
-  border-width: 2px;
-  background: #F2F2F2; }
-
-.btn:hover,
-.btn:active {
-  background: #E7E7E7; }
-
-.btn--medium {
-  padding: 8px 18px; }
-
-.btn--huge {
-  padding: 13px 18px; }
 
 input,
 textarea {
@@ -3014,6 +2953,55 @@ code {
   border: 1px solid #DDDDDD;
   font-size: 0.9em; }
 
+.row--bordered, .row--bordered--ends {
+  border-color: #666666;
+  border-style: solid;
+  border-width: 2px; }
+
+.row--bordered--ends {
+  border-width: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px; }
+
+.btn {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 2px;
+  background: #F2F2F2; }
+
+.btn:hover,
+.btn:active {
+  background: #E7E7E7; }
+
+.btn--medium {
+  padding: 8px 18px; }
+
+.btn--huge {
+  padding: 13px 18px; }
+
+.cluster, .cluster--aggressive {
+  margin-bottom: 40.5px; }
+  .cluster h1, .cluster--aggressive h1, .cluster h2, .cluster--aggressive h2, .cluster h3, .cluster--aggressive h3, .cluster h4, .cluster--aggressive h4, .cluster h5, .cluster--aggressive h5, .cluster h6, .cluster--aggressive h6 {
+    margin-bottom: 13.5px; }
+
+.cluster--aggressive p {
+  margin-bottom: 13.5px; }
+
+fieldset {
+  padding: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
 /** Container for document. It should always have gutters on the left and right **/
 .container {
   width: 987px; }
@@ -3129,17 +3117,26 @@ code {
   margin-left: 0;
   padding-left: 0; }
 
-fieldset {
-  padding: 0;
-  border: 0; }
+.nav {
+  margin: 0;
+  list-style: none;
+  line-height: 36.5px; }
 
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0; }
+.nav--item {
+  float: left;
+  margin-left: 27px; }
+
+.block--center {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.align--baseline {
+  vertical-align: baseline; }
 
 .valign--text-bottom {
   vertical-align: text-bottom; }
+
+.ignore-flow {
+  position: absolute; }
 
 /*# sourceMappingURL=index.css.map */
