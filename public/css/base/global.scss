@@ -46,7 +46,7 @@ blockquote,
 .aside {
   color: $aside-color;
   background: $aside-bg;
-  border-left: $aside-margin-width solid $aside-margin-bg;
+  border-left: $aside-gutter-width solid $aside-gutter-bg;
   padding-left: $aside-inline-spacing;
   padding-right: $aside-inline-spacing;
 }

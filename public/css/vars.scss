@@ -51,7 +51,7 @@ $aside-color: $gray-x52;
 // A little lighter than code (so inner blocks can be distinguished)
 $aside-bg: $gray-xF2;
 // A little darker than $code-bg
-$aside-margin-bg: $bluish-gray;
+$aside-gutter-bg: $bluish-gray;
 
 // Buttons
 $btn-bg: $gray-xF2;
@@ -61,7 +61,7 @@ $btn-bg--hover: $gray-xE7;
 $code-inline-spacing: 9px;
 
 $aside-inline-spacing: 9px;
-$aside-margin-width: 5px;
+$aside-gutter-width: 5px;
 
 /** Fonts **/
 $sans-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
