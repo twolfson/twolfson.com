@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.80.0 - Cleaned up CSS for easier management and better names
+
 3.79.2 - Accepted latest perceptual diffs
 
 3.79.1 - Added missing smoke tests for `/license` and `/support-me` and added back missing supportMe config
