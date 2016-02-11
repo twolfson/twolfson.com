@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.81.0 - Removed missed TODOs from CSS
+
 3.80.0 - Cleaned up CSS for easier management and better names
 
 3.79.2 - Accepted latest perceptual diffs
