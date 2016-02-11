@@ -7,6 +7,8 @@ var gulpSizereport = require('gulp-sizereport');
 var rimraf = require('rimraf');
 
 // TODO: Make sure that all `/public/*` URLs work (e.g. `960.gridder`)
+// TODO: Transfer JS setup to `uglifyJS` equivalent
+// TODO: Move curl/unzip actions to `bin/bootstrap.sh`
 
 // Set up our configuration
 var config = {
