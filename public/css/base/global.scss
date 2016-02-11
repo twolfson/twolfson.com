@@ -125,7 +125,7 @@ textarea {
   @include transition(border-color 0.3s ease-in-out);
 
   &:focus {
-    border-color: $dark-border-color;
+    border-color: $input-border-color--focus;
   }
 }
 

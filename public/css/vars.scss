@@ -30,6 +30,13 @@ $light-blue: #3972ED;
 // Body text color
 $body-color: $gray-x1A;
 
+// Background variants
+$base-background: $blackish-white;
+$base-border-color: $gray-x66;
+
+// Form elements
+$input-border-color--focus: $gray-x44;
+
 // Horizontal rules
 $hr-color: $gray-x1A;
 
@@ -37,20 +44,16 @@ $hr-color: $gray-x1A;
 $link-color: $blue;
 $link-hover-color: $light-blue;
 
-// Background variants
-$base-background: $blackish-white;
-$base-border-color: $gray-x66;
-$dark-border-color: $gray-x44;
-
-// Setup for highlight-extensions
+// Pre/code
 $code-bg: $gray-xF7;
 $code-border: $gray-xDD;
 
-// A little muted to reduce emphasis
+// Aside
+// DEV: A little muted to reduce emphasis
 $aside-color: $gray-x52;
-// A little lighter than code (so inner blocks can be distinguished)
+// DEV: A little lighter than code (so inner blocks can be distinguished)
 $aside-bg: $gray-xF2;
-// A little darker than $code-bg
+// DEV: A little darker than $code-bg
 $aside-gutter-bg: $bluish-gray;
 
 // Buttons
