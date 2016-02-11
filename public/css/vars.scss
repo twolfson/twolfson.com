@@ -27,9 +27,15 @@ $blue: #1C79C4;
 $light-blue: #3972ED;
 
 // Phase 2: Color mappings
+// Body text color
+$body-color: $gray-x1A;
+
+// Horizontal rules
+$hr-color: $gray-x1A;
+
+// Links
 $link-color: $blue;
 $link-hover-color: $light-blue;
-$text-color: $gray-x1A;
 
 // Background variants
 $base-background: $blackish-white;
@@ -47,6 +53,7 @@ $aside-bg: $gray-xF2;
 // A little darker than $code-bg
 $aside-margin-bg: $bluish-gray;
 
+// Buttons
 $btn-bg: $gray-xF2;
 $btn-bg--hover: $gray-xE7;
 

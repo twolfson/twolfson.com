@@ -1,6 +1,6 @@
 body {
   background: $base-background;
-  color: $text-color;
+  color: $body-color;
 }
 
 // Style all `pre` blocks to act as code blocks
@@ -58,7 +58,7 @@ textarea, // Contact
 }
 
 .text--normal {
-  color: $text-color;
+  color: inherit;
 }
 
 a,
@@ -220,7 +220,7 @@ textarea {
 // Consistently style all <hr>s
 // DEV: Copy/pasted from inuit/_rules.scss
 hr {
-  color: $base-ui-color;
+  color: $hr-color;
   border: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;
