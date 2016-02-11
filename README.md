@@ -129,9 +129,7 @@ LiveReload extension: http://livereload.com/extensions/
 #### Files
 - `CHANGELOG.md` - Record of changes that have happened on the server
 - `README.md` - Documentation for the project
-- `Gruntfile.js` - A [grunt][grunt] implementation for linting and minification.
-
-[grunt]: http://gruntjs.com/
+- `gulpfile.js` - Configuration for various tasks via [`gulp`][]
 
 ## Donating
 Support this project and [others by twolfson][gratipay] via [gratipay][].
