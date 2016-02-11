@@ -50,8 +50,12 @@ gulp.task('build', ['build-css']);
 
 // Define our development tasks
 // Handle a generic forced live reload
-gulp.task('livereload-update', function handleLivereloadUpdate () {
-  gulpLivereload.reload();
+gulp.task('livereload-update', function handleLivereloadUpdate (done) {
+  // DEV: Give ourselves a delay to wait for the server to restart
+  setTimeout(function handleSetTimeout () {
+    gulpLivereload.reload();
+    done();
+  }, 5000);
 });
 
 // DEV: `['build']` requires that our build task runs once
@@ -64,7 +68,7 @@ gulp.task('develop', ['build'], function develop () {
   gulpLivereload.listen();
 
   // When one of our src files changes, re-run its corresponding task
-  gulp.watch('article/**/*', ['livereload-update']);
+  gulp.watch('articles/**/*', ['livereload-update']);
   gulp.watch('public/css/**/*.scss', ['build-css']);
   gulp.watch('server/**/*', ['livereload-update']);
 });
