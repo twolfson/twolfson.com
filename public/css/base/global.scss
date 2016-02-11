@@ -130,7 +130,7 @@ textarea {
 }
 
 // Consistently style all <hr>s
-// DEV: Copy/pasted from inuit/_rules.scss
+// https://github.com/csswizardry/inuit.css/blob/v5.0.1/objects/_rules.scss#L12-L19
 hr {
   color: $hr-color;
   border: none;
