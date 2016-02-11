@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var gulpCsso = require('gulp-csso');
 var gulpSass = require('gulp-sass');
+var gulpSizereport = require('gulp-sizereport');
 var rimraf = require('rimraf');
 
 // Define our tasks
@@ -18,6 +19,7 @@ gulp.task('build-css', function buildCss () {
       style: 'nested'
     }))
     .pipe(gulpCsso())
+    .pipe(gulpSizereport({gzip: true}))
     .pipe(gulp.dest('dist/css'));
 });
 
