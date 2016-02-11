@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var gulpCsso = require('gulp-csso');
 var gulpSass = require('gulp-sass');
+var gulpLivereload = require('gulp-livereload');
 var gulpSizereport = require('gulp-sizereport');
 var rimraf = require('rimraf');
 
@@ -13,7 +14,7 @@ var config = {
   minifyAssets: true
 };
 
-// Define our tasks
+// Define our build tasks
 gulp.task('build-clean', function clean (done) {
   // Remove all compiled files in `dist/`
   rimraf(__dirname + '/dist/', done);
@@ -45,3 +46,24 @@ gulp.task('build-css', function buildCss () {
 });
 
 gulp.task('build', ['build-css']);
+
+// Define our development tasks
+// Handle a generic forced live reload
+gulp.task('livereload-update', function handleLivereloadUpdate () {
+  gulpLivereload.reload();
+});
+
+// DEV: `['build']` requires that our build task runs once
+gulp.task('develop', ['build'], function develop () {
+  // Set up our tasks to allow failures
+  config.allowFailures = true;
+  config.minifyAssets = false;
+
+  // Start a livereload server
+  gulpLivereload.listen();
+
+  // When one of our src files changes, re-run its corresponding task
+  gulp.watch('article/**/*', ['livereload-update']);
+  gulp.watch('public/css/**/*.scss', ['build-css']);
+  gulp.watch('server/**/*', ['livereload-update']);
+});
