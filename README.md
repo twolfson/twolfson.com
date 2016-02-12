@@ -75,7 +75,11 @@ gulp sprite
 [`gulp.spritesmith`]: https://github.com/twolfson/gulp.spritesmith
 
 #### JS
-External JS libraries are managed via [`grunt-curl`][] and [`grunt-zip`][]. See [Low tech dependency management via grunt tasks][lo-fi-grunt].
+External JS libraries are managed via `bin/bootstrap.sh`. To install the latest versions, please run:
+
+```bash
+bin/bootstrap.sh
+```
 
 As with CSS these are run by default as part of the main `gulp build` task but can be run standalone:
 
