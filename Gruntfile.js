@@ -8,15 +8,10 @@ module.exports = function (grunt) {
       // Inuit.css
       'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip',
 
+      // TODO: Don't forget about me
       // DEV: Disabled due to CSRF issues
       // // Highlight.js (includes CSS)
       // highlight: require('./grunt/highlight').curl,
-
-      // Front-end dependencies
-      'public/js/ready.js': 'https://raw.github.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js',
-      'public/js/gator.js': 'https://raw.github.com/ccampbell/gator/1.2.2/gator.js',
-      'public/js/gator-legacy.js': 'https://raw.github.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js',
-      'test/test_files/jquery.js': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js',
 
       // Development dependencies
       'public/js/960gridder/960.gridder.js': 'https://raw.github.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
