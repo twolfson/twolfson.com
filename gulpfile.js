@@ -5,6 +5,7 @@ var gulpCsso = require('gulp-csso');
 var gulpSass = require('gulp-sass');
 var gulpLivereload = require('gulp-livereload');
 var gulpSizereport = require('gulp-sizereport');
+var gulpUglify = require('gulp-uglify');
 var rimraf = require('rimraf');
 
 // TODO: Make sure that all `/public/*` URLs work (e.g. `960.gridder`)
@@ -26,9 +27,27 @@ gulp.task('build-clean', function clean (done) {
 });
 
 gulp.task('build-main-js', function () {
-  return gulp.src(['public/js/{ready,highlight,gator,gator-legacy,main}.js'])
-    .pipe(gulpConcat('index.js'))
-    .pipe(gulp.dest('dist/js'));
+  // Concatenate our content together
+  var jsStream = gulp.src(['public/js/{ready,highlight,gator,gator-legacy,main}.js'])
+    .pipe(gulpConcat('index.js'));
+
+  // If we are allowing failures, then log them
+  if (config.allowFailures) {
+    jsStream.on('error', console.error);
+  }
+
+  // If we are minifying assets, then minify them
+  // DEV: This allows us to save time in development
+  if (config.minifyAssets) {
+    jsStream = jsStream
+      .pipe(gulpUglify())
+      .pipe(gulpSizereport({gzip: true}));
+  }
+
+  // Return our stream
+  return jsStream
+    .pipe(gulp.dest('dist/js'))
+    .pipe(gulpLivereload());
 });
 
 gulp.task('build-js', ['build-main-js']);
