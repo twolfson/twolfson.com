@@ -65,22 +65,22 @@ gulp build-css
 [`libsass`]: https://github.com/sass/libsass
 
 #### Images
-Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run via a standalone [`grunt`][] task:
+Images are compiled into spritesheets via [`gulpspritesmith`][]. These are run via a standalone [`gulp`][] task:
 
 ```bash
-grunt sprite
+gulp sprite
 ```
 
-[`grunt-spritesmith`]: https://github.com/Ensighten/grunt-spritesmith
+[`gulp`]: http://gulpjs.com/
+[`gulp.spritesmith`]: https://github.com/twolfson/gulp.spritesmith
 
 #### JS
 External JS libraries are managed via [`grunt-curl`][] and [`grunt-zip`][]. See [Low tech dependency management via grunt tasks][lo-fi-grunt].
 
-As with CSS these are run by default as part of the main `grunt` task but can be run standalone:
+As with CSS these are run by default as part of the main `gulp build` task but can be run standalone:
 
 ```bash
-grunt # Compiles and watches JS for changes
-grunt js # Compile JS once
+gulp build-js
 ```
 
 [`grunt-curl`]: https://github.com/twolfson/grunt-curl
@@ -98,7 +98,6 @@ npm run develop
 
 LiveReload extension: http://livereload.com/extensions/
 
-[`gulp`]: http://gulpjs.com/
 [LiveReload]: http://livereload.com/
 
 ### Code organization
