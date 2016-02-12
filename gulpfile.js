@@ -50,7 +50,7 @@ function buildJs(params) {
 
   // Return our stream
   return jsStream
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(params.dest))
     .pipe(gulpLivereload());
 }
 
@@ -63,7 +63,7 @@ gulp.task('build-main-js', function () {
   });
 });
 
-var developFasterJsSrc = 'public/js/{' + [
+var developFasterJsSrc = 'public/js/articles/develop-faster/{' + [
   'player', 'init-screencast', 'grunt-screencast',
   'nodemon-screencast', 'livereload-screencast',
   'watch-screencast', 'autocorrect-screencast', 'render'
