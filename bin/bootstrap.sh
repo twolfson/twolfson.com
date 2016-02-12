@@ -9,6 +9,8 @@ fi
 mkdir -p tmp/bootstrap
 
 # Download front-end dependencies
+# TODO: Transfer `curl`/`wget` actions to `bower` where plausible
+# TODO: Document sprite sources in a README rather than via `curl's`
 curl "https://rawgit.com/ded/domready/b3ba502dcd41b67fc2fcd06416b9d0be27a8dce2/ready.js" > "public/js/ready.js"
 curl "https://rawgit.com/ccampbell/gator/1.2.2/gator.js" > "public/js/gator.js"
 curl "https://rawgit.com/ccampbell/gator/1.2.2/plugins/gator-legacy.js" > "public/js/gator-legacy.js"

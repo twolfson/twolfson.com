@@ -3,9 +3,6 @@ module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
     curl: {
-      // Inuit.css
-      'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip'
-
       // TODO: Don't forget about me
       // DEV: Disabled due to CSRF issues
       // // Highlight.js (includes CSS)
@@ -38,15 +35,6 @@ module.exports = function (grunt) {
       }
     },
     unzip: {
-      // Inuit.css
-      inuit: {
-        src: 'tmp/inuit.css.zip',
-        dest: 'public/css/inuit',
-        router: function (filepath) {
-          return filepath.replace('inuit.css-5.0.0/', '');
-        }
-      },
-
       // Highlight.js
       highlight: {
         src: 'tmp/highlight.zip',
