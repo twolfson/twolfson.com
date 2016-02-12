@@ -39,3 +39,10 @@ curl "http://i.imgur.com/K2LYlv4.png" > "public/images/support_src/dogecoin.png"
 # DEV: Looks like URL is no longer up
 # curl "http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gratipay-logo-256.png?1367418240" \
 #   > "public/images/support_src/gratipay.png"
+
+# Download, unzip, and install inuit.css
+pushd tmp/bootstrap
+wget "https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip" --output-document "inuit.css.zip"
+unzip "inuit.css.zip"
+rm -r ../../public/css/inuit
+mv --no-target-directory "inuit.css-5.0.0" ../../public/css/inuit
