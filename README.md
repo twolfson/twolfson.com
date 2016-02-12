@@ -65,7 +65,7 @@ gulp build-css
 [`libsass`]: https://github.com/sass/libsass
 
 #### Images
-Images are compiled into spritesheets via [`gulpspritesmith`][]. These are run via a standalone [`gulp`][] task:
+Images are compiled into spritesheets via [`gulp.spritesmith`][]. These are run via a standalone [`gulp`][] task:
 
 ```bash
 gulp sprite
