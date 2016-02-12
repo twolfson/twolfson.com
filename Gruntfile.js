@@ -4,18 +4,6 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
-    'jsmin-sourcemap': {
-      'articles/develop-faster': {
-        cwd: 'public/js/articles/develop-faster',
-        src: [
-          'player.js', 'init-screencast.js', 'grunt-screencast.js',
-          'nodemon-screencast.js', 'livereload-screencast.js',
-          'watch-screencast.js', 'autocorrect-screencast.js', 'render.js'
-        ],
-        dest: '../../../../dist/js/articles/develop-faster.js',
-        destMap: '../../../../dist/js/articles/develop-faster.js.map'
-      }
-    },
     sprite: {
       all: {
         src: 'public/images/sprites/*.png',
@@ -121,12 +109,6 @@ module.exports = function (grunt) {
       highlight: {
         src: 'public/js/highlight.js'
       }
-    },
-    watch: {
-      js: {
-        files: 'public/js/**/*.js',
-        tasks: 'js'
-      }
     }
   });
 
@@ -136,17 +118,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-image-resize');
   grunt.loadNpmTasks('grunt-jsbeautifier');
-  grunt.loadNpmTasks('grunt-jsmin-sourcemap');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-zip');
 
   // Register dependency tasks
   grunt.registerTask('install', ['curl', 'unzip', 'copy', 'jsbeautifier']);
-
-  // Register our js task
-  grunt.registerTask('js', ['jsmin-sourcemap']);
-
-  // Set up default action
-  grunt.registerTask('build', ['js']);
-  grunt.registerTask('default', ['build', 'watch']);
 };

@@ -1,4 +1,5 @@
 // Load in our dependencies
+var assert = require('assert');
 var gulp = require('gulp');
 var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
@@ -26,10 +27,13 @@ gulp.task('build-clean', function clean (done) {
   rimraf(__dirname + '/dist/', done);
 });
 
-function buildJs(src, compiledName) {
+function buildJs(params) {
   // Concatenate our content together
-  var jsStream = gulp.src(src)
-    .pipe(gulpConcat(compiledName));
+  assert(params.src);
+  assert(params.compiledName);
+  assert(params.dest);
+  var jsStream = gulp.src(params.src)
+    .pipe(gulpConcat(params.compiledName));
 
   // If we are allowing failures, then log them
   if (config.allowFailures) {
@@ -52,7 +56,24 @@ function buildJs(src, compiledName) {
 
 gulp.task('build-main-js', function () {
   var srcScripts = ['ready', 'highlight', 'gator', 'gator-legacy', 'main'];
-  return buildJs('public/js/{' + srcScripts.join(',') + '}.js', 'index.js');
+  return buildJs({
+    src: 'public/js/{' + srcScripts.join(',') + '}.js',
+    dest: 'dist/js',
+    compiledName: 'index.js'
+  });
+});
+
+gulp.task('build-develop-faster-js', function () {
+  var srcScripts = [
+    'player', 'init-screencast', 'grunt-screencast',
+    'nodemon-screencast', 'livereload-screencast',
+    'watch-screencast', 'autocorrect-screencast', 'render'
+  ];
+  return buildJs({
+    src: 'public/js/{' + srcScripts.join(',') + '}.js',
+    dest: 'dist/js/articles',
+    compiledName: 'develop-faster.js'
+  });
 });
 
 gulp.task('build-js', ['build-main-js', 'build-develop-faster-js']);
