@@ -1,5 +1,6 @@
 // Load in our dependencies
 var gulp = require('gulp');
+var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
 var gulpSass = require('gulp-sass');
 var gulpLivereload = require('gulp-livereload');
@@ -23,6 +24,14 @@ gulp.task('build-clean', function clean (done) {
   // Remove all compiled files in `dist/`
   rimraf(__dirname + '/dist/', done);
 });
+
+gulp.task('build-main-js', function () {
+  return gulp.src(['public/js/{ready,highlight,gator,gator-legacy,main}.js'])
+    .pipe(gulpConcat('index.js'))
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('build-js', ['build-main-js']);
 
 gulp.task('build-css', function buildCss () {
   // Generate a stream that compiles SCSS to CSS

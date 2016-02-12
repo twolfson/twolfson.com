@@ -5,12 +5,6 @@ module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
     'jsmin-sourcemap': {
-      client: {
-        cwd: 'public/js',
-        src: ['ready.js', 'highlight.js', 'gator.js', 'gator-legacy.js', 'main.js'],
-        dest: '../../dist/js/index.js',
-        destMap: '../../dist/js/index.js.map'
-      },
       'articles/develop-faster': {
         cwd: 'public/js/articles/develop-faster',
         src: [
