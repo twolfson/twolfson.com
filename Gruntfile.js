@@ -43,13 +43,9 @@ module.exports = function (grunt) {
     image_resize: {
       sprites: {
         files: {
-          'public/images/sprites/bar-lines.png': 'public/images/sprites/bar-lines-2x.png',
-          'public/images/sprites/eye.png': 'public/images/sprites/eye-2x.png',
           'public/images/sprites/github.png': 'public/images/sprites/github-2x.png',
-          'public/images/sprites/heart.png': 'public/images/sprites/heart-2x.png',
           'public/images/sprites/purple-fork.png': 'public/images/sprites/purple-fork-2x.png',
           'public/images/sprites/purple-star.png': 'public/images/sprites/purple-star-2x.png',
-          'public/images/sprites/ribbon.png': 'public/images/sprites/ribbon-2x.png',
           'public/images/sprites/rss.png': 'public/images/sprites/rss-2x.png',
           'public/images/sprites/twitter.png': 'public/images/sprites/twitter-2x.png'
         },
