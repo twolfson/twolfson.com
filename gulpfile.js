@@ -26,10 +26,10 @@ gulp.task('build-clean', function clean (done) {
   rimraf(__dirname + '/dist/', done);
 });
 
-gulp.task('build-main-js', function () {
+function buildJs(src, compiledName) {
   // Concatenate our content together
-  var jsStream = gulp.src(['public/js/{ready,highlight,gator,gator-legacy,main}.js'])
-    .pipe(gulpConcat('index.js'));
+  var jsStream = gulp.src(src)
+    .pipe(gulpConcat(compiledName));
 
   // If we are allowing failures, then log them
   if (config.allowFailures) {
@@ -48,9 +48,14 @@ gulp.task('build-main-js', function () {
   return jsStream
     .pipe(gulp.dest('dist/js'))
     .pipe(gulpLivereload());
+}
+
+gulp.task('build-main-js', function () {
+  var srcScripts = ['ready', 'highlight', 'gator', 'gator-legacy', 'main'];
+  return buildJs('public/js/{' + srcScripts.join(',') + '}.js', 'index.js');
 });
 
-gulp.task('build-js', ['build-main-js']);
+gulp.task('build-js', ['build-main-js', 'build-develop-faster-js']);
 
 gulp.task('build-css', function buildCss () {
   // Generate a stream that compiles SCSS to CSS
