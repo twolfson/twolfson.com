@@ -14,7 +14,7 @@ module.exports = function (grunt) {
       // highlight: require('./grunt/highlight').curl,
 
       // Development dependencies
-      'public/js/960gridder/960.gridder.js': 'https://raw.github.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
+      'public/js/960gridder/960.gridder.js': 'https://rawgit.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
       'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js',
 
       // External sprites
@@ -28,11 +28,11 @@ module.exports = function (grunt) {
     'curl-dir': {
       // SCSS mixins
       'public/css/mixins': [
-        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/functions/_compact.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_linear-gradient.scss',
-        'https://raw.github.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_transition.scss'
+        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
+        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/functions/_compact.scss',
+        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss',
+        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_linear-gradient.scss',
+        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_transition.scss'
       ]
     },
     image_resize: {
