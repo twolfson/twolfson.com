@@ -13,10 +13,6 @@ module.exports = function (grunt) {
       // // Highlight.js (includes CSS)
       // highlight: require('./grunt/highlight').curl,
 
-      // Development dependencies
-      'public/js/960gridder/960.gridder.js': 'https://rawgit.com/peol/960gridder/master/releases/1.3.1/960.gridder.src.js',
-      'public/js/960gridder/jquery.js': 'http://peol.github.io/960gridder/releases/1.3.1/jquery.js',
-
       // External sprites
         // Bitcoin - http://bitcoin.org/en/press
         'public/images/support_src/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
