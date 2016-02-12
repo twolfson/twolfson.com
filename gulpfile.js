@@ -107,7 +107,7 @@ gulp.task('build-css', function buildCss () {
 gulp.task('build', ['build-css', 'build-js']);
 
 // Define rarely run build tasks
-gulp.task('sprite', function spriteFn () {
+gulp.task('sprite', function spriteFn (done) {
   // Generate our spritesheet
   var spriteData = gulp.src('public/images/sprites/*.png')
     .pipe(gulpSpritesmith({
@@ -128,8 +128,16 @@ gulp.task('sprite', function spriteFn () {
   var cssStream = spriteData.css
     .pipe(gulp.dest('public/css/base/'));
 
-  // Return a merged stream to exit when both streams are finished
-  return mergeStream(imgStream, cssStream);
+  // When both streams are finished
+  mergeStream(imgStream, cssStream).on('finish', function handleFinish () {
+    // Kick off a CSS task
+    // DEV: When `gulp.run` is removed, move to `gulp.series`
+    //   https://github.com/gulpjs/gulp/issues/1125
+    gulp.run('build-css');
+
+    // Callback
+    done();
+  });
 });
 
 // Define our development tasks
