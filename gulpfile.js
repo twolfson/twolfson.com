@@ -3,11 +3,13 @@ var assert = require('assert');
 var gulp = require('gulp');
 var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
-var gulpSass = require('gulp-sass');
 var gulpLivereload = require('gulp-livereload');
+var gulpSass = require('gulp-sass');
 var gulpSizereport = require('gulp-sizereport');
+var gulpSpritesmith = require('gulp.spritesmith');
 var gulpUglify = require('gulp-uglify');
 var rimraf = require('rimraf');
+var mergeStream = require('merge-stream');
 
 // TODO: Move curl/unzip actions to `bin/bootstrap.sh`
 // TODO: For highlight.js, look into `npm build`
@@ -103,6 +105,32 @@ gulp.task('build-css', function buildCss () {
 });
 
 gulp.task('build', ['build-css', 'build-js']);
+
+// Define rarely run build tasks
+gulp.task('sprite', function spriteFn () {
+  // Generate our spritesheet
+  var spriteData = gulp.src('public/images/sprites/*.png')
+    .pipe(gulpSpritesmith({
+      retinaSrcFilter: 'public/images/sprites/*-2x.png',
+
+      imgName: 'sprites.png',
+      retinaImgName: 'sprites-2x.png',
+      imgPath: '../images/sprites.png',
+      retinaImgPath: '../images/sprites-2x.png',
+
+      cssName: 'sprites-auto.scss',
+      algorithm: 'alt-diagonal'
+    }));
+
+  // Output image stream and CSS stream to their respective folders
+  var imgStream = spriteData.img
+    .pipe(gulp.dest('public/images/'));
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('public/css/base/'));
+
+  // Return a merged stream to exit when both streams are finished
+  return mergeStream(imgStream, cssStream);
+});
 
 // Define our development tasks
 // Handle a generic forced live reload

@@ -4,18 +4,6 @@
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
-    sprite: {
-      all: {
-        src: 'public/images/sprites/*.png',
-        retinaSrcFilter: 'public/images/sprites/*-2x.png',
-        dest: 'public/images/sprites.png',
-        retinaDest: 'public/images/sprites-2x.png',
-        destCss: 'public/css/base/sprites-auto.scss',
-        imgPath: '../images/sprites.png',
-        retinaImgPath: '../images/sprites-2x.png',
-        algorithm: 'alt-diagonal'
-      }
-    },
     curl: {
       // Inuit.css
       'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip',
@@ -118,7 +106,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-image-resize');
   grunt.loadNpmTasks('grunt-jsbeautifier');
-  grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-zip');
 
   // Register dependency tasks
