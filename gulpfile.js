@@ -9,8 +9,6 @@ var gulpSizereport = require('gulp-sizereport');
 var gulpUglify = require('gulp-uglify');
 var rimraf = require('rimraf');
 
-// TODO: Make sure that all `/public/*` URLs work (e.g. `960.gridder`)
-// TODO: Transfer JS setup to `uglifyJS` equivalent
 // TODO: Move curl/unzip actions to `bin/bootstrap.sh`
 // TODO: For highlight.js, look into `npm build`
 //   Might need to use `require.resolve` to get path to proper CLI executable for JS beautifier
