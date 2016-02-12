@@ -54,23 +54,23 @@ function buildJs(params) {
     .pipe(gulpLivereload());
 }
 
+var mainJsSrc = 'public/js/{' + ['ready', 'highlight', 'gator', 'gator-legacy', 'main'].join(',') + '}.js';
 gulp.task('build-main-js', function () {
-  var srcScripts = ['ready', 'highlight', 'gator', 'gator-legacy', 'main'];
   return buildJs({
-    src: 'public/js/{' + srcScripts.join(',') + '}.js',
+    src: mainJsSrc,
     dest: 'dist/js',
     compiledName: 'index.js'
   });
 });
 
+var developFasterJsSrc = 'public/js/{' + [
+  'player', 'init-screencast', 'grunt-screencast',
+  'nodemon-screencast', 'livereload-screencast',
+  'watch-screencast', 'autocorrect-screencast', 'render'
+].join(',') + '}.js';
 gulp.task('build-develop-faster-js', function () {
-  var srcScripts = [
-    'player', 'init-screencast', 'grunt-screencast',
-    'nodemon-screencast', 'livereload-screencast',
-    'watch-screencast', 'autocorrect-screencast', 'render'
-  ];
   return buildJs({
-    src: 'public/js/{' + srcScripts.join(',') + '}.js',
+    src: developFasterJsSrc,
     dest: 'dist/js/articles',
     compiledName: 'develop-faster.js'
   });
@@ -104,7 +104,7 @@ gulp.task('build-css', function buildCss () {
     .pipe(gulpLivereload());
 });
 
-gulp.task('build', ['build-css']);
+gulp.task('build', ['build-css', 'build-js']);
 
 // Define our development tasks
 // Handle a generic forced live reload
@@ -130,5 +130,7 @@ gulp.task('develop', ['build'], function develop () {
   // When one of our src files changes, re-run its corresponding task
   gulp.watch('articles/**/*', ['livereload-update']);
   gulp.watch('public/css/**/*.scss', ['build-css']);
+  gulp.watch(mainJsSrc, ['build-main-js']);
+  gulp.watch(developFasterJsSrc, ['build-develop-faster-js']);
   gulp.watch('server/**/*', ['livereload-update']);
 });
