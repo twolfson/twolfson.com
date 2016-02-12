@@ -1,35 +1,15 @@
-/* jslint maxlen: 200 */
-// jscs:disable maximumLineLength
 // Allow super long line length for URLs
 module.exports = function (grunt) {
   // Configure the project
   grunt.initConfig({
     curl: {
       // Inuit.css
-      'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip',
+      'tmp/inuit.css.zip': 'https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip'
 
       // TODO: Don't forget about me
       // DEV: Disabled due to CSRF issues
       // // Highlight.js (includes CSS)
       // highlight: require('./grunt/highlight').curl,
-
-      // External sprites
-        // Bitcoin - http://bitcoin.org/en/press
-        'public/images/support_src/bitcoin.png': 'https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU',
-        // Dogecoin - http://imgur.com/a/CKqPP
-        'public/images/support_src/dogecoin.png': 'http://i.imgur.com/K2LYlv4.png',
-        // Google image search
-        'public/images/support_src/gratipay.png': 'http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gratipay-logo-256.png?1367418240'
-    },
-    'curl-dir': {
-      // SCSS mixins
-      'public/css/mixins': [
-        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/addons/_prefixer.scss',
-        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/functions/_compact.scss',
-        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_box-shadow.scss',
-        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_linear-gradient.scss',
-        'https://rawgit.com/thoughtbot/bourbon/v3.0.1/app/assets/stylesheets/css3/_transition.scss'
-      ]
     },
     image_resize: {
       sprites: {
