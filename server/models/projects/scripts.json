@@ -2,8 +2,8 @@
   {
     "name": "spritesmith",
     "description": "Combine images into a spritesheet and CSS variables",
-    "stars": 1050,
-    "forks": 90,
+    "stars": 1060,
+    "forks": 92,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,29 +11,29 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 534,
-    "forks": 72,
+    "stars": 546,
+    "forks": 73,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
   },
   {
-    "name": "image-diff",
-    "description": "Create image differential between two images",
-    "stars": 128,
-    "forks": 16,
-    "github": "uber/image-diff",
-    "srcUrl": "https://github.com/uber/image-diff",
-    "pageUrl": "https://github.com/uber/image-diff"
-  },
-  {
     "name": "google-music-electron",
     "description": "Desktop app for Google Music on top of Electron",
-    "stars": 118,
-    "forks": 18,
+    "stars": 141,
+    "forks": 19,
     "github": "twolfson/google-music-electron",
     "srcUrl": "https://github.com/twolfson/google-music-electron",
     "pageUrl": "https://github.com/twolfson/google-music-electron"
+  },
+  {
+    "name": "image-diff",
+    "description": "Create image differential between two images",
+    "stars": 131,
+    "forks": 15,
+    "github": "uber/image-diff",
+    "srcUrl": "https://github.com/uber/image-diff",
+    "pageUrl": "https://github.com/uber/image-diff"
   },
   {
     "name": "Find++",
@@ -47,7 +47,7 @@
   {
     "name": "foundry",
     "description": "Release manager for npm, bower, git tags, and more",
-    "stars": 39,
+    "stars": 38,
     "forks": 6,
     "github": "twolfson/foundry",
     "srcUrl": "https://github.com/twolfson/foundry",
@@ -63,9 +63,18 @@
     "pageUrl": "https://github.com/uber/eight-track"
   },
   {
+    "name": "twolfson.com-scripts",
+    "description": "Scripts used to manage my server infrastructure",
+    "stars": 33,
+    "forks": 2,
+    "github": "twolfson/twolfson.com-scripts",
+    "srcUrl": "https://github.com/twolfson/twolfson.com-scripts",
+    "pageUrl": "https://github.com/twolfson/twolfson.com-scripts"
+  },
+  {
     "name": "restructuredtext-lint",
     "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
-    "stars": 30,
+    "stars": 31,
     "forks": 4,
     "github": "twolfson/restructuredtext-lint",
     "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
@@ -83,11 +92,20 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 15,
+    "stars": 16,
     "forks": 3,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
     "pageUrl": "http://twolfson.github.io/bookmarks/"
+  },
+  {
+    "name": "dotfiles",
+    "description": "My dotfiles, documentation, and Linux workflow",
+    "stars": 7,
+    "forks": 0,
+    "github": "twolfson/dotfiles",
+    "srcUrl": "https://github.com/twolfson/dotfiles",
+    "pageUrl": "https://github.com/twolfson/dotfiles"
   },
   {
     "name": "victorious-git",
@@ -99,15 +117,6 @@
     "pageUrl": "https://github.com/twolfson/victorious-git"
   },
   {
-    "name": "dotfiles",
-    "description": "My dotfiles, documentation, and Linux workflow",
-    "stars": 6,
-    "forks": 0,
-    "github": "twolfson/dotfiles",
-    "srcUrl": "https://github.com/twolfson/dotfiles",
-    "pageUrl": "https://github.com/twolfson/dotfiles"
-  },
-  {
     "name": "winfiles",
     "description": "My Windows files, documentation, and workflow",
     "stars": 3,
@@ -115,14 +124,5 @@
     "github": "twolfson/winfiles",
     "srcUrl": "https://github.com/twolfson/winfiles",
     "pageUrl": "https://github.com/twolfson/winfiles"
-  },
-  {
-    "name": "twolfson.com-scripts",
-    "description": "Scripts used to manage my server infrastructure",
-    "stars": 1,
-    "forks": 0,
-    "github": "twolfson/twolfson.com-scripts",
-    "srcUrl": "https://github.com/twolfson/twolfson.com-scripts",
-    "pageUrl": "https://github.com/twolfson/twolfson.com-scripts"
   }
 ]

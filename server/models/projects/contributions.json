@@ -2,8 +2,8 @@
   {
     "name": "git-extras",
     "description": "Collection of git utilities",
-    "stars": 7497,
-    "forks": 511,
+    "stars": 7688,
+    "forks": 522,
     "github": "tj/git-extras",
     "srcUrl": "https://github.com/tj/git-extras",
     "pageUrl": "https://github.com/tj/git-extras"
@@ -11,8 +11,8 @@
   {
     "name": "nodemon",
     "description": "Watch files and automatically restart your server",
-    "stars": 6693,
-    "forks": 491,
+    "stars": 6871,
+    "forks": 508,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
     "pageUrl": "https://github.com/remy/nodemon"
@@ -20,8 +20,8 @@
   {
     "name": "jscs",
     "description": "JavaScript code style checker",
-    "stars": 4667,
-    "forks": 506,
+    "stars": 4758,
+    "forks": 522,
     "github": "jscs-dev/node-jscs",
     "srcUrl": "https://github.com/jscs-dev/node-jscs",
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
@@ -29,8 +29,8 @@
   {
     "name": "serverspec",
     "description": "Testing tool for server configurations",
-    "stars": 1401,
-    "forks": 267,
+    "stars": 1438,
+    "forks": 270,
     "github": "mizzy/serverspec",
     "srcUrl": "https://github.com/mizzy/serverspec",
     "pageUrl": "https://github.com/mizzy/serverspec"
@@ -38,8 +38,8 @@
   {
     "name": "gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
-    "stars": 910,
-    "forks": 280,
+    "stars": 916,
+    "forks": 285,
     "github": "gratipay/gratipay.com",
     "srcUrl": "https://github.com/gratipay/gratipay.com",
     "pageUrl": "https://github.com/gratipay/gratipay.com"
@@ -47,8 +47,8 @@
   {
     "name": "source-map",
     "description": "Utility library for creating and parsing source maps",
-    "stars": 710,
-    "forks": 111,
+    "stars": 722,
+    "forks": 112,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
@@ -56,8 +56,8 @@
   {
     "name": "plaidchat",
     "description": "A Slack client for Linux",
-    "stars": 451,
-    "forks": 31,
+    "stars": 456,
+    "forks": 32,
     "github": "plaidchat/plaidchat",
     "srcUrl": "https://github.com/plaidchat/plaidchat",
     "pageUrl": "https://github.com/plaidchat/plaidchat"
@@ -65,8 +65,8 @@
   {
     "name": "python-livereload",
     "description": "livereload server in python",
-    "stars": 430,
-    "forks": 78,
+    "stars": 441,
+    "forks": 81,
     "github": "lepture/python-livereload",
     "srcUrl": "https://github.com/lepture/python-livereload",
     "pageUrl": "https://github.com/lepture/python-livereload"
