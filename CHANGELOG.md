@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.82.0 - Updated project stats
+
 3.81.0 - Removed missed TODOs from CSS
 
 3.80.0 - Cleaned up CSS for easier management and better names
