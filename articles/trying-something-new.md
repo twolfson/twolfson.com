@@ -28,7 +28,7 @@ I will be building my first product solo. I believe that I have enough experienc
 Everything else that I should know (e.g. marketing, legal knowledge), I will pick up as I go.
 
 # Keeping myself in check
-I have heard many stories of people delaying their launches indefinitely or getting stuck with a mediocre product. I don't want to get caught in that trap.
+I have heard horror stories of people repeatedly delaying their initial launch or getting stuck with a mediocre product. I don't want to get caught in that trap.
 
 By constraining myself to my departure date (ironically still to be determined), I should prevent any undesirable overattachment/loss aversion.
 
