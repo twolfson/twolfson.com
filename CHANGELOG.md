@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.83.0 - Added "Trying something new" article
+
 3.82.0 - Updated project stats
 
 3.81.0 - Removed missed TODOs from CSS
