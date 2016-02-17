@@ -53,45 +53,52 @@ bin/decrypt-config.sh
 [SOPS]: https://github.com/mozilla/sops
 
 #### CSS
-CSS is compiled via [SASS][]. We depend on `ruby-sass@3.3.4` (requires [`gem`][] to be installed).
+Our CSS is written in [SASS][] and compiled via [`libsass`][].
+
+CSS compilation is run by default as part of the main `gulp build` task but can be run standalone:
 
 ```bash
-gem install sass -v 3.3.4
-```
-
-CSS compilation is run by default as part of the main `grunt` task but can be run standalone:
-
-```bash
-grunt # Compiles and watches CSS for changes
-grunt css # Compile CSS once
+gulp build-css
 ```
 
 [SASS]: http://sass-lang.com/
-[`gem`]: https://rubygems.org/
-[`grunt`]: http://gruntjs.com/
+[`libsass`]: https://github.com/sass/libsass
 
 #### Images
-Images are compiled into spritesheets via [`grunt-spritesmith`][]. These are run via a standalone [`grunt`][] task:
+Images are compiled into spritesheets via [`gulp.spritesmith`][]. These are run via a standalone [`gulp`][] task:
 
 ```bash
-grunt sprite
+gulp sprite
 ```
 
-[`grunt-spritesmith`]: https://github.com/Ensighten/grunt-spritesmith
+[`gulp`]: http://gulpjs.com/
+[`gulp.spritesmith`]: https://github.com/twolfson/gulp.spritesmith
 
 #### JS
-External JS libraries are managed via [`grunt-curl`][] and [`grunt-zip`][]. See [Low tech dependency management via grunt tasks][lo-fi-grunt].
-
-As with CSS these are run by default as part of the main `grunt` task but can be run standalone:
+External JS libraries are managed via `bin/bootstrap.sh`. To install the latest versions, please run:
 
 ```bash
-grunt # Compiles and watches JS for changes
-grunt js # Compile JS once
+bin/bootstrap.sh
 ```
 
-[`grunt-curl`]: https://github.com/twolfson/grunt-curl
-[`grunt-zip`]: https://github.com/twolfson/grunt-zip
-[lo-fi-grunt]: /2014-01-19-low-tech-dependency-management-via-grunt-tasks
+As with CSS these are run by default as part of the main `gulp build` task but can be run standalone:
+
+```bash
+gulp build-js
+```
+
+#### Automated recompiled and refreshes
+We leverage [`gulp`][] to automatically re-run JS and CSS tasks when their files change.
+
+Additionally, they are integrated with [LiveReload][]. When the complementary browser extension is installed, your browser will automatically reload CSS or refresh the page upon changes.
+
+```bash
+npm run develop
+```
+
+LiveReload extension: http://livereload.com/extensions/
+
+[LiveReload]: http://livereload.com/
 
 ### Code organization
 #### Folders
@@ -121,9 +128,7 @@ grunt js # Compile JS once
 #### Files
 - `CHANGELOG.md` - Record of changes that have happened on the server
 - `README.md` - Documentation for the project
-- `Gruntfile.js` - A [grunt][grunt] implementation for linting and minification.
-
-[grunt]: http://gruntjs.com/
+- `gulpfile.js` - Configuration for various tasks via [`gulp`][]
 
 ## Donating
 Support this project and [others by twolfson][gratipay] via [gratipay][].
