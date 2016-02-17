@@ -79,14 +79,29 @@ else
 fi
 
 # Build highlight.js
+# DEV: We install `highlight.js` via a `git://` URL since the `npm` version is compiled for `node`
+# Clone our repo and check out the older non-ES6 version (due to us running on 0.10 still)
+pushd tmp/bootstrap
+git clone https://github.com/isagalaev/highlight.js
+cd highlight.js
+git checkout 8.9.1
+
+# Install our dependencies
+npm install
+
+# Run our build
 # Language options are here:
 #   https://github.com/isagalaev/highlight.js/tree/9.1.0/src/languages
-# DEV: We install `highlight.js` via a `git://` URL since the `npm` version is compiled for `node`
-      # 'bash.js': 'on' \
-      # 'css.js': 'on' \
-      # 'javascript.js': 'on' \ # alias: js
-      # 'markdown.js': 'on' \
-      # 'php.js': 'on' \
-      # 'python.js': 'on' \ # alias: yaml
-      # 'ruby.js': 'on' \
-      # 'xml.js': 'on' \ # alias: HTML
+# Skip compress flag
+#   https://github.com/isagalaev/highlight.js/blob/8.9.1/tools/browser.js#L101
+# Aliases: javascript -> js, python -> yaml, xml -> HTML
+node tools/build.js \
+  --target browser --no-compress \
+  bash \
+  css \
+  javascript \
+  markdown \
+  php \
+  python \
+  ruby \
+  xml
