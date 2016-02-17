@@ -11,10 +11,6 @@ var gulpUglify = require('gulp-uglify');
 var rimraf = require('rimraf');
 var mergeStream = require('merge-stream');
 
-// TODO: Move curl/unzip actions to `bin/bootstrap.sh`
-// TODO: For highlight.js, look into `npm build`
-//   Might need to use `require.resolve` to get path to proper CLI executable for JS beautifier
-
 // Set up our configuration
 var config = {
   allowFailures: false,
