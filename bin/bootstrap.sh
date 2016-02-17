@@ -77,3 +77,15 @@ if which convert &> /dev/null; then
 else
   echo "ImageMagick not found. Skipping downsizing of retina images. Please install it to perform downsizing" 1>&2
 fi
+
+# Build highlight.js
+# Language options are here:
+#   https://github.com/isagalaev/highlight.js/tree/9.1.0/src/languages
+      # 'bash.js': 'on' \
+      # 'css.js': 'on' \
+      # 'javascript.js': 'on' \ # alias: js
+      # 'markdown.js': 'on' \
+      # 'php.js': 'on' \
+      # 'python.js': 'on' \ # alias: yaml
+      # 'ruby.js': 'on' \
+      # 'xml.js': 'on' \ # alias: HTML
