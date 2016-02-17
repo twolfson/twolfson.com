@@ -84,6 +84,7 @@ fi
 pushd tmp/bootstrap
 git clone https://github.com/isagalaev/highlight.js
 cd highlight.js
+# DEV: We aren't sure what version we had previously but this is prob not it
 git checkout 8.9.1
 
 # Install our dependencies
@@ -91,7 +92,7 @@ npm install
 
 # Run our build
 # Language options are here:
-#   https://github.com/isagalaev/highlight.js/tree/9.1.0/src/languages
+#   https://github.com/isagalaev/highlight.js/tree/8.9.1/src/languages
 # Skip compress flag
 #   https://github.com/isagalaev/highlight.js/blob/8.9.1/tools/browser.js#L101
 # Aliases: javascript -> js, python -> yaml, xml -> HTML
@@ -107,6 +108,6 @@ node tools/build.js \
   xml
 
 # Copy up our files
-cp build/highlight.pack.js ../../public/js/highlight.js
-cp build/demo/styles/github.css ../../public/css/base/highlight.css
+cp build/highlight.pack.js ../../../public/js/highlight.js
+cp build/demo/styles/github.css ../../../public/css/base/highlight.scss
 popd
