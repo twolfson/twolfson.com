@@ -105,3 +105,8 @@ node tools/build.js \
   python \
   ruby \
   xml
+
+# Copy up our files
+cp build/highlight.pack.js ../../public/js/highlight.js
+cp build/demo/styles/github.css ../../public/css/base/highlight.css
+popd
