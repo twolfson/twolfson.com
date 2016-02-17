@@ -81,6 +81,7 @@ fi
 # Build highlight.js
 # Language options are here:
 #   https://github.com/isagalaev/highlight.js/tree/9.1.0/src/languages
+# DEV: We install `highlight.js` via a `git://` URL since the `npm` version is compiled for `node`
       # 'bash.js': 'on' \
       # 'css.js': 'on' \
       # 'javascript.js': 'on' \ # alias: js
