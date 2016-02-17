@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.84.0 - Moved from Grunt to gulp to better integrate LiveReload
+
 3.83.0 - Added "Trying something new" article
 
 3.82.0 - Updated project stats
