@@ -87,10 +87,6 @@ As with CSS these are run by default as part of the main `gulp build` task but c
 gulp build-js
 ```
 
-[`grunt-curl`]: https://github.com/twolfson/grunt-curl
-[`grunt-zip`]: https://github.com/twolfson/grunt-zip
-[lo-fi-grunt]: /2014-01-19-low-tech-dependency-management-via-grunt-tasks
-
 #### Automated recompiled and refreshes
 We leverage [`gulp`][] to automatically re-run JS and CSS tasks when their files change.
 
