@@ -8,32 +8,6 @@ module.exports = function (grunt) {
       // // Highlight.js (includes CSS)
       // highlight: require('./grunt/highlight').curl,
     },
-    image_resize: {
-      sprites: {
-        files: {
-          'public/images/sprites/github.png': 'public/images/sprites/github-2x.png',
-          'public/images/sprites/purple-fork.png': 'public/images/sprites/purple-fork-2x.png',
-          'public/images/sprites/purple-star.png': 'public/images/sprites/purple-star-2x.png',
-          'public/images/sprites/rss.png': 'public/images/sprites/rss-2x.png',
-          'public/images/sprites/twitter.png': 'public/images/sprites/twitter-2x.png'
-        },
-        options: {
-          height: 32
-        }
-      },
-      'support-me': {
-        files: {
-          'public/images/support/bitcoin.png': 'public/images/support_src/bitcoin.png',
-          'public/images/support/dogecoin.png': 'public/images/support_src/dogecoin.png',
-          'public/images/support/flattr.png': 'public/images/support_src/flattr.png',
-          'public/images/support/gratipay.png': 'public/images/support_src/gratipay.png',
-          'public/images/support/paypal.png': 'public/images/support_src/paypal.png'
-        },
-        options: {
-          height: 25
-        }
-      }
-    },
     unzip: {
       // Highlight.js
       highlight: {
