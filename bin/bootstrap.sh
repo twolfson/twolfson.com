@@ -48,3 +48,32 @@ wget "https://github.com/csswizardry/inuit.css/archive/v5.0.0.zip" --output-docu
 unzip "inuit.css.zip"
 rm -r ../../public/css/inuit
 mv --no-target-directory "inuit.css-5.0.0" ../../public/css/inuit
+
+# Resize images
+# https://github.com/excellenteasy/grunt-image-resize/blob/v1.0.0/tasks/image_resize.js#L91
+# https://github.com/aheckmann/gm/blob/1.21.1/lib/args.js#L714-L724
+if which convert &> /dev/null; then
+  # Downsize retina sprites
+  for src_file in public/images/sprites/*-2x.png; do
+    # Convert `twitter-2x.png` to `twitter.png`
+    target_filename="$(basename "$src_file" | sed "s/-2x.png/.png/")"
+    # Save to `public/images/sprites/twitter.png`
+    target_file="public/images/sprites/$target_filename"
+
+    # Downsize image to 50%
+    convert "$src_file" -resize 50%x50% "$target_file"
+  done
+
+  # Make support images constant size
+  for src_file in public/images/support_src/*.png; do
+    # Extract `bitcoin.png` from `public/images/support_src/bitcoin.png`
+    target_filename="$(basename "$src_file")"
+    # Save to `public/images/support/bitcoin.png`
+    target_file="public/images/support/$target_filename"
+
+    # Resize to constant height of 25px
+    convert "$src_file" -resize x25 "$target_file"
+  done
+else
+  echo "ImageMagick not found. Skipping downsizing of retina images. Please install it to perform downsizing" 1>&2
+fi
