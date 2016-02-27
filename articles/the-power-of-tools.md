@@ -2,31 +2,46 @@
   "title": "The power of tools",
   "author": "Todd Wolfson",
   "date": "2016-02-27T04:00:05-0600",
-  "keywords": "TODO: Add keywords",
-  "summary": "TODO: Add summary"
+  "keywords": "tools, power, wonder",
+  "summary": "A reflection on the wonder and power of tools."
 }
 
 I want to take an article to step back from ourselves and reflect on the wonder and power of tools.
 
 From my experience, tools have made me more efficient by many factors (if not magnitudes).
 
-I covered a lot of tools in ["Develop Faster"][] which encompass tightening developer workflows and still leverage those ideas/most of those tools today.
+# Breadth of tools
+I covered a lot of tools in ["Develop faster"][] which encompass tightening developer workflows. They have saved me countless hours and reduced potential frustration at tedium.
 
-They has saved me countless hours and reduced potential frustration at tedium.
+On top of that, we have tools that make team collaboration seamless and make "the whole greater than the sum of its parts". When working remotely, the time spent researching pays for itself. The best tools were:
 
-On top of that, we have tools that makes team collaboration seamless. When working as a remote engineer, it pays off a lot to take the time to do the research. Tools like:
+["Develop faster"]: /2013-07-27-develop-faster
 
-- Trello for making progress visible to everyone while saying nothing
+- [Trello][] for making progress visible to everyone while saying nothing
     - My standard board format is "Backlog", "In Progress", "Blocked", "In Review", "Merged", and "Deployed"
-- Google Docs/Drive for shared plans, notes, and
-- GitHub for shared repositories, code review workflow, and code-specific documentation (e.g. port reservations, folder structure)
-- Jenkins/Travis CI for automated code testing to catch lint errors when the developer forgot to run it
+- [Google Docs/Drive][Google Apps] for shared plans, notes, and assets
+- [GitHub][] for shared repositories, code review workflow, and code-specific documentation (e.g. port reservations, folder structure)
+- [Jenkins][]/[Travis CI][] for automated code testing to catch lint errors when the developer forgot to run it
+- [Slack][] for expressive and well connected communication
+- [Appear.in][] for hassle-free video calls
 
-Creating things to help us perform higher level tasks more easily is... TODO: Complete sentence
+[Trello]: https://trello.com/
+[Google Apps]: https://apps.google.com/
+[GitHub]: https://github.com/
+[Jenkins]: https://jenkins-ci.org/
+[Travis CI]: https://travis-ci.org/
+[Slack]: https://slack.com/
+[Appear.in]: https://appear.in/
 
+# Tool empowerment
+I don't think I would have been able to move as fast as I do either solo or on a small team without tools to push me forward and prevent me from falling behind (e.g. testing/monitoring).
+
+I owe a lot to starting my company experiment to the experience and power of tools.
+
+# Creating your own tools
 As developers, we are fortunate that our tools are written in the same format as the output we typically generate. There are some professions (e.g. UI/UX designers) which don't have this luxury and thus will need to learn multiple skills to build tools.
 
-If you have never written a tool for yourself before, then I suggest trying it out. The results should include:
+If you have never written a tool for yourself before, then I suggest trying it out. The benefits will include:
 
 - You will start to see your actions in a new light
 - You will start thinking of new solutions for problems
@@ -36,8 +51,25 @@ If you would like examples of tools, look at my GitHub:
 
 - [File-Watcher][] was my first tool (outside of tools in Math proofs)
 - [grunt-spritesmith][] was my first "big project" tool
+- Probably any repository on <https://github.com/twolfson> was to solve a problem
+
+[File-Watcher]: https://github.com/twolfson/File-Watcher
+[grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
 
 Unfortunately, I can't tell you what to build because:
 
 - I don't know the problems you are experiencing
 - My problems won't motivate you as well as your own problems
+
+# References
+A lot of design plays into building tools and solving problems. Although, you don't need to have design experience to do it.
+
+Here are some design topics to get you started at seeing hidden problems and hidden solutions outside of code:
+
+- [Don Norman on 3 ways good design makes you happy][don-norman] (TED talk)
+- [The Design of Everyday Things][]
+- [A Practical Guide to Designing the Invisible][]
+
+[don-norman]: http://www.ted.com/talks/don_norman_on_design_and_emotion?
+[The Design of Everyday Things]: http://www.amazon.com/gp/product/0465050654
+[A Practical Guide to Designing the Invisible]: http://www.fivesimplesteps.com/products/a-practical-guide-to-designing-the-invisible
