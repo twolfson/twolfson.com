@@ -8,10 +8,10 @@
 
 I want to take an article to step back from ourselves and reflect on the wonder and power of tools.
 
-From my experience, tools have made me more efficient by many factors (if not magnitudes).
+In my experience, tools have made me more efficient by many factors (if not magnitudes).
 
 # Breadth of tools
-I covered a lot of tools in ["Develop faster"][] which encompass tightening developer workflows. They have saved me countless hours and reduced potential frustration at tedium.
+I covered a lot of tools in ["Develop faster"][] which encompass tightening developer workflows. They have saved me and my coworkers countless hours and reduced potential frustration at tedium.
 
 On top of that, we have tools that make team collaboration seamless and make "the whole greater than the sum of its parts". When working remotely, the time spent researching pays for itself. The best tools were:
 
@@ -36,10 +36,10 @@ On top of that, we have tools that make team collaboration seamless and make "th
 # Tool empowerment
 I don't think I would have been able to move as fast as I do either solo or on a small team without tools to push me forward and prevent me from falling behind (e.g. testing/monitoring).
 
-I owe a lot to starting my company experiment to the experience and power of tools.
+On a similar note, I don't think I would be able to start my company experiment without tools at my side.
 
 # Creating your own tools
-As developers, we are fortunate that our tools are written in the same format as the output we typically generate. There are some professions (e.g. UI/UX designers) which don't have this luxury and thus will need to learn multiple skills to build tools.
+As developers, we are fortunate that our tools are written in the same format as the output we generate. There are some professions (e.g. UI/UX designers) which don't have this luxury.
 
 If you have never written a tool for yourself before, then I suggest trying it out. The benefits will include:
 
@@ -51,7 +51,7 @@ If you would like examples of tools, look at my GitHub:
 
 - [File-Watcher][] was my first tool (outside of tools in Math proofs)
 - [grunt-spritesmith][] was my first "big project" tool
-- Probably any repository on <https://github.com/twolfson> was to solve a problem
+- Probably any repository on <https://github.com/twolfson> was built to solve a problem
 
 [File-Watcher]: https://github.com/twolfson/File-Watcher
 [grunt-spritesmith]: https://github.com/Ensighten/grunt-spritesmith
