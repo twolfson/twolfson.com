@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.85.0 - Added "The power of tools" article
+
 3.84.0 - Moved from Grunt to gulp to better integrate LiveReload
 
 3.83.0 - Added "Trying something new" article
