@@ -6,12 +6,12 @@
   "summary": "A reflection on the wonder and power of tools."
 }
 
-I want to take an article to step back from ourselves and reflect on the wonder and power of tools.
+I want to take an article to step back from the trenches of programming and reflect on the wonder and power of tools.
 
 In my experience, tools have made me more efficient by many factors (if not magnitudes).
 
 # Breadth of tools
-I covered a lot of tools in ["Develop faster"][] which encompass tightening developer workflows. They have saved me and my coworkers countless hours and reduced potential frustration at tedium.
+In ["Develop faster"][] I covered a lot of tools which encompass tightening developer workflows. They have saved me and my coworkers countless hours and reduced potential frustration at tedium.
 
 On top of that, we have tools that make team collaboration seamless and make "the whole greater than the sum of its parts". When working remotely, the time spent researching pays for itself. The best tools were:
 
@@ -34,12 +34,12 @@ On top of that, we have tools that make team collaboration seamless and make "th
 [Appear.in]: https://appear.in/
 
 # Tool empowerment
-I don't think I would have been able to move as fast as I do either solo or on a small team without tools to push me forward and prevent me from falling behind (e.g. testing/monitoring).
+I don't think I would have been able to move as fast as I do either solo or on a small team without tools to push me forward (e.g. ["Develop faster"][]) and prevent me from falling behind (e.g. testing/monitoring).
 
 On a similar note, I don't think I would be able to start my company experiment without tools at my side.
 
 # Creating your own tools
-As developers, we are fortunate that our tools are written in the same format as the output we generate. There are some professions (e.g. UI/UX designers) which don't have this luxury.
+As developers, we are fortunate that our tools are written in the same format as the output we generate. There are some professions which don't have this luxury (e.g. UI/UX designers, project/product managers).
 
 If you have never written a tool for yourself before, then I suggest trying it out. The benefits will include:
 
