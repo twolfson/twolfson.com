@@ -11,7 +11,7 @@ When designing my business card, I had an epiphane about when to use filled icon
 - If the design is content dense, then we should use a filled icon
 - If the design is content light, then we should use a hollow icon
 - If it's in between, then either should work but the icons should be consistently filled or hollow
-- Hollow icons should have consistent stroke width
+- Hollow icons should use the same stroke width (i.e. be consistent)
 
 I'm uncertain if this is a hard and fast rule. In programming, the answer is almost always "it depends" and there are rarely simple problems.
 
@@ -35,6 +35,15 @@ But let's look at some examples:
 **Filled icons (worse):**
 
 <img alt="Light content with filled icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/light-content-filled-icons.svg" style="border: 1px solid #000;"/>
+
+## Icons consistently filled or hollow
+**Consistently hollow icons (better):**
+
+<img alt="Consistently hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg" style="border: 1px solid #000;"/>
+
+**Inconsistent filled and hollow icons (worse):**
+
+<img alt="Inconsistent filled and hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/different-icon-fill.svg" style="border: 1px solid #000;"/>
 
 ## Hollow icon stroke width
 **Same stroke width (better):**
