@@ -6,29 +6,13 @@
   "summary": "When redesigning my business card, I discovered a design theory on icons."
 }
 
-# Background
-Occasionaly in programming I have an epiphane about an ideal solution to a problem. For example, when building `spritesmith` I thought registering formats via common function would be practical since it gives us a forward-compatible bridge to add wrappers if we ever need them.
+When designing my business card, I had an epiphane about when to use filled icons vs when to use hollow icons.
 
-```js
-// Simplified version of https://github.com/Ensighten/grunt-spritesmith/blob/6.3.1/src/grunt-spritesmith.js#L10-L46
-function ExtFormat() {
-  this.formatObj = {};
-}
-ExtFormat.prototype = {
-  add: function (name, val) {
-    this.formatObj[name] = val;
-  },
-  get: function (filepath) {
-    var ext = path.extname(filepath);
-    return this.formatObj[lowerExt];
-  }
-};
+- If the design is content dense, then we should use a filled icon
+- If the design is content light, then we should use a hollow icon
+- If it's in between, then either should work but the icons should be consistently filled or hollow
 
-// Add our img formats
-var imgFormats = new ExtFormat();
-imgFormats.add('.png', 'png');
-imgFormats.add('.jpg', 'jpeg');
-imgFormats.add('.jpeg', 'jpeg');
-```
+I'm uncertain if this is a hard and fast rule. In programming, the answer is almost always "it depends" and there are rarely simple problems.
 
-In reality, these can be false epiphanes since there's no simple answer to a question (e.g. an object would have worked equally as well and saved us lines). **Pro-tip:** The answer is always "it depends". But usually, these epiphanes help in finding the nuances for some cases.
+But let's look at examples of what I'm talking about:
+
