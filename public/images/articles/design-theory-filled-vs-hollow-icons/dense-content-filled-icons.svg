@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" width="92.96mm" height="54.86mm" viewBox="0 0 9296 5486" preserveAspectRatio="xMidYMid" fill-rule="evenodd" clip-path="url(#presentation_clip_path)" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="9296" height="5486"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <font id="EmbeddedFont_1" horiz-adv-x="2048">
+   <font-face font-family="BLOKK embedded" units-per-em="2048" font-weight="normal" font-style="normal" ascent="1296" descent="0"/>
+   <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
+   <glyph unicode="y" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="x" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="w" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="u" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="t" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="s" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="r" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="q" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="p" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="o" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="n" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="m" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="l" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="k" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="i" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="h" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="f" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="e" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="d" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="c" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="b" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="a" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="X" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="W" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="T" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="J" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="I" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="A" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="." horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode="&apos;" horiz-adv-x="1033" d="M -128,0 L -128,1280 896,1280 896,0 -128,0 Z"/>
+   <glyph unicode=" " horiz-adv-x="503"/>
+  </font>
+ </defs>
+ <defs class="TextShapeIndex">
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5"/>
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  <g id="bullet-char-template(57356)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z"/>
+  </g>
+  <g id="bullet-char-template(57354)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z"/>
+  </g>
+  <g id="bullet-char-template(10146)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z"/>
+  </g>
+  <g id="bullet-char-template(10132)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z"/>
+  </g>
+  <g id="bullet-char-template(10007)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z"/>
+  </g>
+  <g id="bullet-char-template(10004)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z"/>
+  </g>
+  <g id="bullet-char-template(9679)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z"/>
+  </g>
+  <g id="bullet-char-template(8226)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z"/>
+  </g>
+  <g id="bullet-char-template(8211)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z"/>
+  </g>
+ </defs>
+ <defs class="TextEmbeddedBitmaps"/>
+ <g>
+  <g id="id2" class="Master_Slide">
+   <g id="bg-id2" class="Background"/>
+   <g id="bo-id2" class="BackgroundObjects"/>
+  </g>
+ </g>
+ <g class="SlideGroup">
+  <g>
+   <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+    <g class="Page">
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id3">
+       <text class="TextShape"><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="1007"><tspan fill="rgb(0,0,0)" stroke="none">o World. This is some abc </tspan></tspan><tspan class="TextPosition" x="641" y="1452"><tspan fill="rgb(0,0,0)" stroke="none">sample text. It&apos;s ooo xy</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="1897"><tspan fill="rgb(0,0,0)" stroke="none">e mi      faxswwwwwwwwww .</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="2342"><tspan fill="rgb(0,0,0)" stroke="none">owW      orld. This is some </tspan></tspan><tspan class="TextPosition" x="641" y="2787"><tspan fill="rgb(0,0,0)" stroke="none">sample textwwwwwwwww...</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="3232"><tspan fill="rgb(0,0,0)" stroke="none">e mi      so la ti do. . . ..</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="3677"><tspan fill="rgb(0,0,0)" stroke="none">o  W      d. Thwwwwwwww .ww </tspan></tspan><tspan class="TextPosition" x="641" y="4122"><tspan fill="rgb(0,0,0)" stroke="none">sample text. It&apos;s qrstux</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="4567"><tspan fill="rgb(0,0,0)" stroke="none">Xa p xe of content. abcef</tspan></tspan></tspan><tspan class="TextParagraph" font-family="BLOKK" font-size="706px" font-weight="400"><tspan class="TextPosition" x="641" y="5012"><tspan fill="rgb(0,0,0)" stroke="none"> </tspan><tspan fill="rgb(0,0,0)" stroke="none">Amxl xwwxwcon nt. Ju nkx </tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="Graphic">
+      <g id="id4">
+       <path fill="rgb(0,0,0)" stroke="none" d="M 2466,2013 C 2433,2013 2401,2008 2370,1998 2355,1993 2337,1998 2328,2007 L 2267,2053 C 2198,2016 2153,1971 2116,1902 L 2161,1842 C 2172,1831 2176,1815 2171,1799 2161,1768 2156,1736 2156,1703 2156,1680 2137,1661 2114,1661 L 2015,1661 C 1992,1661 1973,1680 1973,1703 1973,1975 2194,2196 2466,2196 2489,2196 2508,2177 2508,2154 L 2508,2056 C 2508,2032 2489,2013 2466,2013 L 2466,2013 Z"/>
+      </g>
+     </g>
+     <g class="Graphic">
+      <g id="id5">
+       <path fill="rgb(0,0,0)" stroke="none" d="M 1918,3122 C 1915,3120 1912,3121 1912,3125 L 1912,3461 C 1912,3465 1915,3467 1918,3464 L 2096,3297 C 2099,3294 2099,3289 2096,3286 L 1918,3122 1918,3122 Z"/>
+       <path fill="rgb(0,0,0)" stroke="none" d="M 2625,3125 L 2625,3461 C 2625,3465 2622,3467 2619,3464 L 2441,3297 C 2438,3294 2438,3289 2441,3286 L 2619,3122 C 2622,3120 2625,3121 2625,3125 Z"/>
+       <path fill="rgb(0,0,0)" stroke="none" d="M 2420,3321 C 2417,3318 2412,3318 2408,3321 L 2275,3439 C 2271,3442 2266,3442 2262,3439 L 2129,3321 C 2125,3318 2120,3318 2117,3321 L 1956,3464 C 1952,3467 1953,3469 1958,3469 L 2260,3469 C 2265,3469 2268,3469 2268,3469 2269,3469 2272,3469 2277,3469 L 2579,3469 C 2584,3469 2585,3467 2581,3464 L 2420,3321 2420,3321 Z"/>
+       <path fill="rgb(0,0,0)" stroke="none" d="M 2277,3081 C 2272,3081 2269,3081 2268,3081 2268,3081 2265,3081 2260,3081 L 1921,3081 C 1916,3081 1915,3083 1919,3086 L 2126,3273 C 2129,3276 2135,3281 2138,3284 L 2150,3295 C 2153,3298 2159,3303 2162,3306 L 2262,3396 C 2265,3399 2268,3402 2268,3402 2268,3402 2268,3402 2268,3402 2268,3402 2269,3402 2269,3402 2269,3402 2269,3402 2269,3402 2269,3402 2272,3399 2275,3396 L 2375,3306 C 2378,3303 2384,3298 2387,3295 L 2399,3284 C 2402,3281 2408,3276 2411,3273 L 2618,3086 C 2622,3083 2621,3081 2616,3081 L 2277,3081 2277,3081 Z"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
