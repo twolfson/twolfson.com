@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.86.0 - Added "Design theory: Filled vs hollow icons" article
+
 3.85.0 - Added "The power of tools" article
 
 3.84.0 - Moved from Grunt to gulp to better integrate LiveReload
