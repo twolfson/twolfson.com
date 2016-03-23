@@ -21,29 +21,29 @@ But let's look at some examples:
 ## Dense content
 **Filled icons (better):**
 
-![Dense content with filled icons](public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-filled-icons.svg)
+<img alt="Dense content with filled icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-filled-icons.svg" style="border: 1px solid #000;"/>
 
 **Hollow icons (worse):**
 
-![Dense content with hollow icons](public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-hollow-icons.svg)
+<img alt="Dense content with hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-hollow-icons.svg" style="border: 1px solid #000;"/>
 
 ## Light content
 **Hollow icons (better):**
 
-![Light content with hollow icons](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg)
+<img alt="Light content with hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg" style="border: 1px solid #000;"/>
 
 **Filled icons (worse):**
 
-![Light content with filled icons](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-filled-icons.svg)
+<img alt="Light content with filled icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/light-content-filled-icons.svg" style="border: 1px solid #000;"/>
 
 ## Hollow icon stroke width
 **Same stroke width (better):**
 
-![Hollow icons with same stroke width](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg)
+<img alt="Hollow icons with same stroke width" src="public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg" style="border: 1px solid #000;"/>
 
 **Different stroke width (worse):**
 
-![Hollow icons with different stroke width](public/images/articles/design-theory-filled-vs-hollow-icons/hollow-icons-different-strokes.svg)
+<img alt="Hollow icons with different stroke width" src="public/images/articles/design-theory-filled-vs-hollow-icons/hollow-icons-different-strokes.svg" style="border: 1px solid #000;"/>
 
 # Attribution
 **Filled email:**
