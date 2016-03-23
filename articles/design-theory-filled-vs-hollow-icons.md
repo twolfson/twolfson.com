@@ -18,7 +18,32 @@ I'm uncertain if this is a hard and fast rule. In programming, the answer is alm
 But let's look at some examples:
 
 # Examples
-##
+## Dense content
+**Filled icons (better):**
+
+![Dense content with filled icons](public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-filled-icons.svg)
+
+**Hollow icons (worse):**
+
+![Dense content with hollow icons](public/images/articles/design-theory-filled-vs-hollow-icons/dense-content-hollow-icons.svg)
+
+## Light content
+**Hollow icons (better):**
+
+![Light content with hollow icons](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg)
+
+**Filled icons (worse):**
+
+![Light content with filled icons](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-filled-icons.svg)
+
+## Hollow icon stroke width
+**Same stroke width (better):**
+
+![Hollow icons with same stroke width](public/images/articles/design-theory-filled-vs-hollow-icons/light-content-hollow-icons.svg)
+
+**Different stroke width (worse):**
+
+![Hollow icons with different stroke width](public/images/articles/design-theory-filled-vs-hollow-icons/hollow-icons-different-strokes.svg)
 
 # Attribution
 **Filled email:**
