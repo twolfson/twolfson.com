@@ -10,10 +10,10 @@ When designing my business card, I had an epiphane about when to use filled icon
 
 - If the design is content dense, then we should use a filled icon
 - If the design is content light, then we should use a hollow icon
-- If it's in between, then either should work but the icons should be consistently filled or hollow
+- If the content is in between, then either should work but the icons should be consistently filled or hollow
 - Hollow icons should use the same stroke width (i.e. be consistent)
 
-I'm uncertain if this is a hard and fast rule. In programming, the answer is almost always "it depends" and there are rarely simple problems.
+I'm uncertain if this is a hard and fast rule. In programming, the answer is almost always "it depends" and there are rarely simple problems/solutions.
 
 But let's look at some examples:
 
@@ -43,7 +43,7 @@ But let's look at some examples:
 
 **Inconsistent filled and hollow icons (worse):**
 
-<img alt="Inconsistent filled and hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/different-icon-fill.svg" style="border: 1px solid #000;"/>
+<img alt="Inconsistent filled and hollow icons" src="public/images/articles/design-theory-filled-vs-hollow-icons/inconsistent-icon-fill.svg" style="border: 1px solid #000;"/>
 
 ## Hollow icon stroke width
 **Same stroke width (better):**
@@ -52,7 +52,7 @@ But let's look at some examples:
 
 **Different stroke width (worse):**
 
-<img alt="Hollow icons with different stroke width" src="public/images/articles/design-theory-filled-vs-hollow-icons/hollow-icons-different-strokes.svg" style="border: 1px solid #000;"/>
+<img alt="Hollow icons with different stroke width" src="public/images/articles/design-theory-filled-vs-hollow-icons/different-stroke-width.svg" style="border: 1px solid #000;"/>
 
 # Attribution
 **Filled email:**
