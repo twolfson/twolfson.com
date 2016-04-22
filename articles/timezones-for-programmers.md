@@ -6,7 +6,7 @@
   "summary": "Explanation of how to handle timezones as a programmer."
 }
 
-Until recently, I always thought I had a decent grip on timezones. It turns out my previous assumptions were reasonable but not practical. I thought:
+Until recently I always thought I had a decent grip on timezones. It turns out my previous assumptions were reasonable but not practical. I thought:
 
 - Saving/using a numerical timezone offset (e.g. `-0600`) was "good enough"
 - JavaScript wasn't great at dates but it was better than most since it had the `Date` primitive
