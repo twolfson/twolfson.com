@@ -24,7 +24,7 @@ Depending on the time of year, this will be a numerical offset of `-0500` or `-0
 
 Unfortunately, regions can share the same offset (e.g. another country North/South) so if we save/restore the data, then we won't know what country the original datetime corresponded to.
 
-In most scenarios, this can be slipped under the rug but if you want to let users edit/update timezone-aware datetimes, then it won't work.
+In most scenarios, this can be slipped under the rug but if you want to let users create/edit timezone-aware datetimes, then it won't work.
 
 Additionally, in PostgreSQL [all datetime values are stored in UTC](postgresql-utc) with no preservation of IANA timezone. As a result, we must save both the UTC value and the IANA timezone in 2 separate columns.
 
@@ -48,3 +48,4 @@ Here are some resources I found practical when reading up on timezones:
 
 - [Computerphile - The Problem with Time & Timezones](https://www.youtube.com/watch?v=-5wpm-gesOY)
 - [IANA timezone database](https://www.iana.org/time-zones)
+- [PostgreSQL Date/Time Types](www.postgresql.org/docs/9.3/static/datatype-datetime.html)
