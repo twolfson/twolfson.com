@@ -6,7 +6,7 @@
   "summary": "Explanation of how to handle timezones as a programmer."
 }
 
-Until recently I always thought I had a decent grip on timezones. It turns out my previous assumptions were reasonable but not practical. I thought:
+Until recently I always thought I had a decent grasp of timezones. It turns out my previous assumptions were reasonable but not practical. I thought:
 
 - Saving/using a numerical timezone offset (e.g. `-0600`) was "good enough"
 - JavaScript wasn't great at dates but it was better than most since it had the `Date` primitive
@@ -18,11 +18,21 @@ Timezones are typically based on geographical locations. For example, we have th
 
 [IANA timezone]: https://www.iana.org/time-zones
 
-Depending on the time of year, this will be a numerical offset of `-0500` or `-0600` from UTC. The change depends on the United States definition of [daylight saving time][].
+Depending on the time of year, this will be a numerical offset of `-0500` or `-0600` from UTC. The change depends on the United States definition of [daylight saving time][]. For example:
+
+```
+2016-01-01T00:00:00Z + America/Chicago -> 2016-01-01T00:00:00-0600
+2016-04-01T00:00:00Z + America/Chicago -> 2016-04-01T00:00:00-0500
+```
 
 [daylight saving time]: https://en.wikipedia.org/wiki/Daylight_saving_time
 
 Unfortunately, regions can share the same offset (e.g. another country North/South) so if we save/restore the data, then we won't know what country the original datetime corresponded to.
+
+```
+2016-04-01T00:00:00Z + America/Chicago     -> 2016-04-01T00:00:00-0500
+2016-04-01T00:00:00Z + America/Mexico_City -> 2016-04-01T00:00:00-0500
+```
 
 In most scenarios, this can be slipped under the rug but if you want to let users create/edit timezone-aware datetimes, then it won't work.
 
