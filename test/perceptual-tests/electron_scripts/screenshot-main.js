@@ -23,9 +23,9 @@ assert(imgDest, 'No img destination was specified.');
 app.on('ready', function handleReady () {
   // Create a browser and load our window
   var browserWindow = new BrowserWindow({
-    // TODO: Update browser dimensions
+    // Set super high height but Electron trims down to size =)
     width: 1024,
-    height: 800,
+    height: 20000,
     webPreferences: {
       preload: __dirname + '/screenshot-renderer.js',
       nodeIntegration: false
