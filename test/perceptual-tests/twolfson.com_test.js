@@ -43,25 +43,29 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     env: process.env
   }, function processScreenshot (err, stdout, stderr) {
     // Filter common errors
+    function removeCommonError(line) {
+      // jscs:disable maximumLineLength
+      // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
+      // Xlib:  extension "RANDR" missing on display ":99".
+      // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
+      // [2386:1122/071837:ERROR:connection.cc(1060)] Web sqlite error 5, errno 0: database is locked, sql: CREATE TABLE meta(key LONGVARCHAR NOT NULL UNIQUE PRIMARY KEY, value LONGVARCHAR)
+      // [2386:1122/071837:ERROR:web_data_service_backend.cc(54)] Cannot initialize the web database: 1
+      // [2386:1122/071838:WARNING:nw_form_database_service.cc(21)] initializing autocomplete database failed
+      // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
+      // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+      // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
+      // jscs:enable
+      return !(
+        line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"/) ||
+        line.match(/process.mainModule.filename|connection.cc|web_data_service_backend.cc/) ||
+        line.match(/nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc/) ||
+        line.match(/process_singleton_posix.cc/));
+    }
     if (stderr) {
-      stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
-        // jscs:disable maximumLineLength
-        // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
-        // Xlib:  extension "RANDR" missing on display ":99".
-        // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
-        // [2386:1122/071837:ERROR:connection.cc(1060)] Web sqlite error 5, errno 0: database is locked, sql: CREATE TABLE meta(key LONGVARCHAR NOT NULL UNIQUE PRIMARY KEY, value LONGVARCHAR)
-        // [2386:1122/071837:ERROR:web_data_service_backend.cc(54)] Cannot initialize the web database: 1
-        // [2386:1122/071838:WARNING:nw_form_database_service.cc(21)] initializing autocomplete database failed
-        // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
-        // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
-        // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
-        // jscs:enable
-        return !(
-          line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"/) ||
-          line.match(/process.mainModule.filename|connection.cc|web_data_service_backend.cc/) ||
-          line.match(/nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc/) ||
-          line.match(/process_singleton_posix.cc/));
-      }).join('\n');
+      stderr = stderr.split(/\n/g).filter(removeCommonError).join('\n');
+    }
+    if (stdout) {
+      stdout = stdout.split(/\n/g).filter(removeCommonError).join('\n');
     }
 
     // If stderr or stdout exist, log them
