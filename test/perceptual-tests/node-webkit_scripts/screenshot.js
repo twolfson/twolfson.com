@@ -42,6 +42,7 @@ win.on('loaded', function handleLoad () {
   var paddingHeight = guiHeight - viewportHeight;
 
   // Resize to full content height/width
+  // TODO: Restore width and non-blurry footer
   win.resizeTo(
     987,
     win.window.document.body.scrollHeight + paddingHeight);
