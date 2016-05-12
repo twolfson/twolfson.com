@@ -26,6 +26,7 @@ app.on('ready', function handleReady () {
     // Set super high height but Electron trims down to size =)
     width: 1024,
     height: 20000,
+    enableLargerThanScreen: true,
     webPreferences: {
       preload: __dirname + '/screenshot-renderer.js',
       nodeIntegration: false
