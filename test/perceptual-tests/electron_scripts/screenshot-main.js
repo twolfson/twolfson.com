@@ -22,7 +22,6 @@ assert(imgDest, 'No img destination was specified.');
 // When Electron is done loading, launch our application
 app.on('ready', function handleReady () {
   // Create a browser and load our window
-  console.log(__dirname + '/screenshot-renderer.js');
   var browserWindow = new BrowserWindow({
     // TODO: Update browser dimensions
     width: 1024,
@@ -36,14 +35,15 @@ app.on('ready', function handleReady () {
 
   // When the window is done loading, screenshot our page and exit
   ipcMain.on('renderer:load', function handleLoad () {
-    // DEV: In nw.js, we needed to wait 1 second for "stabilization"
-    //   Let's find out if we need the same here
-    browserWindow.capturePage(function handleCapturePage (nativeImage) {
-      // Write out our image
-      fs.writeFileSync(imgDest, nativeImage.toPng());
+    // Wait 1 second for fonts to load (not sync for `onload`)
+    setTimeout(function handleSetTimeout () {
+      browserWindow.capturePage(function handleCapturePage (nativeImage) {
+        // Write out our image
+        fs.writeFileSync(imgDest, nativeImage.toPng());
 
-      // Exit our process
-      process.exit(0);
-    });
+        // Exit our process
+        process.exit(0);
+      });
+    }, 1000);
   });
 });
