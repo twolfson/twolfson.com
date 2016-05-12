@@ -1,17 +1,19 @@
-// When an error occurs, log it and exit
-process.on('uncaughtException', function handleErr (err) {
+// When we run into an uncaught exception, fail hard
+// DEV: Without this line, Electron can hang indefinitely
+process.on('uncaughtException', function handleUncaughtException (err) {
   throw err;
 });
 
 // Load in dependencies
 var assert = require('assert');
+var app = require('electron').app;
+var BrowserWindow = require('electron').BrowserWindow;
 var fs = require('fs');
-var gui = require('nw.gui');
 var cssControls = require('css-controls');
 
 // Grab the arguments
-var url = gui.App.argv[0];
-var imgDest = gui.App.argv[1];
+var url = process.argv[2];
+var imgDest = process.argv[3];
 
 // Assert against url and image destination
 assert(url, 'No url was specified.');

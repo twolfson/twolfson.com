@@ -1,9 +1,0 @@
-{
-  "name": "twolfson-screenshot",
-  "main": "index.html",
-  "single-instance": false,
-  "window": {
-    "show": false,
-    "show_in_taskbar": false
-  }
-}
