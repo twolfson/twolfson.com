@@ -16,6 +16,7 @@
   "maxdepth": 5,
   "sub": true,
   "node": true,
+  "browser": true,
   "globals": {
     "exports": true,
     "describe": true,
