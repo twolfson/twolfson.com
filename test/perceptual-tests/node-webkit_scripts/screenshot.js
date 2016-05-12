@@ -43,7 +43,7 @@ win.on('loaded', function handleLoad () {
 
   // Resize to full content height/width
   win.resizeTo(
-    win.window.document.body.scrollWidth + paddingWidth,
+    987,
     win.window.document.body.scrollHeight + paddingHeight);
 
   // Wait for resize to take effect
