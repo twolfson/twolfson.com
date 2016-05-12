@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.87.1 - Accepted latest perceptual diffs
+
 3.87.0 - Added "Timezones for programmers" article
 
 3.86.0 - Added "Design theory: Filled vs hollow icons" article
