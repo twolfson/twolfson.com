@@ -5,6 +5,7 @@ var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
 var _ = require('underscore');
 var async = require('async');
+var electronPath = require('electron-prebuilt');
 var imageDiff = require('image-diff');
 var rimraf = require('rimraf');
 var shellQuote = require('shell-quote');
@@ -59,37 +60,16 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
-  var screenshotCmd = shellQuote.quote(['nw', '.', url, actualImg]);
+  var screenshotCmd = shellQuote.quote([electronPath, url, actualImg]);
   exec(screenshotCmd, {
-    cwd: __dirname + '/node-webkit_scripts/',
+    cwd: __dirname + '/electron_scripts/',
     env: _.defaults({
       DISPLAY: DISPLAY
     }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
-    // Filter common errors
-    if (stderr) {
-      stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
-        // jscs:disable maximumLineLength
-        // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
-        // Xlib:  extension "RANDR" missing on display ":99".
-        // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
-        // [2386:1122/071837:ERROR:connection.cc(1060)] Web sqlite error 5, errno 0: database is locked, sql: CREATE TABLE meta(key LONGVARCHAR NOT NULL UNIQUE PRIMARY KEY, value LONGVARCHAR)
-        // [2386:1122/071837:ERROR:web_data_service_backend.cc(54)] Cannot initialize the web database: 1
-        // [2386:1122/071838:WARNING:nw_form_database_service.cc(21)] initializing autocomplete database failed
-        // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
-        // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
-        // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
-        // jscs:enable
-        return !(line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"/) ||
-          line.match(/process.mainModule.filename|connection.cc|web_data_service_backend.cc/) ||
-          line.match(/nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc/) ||
-          line.match(/process_singleton_posix.cc/));
-      }).join('\n');
-    }
-
     // If stderr or stdout exist, log them
-    if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
-    if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
+    if (stderr) { console.log('ELECTRON STDERR: ', stderr); }
+    if (stdout) { console.log('ELECTRON STDOUT: ', stdout); }
 
     // If there is an error, callback with it
     if (err) { return done(err); }
