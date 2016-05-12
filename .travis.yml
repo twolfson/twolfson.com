@@ -14,9 +14,6 @@ before_install:
   # Upgrade npm to avoid semver issues
   - curl --location http://rawgit.com/twolfson/fix-travis-ci/master/lib/install.sh | bash -s
 
-  # Install node-webkit
-  - ./test/utils/install-node-webkit.sh "$USER"
-
 install:
   # Install our node dependencies and setup our config
   - CONFIG_COPY_ONLY=TRUE npm install

@@ -37,22 +37,4 @@ SCRIPT
   fi
 SCRIPT
   config.vm.provision "shell", inline: $install_imagemagick
-
-  # Install test dependency on `node-webkit`
-  $install_nw = <<SCRIPT
-  if ! which nw &> /dev/null; then
-    # Install chrome deps (one of node-webkit runtime deps)
-    # http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/
-    wget -q -O - "https://dl-ssl.google.com/linux/linux_signing_key.pub" | sudo apt-key add -
-    sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
-    sudo apt-get update
-
-    # Install node-webkit deps
-    sudo apt-get install -y gconf2 xvfb google-chrome-stable libnotify-dev
-
-    # Install node-webkit itself
-    /vagrant/test/utils/install-node-webkit.sh "vagrant"
-  fi
-SCRIPT
-  config.vm.provision "shell", inline: $install_nw
 end
