@@ -94,34 +94,29 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     });
   });
 }, function handleResults (err, results) {
-  // Stop Xvfb
-  xvfbChild.kill();
-  xvfbChild.removeAllListeners('exit');
-  xvfbChild.on('exit', function handleXvfbExit () {
-    // Take down server
-    server.destroy(function handleServerExit () {
-      // If there was an error, log it and leave
-      if (err) {
-        console.error('SERVER-DESTROY ERROR: ', err);
-        return process.exit(1);
-      }
+  // Take down server
+  server.destroy(function handleServerExit () {
+    // If there was an error, log it and leave
+    if (err) {
+      console.error('SERVER-DESTROY ERROR: ', err);
+      return process.exit(1);
+    }
 
-      // Otherwise, determine if there were any failures
-      var failedResults = results.filter(function (result) {
-        return !result.pass;
-      });
-
-      // If there were failures, log them and leave
-      if (failedResults.length > 0) {
-        failedResults.forEach(function (result) {
-          console.log('Failed result for ' + result.url);
-        });
-        process.exit(1);
-      } else {
-      // Otherwise, exit gracefully
-        console.log('All done!');
-        process.exit(0);
-      }
+    // Otherwise, determine if there were any failures
+    var failedResults = results.filter(function (result) {
+      return !result.pass;
     });
+
+    // If there were failures, log them and leave
+    if (failedResults.length > 0) {
+      failedResults.forEach(function (result) {
+        console.log('Failed result for ' + result.url);
+      });
+      process.exit(1);
+    } else {
+    // Otherwise, exit gracefully
+      console.log('All done!');
+      process.exit(0);
+    }
   });
 });
