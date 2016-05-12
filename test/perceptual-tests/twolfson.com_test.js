@@ -2,7 +2,6 @@
 var assert = require('assert');
 var fs = require('fs');
 var exec = require('child_process').exec;
-var spawn = require('child_process').spawn;
 var _ = require('underscore');
 var async = require('async');
 var imageDiff = require('image-diff');
@@ -31,27 +30,8 @@ assert(yml); // DEV: We use assert to silence jshint complaints
 // Start a server
 var server = serverUtils.startServer();
 
-// Start up Xvfb
+// Declare our Xvfb display
 var DISPLAY = ':99';
-var xvfbChild = spawn('Xvfb', [DISPLAY]);
-
-// Collect xvfb stdout and stderr
-var xvfbStdout = '';
-var xvfbStderr = '';
-xvfbChild.stdout.on('data', function addStdout (buff) {
-  xvfbStdout += buff;
-});
-xvfbChild.stderr.on('data', function addStderr (buff) {
-  xvfbStderr += buff;
-});
-
-// If xvfb terminates
-xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
-  console.error('Xvfb exited early', code);
-  console.error('XVFB STDOUT:', xvfbStdout);
-  console.error('XVFB STDERR:', xvfbStderr);
-  process.exit(1);
-});
 
 // For each of the URLs
 async.mapLimit(urls, 2, function comparePages (pathname, done) {
@@ -59,7 +39,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
-  var screenshotCmd = shellQuote.quote(['nw', '.', url, actualImg]);
+  var screenshotCmd = shellQuote.quote(['xvfb-run', 'nw', '.', url, actualImg]);
   exec(screenshotCmd, {
     cwd: __dirname + '/node-webkit_scripts/',
     env: _.defaults({
