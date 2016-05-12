@@ -24,8 +24,10 @@ app.on('ready', function handleReady () {
   // Create a browser and load our window
   var browserWindow = new BrowserWindow({
     // Set super high height but Electron trims down to size =)
+    // TODO: Height isn't being resolved properly, we tried `enableLargerThanScreen` but that failed
+    //   Also, random screenshots lack fonts or are fully transparent
     width: 1024,
-    height: 20000,
+    height: 2000,
     enableLargerThanScreen: true,
     webPreferences: {
       preload: __dirname + '/screenshot-renderer.js',
