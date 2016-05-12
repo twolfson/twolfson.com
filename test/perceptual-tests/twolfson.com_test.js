@@ -60,9 +60,9 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
-  var screenshotCmd = shellQuote.quote([electronPath, url, actualImg]);
+  var screenshotCmd = shellQuote.quote([
+    electronPath, __dirname + '/electron_scripts/screenshot-main.js', url, actualImg]);
   exec(screenshotCmd, {
-    cwd: __dirname + '/electron_scripts/',
     env: _.defaults({
       DISPLAY: DISPLAY
     }, process.env)
