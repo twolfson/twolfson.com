@@ -67,6 +67,14 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
       DISPLAY: DISPLAY
     }, process.env)
   }, function processScreenshot (err, stdout, stderr) {
+    // Filter common errors
+    if (stderr) {
+      stderr = stderr.split(/\n/g).filter(function removeCommonError (line) {
+        // Xlib:  extension "RANDR" missing on display ":99".
+        return !line.match(/Xlib:  extension "RANDR"/);
+      }).join('\n');
+    }
+
     // If stderr or stdout exist, log them
     if (stderr) { console.log('ELECTRON STDERR: ', stderr); }
     if (stdout) { console.log('ELECTRON STDOUT: ', stdout); }
