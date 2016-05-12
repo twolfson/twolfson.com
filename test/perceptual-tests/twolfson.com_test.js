@@ -30,21 +30,17 @@ assert(yml); // DEV: We use assert to silence jshint complaints
 // Start a server
 var server = serverUtils.startServer();
 
-// Declare our Xvfb display
-var DISPLAY = ':99';
-
 // For each of the URLs
 async.mapLimit(urls, 2, function comparePages (pathname, done) {
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
   var actualImg = actualScreenshots + '/' + filename;
-  var screenshotCmd = shellQuote.quote(['xvfb-run', 'nw', '.', url, actualImg]);
+  // DEV: We use `--auto-servernum` to avoid `xvfb-run: error: Xvfb failed to start` error messages from `xvfb-run`
+  var screenshotCmd = shellQuote.quote(['xvfb-run', '--auto-servernum', 'nw', '.', url, actualImg]);
   exec(screenshotCmd, {
     cwd: __dirname + '/node-webkit_scripts/',
-    env: _.defaults({
-      DISPLAY: DISPLAY
-    }, process.env)
+    env: process.env
   }, function processScreenshot (err, stdout, stderr) {
     // Filter common errors
     if (stderr) {
