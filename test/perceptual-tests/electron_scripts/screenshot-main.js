@@ -27,20 +27,19 @@ app.on('ready', function handleReady () {
     // TODO: Update browser dimensions
     width: 1024,
     height: 800,
-    preload: __dirname + '/screenshot-renderer.js',
-    nodeIntegration: false
+    webPreferences: {
+      preload: __dirname + '/screenshot-renderer.js',
+      nodeIntegration: false
+    }
   });
   browserWindow.loadURL(url);
 
   // When the window is done loading, screenshot our page and exit
-  console.log('yoooo');
   ipcMain.on('renderer:load', function handleLoad () {
-    console.log('hiii');
     // DEV: In nw.js, we needed to wait 1 second for "stabilization"
     //   Let's find out if we need the same here
     browserWindow.capturePage(function handleCapturePage (nativeImage) {
       // Write out our image
-      console.log(nativeImage.toPng());
       fs.writeFileSync(imgDest, nativeImage.toPng());
 
       // Exit our process
