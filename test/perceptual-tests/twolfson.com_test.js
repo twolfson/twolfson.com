@@ -68,8 +68,8 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     }
 
     // If stderr or stdout exist, log them
-    if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
-    if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
+    if (stderr) { console.log('XVFB-RUN/NODE-WEBKIT STDERR: ', stderr); }
+    if (stdout) { console.log('XVFB-RUN/NODE-WEBKIT STDOUT: ', stdout); }
 
     // If there is an error, callback with it
     if (err) { return done(err); }
