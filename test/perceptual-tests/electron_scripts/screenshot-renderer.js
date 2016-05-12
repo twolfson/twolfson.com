@@ -11,7 +11,9 @@ window.addEventListener('DOMContentLoaded', function handleDOMContentLoaded () {
 });
 
 // When all browser content loads (e.g. images, CSS, JS)
+console.log('yoooo');
 window.addEventListener('load', function handleLoad () {
+console.log('yoooo2');
   // Notify IPC we are loaded
-  ipcRenderer.send('loaded');
+  ipcRenderer.send('renderer:load');
 });
