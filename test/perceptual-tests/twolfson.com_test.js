@@ -2,7 +2,6 @@
 var assert = require('assert');
 var fs = require('fs');
 var exec = require('child_process').exec;
-var _ = require('underscore');
 var async = require('async');
 var imageDiff = require('image-diff');
 var rimraf = require('rimraf');
