@@ -10,11 +10,11 @@ I haven't left any updates about what I mentioned in ["Trying something new"][] 
 
 ["Trying something new"]: /2016-02-15-trying-something-new
 
-To address that, I keep the other updates on separate blogs:
+To address that, I keep those updates on separate blogs:
 
 - Personal adventures: http://toddisadventuring.tumblr.com/
 - Entrepeneur experimentation: https://medium.com/@twolfsn
 
-The tl;dr of those blogs so far is:
+The tl;dr of those blogs so far:
 
 I moved to Berlin 1 week ago and am still adjusting. My project is taking longer than expected but moving along; it's on the tail end of prototyping and starting to begin proper development.
