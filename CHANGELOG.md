@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.88.0 - Added "Berlin and project updates" article
+
 3.87.1 - Accepted latest perceptual diffs
 
 3.87.0 - Added "Timezones for programmers" article
