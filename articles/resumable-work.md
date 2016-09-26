@@ -12,7 +12,7 @@ https://medium.com/@twolfsn/back-to-the-grindstone-98dce7847f72
 
 Resumable work is code that is sufficiently documented, commented, and straight-forward that you and others can understand the author's intentions at the time of writing as well as extrapolate future solutions.
 
-The first time I encountered resumable work (or the lack there of) was playing [Harvest Moon][] in my childhood; I would take 6 months breaks and be fully confused when I returned. I tried writing long pages of documentation to my future self but it only added to my aggravation.
+The first time I encountered resumable work was playing [Harvest Moon][] in my childhood; I would take 6 months breaks and be fully confused when I returned. I tried writing pages of notes to my future self but it didn't work and only added to my aggravation.
 
 [Harvest Moon]: https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)
 
@@ -33,8 +33,8 @@ When I started doing open source, I recognized the same problem immediately. I w
 
 Aside from this, I am trying another technique but have yet to see how it goes:
 
-- Anything that must be done before landing a PR should cause test failures or the repository to fail (e.g. removing patched TODOs, removing a `.only` call from tests)
-    - For example, add something that fails linting or a test case with a TODO in it and an `assert.fail`
+- Anything that must be done before landing a PR (e.g. removing patched TODOs) should cause test failures or the repository to fail
+    - For example, add something that fails linting or a test case with a comment and an `assert.fail`
 
 In the scope of resumable projects (not only single repos):
 
