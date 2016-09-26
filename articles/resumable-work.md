@@ -10,7 +10,7 @@ In the past month, I returned to the USA, moved to Portland, and resumed work on
 
 https://medium.com/@twolfsn/back-to-the-grindstone-98dce7847f72
 
-Resumable work is code that has sufficiently documented, commented, and straight-forward that you and others can understand the author's intentions at the time of writing as well as extrapolate future solutions.
+Resumable work is code that is sufficiently documented, commented, and straight-forward that you and others can understand the author's intentions at the time of writing as well as extrapolate future solutions.
 
 The first time I encountered resumable work (or the lack there of) was playing [Harvest Moon][] in my childhood; I would take 6 months breaks and be fully confused when I returned. I tried writing long pages of documentation to my future self but it only added to my aggravation.
 
