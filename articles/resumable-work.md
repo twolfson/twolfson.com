@@ -16,22 +16,26 @@ The first time I encountered resumable work (or the lack there of) was playing [
 
 [Harvest Moon]: https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)
 
-Later on in life, I started doing programming and encountered the same issue when resuming code I hadn't touched in a while (e.g. in a large repo, open source projects).
+When I started doing open source, I recognized the same problem immediately. I would return to a repo I wrote and be fully lost. After enough trial and error, here's what I found worked:
 
-After this happening again and again, you start to learn what works and what doesn't work. This is what I found:
-
-- Workflow oriented documentation/repositories (e.g. how to get started, which scripts do what, how to use them)
-    - Self-documenting repositories are great for things like APIs but not amazing on concepts. We need to be empathetic to how someone is using our repo which is a different mindset than we use while writing code
+- Workflow oriented documentation (e.g. how to get started, which scripts do what, how to use them)
+    - See [twolfson.com-scripts][] as an example
+    - Self-documenting repositories are great for APIs but not amazing on concepts for developers
+    - We need to be empathetic to how someone is using our repo which is a different mindset than we use while writing code
 - Well commented repositories
+    - Even in languages like Python, not all intentions are obvious. Comments are always better than nothing at all
 - Well tested repositories
-    - People do manual testing often but it's impractical if I can't remember my workflow 6 months later. Let alone when a new coworker comes and attempts to contribute
-- Anything that must be done before landing a PR should cause test failures or the repository to fail
-    - We can't guarantee our rusty programming self will remember to run a `git grep TODO` everytime before landing a PR
-    - In fact, I wouldn't even trust my non-rusty self to remember that every time (e.g. I have forgotten to remove a `.only` from tests plenty of times)
+    - People do manual testing often but it's impractical if I can't remember my workflow 6 months later
+    - This is aggravated further when we hire a new coworker who can't test on their own due to no automation
+    - Sometimes manual tests are necessary outside of automated tests (e.g. verifying CLI options) but be sure to document those as well
 
-Beyond the scope of this:
+[twolfson.com-scripts]: https://github.com/twolfson/twolfson.com-scripts/blob/2.6.4/README.md
 
-- Consolidated internal documentation
-- Granular but not overwhelming planning (e.g. Trello board with upcoming work for next few weeks)
+Aside from this, I am trying another technique but have yet to see how it goes:
 
-TODO: Link to `twolfson.com-scripts` documentation
+- Anything that must be done before landing a PR should cause test failures or the repository to fail (e.g. removing patched TODOs, removing a `.only` call from tests)
+    - For example, add something that fails linting or a test case with a TODO in it and an `assert.fail`
+
+In the scope of resumable projects (not only single repos):
+
+- Granular but not overwhelming planning (e.g. Trello board with upcoming work for next few weeks, not next few months)
