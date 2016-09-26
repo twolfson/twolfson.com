@@ -6,11 +6,15 @@
   "summary": "Explanation of how to make repositories resumable for yourself and others"
 }
 
-In the past few weeks, I return the USA, moved to Portland, and gotten back to working on my project. For more details, see:
+In the past month, I returned to the USA, moved to Portland, and resumed work on my project. For more details, see:
 
-TODO: Add link to Medium post
+https://medium.com/@twolfsn/back-to-the-grindstone-98dce7847f72
 
-The earliest example of resumable work was from my childhood playing the game Harvest Moon. For the unenlightened, it's a farming game where you plant crops, harvest them, milk cows, collect eggs, etc. Every now and then, I would take these long breaks (e.g. 6 months) where I entirely forget about the game and then pick it up later. No matter what I did, I would always get frustrated as I couldn't recally what I was doing in the game (e.g. how long ago did I plant the crops?, did I have cows?) so I would always have to start over. I tried everything -- writing down long complex notes, writing down short ones, but nothing helped.
+Resumable work is code that has sufficiently documented, commented, and straight-forward that you and others can understand the author's intentions at the time of writing as well as extrapolate future solutions.
+
+The first time I encountered resumable work (or the lack there of) was playing [Harvest Moon][] in my childhood; I would take 6 months breaks and be fully confused when I returned. I tried writing long pages of documentation to my future self but it only added to my aggravation.
+
+[Harvest Moon]: https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)
 
 Later on in life, I started doing programming and encountered the same issue when resuming code I hadn't touched in a while (e.g. in a large repo, open source projects).
 
@@ -29,3 +33,5 @@ Beyond the scope of this:
 
 - Consolidated internal documentation
 - Granular but not overwhelming planning (e.g. Trello board with upcoming work for next few weeks)
+
+TODO: Link to `twolfson.com-scripts` documentation
