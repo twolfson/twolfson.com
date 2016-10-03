@@ -37,8 +37,8 @@ describe('A request to /projects', function () {
 
     // Assert there are stars
     // DEV: text seems to be returning a weird number
-    // DEV: Skip over `spritesmith` due to `1.1k` syntax
-    var starCountStr = $starCount.eq(1).html().trim();
+    // DEV: Skip over `image-diff` and `spritesmith` due to `1.1k` syntax
+    var starCountStr = $starCount.eq(2).html().trim();
     var starCount = +starCountStr;
     expect(starCountStr).to.not.equal('');
     expect(starCount).to.not.equal(0);
