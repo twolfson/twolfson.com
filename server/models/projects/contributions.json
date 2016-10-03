@@ -36,7 +36,7 @@
     "pageUrl": "https://github.com/karma-runner/karma"
   },
   {
-    "name": "jscs",
+    "name": "JSCS",
     "description": "JavaScript code style checker",
     "stars": 5122,
     "forks": 566,
@@ -45,7 +45,7 @@
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
   },
   {
-    "name": "serverspec",
+    "name": "Serverspec",
     "description": "Testing tool for server configurations",
     "stars": 1666,
     "forks": 304,
@@ -54,7 +54,7 @@
     "pageUrl": "https://github.com/mizzy/serverspec"
   },
   {
-    "name": "gratipay",
+    "name": "Gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
     "stars": 962,
     "forks": 300,
