@@ -28,7 +28,7 @@
   },
   {
     "name": "Karma",
-    "description": "Powerful test runner for browser JavaScript",
+    "description": "Powerful browser test runner",
     "stars": 7625,
     "forks": 1216,
     "github": "karma-runner/karma",
