@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.90.0 - Updated project stats and contributions
+
 3.89.0 - Added "Resumable work" article
 
 3.88.0 - Added "Berlin and project updates" article
