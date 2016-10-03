@@ -1,9 +1,18 @@
 [
   {
+    "name": "image-diff",
+    "description": "Create image differential between two images",
+    "stars": 2055,
+    "forks": 68,
+    "github": "uber/image-diff",
+    "srcUrl": "https://github.com/uber/image-diff",
+    "pageUrl": "https://github.com/uber/image-diff"
+  },
+  {
     "name": "spritesmith",
     "description": "Combine images into a spritesheet and CSS variables",
-    "stars": 1060,
-    "forks": 92,
+    "stars": 1142,
+    "forks": 97,
     "github": "Ensighten/grunt-spritesmith",
     "srcUrl": "https://github.com/Ensighten/grunt-spritesmith",
     "pageUrl": "https://github.com/Ensighten/grunt-spritesmith"
@@ -11,8 +20,8 @@
   {
     "name": "sexy-bash-prompt",
     "description": "Bash prompt with colors, git statuses, and git branches",
-    "stars": 546,
-    "forks": 73,
+    "stars": 642,
+    "forks": 92,
     "github": "twolfson/sexy-bash-prompt",
     "srcUrl": "https://github.com/twolfson/sexy-bash-prompt",
     "pageUrl": "https://github.com/twolfson/sexy-bash-prompt"
@@ -20,65 +29,56 @@
   {
     "name": "google-music-electron",
     "description": "Desktop app for Google Music on top of Electron",
-    "stars": 141,
-    "forks": 19,
+    "stars": 196,
+    "forks": 30,
     "github": "twolfson/google-music-electron",
     "srcUrl": "https://github.com/twolfson/google-music-electron",
     "pageUrl": "https://github.com/twolfson/google-music-electron"
   },
   {
-    "name": "image-diff",
-    "description": "Create image differential between two images",
-    "stars": 131,
-    "forks": 15,
-    "github": "uber/image-diff",
-    "srcUrl": "https://github.com/uber/image-diff",
-    "pageUrl": "https://github.com/uber/image-diff"
-  },
-  {
     "name": "Find++",
     "description": "Find code quickly in Sublime Text",
-    "stars": 51,
+    "stars": 54,
     "forks": 6,
     "github": "twolfson/FindPlusPlus",
     "srcUrl": "https://github.com/twolfson/FindPlusPlus",
     "pageUrl": "https://github.com/twolfson/FindPlusPlus"
   },
   {
+    "name": "restructuredtext-lint",
+    "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
+    "stars": 50,
+    "forks": 7,
+    "github": "twolfson/restructuredtext-lint",
+    "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
+    "pageUrl": "https://github.com/twolfson/restructuredtext-lint"
+  },
+  {
+    "name": "eight-track",
+    "description": "Record and playback HTTP requests",
+    "stars": 43,
+    "forks": 10,
+    "github": "uber/eight-track",
+    "srcUrl": "https://github.com/uber/eight-track",
+    "pageUrl": "https://github.com/uber/eight-track"
+  },
+  {
     "name": "foundry",
     "description": "Release manager for npm, bower, git tags, and more",
-    "stars": 38,
+    "stars": 40,
     "forks": 6,
     "github": "twolfson/foundry",
     "srcUrl": "https://github.com/twolfson/foundry",
     "pageUrl": "https://github.com/twolfson/foundry"
   },
   {
-    "name": "eight-track",
-    "description": "Record and playback HTTP requests",
-    "stars": 35,
-    "forks": 9,
-    "github": "uber/eight-track",
-    "srcUrl": "https://github.com/uber/eight-track",
-    "pageUrl": "https://github.com/uber/eight-track"
-  },
-  {
     "name": "twolfson.com-scripts",
     "description": "Scripts used to manage my server infrastructure",
-    "stars": 33,
+    "stars": 34,
     "forks": 2,
     "github": "twolfson/twolfson.com-scripts",
     "srcUrl": "https://github.com/twolfson/twolfson.com-scripts",
     "pageUrl": "https://github.com/twolfson/twolfson.com-scripts"
-  },
-  {
-    "name": "restructuredtext-lint",
-    "description": "Linter for <a target=\"_blank\" href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>",
-    "stars": 31,
-    "forks": 4,
-    "github": "twolfson/restructuredtext-lint",
-    "srcUrl": "https://github.com/twolfson/restructuredtext-lint",
-    "pageUrl": "https://github.com/twolfson/restructuredtext-lint"
   },
   {
     "name": "gifsockets",
@@ -92,7 +92,7 @@
   {
     "name": "bookmarks",
     "description": "My bookmarks in a searchable webpage",
-    "stars": 16,
+    "stars": 18,
     "forks": 3,
     "github": "twolfson/bookmarks",
     "srcUrl": "https://github.com/twolfson/bookmarks",
@@ -120,7 +120,7 @@
     "name": "winfiles",
     "description": "My Windows files, documentation, and workflow",
     "stars": 3,
-    "forks": 0,
+    "forks": 1,
     "github": "twolfson/winfiles",
     "srcUrl": "https://github.com/twolfson/winfiles",
     "pageUrl": "https://github.com/twolfson/winfiles"
