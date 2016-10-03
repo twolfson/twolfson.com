@@ -70,5 +70,32 @@
     "github": "lepture/python-livereload",
     "srcUrl": "https://github.com/lepture/python-livereload",
     "pageUrl": "https://github.com/lepture/python-livereload"
+  },
+  {
+    "name": "SOPS",
+    "description": "Secret management utility",
+    "stars": 348,
+    "forks": 19,
+    "github": "mozilla/sops",
+    "srcUrl": "https://github.com/mozilla/sops",
+    "pageUrl": "https://github.com/mozilla/sops"
+  },
+  {
+    "name": "Karma",
+    "description": "Powerful test runner for browser JavaScript",
+    "stars": 7625,
+    "forks": 1216,
+    "github": "karma-runner/karma",
+    "srcUrl": "https://github.com/karma-runner/karma",
+    "pageUrl": "https://github.com/karma-runner/karma"
+  },
+  {
+    "name": "Electron",
+    "description": "Cross-platform desktop application framework",
+    "stars": 36344,
+    "forks": 4115,
+    "github": "electron",
+    "srcUrl": "https://github.com/electron",
+    "pageUrl": "https://github.com/electron"
   }
 ]
