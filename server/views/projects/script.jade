@@ -14,4 +14,4 @@
     a(href=srcUrl, target="_blank")
       span.icon-purple-fork(title="Forks")
       //- <span class="accessibility">Forks</span>
-      span.ignore-flow= forks
+      span.ignore-flow= numscale({value: forks, maxLen: 4}).toLowerCase()
