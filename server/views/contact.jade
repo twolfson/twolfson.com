@@ -24,7 +24,7 @@
             .flexbox__item.width6
               textarea#message.span5.flush--left(name="message", rows="3")
           .text--center
-            button#submitButton.btn.btn--huge.delta(type="submit") Contact Todd
+            button#submitButton.btn.btn--huge(type="submit") Contact Todd
         else if locals.emailStatus === true
           //- Otherwise, if the submission was a success
           p.text--center
