@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.90.2 - Accepted latest perceptual diffs
+
 3.90.1 - Fixed broken projects test
 
 3.90.0 - Updated project stats and contributions
