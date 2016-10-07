@@ -37,7 +37,7 @@ $base-background: $blackish-white;
 // Form elements
 $input-bg: $base-background;
 $input-border-color: $gray-x66;
-$input-border-color--focus: $gray-x44;
+$input-border-color--focus: rgba($light-blue, 0.6);
 
 // Horizontal rules
 $hr-color: $gray-x1A;
