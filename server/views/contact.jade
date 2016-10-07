@@ -12,17 +12,17 @@
             .flexbox__item.width2
               label.text--right(for="name", required="required") Name:&nbsp;
             .flexbox__item.width6
-              input#name.row--bordered.span5.flush--left(name="name", type="text")
+              input#name.span5.flush--left(name="name", type="text")
           .cf.push--bottom
             .flexbox__item.width2
               label.text--right(for="info", required="required") Contact Info:&nbsp;
             .flexbox__item.width6
-              input#info.row--bordered.span5.flush--left(name="info", type="text")
+              input#info.span5.flush--left(name="info", type="text")
           .flexbox.push--bottom
             .flexbox__item.width2
               label.text--right(for="message", required="required") Message:&nbsp;
             .flexbox__item.width6
-              textarea#message.row--bordered.span5.flush--left(name="message", rows="3")
+              textarea#message.span5.flush--left(name="message", rows="3")
           .text--center
             button#submitButton.btn.btn--huge.delta(type="submit") Contact Todd
         else if locals.emailStatus === true

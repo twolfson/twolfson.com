@@ -17,6 +17,7 @@ $gray-x52: #525252;
 $gray-x66: #666666;
 $bluish-gray: #A4A0A2;
 $gray-xDD: #DDDDDD;
+$gray-xCC: #CCCCCC;
 $gray-xE7: #E7E7E7;
 $gray-xF2: #F2F2F2;
 $gray-xF7: #F7F7F7;
@@ -34,6 +35,8 @@ $body-color: $gray-x1A;
 $base-background: $blackish-white;
 
 // Form elements
+$input-bg: $base-background;
+$input-border-color: $gray-x66;
 $input-border-color--focus: $gray-x44;
 
 // Horizontal rules
@@ -59,8 +62,8 @@ $aside-gutter-bg: $bluish-gray;
 $default-border-color: $gray-x66;
 
 // Buttons
-$btn-bg: $gray-xF2;
-$btn-bg--hover: $gray-xE7;
+$btn-bg: $base-background;
+$btn-bg--hover: $gray-xF7;
 $btn-border-color: $gray-x66;
 
 /** Padding/margins **/
@@ -106,6 +109,7 @@ $brand-color: inherit;
 $base-border-radius: 3px;
 
 $default-border-width: 2px;
+$input-border-width: 2px;
 $btn-border-width: 2px;
 
 /*------------------------------------*\
