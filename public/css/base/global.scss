@@ -68,7 +68,7 @@ a,
 .link--underline {
   font-weight: bold;
   text-decoration: none;
-  @include transition(color 0.3s ease-in-out);
+  @include transition(color 0.15s ease-in-out);
 
   &,
   &:visited {
@@ -116,17 +116,6 @@ a,
 // Buttons
 button {
   cursor: pointer;
-}
-
-// Padding by default for inputs and textareas
-input,
-textarea {
-  padding: 6px;
-  @include transition(border-color 0.3s ease-in-out);
-
-  &:focus {
-    border-color: $input-border-color--focus;
-  }
 }
 
 // Consistently style all <hr>s

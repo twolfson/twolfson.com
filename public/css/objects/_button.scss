@@ -1,9 +1,10 @@
 // Custom beautons
+// Based on https://github.com/twbs/bootstrap/blob/v3.3.7/dist/css/bootstrap.css#L3003-L3115
 .btn {
-  @include transition(background 0.3s ease-in-out);
+  @include transition(background 0.15s ease-in-out);
   border-color: $btn-border-color;
   border-style: solid;
-  border-width: $btn-border-width;
+  border-width: 1px;
   background: $btn-bg;
 }
 
