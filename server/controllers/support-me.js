@@ -9,13 +9,18 @@ var SUPPORT_URLS = {
   // Bitcoin - Exploring via Coinbase
   //   https://developers.coinbase.com/docs/wallet/tutorials/donations
 
+  // TODO: After exploring which is plausible
+  //   Explore which is recurring/1 time and international support
+  //   We prob don't want to overwhelm users with options
+
   // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
   // Square cash - UNEXPLORED
-  // Stripe - UNEXPLORED
+  // Stripe - Looks plausible, no server logic too which is great
+  //   https://stripe.com/checkout#should-i
   // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
   //   but they have international support and recurring so it would be dope
-  //   We could try forcing it somehow...
+  //   https://www.patreon.com/twolfson
 
   // Gratipay - NO (ditched due to poor UI and never getting approved)
   // Flattr - NO (ditched due to complexity)
