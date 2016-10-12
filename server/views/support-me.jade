@@ -1,36 +1,10 @@
 .container__row
   .width12
     h2.text--center.soft-half--top.flush--bottom Support me
-    p Thank you for supporting me! I really appreciate any and every donation =)
+    p Want to help support an Open Source developer? Please use one of the services below:
 .container__row
-  .span4.text--right
-    a(href=gratipayUrl)
-      button.inline-span3.btn.btn--medium.push--bottom
-        img.valign--text-bottom(src="/public/images/support/gratipay.png", alt="Gratipay logo")
-        = " Gratipay"
-  .span4.text--center
-    a(href=flattrUrl)
-      button.inline-span3.btn.btn--medium.row--bordered.push--bottom
-        img.valign--text-bottom(src="/public/images/support/flattr.png", alt="Flattr logo")
-        = " Flattr"
   .span4.text--left
-    a(href=paypalUrl)
+    a(href=supportUrls.paypal)
       button.inline-span3.btn.btn--medium.row--bordered.push--bottom
         img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
         = " PayPal"
-.container__row.flexbox.push--bottom
-  .flexbox__item.width1 &nbsp;
-  .flexbox__item.width2
-    img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Bitcoin logo")
-    = " Bitcoin"
-  .flexbox__item.width8
-    pre.flush--bottom
-      code.no-highlight= donationConfig.bitcoin
-.container__row.flexbox.push--bottom
-  .flexbox__item.width1 &nbsp;
-  .flexbox__item.width2
-    img.valign--text-bottom(src="/public/images/support/dogecoin.png", alt="Dogecoin logo")
-    = " Dogecoin"
-  .flexbox__item.width8
-    pre.flush--bottom
-      code.no-highlight= donationConfig.dogecoin
