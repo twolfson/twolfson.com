@@ -1,5 +1,11 @@
+// Load in our dependencies
 var url = require('url');
 
+// TODO: It's nice that we put support info in `config` but let's seriously hard code it here
+//   It's not like we are changing handles frequently
+//   and it's easier to maintain in 1 location
+
+// Define our controllers
 module.exports = function (config) {
   // Blue sky of options
   // Gratipay, Flattr, Paypal, Google Wallet, Amazon Payments
