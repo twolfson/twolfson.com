@@ -6,16 +6,18 @@ var SUPPORT_URLS = {
   paypal: 'https://www.paypal.me/twolfson'
 
   // Unused options:
-  // Gratipay - NO (ditched due to poor UI and never getting approved)
-  // Flattr - NO (ditched due to complexity)
+  // Bitcoin - Exploring via Coinbase
+  //   https://developers.coinbase.com/docs/wallet/tutorials/donations
+
   // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
   // Square cash - UNEXPLORED
-  // Bitcoin (ditched due to wallet maintenance)
-  //   TODO: Look at Coinbase as Bitcoin solution
-  // Dogecoin, Litecoin, etc - NO (don't want to manage own wallet)
   // Stripe - UNEXPLORED
   // Patreon - UNEXPLORED
+
+  // Gratipay - NO (ditched due to poor UI and never getting approved)
+  // Flattr - NO (ditched due to complexity)
+  // Dogecoin, Litecoin, etc - NO (don't want to manage own wallet)
   // Open collective - Not for single maintainers
 };
 
