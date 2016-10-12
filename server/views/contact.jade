@@ -37,16 +37,11 @@
             a(href="javascript:location.reload();") Could you please try that again?
       //- TODO: Did we never create anything better for grids? This is awful =(
       .width2.float--left
-        //- TODO: Resize photo to rounded square so we don't need position absolute hack
-        div(style="position: absolute")
-          //- DEV: We use `inline-span2` to reset width lost by `position: absolute`
-          .inline-span2
-            p
-              //- TODO: Did hover over the image previously underline the text?
-              a(href="http://www.aaronwax.com/")
-                div
-                  img(src="/public/images/todd.jpg", alt="Photograph of Todd Wolfson taken by A.J. Wax")
-                .text--center Photograph taken by A.J. Wax
+        .text--center
+          p
+            img(src="/public/images/todd.jpg", alt="Photograph of Todd Wolfson taken by A.J. Wax")
+            br
+            a(href="http://www.aaronwax.com/") Photograph taken by A.J. Wax
     if locals.emailStatus === null
       .container__row
         .width12
