@@ -1,5 +1,7 @@
 // Define our constants
 // TODO: Maybe define on `app.locals` -- move back to config in that case
+
+// TODO: Reflect source on donations?
 var SUPPORT_URLS = {
   paypal: 'https://www.paypal.me/twolfson'
 
@@ -22,7 +24,6 @@ var SUPPORT_URLS = {
 module.exports = function (config) {
   return [
     function renderIndex (req, res) {
-      var supportSource = req.query.support || 'generic';
       res.render('support-me.jade', {
         supportUrls: SUPPORT_URLS,
         page: 'support-me',
