@@ -53,7 +53,7 @@ module.exports = function (config) {
           }
         }),
         donationConfig: supportConfig,
-        title: 'Todd Wolfson - Support Me',
+        title: 'Todd Wolfson - Support me',
         seoKeywords: 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin',
         seoDescription: 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin'
       });
