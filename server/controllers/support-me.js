@@ -13,7 +13,9 @@ var SUPPORT_URLS = {
   // Amazon Payments - UNEXPLORED
   // Square cash - UNEXPLORED
   // Stripe - UNEXPLORED
-  // Patreon - UNEXPLORED
+  // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
+  //   but they have international support and recurring so it would be dope
+  //   We could try forcing it somehow...
 
   // Gratipay - NO (ditched due to poor UI and never getting approved)
   // Flattr - NO (ditched due to complexity)
