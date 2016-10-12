@@ -73,6 +73,9 @@ exports._render = function (req, res) {
     page: 'contact',
     title: 'Todd Wolfson - Contact',
     seoKeywords: 'contact, email, Todd Wolfson, twolfson, twolfsn',
-    seoDescription: 'Contact Todd Wolfson via a form'
+    seoDescription: 'Contact Todd Wolfson via a form',
+
+    // TODO: Remove `navMargin` altogether by making design consistent
+    navMargin: false
   });
 };
