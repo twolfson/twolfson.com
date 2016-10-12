@@ -2,13 +2,24 @@
 // TODO: Maybe define on `app.locals` -- move back to config in that case
 var SUPPORT_URLS = {
   paypal: 'https://www.paypal.me/twolfson'
+
+  // Unused options:
+  // Gratipay (ditched due to poor UI and never getting approved)
+  // Flattr (ditched due to complexity)
+  // Google Wallet (not explored)
+  // Amazon Payments (not explored)
+  // Square cash (not explored)
+  // Bitcoin (ditched due to wallet maintenance)
+  //   TODO: Look at Coinbase as Bitcoin solution
+  // Dogecoin, Litecoin, etc (don't want to manage own wallet)
+  // Stripe (not explored)
+  // Twitter tip (cannot remember name)
+  // Patreon (want to explore)
+  // Open collective (want to explore)
 };
 
 // Define our controllers
 module.exports = function (config) {
-  // Blue sky of options
-  // Gratipay, Flattr, Paypal, Google Wallet, Amazon Payments
-  // Square cash, Bitcoin, Dogecoin, Litecoin, Twitter tip (cannot remember name)
   return [
     function renderIndex (req, res) {
       var supportSource = req.query.support || 'generic';
