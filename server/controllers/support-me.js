@@ -17,7 +17,9 @@ var SUPPORT_URLS = {
   // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
   //   but they have international support and recurring so it would be dope
   //   https://www.patreon.com/twolfson
-
+  // Open collective - Can make a super collective for me as discussed over email
+  //   Not sure of international support
+  //
 
   // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
@@ -26,7 +28,6 @@ var SUPPORT_URLS = {
   // Gratipay - NO (ditched due to poor UI and never getting approved)
   // Flattr - NO (ditched due to complexity)
   // Bitcoin, Dogecoin, etc standalone - NO (don't want to manage own wallet)
-  // Open collective - Not for single maintainers
 };
 
 // Define our controllers
