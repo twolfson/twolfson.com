@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.92.0 - Added browser integration for Sentry
+
 3.91.2 - Accepted latest perceptual diffs
 
 3.91.1 - Repaired broken JS
