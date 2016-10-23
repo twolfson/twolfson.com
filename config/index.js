@@ -1,6 +1,5 @@
 // Load in dependencies
 var Settings = require('shallow-settings');
-var numscale = require('numscale');
 var articles = require('../articles');
 var errorHandlers = require('./error-handlers');
 var pkg = require('../package.json');
@@ -14,11 +13,6 @@ exports.getSettings = function (options) {
 
   // Set up dynamic config
   settings.articles = articles;
-  settings['app.locals'] = {
-    config: settings.jojo,
-    env: settings.ENV,
-    numscale: numscale.scale
-  };
 
   // Set up our error logger
   var errorHandler = settings.errorHandler;

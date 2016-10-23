@@ -1,5 +1,6 @@
 // Load in dependencies
 var _ = require('underscore');
+var numscale = require('numscale');
 var express = require('express');
 var expressPartials = require('express-partials');
 var jadeEngine = require('jade').__express;
@@ -32,8 +33,12 @@ Server.prototype = {
     var app = this.app;
     var config = this.config;
 
-    // Extend app.locals with config's app.locals
-    _.extend(app.locals, config['app.locals']);
+    // Set up our app.locals
+    _.extend(app.locals, {
+      config: config.jojo,
+      env: config.ENV,
+      numscale: numscale.scale
+    });
 
     // Add test and development specific routes
     if (config.addDevelopmentRoutes) {
