@@ -1,5 +1,6 @@
 // Load in our dependencies
 var _ = require('underscore');
+var package = require('../package.json');
 var secret = require('./secret');
 
 // Define generic unrelated settings
@@ -26,7 +27,8 @@ exports.common = {
       name: 'Todd Wolfson',
       email: 'todd@twolfson.com'
     }
-  }
+  },
+  version: package.version
 };
 
 exports.development = {

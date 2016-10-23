@@ -17,10 +17,11 @@ html
     //- DEV: Sentry is loaded separate from other scripts to prevent blocking one another
     script(src="https://cdn.ravenjs.com/3.7.0/raven.min.js")
     if locals.sentryBrowserDSN
+      //- https://docs.sentry.io/clients/javascript/config/#optional-settings
       script
         | Raven.config('#{sentryBrowserDSN}', {
-        |   environment: '#{ENV}',
-        |   release: '#{gitRevision}'
+        |   environment: '#{env}',
+        |   release: '#{version}'
         | }).install();
 
     //- Output environment

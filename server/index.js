@@ -38,7 +38,8 @@ Server.prototype = {
       config: config.jojo,
       env: config.ENV,
       numscale: numscale.scale,
-      sentryBrowserDSN: config.sentry.browserDSN
+      sentryBrowserDSN: config.sentry.browserDSN,
+      version: config.version
     });
 
     // Add test and development specific routes
