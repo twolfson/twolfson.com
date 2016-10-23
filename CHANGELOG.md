@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.91.1 - Repaired broken JS
+
 3.91.0 - Updated form colors to be less intense
 
 3.90.2 - Accepted latest perceptual diffs
