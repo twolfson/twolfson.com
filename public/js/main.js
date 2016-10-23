@@ -4,6 +4,21 @@ _gaq.push(['_setAccount',
            window.env === 'production' ? 'UA-17165993-1' : 'UA-17165993-3']);
 _gaq.push(['_trackPageview']);
 
+// Define window level error generators for testing Sentry
+window.errorGenerators = {
+  // Test via: setTimeout(function () { errorGenerators.syncError(); }, 100);
+  // DEV: Sync errors don't get sent to Sentry when run directly by console
+  syncError: function () {
+    throw new Error('Sync error');
+  },
+  // Test via: errorGenerators.asyncError();
+  asyncError: function () {
+    setTimeout(function handleSetTimeout () {
+      throw new Error('Async error');
+    }, 100);
+  }
+};
+
 // jscs:disable
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

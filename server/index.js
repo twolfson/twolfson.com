@@ -37,7 +37,8 @@ Server.prototype = {
     _.extend(app.locals, {
       config: config.jojo,
       env: config.ENV,
-      numscale: numscale.scale
+      numscale: numscale.scale,
+      sentryBrowserDSN: config.sentry.browserDSN
     });
 
     // Add test and development specific routes

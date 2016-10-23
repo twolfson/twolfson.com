@@ -31,6 +31,10 @@ exports.common = {
 
 exports.development = {
   // Inherits from common
+  sentry: {
+    // TODO: Remove Sentry integration from development
+    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598'
+  }
 };
 
 exports.test = {
@@ -38,6 +42,9 @@ exports.test = {
   mail: {
     host: 'localhost',
     port: 1338
+  },
+  sentry: {
+    browserDSN: null
   }
 };
 
@@ -47,7 +54,10 @@ exports.production = {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
   },
-  rollbar: secret.rollbar
+  rollbar: secret.rollbar,
+  sentry: {
+    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598'
+  }
 };
 
 // Merge in grouped settings
