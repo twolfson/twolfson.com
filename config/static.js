@@ -34,8 +34,7 @@ exports.common = {
 exports.development = {
   // Inherits from common
   sentry: {
-    // TODO: Remove Sentry integration from development
-    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598'
+    browserDSN: null
   }
 };
 
