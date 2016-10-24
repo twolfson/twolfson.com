@@ -22,7 +22,7 @@ exports.sentry = function (sentryConfig, params) {
   var sentryClient = new raven.Client(sentryConfig.serverDSN, params);
   return function sentryLogger (err, req) {
     // https://github.com/getsentry/raven-node/blob/0.12.0/lib/middleware/connect.js#L21-L25
-    var kwargs = ravenParsers.parseRequest(req);
+    var kwargs = req ? ravenParsers.parseRequest(req) : {};
     sentryClient.captureError(err, kwargs);
   };
 };
