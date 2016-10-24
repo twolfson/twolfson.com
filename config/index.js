@@ -12,9 +12,11 @@ exports.getSettings = function (options) {
   var settings = _settings.getSettings(options);
 
   // Set up dynamic config
+  // TODO: Load articles directly in server
   settings.articles = articles;
 
   // Set up our error logger
+  // TODO: Configure error handler in server, not in config
   var errorHandler = settings.errorHandler;
   switch (errorHandler) {
     case 'console':
@@ -32,6 +34,7 @@ exports.getSettings = function (options) {
   }
 
   // Complete and return our settings
+  // TODO: Remove redundant `package` as we already have version
   settings['package'] = pkg;
   return settings;
 };
