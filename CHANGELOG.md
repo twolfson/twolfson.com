@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.95.0 - Moved from Rollbar to Sentry for server error handling
+
 3.94.1 - Removed node-webkit/nw.js installation from Travis CI
 
 3.94.0 - Removed `dist` folder from version control
