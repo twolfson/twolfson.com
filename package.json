@@ -34,7 +34,7 @@
     "develop": "gulp build-clean && gulp develop",
     "lint": "jshint bin/ config/ docs/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js && jscs bin/ config/ docs/ public/js/main.js server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
     "pretest": "twolfson-style install",
-    "postinstall": "bin/decrypt-config.sh",
+    "postinstall": "bin/decrypt-config.sh && npm run build",
     "start": "bin/twolfson.com",
     "test": "npm run lint && npm run test-integration",
     "test-travis": "npm run lint && npm run test-integration",

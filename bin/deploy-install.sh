@@ -3,5 +3,6 @@
 set -e
 set -x
 
-# Install our node dependencies
+# Install our Node.js dependencies
+# DEV: This automatically builds assets
 npm install
