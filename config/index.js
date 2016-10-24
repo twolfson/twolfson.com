@@ -22,15 +22,14 @@ exports.getSettings = function (options) {
     case 'console':
       settings.errorHandler = errorHandlers.console();
       break;
-    case 'rollbar':
-      var rollbarConfig = settings.rollbar;
-      settings.errorHandler = errorHandlers.rollbar(rollbarConfig.serverToken, {
+    case 'sentry':
+      settings.errorHandler = errorHandlers.sentry(settings.sentry, {
         environment: settings.ENV,
-        revision: pkg.version
+        release: settings.version
       });
       break;
     default:
-      throw new Error('Expected `errorHandler` to be "console" or "production" but was "' + errorHandler);
+      throw new Error('Expected `errorHandler` to be "console" or "sentry" but was "' + errorHandler);
   }
 
   // Complete and return our settings

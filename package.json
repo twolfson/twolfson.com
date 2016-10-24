@@ -56,6 +56,7 @@
     "jojo": "~3.0.1",
     "marked": "~0.2.6",
     "numscale": "0.0.3",
+    "raven": "~0.12.1",
     "request": "~2.27.0",
     "rollbar": "~0.3.1",
     "shallow-settings": "~0.1.0",
