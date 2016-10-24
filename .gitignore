@@ -8,3 +8,4 @@ tmp/
 updateProduction.sh
 config/secret.json
 .vagrant/
+dist/
