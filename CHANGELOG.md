@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.94.1 - Removed node-webkit/nw.js installation from Travis CI
+
 3.94.0 - Removed `dist` folder from version control
 
 3.93.0 - Repaired broken tests by moving jsdom to cheerio and upgrading emailjs
