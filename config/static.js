@@ -34,7 +34,8 @@ exports.common = {
 exports.development = {
   // Inherits from common
   sentry: {
-    browserDSN: null
+    browserDSN: null,
+    serverDSN: null
   }
 };
 
@@ -45,7 +46,8 @@ exports.test = {
     port: 1338
   },
   sentry: {
-    browserDSN: null
+    browserDSN: null,
+    serverDSN: null
   }
 };
 
@@ -55,9 +57,10 @@ exports.production = {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
   },
-  rollbar: secret.rollbar,
   sentry: {
+    // DEV: We don't protect `browserDSN` as it's already public
     browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598'
+    serverDSN: secret.sentry.serverDSN
   }
 };
 
