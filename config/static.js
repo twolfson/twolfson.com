@@ -59,7 +59,7 @@ exports.production = {
   },
   sentry: {
     // DEV: We don't protect `browserDSN` as it's already public
-    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598'
+    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598',
     serverDSN: secret.sentry.serverDSN
   }
 };
