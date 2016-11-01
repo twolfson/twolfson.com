@@ -10,7 +10,7 @@ describe('A request to /projects', function () {
   httpUtils.save({url: serverUtils.getUrl('/projects'), expectedStatusCode: 200});
 
   it('has expected title', function () {
-    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Projects');
   });
 
   it('is counting stars', function () {

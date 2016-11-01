@@ -26,7 +26,7 @@ describe('A request to the /contact form', function () {
   httpUtils.save({url: serverUtils.getUrl('/contact'), expectedStatusCode: 200});
 
   it('has expected title', function () {
-    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Contact');
   });
 
   it('has form elements', function () {

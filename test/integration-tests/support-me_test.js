@@ -9,7 +9,7 @@ describe('A request to /support-me', function () {
   httpUtils.save({url: serverUtils.getUrl('/support-me'), expectedStatusCode: 200});
 
   it('has expected title', function () {
-    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Support Me');
   });
 
   it('renders our links to our support pages', function () {
