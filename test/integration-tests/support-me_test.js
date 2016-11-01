@@ -6,12 +6,7 @@ var serverUtils = require('../utils/server');
 // Define our tests
 describe('A request to /support-me', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/support-me'));
-
-  it('has no errors', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(200);
-  });
+  httpUtils.save({url: serverUtils.getUrl('/support-me'), expectedStatusCode: 200});
 
   it('has expected title', function () {
     expect(this.$('title')).to.equal('Todd Wolfson - Contact');

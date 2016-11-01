@@ -6,7 +6,7 @@ var serverUtils = require('../utils/server');
 // Define our tests
 describe('A request to an article', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/2012-02-21-blog-launch'));
+  httpUtils.save({url: serverUtils.getUrl('/2012-02-21-blog-launch'), expectedStatusCode: 200});
 
   it('has no errors', function () {
     expect(this.err).to.equal(null);

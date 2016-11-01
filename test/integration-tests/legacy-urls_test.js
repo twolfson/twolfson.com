@@ -99,7 +99,8 @@ describe('When requesting each of our legacy URLs', function () {
       request({
         url: url,
         // TODO: When we finish this, we might need redirect: true
-        followRedirect: false
+        followRedirect: false,
+        expectedStatusCode: null
       }, function handleResponse (err, res, body) {
         // Callback with the error and response
         return cb(err, res);

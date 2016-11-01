@@ -10,16 +10,17 @@ describe('An error generating request', function () {
     errorHandler: logger,
     throwCaughtErrors: false
   });
-  httpUtils.save(serverUtils.getUrl('/errors/assertion'));
+  httpUtils.save({
+    url: serverUtils.getUrl('/errors/assertion'),
+    expectedStatusCode: 500
+  });
 
-  it('sends a 500 page', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(500);
-    expect(this.body).to.contain('Todd Wolfson');
+  it('receives a 500 page', function () {
+    expect(this.body).to.contain('Server error');
   });
 
   it('has expected title', function () {
-    expect(this.$('title').to.equal('Server error - Todd Wolfson');
+    expect(this.$('title').text()).to.equal('Server error - Todd Wolfson');
   });
 
   it('logs an error to `errorHandler`', function () {
@@ -31,15 +32,13 @@ describe('An error generating request', function () {
 
 describe('A request to a missing page', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/404'));
-
-  it('receives 404 response', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(404);
+  httpUtils.save({
+    url: serverUtils.getUrl('/404'),
+    expectedStatusCode: 404
   });
 
   it('has expected title', function () {
-    expect(this.$('title').to.equal('Page not found - Todd Wolfson');
+    expect(this.$('title').text()).to.equal('Page not found - Todd Wolfson');
   });
 
   it('has helpful content', function () {

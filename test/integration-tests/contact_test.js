@@ -14,7 +14,8 @@ function makeContactRequest() {
         name: 'bdd test',
         info: 'n/a',
         message: 'Hello World!'
-      }
+      },
+      expectedStatusCode: null
     }).call(this, done);
   });
 }
@@ -22,7 +23,7 @@ function makeContactRequest() {
 // Start our tests
 describe('A request to the /contact form', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/contact'));
+  httpUtils.save({url: serverUtils.getUrl('/contact'), expectedStatusCode: 200});
 
   it('has expected title', function () {
     expect(this.$('title')).to.equal('Todd Wolfson - Contact');
@@ -58,7 +59,6 @@ describe('A submission to /contact', function () {
   makeContactRequest();
 
   it('does not have form elements', function () {
-    expect(this.err).to.equal(null);
     expect(this.res.statusCode).to.equal(200);
     expect(this.body).to.not.contain('<input');
   });
@@ -78,7 +78,6 @@ describe('A failing submission to /contact', function () {
   makeContactRequest();
 
   it('receives a prompt to try again', function () {
-    expect(this.err).to.equal(null);
     expect(this.res.statusCode).to.equal(502);
     expect(this.body).to.match(/Could you please try that again\?/i);
   });
