@@ -15,4 +15,9 @@ describe('A request to /license', function () {
   it('renders our license', function () {
     expect(this.body).to.contain('Permission is hereby granted');
   });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('license, mit');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('MIT License');
+  });
 });
