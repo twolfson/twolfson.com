@@ -83,7 +83,6 @@
     "jshint": "~2.5.10",
     "merge-stream": "~1.0.0",
     "mocha": "~1.8.1",
-    "request-mocha": "~0.2.0",
     "rimraf": "~2.2.6",
     "shell-quote": "~1.4.1",
     "simplesmtp": "~0.3.21",
