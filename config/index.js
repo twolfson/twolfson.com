@@ -1,6 +1,5 @@
 // Load in dependencies
 var Settings = require('shallow-settings');
-var numscale = require('numscale');
 var articles = require('../articles');
 var errorHandlers = require('./error-handlers');
 var pkg = require('../package.json');
@@ -13,31 +12,28 @@ exports.getSettings = function (options) {
   var settings = _settings.getSettings(options);
 
   // Set up dynamic config
+  // TODO: Load articles directly in server
   settings.articles = articles;
-  settings['app.locals'] = {
-    config: settings.jojo,
-    env: settings.ENV,
-    numscale: numscale.scale
-  };
 
   // Set up our error logger
+  // TODO: Configure error handler in server, not in config
   var errorHandler = settings.errorHandler;
   switch (errorHandler) {
     case 'console':
       settings.errorHandler = errorHandlers.console();
       break;
-    case 'rollbar':
-      var rollbarConfig = settings.rollbar;
-      settings.errorHandler = errorHandlers.rollbar(rollbarConfig.serverToken, {
+    case 'sentry':
+      settings.errorHandler = errorHandlers.sentry(settings.sentry, {
         environment: settings.ENV,
-        revision: pkg.version
+        release: settings.version
       });
       break;
     default:
-      throw new Error('Expected `errorHandler` to be "console" or "production" but was "' + errorHandler);
+      throw new Error('Expected `errorHandler` to be "console" or "sentry" but was "' + errorHandler);
   }
 
   // Complete and return our settings
+  // TODO: Remove redundant `package` as we already have version
   settings['package'] = pkg;
   return settings;
 };

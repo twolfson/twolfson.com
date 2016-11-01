@@ -15,7 +15,8 @@ before_install:
   - curl --location http://rawgit.com/twolfson/fix-travis-ci/master/lib/install.sh | bash -s
 
   # Install node-webkit
-  - ./test/utils/install-node-webkit.sh "$USER"
+  # DEV: We have stopped running perceptual tests so no longer need to install nw.js
+  # - ./test/utils/install-node-webkit.sh "$USER"
 
 install:
   # Install our node dependencies and setup our config

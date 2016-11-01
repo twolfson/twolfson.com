@@ -1,4 +1,18 @@
 # twolfson.com changelog
+3.95.0 - Moved from Rollbar to Sentry for server error handling
+
+3.94.1 - Removed node-webkit/nw.js installation from Travis CI
+
+3.94.0 - Removed `dist` folder from version control
+
+3.93.0 - Repaired broken tests by moving jsdom to cheerio and upgrading emailjs
+
+3.92.0 - Added browser integration for Sentry
+
+3.91.2 - Accepted latest perceptual diffs
+
+3.91.1 - Repaired broken JS
+
 3.91.0 - Updated form colors to be less intense
 
 3.90.2 - Accepted latest perceptual diffs

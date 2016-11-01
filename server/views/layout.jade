@@ -11,6 +11,19 @@ html
     if locals.seoDescription
       meta(name="description", content=seoDescription)
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+
+    //- Load Sentry to catch/record errors
+    //- https://docs.sentry.io/hosted/clients/javascript/
+    //- DEV: Sentry is loaded separate from other scripts to prevent blocking one another
+    script(src="https://cdn.ravenjs.com/3.7.0/raven.min.js")
+    if locals.sentryBrowserDSN
+      //- https://docs.sentry.io/clients/javascript/config/#optional-settings
+      script
+        | Raven.config('#{sentryBrowserDSN}', {
+        |   environment: '#{env}',
+        |   release: '#{version}'
+        | }).install();
+
     //- Output environment
     script(type="text/javascript").
       window.env = "#{locals.env}";

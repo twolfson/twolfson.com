@@ -14,5 +14,5 @@ exports.test = {
 };
 
 exports.production = {
-  errorHandler: 'rollbar'
+  errorHandler: 'sentry'
 };

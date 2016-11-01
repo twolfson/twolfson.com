@@ -1,5 +1,6 @@
 // Load in our dependencies
 var _ = require('underscore');
+var package = require('../package.json');
 var secret = require('./secret');
 
 // Define generic unrelated settings
@@ -16,11 +17,16 @@ exports.common = {
   projectOptions: {
     updateImmediately: false,
     updateInterval: null
-  }
+  },
+  version: package.version
 };
 
 exports.development = {
   // Inherits from common
+  sentry: {
+    browserDSN: null,
+    serverDSN: null
+  }
 };
 
 exports.test = {
@@ -28,6 +34,10 @@ exports.test = {
   mail: {
     host: 'localhost',
     port: 1338
+  },
+  sentry: {
+    browserDSN: null,
+    serverDSN: null
   }
 };
 
@@ -37,7 +47,11 @@ exports.production = {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
   },
-  rollbar: secret.rollbar
+  sentry: {
+    // DEV: We don't protect `browserDSN` as it's already public
+    browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598',
+    serverDSN: secret.sentry.serverDSN
+  }
 };
 
 // Merge in grouped settings
