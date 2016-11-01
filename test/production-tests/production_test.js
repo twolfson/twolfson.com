@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var httpUtils = require('../utils/http');
 
 describe('A request to twolfson.com', function () {
-  httpUtils.save('http://twolfson.com/');
+  httpUtils.save({url: 'http://twolfson.com/', expectedStatusCode: 200});
 
   it('has environment set to "production"', function () {
     expect(this.body).to.contain('window.env = "production";');
@@ -19,7 +19,8 @@ describe('A gzip tolerant request to twolfson.com', function () {
     url: 'http://twolfson.com/',
     headers: {
       'Accept-Encoding': 'gzip, deflate'
-    }
+    },
+    expectedStatusCode: 200
   });
 
   it('receives gzipped content', function () {
@@ -28,7 +29,7 @@ describe('A gzip tolerant request to twolfson.com', function () {
 });
 
 describe('A request to the twolfson.com/index.js', function () {
-  httpUtils.save('http://twolfson.com/public/js/index.js');
+  httpUtils.save({url: 'http://twolfson.com/public/js/index.js', expectedStatusCode: 200});
 
   it('contains the expected Google Analytics id', function () {
     expect(this.err).to.equal(null);
@@ -38,7 +39,7 @@ describe('A request to the twolfson.com/index.js', function () {
 });
 
 describe('A request to twolfson.com/health', function () {
-  httpUtils.save('http://twolfson.com/health');
+  httpUtils.save({url: 'http://twolfson.com/health', expectedStatusCode: 200});
 
   it('marks the environment as production', function () {
     expect(this.err).to.equal(null);

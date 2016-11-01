@@ -3,11 +3,10 @@ var httpUtils = require('../utils/http');
 
 // Start our test suite
 describe('A request to twolfson.com', function () {
-  httpUtils.save('http://twolfson.com/');
+  httpUtils.save({url: 'http://twolfson.com/', expectedStatusCode: 200});
 
   it('is responding with valid status code', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res).to.have.property('statusCode', 200);
+    // Asserted by expectedStatusCode
   });
 
   it('is responding with content', function () {

@@ -8,11 +8,6 @@ describe('A request to an article', function () {
   serverUtils.run();
   httpUtils.save({url: serverUtils.getUrl('/2012-02-21-blog-launch'), expectedStatusCode: 200});
 
-  it('has no errors', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(200);
-  });
-
   it('has expected title', function () {
     expect(this.$('title')).to.equal('Blog Launch - Todd Wolfson');
   });

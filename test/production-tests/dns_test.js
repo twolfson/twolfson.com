@@ -5,12 +5,11 @@ var httpUtils = require('../utils/http');
 describe('twolfsn.com (http)', function () {
   httpUtils.save({
     url: 'http://twolfsn.com',
-    followRedirect: false
+    followRedirect: false,
+    expectedStatusCode: 301
   });
 
   it('redirects to twolfson.com', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res).to.have.property('statusCode', 301);
     expect(this.res.headers).to.have.property('location', 'http://twolfson.com/');
   });
 });
@@ -19,12 +18,11 @@ describe('twolfsn.com (http)', function () {
 describe.skip('twolfsn.com (https)', function () {
   httpUtils.save({
     url: 'https://twolfsn.com',
-    followRedirect: false
+    followRedirect: false,
+    expectedStatusCode: 301
   });
 
   it('redirects to twolfson.com', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res).to.have.property('statusCode', 301);
     expect(this.res.headers).to.have.property('location', 'https://twolfson.com/');
   });
 });
