@@ -19,7 +19,7 @@ describe('A request to an article', function () {
   });
 
   it('has SEO meta tags', function () {
-    expect(this.$('meta[name=keywords]').attr('content')).to.contain('web dev');
-    expect(this.$('meta[name=description]').attr('content')).to.contain('development tools');
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('first, blog post');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('This is my first blog post');
   });
 });
