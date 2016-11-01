@@ -1,16 +1,20 @@
-#projects.push--bottom
-  div
-    .projects__section
-      div
-        //- TODO: Is there a pattern for half-top/half-bottom
-        //- TODO: When cauterizing patterning, search for half-ends too
-        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
-      for item in projects.scripts
+extend layout
+include projects/script.jade
+
+block content
+  #projects.push--bottom
+    div
+      .projects__section
         div
-          != partial('projects/script.jade', item)
-    .projects__section
-      div
-        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
-      for item in projects.contributions
+          //- TODO: Is there a pattern for half-top/half-bottom
+          //- TODO: When cauterizing patterning, search for half-ends too
+          h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
+        for item in projects.scripts
+          div
+            +project--script(item)
+      .projects__section
         div
-          != partial('projects/script.jade', item)
+          h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
+        for item in projects.contributions
+          div
+            +project--script(item)

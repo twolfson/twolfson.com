@@ -26,7 +26,6 @@ Server.prototype = {
     app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
-    app.use(expressPartials());
   },
   addRoutes: function () {
     // Localize app and config

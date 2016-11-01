@@ -1,11 +1,14 @@
-.container__row
-  #articles.span8
-    for article in articles
-      .cluster--aggressive
-        p.muted= article.dateStr
-        h3(title=article.title)
-          a(href=article.url)= article._title || article.title
-        div
-          //- Summary is in markdown and already in a <p>
-          != article.summary
-  .span4!= activity
+extend layout
+
+block content
+  .container__row
+    #articles.span8
+      for article in articles
+        .cluster--aggressive
+          p.muted= article.dateStr
+          h3(title=article.title)
+            a(href=article.url)= article._title || article.title
+          div
+            //- Summary is in markdown and already in a <p>
+            != article.summary
+    .span4!= activity
