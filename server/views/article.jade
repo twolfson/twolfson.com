@@ -1,5 +1,11 @@
 extend layout
 
+block config
+  - var page = 'blog';
+  - var title = article.title + ' - Todd Wolfson';
+  - var seoKeywords = article.keywords;
+  - var seoDescription = article.txtSummary;
+
 block content
   #article.container__row
     #article__content.span8

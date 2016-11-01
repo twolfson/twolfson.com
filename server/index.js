@@ -1,4 +1,5 @@
 // Load in dependencies
+var assert = require('assert');
 var _ = require('underscore');
 var numscale = require('numscale');
 var express = require('express');
@@ -33,6 +34,7 @@ Server.prototype = {
 
     // Set up our app.locals
     _.extend(app.locals, {
+      assert: assert,
       config: config.jojo,
       env: config.ENV,
       numscale: numscale.scale,

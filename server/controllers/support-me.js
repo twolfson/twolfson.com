@@ -9,7 +9,6 @@ module.exports = function (config) {
       var supportConfig = config.supportMe;
       var supportSource = req.query.support || 'generic';
       res.render('support-me.jade', {
-        page: 'support-me',
         gratipayUrl: url.format({
           protocol: 'https:',
           hostname: 'gratipay.com',
@@ -46,10 +45,7 @@ module.exports = function (config) {
             category: 'software'
           }
         }),
-        donationConfig: supportConfig,
-        title: 'Todd Wolfson - Support Me',
-        seoKeywords: 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin',
-        seoDescription: 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin'
+        donationConfig: supportConfig
       });
     }
   ];

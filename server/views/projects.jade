@@ -1,5 +1,15 @@
 extend layout
 
+block config
+  - var page = 'projects';
+  - var title = 'Todd Wolfson - Projects';
+  - var seoKeywords = 'dev tools, web tools, spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry';
+  - var seoDescription = 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry';
+
+  //- Configure page layout
+  //- TODO: Verify `navMargin` stays and we cleaned up our TODOs
+  - var navMargin = false;
+
 mixin project--script(project)
   .container__row.flexbox.soft-half--top.soft-half--bottom
     .flexbox__item.width4

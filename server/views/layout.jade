@@ -1,14 +1,19 @@
+//- TODO: Add tests for SEO keywords/description
+
 doctype html
 html
   head
-    title= locals.title || config.title
+    block config
+      //- Page configuration will be set here (e.g. `page`, `title`)
+    - assert(title, 'Expected page to have title set via `block config`');
+    title= title
     link(rel="shortcut icon", href="/public/images/favicon.ico")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono", type="text/css")
     link(rel="stylesheet", href="/public/css/index.css", type="text/css", media="all")
     link(rel="alternate", href="/index.xml", title="twolfson.com blog feed", type="application/atom+xml")
-    if locals.seoKeywords
+    if seoKeywords
       meta(name="keywords", content=seoKeywords)
-    if locals.seoDescription
+    if seoDescription
       meta(name="description", content=seoDescription)
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
 

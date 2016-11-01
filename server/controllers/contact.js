@@ -69,10 +69,5 @@ exports.submit = function (config) {
 
 // Common render function
 exports._render = function (req, res) {
-  res.render('contact.jade', {
-    page: 'contact',
-    title: 'Todd Wolfson - Contact',
-    seoKeywords: 'contact, email, Todd Wolfson, twolfson, twolfsn',
-    seoDescription: 'Contact Todd Wolfson via a form'
-  });
+  res.render('contact.jade');
 };
