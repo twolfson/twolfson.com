@@ -24,6 +24,10 @@ describe('A request to the /contact form', function () {
   serverUtils.run();
   httpUtils.save(serverUtils.getUrl('/contact'));
 
+  it('has expected title', function () {
+    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+  });
+
   it('has form elements', function () {
     expect(this.body).to.contain('<input');
   });

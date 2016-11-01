@@ -13,6 +13,10 @@ describe('A request to /license', function () {
     expect(this.res.statusCode).to.equal(200);
   });
 
+  it('has expected title', function () {
+    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+  });
+
   it('renders our license', function () {
     expect(this.body).to.contain('Permission is hereby granted');
   });

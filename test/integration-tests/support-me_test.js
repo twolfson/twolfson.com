@@ -13,6 +13,10 @@ describe('A request to /support-me', function () {
     expect(this.res.statusCode).to.equal(200);
   });
 
+  it('has expected title', function () {
+    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+  });
+
   it('renders our links to our support pages', function () {
     expect(this.body).to.contain('Gratipay');
     expect(this.body).to.contain('PayPal');

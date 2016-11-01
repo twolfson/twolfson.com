@@ -16,6 +16,10 @@ describe('A request to /projects', function () {
     }
   });
 
+  it('has expected title', function () {
+    expect(this.$('title')).to.equal('Todd Wolfson - Contact');
+  });
+
   it('is counting stars', function () {
     // Grab starCount
     var $ = cheerio.load(this.body);
