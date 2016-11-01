@@ -2,7 +2,6 @@
 var _ = require('underscore');
 var numscale = require('numscale');
 var express = require('express');
-var expressPartials = require('express-partials');
 var jadeEngine = require('jade').__express;
 var controllers = require('./controllers');
 var routes = require('./routes');
