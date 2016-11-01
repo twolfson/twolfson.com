@@ -32,6 +32,11 @@ describe('A request to the /contact form', function () {
   it('has form elements', function () {
     expect(this.body).to.contain('<input');
   });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('contact');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('Contact Todd');
+  });
 });
 
 describe('A submission to /contact', function () {

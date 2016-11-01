@@ -13,6 +13,11 @@ describe('A request to /projects', function () {
     expect(this.$('title').text()).to.equal('Todd Wolfson - Projects');
   });
 
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('spritesmith');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('Projects by Todd');
+  });
+
   it('is counting stars', function () {
     // Grab starCount
     var $ = cheerio.load(this.body);

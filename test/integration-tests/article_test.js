@@ -17,4 +17,9 @@ describe('A request to an article', function () {
     expect(this.body).to.contain('Blog Launch!');
     expect(this.body).to.contain('This is my first blog post for twolfson.com!');
   });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('web dev');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('development tools');
+  });
 });

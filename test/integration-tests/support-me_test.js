@@ -12,6 +12,11 @@ describe('A request to /support-me', function () {
     expect(this.$('title').text()).to.equal('Todd Wolfson - Support Me');
   });
 
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('support me');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('Support Todd');
+  });
+
   it('renders our links to our support pages', function () {
     expect(this.body).to.contain('Gratipay');
     expect(this.body).to.contain('PayPal');
