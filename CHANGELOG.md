@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.98.0 - Cleaned up contact page
+
 3.97.0 - Removed `window.env` from `layout.jade`
 
 3.96.0 - Moved from partial views to blocks, mixins, and configuration in views
