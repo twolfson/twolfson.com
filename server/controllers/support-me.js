@@ -24,7 +24,7 @@ var SUPPORT_URLS = {
   //     https://developers.coinbase.com/docs/wallet/tutorials/donations
   // Stripe - Looks plausible, no server logic too which is great
   //   https://stripe.com/checkout#should-i
-  //   Supports recurring
+  //   Supports recurring and BTC (but only with USA users? -- am I the user or is the customer the user?)
   //   Supports most countries via conversion
   //     https://support.stripe.com/questions/which-currencies-does-stripe-support
   // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
@@ -35,12 +35,16 @@ var SUPPORT_URLS = {
   // Open collective - Can make a super collective for me as discussed over email
   //   Backed by Stripe for donations, kind of pointless for our current wants
 
-  // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
-  // Square cash - UNEXPLORED
 
+  // Google Wallet - NO (limited to USA)
+  //   https://www.google.com/wallet/
   // Gratipay - NO (ditched due to poor UI and never getting approved)
   // Flattr - NO (ditched due to complexity)
+  // Venmo - NO (limited to USA)
+  //   https://venmo.com/about/product/
+  // Square Cash - NO (limited international support)
+  //   https://squareup.com/help/us/en/article/4956-international-availability
   // Bitcoin, Dogecoin, etc standalone - NO (don't want to manage own wallet)
 };
 
