@@ -4,8 +4,8 @@ var httpUtils = require('../utils/http');
 describe('A request to twolfson.com', function () {
   httpUtils.save({url: 'http://twolfson.com/', expectedStatusCode: 200});
 
-  it('has environment set to "production"', function () {
-    expect(this.body).to.contain('window.env = "production";');
+  it('contains the expected Google Analytics id', function () {
+    expect(this.body).to.contain('UA-17165993-1');
   });
 
   it('does not have the /health endpoint', function () {
@@ -30,9 +30,8 @@ describe('A gzip tolerant request to twolfson.com', function () {
 describe('A request to the twolfson.com/index.js', function () {
   httpUtils.save({url: 'http://twolfson.com/public/js/index.js', expectedStatusCode: 200});
 
-  it('contains the expected Google Analytics id', function () {
-    expect(this.body).to.contain('_gaq');
-    expect(this.body).to.contain('UA-17165993-1');
+  it('has no errors', function () {
+    // Asserted by expectedStatusCode
   });
 });
 
