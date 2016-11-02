@@ -1,9 +1,3 @@
-// Load in GA and track a page view
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount',
-           window.env === 'production' ? 'UA-17165993-1' : 'UA-17165993-3']);
-_gaq.push(['_trackPageview']);
-
 // Define window level error generators for testing Sentry
 window.errorGenerators = {
   // Test via: setTimeout(function () { errorGenerators.syncError(); }, 100);
@@ -18,14 +12,6 @@ window.errorGenerators = {
     }, 100);
   }
 };
-
-// jscs:disable
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-// jscs:enable
 
 // When the DOM is ready
 domready(function () {

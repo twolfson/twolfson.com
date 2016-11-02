@@ -33,6 +33,7 @@ exports.common = {
 
 exports.development = {
   // Inherits from common
+  googleAnalyticsId: 'UA-17165993-3',
   sentry: {
     browserDSN: null,
     serverDSN: null
@@ -40,6 +41,7 @@ exports.development = {
 };
 
 exports.test = {
+  googleAnalyticsId: null,
   // In testing, use local mail server
   mail: {
     host: 'localhost',
@@ -53,6 +55,7 @@ exports.test = {
 
 exports.production = {
   // Fetch project information every hour
+  googleAnalyticsId: 'UA-17165993-1',
   projectOptions: {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
