@@ -1,9 +1,12 @@
 // Define our constants
-// TODO: Maybe define on `app.locals` -- move back to config in that case
-
 // TODO: Reflect source on donations?
 var SUPPORT_URLS = {
-  paypal: 'https://www.paypal.me/twolfson'
+  // PayPal - Interational, one time support
+  //   https://www.paypal.me/pages/countries
+  paypal: 'https://www.paypal.me/twolfson',
+  // Bitcoin - Interational, one time support
+  //   Managed by Coinbase, interational due to BTC
+  bitcoin: '1DrBma5ZGRFRPnzEgsLJXvoogPYcQyruM2'
 
   // TODO: After exploring which is plausible
   //   Explore which is recurring/1 time and international support
@@ -11,7 +14,10 @@ var SUPPORT_URLS = {
 
   // Unused options:
   // Coinbase - Should be good to use
-  //   https://developers.coinbase.com/docs/wallet/tutorials/donations
+  //   Supports direct wallet address
+  //   Supports one time and recurring
+  //     https://www.coinbase.com/merchant_tools
+  //     https://developers.coinbase.com/docs/wallet/tutorials/donations
   // Stripe - Looks plausible, no server logic too which is great
   //   https://stripe.com/checkout#should-i
   // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
@@ -19,7 +25,6 @@ var SUPPORT_URLS = {
   //   https://www.patreon.com/twolfson
   // Open collective - Can make a super collective for me as discussed over email
   //   Not sure of international support
-  //
 
   // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
