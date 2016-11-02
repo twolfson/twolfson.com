@@ -6,6 +6,9 @@ block config
   - var seoKeywords = 'contact, email, Todd Wolfson, twolfson, twolfsn';
   - var seoDescription = 'Contact Todd Wolfson via a form';
 
+  //- TODO: Remove `navMargin` altogether by making design consistent
+  - locals.navMargin = false;
+
 block content
   #contact
     form.hard--left(method="POST", action="/contact")

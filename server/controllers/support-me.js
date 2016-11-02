@@ -35,14 +35,7 @@ module.exports = function (config) {
   return [
     function renderIndex (req, res) {
       res.render('support-me.jade', {
-        supportUrls: SUPPORT_URLS,
-        page: 'support-me',
-        title: 'Todd Wolfson - Support me',
-        seoKeywords: 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin',
-        seoDescription: 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin',
-
-        // TODO: Remove `navMargin` altogether by making design consistent
-        navMargin: false
+        supportUrls: SUPPORT_URLS
       });
     }
   ];

@@ -69,13 +69,5 @@ exports.submit = function (config) {
 
 // Common render function
 exports._render = function (req, res) {
-  res.render('contact.jade', {
-    page: 'contact',
-    title: 'Todd Wolfson - Contact',
-    seoKeywords: 'contact, email, Todd Wolfson, twolfson, twolfsn',
-    seoDescription: 'Contact Todd Wolfson via a form',
-
-    // TODO: Remove `navMargin` altogether by making design consistent
-    navMargin: false
-  });
+  res.render('contact.jade');
 };
