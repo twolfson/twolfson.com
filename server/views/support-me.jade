@@ -32,8 +32,15 @@ block content
       img.valign--text-bottom(src="/public/images/support/paypal.png", alt="Stripe logo")
       = " Stripe"
     .flexbox__item.width10
-      button.btn.btn--medium.push-half--right
-        = "One-time donation"
+      //- button.btn.btn--medium.push-half--right
+        //- = "One-time donation"
+      script(
+          src="https://checkout.stripe.com/checkout.js",
+          class="stripe-button",
+          data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh",
+          data-name="Demo Site",
+          data-description="2 widgets ($20.00)",
+          data-amount="2000")
       = " "
       button.btn.btn--medium
         = "Recurring donation"
