@@ -34,12 +34,6 @@ curl "https://rawgit.com/peol/960gridder/677b61a7df2e6f83b6b4437fecb027fb94359f2
 # Bitcoin - http://bitcoin.org/en/press
 # DEV: Looks like URL is no longer up
 # curl "https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU" > "public/images/support_src/bitcoin.png"
-# Dogecoin - http://imgur.com/a/CKqPP
-curl "http://i.imgur.com/K2LYlv4.png" > "public/images/support_src/dogecoin.png"
-# Gratipay - Google image search
-# DEV: Looks like URL is no longer up
-# curl "http://s3.amazonaws.com/catapultpgh-madeinpgh/app/public/system/logos/7/medium/gratipay-logo-256.png?1367418240" \
-#   > "public/images/support_src/gratipay.png"
 
 # Download, unzip, and install inuit.css
 pushd tmp/bootstrap
