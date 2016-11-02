@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.97.0 - Removed `window.env` from `layout.jade`
+
 3.96.0 - Moved from partial views to blocks, mixins, and configuration in views
 
 3.95.0 - Moved from Rollbar to Sentry for server error handling
