@@ -1,9 +1,5 @@
-// TODO: Output source on donations?
-// TODO: We are thinking about using Bitcoin and Stripe so we get BTC and internation support
-//   as well as one time and recurring support for non-BTC payments
-// TODO: Remove unused graphics
-
 // Define our constants
+// TODO: Output source on donations (e.g. `utm_source=repo`)
 var SUPPORT_URLS = {
   // PayPal - Partially interational (lacks Japan), one time support
   //   https://www.paypal.me/pages/countries
@@ -28,7 +24,7 @@ var SUPPORT_URLS = {
   //   https://www.patreon.com/twolfson
   //   International support via: Visa, MasterCard, America Express, JCB, Discover, Diners Club and PayPal
   //     https://patreon.zendesk.com/hc/en-us/articles/204606275-Do-you-support-international-payments-Can-I-donate-in-any-currency-
-  // Stripe - Looks plausible, no server logic too which is great
+  // Stripe - Looks plausible: requires server logic, needs logic for dynamic values (especially subscriptions)
   //   https://stripe.com/checkout#should-i
   //   Supports recurring and BTC (but only with USA users? -- am I the user or is the customer the user?)
   //   Supports most countries via conversion

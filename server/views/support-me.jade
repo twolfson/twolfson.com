@@ -1,12 +1,10 @@
 extend layout
 
-//- TODO: Update SEO content
-
 block config
   - var page = 'support-me';
   - var title = 'Todd Wolfson - Support me';
-  - var seoKeywords = 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin';
-  - var seoDescription = 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin';
+  - var seoKeywords = 'Todd Wolfson, twolfson, twolfsn, support me, paypal, bitcoin';
+  - var seoDescription = 'Support Todd Wolfson via Bitcoin and PayPal';
 
   //- TODO: Remove `navMargin` altogether by making design consistent
   - locals.navMargin = false;
@@ -31,8 +29,8 @@ block content
       img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
       = " PayPal"
     .flexbox__item.width10
-      a.btn.btn--medium(href=supportUrls.paypal)
-        = "Send donation via PayPal"
+      a(href=supportUrls.paypal)
+        button.btn.btn--medium Send donation via PayPal
   .container__row.push--bottom
     .width12
       p
