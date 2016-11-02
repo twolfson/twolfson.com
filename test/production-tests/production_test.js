@@ -9,7 +9,6 @@ describe('A request to twolfson.com', function () {
   });
 
   it('does not have the /health endpoint', function () {
-    expect(this.err).to.equal(null);
     expect(this.body).to.not.contain('/health');
   });
 });
@@ -32,7 +31,6 @@ describe('A request to the twolfson.com/index.js', function () {
   httpUtils.save({url: 'http://twolfson.com/public/js/index.js', expectedStatusCode: 200});
 
   it('contains the expected Google Analytics id', function () {
-    expect(this.err).to.equal(null);
     expect(this.body).to.contain('_gaq');
     expect(this.body).to.contain('UA-17165993-1');
   });
@@ -42,7 +40,6 @@ describe('A request to twolfson.com/health', function () {
   httpUtils.save({url: 'http://twolfson.com/health', expectedStatusCode: 200});
 
   it('marks the environment as production', function () {
-    expect(this.err).to.equal(null);
     expect(JSON.parse(this.body)).to.have.property('env', 'production');
   });
 });
