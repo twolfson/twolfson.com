@@ -1,6 +1,7 @@
 // TODO: Output source on donations?
 // TODO: We are thinking about using Bitcoin and Stripe so we get BTC and internation support
 //   as well as one time and recurring support for non-BTC payments
+// TODO: Remove unused graphics
 
 // Define our constants
 var SUPPORT_URLS = {
