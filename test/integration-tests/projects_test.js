@@ -7,13 +7,15 @@ var serverUtils = require('../utils/server');
 // Define our tests
 describe('A request to /projects', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/projects'));
-  before(function handleError (done) {
-    if (this.err) {
-      done(this.err);
-    } else {
-      process.nextTick(done);
-    }
+  httpUtils.save({url: serverUtils.getUrl('/projects'), expectedStatusCode: 200});
+
+  it('has expected title', function () {
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Projects');
+  });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('spritesmith');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('Projects by Todd');
   });
 
   it('is counting stars', function () {

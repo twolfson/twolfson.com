@@ -18,11 +18,11 @@ exports.errorEncountered = function (config) {
 // 404 page (no SEO here)
 exports[404] = function (req, res) {
   res.status(404);
-  res.render('404.jade', {page: '404'});
+  res.render('404.jade');
 };
 
 // 500 page
 exports[500] = function (req, res) {
   res.status(500);
-  res.render('500.jade', {page: '500'});
+  res.render('500.jade');
 };

@@ -6,11 +6,15 @@ var serverUtils = require('../utils/server');
 // Define our tests
 describe('A request to /support-me', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/support-me'));
+  httpUtils.save({url: serverUtils.getUrl('/support-me'), expectedStatusCode: 200});
 
-  it('has no errors', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(200);
+  it('has expected title', function () {
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Support Me');
+  });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('support me');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('Support Todd');
   });
 
   it('renders our links to our support pages', function () {

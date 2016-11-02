@@ -1,16 +1,47 @@
-#projects.push--bottom
-  div
-    .projects__section
-      div
-        //- TODO: Is there a pattern for half-top/half-bottom
-        //- TODO: When cauterizing patterning, search for half-ends too
-        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
-      for item in projects.scripts
+extend layout
+
+block config
+  - var page = 'projects';
+  - var title = 'Todd Wolfson - Projects';
+  - var seoKeywords = 'dev tools, web tools, spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry';
+  - var seoDescription = 'Projects by Todd Wolfson: spritesmith, sexy-bash-prompt, jsmin-sourcemap, Find++, image-diff, eight-track, gifsockets, foundry';
+
+  //- Configure page layout
+  - locals.navMargin = false;
+
+mixin project--script(project)
+  .container__row.flexbox.soft-half--top.soft-half--bottom
+    .flexbox__item.width4
+      h3.delta.flush--bottom(title=project.name)
+        a(href=project.pageUrl, target="_blank")!= project.name
+    .flexbox__item.width6.project-description
+      != project.description
+    //- TODO: Restore underlining when we move to fonts. Currently removed due to ignore-flow not obeying underline rules in Chrome
+    .flexbox__item.width1.project-stars
+      a(href=project.srcUrl, target="_blank")
+        span.icon-purple-star(title="Stars")
+        //- <span class="accessibility">Stars</span>
+        span.ignore-flow.project-stars__count= numscale({value: project.stars, maxLen: 4}).toLowerCase()
+    .flexbox__item.width1.project-forks
+      a(href=project.srcUrl, target="_blank")
+        span.icon-purple-fork(title="Forks")
+        //- <span class="accessibility">Forks</span>
+        span.ignore-flow= numscale({value: project.forks, maxLen: 4}).toLowerCase()
+
+block content
+  #projects.push--bottom
+    div
+      .projects__section
         div
-          != partial('projects/script.jade', item)
-    .projects__section
-      div
-        h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
-      for item in projects.contributions
+          //- TODO: Is there a pattern for half-top/half-bottom
+          //- TODO: When cauterizing patterning, search for half-ends too
+          h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Scripts
+        for item in projects.scripts
+          div
+            +project--script(item)
+      .projects__section
         div
-          != partial('projects/script.jade', item)
+          h2.text--center.soft-half--top.soft-half--bottom.flush--bottom Contributions
+        for item in projects.contributions
+          div
+            +project--script(item)

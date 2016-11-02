@@ -1,8 +1,8 @@
 // Load in dependencies
+var assert = require('assert');
 var _ = require('underscore');
 var numscale = require('numscale');
 var express = require('express');
-var expressPartials = require('express-partials');
 var jadeEngine = require('jade').__express;
 var controllers = require('./controllers');
 var routes = require('./routes');
@@ -26,7 +26,6 @@ Server.prototype = {
     app.set('views', __dirname + '/views');
     app.use('/public', express['static'](__dirname + '/../dist'));
     app.use('/public', express['static'](__dirname + '/../public'));
-    app.use(expressPartials());
   },
   addRoutes: function () {
     // Localize app and config
@@ -35,8 +34,10 @@ Server.prototype = {
 
     // Set up our app.locals
     _.extend(app.locals, {
+      assert: assert,
       config: config.jojo,
       env: config.ENV,
+      googleAnalyticsId: config.googleAnalyticsId,
       numscale: numscale.scale,
       sentryBrowserDSN: config.sentry.browserDSN,
       version: config.version

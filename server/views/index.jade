@@ -1,11 +1,20 @@
-.container__row
-  #articles.span8
-    for article in articles
-      .cluster--aggressive
-        p.muted= article.dateStr
-        h3(title=article.title)
-          a(href=article.url)= article._title || article.title
-        div
-          //- Summary is in markdown and already in a <p>
-          != article.summary
-  .span4!= activity
+extend layout
+
+block config
+  - var page = 'blog';
+  - var title = 'Todd Wolfson - Blog';
+  - var seoKeywords = 'Todd Wolfson, twolfson, twolfsn, blog, javascript, web dev';
+  - var seoDescription = 'Blog about JavaScript and development tools';
+
+block content
+  .container__row
+    #articles.span8
+      for article in articles
+        .cluster--aggressive
+          p.muted= article.dateStr
+          h3(title=article.title)
+            a(href=article.url)= article._title || article.title
+          div
+            //- Summary is in markdown and already in a <p>
+            != article.summary
+    .span4!= activity

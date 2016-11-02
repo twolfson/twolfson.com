@@ -11,12 +11,8 @@ exports.index = function (config) {
   return [
     function renderIndex (req, res) {
       res.render('index.jade', {
-        page: 'blog',
         articles: articles,
-        activity: activityHtml,
-        title: 'Todd Wolfson - Blog',
-        seoKeywords: 'Todd Wolfson, twolfson, twolfsn, blog, javascript, web dev',
-        seoDescription: 'Blog about JavaScript and development tools'
+        activity: activityHtml
       });
     }
   ];
@@ -28,11 +24,7 @@ exports.article = function (config) {
   return [
     function renderArticle (req, res) {
       res.render('article.jade', {
-        page: 'blog',
-        article: article,
-        title: article.title + ' - Todd Wolfson',
-        seoKeywords: article.keywords,
-        seoDescription: article.txtSummary
+        article: article
       });
     }
   ];
@@ -42,7 +34,7 @@ exports.article = function (config) {
 exports.rss = function (config) {
   return [
     function renderRss (req, res) {
-      res.render('xml.jade', {layout: false, articles: config.articles});
+      res.render('xml.jade', {articles: config.articles});
     }
   ];
 };

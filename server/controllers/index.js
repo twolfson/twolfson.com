@@ -19,7 +19,7 @@ exports.kaleido = function (config) {
 
   return [
     function kaleidoFn (req, res) {
-      res.render('kaleido.jade', {layout: false, urls: urls});
+      res.render('kaleido.jade', {urls: urls});
     }
   ];
 };
@@ -30,11 +30,7 @@ exports.license = function (config) {
   return [
     function licenseFn (req, res) {
       res.render('license.jade', {
-        page: 'license',
-        license: license,
-        title: 'Todd Wolfson - License',
-        seoKeywords: 'license, mit',
-        seoDescription: 'twolfson.com uses the MIT License'
+        license: license
       });
     }
   ];

@@ -1,14 +1,17 @@
 doctype html
 html
   head
-    title= locals.title || config.title
+    block config
+      //- Page configuration will be set here (e.g. `page`, `title`)
+    - assert(title, 'Expected page to have title set via `block config`');
+    title= title
     link(rel="shortcut icon", href="/public/images/favicon.ico")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato|Ubuntu+Mono", type="text/css")
     link(rel="stylesheet", href="/public/css/index.css", type="text/css", media="all")
     link(rel="alternate", href="/index.xml", title="twolfson.com blog feed", type="application/atom+xml")
-    if locals.seoKeywords
+    if seoKeywords
       meta(name="keywords", content=seoKeywords)
-    if locals.seoDescription
+    if seoDescription
       meta(name="description", content=seoDescription)
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
 
@@ -24,9 +27,13 @@ html
         |   release: '#{version}'
         | }).install();
 
-    //- Output environment
-    script(type="text/javascript").
-      window.env = "#{locals.env}";
+    //- Load Google analytics and track page view
+    script
+      | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      | ga('create', '#{googleAnalyticsId}', 'auto');
+      | ga('send', 'pageview');
+
+    //- Load normal JS and link tracking
     script(src="/public/js/index.js")
     if locals.enableGrid
       script(type="text/javascript").
@@ -81,7 +88,7 @@ html
               li.nav--item
                 - var isSelected = page === 'support-me' ? 'link--active' : '';
                 a(href="/support-me", class=isSelected) support me
-        != body
+        block content
     //- end of #global-wrapper
     #global-footer.container.text--center.block--center
       div

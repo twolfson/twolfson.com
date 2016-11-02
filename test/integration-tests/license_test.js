@@ -6,14 +6,18 @@ var serverUtils = require('../utils/server');
 // Define our tests
 describe('A request to /license', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/license'));
+  httpUtils.save({url: serverUtils.getUrl('/license'), expectedStatusCode: 200});
 
-  it('has no errors', function () {
-    expect(this.err).to.equal(null);
-    expect(this.res.statusCode).to.equal(200);
+  it('has expected title', function () {
+    expect(this.$('title').text()).to.equal('Todd Wolfson - License');
   });
 
   it('renders our license', function () {
     expect(this.body).to.contain('Permission is hereby granted');
+  });
+
+  it('has SEO meta tags', function () {
+    expect(this.$('meta[name=keywords]').attr('content')).to.contain('license, mit');
+    expect(this.$('meta[name=description]').attr('content')).to.contain('MIT License');
   });
 });

@@ -5,9 +5,10 @@ var serverUtils = require('../utils/server');
 
 describe('A request to /index.xml', function () {
   serverUtils.run();
-  httpUtils.save(serverUtils.getUrl('/index.xml'));
-  before(function detectErrors (done) {
-    done(this.err);
+  httpUtils.save({
+    url: serverUtils.getUrl('/index.xml'),
+    expectedStatusCode: 200,
+    parseHTML: false
   });
   before(function parseXml (done) {
     var that = this;

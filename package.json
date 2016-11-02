@@ -1,7 +1,7 @@
 {
   "name": "twolfson.com",
   "description": "twolfson.com server",
-  "version": "3.95.0",
+  "version": "3.97.0",
   "homepage": "https://github.com/twolfson/twolfson.com",
   "author": {
     "name": "Todd Wolfson",
@@ -39,8 +39,8 @@
     "test": "npm run lint && npm run test-integration",
     "test-travis": "npm run lint && npm run test-integration",
     "test-perceptual": "node test/perceptual-tests/twolfson.com_test.js",
-    "test-integration": "mocha test/integration-tests",
-    "test-production": "mocha test/production-tests",
+    "test-integration": "mocha --reporter dot test/integration-tests",
+    "test-production": "mocha --reporter dot test/production-tests",
     "update-projects": "node bin/update-projects.js",
     "vagrant-test-perceptual": "vagrant ssh -c \"cd /vagrant && npm run test-perceptual\""
   },
@@ -82,8 +82,7 @@
     "jscs": "~1.7.3",
     "jshint": "~2.5.10",
     "merge-stream": "~1.0.0",
-    "mocha": "~1.8.1",
-    "request-mocha": "~0.2.0",
+    "mocha": "~3.1.2",
     "rimraf": "~2.2.6",
     "shell-quote": "~1.4.1",
     "simplesmtp": "~0.3.21",
