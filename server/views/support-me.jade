@@ -1,10 +1,19 @@
-.container__row
-  .width12
-    h2.text--center.soft-half--top.flush--bottom Support me
-    p Want to help support an Open Source developer? Please use one of the services below:
-.container__row
-  .span4.text--left
-    a(href=supportUrls.paypal)
-      button.inline-span3.btn.btn--medium.row--bordered.push--bottom
-        img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
-        = " PayPal"
+extend layout
+
+block config
+  - var page = 'support-me';
+  - var title = 'Todd Wolfson - Support Me';
+  - var seoKeywords = 'Todd Wolfson, twolfson, twolfsn, support me, flattr, paypal, bitcoin, dogecoin';
+  - var seoDescription = 'Support Todd Wolfson via Gratipay, Flattr, PayPal, Bitcoin, and Dogecoin';
+
+block content
+  .container__row
+    .width12
+      h2.text--center.soft-half--top.flush--bottom Support me
+      p Want to help support an Open Source developer? Please use one of the services below:
+  .container__row
+    .span4.text--left
+      a(href=supportUrls.paypal)
+        button.inline-span3.btn.btn--medium.row--bordered.push--bottom
+          img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
+          = " PayPal"
