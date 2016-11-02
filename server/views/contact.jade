@@ -16,9 +16,9 @@ block content
         .width12
           h2.text--center.soft-half--top.flush--bottom Contact
       .container__row
-        .width10.float--left
-          //- If there was no submission attempt
-          if locals.emailStatus === null
+        //- If there was no submission attempt
+        if locals.emailStatus === null
+          .width10.float--left
             p To contact me, please enter your details below:
             .flexbox.push--bottom
               .flexbox__item.width2
@@ -35,14 +35,19 @@ block content
                 label.text--right(for="message", required="required") Message:&nbsp;
               .flexbox__item.width6
                 textarea#message.span7.flush--left(name="message", rows="3")
-          else if locals.emailStatus === true
-            //- Otherwise, if the submission was a success
+        else if locals.emailStatus === true
+          //- Otherwise, if the submission was a success
+          .width2.float--left &nbsp;
+          .width8.float--left
             p.text--center
               //- TODO: Remove whitespace fix
               = "Thank you for contacting me! "
               br
               | I will respond to your request within 48 hours. Have a nice day!
-          else
+        else
+          //- Otherwise (the submission was a failure)
+          .width2.float--left &nbsp;
+          .width8.float--left
             p.text--center
               | Ouch! An error seems to have occurred.
               br
