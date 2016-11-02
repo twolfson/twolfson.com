@@ -24,19 +24,16 @@ var SUPPORT_URLS = {
   //     https://developers.coinbase.com/docs/wallet/tutorials/donations
   // Stripe - Looks plausible, no server logic too which is great
   //   https://stripe.com/checkout#should-i
-  //   Partial international support
-  //     https://stripe.com/global
-  //     Australia, Austria (Beta), Belgium (Beta), Brazil (Private Beta),
-  //     Canada, Denmark, Finland, France, Germany (Beta), Hong Kong (Beta),
-  //     Ireland, Italy (Beta), Japan, Luxembourg (Beta), Mexico (Private Beta),
-  //     Netherlands (Beta), New Zealand (Private Beta), Norway, Portugal (Beta),
-  //     Singapore, Spain, Sweden, Switzerland (Private Beta), United Kingdom, United States
-  //   Has Finland, Ireland, Luxembourg, Portugal, Japan; lacks China, Russia
+  //   Supports recurring
+  //   Supports most countries via conversion
+  //     https://support.stripe.com/questions/which-currencies-does-stripe-support
   // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
   //   but they have international support and recurring so it would be dope
   //   https://www.patreon.com/twolfson
+  //   International support via: Visa, MasterCard, America Express, JCB, Discover, Diners Club and PayPal
+  //     https://patreon.zendesk.com/hc/en-us/articles/204606275-Do-you-support-international-payments-Can-I-donate-in-any-currency-
   // Open collective - Can make a super collective for me as discussed over email
-  //   Not sure of international support
+  //   Backed by Stripe for donations, kind of pointless for our current wants
 
   // Google Wallet - UNEXPLORED
   // Amazon Payments - UNEXPLORED
