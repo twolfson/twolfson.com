@@ -17,9 +17,7 @@ var SUPPORT_URLS = {
   //   Explore which is recurring/1 time and international support
   //   We prob don't want to overwhelm users with options
 
-  // Unused options:
-  // Amazon Payments - Seems usable but not too practical (e.g. no variable donation)
-  //   https://payments.amazon.com/developer/documentation/express/201747030
+  // Plausible yet unused options:
   // Coinbase - Should be good to use (USD, BTC, ETH)
   //   Supports one time and recurring
   //     https://www.coinbase.com/merchant_tools
@@ -37,6 +35,11 @@ var SUPPORT_URLS = {
   //   Supports most countries via conversion
   //     https://support.stripe.com/questions/which-currencies-does-stripe-support
 
+  // Unlikely options:
+  // Amazon Payments - Seems usable but not too practical (e.g. no variable donation)
+  //   https://payments.amazon.com/developer/documentation/express/201747030
+
+  // Bad options:
   // Google Wallet - NO (limited to USA)
   //   https://www.google.com/wallet/
   // Gratipay - NO (ditched due to poor UI and never getting approved)
