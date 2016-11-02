@@ -16,8 +16,13 @@ window.errorGenerators = {
 // When the DOM is ready
 domready(function () {
   // Track all link clicks
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
   Gator(document).on('click', 'a', function (e) {
-    _gaq.push(['_trackEvent', 'Link click', this.href || ('Unknown from: ' + window.location.href)]);
+    window.ga('send', {
+      hitType: 'event',
+      eventCategory: 'Link click',
+      eventAction: this.href || ('Unknown from: ' + window.location.href)
+    });
   });
 
   // Alias languages to their shorthands
