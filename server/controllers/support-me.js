@@ -1,21 +1,19 @@
+// TODO: Output source on donations?
+// TODO: We are thinking about using Bitcoin and Stripe so we get BTC and internation support
+//   as well as one time and recurring support for non-BTC payments
+
 // Define our constants
-// TODO: Reflect source on donations?
 var SUPPORT_URLS = {
-  // PayPal - Partially interational, one time support
+  // PayPal - Partially interational (lacks Japan), one time support
   //   https://www.paypal.me/pages/countries
   //     Australia, Austria, Belgium, Canada, China, Denmark, France,
   //     Germany, Hong Kong SAR China, India, Indonesia, Italy, Netherlands,
   //     Norway, Philippines, Poland, Russia, Singapore, Spain, Sweden,
   //     Switzerland, Thailand, United Kingdom, United States, Vietnam
-  //   Has China, Russia; lacks Japan
   paypal: 'https://www.paypal.me/twolfson',
   // Bitcoin - Interational, one time support
   //   Managed by Coinbase, interational due to BTC
   bitcoin: '1DrBma5ZGRFRPnzEgsLJXvoogPYcQyruM2'
-
-  // TODO: After exploring which is plausible
-  //   Explore which is recurring/1 time and international support
-  //   We prob don't want to overwhelm users with options
 
   // Plausible yet unused options:
   // Coinbase - Should be good to use (USD, BTC, ETH)
