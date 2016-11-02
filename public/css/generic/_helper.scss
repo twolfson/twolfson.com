@@ -13,6 +13,26 @@
   vertical-align: text-bottom;
 }
 
+// Spacing helpers
+// https://github.com/csswizardry/inuit.css/blob/v5.0.1/generic/_helper.scss#L50-L84
+$double-spacing-unit: $base-spacing-unit * 2;
+.push-double          { margin:       $double-spacing-unit!important; }
+.push-double--top     { margin-top:   $double-spacing-unit!important; }
+.push-double--right   { margin-right: $double-spacing-unit!important; }
+.push-double--bottom  { margin-bottom:$double-spacing-unit!important; }
+.push-double--left    { margin-left:  $double-spacing-unit!important; }
+.push-double--ends    { margin-top:   $double-spacing-unit!important; margin-bottom:$double-spacing-unit!important; }
+.push-double--sides   { margin-right: $double-spacing-unit!important; margin-left:  $double-spacing-unit!important; }
+
+.soft-double           { padding:       $double-spacing-unit!important; }
+.soft-double--top      { padding-top:   $double-spacing-unit!important; }
+.soft-double--right    { padding-right: $double-spacing-unit!important; }
+.soft-double--bottom   { padding-bottom:$double-spacing-unit!important; }
+.soft-double--left     { padding-left:  $double-spacing-unit!important; }
+.soft-double--ends     { padding-top:   $double-spacing-unit!important; padding-bottom:$double-spacing-unit!important; }
+.soft-double--sides    { padding-right: $double-spacing-unit!important; padding-left:  $double-spacing-unit!important; }
+
+
 // Ignore content flow by breaking it out of the static layer
 // Used on projects page for numbers that leak into the gutter
 .ignore-flow {

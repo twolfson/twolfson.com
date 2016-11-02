@@ -15,10 +15,30 @@ block content
   .container__row
     .width12
       h2.text--center.soft-half--top.flush--bottom Support me
-      p Support me and my open source projects by donating via one of the methods below:
-  .container__row
-    .span4.text--left
-      a(href=supportUrls.paypal)
-        button.inline-span3.btn.btn--medium.row--bordered.push--bottom
-          img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
-          = " PayPal"
+      p
+        = "Support me and "
+        a(href="/projects")= "my open source projects"
+        = " by donating via one of the methods below:"
+  .container__row.flexbox.push--bottom
+    .flexbox__item.width2
+      img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Bitcoin logo")
+      = " Bitcoin"
+    .flexbox__item.width10
+      pre.flush--bottom
+        code.no-highlight= supportUrls.bitcoin
+  .container__row.flexbox.push-double--bottom
+    .flexbox__item.width2
+      //- TODO: Find Stripe logo
+      img.valign--text-bottom(src="/public/images/support/paypal.png", alt="Stripe logo")
+      = " Stripe"
+    .flexbox__item.width10
+      button.btn.btn--medium.push-half--right
+        = "One-time donation"
+      = " "
+      button.btn.btn--medium
+        = "Recurring donation"
+  .container__row.push--bottom
+    .width12
+      p
+        = "Don't see a donation method you can use? Please tell me at "
+        a(href="mailto:todd+support-me@twolfson.com") todd+support-me@twolfson.com
