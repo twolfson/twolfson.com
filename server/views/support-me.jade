@@ -29,21 +29,31 @@ block content
   .container__row.flexbox.push-double--bottom
     .flexbox__item.width2
       //- TODO: Find Stripe logo
-      img.valign--text-bottom(src="/public/images/support/paypal.png", alt="Stripe logo")
+      img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Stripe logo")
       = " Stripe"
     .flexbox__item.width10
-      //- button.btn.btn--medium.push-half--right
-        //- = "One-time donation"
-      script(
-          src="https://checkout.stripe.com/checkout.js",
-          class="stripe-button",
-          data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh",
-          data-name="Demo Site",
-          data-description="2 widgets ($20.00)",
-          data-amount="2000")
-      = " "
+      div
+        label(style="display: inline-block")= "Amount (USD):"
+        = " "
+        input(type="text", value="0.00")
+      div
+        = "Frequency: "
+        label(style="display: inline-block").push-half--right
+          input(type="radio", name="frequency")
+          = " One-time"
+        label(style="display: inline-block")
+          input(type="radio", name="frequency")
+          = " Monthly"
+        //- script(
+        //-     src="https://checkout.stripe.com/checkout.js",
+        //-     class="stripe-button",
+        //-     data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh",
+        //-     data-image="/square-image.png",
+        //-     data-name="Demo Site",
+        //-     data-description="2 widgets ($20.00)",
+        //-     data-amount="2000")
       button.btn.btn--medium
-        = "Recurring donation"
+        = "Send donation"
   .container__row.push--bottom
     .width12
       p
