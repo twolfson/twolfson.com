@@ -9,7 +9,7 @@ describe('A request to /support-me', function () {
   httpUtils.save({url: serverUtils.getUrl('/support-me'), expectedStatusCode: 200});
 
   it('has expected title', function () {
-    expect(this.$('title').text()).to.equal('Todd Wolfson - Support Me');
+    expect(this.$('title').text()).to.equal('Todd Wolfson - Support me');
   });
 
   it('has SEO meta tags', function () {
@@ -18,7 +18,6 @@ describe('A request to /support-me', function () {
   });
 
   it('renders our links to our support pages', function () {
-    expect(this.body).to.contain('Gratipay');
     expect(this.body).to.contain('PayPal');
     expect(this.body).to.contain('Bitcoin');
   });
