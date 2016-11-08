@@ -66,7 +66,7 @@ var developFasterJsSrc = 'public/js/articles/develop-faster/{' + [
 ].join(',') + '}.js';
 gulp.task('build-develop-faster-js', function () {
   return buildJs({
-    src: developFasterJsSrc,
+    src: ['public/js/ready.js', developFasterJsSrc],
     dest: 'dist/js/articles',
     compiledName: 'develop-faster.js'
   });
