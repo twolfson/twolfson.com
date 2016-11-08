@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.99.2 - Repaired timing error in Chrome in production for Develop faster article
+
 3.99.1 - Fixed up broken tests
 
 3.99.0 - Updated Support me page to have less options and cleaner UI
