@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.100.0 - Upgraded to `github@5.3.3` to attempt to resolve DNS issues
+
 3.99.2 - Repaired timing error in Chrome in production for Develop faster article
 
 3.99.1 - Fixed up broken tests
