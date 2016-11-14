@@ -2,8 +2,8 @@
   {
     "name": "Electron",
     "description": "Cross-platform desktop application framework",
-    "stars": 36344,
-    "forks": 4115,
+    "stars": 37943,
+    "forks": 4404,
     "github": "electron/electron",
     "srcUrl": "https://github.com/electron/electron",
     "pageUrl": "https://github.com/electron/electron"
@@ -11,8 +11,8 @@
   {
     "name": "git-extras",
     "description": "Collection of git utilities",
-    "stars": 8954,
-    "forks": 623,
+    "stars": 9113,
+    "forks": 646,
     "github": "tj/git-extras",
     "srcUrl": "https://github.com/tj/git-extras",
     "pageUrl": "https://github.com/tj/git-extras"
@@ -20,8 +20,8 @@
   {
     "name": "nodemon",
     "description": "Watch files and automatically restart your server",
-    "stars": 8735,
-    "forks": 649,
+    "stars": 9094,
+    "forks": 669,
     "github": "remy/nodemon",
     "srcUrl": "https://github.com/remy/nodemon",
     "pageUrl": "https://github.com/remy/nodemon"
@@ -29,8 +29,8 @@
   {
     "name": "Karma",
     "description": "Powerful browser test runner",
-    "stars": 7625,
-    "forks": 1216,
+    "stars": 7771,
+    "forks": 1234,
     "github": "karma-runner/karma",
     "srcUrl": "https://github.com/karma-runner/karma",
     "pageUrl": "https://github.com/karma-runner/karma"
@@ -38,8 +38,8 @@
   {
     "name": "JSCS",
     "description": "JavaScript code style checker",
-    "stars": 5122,
-    "forks": 566,
+    "stars": 5102,
+    "forks": 562,
     "github": "jscs-dev/node-jscs",
     "srcUrl": "https://github.com/jscs-dev/node-jscs",
     "pageUrl": "https://github.com/jscs-dev/node-jscs"
@@ -47,8 +47,8 @@
   {
     "name": "Serverspec",
     "description": "Testing tool for server configurations",
-    "stars": 1666,
-    "forks": 304,
+    "stars": 1709,
+    "forks": 310,
     "github": "mizzy/serverspec",
     "srcUrl": "https://github.com/mizzy/serverspec",
     "pageUrl": "https://github.com/mizzy/serverspec"
@@ -56,8 +56,8 @@
   {
     "name": "Gratipay",
     "description": "Donations for open source. <a href=\"https://gratipay.com/\" target=\"_blank\">https://gratipay.com/</a>",
-    "stars": 962,
-    "forks": 300,
+    "stars": 972,
+    "forks": 307,
     "github": "gratipay/gratipay.com",
     "srcUrl": "https://github.com/gratipay/gratipay.com",
     "pageUrl": "https://github.com/gratipay/gratipay.com"
@@ -65,8 +65,8 @@
   {
     "name": "source-map",
     "description": "Utility library for creating and parsing source maps",
-    "stars": 838,
-    "forks": 133,
+    "stars": 868,
+    "forks": 134,
     "github": "mozilla/source-map",
     "srcUrl": "https://github.com/mozilla/source-map",
     "pageUrl": "https://github.com/mozilla/source-map"
@@ -74,8 +74,8 @@
   {
     "name": "plaidchat",
     "description": "A Slack client for Linux",
-    "stars": 520,
-    "forks": 37,
+    "stars": 528,
+    "forks": 39,
     "github": "plaidchat/plaidchat",
     "srcUrl": "https://github.com/plaidchat/plaidchat",
     "pageUrl": "https://github.com/plaidchat/plaidchat"
@@ -83,8 +83,8 @@
   {
     "name": "python-livereload",
     "description": "livereload server in python",
-    "stars": 508,
-    "forks": 92,
+    "stars": 519,
+    "forks": 90,
     "github": "lepture/python-livereload",
     "srcUrl": "https://github.com/lepture/python-livereload",
     "pageUrl": "https://github.com/lepture/python-livereload"
@@ -92,8 +92,8 @@
   {
     "name": "SOPS",
     "description": "Secret management utility",
-    "stars": 348,
-    "forks": 19,
+    "stars": 366,
+    "forks": 21,
     "github": "mozilla/sops",
     "srcUrl": "https://github.com/mozilla/sops",
     "pageUrl": "https://github.com/mozilla/sops"
