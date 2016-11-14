@@ -27,14 +27,15 @@ var ScriptRepo = Project.extend({
     }
   },
   _fetchGitHubStats: function (repo, cb) {
-    // Break out the name from the user
+    // Break out the name from the owner
     var repoArr = repo.split('/');
-    var user = repoArr[0];
+    var owner = repoArr[0];
     var repoName = repoArr[1];
 
     // Fetch the repo and callback
+    // http://mikedeboer.github.io/node-github/#api-repos-get
     github.repos.get({
-      user: user,
+      owner: owner,
       repo: repoName
     }, function handleRepoData (err, data) {
       // If there is an error callback with it
