@@ -32,7 +32,7 @@
     "accept-pdiffs": "cp test/perceptual-tests/actual_screenshots/* test/perceptual-tests/expected_screenshots/",
     "build": "gulp build-clean && gulp build",
     "develop": "gulp build-clean && gulp develop",
-    "lint": "jshint bin/ config/ docs/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js && jscs bin/ config/ docs/ public/js/main.js server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
+    "lint": "twolfson-style bin/ config/ docs/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
     "pretest": "twolfson-style install",
     "postinstall": "bin/decrypt-config.sh && npm run build",
     "start": "bin/twolfson.com",
@@ -50,7 +50,6 @@
     "commander": "~2.1.0",
     "emailjs": "~1.0.8",
     "express": "~3.4.8",
-    "express-partials": "~0.1.1",
     "github": "~5.3.3",
     "jade": "~1.9.2",
     "jojo": "~3.0.1",
@@ -86,9 +85,7 @@
     "rimraf": "~2.2.6",
     "shell-quote": "~1.4.1",
     "simplesmtp": "~0.3.21",
-    "slug": "~0.3.3",
-    "temporary": "0.0.5",
-    "twolfson-style": "~1.3.0",
+    "twolfson-style": "~1.6.1",
     "xml2js": "~0.4.1"
   },
   "foundry": {
