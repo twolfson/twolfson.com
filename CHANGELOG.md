@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.101.0 - Updated to Node.js@6, removed unused packages, and upgraded linter (jscs, jshint, twolfson-style)
+
 3.100.1 - Accepted latest perceptual diffs
 
 3.100.0 - Upgraded to `github@5.3.3` to attempt to resolve DNS issues
