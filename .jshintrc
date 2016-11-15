@@ -1,21 +1,13 @@
 {
-  "curly": true,
   "eqeqeq": true,
   "freeze": true,
   "immed": true,
-  "indent": 2,
   "latedef": true,
-  "newcap": true,
-  "noarg": true,
   "nonbsp": true,
-  "quotmark": "single",
   "undef": true,
-  "unused": "vars",
   "strict": false,
-  "maxparams": 4,
-  "maxdepth": 5,
-  "sub": true,
   "node": true,
+  "sub": false,
   "globals": {
     "exports": true,
     "describe": true,
@@ -24,5 +16,13 @@
     "after": true,
     "afterEach": true,
     "it": true
-  }
+  },
+  "curly": true,
+  "indent": 2,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "unused": "vars",
+  "maxparams": 4,
+  "maxdepth": 5
 }
