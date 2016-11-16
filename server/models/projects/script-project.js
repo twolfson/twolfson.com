@@ -37,7 +37,8 @@ var ScriptRepo = Project.extend({
       method: 'GET',
       url: 'https://api.github.com/repos/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repoName),
       headers: {
-        Accept: 'application/vnd.github.v3+json'
+        Accept: 'application/vnd.github.v3+json',
+        'User-Agent': 'request/twolfson.com'
       },
       json: true
     }, function handleRequest (err, res, body) {
