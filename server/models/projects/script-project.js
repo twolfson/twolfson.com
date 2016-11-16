@@ -1,10 +1,8 @@
-var Github = require('github');
+// Load in our dependencies
+var request = require('request');
 var Project = require('./project');
-// TODO: Somehow this should depend on config
-var github = new Github({
-  version: '3.0.0'
-});
 
+// Define our model
 var ScriptRepo = Project.extend({
   update: function (cb) {
     // If it not a gist, update it
@@ -33,18 +31,23 @@ var ScriptRepo = Project.extend({
     var repoName = repoArr[1];
 
     // Fetch the repo and callback
-    // http://mikedeboer.github.io/node-github/#api-repos-get
-    github.repos.get({
-      owner: owner,
-      repo: repoName
-    }, function handleRepoData (err, data) {
+    // https://developer.github.com/v3/
+    // https://developer.github.com/v3/repos/#get
+    request({
+      method: 'GET',
+      url: 'https://api.github.com/repos/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repoName),
+      headers: {
+        Accept: 'application/vnd.github.v3+json'
+      },
+      json: true
+    }, function handleRequest (err, res, body) {
       // If there is an error callback with it
       if (err) { return cb(err); }
 
       // Otherwise, callback with the data
       var retObj = {
-        stars: data.watchers_count,
-        forks: data.forks_count
+        stars: body.watchers_count,
+        forks: body.forks_count
       };
       cb(null, retObj);
     });

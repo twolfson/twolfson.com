@@ -39,8 +39,8 @@ var Project = Backbone.Model.extend({
       // and mdn is defined, use that
       if (mdn !== undefined) {
         pageUrl = 'https://developer.mozilla.org/en-US/demos/detail/' + mdn;
-      } else {
       // Otherwise, fallback to the srcUrl
+      } else {
         pageUrl = srcUrl;
       }
     }
