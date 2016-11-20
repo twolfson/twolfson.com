@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2016-11-19T18:12:18-0600",
   "keywords": "utility, oriented, testing",
-  "summary": "How to make tests DRY without becoming impractical"
+  "summary": "How to make code reusable in Mocha (BDD)"
 }
 
 I have been using the following coding style in tests for a while:
@@ -79,7 +79,9 @@ describe('A request to GET /', function () {
 
 For those curious about how this works, Mocha has a `this` context which is shared by `before`, `after`, and `it`.
 
-We can take this coding style further by supporting chaining (e.g. here is how I test things like CSRF):
+I prefer this coding style due to its compactness, reusability, and extensibility.
+
+We can take this further by supporting chaining (e.g. here is how I test things like CSRF):
 
 ```js
 // Load in our dependencies
@@ -130,14 +132,30 @@ describe('A request to POST /', function () {
 });
 ```
 
-I've been exploring solutions to reduce repetition among tests (and even add required tests) by wrapping top level `describes` as another function (e.g. `scenario`):
+Recently I've been exploring solutions to reduce repetition among tests (and even add required tests) by wrapping top level `describes` as another function (e.g. `scenario`):
+
+```js
+// Performs serverUtils.run() and database fixture setup
+scenario('A request to GET /', function () {
+  // Make our HTTP request
+  httpUtils.save({
+    url: serverUtils.getUrl('/'),
+    expectedStatusCode: 200
+  });
+
+  // Perform our assertions
+  it('is successful', function () {
+    // Asserted by `expectedStatusCode`
+  });
+});
+```
 
 https://gist.github.com/twolfson/1ddf42a41bffefb8c2f298c082e4a337
 
 https://gist.github.com/twolfson/6b2919b9b83dc54c270a9c89db973288
 
 # Lessons learned and further reading
-I recommend against using utilities for `it` tests; it's implicit that the utilities are for `before`/`after` actions only. As a result, when we read compare the CLI output to the code, it's hard to identify where the test is coming from.
+I recommend against using utilities for `it` tests; it's implicit that the utilities are for `before`/`after` actions only. As a result, when we compare the CLI output to the code, it's hard to identify where the test is coming from.
 
 Example: https://github.com/twolfson/spritesheet-templates/blob/7.2.0/test/css_test.js#L35-L40
 
