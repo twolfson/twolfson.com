@@ -96,8 +96,8 @@ describe('A request to POST /', function () {
     // Make our HTTP request
     // DEV: `session.init()` will create a cookie jar
     // DEV: `session.save()` will use said cookie jar
-    // DEV: See expectedStatusCode definition here
-    //   https://github.com/twolfson/twolfson.com/blob/3.102.0/test/utils/http.js#L56-L66
+    // DEV: See htmlForm and expectedStatusCode definitions here
+    //   https://github.com/twolfson/twolfson.com/blob/3.102.0/test/utils/http.js#L15-L66
     httpUtils.session.init()
       .save(serverUtils.getUrl('/'))
       .save({
