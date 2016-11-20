@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.103.0 - Added "Utility oriented testing" article
+
 3.102.0 - Replaced `github` package with `request` to attempt to resolve production certificate issues
 
 3.101.0 - Updated to Node.js@6, removed unused packages, and upgraded linter (jscs, jshint, twolfson-style)
