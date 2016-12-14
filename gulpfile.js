@@ -6,6 +6,7 @@ var gulpCsso = require('gulp-csso');
 var gulpLivereload = require('gulp-livereload');
 var gulpSass = require('gulp-sass');
 var gulpSizereport = require('gulp-sizereport');
+var gulpSourcemaps = require('gulp-sourcemaps');
 var gulpSpritesmith = require('gulp.spritesmith');
 var gulpUglify = require('gulp-uglify');
 var rimraf = require('rimraf');
@@ -36,6 +37,9 @@ function buildJs(params) {
     jsStream.on('error', console.error);
   }
 
+  // Initialize source maps
+  jsStream = jsStream.pipe(gulpSourcemaps.init());
+
   // If we are minifying assets, then minify them
   // DEV: This allows us to save time in development
   if (config.minifyAssets) {
@@ -43,6 +47,9 @@ function buildJs(params) {
       .pipe(gulpUglify())
       .pipe(gulpSizereport({gzip: true}));
   }
+
+  // Output sourcemaps in-memory to Vinyl file
+  jsStream = jsStream.pipe(gulpSourcemaps.write('./'));
 
   // Return our stream
   return jsStream
