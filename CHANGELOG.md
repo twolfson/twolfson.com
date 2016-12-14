@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.104.0 - Added sourcemaps to JS build to improve Sentry reporting
+
 3.103.0 - Added "Utility oriented testing" article
 
 3.102.0 - Replaced `github` package with `request` to attempt to resolve production certificate issues
