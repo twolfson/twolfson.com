@@ -6,9 +6,9 @@
   "summary": "Comparison of parallelization techniques for visual testing"
 }
 
-In my current project, we've been using visual tests. At some point, running tests in series no longer became feasible (e.g. currently 4 minute run time). As a result, we moved to parallel testing (down to 40 seconds) but this was with mock data so it was trivial.
+In my current project, we've been using visual tests. At some point, running tests in series no longer became feasible (4 minutes). As a result, we moved to parallel testing (40 seconds) but this was with mock data so it was trivial.
 
-When we started to move from mock data to database data, this became less trivial. We came up with following requirements:
+When we moved from mock data to database data, this became less trivial. We came up with following requirements:
 
 - Tests should be able to run in parallel to prevent long test runs
 - Data should be consistent between test runs (e.g. always see items A, B, C for `/foo`)
@@ -16,7 +16,7 @@ When we started to move from mock data to database data, this became less trivia
 We came up with the following solutions:
 
 # Development endpoints
-Create a one-off development endpoint for each test scenario (e.g. `/foo` would have a `/_dev/foo` which loads mock data)
+Create one-off development endpoints for each test scenario (e.g. `/foo` would have a `/_dev/foo` which loads mock data and renders same page)
 
 > This has been what I've used for a long time. It's proven itself well but it doesn't scale well =(
 
@@ -31,7 +31,7 @@ Create a one-off development endpoint for each test scenario (e.g. `/foo` would 
 - Easily to get out of sync (e.g. render data might not align to normal endpoint)
 
 # Multiple databases
-With server-side testing, tests can be parallelized by using multiple databases (e.g. `db_test0`, ..., `db_test3`). We could reuse the same technique with our visual tests. This does lead to more problems though:
+With server-side testing, tests can be parallelized by using multiple databases (e.g. `db_test0`, `db_test1`, ...). We could reuse the same technique with our visual tests. This does lead to more problems though:
 
 - How does a browser know which server/database to use?
     - Solve via environment variable and URL resolving function
@@ -62,7 +62,7 @@ During server-side testing, we could record the generated HTML to files. Then, w
 - Cannot easily iterate on tests as its not a live server
 
 # Mock mode
-Create a development-only endpoint which sets a flag on the session to load mock data instead of database data (e.g. `/_dev/setup`). In each normal endpoint, use a conditional to load data from fixtures instead of database
+Create a development-only endpoint which sets a flag on the session to load mock data instead of database data (e.g. `/_dev/setup`). In each normal endpoint, use a conditional to load data from fixtures instead of database.
 
 **Pros:**
 
@@ -73,16 +73,19 @@ Create a development-only endpoint which sets a flag on the session to load mock
 
 - Requires diligence during initial setup (e.g. make sure that mock data can never be used in production)
 
-# Result
+# Results
 We chose "Mock mode" and have been using it for the past month. It's been easy to debug and flexible (e.g. can switch between fixtures via query parameters).
 
-We have been using Gemini for testing which isn't the friendliest for customization but we've made it work. We optimized multiple steps into a single method (i.e. `load`):
+We have been using [Gemini][] for testing which isn't the friendliest for customization but we've made it work. We optimized multiple steps into a single method (i.e. `load`):
 
 - Visit development-only endpoint
 - Configure session to load mock data
 - Redirect to target page
     - This saves us an additional call/response for Selenium
 - After screenshots are complete, wipe cookies (i.e. start next test with a new session to prevent test scenario cross-over)
+    - This saves us many Selenium calls (e.g. no loading `/logout` URL or finding + clicking link)
+
+[Gemini]: https://github.com/gemini-testing/gemini
 
 Here's a sample Gemini test:
 
@@ -157,7 +160,6 @@ exports.bind = function (gemini) {
         // https://github.com/admc/wd/blob/v0.4.0/lib/commands.js#L1998-L2010
         if (options.logged_in) {
           var logout = function (actions, find) {
-            // Navigate to settings page for a logout
             actions._pushAction(logout, function logoutFn (browserWrapper) {
               return browserWrapper._browser.deleteAllCookies();
             });
