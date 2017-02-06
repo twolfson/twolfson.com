@@ -132,26 +132,24 @@ app.use(function detectMockMode (req, res, next) {
 });
 
 // Define our sample endpoint
-app.get('/', [
-  function loadDataRootShow (req, res, next) {
-    if (req.useMockMode) {
-      req.models = {
-        items: [new Model({mock: data})]
-      };
-      next();
-    } else {
-      req.models = {
-        // items: /* Loading logic for models */
-      };
-      next();
-    }
-  },
-  function rootShow (req, res, next) {
-    res.render('root.jade', {
-      items: req.models.items.serialize()
-    });
+app.get('/', function rootShow (req, res, next) {
+  // Perform model loading (typically done via utility)
+  var models;
+  if (req.useMockMode) {
+    models = {
+      items: [new Model({mock: data})]
+    };
+  } else {
+    models = {
+      // items: /* Loading logic for models */
+    };
   }
-]);
+
+  // Render our page (serialized `models` typically included via patched `res.render`)
+  res.render('root.jade', {
+    items: models.items.serialize()
+  });
+});
 ```
 
 **test.js:**
