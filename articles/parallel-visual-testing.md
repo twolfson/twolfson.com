@@ -88,7 +88,71 @@ We have been using [Gemini][] for testing which isn't the friendliest for custom
 
 [Gemini]: https://github.com/gemini-testing/gemini
 
-Here's a sample Gemini test:
+Here's a sample setup endpoint, server endpoint, and Gemini test:
+
+**Setup endpoint:**
+
+```js
+// Only load endpoint in development environment
+app.get('/_dev/setup', function devSetupShow (req, res, next) {
+  // If we don't allow mock mode, then reject the request
+  // DEV: This acts as a sanity check for redundancy in security
+  if (!config.allowMockMode) {
+    throw new Error('Attempted mock mode setup in unsupported environment');
+  }
+
+  // Flag our user's session
+  req.session.useMockMode = true;
+
+  // If we have a redirect URI, use it
+  if (req.query.redirect_uri) {
+    if (redirectUri[0] !== '/') {
+      return next(new HttpError.BadRequest('Expected redirect URL to be relative but it was not'));
+    }
+    res.redirect(req.query.redirect_uri);
+  // Otherwise, complete our request
+  } else {
+    res.send('OK');
+  }
+});
+```
+
+**Server endpoint:**
+
+```js
+// Define common middleware to reuse common mock mode logic
+app.use(function detectMockMode (req, res, next) {
+  // If the user's session is using mock mode, flag our request
+  if (req.session.useMockMode) {
+    if (!config.allowMockMode) {
+      throw new Error('Attempted mock mode setup in unsupported environment');
+    }
+    req.useMockMode = true;
+  }
+});
+
+// Define our sample endpoint
+app.get('/', [
+  function loadDataRootShow (req, res, next) {
+    if (req.useMockMode) {
+      req.models = {
+        items: [new Model({mock: data})]
+      };
+      next();
+    } else {
+      req.models = {
+        // items: /* Loading logic for models */
+      };
+      next();
+    }
+  },
+  function rootShow (req, res, next) {
+    res.render('root.jade', {
+      items: req.models.items.serialize()
+    });
+  }
+]);
+```
 
 **test.js:**
 
