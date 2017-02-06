@@ -8,10 +8,11 @@
 
 In my current project, we've been using visual tests. At some point, running tests in series no longer became feasible (4 minutes). As a result, we moved to parallel testing (40 seconds) but this was with mock data so it was trivial.
 
-When we moved from mock data to database data, this became less trivial. We came up with following requirements:
+When we moved from mock data to a database, this became less trivial. We came up with following requirements:
 
-- Tests should be able to run in parallel to prevent long test runs
 - Data should be consistent between test runs (e.g. always see items A, B, C for `/foo`)
+- Must support multiple data states (e.g. active item, archived item, no items)
+- Easy to debug/reproduce in non-test environment
 
 We came up with the following solutions:
 
@@ -23,11 +24,11 @@ Create one-off development endpoints for each test scenario (e.g. `/foo` would h
 **Pros:**
 
 - Easy to add new endpoints
-- Can debug tests easily
+- Easy to debug in development
 
 **Cons:**
 
-- High maintenance cost (e.g. need to write mock endpoint for every new endpoint)
+- High maintenance cost (e.g. need to write mock endpoint for every new endpoint, alternate data can be done via query strings)
 - Easily to get out of sync (e.g. render data might not align to normal endpoint)
 
 # Multiple databases
@@ -40,12 +41,12 @@ With server-side testing, tests can be parallelized by using multiple databases 
 
 **Pros:**
 
-- As accurate as production
-- Can debug tests easily
+- Same accuracy as database (as it's using one)
+- Easy to debug
 
 **Cons:**
 
-- Slow due to updating fixtures in database
+- Slow due to updating/resetting fixtures in database
 - Tedious to maintain
 
 # Test-generated HTML
@@ -53,25 +54,25 @@ During server-side testing, we could record the generated HTML to files. Then, w
 
 **Pros:**
 
-- Fast and requires maintaining only 1 test suite
+- Requires maintaining only 1 test suite
 
 **Cons:**
 
 - Potentially lose testing accuracy due to some state only being preserved in JS
 - Requires main test suite to be run to generate new HTML so we have a new series problem (i.e. tests could take even longer)
-- Cannot easily iterate on tests as its not a live server
+- Cannot easily iterate on tests as it's not a live server
 
 # Mock mode
-Create a development-only endpoint which sets a flag on the session to load mock data instead of database data (e.g. `/_dev/setup`). In each normal endpoint, use a conditional to load data from fixtures instead of database.
+Create a development-only endpoint which sets a flag on the session to load mock data instead of database data (e.g. `/_dev/setup`). In each normal endpoint, use conditional logic to load data from fixtures instead of database.
 
 **Pros:**
 
 - Easy to maintain (i.e. write loader once, controller logic stays same, can reuse existing test fixtures)
-- Can debug tests easily
+- Easy to debug (e.g. enable mock mode in browser, go to normal endpoint)
 
 **Cons:**
 
-- Requires diligence during initial setup (e.g. make sure that mock data can never be used in production)
+- Requires security diligence during initial setup (e.g. make sure that mock data can never be used in production)
 
 # Results
 We chose "Mock mode" and have been using it for the past month. It's been easy to debug and flexible (e.g. can switch between fixtures via query parameters).
