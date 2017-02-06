@@ -137,7 +137,7 @@ app.get('/', function rootShow (req, res, next) {
   var models;
   if (req.useMockMode) {
     models = {
-      items: [new Model({mock: data})]
+      items: [new Item({mock: data})]
     };
   } else {
     models = {
