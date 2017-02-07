@@ -1,0 +1,11 @@
+After a lot of repos and years of coding, I have grown an intuition of when and how deep much coverage should go into my tests. NEEDS A HOOK
+
+First terminology. Test first. Test later. There is a tangent about no such thing as a unit test but let's skip that
+
+Now let's define our theory. The goal is to maximize our efficiency as a developer over the long term. This means preventing wasted time needing to patch bugs by writing enough test coverage. As well as not wasting time rewriting tests or throwing away tests on an experimental piece of code.
+
+Scenario 1. We know our API. If we have a well established API. Eg connecting to Twitter. Then we can test quite rigorously. This is because we know our test cases are unlikely to change and bugs that exist early on will not appear/dissapear due to rewrites.
+
+Scenario 2. Experimental API. If we are creating a new feature or tool that is being flushed out. Then we write a minimal amount of tests and skip the edge cases. For example with a CLI tool. I would test that I can list commands and run our program but as far as finer points in protocols like ordering. I would be fine with some manual testing.
+
+In all cases. We should be manually testing new features. If that's difficult then script it to be run by a human who evaluate some output (not true false) to make sure things work as expected.
