@@ -1,14 +1,5 @@
 [
   {
-    "name": "image-diff",
-    "description": "Create image differential between two images",
-    "stars": 2081,
-    "forks": 74,
-    "github": "uber/image-diff",
-    "srcUrl": "https://github.com/uber/image-diff",
-    "pageUrl": "https://github.com/uber/image-diff"
-  },
-  {
     "name": "spritesmith",
     "description": "Combine images into a spritesheet and CSS variables",
     "stars": 1141,
