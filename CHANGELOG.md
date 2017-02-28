@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.105.1 - Updated project stats
+
 3.105.0 - Added "Parallel visual testing" article
 
 3.104.0 - Added sourcemaps to JS build to improve Sentry reporting
