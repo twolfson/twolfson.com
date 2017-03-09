@@ -1,4 +1,4 @@
-var watchScreencast = {
+module.exports = {
 "width" : 930,
 "height" : 615,
 "steps" : [

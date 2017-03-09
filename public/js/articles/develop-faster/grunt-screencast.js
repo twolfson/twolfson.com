@@ -1,4 +1,4 @@
-var gruntScreencast = {
+module.exports = {
 "width" : 930,
 "height" : 612,
 "steps" : [

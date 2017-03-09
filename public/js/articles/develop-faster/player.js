@@ -194,3 +194,4 @@ function Player(script, scriptDir)
         }
     }
 }
+module.exports = Player;

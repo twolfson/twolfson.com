@@ -1,4 +1,4 @@
-var autocorrectScreencast = {
+module.exports = {
 "width" : 745,
 "height" : 460,
 "steps" : [

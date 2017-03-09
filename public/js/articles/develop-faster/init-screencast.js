@@ -1,4 +1,4 @@
-var initScreencast = {
+module.exports = {
 "width" : 930,
 "height" : 740,
 "steps" : [

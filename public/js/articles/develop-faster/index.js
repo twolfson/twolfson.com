@@ -1,8 +1,12 @@
-  'domready',
-  'player', 'init-screencast', 'grunt-screencast',
-  'nodemon-screencast', 'livereload-screencast',
-  'watch-screencast', 'autocorrect-screencast', 'render'
-
+// Load in our dependencies
+var domready = require('../domready');
+var Player = require('./player');
+var initScreencast = require('./init-screencast');
+var gruntScreencast = require('./grunt-screencast');
+var nodemonScreencast = require('./nodemon-screencast');
+var livereloadScreencast = require('./livereload-screencast');
+var watchScreencast = require('./watch-screencast');
+var autocorrectScreencast = require('./autocorrect-screencast');
 
 // When the DOM is ready, bind our screencasts
 domready(function () {

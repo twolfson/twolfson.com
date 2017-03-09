@@ -1,4 +1,4 @@
-var livereloadScreencast = {
+module.exports = {
 "width" : 930,
 "height" : 600,
 "steps" : [

@@ -1,4 +1,4 @@
-var nodemonScreencast = {
+module.exports = {
 "width" : 930,
 "height" : 612,
 "steps" : [
