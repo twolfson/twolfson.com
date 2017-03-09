@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.106.0 - Added browserify to fix out-of-order loading issues
+
 3.105.1 - Updated project stats
 
 3.105.0 - Added "Parallel visual testing" article
