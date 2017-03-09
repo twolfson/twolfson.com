@@ -1,3 +1,9 @@
+  'domready',
+  'player', 'init-screencast', 'grunt-screencast',
+  'nodemon-screencast', 'livereload-screencast',
+  'watch-screencast', 'autocorrect-screencast', 'render'
+
+
 // When the DOM is ready, bind our screencasts
 domready(function () {
   var initScreencastPlayer = new Player(initScreencast, 'public/images/articles/develop-faster/init-screencast/');
