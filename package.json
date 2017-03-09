@@ -69,6 +69,7 @@
     "foundry-release-git": "~2.0.2",
     "foundry-release-npm": "~2.0.2",
     "gulp": "~3.9.1",
+    "gulp-buffer": "0.0.2",
     "gulp-concat": "~2.6.0",
     "gulp-csso": "~1.0.1",
     "gulp-livereload": "~3.8.1",
