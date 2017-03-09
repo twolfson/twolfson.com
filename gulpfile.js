@@ -1,5 +1,6 @@
 // Load in our dependencies
 var assert = require('assert');
+var _ = require('underscore');
 var browserify = require('browserify');
 var gulp = require('gulp');
 var gulpBuffer = require('gulp-buffer');
@@ -64,27 +65,46 @@ function buildJs(params) {
 // Create a browserify instance
 // https://github.com/gulpjs/gulp/blob/v3.9.1/docs/recipes/browserify-uglify-sourcemap.md
 // https://github.com/substack/watchify/tree/v3.7.0#watchifyb-opts
-var browserifyObj = browserify({
+var browserifyOptions = {
   cache: {}, packageCache: {},
   debug: true, // Enable source maps
-  entries: [
-    __dirname + '/public/js/index.js',
-    // __dirname + '/public/js/render.js' -> develop-faster.js
-  ]
-});
+};
+var browserifyObjs = [
+  browserify(_.defaults({
+    entries: [__dirname + '/public/js/index.js']
+  }, browserifyOptions)),
+  browserify(_.defaults({
+    entries: [__dirname + '/public/js/articles/develop-faster.js']
+  }, browserifyOptions))
+];
 gulp.task('build-js', function () {
-  // Bundle browserify content
-  var jsStream = browserifyObj.bundle();
+  // Generate a stream for each of our browserify objects
+  var jsStreams = browserifyObjs.map(
+      function bundleBrowserifyObj (browserifyObj) {
+    // Bundle browserify content
+    var jsStream = browserifyObj.bundle();
 
-  // If we are allowing failures, then log them
-  if (config.allowFailures) {
-    jsStream.on('error', console.error);
-  }
+    // If we are allowing failures, then log them
+    if (config.allowFailures) {
+      jsStream.on('error', console.error);
+    }
 
-  // Coerce browserify output into a Vinyl object with buffer content
-  jsStream = jsStream
-    .pipe(vinylSourceStream('index.js'))
-    .pipe(gulpBuffer());
+    // Coerce browserify output into a Vinyl object with buffer content
+    var entries = browserifyObj._options.entries;
+    assert(entries);
+    assert.strictEqual(entries.length, 1, 'Expected `browserifyObj` to only have "1" entry ' +
+      'but got "' + entries.length + '" entries. Otherwise, we can\'t determine its output name');
+    jsStream = jsStream
+      .pipe(vinylSourceStream(entries[0]))
+      .pipe(gulpBuffer());
+
+    // Return our JS stream
+    return jsStream;
+  });
+
+  // Join our files into 1 stream
+  // DEV: We use 1 stream so size reports are in the same file
+  var jsStream = mergeStream.apply(this, jsStreams);
 
   // Extract browserify inline sourcemaps into in-memory file
   jsStream = jsStream.pipe(gulpSourcemaps.init({loadMaps: true}));
