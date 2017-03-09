@@ -211,10 +211,19 @@ gulp.task('develop', ['build'], function develop () {
   // Start a livereload server
   gulpLivereload.listen();
 
+  // Integrate watchify on browserify
+  browserifyObjs.forEach(function bindWatchify (browserifyObj) {
+    browserifyObj.plugin(watchify);
+    browserifyObj.on('update', function handleUpdate () {
+      // DEV: At some point `gulp.run` will be deprecated, move to `gulp.series` when it does
+      gulp.run('build-js');
+    });
+    // DEV: Trigger a browserify build to make watchify start watching files
+    browserifyObj.bundle().on('data', function () {});
+  });
+
   // When one of our src files changes, re-run its corresponding task
   gulp.watch('articles/**/*', ['livereload-update']);
   gulp.watch('public/css/**/*.scss', ['build-css']);
-  gulp.watch(mainJsSrc, ['build-main-js']);
-  gulp.watch(developFasterJsSrc, ['build-develop-faster-js']);
   gulp.watch('server/**/*', ['livereload-update']);
 });
