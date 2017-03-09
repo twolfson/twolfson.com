@@ -102,5 +102,6 @@ node tools/build.js \
 
 # Copy up our files
 cp build/highlight.pack.js ../../../public/js/highlight.js
+echo 'module.exports = hljs;' >> ../../../public/js/highlight.js
 cp build/demo/styles/github.css ../../../public/css/base/highlight.scss
 popd

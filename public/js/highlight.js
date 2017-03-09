@@ -1226,3 +1226,4 @@ hljs.LANGUAGES.python = function(a) {
         }])
     }
 }(hljs);
+module.exports = hljs;

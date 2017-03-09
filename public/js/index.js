@@ -1,7 +1,8 @@
 // Load in our dependencies
 var domready = require('./ready');
 var hljs = require('./highlight');
-var Gator = require('./gator');
+// DEV: Gator exposes itself to window
+void require('./gator');
 void require('./gator-legacy');
 
 // Define window level error generators for testing Sentry
@@ -23,7 +24,7 @@ window.errorGenerators = {
 domready(function () {
   // Track all link clicks
   // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
-  Gator(document).on('click', 'a', function (e) {
+  window.Gator(document).on('click', 'a', function (e) {
     window.ga('send', {
       hitType: 'event',
       eventCategory: 'Link click',

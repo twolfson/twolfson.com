@@ -68,7 +68,7 @@ var browserifyObj = browserify({
   cache: {}, packageCache: {},
   debug: true, // Enable source maps
   entries: [
-    __dirname + '/public/js/main.js',
+    __dirname + '/public/js/index.js',
     // __dirname + '/public/js/render.js' -> develop-faster.js
   ]
 });
@@ -83,7 +83,7 @@ gulp.task('build-js', function () {
 
   // Coerce browserify output into a Vinyl object with buffer content
   jsStream = jsStream
-    .pipe(vinylSourceStream('main.js'))
+    .pipe(vinylSourceStream('index.js'))
     .pipe(gulpBuffer());
 
   // Extract browserify inline sourcemaps into in-memory file
