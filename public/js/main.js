@@ -1,3 +1,9 @@
+// Load in our dependencies
+var domready = require('./ready');
+var hljs = require('./highlight');
+var Gator = require('./gator');
+void require('./gator-legacy');
+
 // Define window level error generators for testing Sentry
 window.errorGenerators = {
   // Test via: setTimeout(function () { errorGenerators.syncError(); }, 100);

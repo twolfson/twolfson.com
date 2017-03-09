@@ -2,6 +2,7 @@
 var assert = require('assert');
 var browserify = require('browserify');
 var gulp = require('gulp');
+var gulpBuffer = require('gulp-buffer');
 var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
 var gulpLivereload = require('gulp-livereload');
@@ -60,29 +61,49 @@ function buildJs(params) {
     .pipe(gulpLivereload());
 }
 
-var mainJsSrc = 'public/js/{' + ['ready', 'highlight', 'gator', 'gator-legacy', 'main'].join(',') + '}.js';
-gulp.task('build-main-js', function () {
-  return buildJs({
-    src: mainJsSrc,
-    dest: 'dist/js',
-    compiledName: 'index.js'
-  });
+// Create a browserify instance
+// https://github.com/gulpjs/gulp/blob/v3.9.1/docs/recipes/browserify-uglify-sourcemap.md
+// https://github.com/substack/watchify/tree/v3.7.0#watchifyb-opts
+var browserifyObj = browserify({
+  cache: {}, packageCache: {},
+  debug: true, // Enable source maps
+  entries: [
+    __dirname + '/public/js/main.js',
+    // __dirname + '/public/js/render.js' -> develop-faster.js
+  ]
 });
+gulp.task('build-js', function () {
+  // Bundle browserify content
+  var jsStream = browserifyObj.bundle();
 
-var developFasterJsSrc = 'public/js/articles/develop-faster/{' + [
-  'player', 'init-screencast', 'grunt-screencast',
-  'nodemon-screencast', 'livereload-screencast',
-  'watch-screencast', 'autocorrect-screencast', 'render'
-].join(',') + '}.js';
-gulp.task('build-develop-faster-js', function () {
-  return buildJs({
-    src: ['public/js/ready.js', developFasterJsSrc],
-    dest: 'dist/js/articles',
-    compiledName: 'develop-faster.js'
-  });
+  // If we are allowing failures, then log them
+  if (config.allowFailures) {
+    jsStream.on('error', console.error);
+  }
+
+  // Coerce browserify output into a Vinyl object with buffer content
+  jsStream = jsStream
+    .pipe(vinylSourceStream('main.js'))
+    .pipe(gulpBuffer());
+
+  // Extract browserify inline sourcemaps into in-memory file
+  jsStream = jsStream.pipe(gulpSourcemaps.init({loadMaps: true}));
+
+  // If we are minifying assets, then minify them
+  if (config.minifyAssets) {
+    jsStream = jsStream
+      .pipe(gulpUglify())
+      .pipe(gulpSizereport({gzip: true}));
+  }
+
+  // Output sourcemaps in-memory to Vinyl file
+  jsStream = jsStream.pipe(gulpSourcemaps.write('./'));
+
+  // Return our stream
+  return jsStream
+    .pipe(gulp.dest('dist/js'))
+    .pipe(gulpLivereload());
 });
-
-gulp.task('build-js', ['build-main-js', 'build-develop-faster-js']);
 
 gulp.task('build-css', function buildCss () {
   // Generate a stream that compiles SCSS to CSS
