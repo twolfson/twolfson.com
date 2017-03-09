@@ -1,5 +1,6 @@
 // Load in our dependencies
 var assert = require('assert');
+var path = require('path');
 var _ = require('underscore');
 var browserify = require('browserify');
 var gulp = require('gulp');
@@ -94,8 +95,10 @@ gulp.task('build-js', function () {
     assert(entries);
     assert.strictEqual(entries.length, 1, 'Expected `browserifyObj` to only have "1" entry ' +
       'but got "' + entries.length + '" entries. Otherwise, we can\'t determine its output name');
+    // /home/todd/.../public/js/articles/develop-faster.js -> articles/develop-faster.js
+    var jsFilepath = path.relative(__dirname + '/public/js', entries[0]);
     jsStream = jsStream
-      .pipe(vinylSourceStream(entries[0]))
+      .pipe(vinylSourceStream(jsFilepath))
       .pipe(gulpBuffer());
 
     // Return our JS stream

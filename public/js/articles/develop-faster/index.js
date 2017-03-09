@@ -1,5 +1,5 @@
 // Load in our dependencies
-var domready = require('../domready');
+var domready = require('../../ready');
 var Player = require('./player');
 var initScreencast = require('./init-screencast');
 var gruntScreencast = require('./grunt-screencast');
