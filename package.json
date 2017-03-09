@@ -61,6 +61,7 @@
     "unhtml": "~0.1.0"
   },
   "devDependencies": {
+    "browserify": "~14.1.0",
     "chai": "~1.9.0",
     "cheerio": "~0.22.0",
     "css-controls": "~0.1.1",
@@ -86,6 +87,8 @@
     "shell-quote": "~1.4.1",
     "simplesmtp": "~0.3.21",
     "twolfson-style": "~1.6.1",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.9.0",
     "xml2js": "~0.4.1"
   },
   "foundry": {

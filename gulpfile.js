@@ -1,5 +1,6 @@
 // Load in our dependencies
 var assert = require('assert');
+var browserify = require('browserify');
 var gulp = require('gulp');
 var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
@@ -9,8 +10,10 @@ var gulpSizereport = require('gulp-sizereport');
 var gulpSourcemaps = require('gulp-sourcemaps');
 var gulpSpritesmith = require('gulp.spritesmith');
 var gulpUglify = require('gulp-uglify');
-var rimraf = require('rimraf');
 var mergeStream = require('merge-stream');
+var rimraf = require('rimraf');
+var vinylSourceStream = require('vinyl-source-stream');
+var watchify = require('watchify');
 
 // Set up our configuration
 var config = {
