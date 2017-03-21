@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2017-03-06T00:00:00-0500",
   "keywords": "visual, testing, perceptual, parallel",
-  "summary": "Design process for [Find Work](https://findwork.co)"
+  "summary": "A behind the scenes look at me building [Find Work](https://findwork.co)"
 }
 
 This article was originally published on Medium:
@@ -11,8 +11,6 @@ This article was originally published on Medium:
 <https://medium.com/findworkco/designing-find-work-4db8dc5a668b>
 
 -------------------------
-
-Designing Find Work
 
 Now that we have launched, we can talk about our design process freely. This article is going to cover what happened from start to finish.
 
@@ -26,11 +24,11 @@ See the "Pages" tab on the left to view our different pages
 
 Next, let's post the final result so you know what we're working towards:
 
-![Large screen - Application edit](#TODO)
+![Large screen - Application edit](/public/images/articles/designing-find-work/final-large.png)
 
-![Medium screen - Application edit](#TODO)
+![Medium screen - Application edit](/public/images/articles/designing-find-work/final-medium.png)
 
-![Small screen - Application edit](#TODO)
+![Small screen - Application edit](/public/images/articles/designing-find-work/final-small.png)
 
 # Concept
 
@@ -40,11 +38,11 @@ We started with [OOUX][]. Here's our board of sticky notes:
 
 [OOUX]: http://alistapart.com/article/ooux-a-foundation-for-interaction-design
 
-![Photo of OOUX board](#TODO)
+![Photo of OOUX board](/public/images/articles/designing-find-work/ooux-photo.jpg)
 
 Updating cards by hand got tedious so we moved the cards into Trello and continued iterating there:
 
-![Screenshot of OOUX in Trello board](#TODO)
+![Screenshot of OOUX in Trello board](/public/images/articles/designing-find-work/ooux-trello.png)
 
 We had a few more revisions after this but I'll spare you the details. After this, we had the concepts in our head and began sketching ideas by hand.
 
@@ -52,15 +50,15 @@ We had a few more revisions after this but I'll spare you the details. After thi
 
 We were determined to have a glanceable schedule in the navigation and uncertain about the rest of things.
 
-![Second sketch we drew, first one of navigation](#TODO)
+![Second sketch we drew, first one of navigation](/public/images/articles/designing-find-work/sketch-1.jpg)
 
-![Exploring field inputs](#TODO)
+![Exploring field inputs](/public/images/articles/designing-find-work/sketch-2.jpg)
 
-![Exploring small screen layout](#TODO)
+![Exploring small screen layout](/public/images/articles/designing-find-work/sketch-3.jpg)
 
 There were 19 paper sketches with some smaller one-offs for ideas/logos. Part-way through, we created a bunch of mock application data as it was getting tedious to think of random-esque dates/application details:
 
-![Excerpt from mock data document](#TODO)
+![Excerpt from mock data document](/public/images/articles/designing-find-work/mock-document.png)
 
 For anyone curious, it's good to design with multiple lengths of text in mind. For example, we could have a short company name (e.g. "bit.ly") or a long one (e.g. "Umbrella Corporation"). The design must be tolerant to both width variants (i.e. not look to empty, can wrap text).
 
@@ -74,11 +72,11 @@ After we had a gist of direction, we started with mockups via Moqups. This means
 
 [design-states]: http://scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack
 
-![Large screen - Application add (mockup)](#TODO)
+![Large screen - Application add (mockup)](/public/images/articles/designing-find-work/mockup-large.png)
 
-![Medium screen - Application add (mockup)](#TODO)
+![Medium screen - Application add (mockup)](/public/images/articles/designing-find-work/mockup-medium.png)
 
-![Small screen - Application add (mockup)](#TODO)
+![Small screen - Application add (mockup)](/public/images/articles/designing-find-work/mockup-small.png)
 
 It's a good idea to explore lots of design directions at this stage as it takes a lot more time to iterate/explore in prototyping. You can see plenty of exploration in the "z_Archive" folder:
 
@@ -95,19 +93,19 @@ However, we didn't have solutions yet so we moved forward.
 # Prototyping
 Mockups and HTML/CSS don't always line up precisely so this is metaphorically where the rubber meets the road. We started taking each of our mockups and implementing it. There was no database wired up to this, it was exclusively hardcoded mock data.
 
-![Large screen - Application add (prototype)](#TODO)
+![Large screen - Application add (prototype)](/public/images/articles/designing-find-work/prototype-large.png)
 
-![Medium screen - Application add (prototype)](#TODO)
+![Medium screen - Application add (prototype)](/public/images/articles/designing-find-work/prototype-medium.png)
 
-![Small screen - Application add (prototype)](#TODO)
+![Small screen - Application add (prototype)](/public/images/articles/designing-find-work/prototype-small.png)
 
 # Wiring
 This is less of a design phase, more of a development phase, but it's worth mentioning. This is when we take our mock data and replace it with a database so people can sign in and interact with our application.
 
 At some point during prototyping and database wiring, we got inspired to solve each of the afore mentioned problems (e.g. status radio buttons). All of which brings us to our final result today:
 
-![Large screen - Application edit (final)](#TODO)
+![Large screen - Application edit (final)](/public/images/articles/designing-find-work/final-large.png)
 
-![Medium screen - Application edit (final)](#TODO)
+![Medium screen - Application edit (final)](/public/images/articles/designing-find-work/final-medium.png)
 
-![Small screen - Application edit (final)](#TODO)
+![Small screen - Application edit (final)](/public/images/articles/designing-find-work/final-small.png)
