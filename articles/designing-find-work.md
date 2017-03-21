@@ -2,7 +2,7 @@
   "title": "Designing Find Work",
   "author": "Todd Wolfson",
   "date": "2017-03-06T00:00:00-0500",
-  "keywords": "visual, testing, perceptual, parallel",
+  "keywords": "find work, design, ooux, mockups",
   "summary": "A behind the scenes look at me building [Find Work](https://findwork.co)"
 }
 

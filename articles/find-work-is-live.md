@@ -2,7 +2,7 @@
   "title": "Find Work is live!",
   "author": "Todd Wolfson",
   "date": "2017-02-28T00:00:00-0500",
-  "keywords": "visual, testing, perceptual, parallel",
+  "keywords": "find work, startup, launch",
   "summary": "Summary of events leading up to [Find Work](https://findwork.co) launch and next steps"
 }
 
