@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.107.0 - Updated blog activity and copied "Find Work is Live!" and "Designing Find Work" articles from Medium
+
 3.106.0 - Added browserify to fix out-of-order loading issues
 
 3.105.1 - Updated project stats
