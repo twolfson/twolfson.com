@@ -16,11 +16,11 @@ When I started dogfooding [Find Work][], I found an annoying invisible issue. Tr
 
 [Find Work]: https://findwork.co/
 
-![TODO]()
+![Notification reference screenshot](public/images/articles/testing-the-invisible/notification-reference.png)
 
 Can’t spot it? Here’s a similar issue that I caught/fixed in development:
 
-![TODO]()
+![Top bar reference screenshot](public/images/articles/testing-the-invisible/topbar-reference.png)
 
 To prevent spoilers, I’ll provide some visual spacers:
 
@@ -54,11 +54,11 @@ To prevent spoilers, I’ll provide some visual spacers:
 
 Here’s the answer: Our notification container was taking up full width and blocking the "Menu" button:
 
-![TODO]()
+![Notification before highlight screenshot](public/images/articles/testing-the-invisible/notification-before-highlight.png)
 
 In the development example, it was our menu button’s container overlaying our logo link:
 
-![TODO]()
+![Top bar before highlight screenshot](public/images/articles/testing-the-invisible/topbar-before-highlight.png)
 
 How do we prevent future regressions for these and similar problems? I can think of a few options:
 
@@ -92,9 +92,9 @@ gemini.suite('menu-collapsed', function (child) {
 
 Here are the fixed results from our visual tests:
 
-![TODO]()
+![Notification after highlight screenshot](public/images/articles/testing-the-invisible/notification-after-highlight.png)
 
-![TODO]()
+![Top bar after highlight screenshot](public/images/articles/testing-the-invisible/topbar-after-highlight.png)
 
 ## References
 - Gemini: <https://github.com/gemini-testing/gemini>
