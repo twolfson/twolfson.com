@@ -20,5 +20,6 @@ describe('A request to /support-me', function () {
   it('renders our links to our support pages', function () {
     expect(this.body).to.contain('PayPal');
     expect(this.body).to.contain('Bitcoin');
+    expect(this.body).to.contain('Patreon');
   });
 });

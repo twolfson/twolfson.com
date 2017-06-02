@@ -34,6 +34,8 @@ curl "https://rawgit.com/peol/960gridder/677b61a7df2e6f83b6b4437fecb027fb94359f2
 # Bitcoin - http://bitcoin.org/en/press
 # DEV: Looks like URL is no longer up
 # curl "https://docs.google.com/uc?export=view&id=0BwnE6HIoU4a4bUswMm5UWS1XakU" > "public/images/support_src/bitcoin.png"
+# Patreon - https://www.patreon.com/toolbox/media
+# curl "https://c4.patreon.com/toolbox/patreon_logo.png" > "public/images/support_src/patreon.png"
 
 # Download, unzip, and install inuit.css
 pushd tmp/bootstrap

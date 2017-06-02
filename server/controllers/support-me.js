@@ -10,7 +10,13 @@ var SUPPORT_URLS = {
   paypal: 'https://www.paypal.me/twolfson',
   // Bitcoin - Interational, one time support
   //   Managed by Coinbase, interational due to BTC
-  bitcoin: '1DrBma5ZGRFRPnzEgsLJXvoogPYcQyruM2'
+  bitcoin: '1DrBma5ZGRFRPnzEgsLJXvoogPYcQyruM2',
+  // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
+  //   but they have international support and recurring so it would be dope
+  //   https://www.patreon.com/twolfson
+  //   International support via: Visa, MasterCard, America Express, JCB, Discover, Diners Club and PayPal
+  //     https://patreon.zendesk.com/hc/en-us/articles/204606275-Do-you-support-international-payments-Can-I-donate-in-any-currency-
+  patreon: 'https://www.patreon.com/twolfson'
 
   // Plausible yet unused options:
   // Coinbase - Should be good to use (USD, BTC, ETH)
@@ -19,11 +25,6 @@ var SUPPORT_URLS = {
   //     https://developers.coinbase.com/docs/wallet/tutorials/donations
   // Open collective - Can make a super collective for me as discussed over email
   //   Backed by Stripe for donations, kind of pointless for our current wants
-  // Patreon - Not designed for open source (e.g. no technology section, no GitHub links)
-  //   but they have international support and recurring so it would be dope
-  //   https://www.patreon.com/twolfson
-  //   International support via: Visa, MasterCard, America Express, JCB, Discover, Diners Club and PayPal
-  //     https://patreon.zendesk.com/hc/en-us/articles/204606275-Do-you-support-international-payments-Can-I-donate-in-any-currency-
   // Stripe - Looks plausible: requires server logic, needs logic for dynamic values (especially subscriptions)
   //   https://stripe.com/checkout#should-i
   //   Supports recurring and BTC (but only with USA users? -- am I the user or is the customer the user?)
