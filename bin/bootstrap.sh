@@ -47,7 +47,7 @@ mv --no-target-directory "inuit.css-5.0.0" ../../public/css/inuit
 # Resize images
 # https://github.com/excellenteasy/grunt-image-resize/blob/v1.0.0/tasks/image_resize.js#L91
 # https://github.com/aheckmann/gm/blob/1.21.1/lib/args.js#L714-L724
-if which convert &> /dev/null; then
+if which convert &> /dev/null && which imagemin &> /dev/null; then
   # Downsize retina sprites
   for src_file in public/images/sprites/*-2x.png; do
     # Convert `twitter-2x.png` to `twitter.png`
@@ -67,10 +67,10 @@ if which convert &> /dev/null; then
     target_file="public/images/support/$target_filename"
 
     # Resize to constant height of 25px
-    convert "$src_file" -resize x25 "$target_file"
+    convert "$src_file" -resize x25 png:- | imagemin > "$target_file"
   done
 else
-  echo "ImageMagick not found. Skipping downsizing of retina images. Please install it to perform downsizing" 1>&2
+  echo "ImageMagick and/or imagemin not found. Skipping downsizing of retina images. Please install them to perform downsizing" 1>&2
 fi
 
 # Build highlight.js
