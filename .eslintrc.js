@@ -1,5 +1,5 @@
 module.exports = {
-  // Inheret from our package
+  // Inherit from our package
   extends: 'eslint-config-twolfson',
 
   // Configure our environment
