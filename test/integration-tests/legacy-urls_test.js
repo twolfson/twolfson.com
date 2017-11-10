@@ -4,6 +4,7 @@ var request = require('request');
 var serverUtils = require('../utils/server');
 
 // Define all URLs we expected
+/* eslint-disable indent */
 var urlInfos = [
   '/2015-10-17-release-foundry-v4',
     {src: '/2015-10-17-release:-foundry-v4', target: '/2015-10-17-release-foundry-v4'},
@@ -56,7 +57,7 @@ var urlInfos = [
   '/2013-04-22-why-i-open-source',
   '/2013-04-22-phantomjs-engine-for-spritesmith',
   '/2013-04-22-introducing-find-plus-plus',
-    {src: '/2013-04-22-introducing-find\+\+', target: '/2013-04-22-introducing-find-plus-plus'},
+    {src: '/2013-04-22-introducing-find++', target: '/2013-04-22-introducing-find-plus-plus'},
   '/2013-03-17-halo-a-modular-mvc',
     {src: '/2013-03-17-halo---a-modular-mvc', target: '/2013-03-17-halo-a-modular-mvc'},
   '/2013-03-11-builder-build-chain-for-your-client-side',
@@ -84,6 +85,7 @@ var urlInfos = [
   '/2012-02-21-blog-launch',
     {src: '/2012-02-21-blog-launch!', target: '/2012-02-21-blog-launch'}
 ];
+/* eslint-enable indent */
 
 // For each of our URLs, verify it's a valid target
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
