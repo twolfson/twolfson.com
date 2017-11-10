@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.110.0 - Moved from `twolfson-style` to `eslint`
+
 3.109.0 - Added Patreon to support me page
 
 3.108.0 - Copied "Testing the Invisible" article from Medium
