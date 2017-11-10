@@ -11,7 +11,7 @@ var serverUtils = require('./server');
 // https://github.com/uber-archive/request-mocha/blob/0.2.0/lib/request-mocha.js
 // DEV: We use copy/paste as it's easier to integrate Cheerio parsing
 exports._save = function (options) {
-  return function _saveFn (done) {
+  return function _saveFn(done) {
     // If there is a form generator, then run it
     if (options.htmlForm) {
       // Verify we have a body to base on
@@ -47,7 +47,7 @@ exports._save = function (options) {
 
     // Make our request
     var that = this;
-    request(options, function handleRequest (err, res, body) {
+    request(options, function handleRequest(err, res, body) {
       // Save our results to `this` context
       that.err = err;
       that.res = res;
@@ -82,7 +82,7 @@ exports._save = function (options) {
   };
 };
 exports._saveCleanup = function () {
-  return function _saveCleanupFn () {
+  return function _saveCleanupFn() {
     delete this.err;
     delete this.res;
     delete this.body;

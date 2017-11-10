@@ -41,24 +41,24 @@ describe('A request to the /contact form', function () {
 
 describe('A submission to /contact', function () {
   serverUtils.run();
-  before(function startSmtp (done) {
+  before(function startSmtp(done) {
     var settings = serverUtils.getSettings();
     var that = this;
 
     // Interpretted from https://github.com/eleith/emailjs/blob/0cd982a87cc727253c31bbf2a1808dd9c137d5fd/test/authplain.js#L38-L49
     this.messages = [];
     this.smtpServer = simplesmtp.createServer();
-    this.smtpServer.listen(settings.mail.port, function listening () {
-      that.smtpServer.on('data', function saveData (envelope, chunk) {
+    this.smtpServer.listen(settings.mail.port, function listening() {
+      that.smtpServer.on('data', function saveData(envelope, chunk) {
         that.messages.push(chunk);
       });
-      that.smtpServer.on('dataReady', function probablyTerminate (envelope, callback) {
+      that.smtpServer.on('dataReady', function probablyTerminate(envelope, callback) {
         callback(null);
       });
       done();
     });
   });
-  after(function stopSmtp (done) {
+  after(function stopSmtp(done) {
     this.smtpServer.end(done);
   });
   makeContactRequest();

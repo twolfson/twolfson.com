@@ -3,7 +3,7 @@ exports.missingPage = function (config) {
 };
 
 exports.errorEncountered = function (config) {
-  return function handleError (err, req, res, next) {
+  return function handleError(err, req, res, next) {
     // If we should throw errors, throw the error
     if (config.throwCaughtErrors) {
       throw err;

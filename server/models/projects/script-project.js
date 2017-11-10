@@ -41,7 +41,7 @@ var ScriptRepo = Project.extend({
         'User-Agent': 'request/twolfson.com'
       },
       json: true
-    }, function handleRequest (err, res, body) {
+    }, function handleRequest(err, res, body) {
       // If there is an error callback with it
       if (err) { return cb(err); }
 

@@ -5,7 +5,7 @@ var email = require('emailjs');
 // Success/failure pages for testing
 exports.devSuccess = function (config) {
   return [
-    function devSuccessFn (req, res) {
+    function devSuccessFn(req, res) {
       res.locals.emailStatus = true;
       exports._render(req, res);
     }
@@ -13,7 +13,7 @@ exports.devSuccess = function (config) {
 };
 exports.devFailure = function (config) {
   return [
-    function devFailureFn (req, res) {
+    function devFailureFn(req, res) {
       res.locals.emailStatus = false;
       exports._render(req, res);
     }
@@ -23,7 +23,7 @@ exports.devFailure = function (config) {
 // Default page
 exports.index = function (config) {
   return [
-    function indexFn (req, res) {
+    function indexFn(req, res) {
       // TODO: There seems to be a res.locals leak somehow which requires a locals.emailStatus = null
       // TODO: To reproduce, navigate to /contact/failure -> visit /contact
       // TODO: Expected: Normal contact form. Actual: Failure page displayed
@@ -40,7 +40,7 @@ exports.submit = function (config) {
   var emailServer = email.server.connect(emailConf);
 
   return [
-    function submitFn (req, res) {
+    function submitFn(req, res) {
       // Parse the body
       var body = req.body;
       var message = '';
@@ -56,7 +56,7 @@ exports.submit = function (config) {
         from: 'No Reply <no-reply@twolfson.com>',
         to: 'Todd Wolfson <todd@twolfson.com>',
         subject: 'Incoming query from twolfson.com'
-      }, function handleEmailSent (err/*, message*/) {
+      }, function handleEmailSent(err/* , message*/) {
         res.locals.emailStatus = !err;
         if (err) {
           res.status(502);

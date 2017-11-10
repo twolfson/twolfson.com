@@ -14,7 +14,7 @@ var ProjectCollection = Backbone.Collection.extend({
     fs.writeFile(this.filepath, JSON.stringify(this.toJSON(), null, 2), cb);
   },
   update: function (done) {
-    async.forEach(this.models, function updateProject (project, cb) {
+    async.forEach(this.models, function updateProject(project, cb) {
       project.update(cb);
     }, done);
   }
@@ -43,20 +43,20 @@ exports.scripts = new ScriptCollection(scriptModels, {
 
 exports.update = function (done) {
   async.parallel([
-    function updateContributions (cb) {
+    function updateContributions(cb) {
       exports.contributions.update(cb);
     },
-    function updateScripts (cb) {
+    function updateScripts(cb) {
       exports.scripts.update(cb);
     }
   ], done);
 };
 exports.save = function (done) {
   async.parallel([
-    function saveContributions (cb) {
+    function saveContributions(cb) {
       exports.contributions.save(cb);
     },
-    function saveScripts (cb) {
+    function saveScripts(cb) {
       exports.scripts.save(cb);
     }
   ], done);

@@ -6,7 +6,7 @@ module.exports = function (config) {
   // TODO: Should we do this elsewhere? It does not belong in a controller which can be reloaded again and again
   // If we should update the projects immediately, do so
   if (config.projectOptions.updateImmediately) {
-    projects.update(function handleUpdate (err) {
+    projects.update(function handleUpdate(err) {
       // If there was an error, log it
       if (err) {
         return config.errorHandler(err);
@@ -20,8 +20,8 @@ module.exports = function (config) {
   // If we have an update interval, update the `stringifiedProjects` every interval
   var updateInterval = config.projectOptions.updateInterval;
   if (updateInterval) {
-    setInterval(function updateProjectsInterval () {
-      projects.update(function handleUpdate (err) {
+    setInterval(function updateProjectsInterval() {
+      projects.update(function handleUpdate(err) {
         // If there was an error, log it
         if (err) {
           return config.errorHandler(err);
@@ -34,7 +34,7 @@ module.exports = function (config) {
   }
 
   return [
-    function projectsFn (req, res) {
+    function projectsFn(req, res) {
       res.render('projects.jade', {
         projects: stringifiedProjects
       });

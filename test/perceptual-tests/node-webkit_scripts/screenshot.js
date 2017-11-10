@@ -1,5 +1,5 @@
 // When an error occurs, log it and exit
-process.on('uncaughtException', function handleErr (err) {
+process.on('uncaughtException', function handleErr(err) {
   throw err;
 });
 
@@ -30,7 +30,7 @@ var win = gui.Window.open(url, {
 });
 
 // When all the assets load (e.g. images, CSS, JS)
-win.on('loaded', function handleLoad () {
+win.on('loaded', function handleLoad() {
   // Calculate how of the much window dimensions are padding
   var viewportWidth = Math.max(
     win.window.document.documentElement.clientWidth,
@@ -48,18 +48,18 @@ win.on('loaded', function handleLoad () {
 
   // Wait for resize to take effect
   // TODO: Place me on an async loop `async.until`
-  setTimeout(function waitForResize () {
+  setTimeout(function waitForResize() {
     // Hide all <canvas> elements
     // DEV: develop-faster has timer based draws so there can be issues
     // http://www.quirksmode.org/dom/w3c_css.html
     cssControls.addRule(win.window.document.styleSheets[1], 'canvas', 'display: none;');
 
     // Wait for page to stabilize/load elements
-    setTimeout(function waitForStabilization () {
+    setTimeout(function waitForStabilization() {
       // Render and exit
-      win.capturePage(function handleScreenshot (buff) {
+      win.capturePage(function handleScreenshot(buff) {
         // Write our our image and leave
-        fs.writeFile(imgDest, buff, function handleSave (err) {
+        fs.writeFile(imgDest, buff, function handleSave(err) {
           win.close();
           process.exit();
         });

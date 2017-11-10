@@ -16,10 +16,10 @@ exports.startServer = function (params) {
 
 exports.run = function (params) {
   var server;
-  before(function startServer () {
+  before(function startServer() {
     server = exports.startServer(params);
   });
-  after(function stopServer (done) {
+  after(function stopServer(done) {
     server.destroy(done);
   });
 };

@@ -89,11 +89,11 @@ var urlInfos = [
 // DEV: This was initially written as a one-off script -- hence the poor structure and bundling
 describe('When requesting each of our legacy URLs', function () {
   serverUtils.run();
-  before(function requestUrls (done) {
+  before(function requestUrls(done) {
     var that = this;
     // DEV: Increase timeout to 10s for slow servers
     this.timeout(10000);
-    async.map(urlInfos, function requestUrl (urlInfo, cb) {
+    async.map(urlInfos, function requestUrl(urlInfo, cb) {
       var urlPathname = typeof urlInfo === 'object' ? urlInfo.src : urlInfo;
       var url = serverUtils.getUrl(urlPathname);
       request({
@@ -101,23 +101,23 @@ describe('When requesting each of our legacy URLs', function () {
         // TODO: When we finish this, we might need redirect: true
         followRedirect: false,
         expectedStatusCode: null
-      }, function handleResponse (err, res, body) {
+      }, function handleResponse(err, res, body) {
         // Callback with the error and response
         return cb(err, res);
       });
-    }, function saveResponses (err, resArr) {
+    }, function saveResponses(err, resArr) {
       that.resArr = resArr;
       done(err);
     });
   });
-  after(function cleanup () {
+  after(function cleanup() {
     delete this.resArr;
   });
 
   it('renders/redirects to the expected location', function () {
     // For each of our responses
     var errs = [];
-    this.resArr.forEach(function processRes (res, i) {
+    this.resArr.forEach(function processRes(res, i) {
       // If the info is a string, verify it was a direct hit
       var urlInfo = urlInfos[i];
       var urlPathname;

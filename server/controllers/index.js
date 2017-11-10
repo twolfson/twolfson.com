@@ -17,7 +17,7 @@ exports.kaleido = function (config) {
   var urls = require('../../test/perceptual-tests/urls');
 
   return [
-    function kaleidoFn (req, res) {
+    function kaleidoFn(req, res) {
       res.render('kaleido.jade', {urls: urls});
     }
   ];
@@ -27,7 +27,7 @@ exports.kaleido = function (config) {
 exports.license = function (config) {
   var license = fs.readFileSync(__dirname + '/../../LICENSE-MIT', 'utf8');
   return [
-    function licenseFn (req, res) {
+    function licenseFn(req, res) {
       res.render('license.jade', {
         license: license
       });
@@ -37,9 +37,9 @@ exports.license = function (config) {
 
 // Render a health page
 exports.health = function (config) {
-  var pkgVersion = config['package'].version;
+  var pkgVersion = config.package.version;
   return [
-    function healthFn (req, res) {
+    function healthFn(req, res) {
       var retObj = {
         version: pkgVersion,
         uptime: process.uptime(),

@@ -9,7 +9,7 @@ var activityHtml = jade.render(activityJade);
 exports.index = function (config) {
   var articles = config.articles;
   return [
-    function renderIndex (req, res) {
+    function renderIndex(req, res) {
       res.render('index.jade', {
         articles: articles,
         activity: activityHtml
@@ -22,7 +22,7 @@ exports.index = function (config) {
 exports.article = function (config) {
   var article = config.article;
   return [
-    function renderArticle (req, res) {
+    function renderArticle(req, res) {
       res.render('article.jade', {
         article: article
       });
@@ -33,7 +33,7 @@ exports.article = function (config) {
 // Render RSS feed
 exports.rss = function (config) {
   return [
-    function renderRss (req, res) {
+    function renderRss(req, res) {
       res.render('xml.jade', {articles: config.articles});
     }
   ];

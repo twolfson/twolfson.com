@@ -10,7 +10,7 @@ describe('A request to /index.xml', function () {
     expectedStatusCode: 200,
     parseHTML: false
   });
-  before(function parseXml (done) {
+  before(function parseXml(done) {
     var that = this;
     var parser = new xml2js.Parser();
     parser.parseString(this.body, function (err, xml) {

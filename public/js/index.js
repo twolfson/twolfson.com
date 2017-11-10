@@ -14,7 +14,7 @@ window.errorGenerators = {
   },
   // Test via: errorGenerators.asyncError();
   asyncError: function () {
-    setTimeout(function handleSetTimeout () {
+    setTimeout(function handleSetTimeout() {
       throw new Error('Async error');
     }, 100);
   }

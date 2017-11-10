@@ -51,7 +51,7 @@ var SUPPORT_URLS = {
 // Define our controllers
 module.exports = function (config) {
   return [
-    function renderIndex (req, res) {
+    function renderIndex(req, res) {
       res.render('support-me.jade', {
         supportUrls: SUPPORT_URLS
       });

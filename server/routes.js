@@ -16,7 +16,7 @@ exports.common = function (config) {
 
   // Override our article URLs
   var articles = config.articles;
-  articles.forEach(function updateArticleUrl (article) {
+  articles.forEach(function updateArticleUrl(article) {
     article.url = article.urlOverride || article.url;
   });
 
@@ -31,8 +31,8 @@ exports.common = function (config) {
 
     // If there are any alternate URLs, redirect them
     if (article.alternateUrls) {
-      article.alternateUrls.forEach(function handleAlternateUrl (alternateUrl) {
-        router.get(alternateUrl, function redirectToArticle (req, res, next) {
+      article.alternateUrls.forEach(function handleAlternateUrl(alternateUrl) {
+        router.get(alternateUrl, function redirectToArticle(req, res, next) {
           res.redirect(301, url);
         });
       });

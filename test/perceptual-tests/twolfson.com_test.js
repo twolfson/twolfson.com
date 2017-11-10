@@ -37,15 +37,15 @@ var xvfbChild = spawn('Xvfb', [DISPLAY]);
 // Collect xvfb stdout and stderr
 var xvfbStdout = '';
 var xvfbStderr = '';
-xvfbChild.stdout.on('data', function addStdout (buff) {
+xvfbChild.stdout.on('data', function addStdout(buff) {
   xvfbStdout += buff;
 });
-xvfbChild.stderr.on('data', function addStderr (buff) {
+xvfbChild.stderr.on('data', function addStderr(buff) {
   xvfbStderr += buff;
 });
 
 // If xvfb terminates
-xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
+xvfbChild.on('exit', function handleXvfbPrematureExit(code) {
   /* eslint-disable no-console */
   console.error('Xvfb exited early', code);
   console.error('XVFB STDOUT:', xvfbStdout);
@@ -55,7 +55,7 @@ xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
 });
 
 // For each of the URLs
-async.mapLimit(urls, 2, function comparePages (pathname, done) {
+async.mapLimit(urls, 2, function comparePages(pathname, done) {
   // Screenshot the webpage
   var url = serverUtils.getUrl(pathname);
   var filename = encodeURIComponent(pathname) + '.png';
@@ -66,10 +66,10 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     env: _.defaults({
       DISPLAY: DISPLAY
     }, process.env)
-  }, function processScreenshot (err, stdout, stderr) {
+  }, function processScreenshot(err, stdout, stderr) {
     // Filter common errors
     if (stderr) {
-      stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
+      stderr = stderr.split(/\n/g).filter(function removeCommon(line) {
         /* eslint-disable max-len */
         // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
         // Xlib:  extension "RANDR" missing on display ":99".
@@ -106,7 +106,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
       actualImage: actualImg,
       expectedImage: expectedScreenshots + '/' + filename,
       diffImage: diffScreenshots + '/' + filename
-    }, function handleDiffResult (err, imagesAreSame) {
+    }, function handleDiffResult(err, imagesAreSame) {
       // If there was an error, callback with it
       if (err) { return done(err); }
 
@@ -117,13 +117,13 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
       });
     });
   });
-}, function handleResults (err, results) {
+}, function handleResults(err, results) {
   // Stop Xvfb
   xvfbChild.kill();
   xvfbChild.removeAllListeners('exit');
-  xvfbChild.on('exit', function handleXvfbExit () {
+  xvfbChild.on('exit', function handleXvfbExit() {
     // Take down server
-    server.destroy(function handleServerExit () {
+    server.destroy(function handleServerExit() {
       // If there was an error, log it and leave
       if (err) {
         // eslint-disable-next-line no-console

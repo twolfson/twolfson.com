@@ -24,8 +24,8 @@ Server.prototype = {
     app.engine('jade', jadeEngine);
     app.set('view engine', 'jade');
     app.set('views', __dirname + '/views');
-    app.use('/public', express['static'](__dirname + '/../dist'));
-    app.use('/public', express['static'](__dirname + '/../public'));
+    app.use('/public', express.static(__dirname + '/../dist'));
+    app.use('/public', express.static(__dirname + '/../public'));
   },
   addRoutes: function () {
     // Localize app and config
@@ -46,7 +46,7 @@ Server.prototype = {
     // Add test and development specific routes
     if (config.addDevelopmentRoutes) {
       // Host /test for kaleidoscope
-      app.use('/test', express['static'](__dirname + '/../test'));
+      app.use('/test', express.static(__dirname + '/../test'));
       app.use(routes.development(config));
     }
     if (config.addTestRoutes) {
@@ -63,7 +63,7 @@ Server.prototype = {
     this._app = this.app.listen(this.config.url.internal.port, this.config.url.listeningHostname);
   },
   destroy: function (cb) {
-    this._app.close(cb || function noop () {});
+    this._app.close(cb || function noop() {});
   }
 };
 
