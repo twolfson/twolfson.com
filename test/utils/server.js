@@ -1,9 +1,9 @@
 var url = require('url');
 var _ = require('underscore');
 var Server = require('../../');
+var config = require('../../config');
 
 exports.getSettings = function (params) {
-  var config = require('../../config');
   return _.extend({}, config.getSettings({env: 'test'}), params || {});
 };
 

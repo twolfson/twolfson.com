@@ -70,6 +70,7 @@ exports._save = function (options) {
         try {
           that.$ = cheerio.load(body);
         } catch (err) {
+          // eslint-disable-next-line no-console
           console.error('Tried to parse response body as HTML but failed. ' +
             'If response should not be parsed, set `parseHTML` to `false`');
           throw err;

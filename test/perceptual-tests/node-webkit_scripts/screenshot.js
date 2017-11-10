@@ -60,6 +60,9 @@ win.on('loaded', function handleLoad() {
       win.capturePage(function handleScreenshot(buff) {
         // Write our our image and leave
         fs.writeFile(imgDest, buff, function handleSave(err) {
+          if (err) {
+            throw err;
+          }
           win.close();
           process.exit();
         });

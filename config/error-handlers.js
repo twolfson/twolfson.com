@@ -5,6 +5,7 @@ var ravenParsers = require('raven/lib/parsers');
 // Define our error loggers
 exports.console = function (params) {
   return function consoleLogger(err, req) {
+    // eslint-disable-next-line no-console
     console.error('[error-logger]: ', req.method, req.url, err);
   };
 };

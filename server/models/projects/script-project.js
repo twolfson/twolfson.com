@@ -17,11 +17,11 @@ var ScriptRepo = Project.extend({
         }
 
         if (cb) {
-          cb(err);
+          return cb(err);
         }
       });
     } else if (cb) {
-      process.nextTick(cb);
+      return process.nextTick(cb);
     }
   },
   _fetchGitHubStats: function (repo, cb) {

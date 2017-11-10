@@ -36,6 +36,7 @@ projects.update(function (err) {
     }
 
     // Otherwise, exit the program
+    // eslint-disable-next-line no-console
     console.log('Projects should be updated');
     process.exit();
   });

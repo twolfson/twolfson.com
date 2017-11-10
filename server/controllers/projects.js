@@ -20,6 +20,7 @@ module.exports = function (config) {
   // If we have an update interval, update the `stringifiedProjects` every interval
   var updateInterval = config.projectOptions.updateInterval;
   if (updateInterval) {
+    // eslint-disable-next-line callback-return
     setInterval(function updateProjectsInterval() {
       projects.update(function handleUpdate(err) {
         // If there was an error, log it

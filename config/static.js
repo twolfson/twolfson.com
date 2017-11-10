@@ -62,6 +62,7 @@ var configFiles = ['./static-error', './static-url'];
 configFiles.forEach(function mergeConfigFile(configFile) {
   // Assert that the new config has no repeated keys
   var mainConfig = exports;
+  // eslint-disable-next-line global-require
   var newConfig = require(configFile);
   var mainKeys = _.union(
     _.keys(mainConfig.common), _.keys(mainConfig.development),

@@ -12,8 +12,10 @@ exports['support-me'] = require('./support-me');
 // Kaleido page
 exports.kaleido = function (config) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
+  // eslint-disable-next-line global-require
   var yaml = require('js-yaml');
   void yaml; // DEV: Required to silence lint
+  // eslint-disable-next-line global-require
   var urls = require('../../test/perceptual-tests/urls');
 
   return [
