@@ -25,7 +25,7 @@ var config = {
 };
 
 // Define our build tasks
-gulp.task('build-clean', function clean (done) {
+gulp.task('build-clean', function clean(done) {
   // Remove all compiled files in `dist/`
   rimraf(__dirname + '/dist/', done);
 });
@@ -68,7 +68,7 @@ function buildJs(params) {
 // https://github.com/substack/watchify/tree/v3.7.0#watchifyb-opts
 var browserifyOptions = {
   cache: {}, packageCache: {},
-  debug: true, // Enable source maps
+  debug: true // Enable source maps
 };
 var browserifyObjs = [
   browserify(_.defaults({
@@ -128,7 +128,7 @@ gulp.task('build-js', function () {
     .pipe(gulpLivereload());
 });
 
-gulp.task('build-css', function buildCss () {
+gulp.task('build-css', function buildCss() {
   // Generate a stream that compiles SCSS to CSS
   // DEV: We return the pipe'd stream so gulp knows when we exit
   var cssStream = gulp.src('public/css/index.scss')
@@ -157,7 +157,7 @@ gulp.task('build-css', function buildCss () {
 gulp.task('build', ['build-css', 'build-js']);
 
 // Define rarely run build tasks
-gulp.task('sprite', function spriteFn (done) {
+gulp.task('sprite', function spriteFn(done) {
   // Generate our spritesheet
   var spriteData = gulp.src('public/images/sprites/*.png')
     .pipe(gulpSpritesmith({
@@ -179,7 +179,7 @@ gulp.task('sprite', function spriteFn (done) {
     .pipe(gulp.dest('public/css/base/'));
 
   // When both streams are finished
-  mergeStream(imgStream, cssStream).on('finish', function handleFinish () {
+  mergeStream(imgStream, cssStream).on('finish', function handleFinish() {
     // Kick off a CSS task
     // DEV: When `gulp.run` is removed, move to `gulp.series`
     //   https://github.com/gulpjs/gulp/issues/1125
@@ -192,18 +192,18 @@ gulp.task('sprite', function spriteFn (done) {
 
 // Define our development tasks
 // Handle a generic forced live reload
-gulp.task('livereload-update', function handleLivereloadUpdate (done) {
+gulp.task('livereload-update', function handleLivereloadUpdate(done) {
   // DEV: Give ourselves a delay to wait for the server to restart
   // TODO: Reduce load time (likely caused by marked and no caching)
   //   Maybe we can figure out a way to not restart upon article change...
-  setTimeout(function handleSetTimeout () {
+  setTimeout(function handleSetTimeout() {
     gulpLivereload.reload();
     done();
   }, 5000);
 });
 
 // DEV: `['build']` requires that our build task runs once
-gulp.task('develop', ['build'], function develop () {
+gulp.task('develop', ['build'], function develop() {
   // Set up our tasks to allow failures
   config.allowFailures = true;
   config.minifyAssets = false;
@@ -212,9 +212,9 @@ gulp.task('develop', ['build'], function develop () {
   gulpLivereload.listen();
 
   // Integrate watchify on browserify
-  browserifyObjs.forEach(function bindWatchify (browserifyObj) {
+  browserifyObjs.forEach(function bindWatchify(browserifyObj) {
     browserifyObj.plugin(watchify);
-    browserifyObj.on('update', function handleUpdate () {
+    browserifyObj.on('update', function handleUpdate() {
       // DEV: At some point `gulp.run` will be deprecated, move to `gulp.series` when it does
       gulp.run('build-js');
     });

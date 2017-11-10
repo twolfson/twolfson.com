@@ -34,6 +34,6 @@ exports.getSettings = function (options) {
 
   // Complete and return our settings
   // TODO: Remove redundant `package` as we already have version
-  settings['package'] = pkg;
+  settings.package = pkg;
   return settings;
 };
