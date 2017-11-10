@@ -5,7 +5,6 @@ var _ = require('underscore');
 var browserify = require('browserify');
 var gulp = require('gulp');
 var gulpBuffer = require('gulp-buffer');
-var gulpConcat = require('gulp-concat');
 var gulpCsso = require('gulp-csso');
 var gulpLivereload = require('gulp-livereload');
 var gulpSass = require('gulp-sass');
@@ -30,39 +29,6 @@ gulp.task('build-clean', function clean(done) {
   rimraf(__dirname + '/dist/', done);
 });
 
-function buildJs(params) {
-  // Concatenate our content together
-  assert(params.src);
-  assert(params.compiledName);
-  assert(params.dest);
-  var jsStream = gulp.src(params.src)
-    .pipe(gulpConcat(params.compiledName));
-
-  // If we are allowing failures, then log them
-  if (config.allowFailures) {
-    jsStream.on('error', console.error);
-  }
-
-  // Initialize source maps
-  jsStream = jsStream.pipe(gulpSourcemaps.init());
-
-  // If we are minifying assets, then minify them
-  // DEV: This allows us to save time in development
-  if (config.minifyAssets) {
-    jsStream = jsStream
-      .pipe(gulpUglify())
-      .pipe(gulpSizereport({gzip: true}));
-  }
-
-  // Output sourcemaps in-memory to Vinyl file
-  jsStream = jsStream.pipe(gulpSourcemaps.write('./'));
-
-  // Return our stream
-  return jsStream
-    .pipe(gulp.dest(params.dest))
-    .pipe(gulpLivereload());
-}
-
 // Create a browserify instance
 // https://github.com/gulpjs/gulp/blob/v3.9.1/docs/recipes/browserify-uglify-sourcemap.md
 // https://github.com/substack/watchify/tree/v3.7.0#watchifyb-opts
@@ -80,13 +46,13 @@ var browserifyObjs = [
 ];
 gulp.task('build-js', function () {
   // Generate a stream for each of our browserify objects
-  var jsStreams = browserifyObjs.map(
-      function bundleBrowserifyObj (browserifyObj) {
+  var jsStreams = browserifyObjs.map(function bundleBrowserifyObj(browserifyObj) {
     // Bundle browserify content
     var jsStream = browserifyObj.bundle();
 
     // If we are allowing failures, then log them
     if (config.allowFailures) {
+      // eslint-disable-next-line no-console
       jsStream.on('error', console.error);
     }
 
@@ -138,6 +104,7 @@ gulp.task('build-css', function buildCss() {
 
   // If we are allowing failures, then log them
   if (config.allowFailures) {
+    // eslint-disable-next-line no-console
     cssStream.on('error', console.error);
   }
 
