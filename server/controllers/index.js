@@ -1,5 +1,4 @@
 // Load in dependencies
-var assert = require('assert');
 var fs = require('fs');
 
 // Load in controller groups
@@ -14,7 +13,7 @@ exports['support-me'] = require('./support-me');
 exports.kaleido = function (config) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
   var yaml = require('js-yaml');
-  assert(yaml); // DEV: Required to silence jshint
+  void yaml; // DEV: Required to silence lint
   var urls = require('../../test/perceptual-tests/urls');
 
   return [

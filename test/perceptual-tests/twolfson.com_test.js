@@ -1,5 +1,4 @@
 // Load in dependencies
-var assert = require('assert');
 var fs = require('fs');
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
@@ -26,7 +25,7 @@ fs.mkdirSync(diffScreenshots);
 // DEV: js-yaml is required to make this require work properly
 var yml = require('js-yaml');
 var urls = require('./urls.yml');
-assert(yml); // DEV: We use assert to silence jshint complaints
+void yml; // DEV: We use void to silence lint complaints
 
 // Start a server
 var server = serverUtils.startServer();
@@ -47,10 +46,12 @@ xvfbChild.stderr.on('data', function addStderr (buff) {
 
 // If xvfb terminates
 xvfbChild.on('exit', function handleXvfbPrematureExit (code) {
+  /* eslint-disable no-console */
   console.error('Xvfb exited early', code);
   console.error('XVFB STDOUT:', xvfbStdout);
   console.error('XVFB STDERR:', xvfbStderr);
   process.exit(1);
+  /* eslint-enable no-console */
 });
 
 // For each of the URLs
@@ -69,7 +70,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     // Filter common errors
     if (stderr) {
       stderr = stderr.split(/\n/g).filter(function removeCommon (line) {
-        // jscs:disable maximumLineLength
+        /* eslint-disable max-len */
         // [2204:1122/064340:ERROR:process_singleton_linux.cc(264)] Failed to create /home/vagrant/.config/twolfson-screenshot/SingletonLock: File exists
         // Xlib:  extension "RANDR" missing on display ":99".
         // [2741:1122/064416:INFO:CONSOLE(1)] ""process.mainModule.filename: /vagrant/test/perceptual-tests/node-webkit_scripts/index.html"", source: process_main (1)
@@ -79,7 +80,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
         // [2355:1122/072609:WARNING:simple_index_file.cc(337)] Could not map Simple Index file.
         // [13908:1122/080439:ERROR:browser_main_loop.cc(162)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
         // [13908:1122/080439:WARNING:process_singleton_posix.cc(623)] Not handling interprocess notification as browser is shutting down
-        // jscs:enable
+        /* eslint-enable max-len */
         return !(line.match(/process_singleton_linux.cc|Xlib:  extension "RANDR"/) ||
           line.match(/process.mainModule.filename|connection.cc|web_data_service_backend.cc/) ||
           line.match(/nw_form_database_service.cc|simple_index_file.cc|browser_main_loop.cc/) ||
@@ -88,14 +89,17 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     }
 
     // If stderr or stdout exist, log them
+    /* eslint-disable no-console */
     if (stderr) { console.log('NODE-WEBKIT STDERR: ', stderr); }
     if (stdout) { console.log('NODE-WEBKIT STDOUT: ', stdout); }
+    /* eslint-enable no-console */
 
     // If there is an error, callback with it
     if (err) { return done(err); }
 
     // TODO: Emit an event instead
     // Notify the user that we have screenshotted successfully
+    // eslint-disable-next-line no-console
     console.log('Successfully screenshotted ' + url);
 
     imageDiff({
@@ -122,6 +126,7 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
     server.destroy(function handleServerExit () {
       // If there was an error, log it and leave
       if (err) {
+        // eslint-disable-next-line no-console
         console.error('SERVER-DESTROY ERROR: ', err);
         return process.exit(1);
       }
@@ -134,11 +139,13 @@ async.mapLimit(urls, 2, function comparePages (pathname, done) {
       // If there were failures, log them and leave
       if (failedResults.length > 0) {
         failedResults.forEach(function (result) {
+          // eslint-disable-next-line no-console
           console.log('Failed result for ' + result.url);
         });
         process.exit(1);
       } else {
       // Otherwise, exit gracefully
+        // eslint-disable-next-line no-console
         console.log('All done!');
         process.exit(0);
       }
