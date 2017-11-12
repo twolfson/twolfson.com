@@ -19,25 +19,25 @@ block content
         = " by donating via one of the methods below:"
   .container__row.flexbox.push--bottom
     .flexbox__item.width2
-      img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Bitcoin logo")
-      = " Bitcoin"
-    .flexbox__item.width10
-      pre.flush--bottom
-        code.no-highlight= supportUrls.bitcoin
-  .container__row.flexbox.push--bottom
-    .flexbox__item.width2
       img.valign--text-bottom(src="/public/images/support/patreon.png", alt="Patreon logo")
       = " Patreon"
     .flexbox__item.width10
       a(href=supportUrls.patreon)
         button.btn.btn--medium Send donation via Patreon
-  .container__row.flexbox.push-double--bottom
+  .container__row.flexbox.push--bottom
     .flexbox__item.width2
       img.valign--text-bottom(src="/public/images/support/paypal.png", alt="PayPal logo")
       = " PayPal"
     .flexbox__item.width10
       a(href=supportUrls.paypal)
         button.btn.btn--medium Send donation via PayPal
+  .container__row.flexbox.push-double--bottom
+    .flexbox__item.width2
+      img.valign--text-bottom(src="/public/images/support/bitcoin.png", alt="Bitcoin logo")
+      = " Bitcoin"
+    .flexbox__item.width10
+      pre.flush--bottom
+        code.no-highlight= supportUrls.bitcoin
   .container__row.push--bottom
     .width12
       p
