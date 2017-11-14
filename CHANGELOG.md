@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.111.1 - Replaced Gratipay with support me page
+
 3.111.0 - Shifted content order on `/support-me`
 
 3.110.0 - Moved from `twolfson-style` to `eslint`
