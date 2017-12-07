@@ -115,31 +115,31 @@ Additionally, we can define our projection unit vector using <b><i>d</i></b>:
 ## Step 2: Restructure dot product
 To make our final derivation easier, we're going to restructure the dot product a little. First, let's start by writing out more knowns:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisUnit-equals-axis-over-axisLength.tex.png)
 <br/>
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjection-equals-axisProjectionUnit-times-axisProjectionLength.tex.png)
 <br/>
 <small><i>Definition of unit vectors</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisDotOffshoot-equals-axisLength-times-offshootLength-times-cosTheta.tex.png)
 <br/>
 <small><i>Dot product derivation from <http://heaveninthebackyard.blogspot.com/2011/12/derivation-of-dot-product-formula.html></i></small>
 
 With these knowns, we restructure our axis projection vector as follows:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisDotOffshoot-equals-axisLength-times-offshootLength-times-cosTheta.tex.png)
 <br/>
 <small><i>Taken from knowns above</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-axisLength-times-offshootLength-times-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>Substitute cosine with equation from previous step</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-direction-times-axisLength-times-axisProjectionLength.tex.png)
 <br/>
 <small><i>Cancel out fractions</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjectionLength-equals-axisDotOffshoot-over-axisLength.tex.png)
 <br/>
 <small><i>Divide both sides by direction and axis vector length</i></small>
 
