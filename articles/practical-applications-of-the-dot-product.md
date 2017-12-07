@@ -177,25 +177,25 @@ This is practical for computing an angle between 2 vectors around a given axis i
 
 For the proof, we've already resolved this vector via our right triangle construction; it's the "opposite" edge (i.e. our green line). As a result, we can use vector addition to resolve our orthogonal vector:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/orthogonal__offshootVector-equals-axisProjectionVector-plus-axisComplementVector.tex.png)
 <br/>
 <small><i>Construction of our vector via its right triangle</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/orthogonal__axisComplementVector-equals-offshootVector-minus-axisProjectionVector.tex.png)
 <br/>
 <small><i>Subtraction and rearrangement of vectors</i></small>
 
 For some sanity, we can also think of our vector space with our axis as an actual axis:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/orthogonal__offshootVector-equals-cAxisUnitVector-plus-c2V2-plus-ellipsis-plus-cNVN.tex.png)
 <br/>
 <small><i>Definition of offshoot in terms of vectors</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/orthogonal__axisProjectionVector-equals-cAxisUnitVector-plus-0V2-plus-ellipsis-plus-0VN.tex.png)
 <br/>
 <small><i>Definition of axisProjection in terms of vectors</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/orthogonal__offshootVector-minus-axisProjectionVector-equals-0AxisUnitVector-plus-c2V2-plus-ellipsis-plus-cNVN.tex.png)
 <br/>
 <small><i>Subtraction of our definitions and proof of orthogonality</i></small>
 
