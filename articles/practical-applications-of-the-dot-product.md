@@ -144,29 +144,29 @@ With these knowns, we restructure our axis projection vector as follows:
 <small><i>Divide both sides by direction and axis vector length</i></small>
 
 ## Step 3: Calculate projection vector
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjection-equals-axisProjectionUnit-times-axisProjectionLength.tex.png)
 <br/>
 <small><i>Taken from knowns above</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-direction-times-axisUnit-times-axisDotOffshoot-over-direction-times-axisLength.tex.png)
 <br/>
 <small><i>Substitute unit vectors and axis projection length from previous steps</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-axisUnit-times-axisDotOffshoot-over-axisLength.tex.png)
 <br/>
 <small><i>Cancel out directions</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-axis-over-axisLength-times-axisDotOffshoot-over-axisLength.tex.png)
 <br/>
 <small><i>Substitute unit vector definition</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__equals-axis-times-axisDotOffshoot-over-axisLengthSquared.tex.png)
 <br/>
 <small><i>Simplify formula to vector times a scalar</i></small>
 
 And there we go, we have our formula for a projection vector:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjection-equals-axis-times-axisDotOffshoot-over-axisLengthSquared.tex.png)
 
 # Finding the orthogonal component of a vector to another vector
 With the calculation above, we can derive an orthogonal component of a vector with respect to another vector
