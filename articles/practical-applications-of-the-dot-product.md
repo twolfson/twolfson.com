@@ -74,23 +74,23 @@ For our third scenario (-π ≤ θ < -π/2, π/2 < θ ≤ π), we will focus on 
 
 ![-π ≤ θ < -π/2, π/2 < θ ≤ π visualization again](/public/images/articles/practical-applications-of-the-dot-product/angle-greaterThan-halfPi.png)
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__cosPhi-equals-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>Cosine trigonometric identity for right triangles</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__phi-equals-pi-minus-theta.tex.png)
 <br/>
 <small><i>Definition of supplementary angles</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__cosPiMinusTheta-equals-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>Substitution of φ</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__negativeCosTheta-equals-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>Equivalence via cosine identities</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__cosTheta-equals-negative-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>Multiplication by -1</i></small>
 
@@ -98,17 +98,17 @@ For our -π ≤ θ < -π/2 case, we build a similar triangle and yield the same 
 
 Now that we've resolve cosine for each of our scenarios, we can consolidate them. If cos(θ) ≥ 0, then let <b><i>d = 1</i></b>. Otherwise, let <b><i>d = -1</i></b>. This allows us to restate:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__cosTheta-equals-direction-times-axisProjectionLength-over-offshootLength.tex.png)
 <br/>
 <small><i>New cosine definition with direction</i></small>
 
 Additionally, we can define our projection unit vector using <b><i>d</i></b>:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjection-equals-piecewise.tex.png)
 <br/>
 <small><i>Piece-wise axis projection unit vector definition</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjectionUnit-equals-direciton-times-axisUnit.tex.png)
 <br/>
 <small><i>Direction based axis projection unit vector definition</i></small>
 
