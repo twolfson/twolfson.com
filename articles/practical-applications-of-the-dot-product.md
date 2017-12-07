@@ -23,9 +23,7 @@ I recently started at Standard Cyborg where I've been ramping up on Computationa
 # Projecting a vector onto a vector
 Projecting a vector is one of the simpler practical things we can do with a dot product
 
-TODO: Update me to an embed
-
-https://codepen.io/twolfson/embed/preview/PJaqwg?default-tabs=js%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fmedium.com%2Fmedia%2Fe447ea96fc4b357baa2d984492a678fc%3FpostId%3Dc5503c2e454e&slug-hash=PJaqwg
+<iframe height="525" scrolling="no" title="Interactive demo of a projection vector" src="//codepen.io/twolfson/embed/PJaqwg/?height=525&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/twolfson/pen/PJaqwg/">Interactive demo of a projection vector</a> by Todd Wolfson (<a href="https://codepen.io/twolfson">@twolfson</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
 
 Below is a proof explaining how the demo works. After that is a few shorter related demos and proofs.
 
@@ -173,8 +171,7 @@ And there we go, we have our formula for a projection vector:
 # Finding the orthogonal component of a vector to another vector
 With the calculation above, we can derive an orthogonal component of a vector with respect to another vector
 
-TODO: Convert to embed
-https://codepen.io/twolfson/embed/preview/MEXaEq?default-tabs=js%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fmedium.com%2Fmedia%2Fee573941d297cceb9fb992c4d971594a%3FpostId%3Dc5503c2e454e&slug-hash=MEXaEq
+<iframe height="525" scrolling="no" title="Interactive demo of an orthogonal vector" src="//codepen.io/twolfson/embed/MEXaEq/?height=525&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/twolfson/pen/MEXaEq/">Interactive demo of an orthogonal vector</a> by Todd Wolfson (<a href="https://codepen.io/twolfson">@twolfson</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
 
 This is practical for computing an angle between 2 vectors around a given axis in 3 dimensional space (e.g. rotation around a fixed axis).
 
@@ -203,8 +200,7 @@ For some sanity, we can also think of our vector space with our axis as an actua
 <small><i>Subtraction of our definitions and proof of orthogonality</i></small>
 
 # Finding the shortest distance from a point to a segment
-TODO: Convert to embed
-https://codepen.io/twolfson/embed/preview/MEMZrR?default-tabs=js%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fmedium.com%2Fmedia%2Fb29189a9429ef1211dc3568629b9841e%3FpostId%3Dc5503c2e454e&slug-hash=MEMZrR
+<iframe height="525" scrolling="no" title="Interactive demo of distance to segment" src="//codepen.io/twolfson/embed/MEMZrR/?height=525&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/twolfson/pen/MEMZrR/">Interactive demo of distance to segment</a> by Todd Wolfson (<a href="https://codepen.io/twolfson">@twolfson</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
 
 For this proof, we will solve it in a piece-wise fashion. There are 3 scenarios:
 
