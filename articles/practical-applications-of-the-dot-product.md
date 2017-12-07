@@ -204,15 +204,15 @@ For some sanity, we can also think of our vector space with our axis as an actua
 
 For this proof, we will solve it in a piece-wise fashion. There are 3 scenarios:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of distance behind segment](/public/images/articles/practical-applications-of-the-dot-product/distance-behind.png)
 <br/>
 <small><i>Our point is "behind" our segment</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of distance between segment](/public/images/articles/practical-applications-of-the-dot-product/distance-between.png)
 <br/>
 <small><i>Our point is "between" our segment</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of distance ahead of segment](/public/images/articles/practical-applications-of-the-dot-product/distance-ahead.png)
 <br/>
 <small><i>Our point is "ahead of" our segment</i></small>
 
@@ -220,19 +220,19 @@ In the "behind" and "ahead of" scenarios, the shortest distance will be to the c
 
 To determine which of these scenarios our point falls into, we find the projection vector and compare it to our segment as a vector. We simplify this a little so it's a comparison between their scalars, not their vectors
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of projection behind segment](/public/images/articles/practical-applications-of-the-dot-product/projection-behind.png)
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of projection between segment](/public/images/articles/practical-applications-of-the-dot-product/projection-between.png)
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Diagram of projection ahead of segment](/public/images/articles/practical-applications-of-the-dot-product/projection-ahead.png)
 
 Equations:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/projection__axisProjection-equals-axis-times-axisDotOffshoot-over-axisLengthSquared.tex.png)
 <br/>
 <small><i>Previous resolution from "Projecting a vector onto a vector"</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__ratio-equals-axisDotOffshoot-over-axisLengthSquared.tex.png)
 <br/>
 <small><i>Ratio between axis projection and axis vectors</i></small>
 
@@ -240,35 +240,35 @@ This ratio tells us how much of our offshoot vector is projecting onto our axis.
 
 If the ratio is negative, then we know the point is "behind" our segment and our length is the distance from our "orange" point to "green" point:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-orangeGreenLength.tex.png)
 
 Otherwise if the ratio is greater than 1, then we know our projection vector is longer than the axis vector itself. Thus, the point is "ahead" of our segment and our length is the distance from our "blue" point to our "green" point:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-blueGreenLength.tex.png)
 
 Otherwise, the ratio is between 0 and 1 inclusively, so our projection vector falls onto the segment. Thus, the shortest distance is a line perpendicular to the line. We've calculated this before via the orthogonal component of a vector:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-offshootComplementLength.tex.png)
 <br/>
 <small><i>Ideal length definition</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-offshoot-minus-axisProjection-length.tex.png)
 <br/>
 <small><i>Vector addition expansion</i></small>
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-offshoot-minus-axisVector-times-axisDotOffshot-over-axisVectorLengthSquared-length.tex.png)
 <br/>
 <small><i>Substitution for axis projection calculation</i></small>
 
 We can shorten this a little bit with some variable reuse:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-offshoot-minus-axisVector-times-ratio-length.tex.png)
 <br/>
 <small><i>Substitution for ratio calculated above</i></small>
 
 Here's our final solution in a piece-wise format:
 
-![TODO: Update image](/public/images/articles/practical-applications-of-the-dot-product/axis-offshoot-triangle.png)
+![Piece-wise solution for shortest distance](/public/images/articles/practical-applications-of-the-dot-product/shortest__length-equals-piecewise.tex.png)
 
 # Links
 - Robust proof, KaTeX equations, and screenshots: <https://gist.github.com/twolfson/207556d7ac0cd5d04fa283f6062841ab>
