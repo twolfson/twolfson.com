@@ -1,3 +1,4 @@
+/* eslint-disable */
 function Player(script, scriptDir)
 {
     var that = this;

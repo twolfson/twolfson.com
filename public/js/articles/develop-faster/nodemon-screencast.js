@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
 "width" : 930,
 "height" : 612,

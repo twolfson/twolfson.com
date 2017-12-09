@@ -1,3 +1,4 @@
+/* eslint-disable */
 var hljs = new function() {
         function l(o) {
             return o.replace(/&/gm, "&amp;").replace(/</gm, "&lt;").replace(/>/gm, "&gt;")

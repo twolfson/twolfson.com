@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*!
  * Release: 1.3.1 2009-04-26
  */

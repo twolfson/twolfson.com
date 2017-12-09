@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * this plugin adds support for IE < 9, Safari < 5, and Firefox < 3.6
  *

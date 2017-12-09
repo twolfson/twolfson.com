@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*!
   * domready (c) Dustin Diaz 2012 - License MIT
   */

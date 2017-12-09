@@ -33,7 +33,7 @@
     "build": "gulp build-clean && gulp build",
     "develop": "gulp build-clean && gulp develop",
     "precheck": "eslint bin/ config/ docs/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js",
-    "lint": "eslint bin/ config/ docs/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js --max-warnings 0",
+    "lint": "eslint bin/ config/ docs/ public/js/ server/ test/integration-tests/ test/perceptual-tests/ test/production-tests/ test/utils/ *.js --max-warnings 0",
     "postinstall": "bin/decrypt-config.sh && npm run build",
     "start": "bin/twolfson.com",
     "test": "npm run precheck && npm run test-integration && npm run lint",
