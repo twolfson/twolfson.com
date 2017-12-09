@@ -5,6 +5,9 @@ var hljs = require('./highlight');
 require('./gator');
 require('./gator-legacy');
 
+// Expose `domready` for usage via `?grid`
+window.domready = domready;
+
 // Define window level error generators for testing Sentry
 window.errorGenerators = {
   // Test via: setTimeout(function () { errorGenerators.syncError(); }, 100);
