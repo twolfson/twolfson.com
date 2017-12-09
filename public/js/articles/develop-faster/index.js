@@ -18,18 +18,22 @@ domready(function () {
   document.getElementById('grunt-screencast').appendChild(gruntScreencastPlayer.element);
   gruntScreencastPlayer.start();
 
+  // eslint-disable-next-line max-len
   var nodemonScreencastPlayer = new Player(nodemonScreencast, 'public/images/articles/develop-faster/nodemon-screencast/');
   document.getElementById('nodemon-screencast').appendChild(nodemonScreencastPlayer.element);
   nodemonScreencastPlayer.start();
 
+  // eslint-disable-next-line max-len
   var livereloadScreencastPlayer = new Player(livereloadScreencast, 'public/images/articles/develop-faster/livereload-screencast/');
   document.getElementById('livereload-screencast').appendChild(livereloadScreencastPlayer.element);
   livereloadScreencastPlayer.start();
 
+  // eslint-disable-next-line max-len
   var watchScreencastPlayer = new Player(watchScreencast, 'public/images/articles/develop-faster/watch-screencast/');
   document.getElementById('watch-screencast').appendChild(watchScreencastPlayer.element);
   watchScreencastPlayer.start();
 
+  // eslint-disable-next-line max-len
   var autocorrectScreencastPlayer = new Player(autocorrectScreencast, 'public/images/articles/develop-faster/autocorrect-screencast/');
   document.getElementById('autocorrect-screencast').appendChild(autocorrectScreencastPlayer.element);
   autocorrectScreencastPlayer.start();

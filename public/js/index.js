@@ -27,6 +27,7 @@ window.errorGenerators = {
 domready(function () {
   // Track all link clicks
   // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+  // eslint-disable-next-line new-cap
   window.Gator(document).on('click', 'a', function (e) {
     window.ga('send', {
       hitType: 'event',
