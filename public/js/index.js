@@ -2,8 +2,8 @@
 var domready = require('./ready');
 var hljs = require('./highlight');
 // DEV: Gator exposes itself to window
-void require('./gator');
-void require('./gator-legacy');
+require('./gator');
+require('./gator-legacy');
 
 // Define window level error generators for testing Sentry
 window.errorGenerators = {
@@ -41,7 +41,7 @@ domready(function () {
   var $codeArr = document.getElementsByTagName('code');
   var i = 0;
   var len = $codeArr.length;
-  for (; i < len; i++) {
+  for (; i < len; i += 1) {
     // Highlight the code block
     var code = $codeArr[i];
     if (code.parentNode) {
