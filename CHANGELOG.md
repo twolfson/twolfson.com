@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.113.0 - Upgraded to `marked@0.3.9` to resolve vulnerability
+
 3.112.0 - Fixed broken `/?grid` support
 
 3.111.1 - Replaced Gratipay with support me page
