@@ -108,52 +108,54 @@ As our reference, here's my targeted resume and cover letter for Sentry:
 
 ![Cover letter, written from the heart](#TODO)
 
-TODO: Resume from here...
-
 So how do we build this? First off, I pick the best layout for the resume. For me, I want to show my design knowledge so I use a typographic grid. For someone in a non-design related profession, then a traditional layout might work better.
 
-Next, I build a generic resume that best summarizes my skill set (e.g. one to would send to a reverse job board). Then, for each listing, I add/swap/remove content to best fit the position. I use the listing itself and StackShare to find what's relevant. To make this easier, I have a long list of swappable items for each section of the resume:
-Snippet of resume terms/repo list
+Next, I build a generic resume that best summarizes my skill set (e.g. one to would send to a reverse job board). Then, for each listing, I add/swap/remove content to best fit the position. I use the listing itself and [StackShare](https://stackshare.io/) to find what's relevant. To make this easier, I have a long list of swappable items for each section of the resume:
+
+![Snippet of resume terms/repo list](#TODO)
 
 With respect to cover letters, the intro/outro stay relatively consistent but the sections in between are written from scratch each time (e.g. Python experience, open source experience) as every company/job is different.
 
-Be sure to save your resume and cover letter somewhere (feature pending in Find Work) so you have a point of reference in the next stage.
+Be sure to save your resume and cover letter somewhere (feature pending in [Find Work](https://findwork.co/)) so you have a point of reference in the next stage.
 
-After the cover letter and resume are completed, submit them and set a reminder to follow up in 1 week. Sometimes, an application slips through the cracks and this helps the recruiter take a second look. If you're using Find Work, then the reminder will be set up automatically.
-Example application with follow up reminder
-Waiting for a response
+After the cover letter and resume are completed, submit them and set a reminder to follow up in 1 week. Sometimes, an application slips through the cracks and this helps the recruiter take a second look. If you're using [Find Work](https://findwork.co/), then the reminder will be set up automatically.
 
-Now comes the longest part of the job search, waiting. I typically will wait for 1 week before following up. Following up should only be done via email so it's limited to specific applications. We want to avoid things that will upset the recruiter (e.g. resubmitting the same application, contacting support).
+![Example application with follow up reminder](#TODO)
+
+# Waiting for a response
+Now comes the longest part of the job search, **waiting**. I typically will wait for 1 week before following up. Following up should only be done via email so it's limited to specific applications. We want to avoid things that will upset the recruiter (e.g. resubmitting the same application, contacting support).
 
 If I haven't heard back in a week and can't follow up, then I consider the application dead, archive it, and move on.
 
 I would recommend following up only once, maybe twice if you're super passionate about the company/role. After that, consider it dead.
-"Waiting…" poster, attribution: https://en.wikipedia.org/wiki/Waiting..._(film)
-Interviewing
-Phone screen
 
+!["Waiting…" poster, attribution: https://en.wikipedia.org/wiki/Waiting..._(film)](#TODO)
+
+# Interviewing
+## Phone screen
 We have received an email back from the company! Typically, this starts with a phone screen with a recruiter or person in your department-to-be.
 
 This step can be a little technical but is mostly to verify you are interested in working with the company and fit the role.
 
 After the interview is scheduled, I do the following:
 
-    Write a list of questions to ask during the call (e.g. department ratios — engineering vs sales, open source policy, any red flags like funding)
-    Set up a pre-interview reminder to review my notes, cover letter, resume, and the listing before the call
-    Set up a post-interview reminder to record notes from the interview
+- Write a list of questions to ask during the call (e.g. department ratios — engineering vs sales, open source policy, any red flags like funding)
+- Set up a pre-interview reminder to review my notes, cover letter, resume, and the listing before the call
+- Set up a post-interview reminder to record notes from the interview
 
-Find Work manages the reminders along side the interview information keeping everything consolidated.
-Example interview and its reminders
-Following up again
+[Find Work](https://findwork.co/) manages the reminders along side the interview information keeping everything consolidated.
 
+![Example interview and its reminders](#TODO)
+
+## Following up again
 After each interview stage, there's a possibility that you won't hear back from the recruiter for a bit. Use the same 7 day guidelines as before — thankfully you have an email to reach out to this time 👍
-Code challenge, technical video call, etc
 
+## Code challenge, technical video call, etc
 Every interview process varies from company to company. Sometimes there's a coding challenge, sometimes there's no technical video call, sometimes there's 1, sometimes there's 2, sometimes there's nothing.
 
 The rule of thumb is the same — reminder before for preparation/reviewing notes, reminder after for updating notes, follow up in 7 days.
-On-site interview
 
+## On-site interview
 This is the final stage of interviewing. You'll visit the job's location and interview with the team there. This is to get as close as possible to what it'll be like when you work there.
 
 If you don't live in the city where the job is located, then you'll typically be asked to fly out.
@@ -161,21 +163,23 @@ If you don't live in the city where the job is located, then you'll typically be
 Once again, as with every other stage, reminder before for preparation, reminder after for taking notes, follow up in 7 days.
 
 Additionally, it might be good to think of what you'll expect to be asked (e.g. salary, theoretical technical questions).
-Rejection
 
+## Rejection
 At any stage of interviewing, you can be turned down to proceeding further. Don't take it too personally, try to identify why/what went wrong, and learn from it (e.g. not prepared, bad technical fit).
 
 I've been rejected from applications (e.g. Khan Academy, Stripe, HackerOne), everyone has been rejected from applications.
 
-See: http://rejected.us/
-Receiving an offer
+See: <http://rejected.us/>
 
+## Receiving an offer
 Congratulations!!! 🎉🎆🎊 You've got an offer! Now it's time to weigh your options and make a decision:
 
-    If there are other applications near the end that you want to see through, then do that
-    Don't hold onto applications for too long — nobody likes to be teased only to be unsatisfied. There are likely other candidates that they want to extend offers to
-    Counter-offer and bounce offers off each other if that's your thing (I hate it but do it and consider it a necessary evil)
+- If there are other applications near the end that you want to see through, then do that
+- Don't hold onto applications for too long — nobody likes to be teased only to be unsatisfied. There are likely other candidates that they want to extend offers to
+- Counter-offer and bounce offers off each other if that's your thing (I hate it but do it and consider it a necessary evil)
 
 Best of luck at your new job!
-Attribution: Ron Paul It's Happening meme
-Looking for work? Manage your job search and research companies via Find Work!
+
+![Attribution: Ron Paul It's Happening meme](#TODO)
+
+[Looking for work? Manage your job search and research companies via Find Work!](https://findwork.co/)
