@@ -14,7 +14,7 @@ This article was originally published on Medium:
 
 I recently started at Standard Cyborg where I've been ramping up on Computational Geometry. I've started diving into our lower level source code to see how it ticks. This post documents my learnings about the dot product.
 
-# What we'll cover:
+# What we'll cover
 
 - Projecting a vector onto a vector
 - Finding the orthogonal component of a vector to another vector
