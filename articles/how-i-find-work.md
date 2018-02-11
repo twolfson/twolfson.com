@@ -14,7 +14,9 @@ This article was originally published on Medium:
 
 Everyone's job search is different but I think some insight can be gained (especially for new grads) from sharing our approaches. This article will document my job search from start to finish.
 
-![Attribution: http://knowyourmeme.com/memes/i-should-buy-a-boat-cat](#TODO)
+![Cat thinking "I should start a job search"](/public/images/articles/how-i-find-work/i-should-start-a-job-search-cat.png)
+
+*Attribution: <http://knowyourmeme.com/memes/i-should-buy-a-boat-cat>*
 
 # Context
 Before we can get to the first step, we need to establish what I'm looking for.
@@ -31,7 +33,9 @@ For those unfamiliar with the "Technology" section, consider it like:
 
 - Relevance: Opportunities should include animals I'm familiar with (e.g. 3 popular animals I've worked with before)
 
-![Closest meme I could find](#TODO)
+![Firefox has encountered a problem with Windows meme](/public/images/articles/how-i-find-work/firefox-windows.jpg)
+
+*Closest meme I could find*
 
 # Finding job listings
 Next up, we are going to find and save job listings that we think are a fit. It's best to save them in a single location (e.g. text document, [Find Work][save-for-later]) as these steps can take a while and be exhausting to do all at once.
@@ -39,16 +43,22 @@ Next up, we are going to find and save job listings that we think are a fit. It'
 [save-for-later]: https://findwork.co/add-application/save-for-later
 [Find Work]: https://findwork.co/
 
-![Example job listing, https://boards.greenhouse.io/figma/jobs/130875](#TODO)
+![Figma job posting on Greenhouse](/public/images/articles/how-i-find-work/figma-greenhouse.png)
 
-![Example saved listing in Find Work](#TODO)
+*Example job listing, <https://boards.greenhouse.io/figma/jobs/130875>*
+
+![Example saved listing in Find Work](/public/images/articles/how-i-find-work/figma-saved-for-later-empty.png)
+
+*Example saved listing in Find Work*
 
 In my experience, there are 3 ways to find listings:
 
 ## Direct
 Most companies have jobs/careers/etc links on their websites. I like to have a long list of companies I respect/would like to work with. Then, when I start my search I go through the list and see if I'm a good fit.
 
-![Snippet of my company list](#TODO)
+![Snippet of my company list](/public/images/articles/how-i-find-work/company-list-snippet.png)
+
+*Snippet of my company list*
 
 ## Job boards/Reverse job boards
 Similar to my company list in the "Direct" section, I have lists of job boards and reverse job boards. For the uninformed, I consider a reverse job board to be something like [Underdog.io][] where you submit your resume and companies contact you.
@@ -57,7 +67,9 @@ Similar to my company list in the "Direct" section, I have lists of job boards a
 
 I typically stick to startup focused and/or relevant technology focused job boards to remove unnecessary noise to sift through.
 
-![Selection from job boards list](#TODO)
+![Selection from job boards list](/public/images/articles/how-i-find-work/job-boards-list-snippet.png)
+
+*Selection from job boards list*
 
 ## Networking
 Over the course of a career (and maybe before it), we collect a network of people. This includes people we've worked with, recruiters/companies that have contacted us, and people we've met at events. As with the other sections, it helps if this data is aggregated (e.g. browse through contact list, email folder for people who contacted me).
@@ -139,7 +151,7 @@ This step can be a little technical but is mostly to verify you are interested i
 
 After the interview is scheduled, I do the following:
 
-- Write a list of questions to ask during the call (e.g. department ratios — engineering vs sales, open source policy, any red flags like funding)
+- Write a list of questions to ask during the call (e.g. department ratios -- engineering vs sales, open source policy, any red flags like funding)
 - Set up a pre-interview reminder to review my notes, cover letter, resume, and the listing before the call
 - Set up a post-interview reminder to record notes from the interview
 
