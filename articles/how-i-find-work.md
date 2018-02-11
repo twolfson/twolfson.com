@@ -93,7 +93,9 @@ I [perform the research via Find Work][research-company] and save it on the appl
 
 [research-company]: https://findwork.co/research-company
 
-![Example application with saved research notes](#TODO)
+![Example application with saved research notes](/public/images/articles/how-i-find-work/figma-saved-for-later-full.png)
+
+*Example application with saved research notes*
 
 ## Equity explanation
 For those of you in/entering the startup world, money being raised is a good indicator of how a business is doing:
@@ -103,28 +105,34 @@ For those of you in/entering the startup world, money being raised is a good ind
 
 Companies get the best terms when they don't need to raise. Also, you should be aware that employees typically get non-preferred stock which means you can get screwed at IPO/acquisition so be sure to trust your company.
 
-**Example of a company with a great trajectory:**
+![Example of a company with a great trajectory](/public/images/articles/how-i-find-work/crunchbase-great.png)
 
-![Example of a company with a great trajectory](#TODO)
+*Example of a company with a great trajectory*
 
-**Example of a company with a potentially bad trajectory for non-investors, ask them about it:**
+![Example of a company with a potentially bad trajectory for non-investors, ask them about it](/public/images/articles/how-i-find-work/crunchbase-potentially-bad.png)
 
-![Example of a company with a potentially bad trajectory for non-investors, ask them about it](#TODO)
+*Example of a company with a potentially bad trajectory for non-investors, ask them about it*
 
 ## Submitting an application
 Next, we want to give our application the best shot at getting the foot in the door. This means we are going to cater/shape our resume as well as include a cover letter explaining why we are applying/our interest in the company.
 
 As our reference, here's my targeted resume and cover letter for Sentry:
 
-![Inspired by https://www.latextemplates.com/template/friggeri-resume-cv, maintained by hand in LibreOffice Draw](#TODO)
+![Resume](/public/images/articles/how-i-find-work/resume.png)
 
-![Cover letter, written from the heart](#TODO)
+*Inspired by <https://www.latextemplates.com/template/friggeri-resume-cv>, maintained by hand in LibreOffice Draw*
+
+![Cover letter](/public/images/articles/how-i-find-work/cover-letter.png)
+
+*Cover letter, written from the heart*
 
 So how do we build this? First off, I pick the best layout for the resume. For me, I want to show my design knowledge so I use a typographic grid. For someone in a non-design related profession, then a traditional layout might work better.
 
 Next, I build a generic resume that best summarizes my skill set (e.g. one to would send to a reverse job board). Then, for each listing, I add/swap/remove content to best fit the position. I use the listing itself and [StackShare](https://stackshare.io/) to find what's relevant. To make this easier, I have a long list of swappable items for each section of the resume:
 
-![Snippet of resume terms/repo list](#TODO)
+![Snippet of resume terms/repo list](/public/images/articles/how-i-find-work/resume-terms-repos-list-snippet.png)
+
+*Snippet of resume terms/repo list*
 
 With respect to cover letters, the intro/outro stay relatively consistent but the sections in between are written from scratch each time (e.g. Python experience, open source experience) as every company/job is different.
 
@@ -132,7 +140,9 @@ Be sure to save your resume and cover letter somewhere (feature pending in [Find
 
 After the cover letter and resume are completed, submit them and set a reminder to follow up in 1 week. Sometimes, an application slips through the cracks and this helps the recruiter take a second look. If you're using [Find Work](https://findwork.co/), then the reminder will be set up automatically.
 
-![Example application with follow up reminder](#TODO)
+![Example application with follow up reminder](/public/images/articles/how-i-find-work/figma-waiting-for-response.png)
+
+*Example application with follow up reminder*
 
 # Waiting for a response
 Now comes the longest part of the job search, **waiting**. I typically will wait for 1 week before following up. Following up should only be done via email so it's limited to specific applications. We want to avoid things that will upset the recruiter (e.g. resubmitting the same application, contacting support).
@@ -141,7 +151,9 @@ If I haven't heard back in a week and can't follow up, then I consider the appli
 
 I would recommend following up only once, maybe twice if you're super passionate about the company/role. After that, consider it dead.
 
-!["Waiting…" poster, attribution: https://en.wikipedia.org/wiki/Waiting..._(film)](#TODO)
+!["Waiting…" poster](/public/images/articles/how-i-find-work/waiting-poster.jpg)
+
+*"Waiting…" poster, attribution: <https://en.wikipedia.org/wiki/Waiting..._(film)>*
 
 # Interviewing
 ## Phone screen
@@ -157,7 +169,9 @@ After the interview is scheduled, I do the following:
 
 [Find Work](https://findwork.co/) manages the reminders along side the interview information keeping everything consolidated.
 
-![Example interview and its reminders](#TODO)
+![Example interview and its reminders](/public/images/articles/how-i-find-work/example-interview.png)
+
+*Example interview and its reminders*
 
 ## Following up again
 After each interview stage, there's a possibility that you won't hear back from the recruiter for a bit. Use the same 7 day guidelines as before — thankfully you have an email to reach out to this time 👍
@@ -192,6 +206,8 @@ Congratulations!!! 🎉🎆🎊 You've got an offer! Now it's time to weigh your
 
 Best of luck at your new job!
 
-![Attribution: Ron Paul It's Happening meme](#TODO)
+![It's happening meme](/public/images/articles/how-i-find-work/its-happening.gif)
 
-[Looking for work? Manage your job search and research companies via Find Work!](https://findwork.co/)
+*Attribution: Ron Paul It's Happening meme*
+
+# [Looking for work? Manage your job search and research companies via Find Work!](https://findwork.co/)
