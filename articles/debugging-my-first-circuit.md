@@ -19,7 +19,7 @@ If you've never done electronics before, SparkFun is a great resource. This vide
 ## 2017/10/11
 The first step was isolating the problem. The EL wire I have is 1 circuit + battery holder and 1 wire which clips in.
 
-TODO: Add image with pointers to different halves
+![EL wire setup](/public/images/articles/debugging-my-first-circuit/el-wire-annotated.jpg)
 
 I took 1 broken blue set and 1 working red set and tried different mix and match combinations.
 
@@ -47,7 +47,7 @@ I couldn't figure out what was wrong
 
 Then, I decided to connect to the button's solder points (I guess it must have been at the start/end of the circuit)
 
-TODO: Add image of circuit (prob desoldered version is fine)
+![Annotated circuit](/public/images/articles/debugging-my-first-circuit/circuit-annotated.jpg)
 
 Ah ha! It looks like the red circuit's button is continuous most of the time whereas blue's only activates when pushes in a very specific corner
 
@@ -70,7 +70,7 @@ As a result, I:
 
 It worked!!
 
-TODO: Add video here (maybe Imgur gifv)
+<div style="position:relative;padding-bottom:54%;margin-bottom:1em;"><iframe src="https://gfycat.com/ifr/AngelicJealousCurassow" frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0" allowfullscreen></iframe></div>
 
 For double sanity, we hooked up the button to the mutlimeter and confirmed it was still spotty
 
@@ -133,4 +133,4 @@ The following is directly from my notes:
 - Connected to EL wire
 - IT FUCKING WORKS!!
 
-TODO: Add final image
+![EL wire working](/public/images/articles/debugging-my-first-circuit/el-wire-working.jpg)
