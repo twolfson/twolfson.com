@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.116.0 - Wrote "Debugging my first circuit" article
+
 3.115.0 - Wrote "Back in San Francisco" article
 
 3.114.0 - Copied "How I Find Work" and "Practical applications of the dot product" from Medium
