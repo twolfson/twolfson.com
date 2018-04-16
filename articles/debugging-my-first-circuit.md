@@ -3,16 +3,15 @@
   "author": "Todd Wolfson",
   "date": "2018-04-07T19:15:14-0500",
   "keywords": "debugging, circuit, electronics",
-  "summary": "I debugged a EL wire circuit and fixed the broken part"
+  "summary": "My journey debugging and fixing a EL wire circuit"
 }
 
 I've been slowly picking up electronics over the past year. At this year's Burning Man, 3 out of 5 EL wires broke on me. This time, instead of e-cycling them, I decided to use it as a learning opportunity.
 
-If you've never done electronics before, SparkFun is a great resource. This video got me back into it (like me learning about [Firebug][] for the first time) and the rest of their lessons are great:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SLkPtmnglOI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<https://learn.sparkfun.com/tutorials/tags/concepts>
+> If you've never done electronics before, SparkFun is a great resource. This video got me into it by finally understanding how to debug (like me learning about [Firebug][] for the first time):
+> <br/>
+> <br/>
+> <iframe width="560" height="315" src="https://www.youtube.com/embed/SLkPtmnglOI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 [Firebug]: https://getfirebug.com/
 
@@ -21,41 +20,43 @@ The first step was isolating the problem. The EL wire I have is 1 circuit + batt
 
 ![EL wire setup](/public/images/articles/debugging-my-first-circuit/el-wire-annotated.jpg)
 
-I took 1 broken blue set and 1 working red set and tried different mix and match combinations.
+I took 1 broken blue set and 1 working red set and tried different mix and match combinations:
 
 - Red wire + red circuit - WORKS
 - Blue wire + red circuit - WORKS
 - Red wire + blue circuit - FAILURE
 - Blue wire + blue circuit - FAILURE
 
-That made it definitively that something in the blue circuit was broken. Maybe it was the batteries so I double checked
+That made it definitive that something in the blue circuit/batteries was broken. It was possible it was the batteries so I double checked:
 
 - Blue circuit + blue batteries - FAILURE
 - Red circuit + blue batteries - WORKS
 
-Yep, definitely the blue circuit
+Okay, now it's definitely the circuit
 
 -----------------------
 
 Next, we wanted to keep on isolating the problem. We opened up both of the circuits and visually inspected them
 
-There were no visually broken capacitors (I had learned about this being a common problem in LCD/LED screens) so maybe it's a connectivity issue
+There were no visually broken capacitors so maybe it was connectivity issue
 
-I connected a multimeter to the ground terminal of where the circuit would be. Then poke around with the positive terminal on the rest of the board, everything seemed connected on both boards
+I connected a multimeter to the ground terminal of where the circuit would be. Then poked around with the positive terminal on the rest of the board
+
+Everything seemed connected on both boards
 
 I couldn't figure out what was wrong
 
-Then, I decided to connect to the button's solder points (I guess it must have been at the start/end of the circuit)
+Then, I decided to connect to the button's solder points
 
 ![Annotated circuit](/public/images/articles/debugging-my-first-circuit/circuit-annotated.jpg)
 
-Ah ha! It looks like the red circuit's button is continuous most of the time whereas blue's only activates when pushes in a very specific corner
+Ah ha! It looked like the red circuit's button worked in any direction whereas blue's button only activated when pushed in a very specific corner
 
-I put it back together and pushed the blue button in a specific corner and it worked!
+I put the blue circuit back together and pushed the blue button in its specific corner and it worked!
 
-So the problem is the broken button
+So the problem was most likely the broken button
 
-I had only soldered once before this point and that was for jumper headers so I was taking things slow
+I had only soldered once before this point and that was for jumper headers so I was taking things slow and stopped for the night
 
 ## 2017/10/22
 The idea I had to verify the button truly was the problem was to replace it with wires as a proof of concept
@@ -63,27 +64,27 @@ The idea I had to verify the button truly was the problem was to replace it with
 As a result, I:
 
 - Verified wires would fit through button's casing hole
-- Desoldered button
+- Desoldered the button
 - Soldered in wires
-- Reconstructured chassis (so we could add batteries/power)
+- Reconstructured the chassis (so we could add batteries/power -- we don't have a power supply)
 - Touched wires together
 
 It worked!!
 
 <div style="position:relative;padding-bottom:54%;margin-bottom:1em;"><iframe src="https://gfycat.com/ifr/AngelicJealousCurassow" frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0" allowfullscreen></iframe></div>
 
-For double sanity, we hooked up the button to the mutlimeter and confirmed it was still spotty
+For double sanity, we hooked up the button to the mutlimeter and confirmed it only worked in the specific corner
 
 ## Some time between 2017/10/22 and 2017/12/20
 Now that the issue was identified, we decided to order replacement buttons
 
-However, clearly this wasn't going to future proof the items for it happening again
+However, clearly this wasn't going to future proof the device from it breaking again
 
 At the time, I thought the issue was the buttons being too tall so my solution was to buy a shorter button, hot glue it to the top of the case, and run wires to the PCB's holes
 
 I'm still a little doubtful that that was the problem (e.g. could have been dust from Burning Man getting into the button's internal circuits)
 
-So I might wind up taking even more precautions in the future (e.g. taping over button's hole)
+So I might wind up taking even more precautions in the future (e.g. taping over the button's hole)
 
 Anyway, at this point I bought momentary buttons to get started
 
@@ -98,11 +99,11 @@ I verified its connectivity afterwards (e.g. heat could damage circuit)
 Don't worry, I still went out on NYE ;)
 
 # 2018/02/14
-Delay caused by wanting to buy a fume extractor and personal life
+Another delay, this one was caused by wanting to buy a fume extractor and personal life
 
-Also purchased a new soldering iron for better temperature control (Hakko Fx888-D is wonderful). My old solder was a Weller with no knobs, only a plug for the wall outlet
+I also purchased a new soldering iron for better temperature control (Hakko Fx888-D is wonderful). My old solder was a Weller with no knobs, only a plug for the wall outlet
 
-Desoldered EL test wires
+After they arrived, I desoldered the EL test wires
 
 # 2018/02/19
 The following is directly from my notes:
