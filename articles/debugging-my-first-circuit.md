@@ -36,7 +36,7 @@ Okay, now it's definitely the circuit
 
 -----------------------
 
-Next, we wanted to keep on isolating the problem. We opened up both of the circuits and visually inspected them
+Next, I wanted to keep on isolating the problem. I opened up both of the circuits and visually inspected them
 
 There were no visually broken capacitors so maybe it was connectivity issue
 
@@ -66,17 +66,17 @@ As a result, I:
 - Verified wires would fit through button's casing hole
 - Desoldered the button
 - Soldered in wires
-- Reconstructured the chassis (so we could add batteries/power -- we don't have a power supply)
+- Reconstructured the chassis (so I could add batteries/power -- I don't have a power supply)
 - Touched wires together
 
 It worked!!
 
 <div style="position:relative;padding-bottom:54%;margin-bottom:1em;"><iframe src="https://gfycat.com/ifr/AngelicJealousCurassow" frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0" allowfullscreen></iframe></div>
 
-For double sanity, we hooked up the button to the mutlimeter and confirmed it only worked in the specific corner
+For double sanity, I hooked up the button to the multimeter and confirmed it only worked in the specific corner
 
 ## Some time between 2017/10/22 and 2017/12/20
-Now that the issue was identified, we decided to order replacement buttons
+Now that the issue was identified, I decided to order replacement buttons
 
 However, clearly this wasn't going to future proof the device from it breaking again
 
