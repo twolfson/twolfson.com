@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.117.0 - Wrote "Lantern wall" article
+
 3.116.0 - Wrote "Debugging my first circuit" article
 
 3.115.0 - Wrote "Back in San Francisco" article
