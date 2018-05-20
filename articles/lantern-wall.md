@@ -20,7 +20,7 @@ I finished making a lantern wall, here are photos of it in all its configuration
 
 ![Lanterns on, room lights off](/public/images/articles/lantern-wall/IMG_20180429_215220297.jpg)
 
-I built each circuit by hand (needed for size of lanterns) and wrote out plenty of notes. For further reading, please see the GitHub repo:
+I built each circuit by hand (due to size of smallest lanterns) and wrote out plenty of notes. For further reading, please see the GitHub repo:
 
 <https://github.com/twolfson/lantern-wall>
 
