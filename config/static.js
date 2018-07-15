@@ -10,9 +10,6 @@ exports.common = {
     title: 'Todd Wolfson - Software Engineer',
     url: 'http://twolfson.com/'
   },
-  // Resolve mail server based off of secret info
-  // {user: 'email@emai.com', password: 'password', host: 'smtp.server', ssl: true}
-  mail: secret.mail,
   // In development/testing, do not fetch new project info
   projectOptions: {
     updateImmediately: false,
@@ -32,11 +29,6 @@ exports.development = {
 
 exports.test = {
   googleAnalyticsId: null,
-  // In testing, use local mail server
-  mail: {
-    host: 'localhost',
-    port: 1338
-  },
   sentry: {
     browserDSN: null,
     serverDSN: null
