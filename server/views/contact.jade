@@ -11,36 +11,22 @@ block config
 
 block content
   #contact.push--bottom
-    form.hard--left(method="POST", action="/contact")
-      .container__row
-        .width12
-          h2.text--center.soft-half--top.flush--bottom Contact
-      .container__row
-        .width10.float--left
-          p To contact me, please enter your details below:
-          .flexbox.push--bottom
-            .flexbox__item.width2
-              label.text--right(for="name", required="required") Name:&nbsp;
-            .flexbox__item.width6
-              input#name.span7.flush--left(name="name", type="text")
-          .flexbox.push--bottom
-            .flexbox__item.width2
-              label.text--right(for="info", required="required") Contact info:&nbsp;
-            .flexbox__item.width6
-              input#info.span7.flush--left(name="info", type="text")
-          .flexbox.push--bottom
-            .flexbox__item.width2
-              label.text--right(for="message", required="required") Message:&nbsp;
-            .flexbox__item.width6
-              textarea#message.span7.flush--left(name="message", rows="3")
-        //- TODO: Did we never create anything better for grids? This is awful =(
-        .width2.float--left
-          .text--center
-            p
-              img(src="/public/images/todd.jpg", alt="Photograph of Todd Wolfson taken by A.J. Wax")
-              br
-              a(href="http://www.aaronwax.com/") Photograph taken by A.J. Wax
-      .container__row
-        .width12
-          .text--center
-            button#submitButton.btn.btn--huge(type="submit") Contact Todd
+    .container__row
+      .width12
+        h2.text--center.soft-half--top.flush--bottom Contact
+    .container__row
+      .width10.float--left
+        p You can contact me via the following methods:
+        p
+          = "Email: "
+          a(href="mailto:todd@twolfson.com") todd@twolfson.com
+        p
+          = "Twitter: "
+          a(href="https://twitter.com/twolfsn/") @twolfsn
+      //- TODO: Did we never create anything better for grids? This is awful =(
+      .width2.float--left
+        .text--center
+          p
+            img(src="/public/images/todd.jpg", alt="Photograph of Todd Wolfson taken by A.J. Wax")
+            br
+            a(href="http://www.aaronwax.com/") Photograph taken by A.J. Wax
