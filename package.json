@@ -48,7 +48,6 @@
     "async": "~0.2.9",
     "backbone": "~1.1.2",
     "commander": "~2.1.0",
-    "emailjs": "~1.0.8",
     "express": "~3.4.8",
     "jade": "~1.9.2",
     "jojo": "~3.0.1",
@@ -86,7 +85,6 @@
     "mocha": "~3.1.2",
     "rimraf": "~2.2.6",
     "shell-quote": "~1.4.1",
-    "simplesmtp": "~0.3.21",
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~3.9.0",
     "xml2js": "~0.4.1"

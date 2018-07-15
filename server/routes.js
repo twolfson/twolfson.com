@@ -45,7 +45,6 @@ exports.common = function (config) {
 
   // Contact pages
   router.get('/contact', controllers.contact.index(config));
-  router.post('/contact', express.urlencoded(), controllers.contact.submit(config));
 
   // Support me
   router.get('/support-me', controllers['support-me'](config));
@@ -76,10 +75,6 @@ exports.development = function (config) {
 
 exports.test = function (config) {
   var router = new express.Router();
-
-  // Host failure/success pages for screenshotting (and direct viewing in dev)
-  router.get('/contact/failure', controllers.contact.devFailure(config));
-  router.get('/contact/success', controllers.contact.devSuccess(config));
 
   // Host 500 page for screenshotting
   router.get('/500', controllers['error-handlers'][500]);
