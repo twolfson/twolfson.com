@@ -45,7 +45,6 @@ exports.common = function (config) {
 
   // Contact pages
   router.get('/contact', controllers.contact.index(config));
-  router.post('/contact', express.urlencoded(), controllers.contact.submit(config));
 
   // Support me
   router.get('/support-me', controllers['support-me'](config));
