@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.119.0 - Replaced contact form with links
+
 3.118.0 - Updated project stats
 
 3.117.0 - Wrote "Lantern wall" article
