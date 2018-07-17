@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.120.0 - Added status code check for projects
+
 3.119.1 - Fixed lint error
 
 3.119.0 - Replaced contact form with links
