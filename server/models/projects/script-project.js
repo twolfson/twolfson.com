@@ -45,6 +45,11 @@ var ScriptRepo = Project.extend({
       // If there is an error callback with it
       if (err) { return cb(err); }
 
+      // If the status code was bad, callback with it
+      if (res.statusCode !== 200) {
+        return cb(new Error('Expected status code 200 but got ' + res.statusCode + ', body: ' + JSON.stringify(body)));
+      }
+
       // Otherwise, callback with the data
       var retObj = {
         stars: body.watchers_count,
