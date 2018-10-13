@@ -6,13 +6,13 @@
   "summary": "Story of how I helped build a giant rainbow at Burning Man"
 }
 
-This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, and was walkable
+This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, was walkable, and had aerial performances
 
 Under construction:
 
 ![Construction photo](/public/images/articles/rainbow-bridge/40095734_1710639739065692_6692400749088866304_n.jpg)
 
-Attribution: https://www.facebook.com/TheRainbowBridgeProject/photos/a.1556837994445868/1710639725732360/?type=3&theater
+Attribution: https://www.facebook.com/TheRainbowBridgeProject/photos/a.1556837994445868/1710639725732360/
 
 Daytime:
 
@@ -20,12 +20,23 @@ Daytime:
 
 Attribution: https://www.instagram.com/p/BocI4BUFT71/
 
+Aerial performance:
+
+![Aerial performance](/public/images/articles/rainbow-bridge/40583624_712769255749003_3196954852134953032_n.jpg)
+
+Attribution: https://www.instagram.com/p/Bngxc_CDtxh/
+
 Nighttime:
 
 ![Nighttime photo](/public/images/articles/rainbow-bridge/43778758_296096544544453_2143317047685523622_n.jpg)
 
-Attribution: https://www.instagram.com/p/BowpzghFU_7/?taken-by=dudesaurs
+Attribution: https://www.instagram.com/p/BowpzghFU_7/
 
+Rainbow Bridge links:
+
+- Facebook: https://www.facebook.com/TheRainbowBridgeProject/
+- Instagram: https://www.instagram.com/rainbow_bridge_2018/
+- Organization: https://www.lookingup.art/
 
 > For those unfamiliar with Burning Man, it's a blank slate where people bring art and music to create a temporary city for 8 days
 >
