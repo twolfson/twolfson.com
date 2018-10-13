@@ -137,7 +137,7 @@ When I timed this all out, it took 3 hours per panel for the electronics only ha
 
 I could get into more detail about optoisolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
 
-We built 56 panels including 3 extra panels, 4 of the panels were different to handle the parts that met our footings
+Between late July and mid-August, we built 56 panels including 3 extra panels and excluding test/prototype panels. 4 of the panels were different to handle the parts that met our footings
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
