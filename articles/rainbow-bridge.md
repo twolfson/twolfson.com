@@ -6,8 +6,6 @@
   "summary": "Story of how I helped build a giant rainbow at Burning Man"
 }
 
-TODO: See TODOs
-
 This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, was walkable, and had aerial performances
 
 Under construction:
@@ -79,11 +77,12 @@ Back to motivations, the epiphany I had at this speed counseling event was that 
 
 One of these major fears being was lacking knowledge and practice with being handy
 
+# Timeline
 After getting back to San Francisco, I decided to properly address this. I had some EL wire that wasn't functioning properly. This was motivation enough to try to pick up electronics again for the nth time
 
 http://twolfson.com/2018-04-07-debugging-my-first-circuit
 
-Then in my dating life, someone told me about how Burning Man art projects are willing to teach you as long as you're willing to help. I was skeptical of said free lunch but I guessed I was giving free labor
+Then in my dating life, someone told me about how Burning Man art projects are willing to teach you as long as you're willing to help. I was skeptical of said free lunch but was willing to see how things went
 
 In March, I went to a Burning Man theme camp and art project meet and greet and signed up for a few volunteer lists
 
@@ -93,13 +92,52 @@ Then in June, I was contacted by both Rainbow Bridge and Chilopod, another art p
 
 I went over to Rainbow Bridge first but there wasn't much for me to do yet; the majority of the project was metalwork which I wasn't qualified for. That being said, there was a prototype panel which needed wiring and soldering so I jumped on that
 
-Rainbow Bridge felt low-touch for me at the time so I started helping out on the Chilopod which was wood fabrication. I added a lot of carpentry experience there: drills, impact drivers, circular saws, jigsaws, orbital sanders, and techniques (e.g. clamping with your body weight, proper weight/hold for drill/impact driver, accurate measurements over long distances)
+Rainbow Bridge felt low-touch for me at the time so I started helping out on the Chilopod as well. This was wood fabrication which I had a tiny bit of experience with but this added way more: drills, impact drivers, circular saws, jigsaws, orbital sanders, and techniques (e.g. clamping with your body weight, proper weight/hold for drill/impact driver, accurate measurements over long distances)
 
-Photos from Chilopod newsletter:
+Chilopod photo:
 
-TODO: Add photos
+![Chilopod photo](/public/images/articles/rainbow-bridge/41994134_264323287553653_732079108338483200_n.jpg)
 
-As time progressed, the Rainbow Bridge work also increased and I didn't have enough time for both projects so I went with Rainbow Bridge as it felt they were more lacking in volunteers
+Attribution: https://www.instagram.com/p/BodR1lLhbY-/
+
+Between June and mid-July, I helped on both the Rainbow Bridge and Chilopod. It became clear though that I didn't have enough time for both projects so I went with Rainbow Bridge as it felt they were more lacking in volunteers
+
+From June through July, I was assigned planing the architecture for the interactivity portion of the bridge; figuring out the architecture for how the inputs (e.g. MIDI keyboard, microphone) output sound and feed the data to our computers and sourcing said components for said architecture (i.e. look up inventory on websites, verify it meets specifications/will stand up to being in a brutal hot and dusty environment, add to itemized list for review/purchase). There was also some testing/tracking down of components in August but the majority was done earlier
+
+We had many iterations but the final architectural plan was:
+
+<img alt="Mixing board config architectural plan" src="/public/images/articles/rainbow-bridge/Mixing board config v4.1 (labeled).svg" />
+
+Additionally in mid July, we built more test panels so the software team had something to visualize against:
+
+![Test panels](/public/images/articles/rainbow-bridge/38538876_2146569958889877_2073293435195883520_n.jpg)
+
+Each panel is constructed as follows:
+
+- LED strands (50 LED WS2811s) are tested on a standalone PixLite
+- Plywood is CNC'd such that LEDs fit into holes
+- Plywood is primed and painted in even-odd stripe timings to avoid accidental bleed
+- LEDs are plugged into holes such that they sit at a specific depth
+    - This was done mostly by eyeballing
+    - Be sure to wear gloves here, you can easily get blisters otherwise
+    - Also don't overwork yourself, it can hurt your thumbs for a while
+    - Order of insertion
+        - ![Strand insertion](/public/images/articles/rainbow-bridge/panel led layout.jpg)
+- Busbars are fabricated with wires ending in 2 wire JST connectors to meet LED gaps to inject power
+    - Wire lengths depend on the wire they're targetting
+    - ![Busbars](/public/images/articles/rainbow-bridge/38779294_207537550117609_4061468216382193664_n.jpg)
+- Wires are then routed behind LED strands to reduce likelihood of snagging
+- Multimeter testing to verify there's no accidental continuity (some JST connectors were flipped, yey...)
+- Panel is connected to a test PixLite and power supply to verify it lights up with no issue
+- LEDs are adjusted to make sure they're optimally placed to emit maximum brightness (i.e. far enough through their hole)
+- Test PixLite is disconnected from panel
+- LEDs are caulked in place to avoid accidental falling out during transport
+
+When I timed this all out, it took 3 hours per panel for the electronics only half
+
+I could get into more detail about optoisolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
+
+We built 56 panels including 3 extra panels, 4 of the panels were different to handle the parts that met our footings
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
