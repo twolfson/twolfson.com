@@ -6,6 +6,9 @@
   "summary": "Story of how I helped build a giant rainbow at Burning Man"
 }
 
+TODO: See TODOs
+TODO: Update days of week to dates (e.g. Thu Aug XX)
+
 This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, was walkable, and had aerial performances
 
 Under construction:
@@ -37,12 +40,12 @@ Here's some more high level details:
 - 7 large trusses, acting as the backbone of the bridge (3 of 7 in this photo)
     - ![Trusses](/public/images/articles/rainbow-bridge/trusses.jpg)
     - Attribution: https://www.instagram.com/p/BmxXip0hp2d/
-- 2 sets of footings to hold it up
+- 2 sets of footings to hold it in place
     - ![Footings](/public/images/articles/rainbow-bridge/footings.jpg)
     - Attribution: https://www.facebook.com/TheRainbowBridgeProject/photos/a.1556837994445868/1708722955924037/
 - 2 railing pieces per truss
     - See trusses photo above
-- 4 panels per side of each railing
+- 4 panels per railing
     - See construction photo at top
 - 450 LEDs (9 50 LED strands) per panel
     - ![LED panels](/public/images/articles/rainbow-bridge/36705018_477236966052274_5892030668606537728_n.jpg)
@@ -78,7 +81,7 @@ Back to motivations, the epiphany I had at this speed counseling event was that 
 One of these major fears being was lacking knowledge and practice with being handy
 
 # Timeline
-After getting back to San Francisco, I decided to properly address this. I had some EL wire that wasn't functioning properly. This was motivation enough to try to pick up electronics again for the nth time
+After getting back to San Francisco, I decided to properly address my lack of knowledge. I had some EL wire that wasn't functioning properly. This was motivation enough to try to pick up electronics again for the nth time
 
 http://twolfson.com/2018-04-07-debugging-my-first-circuit
 
@@ -102,21 +105,25 @@ Attribution: https://www.instagram.com/p/BodR1lLhbY-/
 
 Between June and mid-July, I helped on both the Rainbow Bridge and Chilopod. It became clear though that I didn't have enough time for both projects so I went with Rainbow Bridge as it felt they were more lacking in volunteers
 
-From June through July, I was assigned planing the architecture for the interactivity portion of the bridge; figuring out the architecture for how the inputs (e.g. MIDI keyboard, microphone) output sound and feed the data to our computers and sourcing said components for said architecture (i.e. look up inventory on websites, verify it meets specifications/will stand up to being in a brutal hot and dusty environment, add to itemized list for review/purchase). There was also some testing/tracking down of components in August but the majority was done earlier
+From June through July, I was assigned to architect the interactivity portion of the bridge; figuring out the how we take inputs (e.g. MIDI keyboard, microphone), output sound, feeding the data to our computers, and sourcing said components for said architecture
 
 We had many iterations but the final architectural plan was:
 
 <img alt="Mixing board config architectural plan" src="/public/images/articles/rainbow-bridge/Mixing board config v4.1 (labeled).svg" />
 
-Additionally in mid July, we built more test panels so the software team had something to visualize against:
+Additionally in mid-July, we built more test panels so the software team had something to visualize against:
 
 ![Test panels](/public/images/articles/rainbow-bridge/38538876_2146569958889877_2073293435195883520_n.jpg)
 
 Each panel is constructed as follows:
 
-- LED strands (50 LED WS2811s) are tested on a standalone PixLite
+- LED strands (each has 50 WS2811 LEDs) are tested on a standalone PixLite
+    - PixLite is a product that allows for controlling over 12000 LEDs
+        - https://www.advateklights.com/pixlite-control/
 - Plywood is CNC'd such that LEDs fit into holes
 - Plywood is primed and painted in even-odd stripe timings to avoid accidental bleed
+- Overpainted LED holes are reamed to allow easier LED insertion
+- TODO: Wording from this point onward is reading in a different tone/phrase -- prob switch back to more documentative
 - LEDs are plugged into holes such that they sit at a specific depth
     - This was done mostly by eyeballing
     - Be sure to wear gloves here, you can easily get blisters otherwise
@@ -138,6 +145,15 @@ When I timed this all out, it took 3 hours per panel for the electronics only ha
 I could get into more detail about optoisolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
 
 Between late July and mid-August, we built 56 panels including 3 extra panels and excluding test/prototype panels. 4 of the panels were different to handle the parts that met our footings
+
+# Building the rainbow
+In mid-August, it was time to bring out the Rainbow and build it
+
+We got the flatbed on Thursday, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Saturday
+
+In addition to this, we rented a large U-Haul and hauled our generator with it
+TODO: Mention how generator was larger than we needed?
+TODO: Mention about how U-Haul worked well for cutting wood and staging other content in dust-free environment
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
