@@ -7,7 +7,6 @@
 }
 
 TODO: See TODOs
-TODO: Update days of week to dates (e.g. Thu Aug XX)
 
 This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, was walkable, and had aerial performances
 
@@ -50,10 +49,10 @@ Here's some more high level details:
 - 450 LEDs (9 50 LED strands) per panel
     - ![LED panels](/public/images/articles/rainbow-bridge/36705018_477236966052274_5892030668606537728_n.jpg)
     - Attribution: https://www.instagram.com/p/BlZiIu9ht7M/
-- 3 days to pack everything onto a 53' flatbed and into large U-Haul (Thursday - Saturday)
-- 2 days to drive to the desert (Sunday - Monday)
-- 5 days to assemble and erect bridge (Monday - Friday)
-- 4 more days to mount panels and fix electronics issues (Saturday - Tuesday)
+- 3 days to pack everything onto a 53' flatbed and into large U-Haul (Thu Aug 15 - Sat Aug 18)
+- 2 days to drive to the desert (Sun Aug 19 - Mon Aug 20)
+- 5 days to assemble and erect bridge (Mon Aug 20 - Fri Aug 24)
+- 4 more days to mount panels and fix electronics issues (Sat Aug 25 - Tue Aug 21)
 - 15 people in on-site build crew with assistance from HEaT (Heavy Equipment and Transpo crew at Burning Man)
 - Countless volunteers and hours leading up to that
 
@@ -147,13 +146,11 @@ I could get into more detail about optoisolators, creating spare pixels, dealing
 Between late July and mid-August, we built 56 panels including 3 extra panels and excluding test/prototype panels. 4 of the panels were different to handle the parts that met our footings
 
 # Building the rainbow
-In mid-August, it was time to bring out the Rainbow and build it
+In mid-August, it was time to bring out the Rainbow to Burning Man and build it
 
-We got the flatbed on Thursday, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Saturday
+We got the flatbed on Thu Aug 15, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Sat Aug 18
 
-In addition to this, we rented a large U-Haul and hauled our generator with it
-TODO: Mention how generator was larger than we needed?
-TODO: Mention about how U-Haul worked well for cutting wood and staging other content in dust-free environment
+In addition to this, we rented and filled a large U-Haul. We weren't initially anticipating needing the U-Haul but the generator was much larger than we expected, the flatbed was smaller than we expected, and it was a useful workspace on-playa (e.g. can cut wood without worrying about creating MOOP (matter out of place -- effectively litter))
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
