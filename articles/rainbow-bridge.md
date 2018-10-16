@@ -150,7 +150,74 @@ In mid-August, it was time to bring out the Rainbow to Burning Man and build it
 
 We got the flatbed on Thu Aug 15, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Sat Aug 18
 
+![Flatbed packing](/public/images/articles/rainbow-bridge/38779294_207537550117609_4061468216382193664_n.jpg)
+
 In addition to this, we rented and filled a large U-Haul. We weren't initially anticipating needing the U-Haul but the generator was much larger than we expected, the flatbed was smaller than we expected, and it was a useful workspace on-playa (e.g. can cut wood without worrying about creating MOOP (matter out of place -- effectively litter))
+
+We departed on Sun Aug 19 with 3 vehicles and 7 build crew members (including myself). Our goal was to arrive in Black Rock City on Mon Aug 20 at midnight as that's when our work access passes started. Unfortunately, on the way we found out that will call didn't open until noon
+
+We decided to stop in Reno, get well-rested, and leave in the morning. This was also beneficial as on the way, our U-Haul had blown a tire and is a generally stressful vehicle to drive
+
+The rest of Monday played out well, we got to will call at noon, got our tickets and vehicle passes, got placed (i.e. lead artist meets up with Artery organization and is shown where space reserved for the art is), set up our tents, and unloaded the flat bed via a VR (telescopic handler)
+
+On Tuesday, we:
+
+- Greeted 4 more build members
+- Set up workstation area (2 pop-up tents, 2 tables, tarps)
+- Surveyed where we wanted to place our footings
+- Set up sets of footings
+- Bolted railings to trusses (30 bolts per railing, 2 railings per truss, 7 trusses; 420 bolts)
+- Templated where weldnuts will go for mounting panels to trusses
+- Trenched our generator cable and art car microphone cable (sadly ran generator cable too short and art car microphone was backwards)
+- Registered for gas purchases at Hell Station
+
+![Bolting railings to trusses](/public/images/articles/rainbow-bridge/39294362_286678775453342_3605468179901448192_n.jpg)
+
+On Wednesday, we:
+
+- Greeted 2 more build members
+- Retrenched generator cables
+- Craned together all trusses into giant arc and bolt them together (40 bolts per connection, 6 conections; 240 bolts)
+- Verified all railing bolts are still tight (420 bolts again)
+- Surveyed placement of interactivity area
+
+On Thursday, we had a hurry up and wait situation due to HEaT's equipment being occupied by other projects:
+
+- Finished bolt tightening
+- Prepped LED panels for mounting (e.g. updating busbar posts, quality checking for loose wires, fixing broken crimps or JST connectors)
+
+![Craning together trusses](/public/images/articles/rainbow-bridge/39793006_339852853223132_4738724360699772928_n.jpg)
+
+![Bolting together trusses](/public/images/articles/rainbow-bridge/39099039_1907553199267128_3067513308350251008_n.jpg)
+
+On Friday, we:
+
+- Lifted the bridge and placed it on the footings
+- Secured footings now that we know bridge's true width
+- Continued preparing LED panels and also started mounting them
+- Cut and started mounting walkway
+    - We used metal screws to punch through the plywood and into the metal for this
+
+![Bridge lift](/public/images/articles/rainbow-bridge/39056911_482080248926075_1913417091533242368_n.jpg)
+
+![Secured footings](/public/images/articles/rainbow-bridge/39877937_528001124328972_8344308685106839552_n.jpg)
+
+On Saturday, we:
+
+- Finished mounting walkway
+- Continued mounting panels (almost 1 half was done night before)
+- Prepped mounting plates for stairs via predrilling
+- Started fixing busbar position for troublesome collision between truss and busbar
+
+After Saturday, I had other volunteer responsibilities to tend to and was leaving on Fri Aug 28 for a wedding, thus was unable to help further
+
+Thankfully the main gate opened on Sunday so a new set of volunteers could help out with the panels and electronics side
+
+I did help a little more on Tuesday with setting up the interactivity area but it was really hands-free from that point onward
+
+I'm a little bummed I didn't get to help out with strike but such is life
+
+All in all, helping build the Rainbow Bridge was a super rewarding experience; I gained invaluable skills/experience, saw how the artistic sausage is made, and enjoyed everyone I worked with
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
