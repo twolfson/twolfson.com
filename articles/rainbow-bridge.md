@@ -150,7 +150,7 @@ In mid-August, it was time to bring out the Rainbow to Burning Man and build it
 
 We got the flatbed on Thu Aug 15, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Sat Aug 18
 
-![Flatbed packing](/public/images/articles/rainbow-bridge/38779294_207537550117609_4061468216382193664_n.jpg)
+![Flatbed packing](/public/images/articles/rainbow-bridge/39594159_1701665326629800_5643641727647481856_o.jpg)
 
 In addition to this, we rented and filled a large U-Haul. We weren't initially anticipating needing the U-Haul but the generator was much larger than we expected, the flatbed was smaller than we expected, and it was a useful workspace on-playa (e.g. can cut wood without worrying about creating MOOP (matter out of place -- effectively litter))
 
@@ -183,6 +183,7 @@ On Wednesday, we:
 
 On Thursday, we had a hurry up and wait situation due to HEaT's equipment being occupied by other projects:
 
+- Greeted 2 more build members
 - Finished bolt tightening
 - Prepped LED panels for mounting (e.g. updating busbar posts, quality checking for loose wires, fixing broken crimps or JST connectors)
 
@@ -209,6 +210,8 @@ On Saturday, we:
 - Prepped mounting plates for stairs via predrilling
 - Started fixing busbar position for troublesome collision between truss and busbar
 
+![Construction photo](/public/images/articles/rainbow-bridge/40095734_1710639739065692_6692400749088866304_n.jpg)
+
 After Saturday, I had other volunteer responsibilities to tend to and was leaving on Fri Aug 28 for a wedding, thus was unable to help further
 
 Thankfully the main gate opened on Sunday so a new set of volunteers could help out with the panels and electronics side
@@ -218,6 +221,8 @@ I did help a little more on Tuesday with setting up the interactivity area but i
 I'm a little bummed I didn't get to help out with strike but such is life
 
 All in all, helping build the Rainbow Bridge was a super rewarding experience; I gained invaluable skills/experience, saw how the artistic sausage is made, and enjoyed everyone I worked with
+
+![Daytime photo](/public/images/articles/rainbow-bridge/42306101_290184961801299_3149557478864197898_n.jpg)
 
 # Links
 - Rainbow Bridge Facebook: https://www.facebook.com/TheRainbowBridgeProject/
