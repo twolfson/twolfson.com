@@ -41,9 +41,11 @@ Here's some more high level details:
     - ![Footings](/public/images/articles/rainbow-bridge/footings.jpg)
     - Attribution: https://www.facebook.com/TheRainbowBridgeProject/photos/a.1556837994445868/1708722955924037/
 - 2 railing pieces per truss
-    - See trusses photo above
+    - ![Railings](/public/images/articles/rainbow-bridge/railings.jpg)
+    - Attribution: https://www.instagram.com/p/BmxXip0hp2d/
 - 4 panels per railing
-    - See construction photo at top
+    - ![Panels](/public/images/articles/rainbow-bridge/panels.jpg)
+    - Attribution: https://www.facebook.com/TheRainbowBridgeProject/photos/a.1556837994445868/1710639725732360/
 - 450 LEDs (9 50 LED strands) per panel
     - ![LED panels](/public/images/articles/rainbow-bridge/36705018_477236966052274_5892030668606537728_n.jpg)
     - Attribution: https://www.instagram.com/p/BlZiIu9ht7M/
