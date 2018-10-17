@@ -69,15 +69,17 @@ Initially, I though this was due to wanting to have my children know their grand
 
 > Burning Man story time! I didn't seek out speed counseling, more it found me -- as a lot of things do out there
 >
-> I was exploring a new part of the city. Someone offered me hot dogs, I accepted and stopped in. While eating and talking with my new friends, a woman invited me to speed dating
+> I was exploring a new part of the city. Someone offered me hot dogs, I accepted, and stopped in. While eating and talking, a woman invited me to speed dating
 >
 > I figured why not since I'd never done it before
 >
 > We went to the event, it turned out to be speed counseling but I decided to stick around anyway
+>
+> Speed counseling gist: 1 inner circle and 1 outer circle of people, 5 minute sessions where inside counsels outside 3x, then outside counsels inside 3x
 
 Back to motivations, the epiphany I had at this speed counseling event was that half of my fear was rooted in being unable to teach my kids the content that my dad had taught me
 
-One of these major fears being was lacking knowledge and practice with being handy
+One of major chunk of that content was lacking knowledge and practice with being handy
 
 # Timeline
 After getting back to San Francisco, I decided to properly address my lack of knowledge. I had some EL wire that wasn't functioning properly. This was motivation enough to try to pick up electronics again for the nth time
@@ -94,7 +96,7 @@ Then in June, I was contacted by both Rainbow Bridge and Chilopod, another art p
 
 I went over to Rainbow Bridge first but there wasn't much for me to do yet; the majority of the project was metalwork which I wasn't qualified for. That being said, there was a prototype panel which needed wiring and soldering so I jumped on that
 
-Rainbow Bridge felt low-touch for me at the time so I started helping out on the Chilopod as well. This was wood fabrication which I had a tiny bit of experience with but this added way more: drills, impact drivers, circular saws, jigsaws, orbital sanders, and techniques (e.g. clamping with your body weight, proper weight/hold for drill/impact driver, accurate measurements over long distances)
+Rainbow Bridge felt low-touch for me at the time so I started helping out on the Chilopod as well. This was wood fabrication and took me to the next level of experience: drills, impact drivers, circular saws, jigsaws, orbital sanders, and techniques (e.g. clamping with body weight, proper weight/hold for drill/impact driver, accurate measurements over long distances)
 
 Chilopod photo:
 
@@ -120,7 +122,7 @@ Each panel is constructed as follows:
     - PixLite is a product that allows for controlling over 12000 LEDs
         - https://www.advateklights.com/pixlite-control/
 - Plywood is CNC'd such that LEDs fit into holes
-- Plywood is primed and painted in even-odd stripe timings to avoid accidental bleed
+- Plywood is primed and painted in even-odd stripes
 - Overpainted LED holes are reamed to allow easier LED insertion
 - LEDs are inserted into holes, sitting at a specific depth
     - This is done mostly by eyeballing
@@ -138,34 +140,40 @@ Each panel is constructed as follows:
 - Test PixLite is disconnected from panel
 - LEDs are caulked in place to avoid accidental falling out during transport
 
-When I timed this all out, it took 3 hours per panel for the electronics only half
-
-I could get into more detail about opto-isolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
+When I timed this all out, it took 1 person 3 hours per panel for the electronics portion
 
 Between late July and mid-August, we built 56 panels including 3 extra panels and excluding test/prototype panels. 4 of the panels were different to handle the parts that met our footings
 
 # Building the rainbow
-In mid-August, it was time to bring out the Rainbow to Burning Man and build it
+In mid-August, it was time to bring out the rainbow to Burning Man
 
-We got the flatbed on Thu Aug 15, forklifted our large metal trusses onto it, added more components we would need in the spaces in between (e.g. generator cables), ratcheted everything down, and saw it off on Sat Aug 18
+We got the flatbed on Thu Aug 15, forklifted our large metal trusses onto it, added bins of components and tools in the spaces in between, ratcheted everything down, and saw it off on Sat Aug 18
 
 ![Flatbed packing](/public/images/articles/rainbow-bridge/39594159_1701665326629800_5643641727647481856_o.jpg)
 
-In addition to this, we rented and filled a large U-Haul. We weren't initially anticipating needing the U-Haul but the generator was much larger than we expected, the flatbed was smaller than we expected, and it was a useful workspace on-playa (e.g. can cut wood without worrying about creating MOOP (matter out of place -- effectively litter))
+In addition to this, we rented and filled a large U-Haul. We weren't initially anticipating needing the U-Haul but the generator was larger than expected, the flatbed was smaller than expected, and it acted as a workspace on playa (e.g. can collect sawdust without worrying about MOOP/litter)
 
 We departed on Sun Aug 19 with 3 vehicles and 7 build crew members (including myself). Our goal was to arrive in Black Rock City on Mon Aug 20 at midnight as that's when our work access passes started. Unfortunately, on the way we found out that will call didn't open until noon
 
 We decided to stop in Reno, get well-rested, and leave in the morning. This was also beneficial as on the way, our U-Haul had blown a tire and is a generally stressful vehicle to drive
 
-The rest of Monday played out well, we got to will call at noon, got our tickets and vehicle passes, got placed (i.e. lead artist meets up with Artery organization and is shown where space reserved for the art is), set up our tents, and unloaded the flat bed via a VR (telescopic handler)
+The rest of Monday played out well:
+
+- Arrived at will call at noon
+- Picked up our tickets and vehicle passed
+- Got our artwork placed (i.e. Artery organization and is shown where space reserved for the art is)
+- Set up our tents
+- Unloaded the flat bed via a VR (telescopic handler)
+
+![Placement marker](/public/images/articles/rainbow-bridge/39748400_1701941466602186_442972017692508160_n.jpg)
 
 On Tuesday, we:
 
 - Greeted 4 more build members
-- Set up workstation area (2 pop-up tents, 2 tables, tarps)
+- Set up our work area (2 pop-up tents, 2 tables, tarps)
 - Surveyed where we wanted to place our footings
-- Set up sets of footings
-- Bolted railings to trusses (30 bolts per railing, 2 railings per truss, 7 trusses; 420 bolts)
+- Set up footings, connecting them with metal plates and bolts
+- Bolted railings to trusses (420 bolts; 30 bolts per railing, 2 railings per truss, 7 trusses)
 - Templated where weldnuts will go for mounting panels to trusses
 - Trenched our generator cable and art car microphone cable (sadly ran generator cable too short and art car microphone was backwards)
 - Registered for gas purchases at Hell Station
@@ -176,19 +184,19 @@ On Wednesday, we:
 
 - Greeted 2 more build members
 - Retrenched generator cables
-- Craned together all trusses into giant arc and bolt them together (40 bolts per connection, 6 conections; 240 bolts)
+- Craned together all trusses into giant arc and bolt them together (240 bolts; 40 bolts per connection, 6 conections)
 - Verified all railing bolts are still tight (420 bolts again)
 - Surveyed placement of interactivity area
+
+![Craning together trusses](/public/images/articles/rainbow-bridge/39793006_339852853223132_4738724360699772928_n.jpg)
+
+![Bolting together trusses](/public/images/articles/rainbow-bridge/39099039_1907553199267128_3067513308350251008_n.jpg)
 
 On Thursday, we had a hurry up and wait situation due to HEaT's equipment being occupied by other projects:
 
 - Greeted 2 more build members
 - Finished bolt tightening
 - Prepped LED panels for mounting (e.g. updating busbar posts, quality checking for loose wires, fixing broken crimps or JST connectors)
-
-![Craning together trusses](/public/images/articles/rainbow-bridge/39793006_339852853223132_4738724360699772928_n.jpg)
-
-![Bolting together trusses](/public/images/articles/rainbow-bridge/39099039_1907553199267128_3067513308350251008_n.jpg)
 
 On Friday, we:
 
@@ -215,7 +223,7 @@ After Saturday, I had other volunteer responsibilities to tend to and was leavin
 
 Thankfully the main gate opened on Sunday so a new set of volunteers could help out with the panels and electronics side
 
-I did help a little more on Tuesday with setting up the interactivity area but it was really hands-free from that point onward
+I did help a little more on Tuesday with setting up the interactivity area but I was mostly hands-free after Saturday night
 
 I'm a little bummed I didn't get to help out with strike but such is life
 
