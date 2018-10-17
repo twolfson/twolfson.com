@@ -6,8 +6,6 @@
   "summary": "Story of how I helped build a giant rainbow at Burning Man"
 }
 
-TODO: See TODOs
-
 This year I helped build a giant rainbow for and at Burning Man. It was 70' x 30' x 4', had 25,200 LEDs, was walkable, and had aerial performances
 
 Under construction:
@@ -122,26 +120,25 @@ Each panel is constructed as follows:
 - Plywood is CNC'd such that LEDs fit into holes
 - Plywood is primed and painted in even-odd stripe timings to avoid accidental bleed
 - Overpainted LED holes are reamed to allow easier LED insertion
-- TODO: Wording from this point onward is reading in a different tone/phrase -- prob switch back to more documentative
-- LEDs are plugged into holes such that they sit at a specific depth
-    - This was done mostly by eyeballing
-    - Be sure to wear gloves here, you can easily get blisters otherwise
-    - Also don't overwork yourself, it can hurt your thumbs for a while
-    - Order of insertion
+- LEDs are inserted into holes, sitting at a specific depth
+    - This is done mostly by eyeballing
+    - Gloves are worn to prevent blisters
+    - Not overworking yourself is encouraged, it can hurt your thumbs for a while
+    - LEDs are inserted in a zip-zag fashion
         - ![Strand insertion](/public/images/articles/rainbow-bridge/panel led layout.jpg)
 - Busbars are fabricated with wires ending in 2 wire JST connectors to meet LED gaps to inject power
     - Wire lengths depend on the wire they're targetting
     - ![Busbars](/public/images/articles/rainbow-bridge/38779294_207537550117609_4061468216382193664_n.jpg)
 - Wires are then routed behind LED strands to reduce likelihood of snagging
-- Multimeter testing to verify there's no accidental continuity (some JST connectors were flipped, yey...)
+- Busbars are tested with a multimeter to verify there's no accidental continuity (some JST connectors were flipped red-black to black-red, yey...)
 - Panel is connected to a test PixLite and power supply to verify it lights up with no issue
-- LEDs are adjusted to make sure they're optimally placed to emit maximum brightness (i.e. far enough through their hole)
+- LEDs are adjusted to make sure they're deep enough to emit maximum brightness
 - Test PixLite is disconnected from panel
 - LEDs are caulked in place to avoid accidental falling out during transport
 
 When I timed this all out, it took 3 hours per panel for the electronics only half
 
-I could get into more detail about optoisolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
+I could get into more detail about opto-isolators, creating spare pixels, dealing with broken crimps and JST connectors but mentioning that we dealt with those is probably enough for now
 
 Between late July and mid-August, we built 56 panels including 3 extra panels and excluding test/prototype panels. 4 of the panels were different to handle the parts that met our footings
 
