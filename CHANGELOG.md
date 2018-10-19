@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.121.0 - Wrote "Rainbow Bridge" article
+
 3.120.0 - Added status code check for projects
 
 3.119.1 - Fixed lint error
