@@ -65,7 +65,7 @@ So now for story time. What motivated me to contribute to such a project and wha
 
 At the time of writing, I'm 29 years old and my dad would be 79 years old. He died earlier this year. I always had this desire to have kids before he passed away
 
-Initially, I though this was due to wanting to have my children know their grandparents (I didn't have much of an experience here). Then after a speed counseling session at last year's Burning Man, I realized this wasn't the full case
+Initially, I thought this was due to wanting to have my children know their grandparents (an experience I had a shortage of). Then after a speed counseling session at last year's Burning Man, I realized this wasn't the full case
 
 > Burning Man story time! I didn't seek out speed counseling, more it found me -- as a lot of things do out there
 >
@@ -79,7 +79,7 @@ Initially, I though this was due to wanting to have my children know their grand
 
 Back to motivations, the epiphany I had at this speed counseling event was that half of my fear was rooted in being unable to teach my kids the content that my dad had taught me
 
-One of major chunk of that content was lacking knowledge and practice with being handy
+One major chunk of that content was lacking knowledge and practice with being handy
 
 # Timeline
 After getting back to San Francisco, I decided to properly address my lack of knowledge. I had some EL wire that wasn't functioning properly. This was motivation enough to try to pick up electronics again for the nth time
@@ -192,7 +192,7 @@ On Wednesday, we:
 
 ![Bolting together trusses](/public/images/articles/rainbow-bridge/39099039_1907553199267128_3067513308350251008_n.jpg)
 
-On Thursday, we had a hurry up and wait situation due to HEaT's equipment being occupied by other projects:
+On Thursday, we had a "hurry up and wait" situation due to HEaT's equipment being occupied by other projects:
 
 - Greeted 2 more build members
 - Finished bolt tightening
@@ -219,7 +219,7 @@ On Saturday, we:
 
 ![Construction photo](/public/images/articles/rainbow-bridge/40095734_1710639739065692_6692400749088866304_n.jpg)
 
-After Saturday, I had other volunteer responsibilities to tend to and was leaving on Fri Aug 28 for a wedding, thus was unable to help further
+After Saturday, I had other volunteer responsibilities to tend to and was leaving the upcoming Friday for a wedding, thus was unable to help further
 
 Thankfully the main gate opened on Sunday so a new set of volunteers could help out with the panels and electronics side
 
