@@ -92,6 +92,10 @@ In March, I went to a Burning Man theme camp and art project meet and greet and 
 
 https://www.facebook.com/events/1829603957058261/
 
+As I waited to hear from the art projects, I continued to hone my electronics skills with the lantern wall project. This soldering experience became key later on
+
+http://twolfson.com/2018-05-06-lantern-wall
+
 Then in June, I was contacted by both Rainbow Bridge and Chilopod, another art project, about coming to their respective warehouses to help out
 
 I went over to Rainbow Bridge first but there wasn't much for me to do yet; the majority of the project was metalwork which I wasn't qualified for. That being said, there was a prototype panel which needed wiring and soldering so I jumped on that
