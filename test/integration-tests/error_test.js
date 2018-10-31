@@ -25,7 +25,7 @@ describe('An error generating request', function () {
 
   it('logs an error to `errorHandler`', function () {
     expect(errors).to.have.property('length', 1);
-    expect(errors[0].err.name).to.equal('AssertionError');
+    expect(errors[0].err.name).to.match(/^AssertionError/);
     expect(errors[0].req.url).to.equal('/errors/assertion');
   });
 });
