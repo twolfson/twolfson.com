@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.122.0 - Upgraded to express@3.21.2 to fix GitHub vulnerability warning
+
 3.121.0 - Wrote "Rainbow Bridge" article
 
 3.120.0 - Added status code check for projects
