@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.123.1 - Upgraded to shell-quote@1.6.1 to fix GitHub vulnerability warning
+
 3.123.0 - Upgraded to request@2.88.0 to fix GitHub vulnerability warning
 
 3.122.0 - Upgraded to express@3.21.2 to fix GitHub vulnerability warning
