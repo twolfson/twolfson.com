@@ -23,9 +23,8 @@ fs.mkdirSync(actualScreenshots);
 fs.mkdirSync(diffScreenshots);
 
 // DEV: js-yaml is required to make this require work properly
-var yml = require('js-yaml');
-var urls = require('./urls.yml');
-void yml; // DEV: We use void to silence lint complaints
+var yaml = require('js-yaml');
+var urls = yaml.safeLoad(fs.readFileSync('./urls.yml', 'utf8'));
 
 // Start a server
 var server = serverUtils.startServer();
