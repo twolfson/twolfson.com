@@ -52,6 +52,22 @@ bin/decrypt-config.sh
 
 [SOPS]: https://github.com/mozilla/sops
 
+##### SOPS
+If SOPS hasn't been set up before, perform the following steps:
+
+- Install SOPS' dependencies as specified by <https://github.com/mozilla/sops/tree/0494bc41911bc6e050ddd8a5da2bbb071a79a5b7#up-and-running-in-60-seconds>
+- Install our SOPS via `pip`
+    - `pip install sops`
+- Resolve SOPS' PGP private key via means provided (e.g. old computer, remote server)
+    - We assume you will receive it as `private.rsa`
+- Install the PGP private key to GPG
+    - `gpg --import private.rsa`
+
+Additional documentation can be found in:
+
+- https://gist.github.com/twolfson/01d515258eef8bdbda4f
+- https://github.com/twolfson/twolfson.com-scripts
+
 #### CSS
 Our CSS is written in [SASS][] and compiled via [`libsass`][].
 
