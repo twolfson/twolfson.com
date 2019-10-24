@@ -6,7 +6,7 @@
   "summary": "Quick rundown of construction of a giant upside down ice cream cone for Burning Man"
 }
 
-This year at Burning Man, I helped build another giant art piece. This time it was a giant upside down ice cream cone named [Cone Down][].
+This year at Burning Man, I helped build another giant art piece. This time it was a giant upside down ice cream cone named [Cone Down][]
 
 [Cone Down]: https://www.lookingup.art/icecream
 
@@ -25,16 +25,10 @@ Cone Down was built with a steel frame, layered like a cake
 
 Each layer had either 8 or 16 panels where a lightbox would be mounted via bolts through tabs
 
+![Annotated steel frame for tabs](/public/images/articles/cone-down/panel-tabs.jpg)
 
+Each lightbox is an aluminum sheet with LEDs directly mounted via mounting tape and corrugated plastic for its sides and/or top (depends on panel location)
 
--------------
+![Annotated panel with LEDs](/public/images/articles/cone-down/panel-with-leds.jpg)
 
-Each panel on the scoop and cone is built out of a lightbox. For simplicity, we decided to also use lightboxes for the dancefloor. Here's a visual explanation:
-
-![Annotated panel with LEDs](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/panel-with-leds.jpg)
-
-![Annotated lightbox](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/lightbox.jpg)
-
-> For reference, the scoop and dancefloor panels used J channel with flat corrugated plastic screwed in on top.
->
-> Only the cone panels (above) had corrugated plastic bent into a box.
+![Annotated lightbox](/public/images/articles/cone-down/lightbox.jpg)
