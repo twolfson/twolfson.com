@@ -40,8 +40,6 @@ Items used:
 Here's a high level rundown of our process:
 
 - Considered many sensor types from [Adafruit][] and [SparkFun][] websites (e.g. light, sound, pressure, flex)
-  [Adafruit]: https://www.adafruit.com/
-  [SparkFun]: https://www.sparkfun.com/
 - Went with force sensitive resistor as it
   - Doesn't break under heavy weights (e.g. accidental art car on platform)
   - Won't have light/sound transmission issues
@@ -51,7 +49,7 @@ Here's a high level rundown of our process:
   ![Arduino and sensor test](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/arduino-sensor-test.jpg)
 - Iterated with FSR on small wooden box
   - Using FSR taped down didn't work
-  - Added silicone charger cord on top of FSR to get focused pressure, this worked
+  - Added charger cord on top of FSR to test focused pressure, this worked
   - Key is to have material which deforms earlier than polycarbonate
   - On a later date, we formalized this to a bumpon and verified it works once again
   ![Small tile with bumpon layout](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/small-tile-with-bumpon.jpg)
@@ -65,3 +63,6 @@ Here's a high level rundown of our process:
   - Concluded that ideal setup is: edges of inner 3x3 with bumpons next to sensors
     ![Final prototype](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/prototype.jpg)
 - Started building cables and bought sensors for on-playa installation but ran out of time
+
+[Adafruit]: https://www.adafruit.com/
+[SparkFun]: https://www.sparkfun.com/
