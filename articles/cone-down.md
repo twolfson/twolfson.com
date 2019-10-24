@@ -6,8 +6,9 @@
   "summary": "Quick rundown of construction of a giant upside down ice cream cone for Burning Man"
 }
 
-This year at Burning Man, I helped build another giant art piece. This time it was a giant upside down ice cream cone named [Cone Down][]
+This year at Burning Man, I helped build another giant art piece with the same team as [Rainbow Bridge][]. This time it was a giant upside down ice cream cone named [Cone Down][]
 
+[Rainbow Bridge]: https://twolfson.com/2018-10-12-rainbow-bridge
 [Cone Down]: https://www.lookingup.art/icecream
 
 ![Daytime photo of Cone Down](/public/images/articles/cone-down/daytime.jpg)
@@ -69,3 +70,18 @@ We had 5939 LEDs total, 5498 on the cone (3544 in the cone, 1154 in the scoop) a
 [PixLite]: https://www.advateklights.com/shop/home/51-pixlite-16-long-range-mkii.html
 [spider box]: http://www.southwiretools.com/tools/tools/19763R02
 [14kW generator]: https://www.multiquip.com/multiquip/pdfs/DCA15SPXU4F_Data_Sheet_292333.pdf
+
+My role in this project was being 1 of the 3 EE (electrical engineering) co-leads. My tasks varied from panel fabrication (most time consuming) to layout/length calculations to interactive dancefloor prototyping.
+
+# Word of warning
+We ran into a bunch of electrical issues due to numerous reasons:
+
+- LED/cable manufacturer used inconsistent polarities (i.e. in 2 pin power injection, left was power for cables whereas LEDs used right for power)
+- IP68 connector used soft plastic, causing easy improper connection
+- Didn't catch early due to lack of time for integration testing
+
+In the future, I'll definitely be proactive in testing everything early, often, and with plenty of delegation for diversity in testing
+
+# Links
+- Organization behind Cone Down: https://www.lookingup.art/
+- Cone Down Facebook: https://www.facebook.com/ConeDown/
