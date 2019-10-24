@@ -10,15 +10,21 @@ This year at Burning Man, I helped build another giant art piece. This time it w
 
 [Cone Down]: https://www.lookingup.art/icecream
 
-![Daytime photo of Cone Down](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/daytime.jpg)
+![Daytime photo of Cone Down](/public/images/articles/cone-down/daytime.jpg)
 
 Attribution: https://www.instagram.com/p/B2unzxrhC2n/
 
-![Nighttime photo of Cone Down](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/nighttime.jpg)
+![Nighttime photo of Cone Down](/public/images/articles/cone-down/nighttime.jpg)
 
 Attribution: https://www.instagram.com/p/B2aAhEwHN7u/
 
 # Construction
+Cone Down was built with a steel frame, layered like a cake
+
+![Cone Down broken down by layers](/public/images/articles/cone-down/split-layers.jpg)
+
+Each layer had either 8 or 16 panels where a lightbox would be mounted via bolts through tabs
+
 
 
 -------------
