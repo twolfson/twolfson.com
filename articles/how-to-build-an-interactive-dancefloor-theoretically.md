@@ -9,11 +9,11 @@
 As part of building [Cone Down][], one of the features for our dancefloor was to make it interactive. We went with pressure sensitivity, built a prototype, but ran into 2 snags that stopped us:
 
 - We ran out of time (e.g. assembly, debugging)
-- Dancefloor polycarbonate cover warped under heat (discovered at Burning Man) so securing solution needed iteration
+- Dancefloor polycarbonate cover warped under heat (discovered at Burning Man) thus further iteration would be an even larger time sink
 
 [Cone Down]: https://twolfson.com/2019-10-24-cone-down
 
-Here's the final functional setup we used for our top-of-frame prototype:
+Here's the final functional setup we used for our top-of-frame prototype (polycarbonate unmounted in photo):
 
 ![Prototype photo](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/prototype.jpg)
 
@@ -39,8 +39,9 @@ Items used:
 
 Here's a high level rundown of our process:
 
-- Considered many sensor types (Adafruit, Sparkfun listings)
-    - Light, sound, pressure, flex
+- Considered many sensor types from [Adafruit][] and [SparkFun][] websites (e.g. light, sound, pressure, flex)
+  [Adafruit]: https://www.adafruit.com/
+  [SparkFun]: https://www.sparkfun.com/
 - Went with force sensitive resistor as it
   - Doesn't break under heavy weights (e.g. accidental art car on platform)
   - Won't have light/sound transmission issues
@@ -49,11 +50,11 @@ Here's a high level rundown of our process:
 - Set up test with Arduino, force sensitive resistors (FSR), and 25' of cable round trip (dancefloor was 12'x12')
   ![Arduino and sensor test](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/arduino-sensor-test.jpg)
 - Iterated with FSR on small wooden box
-    - Using FSR taped down didn't work
-    - Added silicone charger cord on top of FSR to get focused pressure, this worked
-    - Key is to have material which deforms earlier than polycarbonate
-    - On a later date, we formalized this to a bumpon and verified it works once again
-    - ![Small tile with bumpon layout](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/small-tile-with-bumpon.jpg)
+  - Using FSR taped down didn't work
+  - Added silicone charger cord on top of FSR to get focused pressure, this worked
+  - Key is to have material which deforms earlier than polycarbonate
+  - On a later date, we formalized this to a bumpon and verified it works once again
+  ![Small tile with bumpon layout](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/small-tile-with-bumpon.jpg)
 - Made large scale prototype for 1 dancefloor tile
   - Sensors didn't stay in place with tape, also broke easily
   - Added mounting tape to bottom of sensors, worked great
