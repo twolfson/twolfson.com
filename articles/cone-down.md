@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2019-10-24T02:15:39-0500",
   "keywords": "art, electronics, construction, burning man",
-  "summary": "Quick rundown of construction of a giant upside down ice cream cone for Burning Man"
+  "summary": "Rundown of construction of a giant upside down ice cream cone art project for Burning Man"
 }
 
 This year at Burning Man, I helped build another giant art piece with the same team as [Rainbow Bridge][]. This time it was a giant upside down ice cream cone named [Cone Down][]
