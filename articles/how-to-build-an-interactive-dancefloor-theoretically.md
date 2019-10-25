@@ -6,10 +6,10 @@
   "summary": "Explanation of dancefloor prototype for [Cone Down](https://twolfson.com/2019-10-24-cone-down)"
 }
 
-As part of building [Cone Down][], one of the features for our dancefloor was to make it interactive. We went with pressure sensitivity, built a prototype, but ran into 2 snags that stopped us:
+As part of building [Cone Down][], one of our features was making the dancefloor interactive. We went with pressure sensitivity, built a prototype, but ran into 2 snags that stopped us:
 
 - We ran out of time (e.g. assembly, debugging)
-- Dancefloor polycarbonate cover warped under heat (discovered at Burning Man) thus further iteration would be an even larger time sink
+- Dancefloor cover (polycarbonate sheet) warped under heat (discovered at Burning Man) thus further iteration became implausible at the event
 
 [Cone Down]: https://twolfson.com/2019-10-24-cone-down
 
@@ -23,7 +23,13 @@ This is a layout for 1 of the 9 tiles dancefloor. Inside of each tile is a small
 
 The 4 sensors in place will detect the "+" sign shape for the dancefloor tile. We settled on this approach as it's much more economical than the full square which requires double the cost
 
-Each sensor had a mounting tape square underneath to keep it in place. We used bumpons to distribute the load from the weight of the polycarbonate
+Each sensor was a [force sensitive resistor][] using a secondary static resistor to create a voltage divider circuit. Surprisingly similar to this:
+
+https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide#example-hardware-hookup
+
+[force sensitive resistor]: https://en.wikipedia.org/wiki/Force-sensing_resistor
+
+For pressure detection/keeping the sensors in place, each sensor had a mounting tape square underneath and we used bumpons to distribute the load from the weight of the polycarbonate
 
 Items used:
 
@@ -39,13 +45,13 @@ Items used:
 
 Here's a high level rundown of our process:
 
-- Considered many sensor types from [Adafruit][] and [SparkFun][] websites (e.g. light, sound, pressure, flex)
-- Went with force sensitive resistor as it
+- Considered many types of sensors sold by [Adafruit][] and [SparkFun][] (e.g. light, sound, pressure, flex)
+- Went with force sensitive resistor as it:
   - Doesn't break under heavy weights (e.g. accidental art car on platform)
   - Won't have light/sound transmission issues
   - Easy to wire up (only need power and ground)
   - In hindsight, we should have explored flat switch membranes but we had too little time when the suggestion came up
-- Set up test with Arduino, force sensitive resistors (FSR), and 25' of cable round trip (dancefloor was 12'x12')
+- Set up test with Arduino, force sensitive resistors (FSR), and 50' of 22AWG cable round trip (not in setup/photo yet) (dancefloor was 12'x12', thus at most 24' there and 24' back)
   ![Arduino and sensor test](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/arduino-sensor-test.jpg)
 - Iterated with FSR on small wooden box
   - Using FSR taped down didn't work
@@ -56,13 +62,13 @@ Here's a high level rundown of our process:
 - Made large scale prototype for 1 dancefloor tile
   - Sensors didn't stay in place with tape, also broke easily
   - Added mounting tape to bottom of sensors, worked great
-  - Getting lots of false positives due to mounting tape oversticking polycarbonate at times
+  - Got lots of false positives due to mounting tape oversticking polycarbonate at times
   - Explored a few configurations (e.g. corners of tile, bumpons next to sensors, caulked down polycarbonate)
     ![Prototype with sensors in corners](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/prototype-with-sensors-in-corners.jpg)
     ![Sensor with bumpons adjacent](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/sensor-with-bumpons-adjacent.jpg)
-  - Concluded that ideal setup is: edges of inner 3x3 with bumpons next to sensors
+  - Concluded that ideal setup is: sensors on edges of inner 3x3 with bumpons next to sensors
     ![Final prototype](/public/images/articles/how-to-build-an-interactive-dancefloor-theoretically/prototype.jpg)
-- Started building cables and bought sensors for on-playa installation but ran out of time
+- Started building cables and bought full sensor order for on-playa installation but ran out of time
 
 [Adafruit]: https://www.adafruit.com/
 [SparkFun]: https://www.sparkfun.com/
