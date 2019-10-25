@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.126.0 - Wrote "Cone Down" and "How to build an interactive dancefloor, theoretically" articles
+
 3.125.0 - Removed photo from contact page
 
 3.124.0 - Upgraded to js-yaml@3.13.1 to fix GitHub vulnerability warning
