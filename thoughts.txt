@@ -1,0 +1,9 @@
+# 2021-02-06
+Tailwind tentative thoughts:
+- Good at toggling media queries for various layouts and one-off style changes
+- Frustrating at how much need to build from ground up
+- Prob a good pairing of Inuit or some other opt-in basic components that can be overridden (likely in copy/paste/clone fashion)
+...
+- It does look like they provide some decent recommendations for common components
+    -- though don't even talk about the media object
+    - https://v1.tailwindcss.com/components (hidden link)
