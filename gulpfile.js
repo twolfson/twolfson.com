@@ -4,7 +4,6 @@ var path = require('path');
 var _ = require('underscore');
 var browserify = require('browserify');
 var gulp = require('gulp');
-var gulpBuffer = require('gulp-buffer');
 var gulpCsso = require('gulp-csso');
 var gulpLivereload = require('gulp-livereload');
 var gulpSass = require('gulp-sass');
@@ -14,6 +13,7 @@ var gulpSpritesmith = require('gulp.spritesmith');
 var gulpUglify = require('gulp-uglify');
 var mergeStream = require('merge-stream');
 var rimraf = require('rimraf');
+var vinylBuffer = require('vinyl-buffer');
 var vinylSourceStream = require('vinyl-source-stream');
 var watchify = require('watchify');
 
@@ -65,7 +65,7 @@ exports['build-js'] = function buildJs() {
     var jsFilepath = path.relative(__dirname + '/public/js', entries[0]);
     jsStream = jsStream
       .pipe(vinylSourceStream(jsFilepath))
-      .pipe(gulpBuffer());
+      .pipe(vinylBuffer());
 
     // Return our JS stream
     return jsStream;
