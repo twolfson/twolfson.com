@@ -1,16 +1,13 @@
 language: node_js
 node_js:
-  - "6"
+  - "14"
 matrix:
-  # # Add a build with screenshot uploads for Node.js@6
+  # # Add a build with screenshot uploads for Node.js@14
   # include:
-  #   - node_js: "6"
+  #   - node_js: "14"
   #     env: UPLOAD_RESULTS="TRUE"
 
 before_install:
-  # Upgrade npm to avoid semver issues
-  - curl --location http://rawgit.com/twolfson/fix-travis-ci/master/lib/install.sh | bash -s
-
   # Install node-webkit
   # DEV: We have stopped running perceptual tests so no longer need to install nw.js
   # - ./test/utils/install-node-webkit.sh "$USER"
