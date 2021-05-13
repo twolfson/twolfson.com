@@ -24,10 +24,10 @@ var config = {
 };
 
 // Define our build tasks
-gulp.task('build-clean', function clean(done) {
+exports['build-clean'] = function clean(done) {
   // Remove all compiled files in `dist/`
   rimraf(__dirname + '/dist/', done);
-});
+};
 
 // Create a browserify instance
 // https://github.com/gulpjs/gulp/blob/v3.9.1/docs/recipes/browserify-uglify-sourcemap.md
@@ -44,7 +44,7 @@ var browserifyObjs = [
     entries: [__dirname + '/public/js/articles/develop-faster.js']
   }, browserifyOptions))
 ];
-gulp.task('build-js', function () {
+exports['build-js'] = function buildJs() {
   // Generate a stream for each of our browserify objects
   var jsStreams = browserifyObjs.map(function bundleBrowserifyObj(browserifyObj) {
     // Bundle browserify content
@@ -92,9 +92,9 @@ gulp.task('build-js', function () {
   return jsStream
     .pipe(gulp.dest('dist/js'))
     .pipe(gulpLivereload());
-});
+};
 
-gulp.task('build-css', function buildCss() {
+exports['build-css'] = function buildCss() {
   // Generate a stream that compiles SCSS to CSS
   // DEV: We return the pipe'd stream so gulp knows when we exit
   var cssStream = gulp.src('public/css/index.scss')
@@ -119,12 +119,12 @@ gulp.task('build-css', function buildCss() {
   return cssStream
     .pipe(gulp.dest('dist/css'))
     .pipe(gulpLivereload());
-});
+};
 
-gulp.task('build', ['build-css', 'build-js']);
+exports.build = gulp.series(exports['build-css'], exports['build-js']);
 
 // Define rarely run build tasks
-gulp.task('sprite', function spriteFn(done) {
+exports.sprite = function spriteFn(done) {
   // Generate our spritesheet
   var spriteData = gulp.src('public/images/sprites/*.png')
     .pipe(gulpSpritesmith({
@@ -155,11 +155,11 @@ gulp.task('sprite', function spriteFn(done) {
     // Callback
     done();
   });
-});
+};
 
 // Define our development tasks
 // Handle a generic forced live reload
-gulp.task('livereload-update', function handleLivereloadUpdate(done) {
+exports['livereload-update'] = function livereloadUpdate(done) {
   // DEV: Give ourselves a delay to wait for the server to restart
   // TODO: Reduce load time (likely caused by marked and no caching)
   //   Maybe we can figure out a way to not restart upon article change...
@@ -167,10 +167,10 @@ gulp.task('livereload-update', function handleLivereloadUpdate(done) {
     gulpLivereload.reload();
     done();
   }, 5000);
-});
+};
 
 // DEV: `['build']` requires that our build task runs once
-gulp.task('develop', ['build'], function develop() {
+exports.develop = gulp.series(exports.build, function develop() {
   // Set up our tasks to allow failures
   config.allowFailures = true;
   config.minifyAssets = false;
