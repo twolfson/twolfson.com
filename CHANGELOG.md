@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.128.0 - Upgraded to `gulp@4` and similar dependencies to build against later Node.js
+
 3.127.0 - Added "mentoring" link to navbar
 
 3.126.0 - Wrote "Cone Down" and "How to build an interactive dancefloor, theoretically" articles
