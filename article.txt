@@ -1,0 +1,41 @@
+Title: Startup engineering guidelines
+Summary: Lessons from the trenches for startups from a 3 x first engineer
+
+Guidelines not rules 
+
+Build exactly what you need, nothing more
+YAGNI 
+JIT 
+Can hedge some ideas but do so in a manner that's easy to blow away if needed
+Don't build work you'll need to workaround later
+
+Testing
+If experimental feature or visually dependant feature, probably don't 
+Exceptions: critical to business, has regressed before
+Example. Visual testing. Browser level testing and button selectors
+
+If well defined and will make development faster (eg TDD) (link to article), then prob a good idea with free bonus
+Example. API. Library
+
+If has lots of edge cases. Use your judgement
+Prob at a minimum record manual testing procedure
+
+Otherwise (prob a simple case), use your judgment
+If scared it'll break in interesting ways. Hedge on tests
+If care about security leaks at this endpoint. Hedge on tests
+If only a few simple lines + do manual testing (which should always be done). Prob can skip
+Once again. Use your judgement
+
+Stick to boring and simple
+SQL 
+Established framework
+Monoliths are ideal since no overhead to maintain syncing between difference parts 
+You'll have time to go to SOA in the future. Stick to simple for now
+There will always be migration and maintenance costs in time
+We want to optimize for saving time upfront for right now
+Which also impacts engineering velocity
+
+Invest in one button deploys or CD early
+It will make deploys instant
+And cost savings pays dividends for rest of year. Whereas waiting 1 year for same work is counter productive
+You'll always have that same repo, don't lie to yourself
