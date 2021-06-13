@@ -39,3 +39,36 @@ Invest in one button deploys or CD early
 It will make deploys instant
 And cost savings pays dividends for rest of year. Whereas waiting 1 year for same work is counter productive
 You'll always have that same repo, don't lie to yourself
+
+Do it right the first time/fix it now or it will never get fixed
+Startup reprioritizations happen instantly
+
+If a reprioritization occurs and an effort is 50% complete,
+write out how to resume the effort and what's in progress.
+It may be weeks or months until you (or someone else) can get back to this
+
+"Run and gun" style of bug fixing
+Most applicable to when joining a company
+but there will likely be bugs you see, and want to fix them all
+This is an insurmountable mountain to undertake at once.
+Write down the bugs as you see them, either in a public or personal list.
+And fix them as you find various bouts of downtime (e.g. asked a question, have 1 hour until get a response)
+If you can, also prioritize on what has highest cost-value/time-value payoffs (e.g. fixing a typo vs normalizing a response format)
+
+Don't lose sight of the mission
+Your goal is the company's goal
+We're not in a startup to write or invent a new piece of technology
+We're there to make sure the company succeeds in its mission and product
+After all, we joined it because of the mission and product
+
+Documentation will help you scale
+Document your workflow as its established
+You'll forget one-off steps
+and when you make your next hire, you'll be second-guessing those steps again
+(not to mention time away from programming due to assisting them)
+
+Getting good at documentation sadly is a very slow feedback loop
+The best mechanic I've found is tied to open source:
+Write docs, revisit them 6 months later once I've forgotten/haven't touched the repo, update/tweak as needed
+If your docs are good enough: people rarely need to ask questions and you can even use the docs as your own refresher
+
