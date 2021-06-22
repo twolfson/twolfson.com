@@ -72,3 +72,37 @@ The best mechanic I've found is tied to open source:
 Write docs, revisit them 6 months later once I've forgotten/haven't touched the repo, update/tweak as needed
 If your docs are good enough: people rarely need to ask questions and you can even use the docs as your own refresher
 
+---
+
+Article
+Extension
+Varying levels of formal
+Tags in JSON columns
+Vs table
+Vs elastic search
+
+Or code function abstraction 
+Vs service 
+
+This is when can optimize for 20% of 80/20 
+But it's a rarity so build what you need primarily.  
+
+Analyzing how much work to fix later
+And maintenance headaches
+Vs it's a temporary experiment so quick hacks good
+
+---
+
+Article
+Derisk bus factor
+If you got hit by a bus tomorrow, would you feel like the rest of the team would be unable to keep working
+
+Announce/log whenever doing a recurring manual process (ideal automate but startup tradeoffs) 
+
+Ensure documentation
+
+Choose boring, well known technology
+
+Don't be clever in code
+
+Anything that's ambiguous in code, leave comments
