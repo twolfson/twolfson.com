@@ -7,10 +7,14 @@
   "relatedArticles": []
 }
 
-After recently returning to work at both [SilviaTerra][NCX] (now [NCX][]) and [OpenInvest][], it's become clear that knowledge I picked up over the years at numerous startups (including being first engineer 3x), wasn't knowledge shared by my formerly large-company now startup peers.
+After recently returning to work, it's become clear that knowledge I've picked up over the years, wasn't knowledge shared by my similarly aged but newly startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
 
-As a refresher, here's my [LinkedIn profile][LinkedIn].
-
-[NCX]: https://www.ncx.com/
-[OpenInvest]: https://www.openinvest.com/
 [LinkedIn]: https://www.linkedin.com/in/toddwolfson/
+
+As a result, I'd like to capture all the lessons I've been reminded to share.
+
+# Build exactly what you need
+"Build exactly what you need and nothing more" is how I frame this in my head (also sometimes [YAGNI][] or [JIT][] design).
+
+[YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
+[JIT]: https://en.wikipedia.org/wiki/Just-in-time_compilation
