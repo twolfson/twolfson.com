@@ -20,9 +20,11 @@ e.g. 1 person at a 3 person startup is 1/3 the company, whereas at a 10,000 pers
 
 In practice, it's more likely that a decision might take a person's out of forward velocity, which impacts team and company velocity.
 
-Scenario (Underdog.io): You launched your startup by using a [Google Forms][] to intake customers and manage everything via email. Once a month, 2 users try to sign-up concurrently which leads to an error.
+Scenario ([Underdog.io][]): You launched your startup by using a [Google Forms][] to intake customers and manage everything via email. Once a month, 2 users try to sign-up concurrently which leads to an error.
 <br/>
 What do you do?
+
+[Underdog.io]: https://underdog.io/
 
 a. Focus time elsewhere - People will try again and it's infrequent enough
 <br/>
