@@ -49,6 +49,26 @@ To reiterate, this decision was founded in **branding** not **technical perfecti
 [YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
 [JIT]: https://en.wikipedia.org/wiki/Just-in-time_compilation
 
-Scenario: You're adding keywords functionality to an existing item
+When we try to predict what we'll need for the future, we almost always get it wrong. And thus, we do a lot of extra work (both building and maintenance) for little gain.
+
+Example ([SilviaTerra][]): Property one-to-many
+
+[SilviaTerra]:
+
+Scenario ([Underdog.io][]): You're adding keywords functionality to an existing model (e.g. candidate). What do you do?
+
+a. Refuse to build the feature - There's not enough value we'll get from building it
+<br/>
+b. Use a JSON column - This is an experimental feature and the cost of formalizing later is low enough
+<br/>
+c. Use a many-to-many table - This is a long-lived feature (e.g. been stuffing keywords in descriptions) and it'll pay dividends in the future
+<br/>
+d. Try out Elasticsearch - It's built for searching, right? Let's try that!
+<br/>
+e. Something else
 
 Worth noting: Build vs buy. TODO Link me
+
+> Side note: Don't use Elasticsearch for this. First off, it's the wrong tool (append only) which you might not know, yet waste 2 days to learn.
+>
+> More importantly though,
