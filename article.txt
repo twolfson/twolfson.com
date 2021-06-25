@@ -106,3 +106,7 @@ Choose boring, well known technology
 Don't be clever in code
 
 Anything that's ambiguous in code, leave comments
+
+---
+
+Sentry... is that a lesson somehow?
