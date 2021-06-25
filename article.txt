@@ -110,3 +110,27 @@ Anything that's ambiguous in code, leave comments
 ---
 
 Sentry... is that a lesson somehow?
+
+---
+
+Maintenance costs will eat you alive
+
+Cost of building software breakdown. Build 10%. Maintenance. 90%. Removal 0% :tada:
+Also can be viewed as lifecycle
+
+---
+
+Goals can change in an afternoon
+Don't over invest
+
+---
+
+Lots of "related to" Or " go back and read" sections
+
+---
+
+Try out 2 formats once all rough content is written out:
+- Definitions upfront, then talk through scenarios with definitions A and B
+- Current format: Definition + example
+
+- Somehow should communicate that definitions are the knowledge part + examples are the experience/wisdom (though maybe ego stroking)
