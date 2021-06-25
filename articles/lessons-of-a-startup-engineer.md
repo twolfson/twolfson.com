@@ -51,6 +51,11 @@ To reiterate, this decision was founded in **branding** not **technical perfecti
 
 When we try to predict what we'll need for the future, we almost always get it wrong. And thus, we do a lot of extra work (both building and maintenance) for little gain.
 
+TODO: Really drive home point of how many ways this can rear its head:
+- Excessive services
+- Optimizing for different model relationships
+- Prob more points, though can't quite think of them...
+
 Example ([SilviaTerra][]): Property one-to-many
 
 [SilviaTerra]:
