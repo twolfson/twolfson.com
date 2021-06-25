@@ -134,3 +134,12 @@ Try out 2 formats once all rough content is written out:
 - Current format: Definition + example
 
 - Somehow should communicate that definitions are the knowledge part + examples are the experience/wisdom (though maybe ego stroking)
+
+---
+
+1:10:100 time investment rules
+
+Design mocking (might warrant its own article)
+- HTML mocks with mock data
+- Figma/etc (diligence + sync ideal)
+- HTML with actual data (sometimes fastest depending on models and such)
