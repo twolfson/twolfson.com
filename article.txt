@@ -143,3 +143,7 @@ Design mocking (might warrant its own article)
 - HTML mocks with mock data
 - Figma/etc (diligence + sync ideal)
 - HTML with actual data (sometimes fastest depending on models and such)
+
+---
+
+Keep focus. Startup engineer lessons, not general engineering ones
