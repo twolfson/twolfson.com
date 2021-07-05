@@ -179,3 +179,39 @@ Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly
 
 [SilviaTerra]: https://silviaterra.com
 [DRF]: https://www.django-rest-framework.org/
+
+# Documentation will save you time
+It might be counter-intuitive at first, but writing documentation and code comments will save you time.
+
+Here's a few scenarios:
+
+- Repository documentation: Useful after a long vacation or not working on the repo in 3 months
+  - You'll have forgotten how and why things were done, thus spending a good amount of time thinking - instead of just reading
+- Repository documentation: Onboarding new engineers
+  - No time required to handhold each engineer through local setup or deployment, they can read the docs and get going
+- Code comments: Useful when explaining non-clever code, useful to explain ambiguous legacy terminology, plenty more times
+  - No time spent trying to understand rationale behind given code
+
+Admittedly, documentation will almost always drift out of sync with the code base but it's still a much better starting point than guessing with no documentation at all.
+
+Example ([Standard Cyborg][]): There was no documentation at all when I started. I read through, documented, and established common scripts where needed.
+
+The next engineer we onboarded was able to get everything working without any intervention.
+
+> It's worth noting that getting good at documentation is a very slow feedback loop. The best time to start is now and you'll progressively get feedback as time goes on (usually by people asking questions).
+>
+> If you do open source, then this should help accelerate the learning experience independently from work.
+
+# Bus factor
+[Bus factor][] is ensuring that if something were to happen to you (e.g. hit by a bus), then the company/mission would still be able to continue in your absence.
+
+[Bus factor]: https://en.wikipedia.org/wiki/Bus_factor
+
+A lot of these points already cover this base but to be explicit. It's another reason to:
+
+- [Document everything](#documentation-will-save-you-time)
+- [Write down what you're doing](#resumable-work)
+- [Do it right the first time](#do-it-right-the-first-time)
+- [Stick to boring and simple](#stick-to-boring-and-simple)
+
+In addition to these, any manual regular processes should be announced in Slack/similar (e.g. running a weekly batch).
