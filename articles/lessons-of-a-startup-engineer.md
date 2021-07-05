@@ -61,8 +61,7 @@ This can come up in many ways:
   - Exception to the rule: Can be ignored if feature is next in the queue
 - Anticipating data model correctness
   - Similar to anticipating a feature
-  - Best handled by experimenting with UX prototype first to verify it feels right
-    - See complex state in [Cynefin framework][] for more info here
+  - Best handled by experimenting with UX prototype first to verify it feels right (complex state in [Cynefin framework][])
 - Many more varieties
 
 [Cynefin framework]: https://en.wikipedia.org/wiki/Cynefin_framework
@@ -86,3 +85,9 @@ c. Build audit table for future backfill - A little more work but can restore hi
 d. Something else
 
 What we did: (a) Refuse to build historical support yet. Among the massive backlog of other work to be done, it was at least 6 months away before being a practical need. This is a relatively clear-cut example, others may be a lot more muddy.
+
+# Invest in fundamentals
+- Quick and easy deploys
+- Error monitoring
+- Linting
+- Basic testing
