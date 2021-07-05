@@ -6,11 +6,11 @@
   "summary": "Lessons from being a 3x first engineer and from even more startups"
 }
 
-After recently returning to work, it's become clear that knowledge I've picked up over the years, wasn't knowledge shared by my similarly aged but newly startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
+After recently returning to work, it became clear that knowledge I've picked up over the years, wasn't knowledge shared by my similarly aged but newly startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
 
 [LinkedIn]: https://www.linkedin.com/in/toddwolfson/
 
-As a result, I'd like to capture all the lessons I've been reminded to share.
+As a result, I'd like to document all the experienced lessons I've been reminded of.
 
 # Every decision is a business decision
 At a startup, any decision 1 person makes has a significantly larger impact due to the size of the company.
