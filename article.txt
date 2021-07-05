@@ -1,13 +1,5 @@
 Guidelines not rules
 
-"Run and gun" style of bug fixing
-Most applicable to when joining a company
-but there will likely be bugs you see, and want to fix them all
-This is an insurmountable mountain to undertake at once.
-Write down the bugs as you see them, either in a public or personal list.
-And fix them as you find various bouts of downtime (e.g. asked a question, have 1 hour until get a response)
-If you can, also prioritize on what has highest cost-value/time-value payoffs (e.g. fixing a typo vs normalizing a response format)
-
 Don't lose sight of the mission
 Your goal is the company's goal
 We're not in a startup to write or invent a new piece of technology

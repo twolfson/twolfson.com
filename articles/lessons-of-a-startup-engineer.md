@@ -132,7 +132,7 @@ If you're starting outright, I'd highly recommend using:
 
 Example ([Verbling][]): This was in React's early days. They were using all the shiny tools (e.g. React, GraphQL, MongoDB) and as a result, they had a lackluster ecosystem to support them (e.g. no admin tooling, running into MongoDB issues, no React server-side rendering).
 
-It was probably great to use in the beginning but clearly it was reaching a breaking point without any [practical benefit to the company][every-decision].
+It was probably great to use in the beginning but clearly it was reaching a breaking point without [any practical benefit to the company][every-decision].
 
 [Verbling]: https://www.verbling.com/
 
@@ -165,3 +165,17 @@ It may be weeks or months until you (or someone else) can get back to it.
 Example ([Find Work][]): I took 3 months away from working on the project. When I returned, my mind had lost all context. By writing documentation and planned out tasks, I was able to pick things up from where I left off.
 
 [Find Work]: https://www.linkedin.com/company/17971168/
+
+# Fix as you go
+Some topics might be difficult to allocate full chunks of time for. As a result, I'll sometimes do a "run and gun" style of fixing things.
+
+I start by documenting everything I see (either in a personal note or in a knowledge base). When I next have some downtime (e.g. asking for feedback on a feature), then I start taking on 1 of these tasks.
+
+Sometimes this comes about as directly opening a PR for the feature.
+
+Other times, it involves writing up a proof of concept (PoC), showing a demo to other engineers, and getting their support and consent.
+
+Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly as JSON request/responses, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase, endpoint by endpoint, over the course of 1 month.
+
+[SilviaTerra]: https://silviaterra.com
+[DRF]: https://www.django-rest-framework.org/
