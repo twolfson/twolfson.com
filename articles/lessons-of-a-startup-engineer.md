@@ -87,7 +87,15 @@ d. Something else
 What we did: (a) Refuse to build historical support yet. Among the massive backlog of other work to be done, it was at least 6 months away before being a practical need. This is a relatively clear-cut example, others may be a lot more muddy.
 
 # Invest in fundamentals
-- Quick and easy deploys
-- Error monitoring
-- Linting
-- Basic testing
+The early architecture and service(s) your company settles on will likely be with you for a while (e.g. at least 2 years).
+
+As a result, it makes sense to establish fundamentals that help team happiness, confidence, and velocity.
+
+My short list is:
+- Quick and easy deploys - One click or prebuilt script with easy revert plan (something will go wrong eventually)
+- Fast deploys - Ship a feature and be able to check it while still in your headspaces
+- Error monitoring (e.g. Sentry) - Know when something broke in production, don't rely on customers telling you (bad experience for them too)
+- Linting and CI - Catch errors early (e.g. typo'd variables) and help keep code simple and consistent
+- Basic testing - Nothing complex needed but something so you can dive into TDD when practical
+
+When all these efforts are summed together, the seconds here and there accrue into many hours saved when done early in the 2+ year journey as well as happier teams.

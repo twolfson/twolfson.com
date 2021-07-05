@@ -12,11 +12,6 @@ There will always be migration and maintenance costs in time
 We want to optimize for saving time upfront for right now
 Which also impacts engineering velocity
 
-Invest in one button deploys or CD early
-It will make deploys instant
-And cost savings pays dividends for rest of year. Whereas waiting 1 year for same work is counter productive
-You'll always have that same repo, don't lie to yourself
-
 Do it right the first time/fix it now or it will never get fixed
 Startup reprioritizations happen instantly
 
