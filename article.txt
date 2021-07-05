@@ -1,6 +1,3 @@
-Title: Startup engineering guidelines
-Summary: Lessons from the trenches for startups from a 3 x first engineer
-
 Guidelines not rules
 
 Stick to boring and simple
@@ -11,13 +8,6 @@ You'll have time to go to SOA in the future. Stick to simple for now
 There will always be migration and maintenance costs in time
 We want to optimize for saving time upfront for right now
 Which also impacts engineering velocity
-
-Do it right the first time/fix it now or it will never get fixed
-Startup reprioritizations happen instantly
-
-If a reprioritization occurs and an effort is 50% complete,
-write out how to resume the effort and what's in progress.
-It may be weeks or months until you (or someone else) can get back to this
 
 "Run and gun" style of bug fixing
 Most applicable to when joining a company
@@ -153,3 +143,7 @@ If care about security leaks at this endpoint. Hedge on tests
 If only a few simple lines + do manual testing (which should always be done). Prob can skip
 Once again. Use your judgement
 """
+
+---
+
+Backpressure

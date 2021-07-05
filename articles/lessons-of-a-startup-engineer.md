@@ -99,3 +99,37 @@ My short list is:
 - Basic testing - Nothing complex needed but something so you can dive into TDD when practical
 
 When all these efforts are summed together, the seconds here and there accrue into many hours saved when done early in the 2+ year journey as well as happier teams.
+
+Example ([Standard Cyborg][]): When I joined, the deployment process was not standardized, slow, and easy to miss a step.
+
+- Internal library: Required manual build + commit + push
+- Web app: Build internal library, commit, push, and deploy to Heroku via `git push`
+- Lambda: Dependent on developer computer's existing dependencies and running multiple commands like installing and zipping by hand. Also dependent on internal library
+
+After formalizing and standardizing these, the process was smoothed out and future engineers were able to deploy with ease.
+
+[Standard Cyborg]: https://standardcyborg.com/
+
+# Do it right the first time
+Also phrased as "fix it now or it will never get fixed".
+
+As mentioned in [Build exactly what you need][], startup priorities can change within a day. The time you thought you had to formalize feature X is now gone and is unlikely to come back within the next 3 months.
+
+Do it right the first time. Take the time to formalize the PR to stand the test of time. It doesn't need to be bullet proof but it shouldn't have any footguns in it either.
+
+[Build exactly what you need]: #build-exactly-what-you-need
+
+If it's still too much work to formalize it properly, then consider leveraging error monitoring and defensive programming to be aware of when it breaks (e.g. `assert` calls for unexpected values).
+
+# Resumable work
+I've [written about resumeable work before][resumable-work]. The tl;dr version is:
+
+If a reprioritization occurs and an effort is 50% complete, write out how to resume the effort and what's in progress.
+
+It may be weeks or months until you (or someone else) can get back to it.
+
+[resumable-work]: https://twolfson.com/2016-09-13-resumable-work
+
+Example ([Find Work][]): I took 3 months away from working on the project. When I returned, my mind had lost all context. By writing documentation and planned out tasks, I was able to pick things up from where I left off.
+
+[Find Work]: https://www.linkedin.com/company/17971168/
