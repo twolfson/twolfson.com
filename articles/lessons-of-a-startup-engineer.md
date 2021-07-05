@@ -45,17 +45,23 @@ To reiterate, this decision was founded in **user experience** not **technical p
 > For those curious why one might use Google Forms instead of a database from the get-go: Without customers and getting product feedback, we can't guarantee that people will want what we're building.
 
 # Build exactly what you need
-"Build exactly what you need and nothing more" is how I frame this in my head (also sometimes [YAGNI][] or [JIT][] design).
+"Build exactly what you need and nothing more" is how I frame this in my head (also sometimes [YAGNI][] or [JIT][]).
 
 [YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
 [JIT]: https://en.wikipedia.org/wiki/Just-in-time_compilation
 
-When we try to predict what we'll need for the future, we almost always get it wrong. And thus, we do a lot of extra work (both building and maintenance) for little gain.
+When we try to predict what we'll need for the future, we almost always get it wrong. And thus we do a lot of extra work (both building and maintenance) for little gain.
 
-TODO: Really drive home point of how many ways this can rear its head:
-- Excessive services
+This can come up in many ways:
+- Excessive services (e.g. API + web app + admin tools -- when 1 monolith would have sufficed)
+  - High maintenance costs for: Concurrent feature development and deployment, reading/writing additional API calls
+- Anticipating a feature that's not yet being built
+  - Following this rule doesn't mean writing yourself into a corner, building with openness in mind should always be followed
+  - Exception to the rule: Can be ignored if feature is next in the queue
 - Optimizing for different model relationships
 - Prob more points, though can't quite think of them...
+
+There are numerous "exceptions to the rule" for these (e.g. "anticipating" one, if confi
 
 Example ([SilviaTerra][]): Property one-to-many
 
