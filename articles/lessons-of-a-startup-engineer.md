@@ -110,6 +110,34 @@ After formalizing and standardizing these, the process was smoothed out and futu
 
 [Standard Cyborg]: https://standardcyborg.com/
 
+# Stick to boring and simple
+Being clever or using shiny technology is often a good way to waste time for our future selves. This has been well laid out by [@mcfunley][choose-boring].
+
+[choose-boring]: https://mcfunley.com/choose-boring-technology
+
+Examples I've seen time and time again:
+
+- Using a non-SQL database (e.g. MongoDB) - Eventually run into querying, performance, and/or integration issues
+- Using a different language or framework to the existing stack - Now every existing and new engineer needs to learn this as well
+- Using a new language or framework (e.g. 2 years since first commit) - Likely will run into performance issues, does 80% of what you need but won't find out until 3 months later, or the API will change on you
+- Rewriting a service from scratch instead of progressively fixing the existing one - Takes a lot more time and little company value is actually gained
+
+If you're starting outright, I'd highly recommend using:
+
+- PostgreSQL - Has less footguns than MySQL plus better open source support
+- Django or Rails - Has a lot more batteries included than DIY middleware combining in Flask, Express, or Sinatra
+- Bootstrap - Well thought out design system with plenty of components
+  - Only practical if your designs lean into Bootstrap patterns, not fight them
+- That's it, nothing else is usually needed for a web app
+
+Example ([Verbling][]): This was in React's early days. They were using all the shiny tools (e.g. React, GraphQL, MongoDB) and as a result, they had a lackluster ecosystem to support them (e.g. no admin tooling, running into MongoDB issues, no React server-side rendering).
+
+It was probably great to use in the beginning but clearly it was reaching a breaking point without any [practical benefit to the company][every-decision].
+
+[Verbling]: https://www.verbling.com/
+
+[every-decision]: #every-decision-is-a-business-decision
+
 # Do it right the first time
 Also phrased as "fix it now or it will never get fixed".
 

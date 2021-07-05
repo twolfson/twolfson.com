@@ -1,14 +1,5 @@
 Guidelines not rules
 
-Stick to boring and simple
-SQL
-Established framework
-Monoliths are ideal since no overhead to maintain syncing between difference parts
-You'll have time to go to SOA in the future. Stick to simple for now
-There will always be migration and maintenance costs in time
-We want to optimize for saving time upfront for right now
-Which also impacts engineering velocity
-
 "Run and gun" style of bug fixing
 Most applicable to when joining a company
 but there will likely be bugs you see, and want to fix them all
