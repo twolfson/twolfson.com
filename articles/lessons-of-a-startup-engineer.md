@@ -55,32 +55,34 @@ When we try to predict what we'll need for the future, we almost always get it w
 This can come up in many ways:
 - Excessive services (e.g. API + web app + admin tools -- when 1 monolith would have sufficed)
   - High maintenance costs for: Concurrent feature development and deployment, reading/writing additional API calls
-- Anticipating a feature that's not yet being built
+- Anticipating a feature that's not being built yet
+  - Added costs: Thinking, building, and maintaining new logic edge cases which aren't even being used
   - Following this rule doesn't mean writing yourself into a corner, building with openness in mind should always be followed
   - Exception to the rule: Can be ignored if feature is next in the queue
-- Optimizing for different model relationships
-- Prob more points, though can't quite think of them...
+- Anticipating data model correctness
+  - Similar to anticipating a feature
+  - Best handled by experimenting with UX prototype first to verify it feels right
+    - See complex state in [Cynefin framework][] for more info here
+- Many more varieties
 
-There are numerous "exceptions to the rule" for these (e.g. "anticipating" one, if confi
+[Cynefin framework]: https://en.wikipedia.org/wiki/Cynefin_framework
 
-Example ([SilviaTerra][]): Property one-to-many
-
-[SilviaTerra]:
-
-Scenario ([Underdog.io][]): You're adding keywords functionality to an existing model (e.g. candidate). What do you do?
-
-a. Refuse to build the feature - There's not enough value we'll get from building it
-<br/>
-b. Use a JSON column - This is an experimental feature and the cost of formalizing later is low enough
-<br/>
-c. Use a many-to-many table - This is a long-lived feature (e.g. been stuffing keywords in descriptions) and it'll pay dividends in the future
-<br/>
-d. Try out Elasticsearch - It's built for searching, right? Let's try that!
-<br/>
-e. Something else
-
-Worth noting: Build vs buy. TODO Link me
-
-> Side note: Don't use Elasticsearch for this. First off, it's the wrong tool (append only) which you might not know, yet waste 2 days to learn.
+> Stronger rant on anticipating features: Startup goals and directions change swiftly.
 >
-> More importantly though,
+> In 1 day, you might shift your entire target market which means the product does as well. Or you see that nobody is using feature X so progressive improvements to that are no longer needed.
+>
+> In both these cases and more, shipping frequently with small well-contained PRs (features) that can be easily added/removed are critical for maintaining high business velocity and a tight feedback loop.
+
+Scenario ([Underdog.io][]): You're building the data model to save resume URLs for candidates. We might want to have resume history in the future.
+<br/>
+What do you do?
+
+a. Don't build historical support yet - We don't need it and it will significantly complicate logic
+<br/>
+b. Build historical support now - We feel confident enough that this will be a feature we support
+<br/>
+c. Build audit table for future backfill - A little more work but can restore historical info
+<br/>
+d. Something else
+
+What we did: (a) Refuse to build historical support yet. Among the massive backlog of other work to be done, it was at least 6 months away before being a practical need. This is a relatively clear-cut example, others may be a lot more muddy.

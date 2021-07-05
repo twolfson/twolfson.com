@@ -147,3 +147,15 @@ Design mocking (might warrant its own article)
 ---
 
 Keep focus. Startup engineer lessons, not general engineering ones
+
+---
+
+Ship often
+
+---
+
+TODO: Remind people that it's okay to refuse to build features
+
+---
+
+Worth noting: Build vs buy. TODO Link me
