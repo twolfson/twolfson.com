@@ -17,9 +17,11 @@ At a startup, any decision 1 person makes has a significantly larger impact due 
 
 e.g. 1 person at a 3 person startup is 1/3 the company, whereas at a 10,000 person company it's 1/10,000 (handwaving over hierarchy details).
 
-In practice, it's more likely that a decision might take a person's out of forward velocity, which impacts team and company velocity.
+In practice, this most frequently cascades from a person's forward velocity being interrupted, which then impacts team and company velocity.
 
-Scenario ([Underdog.io][]): You launched your startup by using a [Google Forms][] to intake customers and manage everything via email. Once a month, 2 users try to sign-up concurrently which leads to an error.
+> Terminology: Team implies internal grouping/perspective, company implies external
+
+Scenario ([Underdog.io][]): You launched your startup by using a [Google Forms][] to intake customers and manage everything via email. Once a month, 2 users try to sign-up concurrently which leads to an error page.
 <br/>
 What do you do?
 
@@ -38,9 +40,9 @@ d. Something else
 
 What we did: We weighed out the options (e.g. time/effort vs value) and decided to go with (c). We wanted a stellar experience for our users and treating them poorly wasn't inline with that.
 
-To reiterate, this decision was founded in **branding** not **technical perfection**.
+To reiterate, this decision was founded in **user experience** not **technical perfection**.
 
-> For those curious why one might use Google Forms instead of a database from the get-go: Without customers and getting product feedback, you can't guarantee that people will want what you're building.
+> For those curious why one might use Google Forms instead of a database from the get-go: Without customers and getting product feedback, we can't guarantee that people will want what we're building.
 
 # Build exactly what you need
 "Build exactly what you need and nothing more" is how I frame this in my head (also sometimes [YAGNI][] or [JIT][] design).
