@@ -119,9 +119,11 @@ Do it right the first time. Take the time to formalize the PR to stand the test 
 
 [Build exactly what you need]: #build-exactly-what-you-need
 
-If it's still too much work to formalize it properly, then consider leveraging error monitoring and defensive programming to be aware of when it breaks (e.g. `assert` calls for unexpected values).
+If there's not enough time to formalize it properly, then consider deferral by leveraging error monitoring and defensive programming to be aware of when it breaks (e.g. `assert` calls for unexpected values).
 
 Example ([Standard Cyborg][]): I built a prototyped solution with `O(n^2)` runtime for some vertex properties. It worked great but we'd inevitably run into issues for larger meshes (more vertices, bigger `n`). As a result, we took the time to code up an `O(n)` solution before landing the PR.
+
+The deferral solution would have been an `assert` or `Sentry.captureException` call for when the vertex count is too high.
 
 # Resumable work
 I've [written about resumeable work before][resumable-work]. The tl;dr version is:
