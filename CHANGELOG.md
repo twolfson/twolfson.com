@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.129.0 - Added dynamic article loading support for better development experience
+
 3.128.0 - Upgraded to `gulp@4` and similar dependencies to build against later Node.js
 
 3.127.0 - Added "mentoring" link to navbar
