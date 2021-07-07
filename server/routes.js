@@ -29,17 +29,20 @@ exports.common = function (config) {
   articles.forEach(function (article) {
     var url = article.url;
 
-    // Build our cached article endpoint
-    var articleFn = controllers.blog.article({article: article});
-
-    // If we're in development, reload our articles and server those
+    // If we're in development, dynamically override our article properties
+    var articleConfig = {article: article};
+    // TODO: Move to config option
     if (true) {
-      articleFn = function (req, res, next) {
-
-      }
+      articleConfig.article = function () {
+        var newArticles = getJojo().articles;
+        var newArticle = newArticles.find(function (newArticle) {
+          return newArticle.url === article.url;
+        });
+        // DEV: We extend instead of return directly to preserve date and recommendations
+        return Object.assign({}, article, newArticle);
+      };
     }
-    router.get(url, );
-    }
+    router.get(url, controllers.blog.article(articleConfig));
 
     // If there are any alternate URLs, redirect them
     if (article.alternateUrls) {
