@@ -28,12 +28,15 @@ marked.Parser.prototype.tok = function () {
 };
 
 // Create a jojo middleware (and only use it to get articles from)
-var articles = jojo({
-  formatter: function (md) {
-    return marked.parse(md, {langPrefix: ''});
-  },
-  render: false
-}).articles;
+exports.getJojo = function () {
+  return jojo({
+    formatter: function (md) {
+      return marked.parse(md, {langPrefix: ''});
+    },
+    render: false
+  });
+};
+var articles = exports.getJojo().articles;
 
 // For each of our articles, verify there is a timezone (so we can properly parseZone)
 articles.forEach(function verifyArticleTimezone (article) {
@@ -153,4 +156,4 @@ articles.forEach(function (article) {
 });
 
 // Expose the articles
-module.exports = articles;
+exports.articles = articles;

@@ -1,6 +1,7 @@
 // Load in dependencies
 var express = require('express');
 var controllers = require('./controllers');
+var getJojo = require('../articles').getJojo;
 
 // Define common routes
 exports.common = function (config) {
@@ -27,7 +28,20 @@ exports.common = function (config) {
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     var url = article.url;
-    router.get(url, controllers.blog.article({article: article}));
+
+    // If we're in development, dynamically override our article properties
+    var articleConfig = {article: article};
+    if (config.dynamicArticles) {
+      articleConfig.article = function () {
+        var newArticles = getJojo().articles;
+        var newArticle = newArticles.find(function (newArticle) {
+          return newArticle.url === article.url;
+        });
+        // DEV: We extend instead of return directly to preserve date and recommendations
+        return Object.assign({}, article, newArticle);
+      };
+    }
+    router.get(url, controllers.blog.article(articleConfig));
 
     // If there are any alternate URLs, redirect them
     if (article.alternateUrls) {

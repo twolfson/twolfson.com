@@ -24,7 +24,8 @@ exports.article = function (config) {
   return [
     function renderArticle(req, res) {
       res.render('article.jade', {
-        article: article
+        // DEV: Support dynamic loading for development hack
+        article: typeof article === 'function' ? article() : article
       });
     }
   ];

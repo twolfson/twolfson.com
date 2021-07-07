@@ -20,6 +20,7 @@ exports.common = {
 
 exports.development = {
   // Inherits from common
+  dynamicArticles: true,
   googleAnalyticsId: 'UA-17165993-3',
   sentry: {
     browserDSN: null,
@@ -28,6 +29,7 @@ exports.development = {
 };
 
 exports.test = {
+  dynamicArticles: false,
   googleAnalyticsId: null,
   sentry: {
     browserDSN: null,
@@ -36,8 +38,9 @@ exports.test = {
 };
 
 exports.production = {
-  // Fetch project information every hour
+  dynamicArticles: false,
   googleAnalyticsId: 'UA-17165993-1',
+  // Fetch project information every hour
   projectOptions: {
     updateImmediately: true,
     updateInterval: 1000 * 60 * 60 // 1 hour
