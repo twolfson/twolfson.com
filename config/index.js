@@ -1,6 +1,6 @@
 // Load in dependencies
 var Settings = require('shallow-settings');
-var articles = require('../articles');
+var articles = require('../articles').articles;
 var errorHandlers = require('./error-handlers');
 var pkg = require('../package.json');
 var staticConfig = require('./static');

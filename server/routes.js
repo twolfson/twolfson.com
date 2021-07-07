@@ -1,6 +1,7 @@
 // Load in dependencies
 var express = require('express');
 var controllers = require('./controllers');
+var getJojo = require('../articles').getJojo;
 
 // Define common routes
 exports.common = function (config) {
@@ -27,7 +28,18 @@ exports.common = function (config) {
   router.get('/', controllers.blog.index({articles: articles}));
   articles.forEach(function (article) {
     var url = article.url;
-    router.get(url, controllers.blog.article({article: article}));
+
+    // Build our cached article endpoint
+    var articleFn = controllers.blog.article({article: article});
+
+    // If we're in development, reload our articles and server those
+    if (true) {
+      articleFn = function (req, res, next) {
+
+      }
+    }
+    router.get(url, );
+    }
 
     // If there are any alternate URLs, redirect them
     if (article.alternateUrls) {
