@@ -3,7 +3,7 @@
   "author": "Todd Wolfson",
   "date": "2021-06-24T18:46:37-0500",
   "keywords": "startups, engineering, experience, lessons",
-  "summary": "Lessons from being a 3x first engineer and from even more startups"
+  "summary": "Lessons from being a 3x first engineer and working at even more startups"
 }
 
 After recently returning to work, it became clear that knowledge I've picked up over the years, wasn't knowledge shared by my similarly aged but newly startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
