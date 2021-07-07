@@ -87,7 +87,7 @@ d. Something else
 What we did: (a) Refuse to build historical support yet. Among the massive backlog of other work to be done, it was at least 6 months away before being a practical need. This is a relatively clear-cut example, others may be a lot more muddy.
 
 # Invest in fundamentals
-The early architecture and service(s) your company settles on will likely be with you for a while (e.g. at least 2 years).
+The early architecture and service(s) your company settles on will be with you for a while (e.g. at least 2 years).
 
 As a result, it makes sense to establish fundamentals that help team happiness, confidence, and velocity.
 
@@ -154,15 +154,15 @@ Example ([Standard Cyborg][]): I built a prototyped solution with `O(n^2)` runti
 The deferral solution would have been an `assert` or `Sentry.captureException` call for when the vertex count is too high.
 
 # Fix as you go
-Some topics might be difficult to allocate full chunks of time for. As a result, I'll sometimes do a "run and gun" style of fixing things.
+Some topics might be difficult to prioritize or allocate full chunks of time for. As a result, I'll sometimes do a "run and gun" style of fixing things.
 
-I start by documenting everything I see (either in a personal note or in a knowledge base). When I next have some downtime (e.g. asking for feedback on a feature), then I start taking on 1 of these tasks.
+I start by documenting everything I see (either in a personal note or in a knowledge base). When I next have some downtime (e.g. waiting for feedback on a feature), then I start taking on 1 of these tasks.
 
 Sometimes this comes about as directly opening a PR for the feature.
 
-Other times, it involves writing up a proof of concept (PoC), showing a demo to other engineers, and getting their support and consent.
+Other times, it involves writing up a proof of concept (PoC), showing a demo to other engineers, and getting their support/consent.
 
-Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly as JSON request/responses, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase, endpoint by endpoint, over the course of 1 month.
+Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly for its JSON request/response logic, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase (endpoint by endpoint) over the course of 1 month.
 
 [SilviaTerra]: https://silviaterra.com
 [DRF]: https://www.django-rest-framework.org/
