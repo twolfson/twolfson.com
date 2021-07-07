@@ -31,8 +31,7 @@ exports.common = function (config) {
 
     // If we're in development, dynamically override our article properties
     var articleConfig = {article: article};
-    // TODO: Move to config option
-    if (true) {
+    if (config.dynamicArticles) {
       articleConfig.article = function () {
         var newArticles = getJojo().articles;
         var newArticle = newArticles.find(function (newArticle) {
