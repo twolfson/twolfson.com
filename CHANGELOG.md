@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.131.1 - More wording tweaks
+
 3.131.0 - Tweaked first line of "Lessons of a startup engineer" article
 
 3.130.0 - Wrote "Lessons of a startup engineer" article
