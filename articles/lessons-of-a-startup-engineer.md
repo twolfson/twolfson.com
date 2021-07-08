@@ -209,7 +209,7 @@ There's some lessons that felt like they were either too much opinion, not speci
 - Time estimation and [zooming in like a coastline][coastline] (not specific to startups)
 - Optimal time investing (might become its own article)
 - Probably many more lessons
-- If there's something else I missed that you'd like to be included, please [let me know][contact]
+- If there's something that you'd like to be included, please [let me know][contact]
 
 [Resumable work]: https://twolfson.com/2016-09-13-resumable-work
 [Bus factor]: https://en.wikipedia.org/wiki/Bus_factor
