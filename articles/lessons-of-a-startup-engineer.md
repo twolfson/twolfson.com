@@ -16,6 +16,7 @@ Please keep in mind that these are guidelines, not rules.
 
 [Underdog.io]: https://underdog.io/
 [Find Work]: https://www.linkedin.com/company/17971168/
+[Verbling]: https://www.verbling.com/
 [Standard Cyborg]: https://standardcyborg.com/
 [SilviaTerra]: https://silviaterra.com/
 [OpenInvest]: https://openinvest.co/
@@ -117,7 +118,7 @@ My short list is:
 
 When all these efforts are summed together, the seconds here and there accrue into many hours saved when done early in the 2+ year journey.
 
-Example ([Standard Cyborg][]): When I joined, the deployment process was not standardized, slow, and easily error-prone.
+Positive example ([Standard Cyborg][]): When I joined, the deployment process was not standardized, slow, and easily error-prone.
 
 - Internal library: Required manual build, commit, and push
 - Web app: Build internal library, commit, push, and deploy to Heroku via `git push`
@@ -126,7 +127,7 @@ Example ([Standard Cyborg][]): When I joined, the deployment process was not sta
 After formalizing and standardizing these, the process was smoothed out and deploys became trivial.
 
 # Stick to boring and simple
-Being clever or using shiny technology is often a good way to waste time for our future selves. This has been well laid out by [@mcfunley's Choose Boring Technology][choose-boring].
+Being clever or using shiny technology is often a good way to make our future selves waste time. This has been well laid out by [@mcfunley's Choose Boring Technology][choose-boring].
 
 [choose-boring]: https://mcfunley.com/choose-boring-technology
 
@@ -149,11 +150,9 @@ Positive example ([Standard Cyborg][]): The stack was Rails and Bootstrap. We we
 <br />
 <br />
 
-Negative example ([Verbling][]): This was in React's early days. They were using all the shiny tools (e.g. React, GraphQL, MongoDB) and as a result, they had a lackluster ecosystem to support them (e.g. no admin tooling, running into MongoDB issues, no React server-side rendering).
+Negative example ([Verbling][]): This was in React's early days. All the shiny libraries were being used (e.g. React, GraphQL, MongoDB) and as a result, there was a lackluster ecosystem to support them (e.g. no admin tooling, running into MongoDB issues, no React server-side rendering).
 
 It was probably great to use in the beginning but clearly it was reaching a breaking point without [any practical benefit to the company][every-decision].
-
-[Verbling]: https://www.verbling.com/
 
 [every-decision]: #every-decision-is-a-business-decision
 
@@ -168,9 +167,15 @@ Do it right the first time. Take the time to formalize the PR to stand the test 
 
 If there's not enough time to formalize it properly, then consider deferral by leveraging error monitoring and defensive programming to be aware of when it breaks (e.g. `assert` calls for unexpected values).
 
-Example ([Standard Cyborg][]): I built a prototyped solution with `O(n^2)` runtime for some vertex properties. It worked great but we'd inevitably run into issues for larger meshes (more vertices, bigger `n`). As a result, we took the time to code up an `O(n)` solution before landing the PR.
+Positive example ([Standard Cyborg][]): I built a prototyped solution with `O(n^2)` runtime for some vertex properties. It worked great but we'd inevitably run into issues for larger meshes (more vertices, bigger `n`). As a result, we took the time to code up an `O(n)` solution before landing the PR.
 
 A deferral solution would have been an `assert` or `Sentry.captureException` call for when the vertex count is too high.
+<br/>
+<br/>
+
+Negative example ([Underdog.io][]): We were adding `created_at` and `updated_at` columns to our models but we messed up the casing (i.e. `createdAt`).
+
+We had to do a painful migration to fix all of this, though the alternative would be one-off casing issues occuring for the rest of the codebase's lifetime.
 
 # Fix as you go
 Some issues have been long standing or are architectural so they skip the ["fix it now"][fix-it-now] guideline.
@@ -185,9 +190,11 @@ Sometimes this resolves via directly opening a PR for the feature.
 
 Other times, it involves writing up a proof of concept (PoC), showing a demo to other engineers, and getting their support/consent.
 
-Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly for its JSON request/response logic, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase (endpoint by endpoint) over the course of 1 month.
+Positive example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly for its JSON request/response logic, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase (endpoint by endpoint) over the course of 1 month.
 
 [DRF]: https://www.django-rest-framework.org/
+
+Negative example ([Verbling][]): The testing system was slow and brittle. The engineering velocity was greatly reduced due to limited attempts to improve it. Without intervention, it would continue to get slower and impact company velocity.
 
 # What did I leave out
 There's some lessons that felt like they were either too much opinion, not specific to startups, or require their own article. Here's a quick rundown:
