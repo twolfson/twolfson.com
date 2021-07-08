@@ -6,7 +6,7 @@
   "summary": "Lessons from being a 3x first engineer and working at even more startups"
 }
 
-After recently returning to work, it has become clear that knowledge I've picked up over the years, isn't knowledge shared by my similarly aged but new to startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
+After recently returning to work, it has become clear that knowledge I've picked up over the years, isn't knowledge shared by my similarly aged yet new to startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
 
 [LinkedIn]: https://www.linkedin.com/in/toddwolfson/
 
@@ -40,7 +40,7 @@ d. Something else
 [Google Forms]: https://www.google.com/forms/about/
 [PostgreSQL]: https://www.postgresql.org/
 
-What we did: We weighed out the options (e.g. time/effort vs value) and decided to go with (c). We wanted a stellar experience for our users and treating them poorly wasn't inline with that.
+What we did: We weighed out the options (e.g. time/effort vs value) and decided to go with (c) Move to a formal database. We wanted a stellar experience for our users and treating them poorly wasn't inline with that.
 
 To reiterate, this decision was founded in **user experience** not **technical perfection**.
 
@@ -62,7 +62,7 @@ This can come up in many ways:
   - Following this rule doesn't mean writing yourself into a corner, building with openness in mind should always be followed
   - Exception to the rule: Can be ignored if feature is next in the queue
 - Anticipating data model correctness
-  - Similar to anticipating a feature
+  - Cost: Building out something which falls flat in practice and having to rebuild it again
   - Best handled by experimenting with UX prototype first to verify it feels right (complex state in [Cynefin framework][])
 - Many more varieties
 
@@ -70,11 +70,11 @@ This can come up in many ways:
 
 > Stronger rant on anticipating features: Startup goals and directions change swiftly.
 >
-> In 1 day, you might pivot your whole product, shift your target audience, or deprecate an unused feature.
+> In 1 day, you might pivot your whole product, shift your target audience, or change engineering priorities.
 >
-> In all these cases, shipping frequent small well-contained PRs (easily removed features) are critical for maintaining high business velocity and a tight feedback loop.
+> In all these cases, shipping frequent small well-contained PRs (easily removed features) is critical for maintaining high business velocity and a tight feedback loop.
 
-Scenario ([Underdog.io][]): You're building the data model to save resume URLs for candidates. We might want to have resume history in the future.
+Scenario ([Underdog.io][]): You're building the data model to save resume/CV storage paths for candidates. We might want to have resume history in the future.
 <br/>
 What do you do?
 
@@ -82,13 +82,17 @@ a. Don't build historical support yet - We don't need it and it will significant
 <br/>
 b. Build historical support now - We feel confident enough that this will be a feature we support
 <br/>
-c. Build audit table for future backfill - A little more work but can restore historical info
+c. Build audit table for future backfill - A little more work but can backfill into historical info
 <br/>
 d. Something else
 
 What we did: (a) Refuse to build historical support yet. Among the massive backlog of other work to be done, it was at least 6 months away before being a practical need. This is a relatively clear-cut example, others may be a lot more muddy.
+<br/>
+<br/>
 
-> Before reaching this point, this lesson has been learned and re-learned numerous times.
+Negative example ([Underdog.io][]): When I joined, we had 2 light services talking directly to the same database. This was impractical for database migrations and model updates. I weighed combining them into 1 service or building a third API service.
+
+I went with the latter which wound up costing a lot more hours with API interfacing code yet little benefit for our scale.
 
 # Invest in fundamentals
 The early architecture and service(s) your company settles on will be with you for a while (e.g. at least 2 years).
