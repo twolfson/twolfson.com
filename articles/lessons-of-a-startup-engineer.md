@@ -181,7 +181,7 @@ Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly
 [DRF]: https://www.django-rest-framework.org/
 
 # What did I leave out
-There's some lessons that felt like they were either too much opinion, not specific to startups, or so nuanced they required their own article. Here's a quick rundown:
+There's some lessons that felt like they were either too much opinion, not specific to startups, or require their own article. Here's a quick rundown:
 
 - [Resumable work][] (not significant enough to dive into)
 - What and when to test (opinion)
