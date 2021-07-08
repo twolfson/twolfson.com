@@ -10,7 +10,9 @@ After recently returning to work, it has become clear that knowledge I've picked
 
 [LinkedIn]: https://www.linkedin.com/in/toddwolfson/
 
-As a result, I'd like to document all the experienced lessons I've been reminded of.
+As a result, I'd like to document all the lessons I've experienced and been reminded of.
+
+Please keep in mind that these are guidelines, not rules.
 
 # Every decision is a business decision
 At a startup, any decision 1 person makes has a significantly larger impact due to the size of the company.
@@ -177,3 +179,23 @@ Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly
 
 [SilviaTerra]: https://silviaterra.com
 [DRF]: https://www.django-rest-framework.org/
+
+# What did I leave out
+There's some lessons that felt like they were either too much opinion, not specific to startups, or so nuanced they required their own article. Here's a quick rundown:
+
+- [Resumable work][] (not significant enough to dive into)
+- What and when to test (opinion)
+- Documentation can help organization scale (opinion)
+- [Bus factor][] (well-established in open source)
+- [1:10:100 time investment][1:10:100] between design, development, and post-release fixes (not specific to startups)
+- Backpressure, how and when to push back against work/timeline as well as compromise (not specific to startups)
+- Build vs buy (not specific to startups)
+- Time estimation and [zooming in like a coastline][coastline] (not specific to startups)
+- Optimal time investing (might become its own article)
+- If there's something else I missed, please [let me know][contact]
+
+[Resumable work]: https://twolfson.com/2016-09-13-resumable-work
+[Bus factor]: https://en.wikipedia.org/wiki/Bus_factor
+[1:10:100]: https://www.youtube.com/watch?v=6MOeVNbh9cY
+[coastline]: https://en.wikipedia.org/wiki/Coastline_paradox
+[contact]: /contact
