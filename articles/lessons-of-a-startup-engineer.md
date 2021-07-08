@@ -3,10 +3,10 @@
   "author": "Todd Wolfson",
   "date": "2021-06-24T18:46:37-0500",
   "keywords": "startups, engineering, experience, lessons",
-  "summary": "Lessons from being a 3x first engineer and working at even more startups"
+  "summary": "Lessons from being a 3x first engineer, former Uber engineer, and working at even more startups"
 }
 
-I'm a startup engineer. 3x first engineer and have worked at many more startups.
+I'm a startup engineer. 3x first engineer, former Uber engineer, and have worked at many more startups.
 
 After recently returning to work, it has become clear that knowledge I've picked up over the years, isn't knowledge shared by my similarly aged yet new to startup peers. For reference, here's my [LinkedIn profile][LinkedIn].
 
