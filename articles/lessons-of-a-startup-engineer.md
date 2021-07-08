@@ -14,6 +14,12 @@ As a result, I'd like to document all the lessons I've experienced and been remi
 
 Please keep in mind that these are guidelines, not rules.
 
+[Underdog.io]: https://underdog.io/
+[Find Work]: https://www.linkedin.com/company/17971168/
+[Standard Cyborg]: https://standardcyborg.com/
+[SilviaTerra]: https://silviaterra.com/
+[OpenInvest]: https://openinvest.co/
+
 # Every decision is a business decision
 At a startup, any decision 1 person makes has a significantly larger impact due to the size of the company.
 
@@ -26,8 +32,6 @@ In practice, this most frequently cascades from a person's forward velocity bein
 Scenario ([Underdog.io][]): You launched by using a [Google Forms][] to intake customers and manage everything via email. Once a month, 2 users try to sign-up concurrently which leads to an error page.
 <br/>
 What do you do?
-
-[Underdog.io]: https://underdog.io/
 
 a. Focus time elsewhere - People will try again and it's infrequent enough
 <br/>
@@ -45,6 +49,10 @@ What we did: We weighed out the options (e.g. time/effort vs value) and decided 
 To reiterate, this decision was founded in **user experience** not **technical perfection**.
 
 > For those curious why one might use Google Forms instead of a database from the get-go: Without customers and getting product feedback, we can't guarantee that people will want what we're building.
+
+Negative example ([Find Work][]): As part of building Find Work, I built a lot of visual testing, thinking that it would help reduce bugs. In practice, [it ate a lot more time than it saved][testing-invisible] and should only have been done during large CSS migrations.
+
+[testing-invisible]: /2017-03-30-testing-the-invisible
 
 # Build exactly what you need
 "Build exactly what you need and nothing more" is how I frame this in my mind (also sometimes [YAGNI][] or [JIT][]).
@@ -117,8 +125,6 @@ Example ([Standard Cyborg][]): When I joined, the deployment process was not sta
 
 After formalizing and standardizing these, the process was smoothed out and deploys became trivial.
 
-[Standard Cyborg]: https://standardcyborg.com/
-
 # Stick to boring and simple
 Being clever or using shiny technology is often a good way to waste time for our future selves. This has been well laid out by [@mcfunley's Choose Boring Technology][choose-boring].
 
@@ -181,7 +187,6 @@ Other times, it involves writing up a proof of concept (PoC), showing a demo to 
 
 Example ([SilviaTerra][]): We were using [Django REST Framework][DRF] but mostly for its JSON request/response logic, not actual REST resources. I wrote up a PoC, pitched it, and we progressively shrunk/simplified the codebase (endpoint by endpoint) over the course of 1 month.
 
-[SilviaTerra]: https://silviaterra.com
 [DRF]: https://www.django-rest-framework.org/
 
 # What did I leave out
