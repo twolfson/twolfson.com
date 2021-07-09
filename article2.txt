@@ -5,3 +5,36 @@ Now what about 1 month? 3 months? 6 months?
 
 Now what about North only
 Now what about swimming only
+
+---
+
+Prompted by Lobsters to provide more write-up
+
+https://lobste.rs/s/awfi05/lessons_startup_engineer
+
+"""
+The concepts still need work but the gist is essentially a broader scoping and interpretation of the 1:10:100 rule mentioned
+
+You're a start-up following a north star metric (will refer to as pole star to avoid confusion).
+
+You've got 1 year of runway left in your cash.
+
+How do you optimize for excelling at your execution?
+
+From a "distance traveled" analogy, we can consider this with different modes of transportation:
+
+- Walking in a given direction for 1 year
+- Building a bicycle (takes 2 weeks), and biking for 50 weeks
+- Buying a bicycle (costs 1 week), and biking for 51 weeks
+- Building a car (takes 2 months), and driving for 10 months
+- Buying a car (costs 1.5 months), and driving 10.5 months
+
+Now what if the car only can drive north, but you realize your pole star has shifted to south-east. Now you're back to square 1 and need to figure out what's next.
+
+(analogous to investing time/energy into a platform that customers didn't want - and can't be reused)
+
+What this concept is still missing:
+- Needs better translation between "distance traveled" and a practical pole star example
+    - Currently can only think of Find Work where I spent *so* much time designing then building, without enough time to sell/market
+- Tight feedback loops are almost always preferred since you can build and build but it might be in the entirely wrong direction
+"""
