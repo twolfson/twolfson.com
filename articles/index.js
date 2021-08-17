@@ -84,6 +84,7 @@ Object.getOwnPropertyNames(projects).forEach(function (namespace) {
 
 // Find and assert all related articles, related projects
 var TOP_ARTICLES = [
+  articleObj['Lessons of a startup engineer'],
   articleObj['Develop faster'],
   articleObj['Sexy bash prompt']
 ];
