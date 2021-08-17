@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.132.0 - Added "Lessons of a starutp engineer" to top articles
+
 3.131.1 - More wording tweaks
 
 3.131.0 - Tweaked first line of "Lessons of a startup engineer" article
