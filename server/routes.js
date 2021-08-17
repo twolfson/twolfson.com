@@ -38,7 +38,10 @@ exports.common = function (config) {
           return newArticle.url === article.url;
         });
         // DEV: We extend instead of return directly to preserve date and recommendations
-        return Object.assign({}, article, newArticle);
+        return Object.assign({}, article, newArticle, {
+          relatedArticles: article.relatedArticles,
+          relatedProjects: article.relatedProjects,
+        });
       };
     }
     router.get(url, controllers.blog.article(articleConfig));
