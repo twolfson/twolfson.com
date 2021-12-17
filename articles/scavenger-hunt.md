@@ -25,3 +25,18 @@ Scavenger hunt:
 - what if we discover we need to go underwater all of a sudden?
 - or what if we're transported to Jupiter where our tools are much harder to use with all the extra gravity? (read as a pivot)
   - TODO: Jupiter has extra gravity, yes?
+
+- Prob post to https://lobste.rs/s/awfi05/lessons_startup_engineer#c_ax29tw once done
+
+-----
+
+More analogies, may be simpler:
+
+Floor will light up, need to get to a certain color
+Can stand with a wide stance but not good for turning
+Can constantly be on toes but exhausting
+
+Best: Always be exactly where you need to be, no more, no less
+Some exceptions to this (e.g. very confident will be doing X)
+but should be ready to change data model at a moments notice
+or worse: pivot the company
