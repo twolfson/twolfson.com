@@ -51,3 +51,10 @@ Or a marathon?
 
 No useful key words in The Amazing Race wiki, which is a rough equivalent
 https://en.wikipedia.org/wiki/The_Amazing_Race_(American_TV_series)
+
+---
+
+More analogies:
+
+- In combat, want to get into a default stance - ready to handle any movement. Don't want to be caught off-balance or slow to react
+- In tennis, want to get into a default position on the court, if too far away, then won't be in good position for future return -- which has cascading effect through out rest of volley (or whatever term is)
