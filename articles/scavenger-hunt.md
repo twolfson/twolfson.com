@@ -40,3 +40,14 @@ Best: Always be exactly where you need to be, no more, no less
 Some exceptions to this (e.g. very confident will be doing X)
 but should be ready to change data model at a moments notice
 or worse: pivot the company
+
+---
+
+A puzzle hunt might be a better term, since scavenger hunts can happen out of series - and are less clue / single focused based
+
+Maybe a race analogy though?
+
+Or a marathon?
+
+No useful key words in The Amazing Race wiki, which is a rough equivalent
+https://en.wikipedia.org/wiki/The_Amazing_Race_(American_TV_series)
