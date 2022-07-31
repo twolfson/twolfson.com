@@ -13,10 +13,10 @@ In this article, I cover how I orient around business priorities, when to invest
 
 # Operational tasks vs Product tasks
 
-For any given company, there's a core set of operational tasks. Without these regularly occurring, the business would stop functioning. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
+For any given company, there's a core set of operational tasks. Without these regularly occurring, the business would stop functioning. Here's a historical example for [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
-- Send out weekly batch of new candidates to companies
+- Send out weekly email of new candidates to companies
 - Onboard accepted candidates
 - Ensure accepted candidates are enjoying experience
 - Sell to new companies
@@ -53,15 +53,62 @@ When analyzing operational tasks, I look at them through 2 lenses:
     - What would the current time cost be afterwards?
     - Would there be any tangential pros/cons from this approach? (e.g. less human error)
 
-Let's
+Let's talk through a historical example. Every week [Underdog.io][] would send out a weekly email with new candidates to companies. Here's the context:
 
-"Do it until it hurts", "Pain tolerance", "Every decision is a business decision", "YAGNI"
+- All data was stored in a Google Sheet as database ([explanation](/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision))
+- Candidates specified companies to opt-out from (e.g. current employer)
+- New candidates were copy/pasted by hand for each company (due to opt-out), pasted into email, and sent
+
+Now let's talk through our questions:
+
+- How much time will it cost to do this task right now?
+  - *Q: Is it just my time? Or are there multiple people involved?*
+  - A: 1 person (non-engineer), historical guesstimate 10 minutes per company
+  - Thus, while it's fast with a small customer base, it definitely won't scale up
+- What are the time cost vs savings for improving this task?
+  - *Q: How frequently does this task occur?*
+  - A: Every week<br/><br/>
+  - *Q: How long do we expect to keep doing this task?*
+  - A: Indefinite until business model changes
+    - Read as: A fuzzy 6 months. i.e. In my experience, in startups if anyone tries to predict beyond 6 months, then the guess is usually wrong<br/><br/>
+  - *Q: Is it possible to stop doing this task?*
+  - A: Not at the moment, though possibly if we moved to a dashboard<br/><br/>
+  - *Q: How can we improve it?*
+  - A: Option A: Build an internal tool to generate and review batches
+    - *Q: How long would this improvement take?*
+    - A: With existing internal tool infrastructure, 2 weeks of engineering time<br/><br/>
+    - *Q: What would the current time cost be afterwards?*
+    - A: Significantly reduced to only engineering maintenance (its own operational task)<br/><br/>
+    - *Q: Would there be any tangential pros/cons from this approach? (e.g. less human error)*
+    - A: Pro: Engineering can add checks for opt-out in case someone had a typo
+    - A: Pro: Sets up path for full automation after trust established
+    - A: Con: Lose flexibility to put human touch into each email (without building for that)
+  - A: Other options: Skipping over these in example
+
+So we've laid out our options and the time cost comparisons. How do we determine if this is a current priority or not?
+
+Honestly, this is kind of an artform that comes from experience =/ I lean on a few principles here:
+
+- Pain tolerance
+  - How much do I dislike doing this task? Or do others dislike doing it?
+  - A [current coworker][Ryan Barrett] has phrased this as "Do it until it hurts"
+- If we pick up this this task now, what is being deprioritized? ([Every decision is a business decision][])
+- [Build exactly what you need][] or [YAGNI][]
+
+[Ryan Barrett]: https://snarfed.org/
+[Every decision is a business decision]: /2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
+[build exactly what you need]: /2021-06-24-lessons-of-a-startup-engineer#build-exactly-what-you-need
+[YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
+
+In [Underdog.io][]'s case, this was very high priority since the company list kept growing (good problem to have) so it was consuming full Sundays for that 1 person.
+
+-------
 
 TODO: Might make sense to move to the bottom since technically product tasks become operational tasks through maintenance requirements.
 
 At this point, I'd like to call out a strong nuance that tricks people new to startups.<br/>The answer to "How long do we expect to keep doing this task?" is almost always very wrong, but you don't know it until it changes overnight.
 
-
+<!-- TODO: Relevant XKCD? https://xkcd.com/1205/ -->
 
 -----------
 
