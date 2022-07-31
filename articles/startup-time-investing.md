@@ -11,30 +11,14 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
-# Prioritization
-Through the course of a day, I repeatedly perform the following mental arithmetic every time I discuss a task:
+# Obligated work first
+To keep expectations consistent and velocity high, I like to complete obligated work first.<br/>That is, work where either I'm blocking someone or there was a promised deadline (e.g. code review for person X, output data for person Y).
 
-- Is this blocking anyone?
-- Was there a promised deadline?
-- Do we know how long this would/should take?
-- Is there anything we can do to reduce this down?
+# Non-obligated work second
+As expected, we then prioritize non-obligated work second (e.g. build feature X, patch bug Y).
 
-If it's a blocker or has a promised deadline, I usually then verify that it *can* be done within a reasonable timeframe.
-
-i.e. If we don't know how long it should take, I do the work here (e.g. for bugs, triage them; for features in a new domain, research and/or proof of concept them).
-
-Once that's settled, we can either move ahead with that or start thinking/discussing how to reduce it down into something that will work
-
-TODO: Finish the thought here, feel like we missed a paragraph
-
-----
-----
-----
-----
-----
-
-# Operations vs features vs bugs
-As a startup engineer, tasks typically fall into 1 of 3 categories:
+# Sizing up tasks
+Within these obligated vs non-obligated groupings, I then do another pass based on the type of task. As a programmer, the categories usually are:
 
 - Operational, something that's required to keep the business functioning
   - e.g. For [Underdog.io][], a curated job candidate <-> company marketplace, we'd send out a weekly email of new candidates to companies
@@ -46,8 +30,10 @@ As a startup engineer, tasks typically fall into 1 of 3 categories:
 
 [Underdog.io]: https://underdog.io/
 
-# Time usage for operational tasks
+*Note: It's important to remember that at a startup, I'm not just sizing up my work but also looking for inefficiencies in my coworker's work and how I can help reduce those.<br/>
+i.e. On a team of 3, if only the actor thought about their work, it's 1 head, whereas all 3 is 3 heads.*
 
+# Sizing up operational tasks
 [//]: # "Dunkin Donuts: Time to make the donuts"
 [//]: # "https://www.youtube.com/watch?v=XyZtMfMWONI"
 <p>It's "time to make the donuts":<br/>
@@ -134,6 +120,33 @@ However, if you realize that you no longer need to do a given task, then you can
 *Note: Some improvements may level up multiple operational tasks concurrently (e.g. internal tools, developer tooling), which is always great.*
 
 *Tangent: This dialog also plays well "build vs buy" considerations, except it's money spent instead of time spent.*
+
+---
+---
+---
+
+- Do we know how long this would/should take?
+- Is there anything we can do to reduce this down?
+
+If it's a blocker or has a promised deadline, I usually then verify that it *can* be done within a reasonable timeframe.
+
+i.e. If we don't know how long it should take, I do the work here (e.g. for bugs, triage them; for features in a new domain, research and/or proof of concept them).
+
+Once that's settled, we can either move ahead with that or start thinking/discussing how to reduce it down into something that will work
+
+TODO: Finish the thought here, feel like we missed a paragraph
+
+----
+----
+----
+----
+----
+
+# Operations vs features vs bugs
+As a startup engineer, tasks typically fall into 1 of 3 categories:
+
+
+# Time usage for operational tasks
 
 -------
 
@@ -287,3 +300,7 @@ So operational, features, and bugs
 ---
 
 2x2 matrix layout, technically better communication but feels lacking for tension and very reductive of nuance that they each get invested in their own way
+
+---
+
+TODO: When to do all this prioritization math
