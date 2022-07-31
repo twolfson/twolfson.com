@@ -19,6 +19,12 @@ To keep expectations consistent and velocity high, I like to complete obligated 
 # Non-obligated work second
 As expected, we then prioritize non-obligated work second (e.g. build feature X, patch bug Y).
 
+TODO: We're still missing nuance here like layout out upcoming due work by dates
+
+and honestly, getting into the weeds on personal process at this point. Losing the high value of the article for discussing time investment
+
+---
+
 # Sizing up tasks
 Within these obligated vs non-obligated groupings, I then do another pass based on the type of task. As a programmer, the categories usually are:
 
