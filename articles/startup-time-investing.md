@@ -9,11 +9,9 @@
 
 I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.
 
-In this article, I cover how I prioritize operational work against business priorities.
+In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
-There's an (un)written list of competing tasks and priorities that organically occur from running a startup. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
-
-**Operational tasks:**
+For any given company, there's a core set of operational tasks. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -23,17 +21,11 @@ There's an (un)written list of competing tasks and priorities that organically o
 - Onboard new companies
 - Ensure onboarded companies are enjoying experience
 
-**Non-operational tasks:**
-
-- Build feature X
-- Improve
-- I will provide more examples at the bottom (TODO)
+*I will provide more examples at the bottom. (TODO)*
 
 [Underdog.io]: https://underdog.io/
 
-In addition to this list, there's an evergrowing backlog of feature requests and improvements which can be made to these processes.
-
-For each of these tasks, I give a priority weighting based on the following:
+When considering whether to improve one of these tasks or not, I consider the following:
 
 - How much time is spent on a task?
 - How frequently do we expect to keep doing this task?
