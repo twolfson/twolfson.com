@@ -11,11 +11,11 @@ You're at a startup, you have a finite number of hours in a week. How do you det
 
 <!-- Trying something new, like an intro hook to a YouTube video. Intro line then personal line as an aside -->
 
-> Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups. Today we'll be covering how to use and invest your hours at a startup.
+> Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups. In this article, I'll be covering how to use and invest your hours at a startup.
 
 <!-- TODO: Does this stylistically work? Do we need something new in our UI? -->
 
-There's an unwritten list of competing tasks and priorities that occur organically through the process of running a business. These can vary wildly so I'm going to start with an example from [Underdog.io][], a curated job candidate <-> company marketplace:
+There's an unwritten list of competing tasks and priorities that organically occur through the process of running a startup. These can vary wildly so I'm going to start with an example from [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -35,7 +35,25 @@ One thing you'll notice that's not on this list, is how much time each of these 
 
 The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is the nuance we'll be discussing.**
 
-The blueprint for how we can speed up a given task depends on a lot on the task, so once again, we'll focus on a specific example:
+The blueprint for how we can speed up a given task depends on a lot on the task, so I'm going to walk through various examples:
+
+## Send out weekly batch of new candidates to companies
+For a starting point, we're going to begin from the MVP level implementation of candidate batches:
+
+- All data was written into a Google Sheet
+  - TODO: See "Lessons of a startup engineer" for explanation why
+- Candidate review occurrs within said Google Sheet
+  - In practice, there was an internal tool built early on
+- Candidates specify companies to not be sent to
+- Batches are manually constructed for each company, pasted into email, peer reviewed, and sent
+
+If you're reading this and feel like "this sounds like a really slow and error-prone proces", you'd be right!
+
+In fact, this was one of my first tasks at Underdog.io 😃
+
+> I should note that the Google Sheet actually simplified the process at this point.
+>
+> There could have been another version where the data was input into a database and an engineer would dump the data to a CSV for review, then load the data back in via a script
 
 -
 
@@ -71,6 +89,8 @@ TODO: Time to make the donuts meme
 TODO: Every decision is a business decision (again) and YAGNI
 
 TODO: Decide on keeping article approachable to anyone vs focusing in on engineers with examples
+
+TODO: Talk through various company hats?
 
 --------
 
