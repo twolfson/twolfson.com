@@ -11,11 +11,11 @@ You're at a startup, you have a finite number of hours in a week. How do you det
 
 <!-- Trying something new, like an intro hook to a YouTube video. Intro line then personal line as an aside -->
 
-> Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups. In this article, I'll be covering how to use and invest your hours at a startup.
+*Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.<br/>In this article, we'll be covering how to use and invest your hours at a startup.*
 
 <!-- TODO: Does this stylistically work? Do we need something new in our UI? -->
 
-There's an unwritten list of competing tasks and priorities that organically occur through the process of running a startup. These can vary wildly so I'm going to start with an example from [Underdog.io][], a curated job candidate <-> company marketplace:
+There's an unwritten list of competing tasks and priorities that organically occur from running a startup. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -33,7 +33,14 @@ This is a **very** reductive list of what we did at [Underdog.io][], and I'll pr
 
 One thing you'll notice that's not on this list, is how much time each of these tasks takes.
 
-The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is the nuance we'll be discussing.**
+The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is where our article will focus: figuring out when to trade-off between executing a task vs investing in a better process for it.**
+
+- How much time is spent on a task?
+  - e.g. Does it take 5 minutes to do? 1 hour? Are multiple people involved?
+- How frequently do we expect to keep doing this task?
+- How long do we expect to keep doing this task for?
+- What value would we receive from completing this task?
+
 
 The blueprint for how we can speed up a given task depends on a lot on the task, so I'm going to walk through various examples:
 
