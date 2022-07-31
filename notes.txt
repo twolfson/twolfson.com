@@ -1,0 +1,17 @@
+RISD 1 year article
+TLDR of hard to find in books
+Avoid baseline grid
+Focus on alignment and cross align ment 
+Typographic scale still relevant
+Grid types still relevant. Modular grid
+Line length
+Margins based on type size or leading
+Typeface vs font 
+Applied color. Color palette wide range of options for preference
+Texture is key
+Components of design. Line. Shape. Etc
+Gestalt principles
+Play important. Checking criteria as the process. Rather than formulaic
+Snowtrack of course
+Wild drawing improvements over 12 weeks
+A lot of good design is time to polish and likely experience will shorten that. Kind of like programming maybe?
