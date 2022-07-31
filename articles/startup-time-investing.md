@@ -7,11 +7,11 @@
   "summary": "TODO: Summarize me, and update keywords"
 }
 
-You're at a startup, you have a finite number of hours in a week. How do you determine what to build, what to prioritize, and what to even do?
+You're at a startup, you have a finite number of hours in a week. How do you prioritize between executing a task or improving its process?
 
 <!-- Trying something new, like an intro hook to a YouTube video. Intro line then personal line as an aside -->
 
-*Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.<br/>In this article, we'll be covering how to use and invest your hours at a startup.*
+*If you're new: Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.*
 
 <!-- TODO: Does this stylistically work? Do we need something new in our UI? -->
 
@@ -33,7 +33,7 @@ This is a **very** reductive list of what we did at [Underdog.io][], and I'll pr
 
 One thing you'll notice that's not on this list, is how much time each of these tasks takes.
 
-The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is where our article will focus: figuring out when to trade-off between executing a task vs investing in a better process for it.**
+The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is the nuance we'll be discussing.<br/>i.e. The task takes time (usage), making it faster takes time (investing), and how do we balance those.**
 
 - How much time is spent on a task?
   - e.g. Does it take 5 minutes to do? 1 hour? Are multiple people involved?
