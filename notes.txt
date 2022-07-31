@@ -1,0 +1,4 @@
+
+Programming <-> design tie-ins
+Law of proximity for grouped code
+Law of similarity for syntax highlighting
