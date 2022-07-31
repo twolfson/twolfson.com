@@ -240,3 +240,37 @@ Beyond just engineering. Do business relationships change? Business model? Level
 I also called this velocity in original summary?
 
 I guess there is an implication that you also don't want to run too fast in a given direction?
+
+---
+
+Programmers: This includes operational tasks like deployments
+
+---
+
+TODO. Read old post for repetition
+
+---
+
+Maybe categorization or characterization of tasks
+Bug reports fit neither mode since it's about people
+
+Prob no good system for all tasks
+More of a framework for orienting
+
+---
+
+Arrows are important because they represent velocity
+
+---
+
+
+Did not cover handling blocking tasks. Maybe worth an online mention then longer call-out at bottom
+
+---
+
+Focus on just product eng tasks
+So operational, features, and bugs
+
+---
+
+2x2 matrix layout, technically better communication but feels lacking for tension and very reductive of nuance that they each get invested in their own way
