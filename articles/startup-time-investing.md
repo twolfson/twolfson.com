@@ -11,6 +11,8 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
+The following is a linear workflow that I go through at the start of every day, end of every day, and every time a new task is discussed. The frequency is so high is because startup priorities can shift daily (e.g. no longer shipping X on date Y but now date Z).
+
 # Obligated work first
 To keep expectations consistent and velocity high, I like to complete obligated work first.<br/>That is, work where either I'm blocking someone or there was a promised deadline (e.g. code review for person X, output data for person Y).
 
