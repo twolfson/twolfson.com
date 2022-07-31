@@ -231,3 +231,12 @@ TODO: Insert an image
 <!-- /home/todd/github/twolfson.com/articles/startup-time-investing/compass.jpg -->
 <!-- TODO: Polish up image -->
 
+"""
+Standard was a whole new product
+Underdog was integrating more systems into an SOA
+Beyond just engineering. Do business relationships change? Business model? Level of interaction for customers? product market fit
+"""
+
+I also called this velocity in original summary?
+
+I guess there is an implication that you also don't want to run too fast in a given direction?
