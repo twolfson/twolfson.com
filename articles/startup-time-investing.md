@@ -11,6 +11,28 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
+# Prioritization
+Through the course of a day, I repeatedly perform the following mental arithmetic every time I discuss a task:
+
+- Is this blocking anyone?
+- Was there a promised deadline?
+- Do we know how long this would/should take?
+- Is there anything we can do to reduce this down?
+
+If it's a blocker or has a promised deadline, I usually then verify that it *can* be done within a reasonable timeframe.
+
+i.e. If we don't know how long it should take, I do the work here (e.g. for bugs, triage them; for features in a new domain, research and/or proof of concept them).
+
+Once that's settled, we can either move ahead with that or start thinking/discussing how to reduce it down into something that will work
+
+TODO: Finish the thought here, feel like we missed a paragraph
+
+----
+----
+----
+----
+----
+
 # Operations vs features vs bugs
 As a startup engineer, tasks typically fall into 1 of 3 categories:
 
@@ -23,14 +45,6 @@ As a startup engineer, tasks typically fall into 1 of 3 categories:
   - e.g. We saw a "Server Error" during a sign-up today
 
 [Underdog.io]: https://underdog.io/
-
-# Prioritization
-Through the course of a day, I repeatedly perform the following mental arithmetic every time I discuss a task:
-
-- Is this blocking anyone?
-- Was there a promised deadline?
-- Do we know how long this would/should take?
-- Is there anything we can do to reduce this down?
 
 # Time usage for operational tasks
 
