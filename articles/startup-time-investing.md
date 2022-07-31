@@ -38,7 +38,11 @@ The nuance is that each task can be fast or slow, depending on how much time has
 The blueprint for how we can speed up a given task depends on a lot on the task, so I'm going to walk through various examples:
 
 ## Send out weekly batch of new candidates to companies
-For a starting point, we're going to begin from the MVP level implementation of candidate batches:
+For a starting point, we're going to begin with the contrived worst-case MVP implementation for candidate batches:
+
+> This is not how Underdog.io actually did things, we had the foresight to use Google Sheets as our initial database, thus foregoing the intermediary engineering steps.
+
+-
 
 - All data was written into a Google Sheet
   - TODO: See "Lessons of a startup engineer" for explanation why
