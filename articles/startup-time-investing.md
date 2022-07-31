@@ -7,16 +7,15 @@
   "summary": "TODO: Summarize me, and update keywords"
 }
 
-<!--
-
-TODO: Alternative intro:
 You're at a startup, you have a finite number of hours in a week. How do you determine what to build, what to prioritize, and what to even do?
 
--->
+<!-- Trying something new, like an intro hook to a YouTube video. Intro line then personal line as an aside -->
 
-At a startup, there's a constantly competing list of tasks and priorities that occur organically through the process of running a business. These can vary wildly so I'm going to give a few examples:
+> Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups. Today we'll be covering how to use and invest your hours at a startup.
 
-[Underdog.io][], a curated job candidate <-> company marketplace, task list:
+<!-- TODO: Does this stylistically work? Do we need something new in our UI? -->
+
+There's an unwritten list of competing tasks and priorities that occur organically through the process of running a business. These can vary wildly so I'm going to start with an example from [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -30,11 +29,57 @@ At a startup, there's a constantly competing list of tasks and priorities that o
 
 [Underdog.io]: https://underdog.io/
 
-This is a **very** reductive list of what we did at [Underdog.io][], and the list will vary significantly based on other companies (more examples at bottom TODO) but it's where we'll start.
+This is a **very** reductive list of what we did at [Underdog.io][], and I'll provide more examples at the bottom (TODO), but it's where we'll start.
 
 One thing you'll notice that's not on this list, is how much time each of these tasks takes.
 
-The nuance is that each of these tasks can be fast or slow depending on how much time has been invested in the process. **This is the nuance this article will be discussing.**
+The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is the nuance we'll be discussing.**
+
+The blueprint for how we can speed up a given task depends on a lot on the task, so once again, we'll focus on a specific example:
+
+-
+
+TODO: Talk through examples which cannot be automated as much (e.g. sales)
+
+TODO: Delegation model:
+
+- Eng -> Support -> Customer -> Support -> Eng
+- Support -> Customer -> Support
+- Customer
+
+- One-off commands run via SQL / REPL
+- One-off peer-reviewed script run via CLI
+- Committed script run via CLI
+- Committed script run via a button in an engineering only UI
+- Committed script run via a button in operational tooling UI
+- Self-serve action that user can take
+
+- No storage vs localStorage vs DB save
+
+- Manual review vs automated review for user-based input (e.g. ID verification)
+
+- Heroku single server vs Digital Ocean single server vs Digital Ocean load balancer + multi-server vs multi-provider
+  - Similarly deployment script
+
+- Architecture: Monolith vs SOA vs micro-services
+- Architecture: API + UI vs Monolith
+
+TODO: Pain tolerance for doing a task
+
+TODO: Time to make the donuts meme
+
+TODO: Every decision is a business decision (again) and YAGNI
+
+TODO: Decide on keeping article approachable to anyone vs focusing in on engineers with examples
+
+--------
+
+There's a few ways we can speed up a given task:
+
+- Automation
+- Specialization
+- Delegation
+- TODO: Any others?
 
 Not in the list but worth mentioning now:
 
@@ -45,6 +90,8 @@ Not in the list but worth mentioning now:
 - Hiring
 
 TODO: Example lists as well for Find Work and Standard Cyborg
+
+TODO: Talk through major moments like company pivots or running faster
 
 --------
 
