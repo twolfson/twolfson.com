@@ -11,27 +11,26 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
-# Operational tasks vs Product tasks
+# Operations vs features vs bugs
+As a startup engineer, tasks typically fall into 1 of 3 categories:
 
-For any given company, there's a core set of operational tasks. Without these regularly occurring, the business would stop functioning. Here's a historical example for [Underdog.io][], a curated job candidate <-> company marketplace:
-
-- Review new candidate applications
-- Send out weekly email of new candidates to companies
-- Onboard accepted candidates
-- Ensure accepted candidates are enjoying experience
-- Sell to new companies
-- Onboard new companies
-- Ensure onboarded companies are enjoying experience
+- Operational, something that's required to keep the business functioning
+  - e.g. For [Underdog.io][], a curated job candidate <-> company marketplace, we'd send out a weekly email of new candidates to companies
+  <!-- TODO: This is long, can we shorten it? -->
+- Feature, something to add or upgrade for our offerings
+  - e.g. Integrate Google Sign-In
+- Bug, something has gone wrong with an existing feature
+  - e.g. We saw a "Server Error" during a sign-up today
 
 [Underdog.io]: https://underdog.io/
 
-In addition, there are product tasks. These are features which add value but the business could keep funcitoning without. For example:
+# Prioritization
+Through the course of a day, I repeatedly perform the following mental arithmetic every time I discuss a task:
 
-- Migrate from an email based service to dashboard
-- Add a new registration field for diversity and inclusion
-- Integrate Google Sign-In
-
-*This is very handwavy (e.g. excludes expansion concepts) but generally the following processes should extrapolate well.*
+- Is this blocking anyone?
+- Was there a promised deadline?
+- Do we know how long this would/should take?
+- Is there anything we can do to reduce this down?
 
 # Time usage for operational tasks
 
