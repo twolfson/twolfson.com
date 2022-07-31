@@ -11,7 +11,9 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
 
-For any given company, there's a core set of operational tasks. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
+# Operational tasks vs Product tasks
+
+For any given company, there's a core set of operational tasks. Without these regularly occurring, the business would stop functioning. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -21,19 +23,47 @@ For any given company, there's a core set of operational tasks. Here's an exampl
 - Onboard new companies
 - Ensure onboarded companies are enjoying experience
 
-*I will provide more examples at the bottom. (TODO)*
-
 [Underdog.io]: https://underdog.io/
 
-When considering whether to improve one of these tasks or not, I consider the following:
+In addition, there are product tasks. These are features which add value but the business could keep funcitoning without. For example:
 
-- How much time is spent on a task?
-- How frequently do we expect to keep doing this task?
-- How long do we expect to keep doing this task for?
-- What value would we receive from completing this task?
-- What would happen if we remove or stop doing the task?
+- Migrate from an email based service to dashboard
+- Add a new registration field for diversity and inclusion
+- Integrate Google Sign-In
 
-The blueprint for how we can speed up a given task depends on a lot on the task, so I'm going to walk through various examples:
+*This is very handwavy (e.g. excludes expansion concepts) but generally the following processes should extrapolate well.*
+
+# Time usage for operational tasks
+
+[//]: # "Dunkin Donuts: Time to make the donuts"
+[//]: # "https://www.youtube.com/watch?v=XyZtMfMWONI"
+<p>It's "time to make the donuts":<br/>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XyZtMfMWONI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/></p>
+
+When analyzing operational tasks, I look at them through 2 lenses:
+
+- How much time will it cost to do this task right now?
+  - Is it just my time? Or are there multiple people involved?
+- What are the time cost vs savings for improving this task?
+  - How frequently does this task occur?
+  - How long do we expect to keep doing this task?
+  - Is it possible to stop doing this task?
+  - For each way we can improve it:
+    - How long would this improvement take?
+    - What would the current time cost be afterwards?
+    - Would there be any tangential pros/cons from this approach? (e.g. less human error)
+
+Let's
+
+"Do it until it hurts", "Pain tolerance", "Every decision is a business decision", "YAGNI"
+
+TODO: Might make sense to move to the bottom since technically product tasks become operational tasks through maintenance requirements.
+
+At this point, I'd like to call out a strong nuance that tricks people new to startups.<br/>The answer to "How long do we expect to keep doing this task?" is almost always very wrong, but you don't know it until it changes overnight.
+
+
+
+-----------
 
 ## Send out weekly batch of new candidates to companies
 For a starting point, we're going to begin with the contrived worst-case MVP implementation for candidate batches:
