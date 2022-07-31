@@ -7,15 +7,13 @@
   "summary": "TODO: Summarize me, and update keywords"
 }
 
-You're at a startup, you have a finite number of hours in a week. How do you prioritize between executing a task or improving its process?
+I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.
 
-<!-- Trying something new, like an intro hook to a YouTube video. Intro line then personal line as an aside -->
+In this article, I cover how I prioritize operational work against business priorities.
 
-*If you're new: Hi, I'm Todd. I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.*
+There's an (un)written list of competing tasks and priorities that organically occur from running a startup. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
 
-<!-- TODO: Does this stylistically work? Do we need something new in our UI? -->
-
-There's an unwritten list of competing tasks and priorities that organically occur from running a startup. Here's an example for [Underdog.io][], a curated job candidate <-> company marketplace:
+**Operational tasks:**
 
 - Review new candidate applications
 - Send out weekly batch of new candidates to companies
@@ -24,23 +22,24 @@ There's an unwritten list of competing tasks and priorities that organically occ
 - Sell to new companies
 - Onboard new companies
 - Ensure onboarded companies are enjoying experience
-- Find any highly requested features
-- Build said new features
+
+**Non-operational tasks:**
+
+- Build feature X
+- Improve
+- I will provide more examples at the bottom (TODO)
 
 [Underdog.io]: https://underdog.io/
 
-This is a **very** reductive list of what we did at [Underdog.io][], and I'll provide more examples at the bottom (TODO), but it's where we'll start.
+In addition to this list, there's an evergrowing backlog of feature requests and improvements which can be made to these processes.
 
-One thing you'll notice that's not on this list, is how much time each of these tasks takes.
-
-The nuance is that each task can be fast or slow, depending on how much time has been invested in the process. **This is the nuance we'll be discussing.<br/>i.e. The task takes time (usage), making it faster takes time (investing), and how do we balance those.**
+For each of these tasks, I give a priority weighting based on the following:
 
 - How much time is spent on a task?
-  - e.g. Does it take 5 minutes to do? 1 hour? Are multiple people involved?
 - How frequently do we expect to keep doing this task?
 - How long do we expect to keep doing this task for?
 - What value would we receive from completing this task?
-
+- What would happen if we remove or stop doing the task?
 
 The blueprint for how we can speed up a given task depends on a lot on the task, so I'm going to walk through various examples:
 
