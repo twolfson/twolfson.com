@@ -23,6 +23,13 @@ TODO: We're still missing nuance here like layout out upcoming due work by dates
 
 and honestly, getting into the weeds on personal process at this point. Losing the high value of the article for discussing time investment
 
+TODO: Rework this strictly to be on time investing, say prioritization is out of scope - explanation at bottom
+
+TODO: Google Forms survey:
+- Did you enjoy the article?
+- Would you like to hear about future articles? If so, how?
+- Would you like us to let you know if we start offering that? If so, what's your email?
+
 ---
 
 # Sizing up tasks
@@ -312,3 +319,8 @@ So operational, features, and bugs
 ---
 
 TODO: When to do all this prioritization math
+
+---
+
+Further realization: Prioritization looks different at every company
+due to how we communicate and orient
