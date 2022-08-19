@@ -1,0 +1,21 @@
+Prob too bespoke for broadly usable but maybe...?
+
+Always have a plan first
+Do the research to work through the plan
+Walk through the screens
+No screens? Talk to designer
+No designer? Think through the UX and mock or prototype them out
+    (mock vs prototype tradeoffs: time investment + longevity vs speed)
+    (also considerations around UI framework but more discourse for another time)
+
+Look through the code, consider all scenarios and edge cases
+Still just planning
+(need to tie back with prototyping somehow?)
+
+Discuss scope creep or cutting + timeline requirements
+
+Prioritize the plan
+
+Execute the plan
+
+Code review + landing process handwaving since bespoke to org and very very well documented
