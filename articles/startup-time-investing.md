@@ -11,6 +11,8 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
 
+TODO: Add a stronger hook up top, like the modes of transportation. Even if confusing but inkling of intrigue, then much better than dry start
+
 # Defining operational processes
 At a given company, there are one-off as well as recurring tasks that emerge as part of running the business.
 
@@ -25,25 +27,50 @@ Let's count the steps for the "slow and painful" version of account creation:
 
 1. Sales finishes signing a contract with Customer
 2. Sales notifies Engineering of the new registration
-3. Engineering has no documentation and prefers to use SQL directly
-4. They read through code, figure out the commands, and thankfully nothing goes wrong
-5. Partway through they realize they're missing a critical field (e.g. [database color](https://dilbert.com/strip/1995-11-17))
-6. Sales reaches out to the Customer
-7. Customer replies to Sales
-8. Sales notifies Engineering
-9. Engineering completes onboarding and notifies Sales
-10. Sales notifies customer
+3. Engineering has no documentation, reads through code, figures out the commands, and thankfully nothing goes wrong
+4. Partway through Engineering realize they're missing a critical field (e.g. [database color](https://dilbert.com/strip/1995-11-17)) and notifies Sales
+5. Sales reaches out to the Customer
+6. Customer replies to Sales
+7. Sales notifies Engineering
+8. Engineering completes onboarding and notifies Sales
+9. Sales notifies customer
 
 For the "fast and easy" version:
 
-1. Sales navigates through the internal tool that Engineering has set up for them
-2. Sales sends an invite to the customer to fill in forms and self-serve onboard themselves
+1. Customer contract signing triggers a webhook that Engineering set up
+2. The webhook creates an account and sends an invite link to the Customer to self-serve onboard themselves
 
-If you're an empath with low pain tolerance, then the latter "fast and easy" should feel a lot better for both you as well as the end user, the customer.
+If you're an empath with low pain tolerance for monotony, then the latter "fast and easy" should feel a lot better from the perspectives of yourself, the rest of your team, and the customer.
 
 If you don't feel this, then this article probably isn't for you =/
 
+# Incremental improvements
 So why did that first one feel so bad, what can we can we improve, and **when** can we find time to improve it?
+
+Why it felt so bad: It was monotonous (sometimes "hurry up and wait", sometimes something we've done 100 times before) as well as stressful (e.g. could easily typo some SQL).
+
+As for the other 2 questions, let's think about incremental improvements to get to "fast and easy", as well as how much time they'll take.
+
+The best low hanging fruit is that we haven't [invested in the fundamentals][] yet. These will pay dividends immediately (time saving vs time invested) and be long-lasting:
+
+- Creating documentation (aka runbooks) for such processes
+  - This would not only be for Engineering, with SQL commands for them to copy/paste
+  - but also be for Sales before they complete the initial handoff to Engineering
+
+[invested in the fundamentals]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#invest-in-fundamentals
+
+By doing this, we (1) remove the stress + speeds up step 3, and (2) eliminate steps 4-7. So the updated list looks like:
+
+1. Sales finishes signing a contract with Customer
+2. Sales goes through runbook, verifies no issues, and notifies Engineering of the new registration
+3. Engineering copies over commands and runs through them
+4. Engineering completes onboarding and notifies Sales
+5. Sales notifies customer
+
+Additionally, we now have a pattern for runbooks established in our company, and the habit can spread + be reusable for newly onboarded folks.
+
+*What about the one-off case:* Well, I'd argue that copying the commands as you go is comparable. It will allow you to go back and reuse those commands/notes.
+
 
 ----
 
