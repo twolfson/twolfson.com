@@ -9,115 +9,15 @@
 
 I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.
 
-In this article, I cover how I orient around business priorities, when to invest time in improving processes, and when to not.
+In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
 
-The following is a linear workflow that I go through at the start of every day, end of every day, and every time a new task is discussed. The frequency is so high is because startup priorities can shift daily (e.g. no longer shipping X on date Y but now date Z).
+This article will not cover my day-to-day prioritization practices, since I feel these are dependent on my preferences, my company's organizational tools, my company's size, and similar nuanced factors.
+<!-- Short version of these can be found in `git` history though, https://github.com/twolfson/twolfson.com/blob/66ff71b375c6e8e8da7bf3386a802a74a5fb5b16/articles/startup-time-investing.md?plain=1 -->
 
-# Obligated work first
-To keep expectations consistent and velocity high, I like to complete obligated work first.<br/>That is, work where either I'm blocking someone or there was a promised deadline (e.g. code review for person X, output data for person Y).
+# Defining operational processes
 
-# Non-obligated work second
-As expected, we then prioritize non-obligated work second (e.g. build feature X, patch bug Y).
 
-TODO: We're still missing nuance here like layout out upcoming due work by dates
-
-and honestly, getting into the weeds on personal process at this point. Losing the high value of the article for discussing time investment
-
-TODO: Rework this strictly to be on time investing, say prioritization is out of scope - explanation at bottom
-
-TODO: Google Forms survey:
-- Did you enjoy the article?
-- Would you like to hear about future articles? If so, how?
-- Would you like us to let you know if we start offering that? If so, what's your email?
-
----
-
-# Sizing up tasks
-Within these obligated vs non-obligated groupings, I then do another pass based on the type of task. As a programmer, the categories usually are:
-
-- Operational, something that's required to keep the business functioning
-  - e.g. For [Underdog.io][], a curated job candidate <-> company marketplace, we'd send out a weekly email of new candidates to companies
-  <!-- TODO: This is long, can we shorten it? -->
-- Feature, something to add or upgrade for our offerings
-  - e.g. Integrate Google Sign-In
-- Bug, something has gone wrong with an existing feature
-  - e.g. We saw a "Server Error" during a sign-up today
-
-[Underdog.io]: https://underdog.io/
-
-*Note: It's important to remember that at a startup, I'm not just sizing up my work but also looking for inefficiencies in my coworker's work and how I can help reduce those.<br/>
-i.e. On a team of 3, if only the actor thought about their work, it's 1 head, whereas all 3 is 3 heads.*
-
-# Sizing up operational tasks
-[//]: # "Dunkin Donuts: Time to make the donuts"
-[//]: # "https://www.youtube.com/watch?v=XyZtMfMWONI"
-<p>It's "time to make the donuts":<br/>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XyZtMfMWONI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/></p>
-
-When analyzing operational tasks, I look at them through 2 lenses:
-
-- How much time will it cost to do this task right now?
-  - Is it just my time? Or are there multiple people involved?
-- What are the time cost vs savings for improving this task?
-  - How frequently does this task occur?
-  - How long do we expect to keep doing this task?
-  - Is it possible to stop doing this task?
-  - For each way we can improve it:
-    - How long would this improvement take?
-    - What would the current time cost be afterwards?
-    - Would there be any tangential pros/cons from this approach? (e.g. less human error)
-
-Let's talk through a historical example. Every week [Underdog.io][] would send out a weekly email with new candidates to companies. Here's the context:
-
-- All data was stored in a Google Sheet as database ([explanation](/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision))
-- Candidates specified companies to opt-out from (e.g. current employer)
-- New candidates were copy/pasted by hand for each company (due to opt-out), pasted into email, and sent
-
-Now let's talk through our questions:
-
-- How much time will it cost to do this task right now?
-  - *Q: Is it just my time? Or are there multiple people involved?*
-  - A: 1 person (non-engineer), historical guesstimate 10 minutes per company
-  - Thus, while it's fast with a small customer base, it definitely won't scale up
-- What are the time cost vs savings for improving this task?
-  - *Q: How frequently does this task occur?*
-  - A: Every week<br/><br/>
-  - *Q: How long do we expect to keep doing this task?*
-  - A: Indefinite until business model changes
-    - Read as: A fuzzy 6 months. i.e. In my experience, in startups if anyone tries to predict beyond 6 months, then the guess is usually wrong<br/><br/>
-  - *Q: Is it possible to stop doing this task?*
-  - A: Not at the moment, though possibly if we moved to a dashboard<br/><br/>
-  - *Q: How can we improve it?*
-  - A: Option A: Build an internal tool to generate and review batches
-    - *Q: How long would this improvement take?*
-    - A: With existing internal tool infrastructure, 2 weeks of engineering time<br/><br/>
-    - *Q: What would the current time cost be afterwards?*
-    - A: Significantly reduced to only engineering maintenance (its own operational task)<br/><br/>
-    - *Q: Would there be any tangential pros/cons from this approach? (e.g. less human error)*
-    - A: Pro: Engineering can add checks for opt-out in case someone had a typo
-    - A: Pro: Sets up path for full automation after trust established
-    - A: Con: Lose flexibility to put human touch into each email (without building for that)
-  - A: Other options: Skipping over these in example
-
-So we've laid out our options and the time cost comparisons. How do we determine if this is a current priority or not?
-
-Honestly, this is kind of an artform that comes from experience =/ I lean on a few principles here:
-
-- Pain tolerance
-  - How much do I dislike doing this task? Or do others dislike doing it?
-  - A [current coworker][Ryan Barrett] has phrased this as "Do it until it hurts"
-- If we pick up this this task now, what is being deprioritized? ([Every decision is a business decision][])
-- [Build exactly what you need][] or [YAGNI][]
-
-[Ryan Barrett]: https://snarfed.org/
-[Every decision is a business decision]: /2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
-[build exactly what you need]: /2021-06-24-lessons-of-a-startup-engineer#build-exactly-what-you-need
-[YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
-
-In [Underdog.io][]'s case, this was very high priority since the company list kept growing (good problem to have) so it was consuming full Sundays for that 1 person.
-
-# Dialog on time investment
-At this point, I'd like to reframe how I think about time investment for operational tasks.
+# Modes of transportation
 
 It's like for each task, we're investing in a better mode of transportation. e.g. We might start as a pedestrian, then get a bicycle, and eventually we get to a rocketship!
 
@@ -324,3 +224,8 @@ TODO: When to do all this prioritization math
 
 Further realization: Prioritization looks different at every company
 due to how we communicate and orient
+
+TODO: Google Forms survey:
+- Did you enjoy the article?
+- Would you like to hear about future articles? If so, how?
+- Would you like us to let you know if we start offering that? If so, what's your email?
