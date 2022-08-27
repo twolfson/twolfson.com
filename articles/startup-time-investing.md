@@ -51,15 +51,18 @@ Why it felt so bad: It was monotonous (sometimes "hurry up and wait", sometimes 
 
 As for the other 2 questions, let's think about incremental improvements to get to "fast and easy", as well as how much time they'll take.
 
-The best low hanging fruit is that we haven't [invested in the fundamentals][] yet. These will pay dividends immediately (time saving vs time invested) and be long-lasting:
-
-- Creating documentation (aka runbooks) for such processes
-  - This would not only be for Engineering, with SQL commands for them to copy/paste
-  - but also be for Sales before they complete the initial handoff to Engineering
+## Runbooks and note taking
+The biggest impact low hanging fruit is that we haven't [invested in the fundamentals][] yet around good documentation practices. Most investment in fundamentals will pay dividends immediately (time saving vs time invested) and be long-lasting.
 
 [invested in the fundamentals]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#invest-in-fundamentals
 
-By doing this, we (1) remove the stress + speeds up step 3, and (2) eliminate steps 4-7. So the updated list looks like:
+In this scenario, I would (1) take notes as I run through the process, then (2) clean up the notes afterward for consumption by others. In the end, this documentation is called a runbook or a workflow.
+
+By doing this we now have commands for Engineering to copy/paste, thus stress less and spend less time about getting code right next time.
+
+Additionally we've established a convention for the rest of the company to adopt, e.g. Sales + Engineering can collaborate on a runbook to verify all fields are filled in before handing off to Engineering, thus eliminating steps 4-7.
+
+The new process now looks like:
 
 1. Sales finishes signing a contract with Customer
 2. Sales goes through runbook, verifies no issues, and notifies Engineering of the new registration
@@ -67,9 +70,42 @@ By doing this, we (1) remove the stress + speeds up step 3, and (2) eliminate st
 4. Engineering completes onboarding and notifies Sales
 5. Sales notifies customer
 
-Additionally, we now have a pattern for runbooks established in our company, and the habit can spread + be reusable for newly onboarded folks.
+*What about the one-off case?:* I'd argue that this still has benefits, it communicates to others what you did (to catch issues early) and allows reuse in case it's not so one-off after all.
 
-*What about the one-off case:* Well, I'd argue that copying the commands as you go is comparable. It will allow you to go back and reuse those commands/notes.
+*Why would I do this instead of scripting?:* Sometimes you're under a very tight deadline, and writing a script is never just writing a script. There's also an authoring tax (i.e. time cost for testing and usage documentation) as well as maintenance tax (i.e. time cost for handling schema changes).
+
+## Scripting
+1. Sales finishes signing a contract with Customer
+2. Sales goes through runbook, verifies no issues, and notifies Engineering of the new registration
+3. Engineering runs a script
+4. Engineering completes onboarding and notifies Sales
+5. Sales notifies customer
+
+## Internal tool
+If there isn't yet an internal tool site at your company, then you're missing a huge fundamental
+
+1. Sales finishes signing a contract with Customer
+2. Sales navigates to internal tool and onboard the custom
+3. Sales notifies customer
+
+## Self-serve
+1. Customer contract signing triggers a webhook that Engineering set up
+2. The webhook creates an account and sends an invite link to the Customer to self-serve onboard themselves
+
+## No implementation
+What would this even look like? Just cutting scope?
+
+YAGNI definitely
+
+## Skipping steps
+
+## When to invest in the next step
+
+## More examples
+Real world Underdog.io example
+
+Generating reports
+
 
 
 ----
