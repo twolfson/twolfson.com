@@ -14,11 +14,11 @@ In this article, I cover how I orient around operational processes, when to inve
 # Modes of transportation
 An operational task is one that emerges as part of running a business (e.g. generating reports, onboarding customers, setting up a server).
 
-Each these tasks has costs associated with it. These are both the time it takes to do the task and the amount you've invested in making it faster.
+Each of these tasks has a time cost associated with it (time to do the task) as well as the amount you've invested to make it faster.
 
 ![Bar graph of time spent vs time invested](/public/images/articles/startup-time-investing/time-comparison.svg)
 
-I often reframe this as a mode of transportation. i.e. I'm considering investing (time building or money buying) into a better mode of transportation and need to understand if it's worth it.
+I like to reframe the investment as a mode of transportation. i.e. If we invest the time and/or money into a bike/car/rocketship/etc, is it worth it?
 
 ![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
 
