@@ -22,19 +22,16 @@ I like to reframe the investment as a mode of transportation. i.e. If we invest 
 
 ![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
 
-> Aside: One of my engineering values is velocity (internal and external perception), so it makes sense I lean into this analogy.
+> Aside: One of my [engineering values][] is velocity (internal and external perception), so it makes sense that I lean into this analogy.
 
-# Defining operational processes
-At a given company, there are one-off as well as recurring tasks that emerge as part of running the business.
-
-Example of a one-off task: Company X is fundraising and to help pitch better, they'd like a report of how many users were active in the last month.
-
-Example of a recurring task: Company Y is a sales-oriented company, thus it manually performs account creation and starts onboarding for a new customer.
+[engineering values]: https://vimeo.com/230142234
 
 # Pain tolerance
-For each of these examples, there's a wide range of possibility for how slow and painful to how quick and easy it can be done.
+Let's zoom in on an example recurring task. We're going to start with a contrived example but will have real-world examples at the bottom.
 
-Let's count the steps for the "slow and painful" version of account creation:
+At Company X, they're a sales-oriented company and manually perform account creation to onboard a new customer.
+
+On the no time invested side, we have the "slow and painful" version:
 
 1. Sales finishes signing a contract with Customer
 2. Sales notifies Engineering of the new registration
@@ -44,11 +41,11 @@ Let's count the steps for the "slow and painful" version of account creation:
 6. Customer replies to Sales
 7. Sales notifies Engineering
 8. Engineering completes onboarding and notifies Sales
-9. Sales notifies customer
+9. Sales notifies Customer
 
-For the "fast and easy" version:
+On the maximal side, it's "fast and easy":
 
-1. Customer contract signing triggers a webhook that Engineering set up
+1. Customer signs contract, a webhook is triggered (set up by Engineering)
 2. The webhook creates an account and sends an invite link to the Customer to self-serve onboard themselves
 
 If you're an empath with low pain tolerance for monotony, then the latter "fast and easy" should feel a lot better from the perspectives of yourself, the rest of your team, and the customer.
@@ -58,20 +55,20 @@ If you don't feel this, then this article probably isn't for you =/
 # Incremental improvements
 So why did that first one feel so bad, what can we can we improve, and **when** can we find time to improve it?
 
-Why it felt so bad: It was monotonous (sometimes "hurry up and wait", sometimes something we've done 100 times before) as well as stressful (e.g. could easily typo some SQL).
+Why it felt so bad: It was monotonous (sometimes "hurry up and wait", sometimes we've done it 100x before) as well as stressful (e.g. easily typo a command).
 
 As for the other 2 questions, let's think about incremental improvements to get to "fast and easy", as well as how much time they'll take.
 
 ## Runbooks and note taking
-The biggest impact low hanging fruit is that we haven't [invested in the fundamentals][] yet around good documentation practices. Most investment in fundamentals will pay dividends immediately (time saving vs time invested) and be long-lasting.
+The biggest impact low hanging fruit is that we haven't yet [invested in the fundamentals][] around documentation.
 
 [invested in the fundamentals]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#invest-in-fundamentals
 
-In this scenario, I would (1) take notes as I run through the process, then (2) clean up the notes afterward for consumption by others. In the end, this documentation is called a runbook or a workflow.
+In this scenario, I take notes during the process, then clean up the notes afterwards for consumption by others. This form of documentation is called a runbook or a workflow.
 
-By doing this we now have commands for Engineering to copy/paste, thus stress less and spend less time about getting code right next time.
+By doing this, we now have commands to copy/paste, thus stress less and spend less time about getting code right next time.
 
-Additionally we've established a convention for the rest of the company to adopt, e.g. Sales + Engineering can collaborate on a runbook to verify all fields are filled in before handing off to Engineering, thus eliminating steps 4-7.
+Additionally, we've established a convention for the rest of the company to adopt. e.g. Sales + Engineering can create a runbook to verify all fields are filled in before handing off to Engineering, thus eliminating steps 4-7.
 
 The new process now looks like:
 
@@ -81,15 +78,23 @@ The new process now looks like:
 4. Engineering completes onboarding and notifies Sales
 5. Sales notifies customer
 
-*What about the one-off case?:* I'd argue that this still has benefits, it communicates to others what you did (to catch issues early) and allows reuse in case it's not so one-off after all.
+*What about a one-off process, like a report?:* I'd argue that documenting steps as you go still has its benefits. It communicates to others what you did (catch issues + education) and allows reuse if it's not a one-off after all.
 
-*Why would I do this instead of scripting?:* Sometimes you're under a very tight deadline, and writing a script is never just writing a script. There's also an authoring tax (i.e. time cost for testing and usage documentation) as well as maintenance tax (i.e. time cost for handling schema changes).
+*Why would I do this instead of scripting?:* Sometimes you're under a very tight deadline, and writing a script has additional (often forgotten) time costs. For example, authoring tax (testing, usage documentation) and maintenance tax (e.g. schema changes).
 
 ## Scripting
+The next improvement is scripting, i.e. creating a CLI utility to mimic what's being done in the runbook.
+
+This has a much steeper time investment than a runbook, but it's also the first step to abstracting Engineering from an operational task (i.e. if core written modularly, then can easily repurpose code).
+
+Some additional benefits are: We can be more confident in conditional logic, accept configuration parameters, and add testing (if desired).
+
+The new process now looks like:
+
 1. Sales finishes signing a contract with Customer
 2. Sales goes through runbook, verifies no issues, and notifies Engineering of the new registration
-3. Engineering runs a script
-4. Engineering completes onboarding and notifies Sales
+3. Engineering runs the account creation script
+4. Engineering notifies Sales
 5. Sales notifies customer
 
 ## Internal tool
@@ -118,6 +123,8 @@ Real world Underdog.io example
 Generating reports
 
 Server setup (learned this one the hard way)
+
+TODO: Auxilary relevant: When to test vs not, prob its own article tbh...
 
 
 ----
