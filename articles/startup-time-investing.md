@@ -11,14 +11,43 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
 
-This article will not cover my day-to-day prioritization practices, since I feel these are dependent on my preferences, my company's organizational tools, my company's size, and similar nuanced factors.
-<!-- Short version of these can be found in `git` history though, https://github.com/twolfson/twolfson.com/blob/66ff71b375c6e8e8da7bf3386a802a74a5fb5b16/articles/startup-time-investing.md?plain=1 -->
-
 # Defining operational processes
+At a given company, there are one-off as well as recurring tasks that emerge as part of running the business.
 
+Example of a one-off task: Company X is fundraising and to help pitch better, they'd like a report of how many users were active in the last month.
 
-# Modes of transportation
+Example of a recurring task: Company Y is a sales-oriented company, thus it manually performs account creation and starts onboarding for a new customer.
 
+# Pain tolerance
+For each of these examples, there's a wide range of possibility for how slow and painful to how quick and easy it can be done.
+
+Let's count the steps for the "slow and painful" version of account creation:
+
+1. Sales finishes signing a contract with Customer
+2. Sales notifies Engineering of the new registration
+3. Engineering has no documentation and prefers to use SQL directly
+4. They read through code, figure out the commands, and thankfully nothing goes wrong
+5. Partway through they realize they're missing a critical field (e.g. [database color](https://dilbert.com/strip/1995-11-17))
+6. Sales reaches out to the Customer
+7. Customer replies to Sales
+8. Sales notifies Engineering
+9. Engineering completes onboarding and notifies Sales
+10. Sales notifies customer
+
+For the "fast and easy" version:
+
+1. Sales navigates through the internal tool that Engineering has set up for them
+2. Sales sends an invite to the customer to fill in forms and self-serve onboard themselves
+
+If you're an empath with low pain tolerance, then the latter "fast and easy" should feel a lot better for both you as well as the end user, the customer.
+
+If you don't feel this, then this article probably isn't for you =/
+
+So why did that first one feel so bad, what can we can we improve, and **when** can we find time to improve it?
+
+----
+
+- Or let's go to something even
 It's like for each task, we're investing in a better mode of transportation. e.g. We might start as a pedestrian, then get a bicycle, and eventually we get to a rocketship!
 
 [//]: # "https://quickchart.io/sandbox#%7B%0A%20%20%22type%22%3A%20%22horizontalBar%22%2C%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22labels%22%3A%20%5B%0A%20%20%20%20%20%20%22January%22%2C%0A%20%20%20%20%20%20%22February%22%2C%0A%20%20%20%20%20%20%22March%22%2C%0A%20%20%20%20%20%20%22April%22%2C%0A%20%20%20%20%20%20%22May%22%2C%0A%20%20%20%20%20%20%22June%22%2C%0A%20%20%20%20%20%20%22July%22%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22datasets%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%201%22%2C%0A%20%20%20%20%20%20%20%20%22backgroundColor%22%3A%20%22rgba(255%2C%2099%2C%20132%2C%200.5)%22%2C%0A%20%20%20%20%20%20%20%20%22borderColor%22%3A%20%22rgb(255%2C%2099%2C%20132)%22%2C%0A%20%20%20%20%20%20%20%20%22borderWidth%22%3A%201%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20-32%2C%0A%20%20%20%20%20%20%20%20%20%2062%2C%0A%20%20%20%20%20%20%20%20%20%2064%2C%0A%20%20%20%20%20%20%20%20%20%2041%2C%0A%20%20%20%20%20%20%20%20%20%20-31%2C%0A%20%20%20%20%20%20%20%20%20%20-32%2C%0A%20%20%20%20%20%20%20%20%20%2087%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%202%22%2C%0A%20%20%20%20%20%20%20%20%22backgroundColor%22%3A%20%22rgba(54%2C%20162%2C%20235%2C%200.5)%22%2C%0A%20%20%20%20%20%20%20%20%22borderColor%22%3A%20%22rgb(54%2C%20162%2C%20235)%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%209%2C%0A%20%20%20%20%20%20%20%20%20%20-100%2C%0A%20%20%20%20%20%20%20%20%20%20-13%2C%0A%20%20%20%20%20%20%20%20%20%2064%2C%0A%20%20%20%20%20%20%20%20%20%20-57%2C%0A%20%20%20%20%20%20%20%20%20%2026%2C%0A%20%20%20%20%20%20%20%20%20%2020%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%20%20%7D%2C%0A%20%20%22options%22%3A%20%7B%0A%20%20%20%20%22elements%22%3A%20%7B%0A%20%20%20%20%20%20%22rectangle%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22borderWidth%22%3A%202%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22responsive%22%3A%20true%2C%0A%20%20%20%20%22legend%22%3A%20%7B%0A%20%20%20%20%20%20%22position%22%3A%20%22right%22%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22title%22%3A%20%7B%0A%20%20%20%20%20%20%22display%22%3A%20true%2C%0A%20%20%20%20%20%20%22text%22%3A%20%22Chart.js%20Horizontal%20Bar%20Chart%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D"
