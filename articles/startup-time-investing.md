@@ -106,6 +106,7 @@ Real world Underdog.io example
 
 Generating reports
 
+Server setup (learned this one the hard way)
 
 
 ----
