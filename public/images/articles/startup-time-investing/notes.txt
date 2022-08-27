@@ -1,0 +1,3 @@
+Emoji sources:
+- Pedestrian emoji, https://github.com/googlefonts/noto-emoji/blob/main/svg/emoji_u1f6b6.svg
+- Car emoji, https://github.com/googlefonts/noto-emoji/blob/main/svg/emoji_u1f697.svg

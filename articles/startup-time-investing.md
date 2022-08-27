@@ -11,7 +11,16 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
 
-TODO: Add a stronger hook up top, like the modes of transportation. Even if confusing but inkling of intrigue, then much better than dry start
+# Modes of transportation
+An operational task is one that emerges as part of running a business (e.g. generating reports, onboarding customers, setting up a server).
+
+Each these tasks has costs associated with it. These are both the time it takes to do the task and the amount you've invested in making it faster.
+
+![Bar graph of time spent vs time invested](/public/images/articles/startup-time-investing/time-comparison.svg)
+
+I often reframe this as a mode of transportation. i.e. I'm considering investing (time building or money buying) into a better mode of transportation and need to understand if it's worth it.
+
+![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
 
 # Defining operational processes
 At a given company, there are one-off as well as recurring tasks that emerge as part of running the business.
