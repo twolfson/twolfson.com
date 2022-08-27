@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="427.31381"
-   height="367.35638"
-   viewBox="0 0 113.06011 97.196375"
+   height="327.35638"
+   viewBox="0 0 113.06011 86.613041"
    version="1.1"
    id="svg8"
    sodipodi:docname="time-comparison-with-modes.svg"
@@ -145,9 +145,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="409.54225"
-     inkscape:cy="-95.7416"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="310.59669"
+     inkscape:cy="138.95723"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -178,77 +178,77 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(27.134539,-216.27433)">
+     transform="translate(27.134539,-226.85767)">
     <rect
        style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.31177887;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect822-3-5"
        width="3.058424"
        height="7.3499117"
        x="17.918814"
-       y="233.91245" />
+       y="239.20404" />
     <rect
        style="opacity:1;fill:#447821;fill-opacity:1;stroke:none;stroke-width:0.31870207;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect822-7"
        width="3.1957588"
        height="7.3499117"
        x="15.165577"
-       y="233.91245" />
+       y="239.20404" />
     <rect
        style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.31487465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect822-3"
        width="3.1194618"
        height="7.3499117"
        x="12.625973"
-       y="233.91245" />
+       y="239.20404" />
     <rect
        style="opacity:1;fill:#447821;fill-opacity:1;stroke:none;stroke-width:0.28834239;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect822"
        width="2.6159008"
        height="7.3499117"
        x="10.513634"
-       y="233.91245" />
+       y="239.20404" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="10.545536"
-       y="226.16727"
+       y="231.45886"
        id="text886"><tspan
          sodipodi:role="line"
          id="tspan884"
          x="10.545536"
-         y="226.16727"
+         y="231.45886"
          style="font-size:6.3499999px;stroke-width:0.26458332">Generating a report</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="-15.922476"
-       y="238.82422"
+       y="244.11581"
        id="text886-3"><tspan
          sodipodi:role="line"
          id="tspan884-5"
          x="-15.922476"
-         y="238.82422"
+         y="244.11581"
          style="font-size:4.93888903px;stroke-width:0.26458332">Time spent</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="-21.953804"
-       y="251.92041"
+       y="257.21204"
        id="text886-3-6"><tspan
          sodipodi:role="line"
          id="tspan884-5-2"
          x="-21.953804"
-         y="251.92041"
+         y="257.21204"
          style="font-size:4.93888903px;stroke-width:0.26458332">Time invested</tspan></text>
     <rect
-       y="247.14166"
+       y="252.43326"
        x="10.513634"
        height="7.3499117"
        width="10.423174"
        id="rect943"
        style="opacity:1;fill:#2c5aa0;fill-opacity:1;stroke:none;stroke-width:0.57556957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       y="283.71054"
+       y="289.00229"
        x="10.513634"
        height="7.3499117"
        width="41.692696"
@@ -256,34 +256,34 @@
        style="opacity:1;fill:#447821;fill-opacity:1;stroke:none;stroke-width:1.15113926;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text957"
-       y="275.96536"
+       y="281.25711"
        x="10.545536"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-size:6.3499999px;stroke-width:0.26458332"
-         y="275.96536"
+         y="281.25711"
          x="10.545536"
          id="tspan955"
          sodipodi:role="line">Setting up a server</tspan></text>
     <text
        id="text961"
-       y="288.62231"
+       y="293.91406"
        x="-15.922476"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-size:4.93888903px;stroke-width:0.26458332"
-         y="288.62231"
+         y="293.91406"
          x="-15.922476"
          id="tspan959"
          sodipodi:role="line">Time spent</tspan></text>
     <text
        id="text965"
-       y="301.71851"
+       y="307.01025"
        x="-21.953804"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-size:4.93888903px;stroke-width:0.26458332"
-         y="301.71851"
+         y="307.01025"
          x="-21.953804"
          id="tspan963"
          sodipodi:role="line">Time invested</tspan></text>
@@ -293,25 +293,25 @@
        width="2.6159353"
        height="7.3499117"
        x="10.513634"
-       y="296.93976" />
+       y="302.23151" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21059608px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 10.385371,231.37337 v 27.00759"
+       d="m 10.385371,236.66507 v 27.00759"
        id="path820"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
        id="path945"
-       d="m 10.385371,281.17145 v 27.00759"
+       d="m 10.385371,286.46315 v 27.00759"
        style="fill:none;stroke:#000000;stroke-width:0.21059608px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
        id="text1039"
-       y="251.92041"
+       y="257.21204"
        x="23.500441"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-size:4.93888903px;stroke-width:0.26458332"
-         y="251.92041"
+         y="257.21204"
          x="23.500441"
          id="tspan1037"
          sodipodi:role="line">(built a car)</tspan></text>
@@ -319,15 +319,15 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="15.120072"
-       y="302.18115"
+       y="307.4729"
        id="text1043-1"><tspan
          sodipodi:role="line"
          id="tspan1041-2"
          x="15.120072"
-         y="302.18115"
+         y="307.4729"
          style="font-size:4.93888903px;stroke-width:0.26458332">(pedestrian, on foot)</tspan></text>
     <g
-       transform="matrix(-0.10002675,0,0,0.09971944,63.918991,280.55699)"
+       transform="matrix(-0.10002675,0,0,0.09971944,63.918991,285.84869)"
        id="g957">
       <g
          id="head">
@@ -597,7 +597,7 @@
       </g>
     </g>
     <g
-       transform="matrix(-0.12805912,0,0,0.12805912,39.563794,227.21962)"
+       transform="matrix(-0.12805912,0,0,0.12805912,39.563794,232.51132)"
        id="g859">
       <path
          id="path2-2"

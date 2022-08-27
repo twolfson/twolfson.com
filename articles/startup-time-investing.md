@@ -22,6 +22,8 @@ I like to reframe the investment as a mode of transportation. i.e. If we invest 
 
 ![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
 
+> Aside: One of my engineering values is velocity (internal and external perception), so it makes sense I lean into this analogy.
+
 # Defining operational processes
 At a given company, there are one-off as well as recurring tasks that emerge as part of running the business.
 
