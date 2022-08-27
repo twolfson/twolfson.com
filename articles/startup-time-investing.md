@@ -18,9 +18,11 @@ Each of these tasks has a time cost associated with it (time to do the task) as 
 
 ![Bar graph of time spent vs time invested](/public/images/articles/startup-time-investing/time-comparison.svg)
 
-I like to reframe the investment as a mode of transportation. i.e. If we invest the time and/or money into a bike/car/rocketship/etc, is it worth it?
+I like to reframe the investment as a mode of transportation. i.e. If we invest the time and/or money into a bike/car/rocketship/etc for this task, is it worth it?
 
 ![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
+
+To reiterate, these investments are usually independent from each other, so a rocketship for generating reports is unlikely reusable for setting up a server.
 
 > Aside: One of my [engineering values][] is velocity (internal and external perception), so it makes sense that I lean into this analogy.
 
@@ -157,6 +159,7 @@ Figuring out time costs for each of these levels depends on:
 - Your and your coworker's experience with this system
 - Other heuristics specific to your company
 - Availabilities in your priorities (i.e. by choosing to do this, you're choosing to not do something else)
+- Is there a hard deadline on this task? Would failing to finish on time jeopardize something?
 
 Once you've sorted out the various costs, then you can compare to the value gained:
 
@@ -192,51 +195,12 @@ Server setup (learned this one the hard way)
 
 TODO: Auxilary relevant: When to test vs not, prob its own article tbh...
 
+TODO: Link to Lessons of Startup Engineer
+
+Deployments
+
 
 ----
-
-However, if you realize that you no longer need to do a given task, then you can't get a refund on that time spent. i.e. You can't get a refund on your rocketship.
-
-*Note: Some improvements may level up multiple operational tasks concurrently (e.g. internal tools, developer tooling), which is always great.*
-
-*Tangent: This dialog also plays well "build vs buy" considerations, except it's money spent instead of time spent.*
-
----
----
----
-
-- Do we know how long this would/should take?
-- Is there anything we can do to reduce this down?
-
-If it's a blocker or has a promised deadline, I usually then verify that it *can* be done within a reasonable timeframe.
-
-i.e. If we don't know how long it should take, I do the work here (e.g. for bugs, triage them; for features in a new domain, research and/or proof of concept them).
-
-Once that's settled, we can either move ahead with that or start thinking/discussing how to reduce it down into something that will work
-
-TODO: Finish the thought here, feel like we missed a paragraph
-
-----
-----
-----
-----
-----
-
-# Operations vs features vs bugs
-As a startup engineer, tasks typically fall into 1 of 3 categories:
-
-
-# Time usage for operational tasks
-
--------
-
-TODO: Might make sense to move to the bottom since technically product tasks become operational tasks through maintenance requirements.
-
-At this point, I'd like to call out a strong nuance that tricks people new to startups.<br/>The answer to "How long do we expect to keep doing this task?" is almost always very wrong, but you don't know it until it changes overnight.
-
-<!-- TODO: Relevant XKCD? https://xkcd.com/1205/ -->
-
------------
 
 ## Send out weekly batch of new candidates to companies
 For a starting point, we're going to begin with the contrived worst-case MVP implementation for candidate batches:
@@ -262,133 +226,13 @@ In fact, this was one of my first tasks at Underdog.io =)
 
 -
 
-TODO: Talk through examples which cannot be automated as much (e.g. sales)
-
-TODO: Delegation model:
-
-- Eng -> Support -> Customer -> Support -> Eng
-- Support -> Customer -> Support
-- Customer
-
-- One-off commands run via SQL / REPL
-- One-off peer-reviewed script run via CLI
-- Committed script run via CLI
-- Committed script run via a button in an engineering only UI
-- Committed script run via a button in operational tooling UI
-- Self-serve action that user can take
-
-- No storage vs localStorage vs DB save
-
-- Manual review vs automated review for user-based input (e.g. ID verification)
-
-- Heroku single server vs Digital Ocean single server vs Digital Ocean load balancer + multi-server vs multi-provider
-  - Similarly deployment script
-
-- Architecture: Monolith vs SOA vs micro-services
-- Architecture: API + UI vs Monolith
-
-TODO: Pain tolerance for doing a task
-
 TODO: Time to make the donuts meme
-
-TODO: Every decision is a business decision (again) and YAGNI
-
-TODO: Decide on keeping article approachable to anyone vs focusing in on engineers with examples
-
-TODO: Talk through various company hats?
-
---------
 
 There's a few ways we can speed up a given task:
 
-- Automation
+Not mentioned:
 - Specialization
 - Delegation
-- TODO: Any others?
-
-Not in the list but worth mentioning now:
-
-- Building internal tools
-- Building scripts
-- Technical decisions as business decisions
-- YAGNI again
-- Hiring
-
-TODO: Example lists as well for Find Work and Standard Cyborg
-
-TODO: Talk through major moments like company pivots or running faster
-
---------
-
-Example list:
-
--
-
-This
-<!-- TODO: Rework this content, def don't need upfront piece, just easier to start writing like this -->
-
-In my last post (startup engineering lessons), from a long time ago, I'd mentioned building for run in a certain direction.
-
-I've tried to strain this analogy more than it goes, and realized it's a different once entirely
-
-It's more like a compass with many different directions (or like a spider chart if that's your thing)
-
-TODO: Insert an image
-<!-- /home/todd/github/twolfson.com/articles/startup-time-investing/compass.jpg -->
-<!-- TODO: Polish up image -->
-
-"""
-Standard was a whole new product
-Underdog was integrating more systems into an SOA
-Beyond just engineering. Do business relationships change? Business model? Level of interaction for customers? product market fit
-"""
-
-I also called this velocity in original summary?
-
-I guess there is an implication that you also don't want to run too fast in a given direction?
-
----
-
-Programmers: This includes operational tasks like deployments
-
----
-
-TODO. Read old post for repetition
-
----
-
-Maybe categorization or characterization of tasks
-Bug reports fit neither mode since it's about people
-
-Prob no good system for all tasks
-More of a framework for orienting
-
----
-
-Arrows are important because they represent velocity
-
----
-
-
-Did not cover handling blocking tasks. Maybe worth an online mention then longer call-out at bottom
-
----
-
-Focus on just product eng tasks
-So operational, features, and bugs
-
----
-
-2x2 matrix layout, technically better communication but feels lacking for tension and very reductive of nuance that they each get invested in their own way
-
----
-
-TODO: When to do all this prioritization math
-
----
-
-Further realization: Prioritization looks different at every company
-due to how we communicate and orient
 
 TODO: Google Forms survey:
 - Did you enjoy the article?
