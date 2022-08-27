@@ -83,7 +83,7 @@ The new process now looks like:
 *Why would I do this instead of scripting?:* Sometimes you're under a very tight deadline, and writing a script has additional (often forgotten) time costs. For example, authoring tax (testing, usage documentation) and maintenance tax (e.g. schema changes).
 
 ## Scripting
-The next improvement is scripting, i.e. creating a CLI utility to mimic what's being done in the runbook.
+The next improvement is scripting, i.e. creating a CLI utility to automate what's being done in the runbook.
 
 This has a much steeper time investment than a runbook, but it's also the first step to abstracting Engineering from an operational task (i.e. if core written modularly, then can easily repurpose code).
 
@@ -98,11 +98,37 @@ The new process now looks like:
 5. Sales notifies customer
 
 ## Internal tool
-If there isn't yet an internal tool site at your company, then you're missing a huge fundamental
+An internal tool is an employee-only site to look up internal data as well as perform common actions. Examples include:
+
+[Rails Admin](https://github.com/railsadminteam/rails_admin)
+
+![Screenshot of Rails Admin](/public/images/articles/startup-time-investing/rails-admin.webp)
+
+[Django Admin](https://docs.djangoproject.com/en/stable/ref/contrib/admin/)
+
+![Screenshot of Django Admin](/public/images/articles/startup-time-investing/django-admin.png)
+
+[Retool](https://retool.com/)
+
+![Screenshot of Retool](/public/images/articles/startup-time-investing/retool.png)
+
+> I have mixed feelings about Retool. While it's super powerful, allowing interfacing with a DB directly for writes is risky in that it can allow business logic drift. This is why I prefer admin panels as part of codebases, to minimize implementation time (e.g. no API endpoint to build) and minimize drift.
+
+While it's possible for a startup to get by without one, it's another fundamental investment that pays massive dividends by removing Engineering as a bottleneck.
+
+The next step after a script is to make it an action in the internal tool for Sales to use.
+
+The new process now looks like:
 
 1. Sales finishes signing a contract with Customer
 2. Sales navigates to internal tool and onboard the custom
 3. Sales notifies customer
+
+*What do you do for similar yet different complex reports?:* This is another form of internal tool, known as Business Intelligence. I've seen this take the form of SQL queries (e.g. [Redash][], Mode) as well as higher-level abstractions (e.g. Metabase).
+
+[Redash]: https://redash.io/
+[Mode]: https://mode.com/
+[Metabase]: https://www.metabase.com/
 
 ## Self-serve
 1. Customer contract signing triggers a webhook that Engineering set up

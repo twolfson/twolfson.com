@@ -1,3 +1,8 @@
 Emoji sources:
-- Pedestrian emoji, https://github.com/googlefonts/noto-emoji/blob/main/svg/emoji_u1f6b6.svg
 - Car emoji, https://github.com/googlefonts/noto-emoji/blob/main/svg/emoji_u1f697.svg
+- Pedestrian emoji, https://github.com/googlefonts/noto-emoji/blob/main/svg/emoji_u1f6b6.svg
+
+Image sources:
+- Django Admin, https://realpython.com/customize-django-admin-python/
+- Rails Admin, https://devtut.github.io/rubyonrails/add-admin-panel.html
+- Retool, https://uibakery.io/post/retool-vs-ui-bakery-2021
