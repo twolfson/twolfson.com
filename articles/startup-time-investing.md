@@ -131,19 +131,59 @@ The new process now looks like:
 [Metabase]: https://www.metabase.com/
 
 ## Self-serve
+The next step is to abstract Sales from the process by automatically detecting when the contract is signed.
+
+This could be a push-based system (e.g. receive a webhook), a pull-based system (e.g. on a cron query for status change), or something bespoke to the relevant integration.
+
+The new process now looks like:
+
 1. Customer contract signing triggers a webhook that Engineering set up
 2. The webhook creates an account and sends an invite link to the Customer to self-serve onboard themselves
 
 ## No implementation
-What would this even look like? Just cutting scope?
+One option as well is to consider if the process is even needed. Onboarding is obviously needed, but what about a one-off report or a feature that's going away soon? By [building exactly what you need][], you save both the time invested as well as time spent doing the action.
 
-YAGNI definitely
+[building exactly waht you need]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#build-exactly-what-you-need
 
-## Skipping steps
+## Jumping between levels
+In each of these levels above, it seems very linear in order (i.e. Write a runbook THEN port to a script THEN ...). However, that would be rather wasteful of time if you just need self-serve immediately for the best experience.
+
+In your considerations, it's best to factor in the costs and payoffs for each of these levels.
 
 ## When to invest in the next step
+Figuring out time costs for each of these levels depends on:
 
-## More examples
+- Your infrastructure
+- Your and your coworker's experience with this system
+- Other heuristics specific to your company
+- Availabilities in your priorities (i.e. by choosing to do this, you're choosing to not do something else)
+
+Once you've sorted out the various costs, then you can compare to the value gained:
+
+- How frequently you think this is going to be run?
+- How much of a burden is it to other teams?
+- How does it affect the user experience? (e.g. would automating decrease churn or increase conversions?)
+- If you invest all this time, and the startup pivots (usually comes out of nowhere), is there still reuse after this?
+  - For pivot timing, I usually try to predict 6 months into the future. Anything beyond that is usually impossible to guess at
+
+One heuristic I usually lean into is "pain tolerance". If it starts to become painful to do on a regular basis, then I set aside time to automate further. One coworker phrases this as "[do it until it hurts][]", another common phrase is "[do things that don't scale][]".
+
+[do it until it hurts]: https://islandinthenet.com/manual-until-it-hurts/
+[do things that don't scale]: http://paulgraham.com/ds.html
+
+## Time estimation
+While I'm not going to dive into better time estimation techniques (short version: walk through code + think out what needs to be done), it's probably valuable to have some context on reasonable expectations.
+
+Here's estimates I'd give for a task that takes 30 min to 1 hour (including 15 min context switching):
+
+- Running commands by hand with a runbook: 30 min to 1 hour (no additional time for copy/pasting to runbook as I go)
+- Writing a script: 2-4 hours (1 hour for commands + 1 hour for CLI testing + 2 hours buffer for issues that arise)
+- Internal tool: 3-5 hours (1 hours for command + 1 hour for integrating into tool + 1 hour for testing + 2 hours for buffer)
+- Self-serve: 6-10 hours (1 hour for command + 1 hour for integrating into endpoint + 2 hours for building UI + 2 hours for integrating with webhook + 4 hours for buffer)
+  - Note: This is also creating UI for the end-user, so there's likely an iteration step you should have with coworkers for a consistent user experience
+- No implementation: 0 minutes since nothing to be built 🎉
+
+## Real-world examples
 Real world Underdog.io example
 
 Generating reports
@@ -154,18 +194,6 @@ TODO: Auxilary relevant: When to test vs not, prob its own article tbh...
 
 
 ----
-
-- Or let's go to something even
-It's like for each task, we're investing in a better mode of transportation. e.g. We might start as a pedestrian, then get a bicycle, and eventually we get to a rocketship!
-
-[//]: # "https://quickchart.io/sandbox#%7B%0A%20%20%22type%22%3A%20%22horizontalBar%22%2C%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22labels%22%3A%20%5B%0A%20%20%20%20%20%20%22January%22%2C%0A%20%20%20%20%20%20%22February%22%2C%0A%20%20%20%20%20%20%22March%22%2C%0A%20%20%20%20%20%20%22April%22%2C%0A%20%20%20%20%20%20%22May%22%2C%0A%20%20%20%20%20%20%22June%22%2C%0A%20%20%20%20%20%20%22July%22%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22datasets%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%201%22%2C%0A%20%20%20%20%20%20%20%20%22backgroundColor%22%3A%20%22rgba(255%2C%2099%2C%20132%2C%200.5)%22%2C%0A%20%20%20%20%20%20%20%20%22borderColor%22%3A%20%22rgb(255%2C%2099%2C%20132)%22%2C%0A%20%20%20%20%20%20%20%20%22borderWidth%22%3A%201%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20-32%2C%0A%20%20%20%20%20%20%20%20%20%2062%2C%0A%20%20%20%20%20%20%20%20%20%2064%2C%0A%20%20%20%20%20%20%20%20%20%2041%2C%0A%20%20%20%20%20%20%20%20%20%20-31%2C%0A%20%20%20%20%20%20%20%20%20%20-32%2C%0A%20%20%20%20%20%20%20%20%20%2087%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%202%22%2C%0A%20%20%20%20%20%20%20%20%22backgroundColor%22%3A%20%22rgba(54%2C%20162%2C%20235%2C%200.5)%22%2C%0A%20%20%20%20%20%20%20%20%22borderColor%22%3A%20%22rgb(54%2C%20162%2C%20235)%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%209%2C%0A%20%20%20%20%20%20%20%20%20%20-100%2C%0A%20%20%20%20%20%20%20%20%20%20-13%2C%0A%20%20%20%20%20%20%20%20%20%2064%2C%0A%20%20%20%20%20%20%20%20%20%20-57%2C%0A%20%20%20%20%20%20%20%20%20%2026%2C%0A%20%20%20%20%20%20%20%20%20%2020%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%20%20%7D%2C%0A%20%20%22options%22%3A%20%7B%0A%20%20%20%20%22elements%22%3A%20%7B%0A%20%20%20%20%20%20%22rectangle%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22borderWidth%22%3A%202%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22responsive%22%3A%20true%2C%0A%20%20%20%20%22legend%22%3A%20%7B%0A%20%20%20%20%20%20%22position%22%3A%20%22right%22%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22title%22%3A%20%7B%0A%20%20%20%20%20%20%22display%22%3A%20true%2C%0A%20%20%20%20%20%20%22text%22%3A%20%22Chart.js%20Horizontal%20Bar%20Chart%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D"
-[//]: # (LibreOffice could be comparable size but wound up fighting on unique coloring)
-[//]: # (Bar chart misses nuance that speed doesn't always match time investment, and these investments are in tension -- spider graph was right, kind of...)
-<!-- Initially we had an spider graph, but I think a bar chart works better -->
-<!-- TODO: Delete spider graph -->
-
-![Bar graph of different transportation modes](/public/images/articles/startup-time-investing/chart.webp)
-
 
 However, if you realize that you no longer need to do a given task, then you can't get a refund on that time spent. i.e. You can't get a refund on your rocketship.
 
