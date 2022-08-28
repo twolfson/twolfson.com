@@ -3,7 +3,8 @@
   "author": "Todd Wolfson",
   "date": "2022-07-30T19:00:57-0700",
   "keywords": "startup, time, time investment",
-  "summary": "TODO: Summarize me, and update keywords"
+  "summary": "How I orient around operational processes, when to invest time in them, and when to not",
+  "relatedArticles": ["Lessons of a startup engineer"]
 }
 
 I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.
