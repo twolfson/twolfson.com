@@ -10,18 +10,16 @@ I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked
 
 In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
 
-This article will not cover company-wide prioritization (e.g. should we build feature X or feature Y?), that's usually not owned by engineering (short version: metrics + what are people asking for + impact on churn and conversions).
-
 # Modes of transportation
 An operational task is a task that emerges from running a business (e.g. generating reports, onboarding customers, setting up a server, [making donuts][]).
 
 [making donuts]: https://www.youtube.com/watch?v=XyZtMfMWONI
 
-Each of these tasks has a time cost associated with it (time to do the task) as well as the amount you've invested to make it faster.
+Each of these tasks has a time cost associated with it (time to do the task) as well as the amount you've invested to make it faster (time and/or money).
 
 ![Bar graph of time spent vs time invested](/public/images/articles/startup-time-investing/time-comparison.svg)
 
-I like to reframe the investment as a mode of transportation. i.e. If we invest the time and/or money into a bike/car/rocketship/etc for this task, is it worth it?
+I like to reframe the investment as a mode of transportation. e.g. If we invest 4 hours into building a bike/car/rocketship/etc for this task, is it worth it?
 
 ![Same bar graph as above but with pedestrian and car emojis on it](/public/images/articles/startup-time-investing/time-comparison-with-modes.svg)
 
@@ -65,7 +63,7 @@ Why it felt so bad: It was monotonous (sometimes "hurry up and wait", sometimes 
 As for the other 2 questions, let's think about incremental improvements to get to "fast and easy", as well as how much time they'll take.
 
 ## Runbooks and note taking
-The biggest impact low hanging fruit is that we haven't yet [invested in the fundamentals][] around documentation.
+The biggest impact low hanging fruit is that Company X hasn't yet [invested in the fundamentals][] around documentation.
 
 [invested in the fundamentals]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#invest-in-fundamentals
 
@@ -160,12 +158,14 @@ By [building exactly what you need][], you save both the time invested as well a
 [building exactly what you need]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#build-exactly-what-you-need
 
 ## Jumping between levels
-In each of these increments above, it seems very linear in order (i.e. Write a runbook **then** port to a script **then** ...). However, that would be rather wasteful of time if you just need self-serve immediately for the best experience.
+In each of these increments above, it seems very linear in order (i.e. Write a runbook **then** port to a script **then** ...). However, that would be rather wasteful of time if you just need self-serve immediately for the best user experience.
 
-In your considerations, factor in the costs and payoffs for each of these levels from where you're at currently, as well as the effort again to move to the ones after that.
+In your considerations, factor in the costs and payoffs for each of these levels from where you're at currently, as well as the effort again to move to the levels after that.
 
 ## When to invest in the next step
-Like many business decisions, this is a cost vs value decision.
+Like many [business decisions][], this is a cost vs value decision.
+
+[business decisions]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
 
 On the cost side, each level depends on:
 
@@ -190,7 +190,9 @@ One heuristic I usually lean into is "pain tolerance". If it starts to become pa
 
 *Q: If I'm unable to prioritize for this, then what do I do?*
 <br/>
-A: Ideally everyone has an equal voice at your startup. If not, that might be a sign of deeper cultural issues. That being said, sometimes we still need to find time to carve-out. I will sometimes categorize scripting a runbook or building an internal tool's action as a "[fix as you go][]" action but ideally you can communicate with your team and avoid needing to overwork or go through side-channels for company-wide efficiency improvements.
+A: Ideally everyone has an equal voice at your startup. If not, that might be a sign of deeper cultural issues.
+<br/>
+That being said, sometimes we still need to find time to carve-out. I sometimes categorize these under "[fix as you go][]" but communication and allocation is much more ideal.
 
 [fix as you go]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#fix-as-you-go
 
@@ -201,13 +203,16 @@ Here's estimates I'd give for a task that takes 30 min to 1 hour (including 15 m
 
 - Running commands by hand with a runbook: 30 min to 1 hour
   - No additional time for copy/pasting to runbook as I go
-- Writing a script: 2-4 hours
+- Writing a script: 2-4 hours + light maintenance tax
   - 1 hour for commands + 1 hour for CLI testing + 2 hours buffer for issues that arise
-- Internal tool: 3-5 hours
+  - Maintenance tax: Maintaining through schema changes and CLI flag changes
+- Internal tool: 3-5 hours + light maintenance tax
   - 1 hours for command + 1 hour for integrating into tool + 1 hour for testing + 2 hours for buffer
-- Self-serve: 6-10 hours
+  - Maintenance tax: Maintaining through schema changes and form submission changes
+- Self-serve: 6-10 hours + heavy maintenance tax
   - 1 hour for command + 1 hour for integrating into endpoint + 2 hours for building UI + 2 hours for integrating with webhook + 4 hours for buffer
   - Note: This also creates UI for the end-user, so there's likely a conversation you should have with coworkers around UX
+  - Maintenance tax: Maintaining through schema changes, form changes, UI styling, and UX flow changes
 - No implementation: 0 minutes since there's nothing to build 🎉
 
 # Real-world examples
@@ -216,46 +221,47 @@ At [Underdog.io][], a curated job seeker <-> company marketplace, we'd send out 
 
 The initial setup was:
 
-- All data entry was into a Google Sheet (explanation in "[Lessons of a startup engineer][]")
-- Review was done with an internal tool, but data was saved back to Google Sheet as database
-- Cofounders would copy/paste new candidates to one-off spreadsheets
-- Manually filter out candidates from specific companies (e.g. opt-out of sending to current employer)
-- Send off email to each company
-- For newly onboarded companies, we'd send a one-off batch of all candidates who were recently active
+- All sign-ups added to a Google Sheet (explanation in "[Lessons of a startup engineer][]")
+- Curation was done in an internal tool, but ratings were written by hand back to the Google Sheet
+- To generate weekly emails:
+  - Each company receives a custom email due to candidates opting out of specific companies (e.g. current employer)
+  - Cofounders copied/pasted new candidates to per-company spreadsheets
+  - Manually filter out candidates based on company
+  - Copy into email and send to specific company
 
-As you can imagine, this was fantastic for proving it was a viable business without investing too much time into building something fuller.
+This was fantastic for proving we were a viable business without major time investment. Eventually though, founders were taking full Sundays to perform this task so automation was desperately needed.
 
-Unfortunately, it only works for so long until you start to run out of time (i.e. founders were taking full Sundays to perform this task).
-
-We had some major concerns around the current process:
-
-- It wasn't going to scale as we added more customers
-- It was becoming increasingly more risky to prevent sending candidates to companies they opted out from
+Additionally, there was always a risk of sending a candidate to a company they opted out from (e.g. typos happen).
 
 So, improvements were high value and thus high priority:
 
-- First, we automated the email generation into our internal tool with a person-in-the-loop review step
-  - Note: Arguably this is a jump from an unwritten runbook to internal tool
-- Next, we added safeguards like string distances to further derisk any accidental opt-out misses
-- Lastly, we moved all the Google Sheets transparency to the internal tool, then migrated to PostgreSQL
+- First, we brought email generation into our internal tool
+  - This is a jump from: an unwritten runbook to internal tool
+- Next, we added safeguards like string distances to derisk any accidental opt-out misses
+- Last, we moved remaining Google Sheets interactions into the internal tool, then migrated to PostgreSQL
   - This maintained value and eliminated the risk of unintentional data modification/loss
 
-We stopped here by not fully automating the sending of batches, because we still wanted the human touch in our emails as well as building trust in the automated system.
+
+We stopped short of automating email sending, because we still wanted the human touch as well as building trust in the automated system.
+
+Nowadays, there's a dashboard for companies to visit any time they'd like.
 
 [Lessons of a startup engineer]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
 
 [Underdog.io]: https://underdog.io/
 
 ## Server setup
-This is an example of when automation goes too far. i.e. Server setup for low-traffic early stage startup should just be logged as a runbook and not automated any further.
+This is an example of when automation goes too far. i.e. Setting up a new server for a low-traffic early stage startup should only be logged as a runbook, not automated further.
 
 However, my naive self hadn't learned these lessons yet and did:
 
-- [Full-on automation][] for standing up twolfson.com (this site) via [Chef][]
+- [Full-on automation][] for twolfson.com (this site) via [Chef][]
 - Reused that same setup for [Find Work][]
 - At [Standard Cyborg][], we wanted HIPAA compliance so we migrated to AWS but also built a very robust [Terraform][] setup
 
-As one might imagine, these were fantastic to build and understand. But when you come back to the setup months later to adjust things (e.g. upgrade Node.js), it has a massive maintenance tax from being out of mind and relearning it adds little business value.
+As one might imagine, these were fantastic to build and understand. But when you come back to it months later to adjust things (e.g. upgrade Node.js), it has a massive maintenance tax from being out of mind and relearning it adds little business value.
+
+<div class="tenor-gif-embed" data-postid="9228837" data-share-method="host" data-aspect-ratio="2.78" data-width="100%"><a href="https://tenor.com/view/gandalf-i-have-no-memory-of-this-place-idk-dont-know-gif-9228837">Gandalf I Have No Memory Of This Place GIF</a>from <a href="https://tenor.com/search/gandalf-gifs">Gandalf GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Thus, a runbook would have been significantly easier to generate as well as maintain.
 
@@ -266,23 +272,42 @@ Thus, a runbook would have been significantly easier to generate as well as main
 [Terraform]: https://www.terraform.io/
 
 ## Scan processing
-At [Standard Cyborg][], a 3D scanning and prosthetic socket creation platform, we'd sometimes receive infrared (IR) scans from our scanners that wen't fully filled in.
+At [Standard Cyborg][], a 3D scanning and prosthetic CAD platform, we'd sometimes receive infrared (IR) scans that wen't fully filled in.
 
-This is due to the IR scanner generating a vertices floating in space (point cloud) and trying to generate faces from nearby vertices. However, it wasn't advanced at doing this, so we'd manually load these scans into tools like [MeshLab][] and [Meshmixer][] to clean up any gaps or double layers.
+This is due to the IR scanner collecting a point cloud and trying to determine faces from nearby vertices. However, this wasn't its specialty, so we'd use tools like [MeshLab][] to clean up any gaps or double layers.
 
 [MeshLab]: https://www.meshlab.net/
 [Meshmixer]: https://www.meshmixer.com/
 
-As with weekly batches, this doesn't scale linearly with customers but also you can get a rush of scans during a convention. Most importantly though, it can become emotionally taxing for seeing scans from traumatic injuries.
+As with weekly batches, there's significant time cost but also rushes of scans can come in (e.g. during a convention). Most importantly though, scan cleaning can be emotionally taxing (e.g. scans with traumatic injuries).
 
-Thus, automation was a high priority for us, and as you'd expect, we automated what was being done by hand via CLI processes and ran that as a pipeline in AWS Lambda.
+Thus, automation was a high priority for us, and the result was moving manual actions into scripts in an AWS Lambda pipeline.
 
-As a result, employee happiness significantly increased as well as freedom to focus on higher level tasks.
+After that, employee happiness increased significantly as well as there now being freedom to focus on higher level tasks.
 
-## Additional short-list
-- Deployments, these should be occuring regularly so scripting at a minimum is critical
-  - It gets fuzzy with doing Continuous Delivery (CD), since you also need a robust migration/rollback system
-- Database scrubbing and pruning, any level of automation makes sense here. Likely depends on frequency and monotony
+## Additional short list
+- Deployments - These occuring regularly, so scripting is critical
+  - Investing into Continuous Delivery (CD), since you also need a robust migration and rollback system
+- Database dumping, scrubbing, and pruning - Any level of automation makes sense here. Likely depends on frequency and monotony
+
+# What we didn't cover
+- Feature prioritization - This usually isn't owned by engineering
+  - Short version if you're curious: [metrics][], requests by customers, impact on churn or conversions
+- Day-to-day prioritization - Sadly made the article too long
+  - Short version:
+  - Address blockers first (e.g. PR reviews, ongoing discussions)
+  - If have bandwidth, triage any new bugs
+  - Weigh tasks into a queue (e.g. those with due dates vs other important tasks vs current bandwidth)
+  - Take the next task from said queue
+  - If an interruption occurs, triage and/or delegate
+  - Upon task completion, reprocess queue and start next task
+  - At end of day, address any blockers again
+- How this ties into the [relevant xkcd][]
+  - Short answer: It's the "how" for each of the different levels
+  - Longer answer: Our article isn't purely about time. Other factors include UX, employee happiness, and more.
+
+[metrics]: https://www.youtube.com/watch?v=lL6GdUHIBsM
+[relevant xkcd]: https://xkcd.com/1205/
 
 # Additional reading
 - [Lessons of a Startup Engineer][]
