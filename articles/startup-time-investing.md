@@ -203,10 +203,39 @@ Here's estimates I'd give for a task that takes 30 min to 1 hour (including 15 m
   - Note: This also creates UI for the end-user, so there's likely a conversation you should have with coworkers around UX
 - No implementation: 0 minutes since there's nothing to build 🎉
 
-## Real-world examples
-Real world Underdog.io example
+# Real-world examples
+## Weekly batches
+At [Underdog.io][], a curated job seeker <-> company marketplace, we'd send out weekly emails with a new candidate batch to companies.
 
-Generating reports
+The initial setup was:
+
+- All data entry was into a Google Sheet (explanation in "[Lessons of a startup engineer][]")
+- Review was done with an internal tool, but data was saved back to Google Sheet as database
+- Cofounders would copy/paste new candidates to one-off spreadsheets
+- Manually filter out candidates from specific companies (e.g. opt-out of sending to current employer)
+- Send off email to each company
+- For newly onboarded companies, we'd send a one-off batch of all candidates who were recently active
+
+As you can imagine, this was fantastic for proving it was a viable business without investing too much time into building something fuller.
+
+Unfortunately, it only works for so long until you start to run out of time (i.e. founders were taking full Sundays to perform this task).
+
+We had some major concerns around the current process:
+
+- It wasn't going to scale as we added more customers
+- It was becoming increasingly more risky to prevent sending candidates to companies they opted out from
+
+So, improvements were high value and thus high priority:
+
+- First, we automated the email generation into our internal tool with a person-in-the-loop review step
+  - Note: Arguably this is a jump from an unwritten runbook to internal tool
+- Next, we added safeguards like string distances to further derisk any accidental opt-out misses
+- Lastly, we moved all the Google Sheets transparency to the internal tool, then migrated to PostgreSQL
+  - This maintained value and eliminated the risk of unintentional data modification/loss
+
+[Lessons of a startup engineer]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
+
+[Underdog.io]: https://underdog.io/
 
 Server setup (learned this one the hard way)
 
