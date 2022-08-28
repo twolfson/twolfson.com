@@ -233,52 +233,44 @@ So, improvements were high value and thus high priority:
 - Lastly, we moved all the Google Sheets transparency to the internal tool, then migrated to PostgreSQL
   - This maintained value and eliminated the risk of unintentional data modification/loss
 
+We stopped here by not fully automating the sending of batches, because we still wanted the human touch in our emails as well as building trust in the automated system.
+
 [Lessons of a startup engineer]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#every-decision-is-a-business-decision
 
 [Underdog.io]: https://underdog.io/
 
-Server setup (learned this one the hard way)
+## Server setup
+This is an example of when automation goes too far. i.e. Server setup for low-traffic early stage startup should just be logged as a runbook and not automated any further.
 
-TODO: Auxilary relevant: When to test vs not, prob its own article tbh...
+However, my naive self hadn't learned these lessons yet and did:
 
-TODO: Link to Lessons of Startup Engineer
+- [Full-on automation][] for standing up twolfson.com (this site) via [Chef][]
+- Reused that same setup for [Find Work][]
+- At [Standard Cyborg][], we wanted HIPAA compliance so we migrated to AWS but also built a very robust [Terraform][] setup
 
-Deployments
+As one might imagine, these were fantastic to build and understand. But when you come back to the setup months later to adjust things (e.g. upgrade Node.js), it has a massive maintenance tax from being out of mind and relearning it adds little business value.
 
-Database scrubbing
+Thus, a runbook would have been significantly easier to generate as well as maintain.
 
-Data creation
+[Full-on automation]: https://github.com/twolfson/twolfson.com-scripts
+[Chef]: https://www.chef.io/
+[Find Work]: https://www.linkedin.com/company/17971168/
+[Standard Cyborg]: https://standardcyborg.com/
+[Terraform]: https://www.terraform.io/
 
+## Scan processing
+TODO: Employee churn
+
+## Additional short-list
+Additional common tasks that I have opinions about:
+
+- Deployments, these should be occuring regularly so scripting at a minimum is critical
+  - It gets fuzzy with doing Continuous Delivery (CD), since you also need a robust migration/rollback system
+- Database scrubbing and pruning, any level of automation makes sense here. Likely depends on frequency and monotony
 
 ----
 
-## Send out weekly batch of new candidates to companies
-For a starting point, we're going to begin with the contrived worst-case MVP implementation for candidate batches:
-
-> This is not how Underdog.io actually did things, we had the foresight to use Google Sheets as our initial database, thus foregoing the intermediary engineering steps.
-
--
-
-- All data was written into a Google Sheet
-  - TODO: See "Lessons of a startup engineer" for explanation why
-- Candidate review occurrs within said Google Sheet
-  - In practice, there was an internal tool built early on
-- Candidates specify companies to not be sent to
-- Batches are manually constructed for each company, pasted into email, peer reviewed, and sent
-
-If you're reading this and feel like "this sounds like a really slow and error-prone proces", you'd be right!
-
-In fact, this was one of my first tasks at Underdog.io =)
-
-> I should note that the Google Sheet actually simplified the process at this point.
->
-> There could have been another version where the data was input into a database and an engineer would dump the data to a CSV for review, then load the data back in via a script
-
--
-
-TODO: Time to make the donuts meme
-
-There's a few ways we can speed up a given task:
+TODO: Link to Lessons of Startup Engineer
 
 Not mentioned:
 - Specialization
