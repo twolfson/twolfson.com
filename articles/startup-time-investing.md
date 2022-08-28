@@ -259,24 +259,26 @@ Thus, a runbook would have been significantly easier to generate as well as main
 [Terraform]: https://www.terraform.io/
 
 ## Scan processing
-TODO: Employee churn
+At [Standard Cyborg][], a 3D scanning and prosthetic socket creation platform, we'd sometimes receive infrared (IR) scans from our scanners that wen't fully filled in.
+
+This is due to the IR scanner generating a vertices floating in space (point cloud) and trying to generate faces from nearby vertices. However, it wasn't advanced at doing this, so we'd manually load these scans into tools like [MeshLab][] and [Meshmixer][] to clean up any gaps or double layers.
+
+[MeshLab]: https://www.meshlab.net/
+[Meshmixer]: https://www.meshmixer.com/
+
+As with weekly batches, this doesn't scale linearly with customers but also you can get a rush of scans during a convention. Most importantly though, it can become emotionally taxing for seeing scans from traumatic injuries.
+
+Thus, automation was a high priority for us, and as you'd expect, we automated what was being done by hand via CLI processes and ran that as a pipeline in AWS Lambda.
+
+As a result, employee happiness significantly increased as well as freedom to focus on higher level tasks.
 
 ## Additional short-list
-Additional common tasks that I have opinions about:
-
 - Deployments, these should be occuring regularly so scripting at a minimum is critical
   - It gets fuzzy with doing Continuous Delivery (CD), since you also need a robust migration/rollback system
 - Database scrubbing and pruning, any level of automation makes sense here. Likely depends on frequency and monotony
 
-----
+# Additional reading
+- [Lessons of a Startup Engineer][]
 
-TODO: Link to Lessons of Startup Engineer
-
-Not mentioned:
-- Specialization
-- Delegation
-
-TODO: Google Forms survey:
-- Did you enjoy the article?
-- Would you like to hear about future articles? If so, how?
-- Would you like us to let you know if we start offering that? If so, what's your email?
+# Feedback form
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJxgN6-7OFBfrRatS4iAa-MMiQdIu2noMX8I0GUooe6_Ut6g/viewform?embedded=true" width="640" height="1062" frameborder="0" marginheight="0" marginwidth="0">Loading feedback form…</iframe>
