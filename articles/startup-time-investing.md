@@ -1,6 +1,5 @@
 {
-  <!-- TODO: Rename to "Startup time usage and investing?" -->
-  "title": "Startup time investing",
+  "title": "Startup time investing: Operational processes",
   "author": "Todd Wolfson",
   "date": "2022-07-30T19:00:57-0700",
   "keywords": "startup, time, time investment",
@@ -10,6 +9,8 @@
 I'm a startup engineer; 3x first engineer, former Uber engineer, and have worked at many more startups.
 
 In this article, I cover how I orient around operational processes, when to invest time in them, and when to not.
+
+This article will not cover company-wide prioritization (e.g. should we build feature X or feature Y?), that's usually not owned by engineering (short version: metrics + what are people asking for + impact on churn and conversions).
 
 # Modes of transportation
 An operational task is a task that emerges from running a business (e.g. generating reports, onboarding customers, setting up a server, [making donuts][]).
@@ -186,6 +187,12 @@ One heuristic I usually lean into is "pain tolerance". If it starts to become pa
 
 [do it until it hurts]: https://islandinthenet.com/manual-until-it-hurts/
 [do things that don't scale]: http://paulgraham.com/ds.html
+
+*Q: If I'm unable to prioritize for this, then what do I do?*
+<br/>
+A: Ideally everyone has an equal voice at your startup. If not, that might be a sign of deeper cultural issues. That being said, sometimes we still need to find time to carve-out. I will sometimes categorize scripting a runbook or building an internal tool's action as a "[fix as you go][]" action but ideally you can communicate with your team and avoid needing to overwork or go through side-channels for company-wide efficiency improvements.
+
+[fix as you go]: https://twolfson.com/2021-06-24-lessons-of-a-startup-engineer#fix-as-you-go
 
 ## Time estimation
 While this article isn't going to dive into better time estimation techniques (short version: walk through code + think out what needs to be done), it's probably valuable to have some context on reasonable expectations.
