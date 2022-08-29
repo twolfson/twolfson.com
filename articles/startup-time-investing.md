@@ -139,6 +139,14 @@ A: This is another form of internal tool, known as Business Intelligence (BI). I
 [Mode]: https://mode.com/
 [Metabase]: https://www.metabase.com/
 
+*Q: What about engineering-only tasks?*
+<br/>
+A: The internal tool here might be [GitHub Actions][], [Jenkins][], [ChatOps][], or something else along these lines.
+
+[GitHub Actions]: https://github.com/features/actions
+[Jenkins]: https://www.jenkins.io/
+[ChatOps]: https://www.youtube.com/watch?v=NST3u-GjjFw
+
 ## Self-serve
 The next step is to remove Sales from the process by integrating into when a contract is signed.
 
@@ -290,6 +298,7 @@ After that, employee happiness increased significantly as well as there now bein
 - Deployments - These occuring regularly, so scripting is critical
   - Investing into Continuous Delivery (CD), since you also need a robust migration and rollback system
 - Database dumping, scrubbing, and pruning - Any level of automation makes sense here. Likely depends on frequency and monotony
+- Firefighting and deployment rollbacks - Ideally these never happen but that's not reality, so a core runbook is a great starting point
 
 # What we didn't cover
 - Feature prioritization - This usually isn't owned by engineering
