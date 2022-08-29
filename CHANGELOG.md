@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.133.0 - Wrote "Startup time investing: Operational processes" article
+
 3.132.0 - Added "Lessons of a starutp engineer" to top articles
 
 3.131.1 - More wording tweaks
