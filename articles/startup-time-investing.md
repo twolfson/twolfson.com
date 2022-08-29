@@ -314,7 +314,7 @@ After that, employee happiness increased significantly as well as there now bein
   - At end of day, address any blockers again
 - How this ties into the [relevant xkcd][]
   - Short answer: It's the "how" for each of the different levels
-  - Longer answer: Our article isn't purely about time. Other factors include UX, employee happiness, and more.
+  - Longer answer: Our article isn't purely about time. Other factors include UX, employee happiness, and more
 
 [metrics]: https://www.youtube.com/watch?v=lL6GdUHIBsM
 [relevant xkcd]: https://xkcd.com/1205/

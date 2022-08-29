@@ -209,7 +209,7 @@ There's some lessons that felt like they were either too much opinion, not speci
 - Backpressure, how and when to push back against work/timeline as well as compromise (not specific to startups)
 - Build vs buy (not specific to startups)
 - Time estimation and [zooming in like a coastline][coastline] (not specific to startups)
-- Optimal time investing (might become its own article)
+- [Optimal time investing][] (needed its own article)
 - Probably many more lessons
 - If there's something that you'd like to be included, please [let me know][contact]
 
@@ -218,3 +218,4 @@ There's some lessons that felt like they were either too much opinion, not speci
 [1:10:100]: https://www.youtube.com/watch?v=6MOeVNbh9cY
 [coastline]: https://en.wikipedia.org/wiki/Coastline_paradox
 [contact]: /contact
+[Optimal time investing]: /2022-07-30-startup-time-investing-operational-processes
