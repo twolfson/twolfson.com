@@ -21,7 +21,7 @@ describe('A request to /index.xml', function () {
 
   it('returns a list of articles', function () {
     expect(this.xml.feed.title).to.deep.equal(['Todd Wolfson - Software Engineer']);
-    expect(this.xml.feed.id).to.deep.equal(['http://twolfson.com/']);
+    expect(this.xml.feed.id).to.deep.equal(['https://twolfson.com/']);
     expect(this.xml.feed.author).to.be.deep.equal([{name: ['Todd Wolfson']}]);
     expect(this.xml.feed.entry.length).to.be.greaterThan(0);
   });
