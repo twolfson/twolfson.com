@@ -1,17 +1,17 @@
 # twolfson.com [![Build status](https://travis-ci.org/twolfson/twolfson.com.png?branch=master)](https://travis-ci.org/twolfson/twolfson.com)
 
-Repository for [http://twolfson.com/][]
+Repository for [https://twolfson.com/][]
 
 This server is written on top of [express][], for routing and views, and [jojo][], for blog entries.
 
 We use [`inuit.css`][] as our CSS framework to provide [OOCSS][] and [BEM][] conventions.
 
-[http://twolfson.com/]: http://twolfson.com/
-[express]: http://expressjs.com/
+[https://twolfson.com/]: https://twolfson.com/
+[express]: https://expressjs.com/
 [jojo]: https://github.com/twolfson/jojo/
 [`inuit.css`]: https://github.com/csswizardry/inuit.css
-[OOCSS]: http://oocss.org/
-[BEM]: http://bem.info/
+[OOCSS]: https://oocss.org/
+[BEM]: https://bem.info/
 
 ## Getting started
 The following steps will get a server running locally:
@@ -58,7 +58,7 @@ CSS compilation is run by default as part of the main `gulp build` task but can 
 gulp build-css
 ```
 
-[SASS]: http://sass-lang.com/
+[SASS]: https://sass-lang.com/
 [`libsass`]: https://github.com/sass/libsass
 
 #### Images
@@ -68,7 +68,7 @@ Images are compiled into spritesheets via [`gulp.spritesmith`][]. These are run 
 gulp sprite
 ```
 
-[`gulp`]: http://gulpjs.com/
+[`gulp`]: https://gulpjs.com/
 [`gulp.spritesmith`]: https://github.com/twolfson/gulp.spritesmith
 
 #### JS
@@ -93,9 +93,9 @@ Additionally, they are integrated with [LiveReload][]. When the complementary br
 npm run develop
 ```
 
-LiveReload extension: http://livereload.com/extensions/
+LiveReload extension: https://livereload.com/extensions/
 
-[LiveReload]: http://livereload.com/
+[LiveReload]: https://livereload.com/
 
 ### Code organization
 #### Folders
@@ -118,9 +118,9 @@ LiveReload extension: http://livereload.com/extensions/
     - `utils/` - Common utilities used for starting up/tearing down servers and making HTTP requests
 
 [GitHub Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
-[Jade]: http://jade-lang.com/
+[Jade]: https://jade-lang.com/
 [mocha]: https://github.com/tj/mocha/
-[Perceptual diffs]: http://www.youtube.com/watch?v=UMnZiTL0tUc
+[Perceptual diffs]: https://www.youtube.com/watch?v=UMnZiTL0tUc
 
 #### Files
 - `CHANGELOG.md` - Record of changes that have happened on the server
@@ -130,10 +130,10 @@ LiveReload extension: http://livereload.com/extensions/
 ## Donating
 Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].
 
-<http://twolfson.com/support-me>
+<https://twolfson.com/support-me>
 
-[twolfson-projects]: http://twolfson.com/projects
-[twolfson-support-me]: http://twolfson.com/support-me
+[twolfson-projects]: https://twolfson.com/projects
+[twolfson-support-me]: https://twolfson.com/support-me
 
 ## License
 Copyright (c) 2013-2014 Todd Wolfson
