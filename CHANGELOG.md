@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.134.0 - Replaced SOPS with environment variables
+
 3.133.1 - Fixed Sass build
 
 3.133.0 - Wrote "Startup time investing: Operational processes" article
