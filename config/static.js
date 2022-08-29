@@ -1,7 +1,18 @@
 // Load in our dependencies
 var _ = require('underscore');
 var package = require('../package.json');
-var secret = require('./secret');
+// Based on https://github.com/facebook/create-react-app/blob/v5.0.1/packages/react-scripts/config/env.js#L25-L49
+require('dotenv').config({path: '.env.' + (process.env.NODE_ENV || 'development')});
+require('dotenv').config({path: '.env.' + (process.env.NODE_ENV || 'development') + '.local'});
+
+// https://stackoverflow.com/a/17228469/1960509
+function safeGet(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    return obj[key];
+  } else {
+    throw new Error('Missing property: ' + key);
+  }
+}
 
 // Define generic unrelated settings
 exports.common = {
@@ -48,7 +59,7 @@ exports.production = {
   sentry: {
     // DEV: We don't protect `browserDSN` as it's already public
     browserDSN: 'https://de513ad3694745dea7f421a1383703dd@sentry.io/108598',
-    serverDSN: secret.sentry.serverDSN
+    serverDSN: safeGet(process.env, 'SENTRY_DSN')
   }
 };
 
