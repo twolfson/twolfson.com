@@ -6,6 +6,6 @@ npm-debug.log
 tmp/
 .sass-cache/
 updateProduction.sh
-config/secret.json
+.env*
 .vagrant/
 dist/

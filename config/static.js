@@ -8,7 +8,7 @@ exports.common = {
   jojo: {
     author: 'Todd Wolfson',
     title: 'Todd Wolfson - Software Engineer',
-    url: 'http://twolfson.com/'
+    url: 'https://twolfson.com/'
   },
   // In development/testing, do not fetch new project info
   projectOptions: {

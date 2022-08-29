@@ -35,41 +35,22 @@ The server should be accessible via your browser at [http://localhost:8080/](htt
 ## Documentation
 ### Development
 #### Configuration
-Our secrets are stored in version control and managed via [SOPS][]. To update a secret, run:
+Our secrets are stored in environment variables. To update a secret, update it in:
 
-```bash
-# Opens file in `$EDITOR` and syncs secret to decrypted fiile
-bin/edit-config-file.sh {{file}}
-# Example: bin/edit-config-file.sh config/secret.enc.json`
-```
+- `.env.development` with a mock example
+- `.env.development.local` for actual usage
+- In each server, under `/etc/profile.d/twolfson.com-secrets.sh`
 
-To decrypt the current secrets in `config`, run:
-
-```bash
-# Decrypts all secret files in `config` (e.g. `secret.enc.json`)
-bin/decrypt-config.sh
-```
+Historically we used [SOPS][] but it was overkill for a simple blog server, and setup across new computers was tedious with no extra value.
 
 [SOPS]: https://github.com/mozilla/sops
 
-##### SOPS
-If SOPS hasn't been set up before, perform the following steps:
-
-- Install SOPS' dependencies as specified by <https://github.com/mozilla/sops/tree/0494bc41911bc6e050ddd8a5da2bbb071a79a5b7#up-and-running-in-60-seconds>
-- Install our SOPS via `pip`
-    - `pip install sops`
-- Resolve SOPS' PGP private key via means provided (e.g. old computer, remote server)
-    - We assume you will receive it as `private.rsa`
-- Install the PGP private key to GPG
-    - `gpg --import private.rsa`
-
 Additional documentation can be found in:
 
-- https://gist.github.com/twolfson/01d515258eef8bdbda4f
 - https://github.com/twolfson/twolfson.com-scripts
 
 #### CSS
-Our CSS is written in [SASS][] and compiled via [`libsass`][].
+Our CSS is written in [SASS][].
 
 CSS compilation is run by default as part of the main `gulp build` task but can be run standalone:
 
