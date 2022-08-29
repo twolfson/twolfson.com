@@ -1,3 +1,4 @@
+@use "sass:math";
 /*------------------------------------*\
     VARS.SCSS
 \*------------------------------------*/
@@ -78,7 +79,7 @@ $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: "Ubuntu Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
 
 // Scale up all fonts such that a blog post is ~75 characters per line
-$font-scale: 18 / 16;
+$font-scale: math.div(18, 16);
 // https://github.com/csswizardry/inuit.css/blob/v5.0.1/_defaults.scss#L45-L46
 $base-font-size: 16px * $font-scale;
 $base-line-height: 24px * $font-scale;

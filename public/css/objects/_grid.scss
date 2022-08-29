@@ -1,3 +1,4 @@
+@use "sass:math";
 /** Container for document. It should always have gutters on the left and right **/
 $grid-width: 960px;
 $grid-columns: 12;
@@ -12,7 +13,7 @@ $gutter-width: $base-spacing-unit;
 }
 
 @mixin column($columns, $gutter-offset) {
-  width: (($grid-width / $grid-columns) * $columns) - $gutter-offset;
+  width: (math.div($grid-width, $grid-columns) * $columns) - $gutter-offset;
 }
 
 // TODO: Namespacing and such

@@ -1,3 +1,4 @@
+@use "sass:math";
 /*------------------------------------*\
     $SHARED
 \*------------------------------------*/
@@ -23,11 +24,11 @@ pre,
 .island,
 .islet{
     margin-bottom:$base-spacing-unit;
-    margin-bottom:($base-spacing-unit / $base-font-size)*1rem;
+    margin-bottom:math.div($base-spacing-unit, $base-font-size)*1rem;
 
     .islet &{
-        margin-bottom:$base-spacing-unit / 2;
-        margin-bottom:(($base-spacing-unit / $base-font-size) / 2)*1rem;
+        margin-bottom:math.div($base-spacing-unit, 2);
+        margin-bottom:math.div(math.div($base-spacing-unit, $base-font-size), 2)*1rem;
     }
 }
 
@@ -37,7 +38,7 @@ pre,
  */
 .landmark{
     margin-bottom:2 * $base-spacing-unit;
-    margin-bottom:(2 * $base-spacing-unit / $base-font-size)*1rem;
+    margin-bottom:(2 * math.div($base-spacing-unit, $base-font-size))*1rem;
 }
 
 
@@ -47,7 +48,7 @@ pre,
  */
 hr{
     margin-bottom:$base-spacing-unit - 2px;
-    margin-bottom:(($base-spacing-unit - 2px) / $base-font-size)*1rem;
+    margin-bottom:(math.div($base-spacing-unit - 2px, $base-font-size))*1rem;
 }
 
 
@@ -57,5 +58,5 @@ hr{
  */
 ul,ol,dd{
     margin-left:2 * $base-spacing-unit;
-    margin-left:(2 * $base-spacing-unit / $base-font-size)*1rem;
+    margin-left:(2 * math.div($base-spacing-unit, $base-font-size))*1rem;
 }
