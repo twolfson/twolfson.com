@@ -40,7 +40,7 @@ exports.common = function (config) {
         // DEV: We extend instead of return directly to preserve date and recommendations
         return Object.assign({}, article, newArticle, {
           relatedArticles: article.relatedArticles,
-          relatedProjects: article.relatedProjects,
+          relatedProjects: article.relatedProjects
         });
       };
     }
