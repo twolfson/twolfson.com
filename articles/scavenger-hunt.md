@@ -58,3 +58,18 @@ More analogies:
 
 - In combat, want to get into a default stance - ready to handle any movement. Don't want to be caught off-balance or slow to react
 - In tennis, want to get into a default position on the court, if too far away, then won't be in good position for future return -- which has cascading effect through out rest of volley (or whatever term is)
+
+---
+
+Maybe this should all be 1 small section in "Lessons of a startup engineer"
+(considering an "updated at" header update)
+(maybe time to pull `jojo` into this repo)
+
+or a discussion on engineering values
+
+i.e. Why we like to keep tech debt down
+How we consider chain lubricated and such
+
+Other namings:
+"Get back to origin"
+"Always be ready"
