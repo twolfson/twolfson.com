@@ -39,7 +39,7 @@ Our secrets are stored in environment variables. To update a secret, update it i
 
 - `.env.development` with a mock example
 - `.env.development.local` for actual usage
-- In each server, under `/etc/profile.d/twolfson.com-secrets.sh`
+- In each server, under `/etc/supervisord.conf`
 
 Historically we used [SOPS][] but it was overkill for a simple blog server, and setup across new computers was tedious with no extra value.
 
