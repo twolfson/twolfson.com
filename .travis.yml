@@ -13,8 +13,8 @@ before_install:
   # - ./test/utils/install-node-webkit.sh "$USER"
 
 install:
-  # Install our node dependencies and setup our config
-  - CONFIG_COPY_ONLY=TRUE npm install
+  # Install our Node.js dependencies
+  - npm install
 
 script:
   # Run Travis tests (upon failure, upload to imgur)

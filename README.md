@@ -21,8 +21,8 @@ The following steps will get a server running locally:
 git clone https://github.com/twolfson/twolfson.com
 cd twolfson.com
 
-# Install dependencies and copy non-decrypted config
-CONFIG_COPY_ONLY=TRUE npm install
+# Install our dependencies
+npm install
 
 # Run the server
 npm start # should say 'Server running at http://localhost:8080/'
@@ -101,8 +101,7 @@ LiveReload extension: https://livereload.com/extensions/
 #### Folders
 - `articles/` - [GitHub Flavored Markdown][] files for blog posts
 - `bin/twolfson.com` - Executable to start `twolfson.com` locally
-- `config/` - Decrypted files from `config.env/`
-- `config.enc/` - Static configuration files and resource initialization
+- `config/` - Static configuration files and resource initialization
 - `dist/` - Minified public files
 - `server/` - Container for majority of app
     - `index.js` - Constructor for server that binds view and routing middlewares
