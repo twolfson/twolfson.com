@@ -55,19 +55,15 @@ html
   body
     div#global-wrapper.container
       div#global-main
-        //- TODO: Restore accessibility classes to sprites (visually test Chrome) -_-;;
         //- TODO: Gather screenshots in all browsers
         .flexbox.container__row.push-half--top.push-half--bottom
           h1.brand.flexbox__item.width4.valign--baseline
             a.link--hidden(href="/") Todd Wolfson
           h2.brand.flexbox__item.width5.valign--baseline Software Engineer
           .flexbox__item.text--right.alpha
-            a.icon-github.push--right(href="http://github.com/twolfson/" target="_blank")
-              //- <span class="accessibility">GitHub</span>
-            a.icon-twitter.push--right(href="http://twitter.com/twolfsn/" target="_blank")
-              //- <span class="accessibility">Twitter</span>
-            a.icon-rss(href="/index.xml" target="_blank")
-              //- <span class="accessibility">RSS</span>
+            a.icon-github.push--right(href="https://github.com/twolfson/" target="_blank" title="GitHub")
+            a.icon-twitter.push--right(href="https://twitter.com/twolfsn/" target="_blank" title="Twitter")
+            a.icon-rss(href="/index.xml" target="_blank" title="RSS")
         //- TODO: Add back `island` on a per-page basis via push--top
         - var navMargin = locals.navMargin === false ? '' : 'push--bottom';
         .row--bordered--ends(class=navMargin)

@@ -20,12 +20,10 @@ mixin project--script(project)
     .flexbox__item.width1.project-stars
       a(href=project.srcUrl, target="_blank")
         span.icon-purple-star(title="Stars")
-        //- <span class="accessibility">Stars</span>
         span.ignore-flow.project-stars__count= numscale({value: project.stars, maxLen: 4}).toLowerCase()
     .flexbox__item.width1.project-forks
       a(href=project.srcUrl, target="_blank")
         span.icon-purple-fork(title="Forks")
-        //- <span class="accessibility">Forks</span>
         span.ignore-flow= numscale({value: project.forks, maxLen: 4}).toLowerCase()
 
 block content
