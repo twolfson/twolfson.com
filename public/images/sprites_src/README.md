@@ -1,10 +1,8 @@
-Bar lines, eye, fork, gauge, heart, ribbon are from The Noun Project
-
-GitHub, RSS, and Twitter are from JustVector
-
-We generated the 2x images via Pixlr (for PNGs). SVGs were converted to PNGs before-hand via Pinta.
-
-Mastodon via https://commons.wikimedia.org/wiki/File:Mastodon_Logotype_(Simple).svg
+- Fork: https://thenounproject.com/icon/fork-2813/
+- GitHub: JustVector
+- Mastodon: https://commons.wikimedia.org/wiki/File:Mastodon_Logotype_(Simple).svg
+- RSS: JustVector
+- Star: https://thenounproject.com/icon/star-431/
 
 # 2022-12-27
 We'd like to move to raw SVGs but are sticking with sprites for somewhat longer
