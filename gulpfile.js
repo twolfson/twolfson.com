@@ -148,9 +148,7 @@ exports.sprite = function spriteFn(done) {
   // When both streams are finished
   mergeStream(imgStream, cssStream).on('finish', function handleFinish() {
     // Kick off a CSS task
-    // DEV: When `gulp.run` is removed, move to `gulp.series`
-    //   https://github.com/gulpjs/gulp/issues/1125
-    gulp.run('build-css');
+    gulp.series(exports['build-css'])();
 
     // Callback
     done();
