@@ -1,16 +1,14 @@
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
 $github-name: 'github';
 $github-x: 128px;
 $github-y: 0px;
@@ -22,50 +20,50 @@ $github-total-width: 160px;
 $github-total-height: 160px;
 $github-image: '../images/sprites.png';
 $github: (128px, 0px, -128px, 0px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'github', );
+$mastodon-name: 'mastodon';
+$mastodon-x: 96px;
+$mastodon-y: 32px;
+$mastodon-offset-x: -96px;
+$mastodon-offset-y: -32px;
+$mastodon-width: 32px;
+$mastodon-height: 32px;
+$mastodon-total-width: 160px;
+$mastodon-total-height: 160px;
+$mastodon-image: '../images/sprites.png';
+$mastodon: (96px, 32px, -96px, -32px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'mastodon', );
 $purple-fork-name: 'purple-fork';
-$purple-fork-x: 96px;
-$purple-fork-y: 32px;
-$purple-fork-offset-x: -96px;
-$purple-fork-offset-y: -32px;
+$purple-fork-x: 64px;
+$purple-fork-y: 64px;
+$purple-fork-offset-x: -64px;
+$purple-fork-offset-y: -64px;
 $purple-fork-width: 32px;
 $purple-fork-height: 32px;
 $purple-fork-total-width: 160px;
 $purple-fork-total-height: 160px;
 $purple-fork-image: '../images/sprites.png';
-$purple-fork: (96px, 32px, -96px, -32px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'purple-fork', );
+$purple-fork: (64px, 64px, -64px, -64px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'purple-fork', );
 $purple-star-name: 'purple-star';
-$purple-star-x: 64px;
-$purple-star-y: 64px;
-$purple-star-offset-x: -64px;
-$purple-star-offset-y: -64px;
+$purple-star-x: 32px;
+$purple-star-y: 96px;
+$purple-star-offset-x: -32px;
+$purple-star-offset-y: -96px;
 $purple-star-width: 32px;
 $purple-star-height: 32px;
 $purple-star-total-width: 160px;
 $purple-star-total-height: 160px;
 $purple-star-image: '../images/sprites.png';
-$purple-star: (64px, 64px, -64px, -64px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'purple-star', );
+$purple-star: (32px, 96px, -32px, -96px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'purple-star', );
 $rss-name: 'rss';
-$rss-x: 32px;
-$rss-y: 96px;
-$rss-offset-x: -32px;
-$rss-offset-y: -96px;
+$rss-x: 0px;
+$rss-y: 128px;
+$rss-offset-x: 0px;
+$rss-offset-y: -128px;
 $rss-width: 32px;
 $rss-height: 32px;
 $rss-total-width: 160px;
 $rss-total-height: 160px;
 $rss-image: '../images/sprites.png';
-$rss: (32px, 96px, -32px, -96px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'rss', );
-$twitter-name: 'twitter';
-$twitter-x: 0px;
-$twitter-y: 128px;
-$twitter-offset-x: 0px;
-$twitter-offset-y: -128px;
-$twitter-width: 32px;
-$twitter-height: 32px;
-$twitter-total-width: 160px;
-$twitter-total-height: 160px;
-$twitter-image: '../images/sprites.png';
-$twitter: (0px, 128px, 0px, -128px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'twitter', );
+$rss: (0px, 128px, 0px, -128px, 32px, 32px, 160px, 160px, '../images/sprites.png', 'rss', );
 $github-2x-name: 'github-2x';
 $github-2x-x: 256px;
 $github-2x-y: 0px;
@@ -77,97 +75,100 @@ $github-2x-total-width: 320px;
 $github-2x-total-height: 320px;
 $github-2x-image: '../images/sprites-2x.png';
 $github-2x: (256px, 0px, -256px, 0px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'github-2x', );
+$mastodon-2x-name: 'mastodon-2x';
+$mastodon-2x-x: 192px;
+$mastodon-2x-y: 64px;
+$mastodon-2x-offset-x: -192px;
+$mastodon-2x-offset-y: -64px;
+$mastodon-2x-width: 64px;
+$mastodon-2x-height: 64px;
+$mastodon-2x-total-width: 320px;
+$mastodon-2x-total-height: 320px;
+$mastodon-2x-image: '../images/sprites-2x.png';
+$mastodon-2x: (192px, 64px, -192px, -64px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'mastodon-2x', );
 $purple-fork-2x-name: 'purple-fork-2x';
-$purple-fork-2x-x: 192px;
-$purple-fork-2x-y: 64px;
-$purple-fork-2x-offset-x: -192px;
-$purple-fork-2x-offset-y: -64px;
+$purple-fork-2x-x: 128px;
+$purple-fork-2x-y: 128px;
+$purple-fork-2x-offset-x: -128px;
+$purple-fork-2x-offset-y: -128px;
 $purple-fork-2x-width: 64px;
 $purple-fork-2x-height: 64px;
 $purple-fork-2x-total-width: 320px;
 $purple-fork-2x-total-height: 320px;
 $purple-fork-2x-image: '../images/sprites-2x.png';
-$purple-fork-2x: (192px, 64px, -192px, -64px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'purple-fork-2x', );
+$purple-fork-2x: (128px, 128px, -128px, -128px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'purple-fork-2x', );
 $purple-star-2x-name: 'purple-star-2x';
-$purple-star-2x-x: 128px;
-$purple-star-2x-y: 128px;
-$purple-star-2x-offset-x: -128px;
-$purple-star-2x-offset-y: -128px;
+$purple-star-2x-x: 64px;
+$purple-star-2x-y: 192px;
+$purple-star-2x-offset-x: -64px;
+$purple-star-2x-offset-y: -192px;
 $purple-star-2x-width: 64px;
 $purple-star-2x-height: 64px;
 $purple-star-2x-total-width: 320px;
 $purple-star-2x-total-height: 320px;
 $purple-star-2x-image: '../images/sprites-2x.png';
-$purple-star-2x: (128px, 128px, -128px, -128px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'purple-star-2x', );
+$purple-star-2x: (64px, 192px, -64px, -192px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'purple-star-2x', );
 $rss-2x-name: 'rss-2x';
-$rss-2x-x: 64px;
-$rss-2x-y: 192px;
-$rss-2x-offset-x: -64px;
-$rss-2x-offset-y: -192px;
+$rss-2x-x: 0px;
+$rss-2x-y: 256px;
+$rss-2x-offset-x: 0px;
+$rss-2x-offset-y: -256px;
 $rss-2x-width: 64px;
 $rss-2x-height: 64px;
 $rss-2x-total-width: 320px;
 $rss-2x-total-height: 320px;
 $rss-2x-image: '../images/sprites-2x.png';
-$rss-2x: (64px, 192px, -64px, -192px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'rss-2x', );
-$twitter-2x-name: 'twitter-2x';
-$twitter-2x-x: 0px;
-$twitter-2x-y: 256px;
-$twitter-2x-offset-x: 0px;
-$twitter-2x-offset-y: -256px;
-$twitter-2x-width: 64px;
-$twitter-2x-height: 64px;
-$twitter-2x-total-width: 320px;
-$twitter-2x-total-height: 320px;
-$twitter-2x-image: '../images/sprites-2x.png';
-$twitter-2x: (0px, 256px, 0px, -256px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'twitter-2x', );
+$rss-2x: (0px, 256px, 0px, -256px, 64px, 64px, 320px, 320px, '../images/sprites-2x.png', 'rss-2x', );
 $spritesheet-width: 160px;
 $spritesheet-height: 160px;
 $spritesheet-image: '../images/sprites.png';
-$spritesheet-sprites: ($github, $purple-fork, $purple-star, $rss, $twitter, );
+$spritesheet-sprites: ($github, $mastodon, $purple-fork, $purple-star, $rss, );
 $spritesheet: (160px, 160px, '../images/sprites.png', $spritesheet-sprites, );
 $retina-spritesheet-width: 320px;
 $retina-spritesheet-height: 320px;
 $retina-spritesheet-image: '../images/sprites-2x.png';
-$retina-spritesheet-sprites: ($github-2x, $purple-fork-2x, $purple-star-2x, $rss-2x, $twitter-2x, );
+$retina-spritesheet-sprites: ($github-2x, $mastodon-2x, $purple-fork-2x, $purple-star-2x, $rss-2x, );
 $retina-spritesheet: (320px, 320px, '../images/sprites-2x.png', $retina-spritesheet-sprites, );
 
-/*
-These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
-
-The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
-*/
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
 $github-group-name: 'github';
 $github-group: ('github', $github, $github-2x, );
+$mastodon-group-name: 'mastodon';
+$mastodon-group: ('mastodon', $mastodon, $mastodon-2x, );
 $purple-fork-group-name: 'purple-fork';
 $purple-fork-group: ('purple-fork', $purple-fork, $purple-fork-2x, );
 $purple-star-group-name: 'purple-star';
 $purple-star-group: ('purple-star', $purple-star, $purple-star-2x, );
 $rss-group-name: 'rss';
 $rss-group: ('rss', $rss, $rss-2x, );
-$twitter-group-name: 'twitter';
-$twitter-group: ('twitter', $twitter, $twitter-2x, );
-$retina-groups: ($github-group, $purple-fork-group, $purple-star-group, $rss-group, $twitter-group, );
+$retina-groups: ($github-group, $mastodon-group, $purple-fork-group, $purple-star-group, $rss-group, );
 
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-
-Here are example usages in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-`display: inline-block` sprite:
-<img class="icon-home" />
-*/
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }
@@ -194,18 +195,16 @@ Here are example usages in HTML:
   @include sprite-height($sprite);
 }
 
-/*
-The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
-  It should be used with a "retina group" variable.
-
-The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
-
-$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
-
-.icon-home {
-  @include retina-sprite($icon-home-group);
-}
-*/
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
 @mixin sprite-background-size($sprite) {
   $sprite-total-width: nth($sprite, 7);
   $sprite-total-height: nth($sprite, 8);
@@ -224,12 +223,10 @@ $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
   }
 }
 
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);
@@ -239,12 +236,10 @@ The `sprites` mixin generates identical output to the CSS template
   }
 }
 
-/*
-The `retina-sprites` mixin generates a CSS rule and media query for retina groups
-  This yields the same output as CSS retina template but can be overridden in SCSS
-
-@include retina-sprites($retina-groups);
-*/
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
 @mixin retina-sprites($retina-groups) {
   @each $retina-group in $retina-groups {
     $sprite-name: nth($retina-group, 1);
