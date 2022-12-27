@@ -62,7 +62,8 @@ html
           h2.brand.flexbox__item.width5.valign--baseline Software Engineer
           .flexbox__item.text--right.alpha
             a.icon-github.push--right(href="https://github.com/twolfson/" target="_blank" title="GitHub")
-            a.icon-twitter.push--right(href="https://twitter.com/twolfsn/" target="_blank" title="Twitter")
+            //- rel="me" is for verification, https://mastodon.online/settings/profile
+            a.icon-mastodon.push--right(href="https://mastodon.online/@twolfsn" target="_blank" title="Mastodon" rel="me")
             a.icon-rss(href="/index.xml" target="_blank" title="RSS")
         //- TODO: Add back `island` on a per-page basis via push--top
         - var navMargin = locals.navMargin === false ? '' : 'push--bottom';
