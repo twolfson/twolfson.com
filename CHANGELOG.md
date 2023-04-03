@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.136.0 - Clarified RISD CE from RISD
+
 3.135.0 - Fixed SVG font family for "Startup time investing" article
 
 3.134.2 - Fixed broken test from HTTPS documentation updates
