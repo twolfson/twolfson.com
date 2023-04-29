@@ -17,3 +17,10 @@ Velocity is goal. No over document. Just run
 --
 
 See also self-email with "PR chunking approach article" title
+
+------
+
+There are some articles on this, but not as technically oriented
+
+"How to Plan Out Large Changes"
+"How to Break Up PRs" (intuitive one)
