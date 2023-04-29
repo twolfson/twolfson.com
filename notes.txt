@@ -1,0 +1,19 @@
+Possible article if right: 
+Sizing out PR 
+
+Capture all possible moves. Try to keep orthogonal
+Capture how many lines of code each. Maybe grep. Maybe read
+Add in new lines for testing addition and deletion
+
+Maybe something with 1000 lines of code total and 200-300 per PR requires at least 4 PR 
+Note about trying to keep PR consistent. Eg if all rename. No sneak 1 line new behavior
+
+More work upfront yes. But easier review and re review and bug catching
+--
+Another piece. Talking through inter step dependencies
+--
+Velocity is goal. No over document. Just run
+
+--
+
+See also self-email with "PR chunking approach article" title
