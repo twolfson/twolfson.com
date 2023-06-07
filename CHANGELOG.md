@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.137.1 - Fixed pass-through for heapAnalyticsId
+
 3.137.0 - Switched from Google Analytics to Heap due to Google shutdown deadline
 
 3.136.0 - Clarified RISD CE from RISD
