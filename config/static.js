@@ -32,7 +32,7 @@ exports.common = {
 exports.development = {
   // Inherits from common
   dynamicArticles: true,
-  googleAnalyticsId: 'UA-17165993-3',
+  heapAnalyticsId: '4011244337',
   sentry: {
     browserDSN: null,
     serverDSN: null
@@ -41,7 +41,7 @@ exports.development = {
 
 exports.test = {
   dynamicArticles: false,
-  googleAnalyticsId: null,
+  heapAnalyticsId: null,
   sentry: {
     browserDSN: null,
     serverDSN: null
@@ -50,7 +50,7 @@ exports.test = {
 
 exports.production = {
   dynamicArticles: false,
-  googleAnalyticsId: 'UA-17165993-1',
+  heapAnalyticsId: '4262890031',
   // Fetch project information every hour
   projectOptions: {
     updateImmediately: true,
