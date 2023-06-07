@@ -45,4 +45,4 @@ I might wind up choosing them for that purpose, even though overkill for a perso
 ### 2023-06-06
 Deciding to move forward with Heap
 
-It's probably not the wisest for multiple sites, but the Google Analytics deadline is looming, and I'm curious if we can get freebie insights with Heap's painless setup
+It's probably not the wisest for multiple sites (due to cost), but the Google Analytics deadline is looming, and I'm curious if we can get freebie insights with Heap's painless setup
