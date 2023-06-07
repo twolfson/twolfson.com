@@ -37,7 +37,7 @@ Server.prototype = {
       assert: assert,
       config: config.jojo,
       env: config.ENV,
-      googleAnalyticsId: config.googleAnalyticsId,
+      heapAnalyticsId: config.heapAnalyticsId,
       numscale: numscale.scale,
       sentryBrowserDSN: config.sentry.browserDSN,
       version: config.version
