@@ -41,3 +41,8 @@ Some interesting problems + solutions for dealing with no cookies
 I might be eating my own words here, but Heap is free and can provide a lot stronger insights into how people are using our site (without gymnastics to figure out analytics setup proactively)
 
 I might wind up choosing them for that purpose, even though overkill for a personal site still .\_.
+
+### 2023-06-06
+Deciding to move forward with Heap
+
+It's probably not the wisest for multiple sites, but the Google Analytics deadline is looming, and I'm curious if we can get freebie insights with Heap's painless setup
