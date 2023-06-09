@@ -1,9 +1,6 @@
 // Load in our dependencies
 var domready = require('./ready');
 var hljs = require('./highlight');
-// DEV: Gator exposes itself to window
-require('./gator');
-require('./gator-legacy');
 
 // Expose `domready` for usage via `?grid`
 window.domready = domready;
@@ -25,17 +22,6 @@ window.errorGenerators = {
 
 // When the DOM is ready
 domready(function () {
-  // Track all link clicks
-  // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
-  // eslint-disable-next-line new-cap
-  window.Gator(document).on('click', 'a', function (e) {
-    window.ga('send', {
-      hitType: 'event',
-      eventCategory: 'Link click',
-      eventAction: this.href || ('Unknown from: ' + window.location.href)
-    });
-  });
-
   // Alias languages to their shorthands
   hljs.LANGUAGES.js = hljs.LANGUAGES.javascript;
   hljs.LANGUAGES.html = hljs.LANGUAGES.xml;
