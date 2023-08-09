@@ -1,3 +1,36 @@
+# 2012/10/13
+3rd party cookies via iframe and local storage
+
+# 2013/06/01
+Programming while travelling - the art of and various experiences
+
+# 2013/09/25
+Fractional CSS vs absolutes
+Lots of effort for a little reusability. In most cases, if you are responsive design, then you will have a different layout.
+
+# 2014/12/05
+Website enhancements:
+Conversion tracking on RSS
+Add newsletter subscriptions
+Scrolling newsletter subscription sidebar
+
+# 2016-2017
+Content for code flow article:
+Writing code asking myself why at every comment. With rhythmic comments. Kind of like pairing with myself over chat. If I get a credential, I comment how eg URL if simple. Steps if complex. If something should not be done differently I explain why and maybe like to a stack overflow post
+
+Content for visual testing article:
+Visual testing should be fast to set up, run, and update because it should not take more time to maintain tests than it does to update code
+
+# 2017-03-18
+Go CSP yourself - A summary of our CSP experience with Sentry
+
+# 2017-08-10
+Read debugging vs feedback debugging
+
+# 2018-06-05
+- Retina blog post (Xvfb@2x)
+- Jade/Pug + jQuery (Time + performance) (most of page is static, only a little is interactive)
+
 # 2021-02-06
 Tailwind tentative thoughts:
 - Good at toggling media queries for various layouts and one-off style changes
