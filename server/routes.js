@@ -60,6 +60,9 @@ exports.common = function (config) {
   // Projects pages
   router.get('/projects', controllers.projects(config));
 
+  // Design redirect
+  router.get('/design', controllers.design(config));
+
   // Contact pages
   router.get('/contact', controllers.contact.index(config));
 

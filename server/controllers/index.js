@@ -9,6 +9,15 @@ exports['error-generators'] = require('./error-generators');
 exports['error-handlers'] = require('./error-handlers');
 exports['support-me'] = require('./support-me');
 
+// Design redirect
+exports.design = function (config) {
+  return [
+    function designFn(req, res) {
+      res.send('This page should be overridden via one-off NGINX redirect for now');
+    }
+  ];
+};
+
 // Kaleido page
 exports.kaleido = function (config) {
   // DEV: Relocate js-yaml inside route for dev-only dependencies
