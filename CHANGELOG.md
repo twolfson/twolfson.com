@@ -1,4 +1,6 @@
 # twolfson.com changelog
+3.138.0 - Added "design" link, updated favicon, and recent design activity
+
 3.137.2 - Removed Google Analytics link click bindings
 
 3.137.1 - Fixed pass-through for heapAnalyticsId
