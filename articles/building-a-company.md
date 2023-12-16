@@ -50,6 +50,8 @@ and how all of my experience/thinking is in services really
 
 Keep getting hungry too... going to do something else until we eat, then come back later
 
+TODO: Talk about produce as an obvious good
+
 
 # Additional reading
 - [Startup time investing: Operational processes][]
