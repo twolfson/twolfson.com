@@ -48,6 +48,8 @@ TODO: It turns out goods don't have a digital equivalent always for this same re
 I need to rework this article to talk about how I've only ever built services
 and how all of my experience/thinking is in services really
 
+Keep getting hungry too... going to do something else until we eat, then come back later
+
 
 # Additional reading
 - [Startup time investing: Operational processes][]
