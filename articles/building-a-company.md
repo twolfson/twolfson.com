@@ -4,12 +4,39 @@
   "date": "2023-12-16T14:26:00-0700",
   "keywords": "startup, build",
   "summary": "How every digital company has an analog equivalent, and applying this lens when building a company",
-  "relatedArticles": ["Lessons of a startup engineer"]
+  "relatedArticles": ["Lessons of a startup engineer", "Startup time investing: Operational processes"]
 }
+
+TODO: See TODOs
 
 I'm a startup engineer; 12 years as software engineer (mostly early stage), 3x first engineer (incl 1x founder), and former Uber engineer.
 
 In this article, I will explain how every digital company has an analog equivalent, and how to progressively build a company out.
+
+TODO: Image at top of article showing progression
+
+# Analog and Digital Equivalents
+Every digital company has an analog equivalent.
+
+This is important because all intuitive actions originate from the analog version when we build their digital equivalents.
+
+Some companies can be built progressively from analog to digital, others cannot (e.g. full buy-in required).
+
+This is a complete encompasses all companies because fall into either [producing a good or providing a service](https://www.investopedia.com/terms/c/currency.asp).
+
+TODO: Ensure we talk about goods somewhat
+
+Let's talk through some examples:
+
+## Online stores
+Analog equivalents are physical storefronts (**service**) selling goods.
+
+TODO: Show images of e-commerce
+
+Actions include browsing items, adding items to your shopping cart, and checking out at the end.
+
+For marketplaces (e.g. eBay, Etsy), the analog equivalent is more akin to a flea market (different vendors)
+
 
 
 
