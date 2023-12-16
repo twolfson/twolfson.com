@@ -37,7 +37,16 @@ Actions include browsing items, adding items to your shopping cart, and checking
 
 For marketplaces (e.g. eBay, Etsy), the analog equivalent is more akin to a flea market (different vendors)
 
+## Surgery
+Not all analog services have digital equivalents.
 
+Due to surgery being a physical interaction,
+
+There can be applications on top of surgery (e.g. remote control) which are digital, but that's not surgery itself.
+
+TODO: It turns out goods don't have a digital equivalent always for this same reason (was curious about actually thinking through this)
+I need to rework this article to talk about how I've only ever built services
+and how all of my experience/thinking is in services really
 
 
 # Additional reading
