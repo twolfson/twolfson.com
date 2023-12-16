@@ -52,6 +52,30 @@ Keep getting hungry too... going to do something else until we eat, then come ba
 
 TODO: Talk about produce as an obvious good
 
+TODO: Initial notes:
+
+"""
+Article
+Every digital system has analog equivalent
+Talk through conversion
+Manual MVP
+Goods and services as maximal
+(this is prob useful because it comes up regularly with building a startup, and somehow people miss obvious "always start with manual" step)
+(possibly an addendum to "operational process" article)
+--
+2023-12-16:
+Article title
+Building a Company: Nothing to Analog to Digital
+
+Talk through all past companies?
+
+Goods and services
+
+Tying it back to operational process
+Do until hurts
+1:10:100
+"""
+
 
 # Additional reading
 - [Startup time investing: Operational processes][]
