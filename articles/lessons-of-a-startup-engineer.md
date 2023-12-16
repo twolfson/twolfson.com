@@ -219,3 +219,6 @@ There's some lessons that felt like they were either too much opinion, not speci
 [coastline]: https://en.wikipedia.org/wiki/Coastline_paradox
 [contact]: /contact
 [Optimal time investing]: /2022-07-30-startup-time-investing-operational-processes
+
+# Feedback form
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJxgN6-7OFBfrRatS4iAa-MMiQdIu2noMX8I0GUooe6_Ut6g/viewform?embedded=true" width="640" height="1062" frameborder="0" marginheight="0" marginwidth="0">Loading feedback form…</iframe>
