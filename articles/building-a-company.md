@@ -76,6 +76,40 @@ Do until hurts
 1:10:100
 """
 
+TODO: New notes, context: Trying to sort through defining a digital good
+Conclusion was that analog <> digital is not quite the same as
+and that companies often do both goods and services or just services, impossible for just goods
+but my speciality is around service oriented companies and SaaS (which is that a good or not? just not hardware for sure)
+
+"""
+2023-12-16:
+No digital produce (food) from company. But real world intangible might qualify. Eg connection (social media friendship). No. Nope. Not a commodities. It's a service
+--
+File is a digital good. Like scan data. Obv bad without context but do is any physical good
+
+Can build company producing them. Though that's a service
+
+But what about standards and formats. Like rar.
+--
+Compression as example of analog good. But manual first
+Like a proof
+
+Small scale then large scale
+--
+Sanest reframing for article is prob Nothing to Manual to Automated
+(but then dealing with "is this just Operational Processes but not?"
+--
+2023-12-17:
+Every piece of software ever built I laid out in manual fashion
+Trying to jump to the end immediately always lead to confusion in structure and getting lost
+--
+Technically can just lay out company structure and build it
+Just not recommended/ideal since you lose ability to shift schema+workflow with an "Add column" action
+Or revamp something entirely in 1 day (rewriting notes)
+--
+Restatement: The more built out system (code + users), the more difficult it is to change it (restructure + migrations)
+"""
+
 
 # Additional reading
 - [Startup time investing: Operational processes][]
