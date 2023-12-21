@@ -110,6 +110,10 @@ Or revamp something entirely in 1 day (rewriting notes)
 Restatement: The more built out system (code + users), the more difficult it is to change it (restructure + migrations)
 """
 
+"""
+2023-12-20: Talk about avoiding bubble and no or low code solutions unless WYSIWYG websites. But not apps (though really this feels like hearsay -- reason is you wind up taking time to build engineering esque, then rebuilding system again in code)
+"""
+
 
 # Additional reading
 - [Startup time investing: Operational processes][]
