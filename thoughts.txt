@@ -40,3 +40,9 @@ Tailwind tentative thoughts:
 - It does look like they provide some decent recommendations for common components
     -- though don't even talk about the media object
     - https://v1.tailwindcss.com/components (hidden link)
+
+# 2024-01-26
+Dealing with hard moments in startup engineering:
+- Feeling like outside of domain? Speak up and establish responsibilities for that role
+- Fearful of competitors? Sidestep ideally by understanding product space and it being niche. If competitors at similar age, take as encouragement. If not, understand value prop that sets you apart and hard for them to adjust to
+- If coworkers not responsive or available: This is a tough one. Provide feedback but change unlikely in my experience. Core problem is prioritization and saying no. Sometimes easier to just move on. Could also be different communications preferences or norms
