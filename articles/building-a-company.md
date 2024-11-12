@@ -114,6 +114,12 @@ Restatement: The more built out system (code + users), the more difficult it is 
 2023-12-20: Talk about avoiding bubble and no or low code solutions unless WYSIWYG websites. But not apps (though really this feels like hearsay -- reason is you wind up taking time to build engineering esque, then rebuilding system again in code)
 """
 
+"""
+2024-11-11
+Another starting point:
+Analog to digital conversion work
+Everything is either goods or services. And we're building a machine to make or deliver those. Software is digital execution. Manual work is analog execution.
+"""
 
 # Additional reading
 - [Startup time investing: Operational processes][]
