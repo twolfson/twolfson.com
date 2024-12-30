@@ -1,0 +1,11 @@
+# Startup founder lessons
+Make a roadmap (set closed ended actions to follow)
+
+Timebox or backlog thoughts (exhaust and capture thoughts)
+
+Talk about MVP levels (regularly given lesson) (e.g. MVP is an experiment to test that people will use and ultimately buy your product; taxi dispatcher already proven, so Uber MVP must be black car auto dispatch -- simple version is person on-call acting as dispatcher for nearby cars -- then you technology your way past that ;; unsure if actual mechanic in practice but 3-6 months to get dispatching right prob more headache inducing than good) (this line is def rambly, and unsure is a lesson for most folks, but trimming down MVP is def a common lesson in dialogues I have)
+
+Skip: State research question upfront (handled by roadmap implicitly, and more of learning for me than lesson for all -- Just Enough Research better resource as-is)
+Skip: Workspace will dictate flow, be comfortable at organizing and reorganizing, though also don't overindex (reworked 3x to date and transferred tools for tasks since jumping levels often (Notion, Asana)
+
+Goal of article: Highlight content which seems to regularly be missed
