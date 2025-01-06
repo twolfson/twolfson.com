@@ -9,3 +9,7 @@ Skip: State research question upfront (handled by roadmap implicitly, and more o
 Skip: Workspace will dictate flow, be comfortable at organizing and reorganizing, though also don't overindex (reworked 3x to date and transferred tools for tasks since jumping levels often (Notion, Asana)
 
 Goal of article: Highlight content which seems to regularly be missed
+
+...
+Maybe list out set of skills one should know + where to learn them? (e.g. Design Research, Product, Technical Knowledge)
+(unsure how useful though, since very contextual on what someone does/doesn't know)
