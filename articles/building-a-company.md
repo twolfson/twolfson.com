@@ -121,6 +121,14 @@ Analog to digital conversion work
 Everything is either goods or services. And we're building a machine to make or deliver those. Software is digital execution. Manual work is analog execution.
 """
 
+"""
+2025-01-05
+Another starting point:
+Jobs to be Done really helps with driving home "goods or services" point
+In that you're delivering an outcome regardless -- enabling someone to achieve an action with a good
+or moving the existing service further along the tech tree (i.e. analog to digital conversion, moving from digital yet manual to fully automated) (thinking about taxi dispatcher vs Uber as an analog to this as well)
+"""
+
 # Additional reading
 - [Startup time investing: Operational processes][]
 - [Lessons of a Startup Engineer][]
