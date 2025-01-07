@@ -1,4 +1,5 @@
 # Startup founder lessons
+## 2024-12-29
 Make a roadmap (set closed ended actions to follow)
 
 Timebox or backlog thoughts (exhaust and capture thoughts)
@@ -10,6 +11,12 @@ Skip: Workspace will dictate flow, be comfortable at organizing and reorganizing
 
 Goal of article: Highlight content which seems to regularly be missed
 
-...
+## 2025-01-05
 Maybe list out set of skills one should know + where to learn them? (e.g. Design Research, Product, Technical Knowledge)
 (unsure how useful though, since very contextual on what someone does/doesn't know)
+
+## 2025-01-06
+Monitoring your own mental health + staying accountable to yourself:
+Weekly recaps
+Pulse checks
+External recaps - Emails + bootstrappers
