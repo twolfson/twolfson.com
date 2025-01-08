@@ -20,3 +20,7 @@ Monitoring your own mental health + staying accountable to yourself:
 Weekly recaps
 Pulse checks
 External recaps - Emails + bootstrappers
+
+...
+Self review of code + building comfort there (was struggle for me initially, even with open source)
+Time management (e.g. 9 to 5, prioritizations, blocking out time)
