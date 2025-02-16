@@ -1,0 +1,13 @@
+# 2025-02-16
+What not to do as a founder:
+(pitfalls from places I haven't stuck around too long, or stuck around longer than I should've)
+- No time for employees or collaboration (i.e. multi-day gap, vs same or next day)
+- No ownership of product, yet fixating on sales
+- Hiring to try to accelerate / gain bandwith, without matching acceleration/revenue
+- Dragging out long decisions (not 0-2 days, but months)
+- Raise money for the sake of raising money (grants, VC, etc) -- This all take time + needs a purpose (e.g. hiring)
+- Hiring only junior engineers to save money -- Always leads to faster accrual of tech debt (though have seen acquisitions still)
+- Delay and delay and delay technical debt -- Can get acquired still, but adds progressively to friction, reducing velocity + increasing risk
+- Treat 1 employee differently than others (e.g. 1 gets early exercise, others don't)
+- Treat employees differently than a peer (i.e. lower power structure) (e.g. not worth listening to)
+- Regularly listen to feedback but never take action on any piece of it, or work to find middleground -- People do leave because of this
