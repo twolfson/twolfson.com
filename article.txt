@@ -11,3 +11,4 @@ What not to do as a founder:
 - Treat 1 employee differently than others (e.g. 1 gets early exercise, others don't)
 - Treat employees differently than a peer (i.e. lower power structure) (e.g. not worth listening to)
 - Regularly listen to feedback but never take action on any piece of it, or work to find middleground -- People do leave because of this
+- Not fully understanding space + motivations of stakeholders (JTBD) before deciding on product
